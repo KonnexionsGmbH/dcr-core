@@ -1,2 +1,2 @@
-# dcr-core
+# dcr_core
 Document Content Recognition API

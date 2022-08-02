@@ -1,0 +1,44 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+PyMuPDF = "*"
+PyPDF2 = "*"
+PyYAML = "<=6.0.0"
+defusedxml = "*"
+jellyfish = "*"
+pdf2image = "*"
+pypandoc = "*"
+pytesseract = "*"
+spacy = "*"
+strsimpy ="*"
+toml = "*"
+weasyprint = "*"
+
+[dev-packages]
+MyPy = "*"
+PyFlakes = "*"
+Pylint = "*"
+bandit = "*"
+black = "*"
+docformatter = "*"
+flake8 = "*"
+isort = "*"
+mccabe = "*"
+mkdocs = "*"
+mkdocs-autorefs = "*"
+mkdocs-material = "*"
+mkdocstrings = "*"
+mkdocstrings-python = "*"
+pycodestyle = "*"
+pydocstyle = "*"
+pymdown-extensions = "*"
+radon = "*"
+roman = "*"
+types-PyYAML = "*"
+typing-extensions = "*"
+
+[requires]
+python_version = "3.10.5"
