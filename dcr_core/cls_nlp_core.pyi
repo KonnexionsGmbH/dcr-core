@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 import collections
 from typing import ClassVar
 from typing import Dict
@@ -7,31 +5,30 @@ from typing import List
 from typing import Tuple
 
 class NLPCore:
-    ParserLineLine = Dict[str, int | str]
-    ParserLineLines = List[ParserLineLine]
-    ParserLinePage = Dict[str, int | ParserLineLines]
-    ParserLinePages = List[ParserLinePage]
-    ParserLineDocument = Dict[str, int | ParserLinePages | str]
-    ParserPagePara = Dict[str, int | str]
-    ParserPageParas = List[ParserPagePara]
-    ParserPagePage = Dict[str, int | ParserPageParas]
-    ParserPagePages = List[ParserPagePage]
-    ParserPageDocument = Dict[str, int | ParserPagePages | str]
-    ParserWordWord = Dict[str, int | str]
-    ParserWordWords = List[ParserWordWord]
-    ParserWordLine = Dict[str, int | ParserWordWords]
-    ParserWordLines = List[ParserWordLine]
-    ParserWordPara = Dict[str, int | ParserWordLines]
-    ParserWordParas = List[ParserWordPara]
-    ParserWordPage = Dict[str, int | str | ParserWordParas]
-    ParserWordPages = List[ParserWordPage]
-    ParserWordDocument = Dict[str, int | str | ParserWordPages]
+    ParserLineLine = dict[str, int | str]
+    ParserLineLines = list[ParserLineLine]
+    ParserLinePage = dict[str, int | ParserLineLines]
+    ParserLinePages = list[ParserLinePage]
+    ParserLineDocument = dict[str, int | ParserLinePages | str]
+    ParserPagePara = dict[str, int | str]
+    ParserPageParas = list[ParserPagePara]
+    ParserPagePage = dict[str, int | ParserPageParas]
+    ParserPagePages = list[ParserPagePage]
+    ParserPageDocument = dict[str, int | ParserPagePages | str]
+    ParserWordWord = dict[str, int | str]
+    ParserWordWords = list[ParserWordWord]
+    ParserWordLine = dict[str, int | ParserWordWords]
+    ParserWordLines = list[ParserWordLine]
+    ParserWordPara = dict[str, int | ParserWordLines]
+    ParserWordParas = list[ParserWordPara]
+    ParserWordPage = dict[str, int | str | ParserWordParas]
+    ParserWordPages = list[ParserWordPage]
+    ParserWordDocument = dict[str, int | str | ParserWordPages]
 
     CODE_SPACY_DEFAULT: ClassVar[str]
     ENVIRONMENT_TYPE_DEV: ClassVar[str]
     ENVIRONMENT_TYPE_PROD: ClassVar[str]
     ENVIRONMENT_TYPE_TEST: ClassVar[str]
-
     JSON_NAME_BULLET: ClassVar[str]
     JSON_NAME_COLUMNS: ClassVar[str]
     JSON_NAME_COLUMN_NO: ClassVar[str]
@@ -165,7 +162,6 @@ class NLPCore:
     JSON_NAME_UPPER_RIGHT_X: ClassVar[str]
     JSON_NAME_WORDS: ClassVar[str]
     JSON_NAME_WORD_NO: ClassVar[str]
-
     LINE_TYPE_BODY: ClassVar[str]
     LINE_TYPE_FOOTER: ClassVar[str]
     LINE_TYPE_HEADER: ClassVar[str]
@@ -174,9 +170,7 @@ class NLPCore:
     LINE_TYPE_LIST_NUMBER: ClassVar[str]
     LINE_TYPE_TABLE: ClassVar[str]
     LINE_TYPE_TOC: ClassVar[str]
-
     LOGGER_PROGRESS_UPDATE: ClassVar[str]
-
     PARSE_NAME_SPACE: ClassVar[str]
     PARSE_ATTR_COL_SPAN: ClassVar[str]
     PARSE_ATTR_LLX: ClassVar[str]
@@ -221,7 +215,6 @@ class NLPCore:
     PARSE_ELEM_TITLE: ClassVar[str]
     PARSE_ELEM_WORD: ClassVar[str]
     PARSE_ELEM_XFA: ClassVar[str]
-
     SEARCH_STRATEGY_LINES: ClassVar[str]
     SEARCH_STRATEGY_TABLE: ClassVar[str]
 
@@ -229,50 +222,24 @@ class NLPCore:
     def exists(self) -> bool: ...
     @staticmethod
     def export_rule_file_heading(
-        is_verbose: bool,
-        file_name: str,
-        file_encoding: str,
-        json_indent: str,
-        is_json_sort_keys: bool,
+        is_verbose: bool, file_name: str, file_encoding: str, json_indent: str, is_json_sort_keys: bool
     ) -> None: ...
     @staticmethod
     def export_rule_file_list_bullet(
-        is_verbose: bool,
-        file_name: str,
-        file_encoding: str,
-        json_indent: str,
-        is_json_sort_keys: bool,
-        environment_variant: str,
+        is_verbose: bool, file_name: str, file_encoding: str, json_indent: str, is_json_sort_keys: bool, environment_variant: str
     ) -> None: ...
     @staticmethod
     def export_rule_file_list_number(
-        is_verbose: bool,
-        file_name: str,
-        file_encoding: str,
-        json_indent: str,
-        is_json_sort_keys: bool,
-        environment_variant: str,
+        is_verbose: bool, file_name: str, file_encoding: str, json_indent: str, is_json_sort_keys: bool, environment_variant: str
     ) -> None: ...
     @staticmethod
     def get_lt_anti_patterns_default_heading() -> List[Tuple[str, str]]: ...
     @staticmethod
-    def get_lt_anti_patterns_default_list_bullet(
-        environment_variant: str,
-    ) -> List[Tuple[str, str]]: ...
+    def get_lt_anti_patterns_default_list_bullet(environment_variant: str) -> List[Tuple[str, str]]: ...
     @staticmethod
-    def get_lt_anti_patterns_default_list_number(
-        environment_variant: str,
-    ) -> List[Tuple[str, str]]: ...
+    def get_lt_anti_patterns_default_list_number(environment_variant: str) -> List[Tuple[str, str]]: ...
     @staticmethod
-    def get_lt_rules_default_heading() -> List[
-        Tuple[
-            str,
-            bool,
-            str,
-            collections.abc.Callable[[str, str], bool],
-            List[str],
-        ]
-    ]: ...
+    def get_lt_rules_default_heading() -> List[Tuple[str, bool, str, collections.abc.Callable[[str, str], bool], List[str]]]: ...
     @staticmethod
     def get_lt_rules_default_list_bullet() -> Dict[str, int]: ...
     @staticmethod

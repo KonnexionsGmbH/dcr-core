@@ -1,19 +1,16 @@
-from __future__ import annotations
-
-from typing import Dict
-from typing import List
-
-from dcr_core import cls_nlp_core
+from dcr_core import cls_nlp_core as cls_nlp_core
 
 class LineTypeTable:
-    Column = Dict[str, float | int | object | str]
-    Columns = List[Column]
-    Row = Dict[str, Columns | float | int | str]
-    Rows = List[Row]
-    Table = Dict[str, float | int | Rows]
-    Tables = List[Table]
+    Column = dict[str, float | int | object | str]
+    Columns = list[Column]
+    Row = dict[str, Columns | float | int | str]
+    Rows = list[Row]
+    Table = dict[str, float | int | Rows]
+    Tables = list[Table]
 
-    def __init__(self, file_name_curr: str) -> None: ...
+    def __init__(self, file_name_curr: str) -> None:
+        self.no_tables = None
+        ...
     def exists(self) -> bool: ...
     def process_document(
         self,

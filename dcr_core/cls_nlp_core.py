@@ -218,7 +218,7 @@ class NLPCore:
 
     LOGGER_PROGRESS_UPDATE: ClassVar[str] = "Progress update "
 
-    PARSE_NAME_SPACE: ClassVar[str] = "{http://www.pdflib.com/XML/TET5/TET-5.0}"
+    PARSE_NAME_SPACE: ClassVar[str] = "{https://www.pdflib.com/XML/TET5/TET-5.0}"
 
     PARSE_ATTR_COL_SPAN: ClassVar[str] = "colSpan"
     PARSE_ATTR_LLX: ClassVar[str] = "llx"

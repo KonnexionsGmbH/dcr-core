@@ -159,12 +159,13 @@ class Setup:
     # pylint: disable=too-many-statements
     def __init__(self) -> None:
         """Initialise the instance."""
-        self._get_environment_variant()
-
         self._config: dict[str, str] = {}
 
         self._config_parser = configparser.ConfigParser()
         self._config_parser.read(Setup._DCR_CFG_FILE)
+
+        self.environment_variant = Setup.ENVIRONMENT_TYPE_PROD
+        self._get_environment_variant()
 
         # -----------------------------------------------------------------------------
         # DCR configuration.
@@ -175,7 +176,6 @@ class Setup:
         self.is_create_extra_file_table = True
 
         self.json_indent = 4
-
         self.is_json_sort_keys = False
 
         self.lt_footer_max_distance = 3
@@ -212,7 +212,7 @@ class Setup:
         self.is_parsing_page: bool = False
         self.is_parsing_word: bool = False
 
-        self.pdf2image_type = Setup.PDF2IMAGE_TYPE_JPEG
+        self.pdf2image_type: str = "jpeg"
         self.tesseract_timeout = 10
 
         self.is_tetml_page = False
@@ -723,8 +723,6 @@ class Setup:
     # -----------------------------------------------------------------------------
     def _get_environment_variant(self) -> None:
         """Determine and check the environment variant."""
-        self.environment_variant = Setup.ENVIRONMENT_TYPE_PROD
-
         try:
             self.environment_variant = os.environ[Setup._DCR_ENVIRONMENT_TYPE]
         except KeyError:

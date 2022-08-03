@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 class TokenizerSpacy:
     TokenToken = dict[str, bool | float | int | str]
     TokenTokens = list[TokenToken]
@@ -13,7 +11,10 @@ class TokenizerSpacy:
 
     token_pages: TokenizerSpacy.TokenParas
 
-    def __init__(self) -> None: ...
+    def __init__(self) -> None:
+        self._processing_ok = None
+        self._pipeline_name = None
+        ...
     def exists(self) -> bool: ...
     def process_document(
         self,
@@ -26,3 +27,4 @@ class TokenizerSpacy:
         pipeline_name: str,
     ) -> None: ...
     def processing_ok(self) -> bool: ...
+    def _finish_document(self) -> None: ...

@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 from dcr_core import cls_nlp_core
 
 class LineTypeHeading:

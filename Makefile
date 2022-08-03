@@ -95,7 +95,7 @@ flake8:             ## Enforce the Python Style Guides with Flake8.
 	@echo "PYTHONPATH=${PYTHONPATH}"
 	@echo "---------------------------------------------------------------------"
 	pipenv run flake8 --version
-	pipenv run flake8 --exclude TET.py ${PYTHONPATH}
+	pipenv run flake8 ${PYTHONPATH}
 	@echo "Info **********  End:   Flake8 **************************************"
 
 # isort your imports, so you don't have to.
@@ -132,7 +132,7 @@ mypy:               ## Find typing issues with Mypy.
 	@echo "---------------------------------------------------------------------"
 	pipenv run pip freeze | grep mypy
 	pipenv run mypy --version
-	pipenv run mypy --exclude ${PYTHONPATH}/TET.py ${PYTHONPATH}
+	pipenv run mypy ${PYTHONPATH}
 	@echo "Info **********  End:   Mypy ****************************************"
 
 # pip is the package installer for Python.

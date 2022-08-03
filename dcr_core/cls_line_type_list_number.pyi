@@ -1,22 +1,17 @@
-from __future__ import annotations
-
 import collections
 import re
-import typing
-from typing import Dict
-from typing import Tuple
 
 from dcr_core import cls_nlp_core
 
 class LineTypeListNumber:
-    Entry = Dict[str, int | str]
-    Entries = typing.List[Entry]
+    Entry = dict[str, int | str]
+    Entries = list[Entry]
 
-    List = Dict[str, Entries | float | int | object | str]
-    Lists = typing.List[List]
+    List = dict[str, Entries | float | int | object | str]
+    Lists = list[List]
 
-    RuleExtern = Tuple[str, str, collections.abc.Callable[[str, str], bool], list[str]]
-    RuleIntern = Tuple[
+    RuleExtern = tuple[str, str, collections.abc.Callable[[str, str], bool], list[str]]
+    RuleIntern = tuple[
         str,
         re.Pattern[str],
         collections.abc.Callable[[str, str], bool],
@@ -24,7 +19,9 @@ class LineTypeListNumber:
         str,
     ]
 
-    def __init__(self, file_name_curr: str) -> None: ...
+    def __init__(self, file_name_curr: str) -> None:
+        self.no_lists = None
+        ...
     def exists(self) -> bool: ...
     def process_document(
         self,

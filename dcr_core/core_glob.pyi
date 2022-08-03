@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 from dcr_core import cls_line_type_headers_footers
 from dcr_core import cls_line_type_heading
 from dcr_core import cls_line_type_list_bullet
@@ -10,8 +8,20 @@ from dcr_core import cls_setup
 from dcr_core import cls_text_parser
 from dcr_core import cls_tokenizer_spacy
 
+FILE_ENCODING_DEFAULT: str
+
+FILE_TYPE_JPEG: str
 FILE_TYPE_PANDOC: list[str]
+FILE_TYPE_PDF: str
+FILE_TYPE_PNG: str
 FILE_TYPE_TESSERACT: list[str]
+
+INFORMATION_NOT_YET_AVAILABLE: str
+
+LOGGER_FATAL_HEAD: str
+LOGGER_FATAL_TAIL: str
+LOGGER_PROGRESS_UPDATE: str
+
 RETURN_OK: tuple[str, str]
 
 line_type_headers_footers: cls_line_type_headers_footers.LineTypeHeaderFooters
@@ -20,6 +30,7 @@ line_type_list_bullet: cls_line_type_list_bullet.LineTypeListBullet
 line_type_list_number: cls_line_type_list_number.LineTypeListNumber
 line_type_table: cls_line_type_table.LineTypeTable
 line_type_toc: cls_line_type_toc.LineTypeToc
+
 setup: cls_setup.Setup
 text_parser: cls_text_parser.TextParser
 tokenizer_spacy: cls_tokenizer_spacy.TokenizerSpacy
