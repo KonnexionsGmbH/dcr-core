@@ -2,12 +2,10 @@
 
 ifeq ($(OS),Windows_NT)
 	export PYTHON=python
-	export MYPYPATH=src\\dcr_core
-	export PYTHONPATH=src\\dcr_core
+	export PYTHONPATH=dcr_core
 else
 	export PYTHON=python3
-	export MYPYPATH=src/dcr_core
-	export PYTHONPATH=src/dcr_core
+	export PYTHONPATH=dcr_core
 endif
 
 ##                                                                            .
@@ -41,12 +39,11 @@ help:
 # Configuration file: none
 bandit:             ## Find common security issues with Bandit.
 	@echo "Info **********  Start: Bandit **************************************"
-	@echo "MYPYPATH  =${MYPYPATH}"
 	@echo "PYTHON    =${PYTHON}"
 	@echo "PYTHONPATH=${PYTHONPATH}"
 	@echo "---------------------------------------------------------------------"
 	pipenv run bandit --version
-	pipenv run bandit -c pyproject.toml -r src
+	pipenv run bandit -c pyproject.toml -r ${PYTHONPATH}
 	@echo "Info **********  End:   Bandit **************************************"
 
 # The Uncompromising Code Formatter
@@ -54,12 +51,11 @@ bandit:             ## Find common security issues with Bandit.
 # Configuration file: pyproject.toml
 black:              ## Format the code with Black.
 	@echo "Info **********  Start: black ***************************************"
-	@echo "MYPYPATH  =${MYPYPATH}"
 	@echo "PYTHON    =${PYTHON}"
 	@echo "PYTHONPATH=${PYTHONPATH}"
 	@echo "---------------------------------------------------------------------"
 	pipenv run black --version
-	pipenv run black src
+	pipenv run black ${PYTHONPATH}
 	@echo "Info **********  End:   black ***************************************"
 
 # Byte-compile Python libraries
@@ -67,7 +63,6 @@ black:              ## Format the code with Black.
 # Configuration file: none
 compileall:         ## Byte-compile the Python libraries.
 	@echo "Info **********  Start: Compile All Python Scripts ******************"
-	@echo "MYPYPATH  =${MYPYPATH}"
 	@echo "PYTHON    =${PYTHON}"
 	@echo "PYTHONPATH=${PYTHONPATH}"
 	@echo "---------------------------------------------------------------------"
@@ -80,12 +75,11 @@ compileall:         ## Byte-compile the Python libraries.
 # Configuration file: none
 docformatter:       ## Format the docstrings with docformatter.
 	@echo "Info **********  Start: docformatter ********************************"
-	@echo "MYPYPATH  =${MYPYPATH}"
 	@echo "PYTHON    =${PYTHON}"
 	@echo "PYTHONPATH=${PYTHONPATH}"
 	@echo "---------------------------------------------------------------------"
 	pipenv run docformatter --version
-	pipenv run docformatter --in-place -r src
+	pipenv run docformatter --in-place -r ${PYTHONPATH}
 	@echo "Info **********  End:   docformatter ********************************"
 
 # Flake8: Your Tool For Style Guide Enforcement.
@@ -97,12 +91,11 @@ docformatter:       ## Format the docstrings with docformatter.
 # Configuration file: cfg.cfg
 flake8:             ## Enforce the Python Style Guides with Flake8.
 	@echo "Info **********  Start: Flake8 **************************************"
-	@echo "MYPYPATH  =${MYPYPATH}"
 	@echo "PYTHON    =${PYTHON}"
 	@echo "PYTHONPATH=${PYTHONPATH}"
 	@echo "---------------------------------------------------------------------"
 	pipenv run flake8 --version
-	pipenv run flake8 --exclude TET.py src
+	pipenv run flake8 --exclude TET.py ${PYTHONPATH}
 	@echo "Info **********  End:   Flake8 **************************************"
 
 # isort your imports, so you don't have to.
@@ -110,12 +103,11 @@ flake8:             ## Enforce the Python Style Guides with Flake8.
 # Configuration file: pyproject.toml
 isort:              ## Edit and sort the imports with isort.
 	@echo "Info **********  Start: isort ***************************************"
-	@echo "MYPYPATH  =${MYPYPATH}"
 	@echo "PYTHON    =${PYTHON}"
 	@echo "PYTHONPATH=${PYTHONPATH}"
 	@echo "---------------------------------------------------------------------"
 	pipenv run isort --version
-	pipenv run isort src
+	pipenv run isort ${PYTHONPATH}
 	@echo "Info **********  End:   isort ***************************************"
 
 # Project documentation with Markdown.
@@ -123,7 +115,6 @@ isort:              ## Edit and sort the imports with isort.
 # Configuration file: none
 mkdocs:             ## Create and upload the user documentation with MkDocs.
 	@echo "Info **********  Start: MkDocs **************************************"
-	@echo "MYPYPATH  =${MYPYPATH}"
 	@echo "PYTHON    =${PYTHON}"
 	@echo "PYTHONPATH=${PYTHONPATH}"
 	@echo "---------------------------------------------------------------------"
@@ -136,13 +127,12 @@ mkdocs:             ## Create and upload the user documentation with MkDocs.
 # Configuration file: pyproject.toml
 mypy:               ## Find typing issues with Mypy.
 	@echo "Info **********  Start: Mypy ****************************************"
-	@echo "MYPYPATH  =${MYPYPATH}"
 	@echo "PYTHON    =${PYTHON}"
 	@echo "PYTHONPATH=${PYTHONPATH}"
 	@echo "---------------------------------------------------------------------"
 	pipenv run pip freeze | grep mypy
 	pipenv run mypy --version
-	pipenv run mypy --exclude src/dcr_core/TET.py src/dcr_core
+	pipenv run mypy --exclude ${PYTHONPATH}/TET.py ${PYTHONPATH}
 	@echo "Info **********  End:   Mypy ****************************************"
 
 # pip is the package installer for Python.
@@ -153,7 +143,6 @@ mypy:               ## Find typing issues with Mypy.
 # Configuration file: Pipfile
 pipenv-dev:         ## Install the package dependencies for development.
 	@echo "Info **********  Start: Installation of Development Packages ********"
-	@echo "MYPYPATH  =${MYPYPATH}"
 	@echo "PYTHON    =${PYTHON}"
 	@echo "PYTHONPATH=${PYTHONPATH}"
 	@echo "---------------------------------------------------------------------"
@@ -169,7 +158,6 @@ pipenv-dev:         ## Install the package dependencies for development.
 	@echo "Info **********  End:   Installation of Development Packages ********"
 pipenv-prod:        ## Install the package dependencies for production.
 	@echo "Info **********  Start: Installation of Production Packages *********"
-	@echo "MYPYPATH  =${MYPYPATH}"
 	@echo "PYTHON    =${PYTHON}"
 	@echo "PYTHONPATH=${PYTHONPATH}"
 	@echo "---------------------------------------------------------------------"
@@ -189,12 +177,11 @@ pipenv-prod:        ## Install the package dependencies for production.
 # Configuration file: pyproject.toml
 pydoc-markdown:     ## Create Python API documentation in Markdown format with Pydoc-Markdown.
 	@echo "Info **********  Start: Pydoc-Markdown ******************************"
-	@echo "MYPYPATH  =${MYPYPATH}"
 	@echo "PYTHON    =${PYTHON}"
 	@echo "PYTHONPATH=${PYTHONPATH}"
 	@echo "---------------------------------------------------------------------"
 	pipenv run pydoc-markdown --version
-	pipenv run pydoc-markdown -I src/dcr_core --render-toc > docs/developing_api_documentation.md
+	pipenv run pydoc-markdown -I ${PYTHONPATH} --render-toc > docs/developing_api_documentation.md
 	@echo "Info **********  End:   Pydoc-Markdown ******************************"
 
 # pydocstyle - docstring style checker.
@@ -202,12 +189,11 @@ pydoc-markdown:     ## Create Python API documentation in Markdown format with P
 # Configuration file: pyproject.toml
 pydocstyle:         ## Check the API documentation with pydocstyle.
 	@echo "Info **********  Start: pydocstyle **********************************"
-	@echo "MYPYPATH  =${MYPYPATH}"
 	@echo "PYTHON    =${PYTHON}"
 	@echo "PYTHONPATH=${PYTHONPATH}"
 	@echo "---------------------------------------------------------------------"
 	pipenv run pydocstyle --version
-	pipenv run pydocstyle --count src
+	pipenv run pydocstyle --count ${PYTHONPATH}
 	@echo "Info **********  End:   pydocstyle **********************************"
 
 # Pylint is a tool that checks for errors in Python code.
@@ -215,12 +201,11 @@ pydocstyle:         ## Check the API documentation with pydocstyle.
 # Configuration file: .pylintrc
 pylint:             ## Lint the code with Pylint.
 	@echo "Info **********  Start: Pylint **************************************"
-	@echo "MYPYPATH  =${MYPYPATH}"
 	@echo "PYTHON    =${PYTHON}"
 	@echo "PYTHONPATH=${PYTHONPATH}"
 	@echo "---------------------------------------------------------------------"
 	pipenv run pylint --version
-	pipenv run pylint src
+	pipenv run pylint ${PYTHONPATH}
 	@echo "Info **********  End:   Pylint **************************************"
 
 # twine: Collection of utilities for publishing packages on bPyPI.

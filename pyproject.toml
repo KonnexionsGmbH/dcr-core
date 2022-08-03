@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "dcr_core"
-version = "0.9.4.3"
+version = "0.9.4"
 description = "Document Content Recognition API"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -37,7 +37,6 @@ classifiers = [
 "Bug Tracker" = "https://github.com/KonnexionsGmbH/dcr_core/issues"
 
 [tool.bandit]
-skips = ["B404", "B603", "B607", "B608"]
 
 [tool.black]
 line-length = 140
@@ -75,23 +74,3 @@ warn_return_any = true
 warn_unreachable = false
 warn_unused_configs = true
 warn_unused_ignores = true
-
-[[tool.pydoc-markdown.loaders]]
-search_path = ["src/dcr"]
-type = "python"
-
-[tool.pydoc-markdown.renderer]
-content_directory_name = "docs"
-output_directory = "."
-type = "mkdocs"
-
-[[tool.pydoc-markdown.renderer.pages]]
-contents = ["dcr.*"]
-name = "index"
-title = "API Documentation"
-
-[tool.pydocstyle]
-match = '((?!test_).*\.py)((?!TET).*\.py)'
-
-[tool.setuptools.packages.find]
-where = ["src"]
