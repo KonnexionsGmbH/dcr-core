@@ -1,12 +1,10 @@
 .DEFAULT_GOAL := help
 
 ifeq ($(OS),Windows_NT)
-	DCR_DOCKER_CONTAINER=scripts\\run_setup_postgresql.bat test
 	export PYTHON=python
 	export MYPYPATH=src\\dcr_core
 	export PYTHONPATH=src\\dcr_core
 else
-	DCR_DOCKER_CONTAINER=./scripts/run_setup_postgresql.sh test
 	export PYTHON=python3
 	export MYPYPATH=src/dcr_core
 	export PYTHONPATH=src/dcr_core
@@ -224,5 +222,29 @@ pylint:             ## Lint the code with Pylint.
 	pipenv run pylint --version
 	pipenv run pylint src
 	@echo "Info **********  End:   Pylint **************************************"
+
+# twine: Collection of utilities for publishing packages on bPyPI.
+# https://pypi.org/project/twine/
+upload:             ## Upload the distribution archive to PyPi.
+	@echo "Info **********  Start: twine prod **********************************"
+	${PYTHON} -m build
+	${PYTHON} -m twine upload -p $(SECRET_PYPI) -u wwe dist/*
+	@echo "Info **********  End:   twine prod ***********************************"
+
+# twine: Collection of utilities for publishing packages on Test bPyPI.
+# https://pypi.org/project/twine/
+upload-test:        ## Upload the distribution archive to Test PyPi.
+	@echo "Info **********  Start: twine test **********************************"
+	${PYTHON} -m build
+	${PYTHON} -m twine upload -p $(SECRET_TEST_PYPI) -r testpypi -u wwe --verbose dist/*
+	@echo "Info **********  End:   twine test ***********************************"
+
+version:            ## Show the installed software versions.
+	@echo "Info **********  Start: pip *****************************************"
+	${PYTHON} -m pip --version
+	${PYTHON} -m build --version
+	${PYTHON} -m twine --version
+	${PYTHON} -m wheel version
+	@echo "Info **********  End:   pip *****************************************"
 
 ## ============================================================================
