@@ -1,9 +1,6 @@
 from dcr_core import cls_nlp_core
 
 class LineTypeHeading:
-    file_name_curr: str
-
-    def __init__(self, file_name_curr: str) -> None: ...
     def exists(self) -> bool: ...
     def process_document(
         self,

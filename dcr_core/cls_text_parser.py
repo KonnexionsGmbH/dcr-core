@@ -1,4 +1,3 @@
-"""Module nlp.cls_text_parser: Extract text and metadata from PDFlib TET."""
 from __future__ import annotations
 
 import collections.abc
@@ -45,6 +44,7 @@ class TextParser:
 
         self._parse_result_creation_date = ""
 
+        self._parse_result_line_document: cls_nlp_core.NLPCore.ParserLineDocument = {}
         self._parse_result_line_index_page = 0
         self._parse_result_line_index_para = 0
         self._parse_result_line_llx = 0.00
@@ -368,12 +368,7 @@ class TextParser:
     # Debug an XML element detailed.
     # -----------------------------------------------------------------------------
     @staticmethod
-    def _debug_xml_element_all(
-        event: str,
-        parent_tag: str,
-        attrib: dict[str, str],
-        text: collections.abc.Iterable[str | None],
-    ) -> None:
+    def _debug_xml_element_all(event: str, parent_tag: str, attrib: dict[str, str], text: collections.abc.Iterable[str | None]) -> None:
         """Debug an XML element detailed.
 
         Args:
@@ -779,7 +774,7 @@ class TextParser:
         for child in parent:
             child_tag = child.tag[cls_nlp_core.NLPCore.PARSE_ELEM_FROM :]
             match child_tag:
-                case (cls_nlp_core.NLPCore.PARSE_ELEM_GRAPHICS | cls_nlp_core.NLPCore.PARSE_ELEM_RESOURCES):
+                case cls_nlp_core.NLPCore.PARSE_ELEM_GRAPHICS | cls_nlp_core.NLPCore.PARSE_ELEM_RESOURCES:
                     pass
                 case cls_nlp_core.NLPCore.PARSE_ELEM_PAGE:
                     self._parse_tag_page(child_tag, child)
@@ -1004,13 +999,7 @@ class TextParser:
     # Initialise from the JSON files.
     # -----------------------------------------------------------------------------
     @classmethod
-    def from_files(
-        cls,
-        file_encoding: str,
-        full_name_line="",
-        full_name_page="",
-        full_name_word="",
-    ) -> TextParser:
+    def from_files(cls, file_encoding: str, full_name_line: str = "", full_name_page: str = "", full_name_word: str = "") -> TextParser:
         """Initialise from JSON files.
 
         Args:

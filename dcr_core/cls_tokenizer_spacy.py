@@ -1,6 +1,3 @@
-"""Module nlp.cls_line_type: Determine footer and header lines."""
-from __future__ import annotations
-
 import json
 
 import spacy
@@ -144,11 +141,7 @@ class TokenizerSpacy:
         }
 
         if core_glob.setup.is_tokenize_2_jsonfile:
-            with open(
-                self._file_name_next,
-                "w",
-                encoding=core_glob.FILE_ENCODING_DEFAULT,
-            ) as file_handle:
+            with open(self._file_name_next, "w", encoding=core_glob.FILE_ENCODING_DEFAULT) as file_handle:
                 json.dump(
                     json_data,
                     file_handle,

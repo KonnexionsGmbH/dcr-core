@@ -1,6 +1,3 @@
-"""Module nlp.cls_line_type_heading: Determine headings."""
-from __future__ import annotations
-
 import collections
 import decimal
 import json
@@ -81,15 +78,7 @@ class LineTypeHeading:
 
         self._parser_line_lines_json: cls_nlp_core.NLPCore.ParserLineLines = []
 
-        self._rules: list[
-            tuple[
-                str,
-                bool,
-                str,
-                collections.abc.Callable[[str, str], bool],
-                list[str],
-            ]
-        ] = self._init_rules()
+        self._rules: list[tuple[str, bool, str, collections.abc.Callable[[str, str], bool], list[str]]] = self._init_rules()
 
         # -----------------------------------------------------------------------------
         # Heading rules collection.
@@ -107,24 +96,9 @@ class LineTypeHeading:
         # 6: regexp_str:
         #           regular expression
         # -----------------------------------------------------------------------------
-        self._rules_collection: list[
-            tuple[
-                str,
-                bool,
-                re.Pattern[str],
-                collections.abc.Callable[[str, str], bool],
-                list[str],
-                str,
-            ]
-        ] = []
+        self._rules_collection: list[tuple[str, bool, re.Pattern[str], collections.abc.Callable[[str, str], bool], list[str], str]] = []
 
-        for (
-            rule_name,
-            is_first_token,
-            regexp_str,
-            function_is_asc,
-            start_values,
-        ) in self._rules:
+        for (rule_name, is_first_token, regexp_str, function_is_asc, start_values) in self._rules:
             self._rules_collection.append(
                 (
                     rule_name.ljust(self._RULE_NAME_SIZE),
@@ -194,7 +168,7 @@ class LineTypeHeading:
     # Check whether a valid start value is present.
     # -----------------------------------------------------------------------------
     @staticmethod
-    def _check_valid_start_value(target_value: str, is_first_token: bool, start_values: list[str]) -> bool:  # noqa: C901  # noqa: C901
+    def _check_valid_start_value(target_value: str, is_first_token: bool, start_values: list[str]) -> bool:  # noqa: C901
         """Check whether a valid start value is present.
 
         Args:
@@ -275,12 +249,7 @@ class LineTypeHeading:
             line_lines_idx = self._line_lines_idx + 1
 
             for idx in range(core_glob.setup.lt_heading_file_incl_no_ctx):
-                (
-                    line,
-                    new_page_idx,
-                    new_line_lines,
-                    new_line_lines_idx,
-                ) = self._get_next_body_line(page_idx, line_lines, line_lines_idx)
+                (line, new_page_idx, new_line_lines, new_line_lines_idx) = self._get_next_body_line(page_idx, line_lines, line_lines_idx)
 
                 toc_entry[cls_nlp_core.NLPCore.JSON_NAME_HEADING_CTX_LINE + str(idx + 1)] = line
 
@@ -298,10 +267,7 @@ class LineTypeHeading:
     # Get the next body line.
     # -----------------------------------------------------------------------------
     def _get_next_body_line(
-        self,
-        page_idx: int,
-        line_lines: cls_nlp_core.NLPCore.ParserLineLines,
-        line_lines_idx: int,
+        self, page_idx: int, line_lines: cls_nlp_core.NLPCore.ParserLineLines, line_lines_idx: int
     ) -> tuple[str, int, cls_nlp_core.NLPCore.ParserLineLines, int]:
         """Get the next body line.
 
@@ -323,12 +289,7 @@ class LineTypeHeading:
             if line_line[cls_nlp_core.NLPCore.JSON_NAME_LINE_TYPE] != cls_nlp_core.NLPCore.LINE_TYPE_BODY:
                 continue
 
-            return (
-                line_line[cls_nlp_core.NLPCore.JSON_NAME_TEXT],
-                page_idx,
-                line_lines,
-                idx,
-            )
+            return line_line[cls_nlp_core.NLPCore.JSON_NAME_TEXT], page_idx, line_lines, idx
 
         if (page_idx + 1) < self._max_page:
             page_idx_local = page_idx + 1
@@ -375,10 +336,7 @@ class LineTypeHeading:
 
         anti_patterns = []
 
-        for (
-            name,
-            regexp,
-        ) in cls_nlp_core.NLPCore.get_lt_anti_patterns_default_heading():
+        for name, regexp in cls_nlp_core.NLPCore.get_lt_anti_patterns_default_heading():
             anti_patterns.append((name, re.compile(regexp)))
 
         return anti_patterns
@@ -397,9 +355,7 @@ class LineTypeHeading:
     # 5: start_values:
     #           list of strings
     # -----------------------------------------------------------------------------
-    def _init_rules(
-        self,
-    ) -> list[tuple[str, bool, str, collections.abc.Callable[[str, str], bool], list[str],]]:  # noqa: E231
+    def _init_rules(self) -> list[tuple[str, bool, str, collections.abc.Callable[[str, str], bool], list[str]]]:
         """Initialise the heading rules.
 
         Returns:
@@ -458,7 +414,7 @@ class LineTypeHeading:
     @staticmethod
     def _load_rules_from_json(
         lt_heading_rule_file: pathlib.Path,
-    ) -> list[tuple[str, bool, str, collections.abc.Callable[[str, str], bool], list[str],]]:  # noqa: E231
+    ) -> list[tuple[str, bool, str, collections.abc.Callable[[str, str], bool], list[str]]]:
         """Load the valid heading rules from a JSON file.
 
         Args:
@@ -629,7 +585,7 @@ class LineTypeHeading:
         core_utils.progress_msg(core_glob.setup.is_verbose_lt_heading, "LineTypeHeading")
         core_utils.progress_msg(
             core_glob.setup.is_verbose_lt_heading,
-            f"LineTypeHeading: Start page (lines)                   ={self._page_idx + 1}",
+            f"LineTypeHeading: Start page (lines)                   ={self._page_idx+1}",
         )
 
         self._max_line_line = len(core_glob.text_parser.parse_result_line_lines)
@@ -652,7 +608,7 @@ class LineTypeHeading:
 
         core_utils.progress_msg(
             core_glob.setup.is_verbose_lt_heading,
-            f"LineTypeHeading: End   page (lines)                   ={self._page_idx + 1}",
+            f"LineTypeHeading: End   page (lines)                   ={self._page_idx+1}",
         )
 
     # -----------------------------------------------------------------------------

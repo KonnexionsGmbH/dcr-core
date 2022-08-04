@@ -1,6 +1,3 @@
-"""Module nlp.cls_line_type_list_bullet: Determine bulleted lists."""
-from __future__ import annotations
-
 import json
 import os
 import pathlib
@@ -123,12 +120,7 @@ class LineTypeListBullet:
 
         entries: LineTypeListBullet.Entries = []
 
-        for [
-            page_idx,
-            para_no,
-            line_lines_idx_from,
-            line_lines_idx_till,
-        ] in self._entries:
+        for [page_idx, para_no, line_lines_idx_from, line_lines_idx_till] in self._entries:
             line_lines: cls_nlp_core.NLPCore.ParserLineLines = core_glob.text_parser.parse_result_line_pages[page_idx][
                 cls_nlp_core.NLPCore.JSON_NAME_LINES
             ]
@@ -214,10 +206,7 @@ class LineTypeListBullet:
 
         anti_patterns = []
 
-        for (
-            name,
-            regexp,
-        ) in cls_nlp_core.NLPCore.get_lt_anti_patterns_default_list_bullet(environment_variant=self._environment_variant):
+        for name, regexp in cls_nlp_core.NLPCore.get_lt_anti_patterns_default_list_bullet(environment_variant=self._environment_variant):
             anti_patterns.append((name, re.compile(regexp)))
 
         return anti_patterns
@@ -263,11 +252,7 @@ class LineTypeListBullet:
         """
         anti_patterns = []
 
-        with open(
-            lt_list_bullet_rule_file,
-            "r",
-            encoding=core_glob.FILE_ENCODING_DEFAULT,
-        ) as file_handle:
+        with open(lt_list_bullet_rule_file, "r", encoding=core_glob.FILE_ENCODING_DEFAULT) as file_handle:
             json_data = json.load(file_handle)
 
             for rule in json_data[cls_nlp_core.NLPCore.JSON_NAME_LINE_TYPE_ANTI_PATTERNS]:
@@ -304,11 +289,7 @@ class LineTypeListBullet:
         """
         list_bullet_rules = {}
 
-        with open(
-            lt_list_bullet_rule_file,
-            "r",
-            encoding=core_glob.FILE_ENCODING_DEFAULT,
-        ) as file_handle:
+        with open(lt_list_bullet_rule_file, "r", encoding=core_glob.FILE_ENCODING_DEFAULT) as file_handle:
             json_data = json.load(file_handle)
 
             for bullet in json_data[cls_nlp_core.NLPCore.JSON_NAME_LINE_TYPE_RULES]:
@@ -377,19 +358,9 @@ class LineTypeListBullet:
                 / 100,
                 2,
             )
-            self._llx_upper_limit = round(
-                coord_llx * (100 + core_glob.setup.lt_list_bullet_tolerance_llx) / 100,
-                2,
-            )
+            self._llx_upper_limit = round(coord_llx * (100 + core_glob.setup.lt_list_bullet_tolerance_llx) / 100, 2)
 
-        self._entries.append(
-            [
-                self._page_idx,
-                para_no,
-                self._line_lines_idx,
-                self._line_lines_idx,
-            ]
-        )
+        self._entries.append([self._page_idx, para_no, self._line_lines_idx, self._line_lines_idx])
 
         self._no_entries += 1
 
@@ -424,10 +395,7 @@ class LineTypeListBullet:
     # -----------------------------------------------------------------------------
     def _reset_document(self) -> None:
         """Reset the document memory."""
-        core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_list_bullet,
-            "LineTypeListBullet: Reset the document memory",
-        )
+        core_utils.progress_msg(core_glob.setup.is_verbose_lt_list_bullet, "LineTypeListBullet: Reset the document memory")
 
         self.no_lists = 0
 
@@ -453,10 +421,7 @@ class LineTypeListBullet:
         self._page_idx_prev = -1
         self._para_no_prev = 0
 
-        core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_list_bullet,
-            "LineTypeListBullet: Reset the list memory",
-        )
+        core_utils.progress_msg(core_glob.setup.is_verbose_lt_list_bullet, "LineTypeListBullet: Reset the list memory")
 
     # -----------------------------------------------------------------------------
     # Check the object existence.

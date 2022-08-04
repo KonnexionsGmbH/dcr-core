@@ -1,6 +1,3 @@
-"""Module nlp.cls_nlp_core: Managing the NLP processing."""
-from __future__ import annotations
-
 import collections
 import json
 import re
@@ -349,9 +346,7 @@ class NLPCore:
     #           regular expression
     # -----------------------------------------------------------------------------
     @staticmethod
-    def _get_lt_anti_patterns_default_list_bullet(
-        environment_variant: str,
-    ) -> list[tuple[str, str]]:
+    def _get_lt_anti_patterns_default_list_bullet(environment_variant: str) -> list[tuple[str, str]]:
         """Get the default bulleted list line type anti-patterns.
 
         Returns:
@@ -373,9 +368,7 @@ class NLPCore:
     #           regular expression
     # -----------------------------------------------------------------------------
     @staticmethod
-    def _get_lt_anti_patterns_default_list_number(
-        environment_variant: str,
-    ) -> list[tuple[str, str]]:
+    def _get_lt_anti_patterns_default_list_number(environment_variant: str) -> list[tuple[str, str]]:
         """Get the default numbered list line type anti-patterns.
 
         Args:
@@ -408,15 +401,7 @@ class NLPCore:
     #           list of strings
     # -----------------------------------------------------------------------------
     @staticmethod
-    def _get_lt_rules_default_heading_list_number() -> list[
-        tuple[
-            str,
-            bool,
-            str,
-            collections.abc.Callable[[str, str], bool],
-            list[str],
-        ]
-    ]:
+    def _get_lt_rules_default_heading_list_number() -> list[tuple[str, bool, str, collections.abc.Callable[[str, str], bool], list[str]]]:
         """Get the default heading & numbered list line type rules.
 
         Returns:
@@ -671,13 +656,7 @@ class NLPCore:
     # Export the default heading line type rules.
     # -----------------------------------------------------------------------------
     @staticmethod
-    def export_rule_file_heading(
-        is_verbose: bool,
-        file_name: str,
-        file_encoding: str,
-        json_indent: str,
-        is_json_sort_keys: bool,
-    ) -> None:
+    def export_rule_file_heading(is_verbose: bool, file_name: str, file_encoding: str, json_indent: str, is_json_sort_keys: bool) -> None:
         """Export the default heading line type rules.
 
         Args:
@@ -704,13 +683,7 @@ class NLPCore:
 
         rules = []
 
-        for (
-            name,
-            is_first_token,
-            regexp,
-            function_is_asc,
-            start_values,
-        ) in NLPCore.get_lt_rules_default_heading():
+        for name, is_first_token, regexp, function_is_asc, start_values in NLPCore.get_lt_rules_default_heading():
             rules.append(
                 {
                     NLPCore.JSON_NAME_NAME: name,
@@ -747,15 +720,9 @@ class NLPCore:
             )
 
         if len(anti_patterns) > 0:
-            core_utils.progress_msg(
-                is_verbose,
-                f"{len(anti_patterns):3d} heading       line type anti-pattern(s) exported",
-            )
+            core_utils.progress_msg(is_verbose, f"{len(anti_patterns):3d} heading       line type anti-pattern(s) exported")
         if len(rules) > 0:
-            core_utils.progress_msg(
-                is_verbose,
-                f"{len(rules):3d} heading       line type rule(s)         exported",
-            )
+            core_utils.progress_msg(is_verbose, f"{len(rules):3d} heading       line type rule(s)         exported")
 
     # -----------------------------------------------------------------------------
     # Export the default bulleted list line type rules.
@@ -820,15 +787,9 @@ class NLPCore:
             )
 
         if len(anti_patterns) > 0:
-            core_utils.progress_msg(
-                is_verbose,
-                f"{len(anti_patterns):3d} bulleted list line type anti-pattern(s) exported",
-            )
+            core_utils.progress_msg(is_verbose, f"{len(anti_patterns):3d} bulleted list line type anti-pattern(s) exported")
         if len(rules) > 0:
-            core_utils.progress_msg(
-                is_verbose,
-                f"{len(rules):3d} bulleted list line type rule(s)         exported",
-            )
+            core_utils.progress_msg(is_verbose, f"{len(rules):3d} bulleted list line type rule(s)         exported")
 
     # -----------------------------------------------------------------------------
     # Export the default numbered list line type rules.
@@ -870,12 +831,7 @@ class NLPCore:
 
         rules = []
 
-        for (
-            name,
-            regexp,
-            function_is_asc,
-            start_values,
-        ) in NLPCore.get_lt_rules_default_list_number():
+        for name, regexp, function_is_asc, start_values in NLPCore.get_lt_rules_default_list_number():
             rules.append(
                 {
                     NLPCore.JSON_NAME_NAME: name,
@@ -910,15 +866,9 @@ class NLPCore:
             )
 
         if len(anti_patterns) > 0:
-            core_utils.progress_msg(
-                is_verbose,
-                f"{len(anti_patterns):3d} numbered list line type anti-pattern(s) exported",
-            )
+            core_utils.progress_msg(is_verbose, f"{len(anti_patterns):3d} numbered list line type anti-pattern(s) exported")
         if len(rules) > 0:
-            core_utils.progress_msg(
-                is_verbose,
-                f"{len(rules):3d} numbered list line type rule(s)         exported",
-            )
+            core_utils.progress_msg(is_verbose, f"{len(rules):3d} numbered list line type rule(s)         exported")
 
     # -----------------------------------------------------------------------------
     # Get the default heading line type anti-patterns.
@@ -961,9 +911,7 @@ class NLPCore:
     # Get the default numbered list line type anti-patterns.
     # -----------------------------------------------------------------------------
     @staticmethod
-    def get_lt_anti_patterns_default_list_number(
-        environment_variant: str,
-    ) -> list[tuple[str, str]]:
+    def get_lt_anti_patterns_default_list_number(environment_variant: str) -> list[tuple[str, str]]:
         """Get the default numbered list line type anti-patterns.
 
         Args:
@@ -980,15 +928,7 @@ class NLPCore:
     # Get the default heading line type rules.
     # -----------------------------------------------------------------------------
     @staticmethod
-    def get_lt_rules_default_heading() -> list[
-        tuple[
-            str,
-            bool,
-            str,
-            collections.abc.Callable[[str, str], bool],
-            list[str],
-        ]
-    ]:
+    def get_lt_rules_default_heading() -> list[tuple[str, bool, str, collections.abc.Callable[[str, str], bool], list[str]]]:
         """Get the default heading line type rules.
 
         Returns:

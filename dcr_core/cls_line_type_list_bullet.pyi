@@ -1,13 +1,14 @@
-from dcr_core import cls_nlp_core as cls_nlp_core
+from dcr_core import cls_nlp_core
 
 class LineTypeListBullet:
     Entry = dict[str, int | str]
     Entries = list[Entry]
+
     List = dict[str, Entries | float | int | str]
     Lists = list[List]
 
-    def __init__(self, file_name_curr: str) -> None:
-        self.no_lists = None
+    def __init__(self) -> None:
+        self.no_lists: int = 0
         ...
     def exists(self) -> bool: ...
     def process_document(

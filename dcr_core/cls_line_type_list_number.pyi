@@ -11,16 +11,10 @@ class LineTypeListNumber:
     Lists = list[List]
 
     RuleExtern = tuple[str, str, collections.abc.Callable[[str, str], bool], list[str]]
-    RuleIntern = tuple[
-        str,
-        re.Pattern[str],
-        collections.abc.Callable[[str, str], bool],
-        list[str],
-        str,
-    ]
+    RuleIntern = tuple[str, re.Pattern[str], collections.abc.Callable[[str, str], bool], list[str], str]
 
-    def __init__(self, file_name_curr: str) -> None:
-        self.no_lists = None
+    def __init__(self) -> None:
+        self.no_lists: int = 0
         ...
     def exists(self) -> bool: ...
     def process_document(

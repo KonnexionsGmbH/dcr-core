@@ -1,4 +1,3 @@
-"""Module core_utils: Helper functions."""
 import datetime
 import os
 import pathlib
@@ -40,7 +39,7 @@ def check_exists_object(  # noqa: C901
     """
     if is_line_type_headers_footers:
         try:
-            core_glob.line_type_headers_footers.exists()
+            core_glob.line_type_headers_footers.exists()  # type: ignore
         except AttributeError:
             terminate_fatal(
                 "The required instance of the class 'LineTypeHeadersFooters' does not yet exist.",
@@ -48,7 +47,7 @@ def check_exists_object(  # noqa: C901
 
     if is_line_type_list_bullet:
         try:
-            core_glob.line_type_list_bullet.exists()
+            core_glob.line_type_list_bullet.exists()  # type: ignore
         except AttributeError:
             terminate_fatal(
                 "The required instance of the class 'LineTypeListBullet' does not yet exist.",
@@ -56,7 +55,7 @@ def check_exists_object(  # noqa: C901
 
     if is_line_type_list_number:
         try:
-            core_glob.line_type_list_number.exists()
+            core_glob.line_type_list_number.exists()  # type: ignore
         except AttributeError:
             terminate_fatal(
                 "The required instance of the class 'LineTypeListNumber' does not yet exist.",
@@ -64,7 +63,7 @@ def check_exists_object(  # noqa: C901
 
     if is_line_type_table:
         try:
-            core_glob.line_type_table.exists()
+            core_glob.line_type_table.exists()  # type: ignore
         except AttributeError:
             terminate_fatal(
                 "The required instance of the class 'LineTypeTable' does not yet exist.",
@@ -72,7 +71,7 @@ def check_exists_object(  # noqa: C901
 
     if is_line_type_toc:
         try:
-            core_glob.line_type_toc.exists()
+            core_glob.line_type_toc.exists()  # type: ignore
         except AttributeError:
             terminate_fatal(
                 "The required instance of the class 'LineTypeToc' does not yet exist.",
@@ -80,7 +79,7 @@ def check_exists_object(  # noqa: C901
 
     if is_setup:
         try:
-            core_glob.setup.exists()
+            core_glob.setup.exists()  # type: ignore
         except AttributeError:
             terminate_fatal(
                 "The required instance of the class 'Setup' does not yet exist.",
@@ -98,10 +97,7 @@ def check_exists_object(  # noqa: C901
 # -----------------------------------------------------------------------------
 # Get the full name from a directory name or path and a file name or path.
 # -----------------------------------------------------------------------------
-def get_full_name(
-    directory_name: pathlib.Path | str | None,
-    file_name: pathlib.Path | str | None,
-) -> str:
+def get_full_name(directory_name: pathlib.Path | str | None, file_name: pathlib.Path | str | None) -> str:
     """Get the full name from a directory name or path and a file name or path.
 
     Args:
@@ -208,12 +204,7 @@ def terminate_fatal(error_msg: str) -> None:
     """
     print("")
     print(core_glob.LOGGER_FATAL_HEAD)
-    print(
-        core_glob.LOGGER_FATAL_HEAD,
-        error_msg,
-        core_glob.LOGGER_FATAL_TAIL,
-        sep="",
-    )
+    print(core_glob.LOGGER_FATAL_HEAD, error_msg, core_glob.LOGGER_FATAL_TAIL, sep="")
     print(core_glob.LOGGER_FATAL_HEAD)
 
     traceback.print_exc(chain=True)

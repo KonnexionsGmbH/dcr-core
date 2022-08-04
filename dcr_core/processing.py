@@ -9,12 +9,12 @@ import PyPDF2
 import pytesseract
 from pdf2image.exceptions import PDFPageCountError
 
+import PDFlib.TET
 from dcr_core import cls_nlp_core
 from dcr_core import cls_setup
 from dcr_core import cls_text_parser
 from dcr_core import core_glob
 from dcr_core import core_utils
-from PDFlib import TET
 
 # -----------------------------------------------------------------------------
 # Global variables.
@@ -282,7 +282,7 @@ def pdflib_process(
                 ("ok", "") if the processing has been completed successfully,
                            otherwise a corresponding error code and error message.
     """
-    tet = TET.TET()
+    tet = PDFlib.TET.TET()
 
     doc_opt_list = f"tetml={{filename={{{full_name_out}}}}} {document_opt_list}"
 
@@ -437,8 +437,7 @@ def tokenizer_process(
     """
     try:
         core_glob.text_parser = cls_text_parser.TextParser.from_files(
-            file_encoding=core_glob.FILE_ENCODING_DEFAULT,
-            full_name_line=full_name_in,
+            file_encoding=core_glob.FILE_ENCODING_DEFAULT, full_name_line=full_name_in
         )
 
         core_glob.tokenizer_spacy.process_document(

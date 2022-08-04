@@ -1,6 +1,3 @@
-"""Module nlp.cls_line_type_table: Determine tables."""
-from __future__ import annotations
-
 import json
 
 from dcr_core import cls_nlp_core
@@ -61,7 +58,7 @@ class LineTypeTable:
         self._first_row_llx = 0.0
         self._first_row_urx = 0.0
 
-        core_glob.setup.is_table_open = False
+        self._is_table_open = False
 
         self._last_column_urx = 0.0
 
@@ -129,7 +126,7 @@ class LineTypeTable:
     # -----------------------------------------------------------------------------
     def _finish_table(self) -> None:
         """Finish a table."""
-        if not core_glob.setup.is_table_open:
+        if not self._is_table_open:
             return
 
         self._finish_row()
@@ -186,7 +183,7 @@ class LineTypeTable:
         self._column_no = int(line_line[cls_nlp_core.NLPCore.JSON_NAME_COLUMN_NO])
         self._row_no = int(line_line[cls_nlp_core.NLPCore.JSON_NAME_ROW_NO])
 
-        if not core_glob.setup.is_table_open:
+        if not self._is_table_open:
             self._reset_table()
         elif self._row_no < self._row_no_prev:
             self._finish_table()
@@ -237,7 +234,7 @@ class LineTypeTable:
 
         self._columns.append(new_entry)
 
-        core_glob.setup.is_table_open = True
+        self._is_table_open = True
         self._column_no_prev = self._column_no
         self._row_no_prev = self._row_no
 
@@ -271,10 +268,7 @@ class LineTypeTable:
 
         self.table_no = 0
 
-        core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_table,
-            "LineTypeTable: Reset the document memory",
-        )
+        core_utils.progress_msg(core_glob.setup.is_verbose_lt_table, "LineTypeTable: Reset the document memory")
 
         self._reset_table()
 
@@ -289,10 +283,7 @@ class LineTypeTable:
         self._first_column_llx = 0.0
         self._last_column_urx = 0.0
 
-        core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_table,
-            "LineTypeTable: Reset the row memory",
-        )
+        core_utils.progress_msg(core_glob.setup.is_verbose_lt_table, "LineTypeTable: Reset the row memory")
 
     # -----------------------------------------------------------------------------
     # Reset the table memory.
@@ -302,7 +293,7 @@ class LineTypeTable:
         self._first_row_llx = 0.0
         self._first_row_urx = 0.0
 
-        core_glob.setup.is_table_open = False
+        self._is_table_open = False
 
         self._no_columns_table = 0
 
@@ -314,10 +305,7 @@ class LineTypeTable:
 
         self.table_no = 0
 
-        core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_table,
-            "LineTypeTable: Reset the table memory",
-        )
+        core_utils.progress_msg(core_glob.setup.is_verbose_lt_table, "LineTypeTable: Reset the table memory")
 
         self._reset_row()
 

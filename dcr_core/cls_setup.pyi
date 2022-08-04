@@ -1,8 +1,8 @@
-from configparser import ConfigParser
+import configparser
 from typing import ClassVar
 
 class Setup:
-    _CONFIG_PARAM_NO: int
+    _CONFIG_PARAM_NO: ClassVar[int]
 
     _DCR_CFG_CREATE_EXTRA_FILE_HEADING: ClassVar[str]
     _DCR_CFG_CREATE_EXTRA_FILE_LIST_BULLET: ClassVar[str]
@@ -123,6 +123,7 @@ class Setup:
     _DCR_CFG_VERBOSE_PARSER: ClassVar[str]
 
     _DCR_ENVIRONMENT_TYPE: ClassVar[str]
+
     DCR_VERSION: ClassVar[str]
 
     ENVIRONMENT_TYPE_DEV: ClassVar[str]
@@ -133,124 +134,139 @@ class Setup:
     PDF2IMAGE_TYPE_PNG: ClassVar[str]
 
     def __init__(self) -> None:
-        self._config: dict[str, str]
-        self._config_parser: ConfigParser
-        self.environment_variant: str
-        self.is_create_extra_file_heading: bool
-        self.is_create_extra_file_list_bullet: bool
-        self.is_create_extra_file_list_number: bool
-        self.is_create_extra_file_table: bool
-        self.json_indent: int
-        self.is_json_sort_keys: bool
-        self.lt_footer_max_distance: int
-        self.lt_footer_max_lines: int
-        self.lt_header_max_distance: int
-        self.lt_header_max_lines: int
-        self.lt_heading_file_incl_no_ctx: int
-        self.is_lt_heading_file_incl_regexp: bool
-        self.lt_export_rule_file_heading: str
-        self.lt_export_rule_file_list_bullet: str
-        self.lt_export_rule_file_list_number: str
-        self.lt_heading_max_level: int
-        self.lt_heading_min_pages: int
-        self.lt_heading_rule_file: str
-        self.lt_heading_tolerance_llx: int
-        self.lt_list_bullet_min_entries: int
-        self.lt_list_bullet_rule_file: str
-        self.lt_list_bullet_tolerance_llx: int
-        self.is_lt_list_number_file_incl_regexp: bool
-        self.lt_list_number_min_entries: int
-        self.lt_list_number_rule_file: str
-        self.lt_list_number_tolerance_llx: int
-        self.is_lt_table_file_incl_empty_columns: bool
-        self.lt_toc_last_page: int
-        self.lt_toc_min_entries: int
-        self.is_parsing_line: bool
-        self.is_parsing_page: bool
-        self.is_parsing_word: bool
-        self.pdf2image_type: str
-        self.tesseract_timeout: int
-        self.is_tetml_page: bool
-        self.is_tetml_word: bool
-        self.is_tokenize_2_database: bool
-        self.is_tokenize_2_jsonfile: bool
-        self.is_verbose: bool
-        self.is_verbose_lt_headers_footers: bool
-        self.is_verbose_lt_heading: bool
-        self.is_verbose_lt_list_bullet: bool
-        self.is_verbose_lt_list_number: bool
-        self.is_verbose_lt_table: bool
-        self.is_verbose_lt_toc: bool
-        self.verbose_parser: str
-        self.is_spacy_ignore_bracket: bool
-        self.is_spacy_ignore_left_punct: bool
-        self.is_spacy_ignore_line_type_footer: bool
-        self.is_spacy_ignore_line_type_header: bool
-        self.is_spacy_ignore_line_type_heading: bool
-        self.is_spacy_ignore_line_type_list_bullet: bool
-        self.is_spacy_ignore_line_type_list_number: bool
-        self.is_spacy_ignore_line_type_table: bool
-        self.is_spacy_ignore_line_type_toc: bool
-        self.is_spacy_ignore_punct: bool
-        self.is_spacy_ignore_quote: bool
-        self.is_spacy_ignore_right_punct: bool
-        self.is_spacy_ignore_space: bool
-        self.is_spacy_ignore_stop: bool
-        self.is_spacy_tkn_attr_cluster: bool
-        self.is_spacy_tkn_attr_dep_: bool
-        self.is_spacy_tkn_attr_doc: bool
-        self.is_spacy_tkn_attr_ent_iob_: bool
-        self.is_spacy_tkn_attr_ent_kb_id_: bool
-        self.is_spacy_tkn_attr_ent_type_: bool
-        self.is_spacy_tkn_attr_head: bool
-        self.is_spacy_tkn_attr_i: bool
-        self.is_spacy_tkn_attr_idx: bool
-        self.is_spacy_tkn_attr_is_alpha: bool
-        self.is_spacy_tkn_attr_is_ascii: bool
-        self.is_spacy_tkn_attr_is_bracket: bool
-        self.is_spacy_tkn_attr_is_currency: bool
-        self.is_spacy_tkn_attr_is_digit: bool
-        self.is_spacy_tkn_attr_is_left_punct: bool
-        self.is_spacy_tkn_attr_is_lower: bool
-        self.is_spacy_tkn_attr_is_oov: bool
-        self.is_spacy_tkn_attr_is_punct: bool
-        self.is_spacy_tkn_attr_is_quote: bool
-        self.is_spacy_tkn_attr_is_right_punct: bool
-        self.is_spacy_tkn_attr_is_sent_end: bool
-        self.is_spacy_tkn_attr_is_sent_start: bool
-        self.is_spacy_tkn_attr_is_space: bool
-        self.is_spacy_tkn_attr_is_stop: bool
-        self.is_spacy_tkn_attr_is_title: bool
-        self.is_spacy_tkn_attr_is_upper: bool
-        self.is_spacy_tkn_attr_lang_: bool
-        self.is_spacy_tkn_attr_left_edge: bool
-        self.is_spacy_tkn_attr_lemma_: bool
-        self.is_spacy_tkn_attr_lex: bool
-        self.is_spacy_tkn_attr_lex_id: bool
-        self.is_spacy_tkn_attr_like_email: bool
-        self.is_spacy_tkn_attr_like_num: bool
-        self.is_spacy_tkn_attr_like_url: bool
-        self.is_spacy_tkn_attr_lower_: bool
-        self.is_spacy_tkn_attr_morph: bool
-        self.is_spacy_tkn_attr_norm_: bool
-        self.is_spacy_tkn_attr_orth_: bool
-        self.is_spacy_tkn_attr_pos_: bool
-        self.is_spacy_tkn_attr_prefix_: bool
-        self.is_spacy_tkn_attr_prob: bool
-        self.is_spacy_tkn_attr_rank: bool
-        self.is_spacy_tkn_attr_right_edge: bool
-        self.is_spacy_tkn_attr_sent: bool
-        self.is_spacy_tkn_attr_sentiment: bool
-        self.is_spacy_tkn_attr_shape_: bool
-        self.is_spacy_tkn_attr_suffix_: bool
-        self.is_spacy_tkn_attr_tag_: bool
-        self.is_spacy_tkn_attr_tensor: bool
-        self.is_spacy_tkn_attr_text: bool
-        self.is_spacy_tkn_attr_text_with_ws: bool
-        self.is_spacy_tkn_attr_vocab: bool
-        self.is_spacy_tkn_attr_whitespace_: bool
+        self._config: dict[str, str] = {}
+        self._config_parser: configparser.ConfigParser
+        self._exist: bool = False
+        self.environment_variant: str = ""
+        self.is_create_extra_file_heading: bool = False
+        self.is_create_extra_file_list_bullet: bool = False
+        self.is_create_extra_file_list_number: bool = False
+        self.is_create_extra_file_table: bool = False
+        self.is_json_sort_keys: bool = False
+        self.is_lt_heading_file_incl_regexp: bool = False
+        self.is_lt_list_number_file_incl_regexp: bool = False
+        self.is_lt_table_file_incl_empty_columns: bool = False
+        self.is_parsing_line: bool = False
+        self.is_parsing_page: bool = False
+        self.is_parsing_word: bool = False
+        self.is_spacy_ignore_bracket: bool = False
+        self.is_spacy_ignore_left_punct: bool = False
+        self.is_spacy_ignore_line_type_footer: bool = False
+        self.is_spacy_ignore_line_type_header: bool = False
+        self.is_spacy_ignore_line_type_heading = False
+        self.is_spacy_ignore_line_type_list_bullet = False
+        self.is_spacy_ignore_line_type_list_number = False
+        self.is_spacy_ignore_line_type_table = False
+        self.is_spacy_ignore_line_type_toc: bool = False
+        self.is_spacy_ignore_punct: bool = False
+        self.is_spacy_ignore_quote: bool = False
+        self.is_spacy_ignore_right_punct: bool = False
+        self.is_spacy_ignore_space: bool = False
+        self.is_spacy_ignore_stop: bool = False
+        self.is_spacy_tkn_attr_cluster: bool = False
+        self.is_spacy_tkn_attr_dep_: bool = False
+        self.is_spacy_tkn_attr_doc: bool = False
+        self.is_spacy_tkn_attr_ent_iob_: bool = False
+        self.is_spacy_tkn_attr_ent_kb_id_: bool = False
+        self.is_spacy_tkn_attr_ent_type_: bool = False
+        self.is_spacy_tkn_attr_head: bool = False
+        self.is_spacy_tkn_attr_i: bool = False
+        self.is_spacy_tkn_attr_idx: bool = False
+        self.is_spacy_tkn_attr_is_alpha: bool = False
+        self.is_spacy_tkn_attr_is_ascii: bool = False
+        self.is_spacy_tkn_attr_is_bracket: bool = False
+        self.is_spacy_tkn_attr_is_currency: bool = False
+        self.is_spacy_tkn_attr_is_digit: bool = False
+        self.is_spacy_tkn_attr_is_left_punct: bool = False
+        self.is_spacy_tkn_attr_is_lower: bool = False
+        self.is_spacy_tkn_attr_is_oov: bool = False
+        self.is_spacy_tkn_attr_is_punct: bool = False
+        self.is_spacy_tkn_attr_is_quote: bool = False
+        self.is_spacy_tkn_attr_is_right_punct: bool = False
+        self.is_spacy_tkn_attr_is_sent_end: bool = False
+        self.is_spacy_tkn_attr_is_sent_start: bool = False
+        self.is_spacy_tkn_attr_is_space: bool = False
+        self.is_spacy_tkn_attr_is_stop: bool = False
+        self.is_spacy_tkn_attr_is_title: bool = False
+        self.is_spacy_tkn_attr_is_upper: bool = False
+        self.is_spacy_tkn_attr_lang_: bool = False
+        self.is_spacy_tkn_attr_left_edge: bool = False
+        self.is_spacy_tkn_attr_lemma_: bool = False
+        self.is_spacy_tkn_attr_lex: bool = False
+        self.is_spacy_tkn_attr_lex_id: bool = False
+        self.is_spacy_tkn_attr_like_email: bool = False
+        self.is_spacy_tkn_attr_like_num: bool = False
+        self.is_spacy_tkn_attr_like_url: bool = False
+        self.is_spacy_tkn_attr_lower_: bool = False
+        self.is_spacy_tkn_attr_morph: bool = False
+        self.is_spacy_tkn_attr_norm_: bool = False
+        self.is_spacy_tkn_attr_orth_: bool = False
+        self.is_spacy_tkn_attr_pos_: bool = False
+        self.is_spacy_tkn_attr_prefix_: bool = False
+        self.is_spacy_tkn_attr_prob: bool = False
+        self.is_spacy_tkn_attr_rank: bool = False
+        self.is_spacy_tkn_attr_right_edge: bool = False
+        self.is_spacy_tkn_attr_sent: bool = False
+        self.is_spacy_tkn_attr_sentiment: bool = False
+        self.is_spacy_tkn_attr_shape_: bool = False
+        self.is_spacy_tkn_attr_suffix_: bool = False
+        self.is_spacy_tkn_attr_tag_: bool = False
+        self.is_spacy_tkn_attr_tensor: bool = False
+        self.is_spacy_tkn_attr_text: bool = False
+        self.is_spacy_tkn_attr_text_with_ws: bool = False
+        self.is_spacy_tkn_attr_vocab: bool = False
+        self.is_spacy_tkn_attr_whitespace_: bool = False
+        self.is_tetml_page: bool = False
+        self.is_tetml_word: bool = False
+        self.is_tokenize_2_database: bool = False
+        self.is_tokenize_2_jsonfile: bool = False
+        self.is_verbose: bool = False
+        self.is_verbose_lt_headers_footers: bool = False
+        self.is_verbose_lt_heading: bool = False
+        self.is_verbose_lt_list_bullet: bool = False
+        self.is_verbose_lt_list_number: bool = False
+        self.is_verbose_lt_table: bool = False
+        self.is_verbose_lt_toc: bool = False
+        self.json_indent: int = 0
+        self.lt_export_rule_file_heading: str = ""
+        self.lt_export_rule_file_list_bullet: str = ""
+        self.lt_export_rule_file_list_number: str = ""
+        self.lt_footer_max_distance: int = 0
+        self.lt_footer_max_lines: int = 0
+        self.lt_header_max_distance: int = 0
+        self.lt_header_max_lines: int = 0
+        self.lt_heading_file_incl_no_ctx: int = 0
+        self.lt_heading_max_level: int = 0
+        self.lt_heading_min_pages: int = 0
+        self.lt_heading_rule_file: str = ""
+        self.lt_heading_tolerance_llx: int = 0
+        self.lt_list_bullet_min_entries: int = 0
+        self.lt_list_bullet_rule_file: str = ""
+        self.lt_list_bullet_tolerance_llx: int = 0
+        self.lt_list_number_min_entries: int = 0
+        self.lt_list_number_rule_file: str = ""
+        self.lt_list_number_tolerance_llx: int = 0
+        self.lt_toc_last_page: int = 0
+        self.lt_toc_min_entries: int = 0
+        self.pdf2image_type: str = ""
+        self.tesseract_timeout: int = 0
+        self.verbose_parser: str = ""
         ...
     def _check_config_core(self) -> None: ...
+    def _check_config_pdf2image_type(self) -> None: ...
+    def _check_config_verbose_parser(self) -> None: ...
+    def _determine_config_param_boolean(
+        self,
+        param: str,
+        var: bool,
+    ) -> bool: ...
+    def _determine_config_param_integer(
+        self,
+        param: str,
+        var: int,
+    ) -> int: ...
+    def _determine_config_spacy_tkn(self) -> None: ...
+    def _determine_config_spacy_tkn_ignore(self) -> None: ...
     def _get_environment_variant(self) -> None: ...
     def _load_config_core(self) -> None: ...
     def exists(self) -> bool: ...

@@ -1,4 +1,3 @@
-"""Module nlp.cls_line_type_list_number: Determine numbered lists."""
 from __future__ import annotations
 
 import collections
@@ -27,13 +26,7 @@ class LineTypeListNumber:
     Lists = list[List]
 
     RuleExtern = tuple[str, str, collections.abc.Callable[[str, str], bool], list[str]]
-    RuleIntern = tuple[
-        str,
-        re.Pattern[str],
-        collections.abc.Callable[[str, str], bool],
-        list[str],
-        str,
-    ]
+    RuleIntern = tuple[str, re.Pattern[str], collections.abc.Callable[[str, str], bool], list[str], str]
 
     # -----------------------------------------------------------------------------
     # Initialise the instance.
@@ -114,12 +107,7 @@ class LineTypeListNumber:
         # -----------------------------------------------------------------------------
         self._rules_collection: list[LineTypeListNumber.RuleIntern] = []
 
-        for (
-            rule_name,
-            regexp_str,
-            function_is_asc,
-            start_values,
-        ) in self._rules:
+        for (rule_name, regexp_str, function_is_asc, start_values) in self._rules:
             self._rules_collection.append(
                 (
                     rule_name.ljust(self._RULE_NAME_SIZE),
@@ -166,13 +154,7 @@ class LineTypeListNumber:
 
         entries: LineTypeListNumber.Entries = []
 
-        for [
-            page_idx,
-            para_no,
-            line_lines_idx_from,
-            line_lines_idx_till,
-            _,
-        ] in self._entries:
+        for [page_idx, para_no, line_lines_idx_from, line_lines_idx_till, _] in self._entries:
             line_lines: cls_nlp_core.NLPCore.ParserLineLines = self._parser_line_pages_json[page_idx][cls_nlp_core.NLPCore.JSON_NAME_LINES]
 
             text = []
@@ -261,10 +243,7 @@ class LineTypeListNumber:
 
         anti_patterns = []
 
-        for (
-            name,
-            regexp,
-        ) in cls_nlp_core.NLPCore.get_lt_anti_patterns_default_list_number(environment_variant=self._environment_variant):
+        for name, regexp in cls_nlp_core.NLPCore.get_lt_anti_patterns_default_list_number(environment_variant=self._environment_variant):
             anti_patterns.append((name, re.compile(regexp)))
 
         return anti_patterns
@@ -317,11 +296,7 @@ class LineTypeListNumber:
         """
         anti_patterns = []
 
-        with open(
-            lt_list_number_rule_file,
-            "r",
-            encoding=core_glob.FILE_ENCODING_DEFAULT,
-        ) as file_handle:
+        with open(lt_list_number_rule_file, "r", encoding=core_glob.FILE_ENCODING_DEFAULT) as file_handle:
             json_data = json.load(file_handle)
 
             for rule in json_data[cls_nlp_core.NLPCore.JSON_NAME_LINE_TYPE_ANTI_PATTERNS]:
@@ -358,11 +333,7 @@ class LineTypeListNumber:
         """
         rules: list[LineTypeListNumber.RuleExtern] = []
 
-        with open(
-            lt_list_number_rule_file,
-            "r",
-            encoding=core_glob.FILE_ENCODING_DEFAULT,
-        ) as file_handle:
+        with open(lt_list_number_rule_file, "r", encoding=core_glob.FILE_ENCODING_DEFAULT) as file_handle:
             json_data = json.load(file_handle)
 
             for rule in json_data[cls_nlp_core.NLPCore.JSON_NAME_LINE_TYPE_RULES]:
@@ -413,15 +384,7 @@ class LineTypeListNumber:
                 if self._llx_lower_limit <= float(
                     line_line[cls_nlp_core.NLPCore.JSON_NAME_COORD_LLX]
                 ) <= self._llx_upper_limit and self._rule[2](str(self._entries[-1][4]), target_value):
-                    self._entries.append(
-                        [
-                            self._page_idx,
-                            para_no,
-                            self._line_lines_idx,
-                            self._line_lines_idx,
-                            target_value,
-                        ]
-                    )
+                    self._entries.append([self._page_idx, para_no, self._line_lines_idx, self._line_lines_idx, target_value])
                     self._no_entries += 1
                     self._para_no_prev = para_no
                     return
@@ -468,20 +431,9 @@ class LineTypeListNumber:
                 / 100,
                 2,
             )
-            self._llx_upper_limit = round(
-                coord_llx * (100 + core_glob.setup.lt_list_number_tolerance_llx) / 100,
-                2,
-            )
+            self._llx_upper_limit = round(coord_llx * (100 + core_glob.setup.lt_list_number_tolerance_llx) / 100, 2)
 
-        self._entries.append(
-            [
-                self._page_idx,
-                para_no,
-                self._line_lines_idx,
-                self._line_lines_idx,
-                target_value,
-            ]
-        )
+        self._entries.append([self._page_idx, para_no, self._line_lines_idx, self._line_lines_idx, target_value])
 
         self._no_entries += 1
 
@@ -520,10 +472,7 @@ class LineTypeListNumber:
 
         self._lists = []
 
-        core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_list_number,
-            "LineTypeListNumber: Reset the document memory",
-        )
+        core_utils.progress_msg(core_glob.setup.is_verbose_lt_list_number, "LineTypeListNumber: Reset the document memory")
 
         self._reset_list()
 
@@ -548,10 +497,7 @@ class LineTypeListNumber:
 
         self._rule = ()  # type: ignore
 
-        core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_list_number,
-            "LineTypeListNumber: Reset the list memory",
-        )
+        core_utils.progress_msg(core_glob.setup.is_verbose_lt_list_number, "LineTypeListNumber: Reset the list memory")
 
     # -----------------------------------------------------------------------------
     # Check the object existence.
