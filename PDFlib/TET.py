@@ -50,11 +50,11 @@ class TET(object):
     # so we also implement a delete method and invalidate self.__p
     # whenever this will be called.
     def __del__(self):
-        if (self.__p):
+        if self.__p:
             TET_delete(self.__p)
 
     def delete(self):
-        if (self.__p):
+        if self.__p:
             TET_delete(self.__p)
         self.__p = None
 
