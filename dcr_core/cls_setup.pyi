@@ -135,7 +135,7 @@ class Setup:
 
     def __init__(self) -> None:
         self._config: dict[str, str] = {}
-        self._config_parser: configparser.ConfigParser
+        self._config_parser: configparser.ConfigParser = configparser.ConfigParser()
         self._exist: bool = False
         self.environment_variant: str = ""
         self.is_create_extra_file_heading: bool = False
