@@ -9,7 +9,7 @@ class LineTypeToc:
         self._parser_line_lines_json: cls_nlp_core.NLPCore.ParserLineLines = []
         self._parser_no_pages_in_doc: int = 0
         self._strategy: str = ""
-        self._toc_candidates: int = 0
+        self._toc_candidates: list[list[int]] = []
         self.no_lines_toc: int = 0
         self.parser_line_pages_json: cls_nlp_core.NLPCore.ParserLinePages = []
         ...

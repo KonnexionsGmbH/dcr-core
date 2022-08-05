@@ -19,7 +19,7 @@ class LineTypeListNumber:
         self._anti_patterns: list[tuple[str, re.Pattern[str]]] = []
         self._entries: list[list[int | str]] = []
         self._environment_variant: str = ""
-        self._exist: int = 0
+        self._exist: bool = False
         self._line_lines_idx: int = 0
         self._lists: LineTypeListNumber.Lists = []
         self._llx_lower_limit: float = 0.0
