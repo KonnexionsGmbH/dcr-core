@@ -3,22 +3,8 @@ requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "dcr_core"
-version = "0.9.4.4"
-description = "Document Content Recognition API"
-readme = "README.md"
-requires-python = ">=3.10"
-license = { file = "LICENSE" }
 authors = [
     { name = "Walter Weinmann", email = "info@konnexions.ch" },
-]
-maintainers = [
-    { name = "Walter Weinmann", email = "info@konnexions.ch" },
-]
-keywords = [
-    "Document Content Recognition",
-    "NLP",
-    "OCR",
 ]
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -31,10 +17,24 @@ classifiers = [
     "Topic :: Software Development :: Libraries",
     "Typing :: Typed",
 ]
+description = "Document Content Recognition API"
+keywords = [
+    "Document Content Recognition",
+    "NLP",
+    "OCR",
+]
+license = { file = "LICENSE" }
+maintainers = [
+    { name = "Walter Weinmann", email = "info@konnexions.ch" },
+]
+name = "dcr_core"
+readme = "README.md"
+requires-python = ">=3.10"
+version = "0.9.4.7"
 
 [project.urls]
-"Homepage" = "https://github.com/KonnexionsGmbH/dcr_core"
-"Bug Tracker" = "https://github.com/KonnexionsGmbH/dcr_core/issues"
+"Homepage" = "https://github.com/KonnexionsGmbH/dcr-core"
+"Bug Tracker" = "https://github.com/KonnexionsGmbH/dcr-core/issues"
 
 [tool.bandit]
 
@@ -74,3 +74,9 @@ warn_return_any = true
 warn_unreachable = false
 warn_unused_configs = true
 warn_unused_ignores = true
+
+[tool.setuptools]
+packages = ["dcr_core"]
+
+[tool.setuptools.package-data]
+dcr_core = ["*.pyi"]

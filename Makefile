@@ -1,10 +1,12 @@
 .DEFAULT_GOAL := help
 
 ifeq ($(OS),Windows_NT)
+	export DELETE_DIST=del /f /q dist\\*
 	export MYPYPATH=dcr_core
 	export PYTHON=python
 	export PYTHONPATH=dcr_core
 else
+	export DELETE_DIST=rm -f dist/*
 	export MYPYPATH=dcr_core
 	export PYTHON=python3
 	export PYTHONPATH=dcr_core
@@ -229,6 +231,8 @@ upload:             ## Upload the distribution archive to PyPi.
 	@echo MYPYPATH  =${MYPYPATH}
 	@echo PYTHON    =${PYTHON}
 	@echo PYTHONPATH=${PYTHONPATH}
+	${PYTHON} -m build --version
+	${PYTHON} -m twine --version
 	@echo ---------------------------------------------------------------------
 	${PYTHON} -m build
 	${PYTHON} -m twine upload -p $(SECRET_PYPI) -u wwe dist/*
@@ -236,12 +240,17 @@ upload:             ## Upload the distribution archive to PyPi.
 
 # twine: Collection of utilities for publishing packages on Test bPyPI.
 # https://pypi.org/project/twine/
+# https://test.pypi.org
 upload-test:        ## Upload the distribution archive to Test PyPi.
 	@echo Info **********  Start: twine test **********************************
-	@echo MYPYPATH  =${MYPYPATH}
-	@echo PYTHON    =${PYTHON}
-	@echo PYTHONPATH=${PYTHONPATH}
+	@echo DELETE_DIST=${DELETE_DIST}
+	@echo MYPYPATH   =${MYPYPATH}
+	@echo PYTHON     =${PYTHON}
+	@echo PYTHONPATH =${PYTHONPATH}
+	${PYTHON} -m build --version
+	${PYTHON} -m twine --version
 	@echo ---------------------------------------------------------------------
+	${DELETE_DIST}
 	${PYTHON} -m build
 	${PYTHON} -m twine upload -p $(SECRET_TEST_PYPI) -r testpypi -u wwe --verbose dist/*
 	@echo Info **********  End:   twine test ***********************************

@@ -2,3 +2,6 @@
 /.idea/
 /.vscode/
 /PDFlib/
+/dcr_core.egg-info/
+/dcr_core/dcr_core.egg-info/
+/dist/
