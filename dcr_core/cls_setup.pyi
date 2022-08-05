@@ -124,8 +124,6 @@ class Setup:
 
     _DCR_ENVIRONMENT_TYPE: ClassVar[str]
 
-    DCR_VERSION: ClassVar[str]
-
     ENVIRONMENT_TYPE_DEV: ClassVar[str]
     ENVIRONMENT_TYPE_PROD: ClassVar[str]
     ENVIRONMENT_TYPE_TEST: ClassVar[str]
