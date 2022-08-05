@@ -137,6 +137,10 @@ class Setup:
         self._config: dict[str, str] = {}
         self._config_parser: configparser.ConfigParser = configparser.ConfigParser()
         self._exist: bool = False
+        self.db_initial_data_file: str = ""
+        self.directory_inbox: str = ""
+        self.directory_inbox_accepted: str = ""
+        self.directory_inbox_rejected: str = ""
         self.environment_variant: str = ""
         self.is_create_extra_file_heading: bool = False
         self.is_create_extra_file_list_bullet: bool = False

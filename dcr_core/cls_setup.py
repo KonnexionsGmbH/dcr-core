@@ -2,7 +2,7 @@ import configparser
 import os
 from typing import ClassVar
 
-from dcr_core import core_utils
+import dcr_core.core_utils
 
 
 # pylint: disable=too-many-instance-attributes
@@ -50,8 +50,8 @@ class Setup:
     _DCR_CFG_LT_TOC_MIN_ENTRIES: ClassVar[str] = "lt_toc_min_entries"
     _DCR_CFG_PDF2IMAGE_TYPE: ClassVar[str] = "pdf2image_type"
     _DCR_CFG_SECTION: ClassVar[str] = "dcr_core"
-    _DCR_CFG_SECTION_ENV_TEST: ClassVar[str] = "env.test"
-    _DCR_CFG_SECTION_SPACY: ClassVar[str] = "spacy"
+    _DCR_CFG_SECTION_ENV_TEST: ClassVar[str] = "dcr_core.env.test"
+    _DCR_CFG_SECTION_SPACY: ClassVar[str] = "dcr_core.spacy"
 
     _DCR_CFG_SPACY_IGNORE_BRACKET: ClassVar[str] = "spacy_ignore_bracket"
     _DCR_CFG_SPACY_IGNORE_LEFT_PUNCT: ClassVar[str] = "spacy_ignore_left_punct"
@@ -301,7 +301,7 @@ class Setup:
 
         self._load_config_core()
 
-        core_utils.progress_msg_core("The configuration parameters (dcr_core) are checked and loaded")
+        dcr_core.core_utils.progress_msg_core("The configuration parameters (dcr_core) are checked and loaded")
 
         self._exist = True
 
@@ -381,7 +381,7 @@ class Setup:
         self.is_tokenize_2_jsonfile = self._determine_config_param_boolean(Setup._DCR_CFG_TOKENIZE_2_JSONFILE, self.is_tokenize_2_jsonfile)
         if not self.is_tokenize_2_database:
             if not self.is_tokenize_2_jsonfile:
-                core_utils.terminate_fatal(
+                dcr_core.core_utils.terminate_fatal(
                     "At least one of the configuration parameters 'tokenize_2_database' or " + "'tokenize_2_jsonfile' must be 'true'"
                 )
 
@@ -411,7 +411,7 @@ class Setup:
                 Setup.PDF2IMAGE_TYPE_JPEG,
                 Setup.PDF2IMAGE_TYPE_PNG,
             ]:
-                core_utils.terminate_fatal(
+                dcr_core.core_utils.terminate_fatal(
                     f"Invalid configuration parameter value for parameter " f"'pdf2image_type': '{self.pdf2image_type}'"
                 )
 
@@ -664,14 +664,14 @@ class Setup:
         try:
             self.environment_variant = os.environ[Setup._DCR_ENVIRONMENT_TYPE]
         except KeyError:
-            core_utils.terminate_fatal(f"The environment variable '{Setup._DCR_ENVIRONMENT_TYPE}' is missing")
+            dcr_core.core_utils.terminate_fatal(f"The environment variable '{Setup._DCR_ENVIRONMENT_TYPE}' is missing")
 
         if self.environment_variant not in [
             Setup.ENVIRONMENT_TYPE_DEV,
             Setup.ENVIRONMENT_TYPE_PROD,
             Setup.ENVIRONMENT_TYPE_TEST,
         ]:
-            core_utils.terminate_fatal(
+            dcr_core.core_utils.terminate_fatal(
                 f"The environment variable '{Setup._DCR_ENVIRONMENT_TYPE}' " f"has the invalid content '{self.environment_variant}'"
             )
 
@@ -799,17 +799,17 @@ class Setup:
                         ):
                             continue
                         case Setup._DCR_CFG_LT_EXPORT_RULE_FILE_HEADING:
-                            self.lt_export_rule_file_heading = core_utils.get_os_independent_name(item)
+                            self.lt_export_rule_file_heading = dcr_core.core_utils.get_os_independent_name(item)
                         case Setup._DCR_CFG_LT_EXPORT_RULE_FILE_LIST_BULLET:
-                            self.lt_export_rule_file_list_bullet = core_utils.get_os_independent_name(item)
+                            self.lt_export_rule_file_list_bullet = dcr_core.core_utils.get_os_independent_name(item)
                         case Setup._DCR_CFG_LT_EXPORT_RULE_FILE_LIST_NUMBER:
-                            self.lt_export_rule_file_list_number = core_utils.get_os_independent_name(item)
+                            self.lt_export_rule_file_list_number = dcr_core.core_utils.get_os_independent_name(item)
                         case Setup._DCR_CFG_LT_HEADING_RULE_FILE:
-                            self.lt_heading_rule_file = core_utils.get_os_independent_name(item)
+                            self.lt_heading_rule_file = dcr_core.core_utils.get_os_independent_name(item)
                         case Setup._DCR_CFG_LT_LIST_BULLET_RULE_FILE:
-                            self.lt_list_bullet_rule_file = core_utils.get_os_independent_name(item)
+                            self.lt_list_bullet_rule_file = dcr_core.core_utils.get_os_independent_name(item)
                         case Setup._DCR_CFG_LT_LIST_NUMBER_RULE_FILE:
-                            self.lt_list_number_rule_file = core_utils.get_os_independent_name(item)
+                            self.lt_list_number_rule_file = dcr_core.core_utils.get_os_independent_name(item)
                         case _:
                             pass
 

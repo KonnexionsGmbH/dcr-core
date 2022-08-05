@@ -1,4 +1,4 @@
-from dcr_core import cls_nlp_core
+import dcr_core.cls_nlp_core
 
 class LineTypeHeaderFooters:
     Candidate = tuple[int, int]
@@ -33,11 +33,11 @@ class LineTypeHeaderFooters:
         self._no_irregular_header: int = 0
         self._page_ind: int = 0
         self._page_max: int = 0
-        self._parser_line_lines_json: cls_nlp_core.NLPCore.ParserLineLines = []
+        self._parser_line_lines_json: dcr_core.cls_nlp_core.NLPCore.ParserLineLines = []
         self._result_data: LineTypeHeaderFooters.ResultData = {}
         self.no_lines_footer: int = 0
         self.no_lines_header: int = 0
-        self.parser_line_pages_json: cls_nlp_core.NLPCore.ParserLinePages = []
+        self.parser_line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages = []
         ...
     def _calc_levenshtein(self) -> None: ...
     def _check_irregular_footer(self, line_ind: int, text: str) -> None: ...
@@ -54,5 +54,5 @@ class LineTypeHeaderFooters:
         self,
         file_name_curr: str,
         no_pdf_pages: int,
-        parser_line_pages_json: cls_nlp_core.NLPCore.ParserLinePages,
+        parser_line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages,
     ) -> None: ...

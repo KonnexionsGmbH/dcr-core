@@ -1,8 +1,8 @@
 import jellyfish
 
-from dcr_core import cls_nlp_core
-from dcr_core import core_glob
-from dcr_core import core_utils
+import dcr_core.cls_nlp_core
+import dcr_core.core_glob
+import dcr_core.core_utils
 
 
 # pylint: disable=too-many-instance-attributes
@@ -43,16 +43,16 @@ class LineTypeHeaderFooters:
             file_name_curr (str):
                     File name of the file to be processed.
         """
-        core_utils.check_exists_object(
+        dcr_core.core_utils.check_exists_object(
             is_setup=True,
             is_text_parser=True,
         )
 
         self._file_name_curr = file_name_curr
 
-        core_utils.progress_msg(core_glob.setup.is_verbose_lt_headers_footers, "LineTypeHeaderFooters")
-        core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_headers_footers,
+        dcr_core.core_utils.progress_msg(dcr_core.core_glob.setup.is_verbose_lt_headers_footers, "LineTypeHeaderFooters")
+        dcr_core.core_utils.progress_msg(
+            dcr_core.core_glob.setup.is_verbose_lt_headers_footers,
             f"LineTypeHeaderFooters: Start create instance                ={self._file_name_curr}",
         )
 
@@ -78,19 +78,19 @@ class LineTypeHeaderFooters:
         self._page_ind = -1
         self._page_max = 0
 
-        self._parser_line_lines_json: cls_nlp_core.NLPCore.ParserLineLines = []
+        self._parser_line_lines_json: dcr_core.cls_nlp_core.NLPCore.ParserLineLines = []
 
         self._result_data: LineTypeHeaderFooters.ResultData = {}
 
         self.no_lines_footer = 0
         self.no_lines_header = 0
 
-        self.parser_line_pages_json: cls_nlp_core.NLPCore.ParserLinePages = []
+        self.parser_line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages = []
 
         self._exist = True
 
-        core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_headers_footers,
+        dcr_core.core_utils.progress_msg(
+            dcr_core.core_glob.setup.is_verbose_lt_headers_footers,
             f"LineTypeHeaderFooters: End   create instance                ={self._file_name_curr}",
         )
 
@@ -100,10 +100,12 @@ class LineTypeHeaderFooters:
     def _calc_levenshtein(self) -> None:
         """Calculate the Levenshtein distances."""
 
-        core_utils.progress_msg(core_glob.setup.is_verbose_lt_headers_footers, "LineTypeHeaderFooters")
-        core_utils.progress_msg(core_glob.setup.is_verbose_lt_headers_footers, "LineTypeHeaderFooters: Start Levenshtein distance")
-        core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_headers_footers,
+        dcr_core.core_utils.progress_msg(dcr_core.core_glob.setup.is_verbose_lt_headers_footers, "LineTypeHeaderFooters")
+        dcr_core.core_utils.progress_msg(
+            dcr_core.core_glob.setup.is_verbose_lt_headers_footers, "LineTypeHeaderFooters: Start Levenshtein distance"
+        )
+        dcr_core.core_utils.progress_msg(
+            dcr_core.core_glob.setup.is_verbose_lt_headers_footers,
             f"LineTypeHeaderFooters: Value of line_data                   ={self._line_data}",
         )
 
@@ -120,11 +122,13 @@ class LineTypeHeaderFooters:
                     lsd_row[self._page_ind] = (curr_line_ind, prev_line_ind, distance)
                     self._lsd_data[ind] = lsd_row
 
-        core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_headers_footers,
+        dcr_core.core_utils.progress_msg(
+            dcr_core.core_glob.setup.is_verbose_lt_headers_footers,
             f"LineTypeHeaderFooters: Value of lsd_data                    ={self._lsd_data}",
         )
-        core_utils.progress_msg(core_glob.setup.is_verbose_lt_headers_footers, "LineTypeHeaderFooters: End   Levenshtein distance")
+        dcr_core.core_utils.progress_msg(
+            dcr_core.core_glob.setup.is_verbose_lt_headers_footers, "LineTypeHeaderFooters: End   Levenshtein distance"
+        )
 
     # -----------------------------------------------------------------------------
     # Try to determine an ascending page number in the footers.
@@ -251,9 +255,9 @@ class LineTypeHeaderFooters:
         """Process the page-related data."""
         self._page_ind += 1
 
-        core_utils.progress_msg(core_glob.setup.is_verbose_lt_headers_footers, "LineTypeHeaderFooters")
-        core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_headers_footers,
+        dcr_core.core_utils.progress_msg(dcr_core.core_glob.setup.is_verbose_lt_headers_footers, "LineTypeHeaderFooters")
+        dcr_core.core_utils.progress_msg(
+            dcr_core.core_glob.setup.is_verbose_lt_headers_footers,
             f"LineTypeHeaderFooters: Start page                           ={self._page_ind + 1}",
         )
 
@@ -263,10 +267,10 @@ class LineTypeHeaderFooters:
         if self._is_irregular_header:
             self._irregular_header_cand = LineTypeHeaderFooters.Candidate()
 
-        if core_glob.setup.lt_header_max_lines > 0:
+        if dcr_core.core_glob.setup.lt_header_max_lines > 0:
             self._store_line_data_header()
 
-        if core_glob.setup.lt_footer_max_lines > 0:
+        if dcr_core.core_glob.setup.lt_footer_max_lines > 0:
             self._store_line_data_footer()
 
         if self._is_irregular_footer:
@@ -292,8 +296,8 @@ class LineTypeHeaderFooters:
 
         self._swap_current_previous()
 
-        core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_headers_footers,
+        dcr_core.core_utils.progress_msg(
+            dcr_core.core_glob.setup.is_verbose_lt_headers_footers,
             f"LineTypeHeaderFooters: End   page                           ={self._page_ind + 1}",
         )
 
@@ -304,43 +308,43 @@ class LineTypeHeaderFooters:
         """Store the irregular footers and headers."""
         if self._is_irregular_footer:
             self._no_irregular_footer = 1
-            core_utils.progress_msg(
-                core_glob.setup.is_verbose_lt_headers_footers,
+            dcr_core.core_utils.progress_msg(
+                dcr_core.core_glob.setup.is_verbose_lt_headers_footers,
                 f"LineTypeHeaderFooters: Value of irregular footers           ={self._irregular_footer_cands}",
             )
 
         if self._is_irregular_header:
             self._no_irregular_header = 1
-            core_utils.progress_msg(
-                core_glob.setup.is_verbose_lt_headers_footers,
+            dcr_core.core_utils.progress_msg(
+                dcr_core.core_glob.setup.is_verbose_lt_headers_footers,
                 f"LineTypeHeaderFooters: Value of irregular headers           ={self._irregular_header_cands}",
             )
 
         for page_ind, page in enumerate(self.parser_line_pages_json):
-            lines = page[cls_nlp_core.NLPCore.JSON_NAME_LINES]
+            lines = page[dcr_core.cls_nlp_core.NLPCore.JSON_NAME_LINES]
 
             is_changed = False
 
             if self._is_irregular_footer and self._irregular_footer_cands:
                 if (
-                    lines[self._irregular_footer_cands[page_ind][0]][cls_nlp_core.NLPCore.JSON_NAME_LINE_TYPE]
-                    == cls_nlp_core.NLPCore.LINE_TYPE_BODY
+                    lines[self._irregular_footer_cands[page_ind][0]][dcr_core.cls_nlp_core.NLPCore.JSON_NAME_LINE_TYPE]
+                    == dcr_core.cls_nlp_core.NLPCore.LINE_TYPE_BODY
                 ):
                     lines[self._irregular_footer_cands[page_ind][0]][
-                        cls_nlp_core.NLPCore.JSON_NAME_LINE_TYPE
-                    ] = cls_nlp_core.NLPCore.LINE_TYPE_FOOTER
+                        dcr_core.cls_nlp_core.NLPCore.JSON_NAME_LINE_TYPE
+                    ] = dcr_core.cls_nlp_core.NLPCore.LINE_TYPE_FOOTER
                     is_changed = True
                 else:
                     self._no_irregular_footer = 0
 
             if self._is_irregular_header and self._irregular_header_cands:
                 if (
-                    lines[self._irregular_header_cands[page_ind][0]][cls_nlp_core.NLPCore.JSON_NAME_LINE_TYPE]
-                    == cls_nlp_core.NLPCore.LINE_TYPE_BODY
+                    lines[self._irregular_header_cands[page_ind][0]][dcr_core.cls_nlp_core.NLPCore.JSON_NAME_LINE_TYPE]
+                    == dcr_core.cls_nlp_core.NLPCore.LINE_TYPE_BODY
                 ):
                     lines[self._irregular_header_cands[page_ind][0]][
-                        cls_nlp_core.NLPCore.JSON_NAME_LINE_TYPE
-                    ] = cls_nlp_core.NLPCore.LINE_TYPE_HEADER
+                        dcr_core.cls_nlp_core.NLPCore.JSON_NAME_LINE_TYPE
+                    ] = dcr_core.cls_nlp_core.NLPCore.LINE_TYPE_HEADER
                     is_changed = True
                 else:
                     self._no_irregular_header = 0
@@ -353,10 +357,12 @@ class LineTypeHeaderFooters:
     # -----------------------------------------------------------------------------
     def _store_line_data_footer(self) -> None:
         """Store the footers of the current page."""
-        core_utils.progress_msg(core_glob.setup.is_verbose_lt_headers_footers, "LineTypeHeaderFooters")
-        core_utils.progress_msg(core_glob.setup.is_verbose_lt_headers_footers, "LineTypeHeaderFooters: Start store footers")
-        core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_headers_footers,
+        dcr_core.core_utils.progress_msg(dcr_core.core_glob.setup.is_verbose_lt_headers_footers, "LineTypeHeaderFooters")
+        dcr_core.core_utils.progress_msg(
+            dcr_core.core_glob.setup.is_verbose_lt_headers_footers, "LineTypeHeaderFooters: Start store footers"
+        )
+        dcr_core.core_utils.progress_msg(
+            dcr_core.core_glob.setup.is_verbose_lt_headers_footers,
             f"LineTypeHeaderFooters: Value of line_data                   ={self._line_data}",
         )
 
@@ -365,19 +371,19 @@ class LineTypeHeaderFooters:
 
         line_lines_ind = len(self._parser_line_lines_json) - 1
 
-        for ind in range(self._line_data_max - 1, core_glob.setup.lt_header_max_lines - 1, -1):
+        for ind in range(self._line_data_max - 1, dcr_core.core_glob.setup.lt_header_max_lines - 1, -1):
             (_, prev) = self._line_data[ind]
 
             page_line: dict[str, int | str] = self._parser_line_lines_json[line_lines_ind]
 
-            text = str(page_line[cls_nlp_core.NLPCore.JSON_NAME_TEXT])
+            text = str(page_line[dcr_core.cls_nlp_core.NLPCore.JSON_NAME_TEXT])
 
             if self._is_irregular_footer:
                 self._check_irregular_footer(line_lines_ind, text)
 
             self._line_data[ind] = (
                 (
-                    int(page_line[cls_nlp_core.NLPCore.JSON_NAME_LINE_NO_PAGE]) - 1,
+                    int(page_line[dcr_core.cls_nlp_core.NLPCore.JSON_NAME_LINE_NO_PAGE]) - 1,
                     text,
                 ),
                 prev,
@@ -388,28 +394,32 @@ class LineTypeHeaderFooters:
 
             line_lines_ind -= 1
 
-        core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_headers_footers,
+        dcr_core.core_utils.progress_msg(
+            dcr_core.core_glob.setup.is_verbose_lt_headers_footers,
             f"LineTypeHeaderFooters: Value of line_data                   ={self._line_data}",
         )
-        core_utils.progress_msg(core_glob.setup.is_verbose_lt_headers_footers, "LineTypeHeaderFooters: End   store footers")
+        dcr_core.core_utils.progress_msg(
+            dcr_core.core_glob.setup.is_verbose_lt_headers_footers, "LineTypeHeaderFooters: End   store footers"
+        )
 
     # -----------------------------------------------------------------------------
     # Store the headers of the current page.
     # -----------------------------------------------------------------------------
     def _store_line_data_header(self) -> None:
         """Store the headers of the current page."""
-        core_utils.progress_msg(core_glob.setup.is_verbose_lt_headers_footers, "LineTypeHeaderFooters")
-        core_utils.progress_msg(core_glob.setup.is_verbose_lt_headers_footers, "LineTypeHeaderFooters: Start store headers")
-        core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_headers_footers,
+        dcr_core.core_utils.progress_msg(dcr_core.core_glob.setup.is_verbose_lt_headers_footers, "LineTypeHeaderFooters")
+        dcr_core.core_utils.progress_msg(
+            dcr_core.core_glob.setup.is_verbose_lt_headers_footers, "LineTypeHeaderFooters: Start store headers"
+        )
+        dcr_core.core_utils.progress_msg(
+            dcr_core.core_glob.setup.is_verbose_lt_headers_footers,
             f"LineTypeHeaderFooters: Value of line_data                   ={self._line_data}",
         )
 
         if (line_lines_max := len(self._parser_line_lines_json)) == 0:
             return
 
-        for ind in range(core_glob.setup.lt_header_max_lines):
+        for ind in range(dcr_core.core_glob.setup.lt_header_max_lines):
             if ind >= line_lines_max:
                 break
 
@@ -417,72 +427,78 @@ class LineTypeHeaderFooters:
 
             page_line: dict[str, int | str] = self._parser_line_lines_json[ind]
 
-            text = str(page_line[cls_nlp_core.NLPCore.JSON_NAME_TEXT])
+            text = str(page_line[dcr_core.cls_nlp_core.NLPCore.JSON_NAME_TEXT])
 
             if self._is_irregular_header:
                 self._check_irregular_header(ind, text)
 
             self._line_data[ind] = (
                 (
-                    int(page_line[cls_nlp_core.NLPCore.JSON_NAME_LINE_NO_PAGE]) - 1,
+                    int(page_line[dcr_core.cls_nlp_core.NLPCore.JSON_NAME_LINE_NO_PAGE]) - 1,
                     text,
                 ),
                 prev,
             )
 
-        core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_headers_footers,
+        dcr_core.core_utils.progress_msg(
+            dcr_core.core_glob.setup.is_verbose_lt_headers_footers,
             f"LineTypeHeaderFooters: Value of line_data                   ={self._line_data}",
         )
-        core_utils.progress_msg(core_glob.setup.is_verbose_lt_headers_footers, "LineTypeHeaderFooters: End   store headers")
+        dcr_core.core_utils.progress_msg(
+            dcr_core.core_glob.setup.is_verbose_lt_headers_footers, "LineTypeHeaderFooters: End   store headers"
+        )
 
     # -----------------------------------------------------------------------------
     # Store the found line types in parser result.
     # -----------------------------------------------------------------------------
     def _store_results(self) -> None:
         """Store the found line types in parser result."""
-        core_utils.progress_msg(core_glob.setup.is_verbose_lt_headers_footers, "LineTypeHeaderFooters: Start store result")
+        dcr_core.core_utils.progress_msg(
+            dcr_core.core_glob.setup.is_verbose_lt_headers_footers, "LineTypeHeaderFooters: Start store result"
+        )
 
         self.no_lines_footer = 0
         self.no_lines_header = 0
 
         for page in self.parser_line_pages_json:
-            page_no = page[cls_nlp_core.NLPCore.JSON_NAME_PAGE_NO]
+            page_no = page[dcr_core.cls_nlp_core.NLPCore.JSON_NAME_PAGE_NO]
 
-            for line_line in page[cls_nlp_core.NLPCore.JSON_NAME_LINES]:
-                line_index_page = int(line_line[cls_nlp_core.NLPCore.JSON_NAME_LINE_NO_PAGE]) - 1
+            for line_line in page[dcr_core.cls_nlp_core.NLPCore.JSON_NAME_LINES]:
+                line_index_page = int(line_line[dcr_core.cls_nlp_core.NLPCore.JSON_NAME_LINE_NO_PAGE]) - 1
                 if (page_no, line_index_page) in self._result_data:
-                    line_line[cls_nlp_core.NLPCore.JSON_NAME_LINE_TYPE] = self._result_data[(page_no, line_index_page)]
+                    line_line[dcr_core.cls_nlp_core.NLPCore.JSON_NAME_LINE_TYPE] = self._result_data[(page_no, line_index_page)]
                     if page_no == 2:
-                        if self._result_data[(page_no, line_index_page)] == cls_nlp_core.NLPCore.LINE_TYPE_FOOTER:
+                        if self._result_data[(page_no, line_index_page)] == dcr_core.cls_nlp_core.NLPCore.LINE_TYPE_FOOTER:
                             self.no_lines_footer += 1
-                        elif self._result_data[(page_no, line_index_page)] == cls_nlp_core.NLPCore.LINE_TYPE_HEADER:
+                        elif self._result_data[(page_no, line_index_page)] == dcr_core.cls_nlp_core.NLPCore.LINE_TYPE_HEADER:
                             self.no_lines_header += 1
 
         if self.no_lines_header > 0:
-            core_utils.progress_msg(
-                core_glob.setup.is_verbose_lt_headers_footers,
+            dcr_core.core_utils.progress_msg(
+                dcr_core.core_glob.setup.is_verbose_lt_headers_footers,
                 f"LineTypeHeaderFooters: End   store result             header={self.no_lines_header}",
             )
         if self.no_lines_footer > 0:
-            core_utils.progress_msg(
-                core_glob.setup.is_verbose_lt_headers_footers,
+            dcr_core.core_utils.progress_msg(
+                dcr_core.core_glob.setup.is_verbose_lt_headers_footers,
                 f"LineTypeHeaderFooters: End   store result             footer={self.no_lines_footer}",
             )
-        core_utils.progress_msg(core_glob.setup.is_verbose_lt_headers_footers, "LineTypeHeaderFooters: End   store result")
+        dcr_core.core_utils.progress_msg(
+            dcr_core.core_glob.setup.is_verbose_lt_headers_footers, "LineTypeHeaderFooters: End   store result"
+        )
 
     # -----------------------------------------------------------------------------
     # Swap the current and previous data.
     # -----------------------------------------------------------------------------
     def _swap_current_previous(self) -> None:
         """Swap the current and previous data."""
-        core_utils.progress_msg(core_glob.setup.is_verbose_lt_headers_footers, "LineTypeHeaderFooters")
-        core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_headers_footers,
+        dcr_core.core_utils.progress_msg(dcr_core.core_glob.setup.is_verbose_lt_headers_footers, "LineTypeHeaderFooters")
+        dcr_core.core_utils.progress_msg(
+            dcr_core.core_glob.setup.is_verbose_lt_headers_footers,
             "LineTypeHeaderFooters: Start swap current & previous",
         )
-        core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_headers_footers,
+        dcr_core.core_utils.progress_msg(
+            dcr_core.core_glob.setup.is_verbose_lt_headers_footers,
             f"LineTypeHeaderFooters: Value of line_data                   ={self._line_data}",
         )
 
@@ -490,12 +506,12 @@ class LineTypeHeaderFooters:
             (curr, _) = self._line_data[ind]
             self._line_data[ind] = ((-1, ""), curr)
 
-        core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_headers_footers,
+        dcr_core.core_utils.progress_msg(
+            dcr_core.core_glob.setup.is_verbose_lt_headers_footers,
             f"LineTypeHeaderFooters: Value of line_data                   ={self._line_data}",
         )
-        core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_headers_footers,
+        dcr_core.core_utils.progress_msg(
+            dcr_core.core_glob.setup.is_verbose_lt_headers_footers,
             "LineTypeHeaderFooters: End   swap current & previous",
         )
 
@@ -517,7 +533,7 @@ class LineTypeHeaderFooters:
         self,
         file_name_curr: str,
         no_pdf_pages: int,
-        parser_line_pages_json: cls_nlp_core.NLPCore.ParserLinePages,
+        parser_line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages,
     ) -> None:
         """Process the document related data.
 
@@ -526,62 +542,62 @@ class LineTypeHeaderFooters:
                     File name of the file to be processed.
             no_pdf_pages (int):
                     Number of pages in the PDF document.
-            parser_line_pages_json (cls_nlp_core.NLPCore.LinePages):
+            parser_line_pages_json (dcr_core.cls_nlp_core.NLPCore.LinePages):
                     The document pages formatted in the parser.
         """
-        core_utils.check_exists_object(
+        dcr_core.core_utils.check_exists_object(
             is_setup=True,
             is_text_parser=True,
         )
 
-        core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_headers_footers,
-            f"LineTypeHeaderFooters: lt_header_max_lines={core_glob.setup.lt_header_max_lines} "
-            + f"- lt_footer_max_lines={core_glob.setup.lt_footer_max_lines}",
+        dcr_core.core_utils.progress_msg(
+            dcr_core.core_glob.setup.is_verbose_lt_headers_footers,
+            f"LineTypeHeaderFooters: lt_header_max_lines={dcr_core.core_glob.setup.lt_header_max_lines} "
+            + f"- lt_footer_max_lines={dcr_core.core_glob.setup.lt_footer_max_lines}",
         )
 
-        if core_glob.setup.lt_footer_max_lines == 0 and core_glob.setup.lt_header_max_lines == 0:
+        if dcr_core.core_glob.setup.lt_footer_max_lines == 0 and dcr_core.core_glob.setup.lt_header_max_lines == 0:
             return
 
         self._file_name_curr = file_name_curr
         self.parser_line_pages_json = parser_line_pages_json
 
-        core_utils.progress_msg(core_glob.setup.is_verbose_lt_headers_footers, "LineTypeHeaderFooters")
-        core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_headers_footers,
+        dcr_core.core_utils.progress_msg(dcr_core.core_glob.setup.is_verbose_lt_headers_footers, "LineTypeHeaderFooters")
+        dcr_core.core_utils.progress_msg(
+            dcr_core.core_glob.setup.is_verbose_lt_headers_footers,
             f"LineTypeHeaderFooters: Start document                       ={self._file_name_curr}",
         )
-        core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_headers_footers,
+        dcr_core.core_utils.progress_msg(
+            dcr_core.core_glob.setup.is_verbose_lt_headers_footers,
             f"LineTypeHeaderFooters: Value of lsd_data                    ={self._lsd_data}",
         )
 
-        self._line_data_max = core_glob.setup.lt_header_max_lines + core_glob.setup.lt_footer_max_lines
+        self._line_data_max = dcr_core.core_glob.setup.lt_header_max_lines + dcr_core.core_glob.setup.lt_footer_max_lines
         self._page_max = no_pdf_pages
 
         self._line_data = [((-1, ""), (-1, "")) for _ in range(self._line_data_max)]
-        core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_headers_footers,
+        dcr_core.core_utils.progress_msg(
+            dcr_core.core_glob.setup.is_verbose_lt_headers_footers,
             f"LineTypeHeaderFooters: Value of line_data                   ={self._line_data}",
         )
 
         self._lsd_data = [[(-1, -1, -1) for _ in range(self._page_max)] for _ in range(self._line_data_max)]
-        core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_headers_footers,
+        dcr_core.core_utils.progress_msg(
+            dcr_core.core_glob.setup.is_verbose_lt_headers_footers,
             f"LineTypeHeaderFooters: Value of lsd_data                    ={self._lsd_data}",
         )
 
         for page_json in self.parser_line_pages_json:
-            self._parser_line_lines_json = page_json[cls_nlp_core.NLPCore.JSON_NAME_LINES]
+            self._parser_line_lines_json = page_json[dcr_core.cls_nlp_core.NLPCore.JSON_NAME_LINES]
             self._process_page()
 
         for line_ind in range(self._line_data_max):
-            if line_ind < core_glob.setup.lt_header_max_lines:
-                distance_max = core_glob.setup.lt_header_max_distance
-                line_type = cls_nlp_core.NLPCore.LINE_TYPE_HEADER
+            if line_ind < dcr_core.core_glob.setup.lt_header_max_lines:
+                distance_max = dcr_core.core_glob.setup.lt_header_max_distance
+                line_type = dcr_core.cls_nlp_core.NLPCore.LINE_TYPE_HEADER
             else:
-                distance_max = core_glob.setup.lt_footer_max_distance
-                line_type = cls_nlp_core.NLPCore.LINE_TYPE_FOOTER
+                distance_max = dcr_core.core_glob.setup.lt_footer_max_distance
+                line_type = dcr_core.cls_nlp_core.NLPCore.LINE_TYPE_FOOTER
 
             if self._determine_candidate(distance_max, line_ind):
                 for page_ind in range(self._page_max):
@@ -591,23 +607,23 @@ class LineTypeHeaderFooters:
                         self._result_data[(page_ind + 1, line_no_curr)] = line_type
 
         if len(self._result_data) > 0:
-            core_utils.progress_msg(
-                core_glob.setup.is_verbose_lt_headers_footers,
+            dcr_core.core_utils.progress_msg(
+                dcr_core.core_glob.setup.is_verbose_lt_headers_footers,
                 f"LineTypeHeaderFooters: Value of result_data                 ={self._result_data}",
             )
             self._store_results()
 
         if (
-            core_glob.setup.lt_footer_max_distance > 0
+            dcr_core.core_glob.setup.lt_footer_max_distance > 0
             and self._is_irregular_footer
-            or core_glob.setup.lt_header_max_distance > 0
+            or dcr_core.core_glob.setup.lt_header_max_distance > 0
             and self._is_irregular_header
         ):
             self._store_irregulars()
             self.no_lines_footer += self._no_irregular_footer
             self.no_lines_header += self._no_irregular_header
 
-        core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_headers_footers,
+        dcr_core.core_utils.progress_msg(
+            dcr_core.core_glob.setup.is_verbose_lt_headers_footers,
             f"LineTypeHeaderFooters: End document                         ={self._file_name_curr}",
         )

@@ -1,6 +1,6 @@
 import collections.abc
 
-from dcr_core import cls_nlp_core
+import dcr_core.cls_nlp_core
 
 class TextParser:
     def __init__(self) -> None:
@@ -26,8 +26,8 @@ class TextParser:
         self._parse_result_no_words_in_line: int = 0
         self._parse_result_no_words_in_page: int = 0
         self._parse_result_no_words_in_para: int = 0
-        self._parse_result_page_pages: cls_nlp_core.NLPCore.ParserPagePages = []
-        self._parse_result_page_paras: cls_nlp_core.NLPCore.ParserPageParas = []
+        self._parse_result_page_pages: dcr_core.cls_nlp_core.NLPCore.ParserPagePages = []
+        self._parse_result_page_paras: dcr_core.cls_nlp_core.NLPCore.ParserPageParas = []
         self._parse_result_table: bool = False
         self._parse_result_table_cell: int = 0
         self._parse_result_table_cell_is_empty: bool = False
@@ -35,14 +35,14 @@ class TextParser:
         self._parse_result_table_col_span_prev: int = 0
         self._parse_result_table_row: int = 0
         self._parse_result_text: str = ""
-        self._parse_result_word_lines: cls_nlp_core.NLPCore.ParserWordLines = []
-        self._parse_result_word_pages: cls_nlp_core.NLPCore.ParserWordPages = []
-        self._parse_result_word_paras: cls_nlp_core.NLPCore.ParserWordParas = []
-        self._parse_result_word_words: cls_nlp_core.NLPCore.ParserWordWords = []
-        self.parse_result_line_document: cls_nlp_core.NLPCore.ParserLineDocument = {}
-        self.parse_result_line_line: cls_nlp_core.NLPCore.ParserLineLine = {}
-        self.parse_result_line_page: cls_nlp_core.NLPCore.ParserLinePage = {}
-        self.parse_result_line_pages: cls_nlp_core.NLPCore.ParserLinePages = []
+        self._parse_result_word_lines: dcr_core.cls_nlp_core.NLPCore.ParserWordLines = []
+        self._parse_result_word_pages: dcr_core.cls_nlp_core.NLPCore.ParserWordPages = []
+        self._parse_result_word_paras: dcr_core.cls_nlp_core.NLPCore.ParserWordParas = []
+        self._parse_result_word_words: dcr_core.cls_nlp_core.NLPCore.ParserWordWords = []
+        self.parse_result_line_document: dcr_core.cls_nlp_core.NLPCore.ParserLineDocument = {}
+        self.parse_result_line_line: dcr_core.cls_nlp_core.NLPCore.ParserLineLine = {}
+        self.parse_result_line_page: dcr_core.cls_nlp_core.NLPCore.ParserLinePage = {}
+        self.parse_result_line_pages: dcr_core.cls_nlp_core.NLPCore.ParserLinePages = []
         self.parse_result_no_pages_in_doc: int = 0
         self.parse_result_titles: list[str] = []
         ...

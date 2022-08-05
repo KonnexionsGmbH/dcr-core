@@ -3,7 +3,7 @@ import json
 import re
 from typing import ClassVar
 
-from dcr_core import core_utils
+import dcr_core.core_utils
 
 
 class NLPCore:
@@ -215,7 +215,7 @@ class NLPCore:
 
     LOGGER_PROGRESS_UPDATE: ClassVar[str] = "Progress update "
 
-    PARSE_NAME_SPACE: ClassVar[str] = "{https://www.pdflib.com/XML/TET5/TET-5.0}"
+    PARSE_NAME_SPACE: ClassVar[str] = "{http://www.pdflib.com/XML/TET5/TET-5.0}"
 
     PARSE_ATTR_COL_SPAN: ClassVar[str] = "colSpan"
     PARSE_ATTR_LLX: ClassVar[str] = "llx"
@@ -720,9 +720,9 @@ class NLPCore:
             )
 
         if len(anti_patterns) > 0:
-            core_utils.progress_msg(is_verbose, f"{len(anti_patterns):3d} heading       line type anti-pattern(s) exported")
+            dcr_core.core_utils.progress_msg(is_verbose, f"{len(anti_patterns):3d} heading       line type anti-pattern(s) exported")
         if len(rules) > 0:
-            core_utils.progress_msg(is_verbose, f"{len(rules):3d} heading       line type rule(s)         exported")
+            dcr_core.core_utils.progress_msg(is_verbose, f"{len(rules):3d} heading       line type rule(s)         exported")
 
     # -----------------------------------------------------------------------------
     # Export the default bulleted list line type rules.
@@ -787,9 +787,9 @@ class NLPCore:
             )
 
         if len(anti_patterns) > 0:
-            core_utils.progress_msg(is_verbose, f"{len(anti_patterns):3d} bulleted list line type anti-pattern(s) exported")
+            dcr_core.core_utils.progress_msg(is_verbose, f"{len(anti_patterns):3d} bulleted list line type anti-pattern(s) exported")
         if len(rules) > 0:
-            core_utils.progress_msg(is_verbose, f"{len(rules):3d} bulleted list line type rule(s)         exported")
+            dcr_core.core_utils.progress_msg(is_verbose, f"{len(rules):3d} bulleted list line type rule(s)         exported")
 
     # -----------------------------------------------------------------------------
     # Export the default numbered list line type rules.
@@ -866,9 +866,9 @@ class NLPCore:
             )
 
         if len(anti_patterns) > 0:
-            core_utils.progress_msg(is_verbose, f"{len(anti_patterns):3d} numbered list line type anti-pattern(s) exported")
+            dcr_core.core_utils.progress_msg(is_verbose, f"{len(anti_patterns):3d} numbered list line type anti-pattern(s) exported")
         if len(rules) > 0:
-            core_utils.progress_msg(is_verbose, f"{len(rules):3d} numbered list line type rule(s)         exported")
+            dcr_core.core_utils.progress_msg(is_verbose, f"{len(rules):3d} numbered list line type rule(s)         exported")
 
     # -----------------------------------------------------------------------------
     # Get the default heading line type anti-patterns.

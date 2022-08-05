@@ -1,4 +1,4 @@
-from dcr_core import cls_nlp_core
+import dcr_core.cls_nlp_core
 
 class LineTypeTable:
     Column = dict[str, float | int | object | str]
@@ -25,7 +25,7 @@ class LineTypeTable:
         self._page_idx: int = 0
         self._page_no_from: int = 0
         self._page_no_till: int = 0
-        self._parser_line_lines_json: cls_nlp_core.NLPCore.ParserLineLines = []
+        self._parser_line_lines_json: dcr_core.cls_nlp_core.NLPCore.ParserLineLines = []
         self._row_no: int = 0
         self._row_no_prev: int = 0
         self._rows: LineTypeTable.Rows = []
@@ -46,5 +46,5 @@ class LineTypeTable:
         document_id: int,
         file_name_curr: str,
         file_name_orig: str,
-        parser_line_pages_json: cls_nlp_core.NLPCore.ParserLinePages,
+        parser_line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages,
     ) -> None: ...
