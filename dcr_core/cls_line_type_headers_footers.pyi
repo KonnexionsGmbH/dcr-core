@@ -18,10 +18,10 @@ class LineTypeHeaderFooters:
     def __init__(self) -> None:
         self._exist: bool = False
         self._file_name_curr: str = ""
-        self._irregular_footer_cand: LineTypeHeaderFooters.Candidate = ()
+        self._irregular_footer_cand: LineTypeHeaderFooters.Candidate = (0, 0)
         self._irregular_footer_cand_fp: LineTypeHeaderFooters.Candidates = []
         self._irregular_footer_cands: LineTypeHeaderFooters.Candidates = []
-        self._irregular_header_cand: LineTypeHeaderFooters.Candidate = ()
+        self._irregular_header_cand: LineTypeHeaderFooters.Candidate = (0, 0)
         self._irregular_header_cand_fp: LineTypeHeaderFooters.Candidates = []
         self._irregular_header_cands: LineTypeHeaderFooters.Candidates = []
         self._is_irregular_footer: bool = False
