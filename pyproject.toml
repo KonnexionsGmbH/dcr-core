@@ -41,7 +41,7 @@ version = "0.9.5.5"
 [tool.bandit]
 
 [tool.black]
-line-length = 120
+line-length = 140
 
 [tool.isort]
 float_to_top = true

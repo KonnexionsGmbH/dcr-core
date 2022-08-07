@@ -9,19 +9,18 @@ import PyPDF2
 import pytesseract
 from pdf2image.exceptions import PDFPageCountError
 
+import dcr_core.cls_nlp_core
+import dcr_core.cls_setup
+import dcr_core.cls_text_parser
+import dcr_core.core_glob
+import dcr_core.core_utils
 import PDFlib.TET
-from dcr_core import cls_nlp_core
-from dcr_core import cls_setup
-from dcr_core import cls_text_parser
-from dcr_core import core_glob
-from dcr_core import core_utils
 
 # -----------------------------------------------------------------------------
 # Global variables.
 # -----------------------------------------------------------------------------
 ERROR_21_901 = (
-    "21.901 Issue (p_2_i): Processing file '{full_name}' with pdf2image failed - "
-    + "error type: '{error_type}' - error: '{error}'."
+    "21.901 Issue (p_2_i): Processing file '{full_name}' with pdf2image failed - " + "error type: '{error_type}' - error: '{error}'."
 )
 ERROR_31_902 = (
     "31.902 Issue (n_2_p): The file '{full_name}' cannot be converted to an "
@@ -29,19 +28,11 @@ ERROR_31_902 = (
     + "error type: '{error_type}' - error: '{error_msg}'."
 )
 ERROR_41_901 = (
-    "41.901 Issue (ocr): Converting the file '{full_name}' with Tesseract OCR failed - "
-    + "error type: '{error_type}' - error: '{error}'."
+    "41.901 Issue (ocr): Converting the file '{full_name}' with Tesseract OCR failed - " + "error type: '{error_type}' - error: '{error}'."
 )
-ERROR_51_901 = (
-    "51.901 Issue (tet): Opening document '{full_name}' - "
-    + "error no: '{error_no}' - api: '{api_name}' - error: '{error}'."
-)
-ERROR_61_901 = (
-    "61.901 Issue (s_p_j): Parsing the file '{full_name}' failed - " + "error type: '{error_type}' - error: '{error}'."
-)
-ERROR_71_901 = (
-    "71.901 Issue (tkn): Tokenizing the file '{full_name}' failed - " + "error type: '{error_type}' - error: '{error}'."
-)
+ERROR_51_901 = "51.901 Issue (tet): Opening document '{full_name}' - " + "error no: '{error_no}' - api: '{api_name}' - error: '{error}'."
+ERROR_61_901 = "61.901 Issue (s_p_j): Parsing the file '{full_name}' failed - " + "error type: '{error_type}' - error: '{error}'."
+ERROR_71_901 = "71.901 Issue (tkn): Tokenizing the file '{full_name}' failed - " + "error type: '{error_type}' - error: '{error}'."
 
 PANDOC_PDF_ENGINE_LULATEX = "lulatex"
 PANDOC_PDF_ENGINE_XELATEX = "xelatex"
@@ -91,20 +82,16 @@ def pandoc_process(
     try:
         pypandoc.convert_file(
             full_name_in,
-            core_glob.FILE_TYPE_PDF,
+            dcr_core.core_glob.FILE_TYPE_PDF,
             extra_args=extra_args,
             outputfile=full_name_out,
         )
 
     except (FileNotFoundError, RuntimeError) as err:
-        error_msg = (
-            ERROR_31_902.replace("{full_name}", full_name_in)
-            .replace("{error_type}", str(type(err)))
-            .replace("{error}", str(err))
-        )
+        error_msg = ERROR_31_902.replace("{full_name}", full_name_in).replace("{error_type}", str(type(err))).replace("{error}", str(err))
         return error_msg[:6], error_msg
 
-    return core_glob.RETURN_OK
+    return dcr_core.core_glob.RETURN_OK
 
 
 # -----------------------------------------------------------------------------
@@ -115,7 +102,7 @@ def parser_process(
     full_name_out: str,
     no_pdf_pages: int,
     document_id: int = -1,
-    file_name_orig: str = core_glob.INFORMATION_NOT_YET_AVAILABLE,
+    file_name_orig: str = dcr_core.core_glob.INFORMATION_NOT_YET_AVAILABLE,
 ) -> tuple[str, str]:
     """Extracting the text from the PDF document.
 
@@ -135,7 +122,7 @@ def parser_process(
                 Defaults to -1.
         file_name_orig (str, optional):
                 The file name of the originating document.
-                Defaults to core_glob.INFORMATION_NOT_YET_AVAILABLE.
+                Defaults to dcr_core.core_glob.INFORMATION_NOT_YET_AVAILABLE.
 
     Returns:
         tuple[str, str]:
@@ -149,16 +136,16 @@ def parser_process(
         # Get the root Element
         root = tree.getroot()
 
-        core_glob.text_parser = cls_text_parser.TextParser()
+        dcr_core.core_glob.text_parser = dcr_core.cls_text_parser.TextParser()
 
         for child in root:
-            child_tag = child.tag[cls_nlp_core.NLPCore.PARSE_ELEM_FROM :]
+            child_tag = child.tag[dcr_core.cls_nlp_core.NLPCore.PARSE_ELEM_FROM :]
             match child_tag:
-                case cls_nlp_core.NLPCore.PARSE_ELEM_DOCUMENT:
-                    core_glob.text_parser.parse_tag_document(
+                case dcr_core.cls_nlp_core.NLPCore.PARSE_ELEM_DOCUMENT:
+                    dcr_core.core_glob.text_parser.parse_tag_document(
                         directory_name=os.path.dirname(full_name_in),
                         document_id=document_id,
-                        environment_variant=core_glob.setup.environment_variant,
+                        environment_variant=dcr_core.core_glob.setup.environment_variant,
                         file_name_curr=os.path.basename(full_name_in),
                         file_name_next=full_name_out,
                         file_name_orig=file_name_orig,
@@ -166,17 +153,13 @@ def parser_process(
                         parent=child,
                         parent_tag=child_tag,
                     )
-                case cls_nlp_core.NLPCore.PARSE_ELEM_CREATION:
+                case dcr_core.cls_nlp_core.NLPCore.PARSE_ELEM_CREATION:
                     pass
     except FileNotFoundError as err:
-        error_msg = (
-            ERROR_61_901.replace("{full_name}", full_name_in)
-            .replace("{error_type}", str(type(err)))
-            .replace("{error}", str(err))
-        )
+        error_msg = ERROR_61_901.replace("{full_name}", full_name_in).replace("{error_type}", str(type(err))).replace("{error}", str(err))
         return error_msg[:6], error_msg
 
-    return core_glob.RETURN_OK
+    return dcr_core.core_glob.RETURN_OK
 
 
 # -----------------------------------------------------------------------------
@@ -214,14 +197,14 @@ def pdf2image_process(
 
         try:
             os.remove(
-                core_utils.get_full_name(
+                dcr_core.core_utils.get_full_name(
                     directory_name,
                     stem_name
                     + "_*."
                     + (
-                        core_glob.FILE_TYPE_PNG
-                        if core_glob.setup.pdf2image_type == cls_setup.Setup.PDF2IMAGE_TYPE_PNG
-                        else core_glob.FILE_TYPE_JPEG
+                        dcr_core.core_glob.FILE_TYPE_PNG
+                        if dcr_core.core_glob.setup.pdf2image_type == dcr_core.cls_setup.Setup.PDF2IMAGE_TYPE_PNG
+                        else dcr_core.core_glob.FILE_TYPE_JPEG
                     ),
                 )
             )
@@ -238,32 +221,28 @@ def pdf2image_process(
                 + str(no_children)
                 + "."
                 + (
-                    core_glob.FILE_TYPE_PNG
-                    if core_glob.setup.pdf2image_type == cls_setup.Setup.PDF2IMAGE_TYPE_PNG
-                    else core_glob.FILE_TYPE_JPEG
+                    dcr_core.core_glob.FILE_TYPE_PNG
+                    if dcr_core.core_glob.setup.pdf2image_type == dcr_core.cls_setup.Setup.PDF2IMAGE_TYPE_PNG
+                    else dcr_core.core_glob.FILE_TYPE_JPEG
                 )
             )
 
-            full_name_next = core_utils.get_full_name(
+            full_name_next = dcr_core.core_utils.get_full_name(
                 directory_name,
                 file_name_next,
             )
 
             img.save(
                 full_name_next,
-                core_glob.setup.pdf2image_type,
+                dcr_core.core_glob.setup.pdf2image_type,
             )
 
             children.append((file_name_next, full_name_next))
     except PDFPageCountError as err:
-        error_msg = (
-            ERROR_21_901.replace("{full_name}", full_name_in)
-            .replace("{error_type}", str(type(err)))
-            .replace("{error}", str(err))
-        )
+        error_msg = ERROR_21_901.replace("{full_name}", full_name_in).replace("{error_type}", str(type(err))).replace("{error}", str(err))
         return error_msg[:6], error_msg, []
 
-    return core_glob.RETURN_OK[0], core_glob.RETURN_OK[1], children
+    return dcr_core.core_glob.RETURN_OK[0], dcr_core.core_glob.RETURN_OK[1], children
 
 
 # -----------------------------------------------------------------------------
@@ -330,7 +309,7 @@ def pdflib_process(
 
     tet.delete()
 
-    return core_glob.RETURN_OK
+    return dcr_core.core_glob.RETURN_OK
 
 
 # -----------------------------------------------------------------------------
@@ -382,7 +361,7 @@ def tesseract_process(
                 extension="pdf",
                 image=full_name,
                 lang=language_tesseract,
-                timeout=core_glob.setup.tesseract_timeout,
+                timeout=dcr_core.core_glob.setup.tesseract_timeout,
             )
 
             with open(full_name_out, "w+b") as file_handle:
@@ -399,9 +378,7 @@ def tesseract_process(
 
         except RuntimeError as err:
             error_msg = (
-                ERROR_41_901.replace("{full_name}", full_name_in)
-                .replace("{error_type}", str(type(err)))
-                .replace("{error}", str(err))
+                ERROR_41_901.replace("{full_name}", full_name_in).replace("{error_type}", str(type(err))).replace("{error}", str(err))
             )
             return error_msg[:6], error_msg, []
 
@@ -409,7 +386,7 @@ def tesseract_process(
     with open(full_name_out, "wb") as file_handle:
         pdf_writer.write(file_handle)
 
-    return core_glob.RETURN_OK[0], core_glob.RETURN_OK[1], children
+    return dcr_core.core_glob.RETURN_OK[0], dcr_core.core_glob.RETURN_OK[1], children
 
 
 # -----------------------------------------------------------------------------
@@ -420,7 +397,7 @@ def tokenizer_process(
     full_name_out: str,
     pipeline_name: str,
     document_id: int = -1,
-    file_name_orig: str = core_glob.INFORMATION_NOT_YET_AVAILABLE,
+    file_name_orig: str = dcr_core.core_glob.INFORMATION_NOT_YET_AVAILABLE,
     no_lines_footer: int = -1,
     no_lines_header: int = -1,
     no_lines_toc: int = -1,
@@ -442,7 +419,7 @@ def tokenizer_process(
                 Defaults to -1.
         file_name_orig (str, optional):
                 The file name of the originating document.
-                Defaults to core_glob.INFORMATION_NOT_YET_AVAILABLE.
+                Defaults to dcr_core.core_glob.INFORMATION_NOT_YET_AVAILABLE.
         no_lines_footer (int, optional):
                 Total number of footer lines.
                 Defaults to -1.
@@ -459,11 +436,11 @@ def tokenizer_process(
                            otherwise a corresponding error code and error message.
     """
     try:
-        core_glob.text_parser = cls_text_parser.TextParser.from_files(
-            file_encoding=core_glob.FILE_ENCODING_DEFAULT, full_name_line=full_name_in
+        dcr_core.core_glob.text_parser = dcr_core.cls_text_parser.TextParser.from_files(
+            file_encoding=dcr_core.core_glob.FILE_ENCODING_DEFAULT, full_name_line=full_name_in
         )
 
-        core_glob.tokenizer_spacy.process_document(
+        dcr_core.core_glob.tokenizer_spacy.process_document(
             document_id=document_id,
             file_name_next=full_name_out,
             file_name_orig=file_name_orig,
@@ -474,11 +451,7 @@ def tokenizer_process(
         )
 
     except FileNotFoundError as err:
-        error_msg = (
-            ERROR_71_901.replace("{full_name}", full_name_in)
-            .replace("{error_type}", str(type(err)))
-            .replace("{error}", str(err))
-        )
+        error_msg = ERROR_71_901.replace("{full_name}", full_name_in).replace("{error_type}", str(type(err))).replace("{error}", str(err))
         return error_msg[:6], error_msg
 
-    return core_glob.RETURN_OK
+    return dcr_core.core_glob.RETURN_OK

@@ -2,7 +2,7 @@ import collections
 import pathlib
 import re
 
-from dcr_core import cls_nlp_core
+import dcr_core.cls_nlp_core
 
 class LineTypeHeading:
     def __init__(self) -> None:
@@ -14,16 +14,7 @@ class LineTypeHeading:
         self._max_page: int = 0
         self._page_idx: int = 0
         self._rules: list[tuple[str, bool, str, collections.abc.Callable[[str, str], bool], list[str]]] = []
-        self._rules_collection: list[
-            tuple[
-                str,
-                bool,
-                re.Pattern[str],
-                collections.abc.Callable[[str, str], bool],
-                list[str],
-                str,
-            ]
-        ] = []
+        self._rules_collection: list[tuple[str, bool, re.Pattern[str], collections.abc.Callable[[str, str], bool], list[str], str]] = []
         self._rules_hierarchy: list[
             tuple[
                 str,
@@ -44,12 +35,10 @@ class LineTypeHeading:
     def _check_valid_start_value(target_value: str, is_first_token: bool, start_values: list[str]) -> bool: ...
     def _create_toc_entry(self, level: int, text: str) -> None: ...
     def _get_next_body_line(
-        self, page_idx: int, line_lines: cls_nlp_core.NLPCore.ParserLineLines, line_lines_idx: int
-    ) -> tuple[str, int, cls_nlp_core.NLPCore.ParserLineLines, int]: ...
+        self, page_idx: int, line_lines: dcr_core.cls_nlp_core.NLPCore.ParserLineLines, line_lines_idx: int
+    ) -> tuple[str, int, dcr_core.cls_nlp_core.NLPCore.ParserLineLines, int]: ...
     def _init_anti_patterns(self) -> list[tuple[str, re.Pattern[str]]]: ...
-    def _init_rules(
-        self,
-    ) -> list[tuple[str, bool, str, collections.abc.Callable[[str, str], bool], list[str]]]: ...
+    def _init_rules(self) -> list[tuple[str, bool, str, collections.abc.Callable[[str, str], bool], list[str]]]: ...
     @staticmethod
     def _load_anti_patterns_from_json(
         lt_heading_rule_file: pathlib.Path,
@@ -67,5 +56,5 @@ class LineTypeHeading:
         document_id: int,
         file_name_curr: str,
         file_name_orig: str,
-        parser_line_pages_json: cls_nlp_core.NLPCore.ParserLinePages,
+        parser_line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages,
     ) -> None: ...
