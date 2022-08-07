@@ -4,7 +4,7 @@ import pathlib
 import sys
 import traceback
 
-import dcr_core.core_glob
+import dcr_core
 
 
 # -----------------------------------------------------------------------------

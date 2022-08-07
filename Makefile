@@ -25,7 +25,8 @@ endif
 ## help:               Show this help.
 ## ----------------------------------------------------------------------------
 ## dev:                Format and lint the code.
-dev: format lint pydocstyle
+#dev: format lint pydocstyle
+dev: format lint
 ## docs:               Check the API docs, create and upload the user docs.
 # docs: pydocstyle pydoc-markdown mkdocs
 docs: pydocstyle mkdocs
