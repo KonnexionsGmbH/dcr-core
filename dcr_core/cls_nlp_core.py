@@ -3,7 +3,7 @@ import json
 import re
 from typing import ClassVar
 
-import dcr_core.core_utils
+from dcr_core import core_utils
 
 
 class NLPCore:
@@ -287,7 +287,8 @@ class NLPCore:
             int:    The corresponding integer.
         """
         roman = re.match(  # type: ignore
-            "(m{0,3}(cm|cd|d?c{0,3})(xc|xl|l?x{0,3})(ix|iv|v?i{0,3}))" + "|(M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3}))",
+            "(m{0,3}(cm|cd|d?c{0,3})(xc|xl|l?x{0,3})(ix|iv|v?i{0,3}))"
+            + "|(M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3}))",
             roman_in,
         ).group(0)
 
@@ -346,7 +347,9 @@ class NLPCore:
     #           regular expression
     # -----------------------------------------------------------------------------
     @staticmethod
-    def _get_lt_anti_patterns_default_list_bullet(environment_variant: str) -> list[tuple[str, str]]:
+    def _get_lt_anti_patterns_default_list_bullet(
+        environment_variant: str,
+    ) -> list[tuple[str, str]]:
         """Get the default bulleted list line type anti-patterns.
 
         Returns:
@@ -368,7 +371,9 @@ class NLPCore:
     #           regular expression
     # -----------------------------------------------------------------------------
     @staticmethod
-    def _get_lt_anti_patterns_default_list_number(environment_variant: str) -> list[tuple[str, str]]:
+    def _get_lt_anti_patterns_default_list_number(
+        environment_variant: str,
+    ) -> list[tuple[str, str]]:
         """Get the default numbered list line type anti-patterns.
 
         Args:
@@ -401,7 +406,9 @@ class NLPCore:
     #           list of strings
     # -----------------------------------------------------------------------------
     @staticmethod
-    def _get_lt_rules_default_heading_list_number() -> list[tuple[str, bool, str, collections.abc.Callable[[str, str], bool], list[str]]]:
+    def _get_lt_rules_default_heading_list_number() -> list[
+        tuple[str, bool, str, collections.abc.Callable[[str, str], bool], list[str]]
+    ]:
         """Get the default heading & numbered list line type rules.
 
         Returns:
@@ -656,7 +663,13 @@ class NLPCore:
     # Export the default heading line type rules.
     # -----------------------------------------------------------------------------
     @staticmethod
-    def export_rule_file_heading(is_verbose: bool, file_name: str, file_encoding: str, json_indent: str, is_json_sort_keys: bool) -> None:
+    def export_rule_file_heading(
+        is_verbose: bool,
+        file_name: str,
+        file_encoding: str,
+        json_indent: int,
+        is_json_sort_keys: bool,
+    ) -> None:
         """Export the default heading line type rules.
 
         Args:
@@ -666,7 +679,7 @@ class NLPCore:
                     File name of the output file.
             file_encoding (str):
                     The encoding of the output file.
-            json_indent (str):
+            json_indent (int):
                     Indent level for pretty-printing the JSON output.
             is_json_sort_keys (bool):
                     If true, the output of the JSON dictionaries will be sorted by key.
@@ -683,7 +696,13 @@ class NLPCore:
 
         rules = []
 
-        for name, is_first_token, regexp, function_is_asc, start_values in NLPCore.get_lt_rules_default_heading():
+        for (
+            name,
+            is_first_token,
+            regexp,
+            function_is_asc,
+            start_values,
+        ) in NLPCore.get_lt_rules_default_heading():
             rules.append(
                 {
                     NLPCore.JSON_NAME_NAME: name,
@@ -720,9 +739,12 @@ class NLPCore:
             )
 
         if len(anti_patterns) > 0:
-            dcr_core.core_utils.progress_msg(is_verbose, f"{len(anti_patterns):3d} heading       line type anti-pattern(s) exported")
+            core_utils.progress_msg(
+                is_verbose,
+                f"{len(anti_patterns):3d} heading       line type anti-pattern(s) exported",
+            )
         if len(rules) > 0:
-            dcr_core.core_utils.progress_msg(is_verbose, f"{len(rules):3d} heading       line type rule(s)         exported")
+            core_utils.progress_msg(is_verbose, f"{len(rules):3d} heading       line type rule(s)         exported")
 
     # -----------------------------------------------------------------------------
     # Export the default bulleted list line type rules.
@@ -787,9 +809,12 @@ class NLPCore:
             )
 
         if len(anti_patterns) > 0:
-            dcr_core.core_utils.progress_msg(is_verbose, f"{len(anti_patterns):3d} bulleted list line type anti-pattern(s) exported")
+            core_utils.progress_msg(
+                is_verbose,
+                f"{len(anti_patterns):3d} bulleted list line type anti-pattern(s) exported",
+            )
         if len(rules) > 0:
-            dcr_core.core_utils.progress_msg(is_verbose, f"{len(rules):3d} bulleted list line type rule(s)         exported")
+            core_utils.progress_msg(is_verbose, f"{len(rules):3d} bulleted list line type rule(s)         exported")
 
     # -----------------------------------------------------------------------------
     # Export the default numbered list line type rules.
@@ -831,7 +856,12 @@ class NLPCore:
 
         rules = []
 
-        for name, regexp, function_is_asc, start_values in NLPCore.get_lt_rules_default_list_number():
+        for (
+            name,
+            regexp,
+            function_is_asc,
+            start_values,
+        ) in NLPCore.get_lt_rules_default_list_number():
             rules.append(
                 {
                     NLPCore.JSON_NAME_NAME: name,
@@ -866,9 +896,12 @@ class NLPCore:
             )
 
         if len(anti_patterns) > 0:
-            dcr_core.core_utils.progress_msg(is_verbose, f"{len(anti_patterns):3d} numbered list line type anti-pattern(s) exported")
+            core_utils.progress_msg(
+                is_verbose,
+                f"{len(anti_patterns):3d} numbered list line type anti-pattern(s) exported",
+            )
         if len(rules) > 0:
-            dcr_core.core_utils.progress_msg(is_verbose, f"{len(rules):3d} numbered list line type rule(s)         exported")
+            core_utils.progress_msg(is_verbose, f"{len(rules):3d} numbered list line type rule(s)         exported")
 
     # -----------------------------------------------------------------------------
     # Get the default heading line type anti-patterns.
@@ -928,7 +961,9 @@ class NLPCore:
     # Get the default heading line type rules.
     # -----------------------------------------------------------------------------
     @staticmethod
-    def get_lt_rules_default_heading() -> list[tuple[str, bool, str, collections.abc.Callable[[str, str], bool], list[str]]]:
+    def get_lt_rules_default_heading() -> list[
+        tuple[str, bool, str, collections.abc.Callable[[str, str], bool], list[str]]
+    ]:
         """Get the default heading line type rules.
 
         Returns:
@@ -954,7 +989,9 @@ class NLPCore:
     # Get the default numbered list line type rules.
     # -----------------------------------------------------------------------------
     @staticmethod
-    def get_lt_rules_default_list_number() -> list[tuple[str, str, collections.abc.Callable[[str, str], bool], list[str]]]:
+    def get_lt_rules_default_list_number() -> list[
+        tuple[str, str, collections.abc.Callable[[str, str], bool], list[str]]
+    ]:
         """Get the default numbered list line type rules.
 
         Returns:
@@ -1002,7 +1039,9 @@ class NLPCore:
         Returns:
             bool:   True, if the successor - predecessor is equal to 1, False else.
         """
-        if (predecessor_ints := re.findall(r"[a-z]", predecessor.lower())) and (successor_ints := re.findall(r"[a-z]", successor.lower())):
+        if (predecessor_ints := re.findall(r"[a-z]", predecessor.lower())) and (
+            successor_ints := re.findall(r"[a-z]", successor.lower())
+        ):
             if ord(successor_ints[0]) - ord(predecessor_ints[0]) == 1:
                 return True
 
@@ -1065,7 +1104,10 @@ class NLPCore:
         if successor_net[-1] in {")", "."}:
             successor_net = successor_net[:-1]
 
-        if NLPCore._convert_roman_2_int(successor_net.lower()) - NLPCore._convert_roman_2_int(predecessor_net.lower()) == 1:
+        if (
+            NLPCore._convert_roman_2_int(successor_net.lower()) - NLPCore._convert_roman_2_int(predecessor_net.lower())
+            == 1
+        ):
             return True
 
         return False
@@ -1132,7 +1174,9 @@ class NLPCore:
         Returns:
             bool:   False, if the predecessor is greater than the current value, True else.
         """
-        if (predecessor_floats := re.findall(r"\d+\.\d+", predecessor)) and (successor_floats := re.findall(r"\d+\.\d+", successor)):
+        if (predecessor_floats := re.findall(r"\d+\.\d+", predecessor)) and (
+            successor_floats := re.findall(r"\d+\.\d+", successor)
+        ):
             if 0 < float(successor_floats[0]) - float(predecessor_floats[0]) <= 1:
                 return True
 
@@ -1212,7 +1256,9 @@ class NLPCore:
         Returns:
             bool:   True, if the successor - predecessor is equal to 1, False else.
         """
-        if (predecessor_ints := re.findall(r"[A-Z]", predecessor.upper())) and (successor_ints := re.findall(r"[A-Z]", successor.upper())):
+        if (predecessor_ints := re.findall(r"[A-Z]", predecessor.upper())) and (
+            successor_ints := re.findall(r"[A-Z]", successor.upper())
+        ):
             if ord(successor_ints[0]) - ord(predecessor_ints[0]) == 1:
                 return True
 

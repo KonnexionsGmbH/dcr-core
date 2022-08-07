@@ -1,5 +1,5 @@
 """Library Stub."""
-import dcr_core.core_glob
+from dcr_core import core_glob
 
 ERROR_21_901: str
 ERROR_31_902: str
@@ -21,7 +21,7 @@ def parser_process(
     full_name_out: str,
     no_pdf_pages: int,
     document_id: int = -1,
-    file_name_orig: str = dcr_core.core_glob.INFORMATION_NOT_YET_AVAILABLE,
+    file_name_orig: str = core_glob.INFORMATION_NOT_YET_AVAILABLE,
 ) -> tuple[str, str]: ...
 def pdf2image_process(
     full_name_in: str,
@@ -42,7 +42,7 @@ def tokenizer_process(
     full_name_out: str,
     pipeline_name: str,
     document_id: int = -1,
-    file_name_orig: str = dcr_core.core_glob.INFORMATION_NOT_YET_AVAILABLE,
+    file_name_orig: str = core_glob.INFORMATION_NOT_YET_AVAILABLE,
     no_lines_footer: int = -1,
     no_lines_header: int = -1,
     no_lines_toc: int = -1,

@@ -2,7 +2,7 @@ import collections
 import pathlib
 import re
 
-import dcr_core.cls_nlp_core
+from dcr_core import cls_nlp_core
 
 class LineTypeListNumber:
     Entry = dict[str, int | str]
@@ -28,8 +28,8 @@ class LineTypeListNumber:
         self._page_idx: int = 0
         self._page_idx_prev: int = 0
         self._para_no_prev: int = 0
-        self._parser_line_lines_json: dcr_core.cls_nlp_core.NLPCore.ParserLineLines = []
-        self._parser_line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages = []
+        self._parser_line_lines_json: cls_nlp_core.NLPCore.ParserLineLines = []
+        self._parser_line_pages_json: cls_nlp_core.NLPCore.ParserLinePages = []
         self._rule: LineTypeListNumber.RuleIntern = ()  # type: ignore
         self._rules: list[LineTypeListNumber.RuleExtern] = []
         self._rules_collection: list[LineTypeListNumber.RuleIntern] = []
@@ -59,5 +59,5 @@ class LineTypeListNumber:
         environment_variant: str,
         file_name_curr: str,
         file_name_orig: str,
-        parser_line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages,
+        parser_line_pages_json: cls_nlp_core.NLPCore.ParserLinePages,
     ) -> None: ...

@@ -1,12 +1,12 @@
-import dcr_core.cls_line_type_headers_footers
-import dcr_core.cls_line_type_heading
-import dcr_core.cls_line_type_list_bullet
-import dcr_core.cls_line_type_list_number
-import dcr_core.cls_line_type_table
-import dcr_core.cls_line_type_toc
-import dcr_core.cls_setup
-import dcr_core.cls_text_parser
-import dcr_core.cls_tokenizer_spacy
+from dcr_core import cls_line_type_headers_footers
+from dcr_core import cls_line_type_heading
+from dcr_core import cls_line_type_list_bullet
+from dcr_core import cls_line_type_list_number
+from dcr_core import cls_line_type_table
+from dcr_core import cls_line_type_toc
+from dcr_core import cls_setup
+from dcr_core import cls_text_parser
+from dcr_core import cls_tokenizer_spacy
 
 # -----------------------------------------------------------------------------
 # Global Constants.
@@ -35,15 +35,15 @@ RETURN_OK: tuple[str, str] = ("", "")
 # -----------------------------------------------------------------------------
 # Global Variables.
 # -----------------------------------------------------------------------------
-line_type_headers_footers: dcr_core.cls_line_type_headers_footers.LineTypeHeaderFooters
-line_type_heading: dcr_core.cls_line_type_heading.LineTypeHeading
-line_type_list_bullet: dcr_core.cls_line_type_list_bullet.LineTypeListBullet
-line_type_list_number: dcr_core.cls_line_type_list_number.LineTypeListNumber
-line_type_table: dcr_core.cls_line_type_table.LineTypeTable
-line_type_toc: dcr_core.cls_line_type_toc.LineTypeToc
+line_type_headers_footers: cls_line_type_headers_footers.LineTypeHeaderFooters
+line_type_heading: cls_line_type_heading.LineTypeHeading
+line_type_list_bullet: cls_line_type_list_bullet.LineTypeListBullet
+line_type_list_number: cls_line_type_list_number.LineTypeListNumber
+line_type_table: cls_line_type_table.LineTypeTable
+line_type_toc: cls_line_type_toc.LineTypeToc
 
-setup: dcr_core.cls_setup.Setup
+setup: cls_setup.Setup
 
-text_parser: dcr_core.cls_text_parser.TextParser
+text_parser: cls_text_parser.TextParser
 
-tokenizer_spacy: dcr_core.cls_tokenizer_spacy.TokenizerSpacy
+tokenizer_spacy: cls_tokenizer_spacy.TokenizerSpacy

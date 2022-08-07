@@ -13,9 +13,7 @@ pdf2image = "*"
 pypandoc = "*"
 pytesseract = "*"
 spacy = "*"
-strsimpy ="*"
 toml = "*"
-weasyprint = "*"
 
 [dev-packages]
 MyPy = "*"

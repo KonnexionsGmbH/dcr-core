@@ -4,17 +4,17 @@ build-backend = "setuptools.build_meta"
 
 [project]
 authors = [
-    { name = "Walter Weinmann", email = "info@konnexions.ch" },
+    { name = "Team Konnexions", email = "info@konnexions.ch" },
 ]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
-    "License :: Free To Use But Restricted",
+    "License :: Other/Proprietary License",
     "Natural Language :: English",
     "Operating System :: Microsoft :: Windows :: Windows 10",
     "Operating System :: POSIX :: Linux",
     "Programming Language :: Python :: 3.10",
-    "Topic :: Software Development :: Libraries",
+    "Topic :: Text Processing",
     "Typing :: Typed",
 ]
 description = "Document Content Recognition API"
@@ -23,23 +23,25 @@ keywords = [
     "NLP",
     "OCR",
 ]
-license = { file = "LICENSE" }
 maintainers = [
-    { name = "Walter Weinmann", email = "info@konnexions.ch" },
+    { name = "Teanm Konnexions", email = "info@konnexions.ch" },
 ]
 name = "dcr_core"
 readme = "README.md"
 requires-python = ">=3.10"
-version = "0.9.4.7"
+version = "0.9.5.5"
 
 [project.urls]
-"Homepage" = "https://github.com/KonnexionsGmbH/dcr-core"
 "Bug Tracker" = "https://github.com/KonnexionsGmbH/dcr-core/issues"
+"Documentation" = "https://konnexionsgmbh.github.io/dcr-core/"
+"Homepage" = "https://github.com/KonnexionsGmbH/dcr-core"
+#"Release History" = "TBD"
+#"Release Notes" = "TBD"
 
 [tool.bandit]
 
 [tool.black]
-line-length = 140
+line-length = 120
 
 [tool.isort]
 float_to_top = true

@@ -226,7 +226,7 @@ pylint:             ## Lint the code with Pylint.
 
 # twine: Collection of utilities for publishing packages on bPyPI.
 # https://pypi.org/project/twine/
-upload:             ## Upload the distribution archive to PyPi.
+upload-prod:        ## Upload the distribution archive to PyPi.
 	@echo Info **********  Start: twine prod **********************************
 	@echo MYPYPATH  =${MYPYPATH}
 	@echo PYTHON    =${PYTHON}
@@ -234,6 +234,7 @@ upload:             ## Upload the distribution archive to PyPi.
 	${PYTHON} -m build --version
 	${PYTHON} -m twine --version
 	@echo ---------------------------------------------------------------------
+	${DELETE_DIST}
 	${PYTHON} -m build
 	${PYTHON} -m twine upload -p $(SECRET_PYPI) -u wwe dist/*
 	@echo Info **********  End:   twine prod ***********************************
