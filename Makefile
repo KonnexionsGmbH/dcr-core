@@ -2,12 +2,12 @@
 
 ifeq ($(OS),Windows_NT)
 	export DELETE_DIST=del /f /q dist\\*
-	export MYPYPATH=dcr_core
+	export MYPYPATH=
 	export PYTHON=python
 	export PYTHONPATH=dcr_core
 else
 	export DELETE_DIST=rm -f dist/*
-	export MYPYPATH=dcr_core
+	export MYPYPATH=
 	export PYTHON=python3
 	export PYTHONPATH=dcr_core
 endif
