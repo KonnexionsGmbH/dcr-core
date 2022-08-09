@@ -1,3 +1,7 @@
+# Copyright (c) 2022 Konnexions GmbH. All rights reserved. Use of this
+# source code is governed by the Konnexions Public License (KX-PL)
+# Version 2020.05, that can be found in the LICENSE file.
+
 import configparser
 import os
 from typing import ClassVar
@@ -13,9 +17,9 @@ class Setup:
         _type_: Application configuration parameters.
     """
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Class variables.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     _CONFIG_PARAM_NO: ClassVar[int] = 110
 
     _DCR_CFG_CREATE_EXTRA_FILE_HEADING: ClassVar[str] = "create_extra_file_heading"
@@ -147,9 +151,9 @@ class Setup:
     PDF2IMAGE_TYPE_JPEG: ClassVar[str] = "jpeg"
     PDF2IMAGE_TYPE_PNG: ClassVar[str] = "png"
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Initialise the instance.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # pylint: disable=too-many-statements
     def __init__(self) -> None:
         """Initialise the instance."""
@@ -160,9 +164,9 @@ class Setup:
         self._config_parser = configparser.ConfigParser()
         self._config_parser.read(Setup._DCR_CFG_FILE)
 
-        # -----------------------------------------------------------------------------
+        # ------------------------------------------------------------------
         # DCR configuration.
-        # -----------------------------------------------------------------------------
+        # ------------------------------------------------------------------
         self.is_create_extra_file_heading = True
         self.is_create_extra_file_list_bullet = True
         self.is_create_extra_file_list_number = True
@@ -224,9 +228,9 @@ class Setup:
 
         self.verbose_parser = "none"
 
-        # -----------------------------------------------------------------------------
+        # ------------------------------------------------------------------
         # Spacy ignore tokens.
-        # -----------------------------------------------------------------------------
+        # ------------------------------------------------------------------
         self.is_spacy_ignore_bracket = True
         self.is_spacy_ignore_left_punct = True
         self.is_spacy_ignore_line_type_footer = True
@@ -242,9 +246,9 @@ class Setup:
         self.is_spacy_ignore_space = True
         self.is_spacy_ignore_stop = True
 
-        # -----------------------------------------------------------------------------
+        # ------------------------------------------------------------------
         # spaCy token attributes.
-        # -----------------------------------------------------------------------------
+        # ------------------------------------------------------------------
         self.is_spacy_tkn_attr_cluster = False
         self.is_spacy_tkn_attr_dep_ = False
         self.is_spacy_tkn_attr_doc = False
@@ -305,9 +309,9 @@ class Setup:
 
         self._exist = True
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Check the configuration parameters.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _check_config_core(self) -> None:
         """Check the configuration parameters."""
         self.is_create_extra_file_heading = self._determine_config_param_boolean(
@@ -400,9 +404,9 @@ class Setup:
         self.is_verbose_lt_toc = self._determine_config_param_boolean(Setup._DCR_CFG_VERBOSE_LT_TOC, self.is_verbose_lt_toc)
         self._check_config_verbose_parser()
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Check the configuration parameter - pdf2image_type.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _check_config_pdf2image_type(self) -> None:
         """Check the configuration parameter - pdf2image_type."""
         if Setup._DCR_CFG_PDF2IMAGE_TYPE in self._config:
@@ -415,18 +419,18 @@ class Setup:
                     f"Invalid configuration parameter value for parameter " f"'pdf2image_type': '{self.pdf2image_type}'"
                 )
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Check the configuration parameter - verbose_parser.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _check_config_verbose_parser(self) -> None:
         """Check the configuration parameter - verbose_parser."""
         if Setup._DCR_CFG_VERBOSE_PARSER in self._config:
             if str(self._config[Setup._DCR_CFG_VERBOSE_PARSER]).lower() in {"all", "text"}:
                 self.verbose_parser = str(self._config[Setup._DCR_CFG_VERBOSE_PARSER]).lower()
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Determine a boolean configuration parameter.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _determine_config_param_boolean(
         self,
         param: str,
@@ -450,9 +454,9 @@ class Setup:
 
         return var
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Determine a integer configuration parameter.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _determine_config_param_integer(
         self,
         param: str,
@@ -472,9 +476,9 @@ class Setup:
 
         return var
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Determine a spaCy token configuration parameter.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _determine_config_spacy_tkn(self) -> None:
         """Determine a spaCy token configuration parameter."""
         self.is_spacy_tkn_attr_cluster = self._determine_config_param_boolean(
@@ -613,9 +617,9 @@ class Setup:
             Setup._DCR_CFG_SPACY_TKN_ATTR_WHITESPACE_, self.is_spacy_tkn_attr_whitespace_
         )
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Determine a spaCy token configuration parameter to ignore the token creation.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _determine_config_spacy_tkn_ignore(self) -> None:
         """Determine a spaCy token configuration parameter to ignore the token
         creation."""
@@ -654,9 +658,9 @@ class Setup:
         self.is_spacy_ignore_space = self._determine_config_param_boolean(Setup._DCR_CFG_SPACY_IGNORE_SPACE, self.is_spacy_ignore_space)
         self.is_spacy_ignore_stop = self._determine_config_param_boolean(Setup._DCR_CFG_SPACY_IGNORE_STOP, self.is_spacy_ignore_stop)
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Determine and check the environment variant.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _get_environment_variant(self) -> None:
         """Determine and check the environment variant."""
         self.environment_variant = Setup.ENVIRONMENT_TYPE_PROD
@@ -675,9 +679,9 @@ class Setup:
                 f"The environment variable '{Setup._DCR_ENVIRONMENT_TYPE}' " f"has the invalid content '{self.environment_variant}'"
             )
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Load and check the configuration parameters.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _load_config_core(self) -> None:
         """Load and check the configuration parameters."""
         for section in self._config_parser.sections():
@@ -815,9 +819,9 @@ class Setup:
 
         self._check_config_core()
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Check the object existence.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def exists(self) -> bool:
         """Check the object existence.
 

@@ -1,3 +1,8 @@
+# Copyright (c) 2022 Konnexions GmbH. All rights reserved. Use of this
+# source code is governed by the Konnexions Public License (KX-PL)
+# Version 2020.05, that can be found in the LICENSE file.
+
+"""Library stub file."""
 import collections
 import pathlib
 import re
@@ -7,10 +12,8 @@ import dcr_core.cls_nlp_core
 class LineTypeListNumber:
     Entry = dict[str, int | str]
     Entries = list[Entry]
-
     List = dict[str, Entries | float | int | object | str]
     Lists = list[List]
-
     RuleExtern = tuple[str, str, collections.abc.Callable[[str, str], bool], list[str]]
     RuleIntern = tuple[str, re.Pattern[str], collections.abc.Callable[[str, str], bool], list[str], str]
 
@@ -36,6 +39,7 @@ class LineTypeListNumber:
         self.file_name_curr: str = ""
         self.no_lists: int = 0
         ...
+
     def _finish_list(self) -> None: ...
     def _init_anti_patterns(self) -> list[tuple[str, re.Pattern[str]]]: ...
     def _init_rules(self) -> list[LineTypeListNumber.RuleExtern]: ...
@@ -51,6 +55,7 @@ class LineTypeListNumber:
     def _process_page(self) -> None: ...
     def _reset_document(self) -> None: ...
     def _reset_list(self) -> None: ...
+
     def exists(self) -> bool: ...
     def process_document(
         self,

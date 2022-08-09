@@ -1,3 +1,7 @@
+# Copyright (c) 2022 Konnexions GmbH. All rights reserved. Use of this
+# source code is governed by the Konnexions Public License (KX-PL)
+# Version 2020.05, that can be found in the LICENSE file.
+
 from __future__ import annotations
 
 import collections.abc
@@ -21,9 +25,9 @@ class TextParser:
         _type_: TextParser instance.
     """
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Initialise the instance.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def __init__(self) -> None:
         """Initialise the instance."""
         dcr_core.core_utils.check_exists_object(
@@ -88,9 +92,9 @@ class TextParser:
 
         self._exist = True
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Create the data structure line: document.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # {
     #     "documentId": 99,
     #     "documentFileName": "xxx",
@@ -106,7 +110,7 @@ class TextParser:
     #     "pages": [
     #     ]
     # }
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _create_line_document(self) -> None:
         with open(self._full_name, "w", encoding=dcr_core.core_glob.FILE_ENCODING_DEFAULT) as file_handle:
             json.dump(
@@ -131,9 +135,9 @@ class TextParser:
                 sort_keys=dcr_core.core_glob.setup.is_json_sort_keys,
             )
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Create the data structure line: lines.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # {
     #     "coordLLX": 99.9,
     #     "coordURX": 99.9,
@@ -143,7 +147,7 @@ class TextParser:
     #     "paragraphNo": 99,
     #     "text": "xxx"
     # }
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _create_line_lines(self) -> None:
         self._debug_xml_element_text_line()
 
@@ -165,9 +169,9 @@ class TextParser:
 
         self.parse_result_line_lines.append(new_entry)
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Create the data structure line: pages.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # {
     #     "pageNo": 99,
     #     "noLinesInPage": 99,
@@ -175,7 +179,7 @@ class TextParser:
     #     "lines": [
     #     ]
     # }
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _create_line_pages(self) -> None:
         self.parse_result_line_pages.append(
             {
@@ -186,9 +190,9 @@ class TextParser:
             }
         )
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Create the data structure page: document.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # {
     #     "documentId": 99,
     #     "documentFileName": "xxx",
@@ -197,7 +201,7 @@ class TextParser:
     #     "pages": [
     #     ]
     # }
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _create_page_document(self) -> None:
         with open(self._full_name, "w", encoding=dcr_core.core_glob.FILE_ENCODING_DEFAULT) as file_handle:
             json.dump(
@@ -213,16 +217,16 @@ class TextParser:
                 sort_keys=dcr_core.core_glob.setup.is_json_sort_keys,
             )
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Create the data structure page: pages.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # {
     #     "pageNo": 99,
     #     "noParagraphsInPage": 99,
     #     "paragraphs": [
     #     ]
     # }
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _create_page_pages(self) -> None:
         self._parse_result_page_pages.append(
             {
@@ -232,14 +236,14 @@ class TextParser:
             }
         )
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Create the data structure page: paras.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # {
     #     "paragraphNo": 99,
     #     "text": "xxx"
     # }
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _create_page_paras(self) -> None:
         self._debug_xml_element_text_page()
 
@@ -250,9 +254,9 @@ class TextParser:
             }
         )
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Create the data structure word: document.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # {
     #     "documentId": 99,
     #     "documentFileName": "xxx",
@@ -263,7 +267,7 @@ class TextParser:
     #     "pages": [
     #     ]
     # }
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _create_word_document(self) -> None:
         with open(self._full_name, "w", encoding=dcr_core.core_glob.FILE_ENCODING_DEFAULT) as file_handle:
             json.dump(
@@ -281,16 +285,16 @@ class TextParser:
                 sort_keys=dcr_core.core_glob.setup.is_json_sort_keys,
             )
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Create the data structure word: lines.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # {
     #     "lineNo": 99,
     #     "noWordsInLine": 99,
     #     "words": [
     #     ]
     # }
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _create_word_lines(self) -> None:
         self._parse_result_word_lines.append(
             {
@@ -300,9 +304,9 @@ class TextParser:
             }
         )
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Create the data structure word: pages.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # {
     #     "pageNo": 99,
     #     "noLinesInPage": 99,
@@ -311,7 +315,7 @@ class TextParser:
     #     "paragraphs": [
     #     ]
     # }
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _create_word_pages(self) -> None:
         self._parse_result_word_pages.append(
             {
@@ -323,9 +327,9 @@ class TextParser:
             }
         )
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Create the data structure word: paras.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # {
     #     "paragraphNo": 99,
     #     "noLinesInParagraph": 99,
@@ -333,7 +337,7 @@ class TextParser:
     #     "lines": [
     #     ]
     # }
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _create_word_paras(self) -> None:
         self._parse_result_word_paras.append(
             {
@@ -344,14 +348,14 @@ class TextParser:
             }
         )
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Create the data structure word: words.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # {
     #     "wordNo": 99,
     #     "text": "xxx"
     # }
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _create_word_words(self) -> None:
         self._debug_xml_element_text_word()
 
@@ -362,9 +366,9 @@ class TextParser:
             }
         )
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Debug an XML element detailed.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     @staticmethod
     def _debug_xml_element_all(event: str, parent_tag: str, attrib: dict[str, str], text: collections.abc.Iterable[str | None]) -> None:
         """Debug an XML element detailed.
@@ -388,9 +392,9 @@ class TextParser:
             if text is not None and str(text).strip() > "":
                 print(f"      text  ='{text}'")
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Debug an XML element only 'text' - variant line.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _debug_xml_element_text_line(self) -> None:
         """Debug an XML element only 'text - variant line."""
         if dcr_core.core_glob.setup.verbose_parser == "text":
@@ -402,9 +406,9 @@ class TextParser:
                 f"text='{self._parse_result_text}'"
             )
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Debug an XML element only 'text' - variant page.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _debug_xml_element_text_page(self) -> None:
         """Debug an XML element only 'text - variant page."""
         if dcr_core.core_glob.setup.verbose_parser == "text":
@@ -416,9 +420,9 @@ class TextParser:
                 f"text='{self._parse_result_text}'"
             )
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Debug an XML element only 'text' - variant word.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _debug_xml_element_text_word(self) -> None:
         """Debug an XML element only 'text - variant word."""
         if dcr_core.core_glob.setup.verbose_parser == "text":
@@ -433,9 +437,9 @@ class TextParser:
                 f"text='{self._parse_result_text}'"
             )
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Processing tag Bookmark.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _parse_tag_bookmark(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
         """Processing tag 'Bookmark'.
 
@@ -459,9 +463,9 @@ class TextParser:
 
         self._debug_xml_element_all("End  ", parent_tag, parent.attrib, parent.text)
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Processing tag Bookmarks.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _parse_tag_bookmarks(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
         """Processing tag 'Bookmarks'.
 
@@ -483,9 +487,9 @@ class TextParser:
 
         self._debug_xml_element_all("End  ", parent_tag, parent.attrib, parent.text)
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Processing tag Box.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _parse_tag_box(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
         """Processing tag 'Box'.
 
@@ -507,9 +511,9 @@ class TextParser:
 
         self._debug_xml_element_all("End  ", parent_tag, parent.attrib, parent.text)
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Processing tag Cell.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _parse_tag_cell(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
         """Processing tag 'Cell'.
 
@@ -562,9 +566,9 @@ class TextParser:
 
         self._debug_xml_element_all("End  ", parent_tag, parent.attrib, parent.text)
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Processing tag 'Content'.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _parse_tag_content(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
         """Processing tag 'Content'.
 
@@ -589,9 +593,9 @@ class TextParser:
 
         self._debug_xml_element_all("End  ", parent_tag, parent.attrib, parent.text)
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Processing tag 'DocInfo'.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _parse_tag_doc_info(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
         """Processing tag 'DocInfo'.
 
@@ -622,9 +626,9 @@ class TextParser:
 
         self._debug_xml_element_all("End  ", parent_tag, parent.attrib, parent.text)
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Processing tag Line.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _parse_tag_line(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
         """Processing tag 'Line'.
 
@@ -664,9 +668,9 @@ class TextParser:
 
         self._debug_xml_element_all("End  ", parent_tag, parent.attrib, parent.text)
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Processing tag 'Page'.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # noinspection PyArgumentList
     def _parse_tag_page(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
         """Processing tag 'Page'.
@@ -722,9 +726,9 @@ class TextParser:
 
         self._debug_xml_element_all("End  ", parent_tag, parent.attrib, parent.text)
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Processing tag 'Pages'.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # noinspection PyArgumentList
     def _parse_tag_pages(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:  # noqa: C901
         """Processing tag 'Pages'.
@@ -780,7 +784,6 @@ class TextParser:
         if dcr_core.core_glob.setup.is_parsing_line:
             dcr_core.core_glob.line_type_headers_footers.process_document(
                 file_name_curr=self._file_name_curr,
-                no_pdf_pages=self._no_pdf_pages,
                 parser_line_pages_json=self.parse_result_line_pages,
             )
             dcr_core.core_glob.line_type_toc.process_document(
@@ -825,9 +828,9 @@ class TextParser:
 
         self._debug_xml_element_all("End  ", parent_tag, parent.attrib, parent.text)
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Processing tag Para.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _parse_tag_para(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
         """Processing tag 'Para'.
 
@@ -865,9 +868,9 @@ class TextParser:
 
         self._debug_xml_element_all("End  ", parent_tag, parent.attrib, parent.text)
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Processing tag Row.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _parse_tag_row(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
         """Processing tag 'Row'.
 
@@ -891,9 +894,9 @@ class TextParser:
 
         self._debug_xml_element_all("End  ", parent_tag, parent.attrib, parent.text)
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Processing tag Table.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _parse_tag_table(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
         """Processing tag 'Table'.
 
@@ -918,9 +921,9 @@ class TextParser:
 
         self._debug_xml_element_all("End  ", parent_tag, parent.attrib, parent.text)
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Processing tag Text.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _parse_tag_text(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
         """Processing tag 'Text'.
 
@@ -936,9 +939,9 @@ class TextParser:
 
         self._debug_xml_element_all("End  ", parent_tag, parent.attrib, parent.text)
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Processing tag Title.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _parse_tag_title(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
         """Processing tag 'Title'.
 
@@ -954,9 +957,9 @@ class TextParser:
 
         self._debug_xml_element_all("End  ", parent_tag, parent.attrib, parent.text)
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Processing tag Word.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _parse_tag_word(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
         """Processing tag 'Word'.
 
@@ -982,9 +985,9 @@ class TextParser:
 
         self._debug_xml_element_all("End  ", parent_tag, parent.attrib, parent.text)
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Check the object existence.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def exists(self) -> bool:
         """Check the object existence.
 
@@ -993,9 +996,9 @@ class TextParser:
         """
         return self._exist
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Initialise from the JSON files.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     @classmethod
     def from_files(cls, file_encoding: str, full_name_line: str = "", full_name_page: str = "", full_name_word: str = "") -> TextParser:
         """Initialise from JSON files.
@@ -1030,9 +1033,9 @@ class TextParser:
 
         return instance
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Processing tag 'Document'.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def parse_tag_document(
         self,
         directory_name: str,

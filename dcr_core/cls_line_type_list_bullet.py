@@ -1,3 +1,7 @@
+# Copyright (c) 2022 Konnexions GmbH. All rights reserved. Use of this
+# source code is governed by the Konnexions Public License (KX-PL)
+# Version 2020.05, that can be found in the LICENSE file.
+
 import json
 import os
 import pathlib
@@ -20,9 +24,9 @@ class LineTypeListBullet:
     List = dict[str, Entries | float | int | str]
     Lists = list[List]
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Initialise the instance.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def __init__(
         self,
         file_name_curr: str,
@@ -91,9 +95,9 @@ class LineTypeListBullet:
             f"LineTypeListBullet: End   create instance                ={self._file_name_curr}",
         )
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Finish a list.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _finish_list(self) -> None:
         """Finish a list."""
         if self._no_entries == 0:
@@ -180,12 +184,12 @@ class LineTypeListBullet:
             f"LineTypeListBullet: End   list                    on page={self._page_idx+1}",
         )
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Initialise the bulleted list anti-patterns.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # 1: name:  pattern name
     # 2: regexp regular expression
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _init_anti_patterns(self) -> list[tuple[str, re.Pattern[str]]]:
         """Initialise the bulleted list anti-patterns.
 
@@ -211,11 +215,11 @@ class LineTypeListBullet:
 
         return anti_patterns
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Initialise the valid bullets.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # 1: bullet character(s)
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _init_rules(self) -> dict[str, int]:
         """Initialise the valid bullets.
 
@@ -235,9 +239,9 @@ class LineTypeListBullet:
 
         return dcr_core.cls_nlp_core.NLPCore.get_lt_rules_default_list_bullet()
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Load the valid bulleted list anti-patterns from a JSON file.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     @staticmethod
     def _load_anti_patterns_from_json(
         lt_list_bullet_rule_file: pathlib.Path,
@@ -273,9 +277,9 @@ class LineTypeListBullet:
 
         return anti_patterns
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Load the valid bullets from a JSON file.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     @staticmethod
     def _load_rules_from_json(
         lt_list_bullet_rule_file: pathlib.Path,
@@ -305,9 +309,9 @@ class LineTypeListBullet:
 
         return list_bullet_rules
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Process the line-related data.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _process_line(self, line_line: dict[str, float | int | str]) -> None:  # noqa: C901
         """Process the line-related data.
 
@@ -369,9 +373,9 @@ class LineTypeListBullet:
 
         self._para_no_prev = para_no
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Process the page-related data.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _process_page(self) -> None:
         """Process the page-related data."""
         dcr_core.core_utils.progress_msg(
@@ -393,9 +397,9 @@ class LineTypeListBullet:
             f"LineTypeListBullet: End   page                           ={self._page_idx + 1}",
         )
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Reset the document memory.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _reset_document(self) -> None:
         """Reset the document memory."""
         dcr_core.core_utils.progress_msg(
@@ -409,9 +413,9 @@ class LineTypeListBullet:
 
         self._reset_list()
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Reset the list memory.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _reset_list(self) -> None:
         """Reset the list memory."""
         self._bullet = ""
@@ -428,9 +432,9 @@ class LineTypeListBullet:
 
         dcr_core.core_utils.progress_msg(dcr_core.core_glob.setup.is_verbose_lt_list_bullet, "LineTypeListBullet: Reset the list memory")
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Check the object existence.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def exists(self) -> bool:
         """Check the object existence.
 
@@ -439,9 +443,9 @@ class LineTypeListBullet:
         """
         return self._exist
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Process the document related data.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def process_document(
         self,
         directory_name: str,

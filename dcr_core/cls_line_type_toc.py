@@ -1,3 +1,7 @@
+# Copyright (c) 2022 Konnexions GmbH. All rights reserved. Use of this
+# source code is governed by the Konnexions Public License (KX-PL)
+# Version 2020.05, that can be found in the LICENSE file.
+
 import dcr_core.cls_nlp_core
 
 
@@ -8,9 +12,9 @@ class LineTypeToc:
         _type_: LineTypeToc instance.
     """
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Initialise the instance.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def __init__(
         self,
         file_name_curr: str,
@@ -58,9 +62,9 @@ class LineTypeToc:
             f"LineTypeToc: End   create instance                ={self._file_name_curr}",
         )
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Check a TOC candidate.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _check_toc_candidate(self) -> None:
         if not self._toc_candidates:
             return
@@ -105,15 +109,15 @@ class LineTypeToc:
             "LineTypeToc: End   check TOC candidate            " + f"={self._is_toc_existing}",
         )
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Initialise the TOC candidate variables.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _init_toc_candidate(self) -> None:
         self._toc_candidates = []
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Process the page-related data - line version.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _process_page_lines(self) -> None:
         """Process the page-related data - line version."""
         if self._is_toc_existing or self._page_no >= dcr_core.core_glob.setup.lt_toc_last_page:
@@ -143,9 +147,9 @@ class LineTypeToc:
             f"LineTypeToc: End   page (lines)                   ={self._page_no}",
         )
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Process the page-related data - table version.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _process_page_table(self) -> None:
         """Process the page-related data - table version."""
         if self._is_toc_existing or self._page_no >= dcr_core.core_glob.setup.lt_toc_last_page:
@@ -173,9 +177,9 @@ class LineTypeToc:
             f"LineTypeToc: End   page (table)                   ={self._page_no}",
         )
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Add a TOC line candidate element.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _process_toc_candidate_line_line(self, line_line: dcr_core.cls_nlp_core.NLPCore.ParserLineLine, page_no_toc: int) -> None:
         """Add a TOC line candidate element.
 
@@ -191,9 +195,9 @@ class LineTypeToc:
 
         self._toc_candidates.append([page_no_toc, self._page_no, para_no, line_no])
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Add a TOC table candidate element.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _process_toc_candidate_table_line(self, line_line: dcr_core.cls_nlp_core.NLPCore.ParserLineLine) -> None:
         """Add a TOC table candidate element.
 
@@ -214,9 +218,9 @@ class LineTypeToc:
         except ValueError:
             self._toc_candidates[-1][0] = -1
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Store the found TOC entries in parser result.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _store_results(self) -> None:  # noqa: C901
         """Store the found TOC entries in parser result."""
         self.no_lines_toc = len(self._toc_candidates)
@@ -273,9 +277,9 @@ class LineTypeToc:
             f"LineTypeToc: End   store result                   ={self.no_lines_toc}",
         )
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Check the object existence.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def exists(self) -> bool:
         """Check the object existence.
 
@@ -284,9 +288,9 @@ class LineTypeToc:
         """
         return self._exist
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Process the document related data.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def process_document(
         self,
         file_name_curr: str,

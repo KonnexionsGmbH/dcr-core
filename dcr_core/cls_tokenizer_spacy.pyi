@@ -1,18 +1,19 @@
+# Copyright (c) 2022 Konnexions GmbH. All rights reserved. Use of this
+# source code is governed by the Konnexions Public License (KX-PL)
+# Version 2020.05, that can be found in the LICENSE file.
+
+"""Library stub file."""
 import spacy.tokens
 
 class TokenizerSpacy:
     TokenToken = dict[str, bool | float | int | str]
     TokenTokens = list[TokenToken]
-
     TokenSent = dict[str, float | int | None | str | TokenTokens]
     TokenSents = list[TokenSent]
-
     TokenPara = dict[str, int | TokenSents]
     TokenParas = list[TokenPara]
-
     TokenPage = dict[str, int | TokenParas]
     TokenPages = list[TokenPage]
-
     TokenDocument = dict[str, int | TokenPages | str]
 
     def __init__(self) -> None:
@@ -56,6 +57,7 @@ class TokenizerSpacy:
         self._token_tokens: TokenizerSpacy.TokenTokens = []
         self.token_pages: TokenizerSpacy.TokenPages = []
         ...
+
     def _finish_document(self) -> None: ...
     def _finish_page(self) -> None: ...
     def _finish_para(self) -> None: ...
@@ -71,6 +73,7 @@ class TokenizerSpacy:
     def _process_sents(self) -> None: ...
     def _process_tokens(self) -> None: ...
     def exists(self) -> bool: ...
+
     def process_document(
         self,
         document_id: int,

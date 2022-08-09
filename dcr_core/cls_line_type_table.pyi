@@ -1,12 +1,15 @@
+# Copyright (c) 2022 Konnexions GmbH. All rights reserved. Use of this
+# source code is governed by the Konnexions Public License (KX-PL)
+# Version 2020.05, that can be found in the LICENSE file.
+
+"""Library stub file."""
 import dcr_core.cls_nlp_core
 
 class LineTypeTable:
     Column = dict[str, float | int | object | str]
     Columns = list[Column]
-
     Row = dict[str, Columns | float | int | str]
     Rows = list[Row]
-
     Table = dict[str, float | int | Rows]
     Tables = list[Table]
 
@@ -32,6 +35,7 @@ class LineTypeTable:
         self._tables: LineTypeTable.Tables = []
         self.no_tables: int = 0
         ...
+
     def _finish_row(self) -> None: ...
     def _finish_table(self) -> None: ...
     def _process_line(self, line_line: dict[str, int | str]) -> str: ...
@@ -39,6 +43,7 @@ class LineTypeTable:
     def _reset_document(self) -> None: ...
     def _reset_row(self) -> None: ...
     def _reset_table(self) -> None: ...
+
     def exists(self) -> bool: ...
     def process_document(
         self,

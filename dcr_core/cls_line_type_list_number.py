@@ -1,3 +1,7 @@
+# Copyright (c) 2022 Konnexions GmbH. All rights reserved. Use of this
+# source code is governed by the Konnexions Public License (KX-PL)
+# Version 2020.05, that can be found in the LICENSE file.
+
 from __future__ import annotations
 
 import collections
@@ -26,9 +30,9 @@ class LineTypeListNumber:
     RuleExtern = tuple[str, str, collections.abc.Callable[[str, str], bool], list[str]]
     RuleIntern = tuple[str, re.Pattern[str], collections.abc.Callable[[str, str], bool], list[str], str]
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Initialise the instance.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def __init__(
         self,
         file_name_curr: str,
@@ -90,9 +94,9 @@ class LineTypeListNumber:
 
         self._rules: list[LineTypeListNumber.RuleExtern] = self._init_rules()
 
-        # -----------------------------------------------------------------------------
+        # ------------------------------------------------------------------
         # Number rules collection.
-        # -----------------------------------------------------------------------------
+        # ------------------------------------------------------------------
         # 1: rule_name
         # 2: regexp_compiled:
         #           compiled regular expression
@@ -102,7 +106,7 @@ class LineTypeListNumber:
         #           list of strings
         # 5: regexp_str:
         #           regular expression
-        # -----------------------------------------------------------------------------
+        # ------------------------------------------------------------------
         self._rules_collection: list[LineTypeListNumber.RuleIntern] = []
 
         for (rule_name, regexp_str, function_is_asc, start_values) in self._rules:
@@ -125,9 +129,9 @@ class LineTypeListNumber:
             f"LineTypeListNumber: End   create instance                ={self.file_name_curr}",
         )
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Finish a list.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _finish_list(self) -> None:
         """Finish a list."""
         if self._no_entries == 0:
@@ -219,12 +223,12 @@ class LineTypeListNumber:
             f"LineTypeListNumber: End   list                    on page={self._page_idx+1}",
         )
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Initialise the numbered list anti-patterns.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # 1: name:  pattern name
     # 2: regexp regular expression
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _init_anti_patterns(self) -> list[tuple[str, re.Pattern[str]]]:
         """Initialise the numbered list anti-patterns.
 
@@ -250,9 +254,9 @@ class LineTypeListNumber:
 
         return anti_patterns
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Initialise the numbered list rules.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # 1: rule_name
     # 2: regexp_str:
     #           regular expression
@@ -260,7 +264,7 @@ class LineTypeListNumber:
     #           compares predecessor and successor
     # 4: start_values:
     #           list of strings
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _init_rules(self) -> list[LineTypeListNumber.RuleExtern]:
         """Initialise the numbered list rules.
 
@@ -279,9 +283,9 @@ class LineTypeListNumber:
 
         return dcr_core.cls_nlp_core.NLPCore.get_lt_rules_default_list_number()
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Load the valid numbered list anti-patterns from a JSON file.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     @staticmethod
     def _load_anti_patterns_from_json(
         lt_list_number_rule_file: pathlib.Path,
@@ -317,9 +321,9 @@ class LineTypeListNumber:
 
         return anti_patterns
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Load numbered list rules from a JSON file.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     @staticmethod
     def _load_rules_from_json(
         lt_list_number_rule_file: pathlib.Path,
@@ -359,9 +363,9 @@ class LineTypeListNumber:
 
         return rules
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Process the line-related data.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _process_line(self, line_line: dict[str, float | int | str]) -> None:  # noqa: C901
         """Process the line-related data.
 
@@ -442,9 +446,9 @@ class LineTypeListNumber:
 
         self._para_no_prev = para_no
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Process the page-related data.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _process_page(self) -> None:
         """Process the page-related data."""
         dcr_core.core_utils.progress_msg(
@@ -466,9 +470,9 @@ class LineTypeListNumber:
             f"LineTypeListNumber: End   page                           ={self._page_idx + 1}",
         )
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Reset the document memory.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _reset_document(self) -> None:
         """Reset the document memory."""
         self._max_page = dcr_core.core_glob.text_parser.parse_result_no_pages_in_doc
@@ -481,9 +485,9 @@ class LineTypeListNumber:
 
         self._reset_list()
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Reset the list memory.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _reset_list(self) -> None:
         """Reset the list memory."""
         self._rule = ()  # type: ignore
@@ -504,9 +508,9 @@ class LineTypeListNumber:
 
         dcr_core.core_utils.progress_msg(dcr_core.core_glob.setup.is_verbose_lt_list_number, "LineTypeListNumber: Reset the list memory")
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Check the object existence.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def exists(self) -> bool:
         """Check the object existence.
 
@@ -515,9 +519,9 @@ class LineTypeListNumber:
         """
         return self._exist
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Process the document related data.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def process_document(
         self,
         directory_name: str,

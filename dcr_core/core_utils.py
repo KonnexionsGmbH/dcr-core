@@ -1,3 +1,7 @@
+# Copyright (c) 2022 Konnexions GmbH. All rights reserved. Use of this
+# source code is governed by the Konnexions Public License (KX-PL)
+# Version 2020.05, that can be found in the LICENSE file.
+
 import datetime
 import os
 import pathlib
@@ -7,9 +11,9 @@ import traceback
 import dcr_core
 
 
-# -----------------------------------------------------------------------------
+# ------------------------------------------------------------------
 # Check the existence of objects.
-# -----------------------------------------------------------------------------
+# ------------------------------------------------------------------
 def check_exists_object(  # noqa: C901
     is_line_type_headers_footers: bool = False,
     is_line_type_list_bullet: bool = False,
@@ -94,9 +98,9 @@ def check_exists_object(  # noqa: C901
             )
 
 
-# -----------------------------------------------------------------------------
+# ------------------------------------------------------------------
 # Get the full name from a directory name or path and a file name or path.
-# -----------------------------------------------------------------------------
+# ------------------------------------------------------------------
 def get_full_name(directory_name: pathlib.Path | str | None, file_name: pathlib.Path | str | None) -> str:
     """Get the full name from a directory name or path and a file name or path.
 
@@ -119,9 +123,9 @@ def get_full_name(directory_name: pathlib.Path | str | None, file_name: pathlib.
     return get_os_independent_name(str(os.path.join(directory_name, file_name)))
 
 
-# -----------------------------------------------------------------------------
+# ------------------------------------------------------------------
 # Get the platform-independent name.
-# -----------------------------------------------------------------------------
+# ------------------------------------------------------------------
 def get_os_independent_name(name: pathlib.Path | str | None) -> str:
     """Get the platform-independent name..
 
@@ -140,9 +144,9 @@ def get_os_independent_name(name: pathlib.Path | str | None) -> str:
     return str(name)
 
 
-# -----------------------------------------------------------------------------
+# ------------------------------------------------------------------
 # Get the stem name from a file name.
-# -----------------------------------------------------------------------------
+# ------------------------------------------------------------------
 def get_stem_name(file_name: pathlib.Path | str | None) -> str:
     """Get the stem name from a file name.
 
@@ -161,9 +165,9 @@ def get_stem_name(file_name: pathlib.Path | str | None) -> str:
     return file_name.stem
 
 
-# -----------------------------------------------------------------------------
+# ------------------------------------------------------------------
 # Create a progress message.
-# -----------------------------------------------------------------------------
+# ------------------------------------------------------------------
 def progress_msg(is_verbose: bool, msg: str) -> None:
     """Create a progress message.
 
@@ -177,9 +181,9 @@ def progress_msg(is_verbose: bool, msg: str) -> None:
         progress_msg_core(msg)
 
 
-# -----------------------------------------------------------------------------
+# ------------------------------------------------------------------
 # Create a progress message.
-# -----------------------------------------------------------------------------
+# ------------------------------------------------------------------
 def progress_msg_core(msg: str) -> None:
     """Create a progress message.
 
@@ -192,9 +196,9 @@ def progress_msg_core(msg: str) -> None:
     print(final_msg)
 
 
-# -----------------------------------------------------------------------------
+# ------------------------------------------------------------------
 # Terminate the application immediately.
-# -----------------------------------------------------------------------------
+# ------------------------------------------------------------------
 def terminate_fatal(error_msg: str) -> None:
     """Terminate the application immediately.
 

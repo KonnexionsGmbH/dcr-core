@@ -1,3 +1,8 @@
+# Copyright (c) 2022 Konnexions GmbH. All rights reserved. Use of this
+# source code is governed by the Konnexions Public License (KX-PL)
+# Version 2020.05, that can be found in the LICENSE file.
+
+"""Library stub file."""
 import pathlib
 import re
 
@@ -6,7 +11,6 @@ import dcr_core.cls_nlp_core
 class LineTypeListBullet:
     Entry = dict[str, int | str]
     Entries = list[Entry]
-
     List = dict[str, Entries | float | int | str]
     Lists = list[List]
 
@@ -29,6 +33,7 @@ class LineTypeListBullet:
         self._rules: dict[str, int] = {}
         self.no_lists: int = 0
         ...
+
     def _finish_list(self) -> None: ...
     def _init_anti_patterns(self) -> list[tuple[str, re.Pattern[str]]]: ...
     def _init_rules(self) -> dict[str, int]: ...
@@ -44,6 +49,7 @@ class LineTypeListBullet:
     def _process_page(self) -> None: ...
     def _reset_document(self) -> None: ...
     def _reset_list(self) -> None: ...
+
     def exists(self) -> bool: ...
     def process_document(
         self,

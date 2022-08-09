@@ -24,12 +24,12 @@ keywords = [
     "OCR",
 ]
 maintainers = [
-    { name = "Teanm Konnexions", email = "info@konnexions.ch" },
+    { name = "Team Konnexions", email = "info@konnexions.ch" },
 ]
 name = "dcr_core"
 readme = "README.md"
 requires-python = ">=3.10"
-version = "0.9.6"
+version = "0.9.6.1.4"
 
 [project.urls]
 "Bug Tracker" = "https://github.com/KonnexionsGmbH/dcr-core/issues"

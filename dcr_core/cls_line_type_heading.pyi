@@ -1,3 +1,8 @@
+# Copyright (c) 2022 Konnexions GmbH. All rights reserved. Use of this
+# source code is governed by the Konnexions Public License (KX-PL)
+# Version 2020.05, that can be found in the LICENSE file.
+
+"""Library stub file."""
 import collections
 import pathlib
 import re
@@ -31,6 +36,7 @@ class LineTypeHeading:
         self._toc: list[dict[str, int | object | str]] = []
         self.file_name_curr: str = ""
         ...
+
     @staticmethod
     def _check_valid_start_value(target_value: str, is_first_token: bool, start_values: list[str]) -> bool: ...
     def _create_toc_entry(self, level: int, text: str) -> None: ...
@@ -49,6 +55,7 @@ class LineTypeHeading:
     ) -> list[tuple[str, bool, str, collections.abc.Callable[[str, str], bool], list[str]]]: ...
     def _process_line(self, line_line: dict[str, str], text: str, first_token: str) -> int: ...
     def _process_page(self) -> None: ...
+
     def exists(self) -> bool: ...
     def process_document(
         self,

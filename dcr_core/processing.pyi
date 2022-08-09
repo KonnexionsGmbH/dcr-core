@@ -1,4 +1,8 @@
-"""Library Stub."""
+# Copyright (c) 2022 Konnexions GmbH. All rights reserved. Use of this
+# source code is governed by the Konnexions Public License (KX-PL)
+# Version 2020.05, that can be found in the LICENSE file.
+
+"""Library stub file."""
 import dcr_core.core_glob
 
 ERROR_21_901: str
@@ -7,7 +11,6 @@ ERROR_41_901: str
 ERROR_51_901: str
 ERROR_61_901: str
 ERROR_71_901: str
-
 PANDOC_PDF_ENGINE_LULATEX: str
 PANDOC_PDF_ENGINE_XELATEX: str
 
