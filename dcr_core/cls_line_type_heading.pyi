@@ -10,7 +10,10 @@ import re
 import dcr_core.cls_nlp_core
 
 class LineTypeHeading:
-    def __init__(self) -> None:
+    def __init__(
+        self,
+        file_name_curr: str = "",
+    ) -> None:
         self._RULE_NAME_SIZE: int = 0
         self._anti_patterns: list[tuple[str, re.Pattern[str]]] = []
         self._exist: bool = False
@@ -36,7 +39,6 @@ class LineTypeHeading:
         self._toc: list[dict[str, int | object | str]] = []
         self.file_name_curr: str = ""
         ...
-
     @staticmethod
     def _check_valid_start_value(target_value: str, is_first_token: bool, start_values: list[str]) -> bool: ...
     def _create_toc_entry(self, level: int, text: str) -> None: ...
@@ -55,7 +57,6 @@ class LineTypeHeading:
     ) -> list[tuple[str, bool, str, collections.abc.Callable[[str, str], bool], list[str]]]: ...
     def _process_line(self, line_line: dict[str, str], text: str, first_token: str) -> int: ...
     def _process_page(self) -> None: ...
-
     def exists(self) -> bool: ...
     def process_document(
         self,
@@ -63,5 +64,5 @@ class LineTypeHeading:
         document_id: int,
         file_name_curr: str,
         file_name_orig: str,
-        parser_line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages,
+        line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages,
     ) -> None: ...

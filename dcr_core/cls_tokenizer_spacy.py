@@ -2,6 +2,12 @@
 # source code is governed by the Konnexions Public License (KX-PL)
 # Version 2020.05, that can be found in the LICENSE file.
 
+"""Tokenize the document.
+
+Typical usage example:
+
+    my_instance = TokenizerSpacy()
+"""
 import json
 
 import spacy
@@ -14,7 +20,7 @@ import dcr_core.cls_nlp_core
 # pylint: disable=too-many-instance-attributes
 # pylint: disable=too-many-statements
 class TokenizerSpacy:
-    """Determine footer and header lines.
+    """Tokenize the document.
 
     Returns:
         _type_: TokenizeSpacy instance.

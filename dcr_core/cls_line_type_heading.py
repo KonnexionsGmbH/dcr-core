@@ -2,6 +2,21 @@
 # source code is governed by the Konnexions Public License (KX-PL)
 # Version 2020.05, that can be found in the LICENSE file.
 
+
+"""Determine table of content lines.
+
+Typical usage example:
+
+    my_instance = LineTypeHeading()
+
+    if my_instance.exists():
+
+    my_instance.process_document(directory_name = my_directory,
+                                 document_id = my_document_id,
+                                 file_name_curr = my_file_name_curr,
+                                 file_name_orig = my_file_name_orig,
+                                 line_pages_json = my_line_pages_json)
+"""
 import collections
 import decimal
 import json
@@ -30,13 +45,14 @@ class LineTypeHeading:
     # ------------------------------------------------------------------
     def __init__(
         self,
-        file_name_curr: str,
+        file_name_curr: str = "",
     ) -> None:
         """Initialise the instance.
 
         Args:
-            file_name_curr (str):
-                    File name of the file to be processed.
+            file_name_curr (str, optional):
+                    File name of the PDF document to be processed - only
+                    For documentation purposes. Defaults to "".
         """
         dcr_core.core_utils.check_exists_object(
             is_line_type_headers_footers=True,
@@ -229,7 +245,6 @@ class LineTypeHeading:
     #     }
     # ------------------------------------------------------------------
     def _create_toc_entry(self, level: int, text: str) -> None:
-
         """Create a table of content entry.
 
         Args:
@@ -637,7 +652,7 @@ class LineTypeHeading:
         document_id: int,
         file_name_curr: str,
         file_name_orig: str,
-        parser_line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages,
+        line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages,
     ) -> None:
         """Process the document related data.
 
@@ -650,7 +665,7 @@ class LineTypeHeading:
                     File name of the file to be processed.
             file_name_orig (in):
                     File name of the document file.
-            parser_line_pages_json (dcr_core.cls_nlp_core.NLPCore.LinePages):
+            line_pages_json (dcr_core.cls_nlp_core.NLPCore.LinePages):
                     The document pages formatted in the parser.
         """
         dcr_core.core_utils.check_exists_object(
@@ -679,7 +694,7 @@ class LineTypeHeading:
 
         self._max_page = dcr_core.core_glob.text_parser.parse_result_no_pages_in_doc
 
-        for page_idx, page_json in enumerate(parser_line_pages_json):
+        for page_idx, page_json in enumerate(line_pages_json):
             self._page_idx = page_idx
             self._parser_line_lines_json = page_json[dcr_core.cls_nlp_core.NLPCore.JSON_NAME_LINES]
             self._process_page()

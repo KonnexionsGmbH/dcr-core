@@ -2,6 +2,22 @@
 # source code is governed by the Konnexions Public License (KX-PL)
 # Version 2020.05, that can be found in the LICENSE file.
 
+"""Determine list of numbered lines.
+
+Typical usage example:
+
+    my_instance = LineTypeListNumber()
+
+    if my_instance.exists():
+
+    my_instance.process_document(directory_name = my_directory,
+                                 document_id = my_document_id,
+                                 environment_variant = my_environment_variant,
+                                 file_name_curr = my_file_name_curr,
+                                 file_name_orig = my_file_name_orig,
+                                 line_pages_json = my_line_pages_json)
+"""
+
 from __future__ import annotations
 
 import collections
@@ -35,13 +51,14 @@ class LineTypeListNumber:
     # ------------------------------------------------------------------
     def __init__(
         self,
-        file_name_curr: str,
+        file_name_curr: str = "",
     ) -> None:
         """Initialise the instance.
 
         Args:
-            file_name_curr (str):
-                    File name of the file to be processed.
+            file_name_curr (str, optional):
+                    File name of the PDF document to be processed - only
+                    For documentation purposes. Defaults to "".
         """
         dcr_core.core_utils.check_exists_object(
             is_line_type_headers_footers=True,
@@ -88,7 +105,7 @@ class LineTypeListNumber:
         self._para_no_prev = 0
 
         self._parser_line_lines_json: dcr_core.cls_nlp_core.NLPCore.ParserLineLines = []
-        self._parser_line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages = []
+        self._line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages = []
 
         self._rule: LineTypeListNumber.RuleIntern = ()  # type: ignore
 
@@ -157,7 +174,7 @@ class LineTypeListNumber:
         entries: LineTypeListNumber.Entries = []
 
         for [page_idx, para_no, line_lines_idx_from, line_lines_idx_till, _] in self._entries:
-            line_lines: dcr_core.cls_nlp_core.NLPCore.ParserLineLines = self._parser_line_pages_json[page_idx][
+            line_lines: dcr_core.cls_nlp_core.NLPCore.ParserLineLines = self._line_pages_json[page_idx][
                 dcr_core.cls_nlp_core.NLPCore.JSON_NAME_LINES
             ]
 
@@ -189,7 +206,7 @@ class LineTypeListNumber:
                     }
                 )
 
-            self._parser_line_pages_json[page_idx][dcr_core.cls_nlp_core.NLPCore.JSON_NAME_LINES] = line_lines
+            self._line_pages_json[page_idx][dcr_core.cls_nlp_core.NLPCore.JSON_NAME_LINES] = line_lines
 
         if dcr_core.core_glob.setup.is_create_extra_file_list_number:
             # {
@@ -529,7 +546,7 @@ class LineTypeListNumber:
         environment_variant: str,
         file_name_curr: str,
         file_name_orig: str,
-        parser_line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages,
+        line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages,
     ) -> None:
         """Process the document related data.
 
@@ -544,7 +561,7 @@ class LineTypeListNumber:
                     File name of the file to be processed.
             file_name_orig (in):
                     File name of the document file.
-            parser_line_pages_json (dcr_core.cls_nlp_core.NLPCore.LinePages):
+            line_pages_json (dcr_core.cls_nlp_core.NLPCore.LinePages):
                     The document pages formatted in the parser.
         """
         dcr_core.core_utils.check_exists_object(
@@ -558,7 +575,7 @@ class LineTypeListNumber:
 
         self.file_name_curr = file_name_curr
         self._environment_variant = environment_variant
-        self._parser_line_pages_json = parser_line_pages_json
+        self._line_pages_json = line_pages_json
 
         dcr_core.core_utils.progress_msg(dcr_core.core_glob.setup.is_verbose_lt_list_number, "LineTypeListNumber")
         dcr_core.core_utils.progress_msg(
@@ -568,7 +585,7 @@ class LineTypeListNumber:
 
         self._reset_document()
 
-        for page_idx, page_json in enumerate(parser_line_pages_json):
+        for page_idx, page_json in enumerate(line_pages_json):
             self._page_idx = page_idx
             self._parser_line_lines_json = page_json[dcr_core.cls_nlp_core.NLPCore.JSON_NAME_LINES]
             self._process_page()

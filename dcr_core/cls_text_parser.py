@@ -2,6 +2,15 @@
 # source code is governed by the Konnexions Public License (KX-PL)
 # Version 2020.05, that can be found in the LICENSE file.
 
+"""Extract text and metadata from PDFlib TET.
+
+Typical usage example:
+
+    my_instance = TextParser()
+
+    my_instance.process_document(parse_line_pages_json = my_pages,
+                                 file_name_curr = my_file)
+"""
 from __future__ import annotations
 
 import collections.abc
@@ -441,7 +450,7 @@ class TextParser:
     # Processing tag Bookmark.
     # ------------------------------------------------------------------
     def _parse_tag_bookmark(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
-        """Processing tag 'Bookmark'.
+        """Process tag 'Bookmark'.
 
         Args:
             parent_tag (str):
@@ -467,7 +476,7 @@ class TextParser:
     # Processing tag Bookmarks.
     # ------------------------------------------------------------------
     def _parse_tag_bookmarks(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
-        """Processing tag 'Bookmarks'.
+        """Process tag 'Bookmarks'.
 
         Args:
             parent_tag (str):
@@ -491,7 +500,7 @@ class TextParser:
     # Processing tag Box.
     # ------------------------------------------------------------------
     def _parse_tag_box(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
-        """Processing tag 'Box'.
+        """Process tag 'Box'.
 
         Args:
             parent_tag (str):
@@ -515,7 +524,7 @@ class TextParser:
     # Processing tag Cell.
     # ------------------------------------------------------------------
     def _parse_tag_cell(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
-        """Processing tag 'Cell'.
+        """Process tag 'Cell'.
 
         Args:
             parent_tag (str):
@@ -570,7 +579,7 @@ class TextParser:
     # Processing tag 'Content'.
     # ------------------------------------------------------------------
     def _parse_tag_content(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
-        """Processing tag 'Content'.
+        """Process tag 'Content'.
 
         Args:
             parent_tag (str):
@@ -597,7 +606,7 @@ class TextParser:
     # Processing tag 'DocInfo'.
     # ------------------------------------------------------------------
     def _parse_tag_doc_info(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
-        """Processing tag 'DocInfo'.
+        """Process tag 'DocInfo'.
 
         Args:
             parent_tag (str):
@@ -630,7 +639,7 @@ class TextParser:
     # Processing tag Line.
     # ------------------------------------------------------------------
     def _parse_tag_line(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
-        """Processing tag 'Line'.
+        """Process tag 'Line'.
 
         Args:
             parent_tag (str):
@@ -673,7 +682,7 @@ class TextParser:
     # ------------------------------------------------------------------
     # noinspection PyArgumentList
     def _parse_tag_page(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
-        """Processing tag 'Page'.
+        """Process tag 'Page'.
 
         Args:
             parent_tag (str):
@@ -731,7 +740,7 @@ class TextParser:
     # ------------------------------------------------------------------
     # noinspection PyArgumentList
     def _parse_tag_pages(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:  # noqa: C901
-        """Processing tag 'Pages'.
+        """Process tag 'Pages'.
 
         Args:
             parent_tag (str):
@@ -832,7 +841,7 @@ class TextParser:
     # Processing tag Para.
     # ------------------------------------------------------------------
     def _parse_tag_para(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
-        """Processing tag 'Para'.
+        """Process tag 'Para'.
 
         Args:
             parent_tag (str):
@@ -872,7 +881,7 @@ class TextParser:
     # Processing tag Row.
     # ------------------------------------------------------------------
     def _parse_tag_row(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
-        """Processing tag 'Row'.
+        """Process tag 'Row'.
 
         Args:
             parent_tag (str):
@@ -898,7 +907,7 @@ class TextParser:
     # Processing tag Table.
     # ------------------------------------------------------------------
     def _parse_tag_table(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
-        """Processing tag 'Table'.
+        """Process tag 'Table'.
 
         Args:
             parent_tag (str):
@@ -925,7 +934,7 @@ class TextParser:
     # Processing tag Text.
     # ------------------------------------------------------------------
     def _parse_tag_text(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
-        """Processing tag 'Text'.
+        """Process tag 'Text'.
 
         Args:
             parent_tag (str):
@@ -943,7 +952,7 @@ class TextParser:
     # Processing tag Title.
     # ------------------------------------------------------------------
     def _parse_tag_title(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
-        """Processing tag 'Title'.
+        """Process tag 'Title'.
 
         Args:
             parent_tag (str):
@@ -961,7 +970,7 @@ class TextParser:
     # Processing tag Word.
     # ------------------------------------------------------------------
     def _parse_tag_word(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
-        """Processing tag 'Word'.
+        """Process tag 'Word'.
 
         Args:
             parent_tag (str):
@@ -1048,7 +1057,7 @@ class TextParser:
         parent: collections.abc.Iterable[str],
         parent_tag: str,
     ) -> None:
-        """Processing tag 'Document'.
+        """Process tag 'Document'.
 
         Args:
             directory_name (str):

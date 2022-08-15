@@ -2,6 +2,15 @@
 # source code is governed by the Konnexions Public License (KX-PL)
 # Version 2020.05, that can be found in the LICENSE file.
 
+"""NLP utility class.
+
+Typical usage example:
+
+    my_instance = NLPCore()
+
+    if my_instance.exists():
+"""
+
 import collections
 import json
 import re
@@ -11,10 +20,10 @@ import dcr_core.core_utils
 
 
 class NLPCore:
-    """Managing the NLP processing.
+    """NLP utility class.
 
     Returns:
-        _type_: LineType instance.
+        _type_: NLPCore instance.
     """
 
     # ------------------------------------------------------------------

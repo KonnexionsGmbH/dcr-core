@@ -2,6 +2,12 @@
 # source code is governed by the Konnexions Public License (KX-PL)
 # Version 2020.05, that can be found in the LICENSE file.
 
+"""Managing the application configuration parameters.
+
+Typical usage example:
+
+    my_instance = Setup()
+"""
 import configparser
 import os
 from typing import ClassVar
@@ -621,8 +627,7 @@ class Setup:
     # Determine a spaCy token configuration parameter to ignore the token creation.
     # ------------------------------------------------------------------
     def _determine_config_spacy_tkn_ignore(self) -> None:
-        """Determine a spaCy token configuration parameter to ignore the token
-        creation."""
+        """Determine if the token creation is not required."""
         self.is_spacy_ignore_bracket = self._determine_config_param_boolean(
             Setup._DCR_CFG_SPACY_IGNORE_BRACKET, self.is_spacy_ignore_bracket
         )

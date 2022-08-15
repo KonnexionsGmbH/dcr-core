@@ -14,7 +14,10 @@ class LineTypeListBullet:
     List = dict[str, Entries | float | int | str]
     Lists = list[List]
 
-    def __init__(self) -> None:
+    def __init__(
+        self,
+        file_name_curr: str = "",
+    ) -> None:
         self._anti_patterns: list[tuple[str, re.Pattern[str]]] = []
         self._bullet: str = ""
         self._entries: list[list[int]] = []
@@ -33,7 +36,6 @@ class LineTypeListBullet:
         self._rules: dict[str, int] = {}
         self.no_lists: int = 0
         ...
-
     def _finish_list(self) -> None: ...
     def _init_anti_patterns(self) -> list[tuple[str, re.Pattern[str]]]: ...
     def _init_rules(self) -> dict[str, int]: ...
@@ -49,7 +51,6 @@ class LineTypeListBullet:
     def _process_page(self) -> None: ...
     def _reset_document(self) -> None: ...
     def _reset_list(self) -> None: ...
-
     def exists(self) -> bool: ...
     def process_document(
         self,
@@ -58,5 +59,5 @@ class LineTypeListBullet:
         environment_variant: str,
         file_name_curr: str,
         file_name_orig: str,
-        parser_line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages,
+        line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages,
     ) -> None: ...

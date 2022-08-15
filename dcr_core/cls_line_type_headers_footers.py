@@ -4,11 +4,13 @@
 
 """Determines the headers and footers of a parsed PDF document.
 
-  Typical usage example:
+Typical usage example:
 
-  my_instance = LineTypeHeaderFooters()
-  my_instance.process_document(parse_line_pages_json=my_pages,
-                               file_name=my_file)
+    my_instance = LineTypeHeaderFooters()
+
+    if my_instance.exists():
+
+    my_instance.process_document(parse_line_pages_json = my_pages)
 """
 import jellyfish
 
@@ -50,12 +52,12 @@ class LineTypeHeaderFooters:
     # ------------------------------------------------------------------
     def __init__(
         self,
-        file_name: str = "",
+        file_name_curr: str = "",
     ) -> None:
         """Initialise an instance.
 
         Args:
-            file_name (str, optional):
+            file_name_curr (str, optional):
                     File name of the PDF document to be processed - only
                     For documentation purposes. Defaults to "".
         """
@@ -64,7 +66,7 @@ class LineTypeHeaderFooters:
             is_text_parser=True,
         )
 
-        self._file_name_curr = file_name
+        self._file_name_curr = file_name_curr
 
         dcr_core.core_utils.progress_msg(dcr_core.core_glob.setup.is_verbose_lt_headers_footers, "LineTypeHeaderFooters")
         dcr_core.core_utils.progress_msg(
@@ -513,7 +515,7 @@ class LineTypeHeaderFooters:
     def process_document(
         self,
         line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages,
-        file_name: str = "",
+        file_name_curr: str = "",
     ) -> None:
         """Process the document related data.
 
@@ -521,7 +523,7 @@ class LineTypeHeaderFooters:
             line_pages_json
                 (dcr_core.cls_nlp_core.NLPCore.ParserLinePages):
                 The document pages formatted in the parser.
-            file_name (str, optional):
+            file_name_curr (str, optional):
                 File name of the PDF document to be processed - only
                 For documentation purposes. Defaults to "".
         """
@@ -540,7 +542,7 @@ class LineTypeHeaderFooters:
         if dcr_core.core_glob.setup.lt_footer_max_lines == 0 and dcr_core.core_glob.setup.lt_header_max_lines == 0:
             return
 
-        self._file_name_curr = file_name
+        self._file_name_curr = file_name_curr
         self.line_pages_json = line_pages_json
         self._page_max = len(self.line_pages_json)
 

@@ -2,6 +2,8 @@
 # source code is governed by the Konnexions Public License (KX-PL)
 # Version 2020.05, that can be found in the LICENSE file.
 
+"""Main processing."""
+
 import glob
 import os.path
 
@@ -50,7 +52,7 @@ def pandoc_process(
     full_name_out: str,
     language_pandoc: str,
 ) -> tuple[str, str]:
-    """Converting a Non-PDF file to a PDF file.
+    """Convert a Non-PDF file to a PDF file.
 
     The following file formats are converted into
     PDF format here with the help of Pandoc:
@@ -108,7 +110,7 @@ def parser_process(
     document_id: int = -1,
     file_name_orig: str = dcr_core.core_glob.INFORMATION_NOT_YET_AVAILABLE,
 ) -> tuple[str, str]:
-    """Extracting the text from the PDF document.
+    """Extract the text from the PDF document.
 
     From the line-oriented XML output file of PDFlib TET,
     the text and relevant metadata are extracted with the
@@ -172,7 +174,7 @@ def parser_process(
 def pdf2image_process(
     full_name_in: str,
 ) -> tuple[str, str, list[tuple[str, str]]]:
-    """Converting a scanned PDF file to a set of image files.
+    """Convert a scanned PDF file to a set of image files.
 
     To extract the text from a scanned PDF document, it must
     first be converted into one or more image files, depending
@@ -258,7 +260,7 @@ def pdflib_process(
     document_opt_list: str,
     page_opt_list: str,
 ) -> tuple[str, str]:
-    """Processing a PDF file with PDFlib TET.
+    """Process a PDF file with PDFlib TET.
 
     The data from a PDF file is made available in XML files
     with the help of PDFlib TET. The granularity of the XML
@@ -324,7 +326,7 @@ def tesseract_process(
     full_name_out: str,
     language_tesseract: str,
 ) -> tuple[str, str, list[str]]:
-    """Converting image files to PDF files via OCR.
+    """Convert image files to PDF files via OCR.
 
     The documents of the following document types are converted
     to the pdf format using Tesseract OCR:

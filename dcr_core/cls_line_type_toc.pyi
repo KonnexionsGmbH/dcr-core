@@ -6,7 +6,10 @@
 import dcr_core.cls_nlp_core
 
 class LineTypeToc:
-    def __init__(self) -> None:
+    def __init__(
+        self,
+        file_name_curr: str = "",
+    ) -> None:
         self._exist: bool = False
         self._file_name_curr: str = ""
         self._is_toc_existing: bool = False
@@ -16,9 +19,8 @@ class LineTypeToc:
         self._strategy: str = ""
         self._toc_candidates: list[list[int]] = []
         self.no_lines_toc: int = 0
-        self.parser_line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages = []
+        self.line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages = []
         ...
-
     def _check_toc_candidate(self) -> None: ...
     def _init_toc_candidate(self) -> None: ...
     def _process_page_lines(self) -> None: ...
@@ -26,10 +28,9 @@ class LineTypeToc:
     def _process_toc_candidate_line_line(self, line_line: dcr_core.cls_nlp_core.NLPCore.ParserLineLine, page_no_toc: int) -> None: ...
     def _process_toc_candidate_table_line(self, line_line: dcr_core.cls_nlp_core.NLPCore.ParserLineLine) -> None: ...
     def _store_results(self) -> None: ...
-
     def exists(self) -> bool: ...
     def process_document(
         self,
         file_name_curr: str,
-        parser_line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages,
+        line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages,
     ) -> None: ...

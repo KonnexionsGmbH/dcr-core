@@ -2,6 +2,7 @@
 # source code is governed by the Konnexions Public License (KX-PL)
 # Version 2020.05, that can be found in the LICENSE file.
 
+"""Global constants and variables."""
 import dcr_core.cls_line_type_headers_footers
 import dcr_core.cls_line_type_heading
 import dcr_core.cls_line_type_list_bullet

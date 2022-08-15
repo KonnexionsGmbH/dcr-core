@@ -2,6 +2,32 @@
 # source code is governed by the Konnexions Public License (KX-PL)
 # Version 2020.05, that can be found in the LICENSE file.
 
+"""Determines the numbered lists of a parsed PDF document.
+
+Typical usage example:
+
+my_instance = LineTypeBullet()
+my_instance.process_document(directory_name = my_directory,
+                             document_id = my_document_id,
+                             environment_variant = my_environment_variant,
+                             file_name_curr = my_file_name_curr,
+                             file_name_orig = my_file_name_orig,
+                             line_pages_json = my_line_pages_json)
+"""
+
+"""Determines the bulleted lists of a parsed PDF document.
+
+Typical usage example:
+
+my_instance = LineTypeBullet()
+my_instance.process_document(directory_name = my_directory,
+                             document_id = my_document_id,
+                             environment_variant = my_environment_variant,
+                             file_name_curr = my_file_name_curr,
+                             file_name_orig = my_file_name_orig,
+                             line_pages_json = my_line_pages_json)
+"""
+
 """Library stub file."""
 import collections
 import pathlib
@@ -17,7 +43,10 @@ class LineTypeListNumber:
     RuleExtern = tuple[str, str, collections.abc.Callable[[str, str], bool], list[str]]
     RuleIntern = tuple[str, re.Pattern[str], collections.abc.Callable[[str, str], bool], list[str], str]
 
-    def __init__(self) -> None:
+    def __init__(
+        self,
+        file_name_curr: str = "",
+    ) -> None:
         self._RULE_NAME_SIZE: int = 0
         self._anti_patterns: list[tuple[str, re.Pattern[str]]] = []
         self._entries: list[list[int | str]] = []
@@ -32,14 +61,13 @@ class LineTypeListNumber:
         self._page_idx_prev: int = 0
         self._para_no_prev: int = 0
         self._parser_line_lines_json: dcr_core.cls_nlp_core.NLPCore.ParserLineLines = []
-        self._parser_line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages = []
+        self._line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages = []
         self._rule: LineTypeListNumber.RuleIntern = ()  # type: ignore
         self._rules: list[LineTypeListNumber.RuleExtern] = []
         self._rules_collection: list[LineTypeListNumber.RuleIntern] = []
         self.file_name_curr: str = ""
         self.no_lists: int = 0
         ...
-
     def _finish_list(self) -> None: ...
     def _init_anti_patterns(self) -> list[tuple[str, re.Pattern[str]]]: ...
     def _init_rules(self) -> list[LineTypeListNumber.RuleExtern]: ...
@@ -55,7 +83,6 @@ class LineTypeListNumber:
     def _process_page(self) -> None: ...
     def _reset_document(self) -> None: ...
     def _reset_list(self) -> None: ...
-
     def exists(self) -> bool: ...
     def process_document(
         self,
@@ -64,5 +91,5 @@ class LineTypeListNumber:
         environment_variant: str,
         file_name_curr: str,
         file_name_orig: str,
-        parser_line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages,
+        line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages,
     ) -> None: ...

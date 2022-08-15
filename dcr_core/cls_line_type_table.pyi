@@ -13,7 +13,10 @@ class LineTypeTable:
     Table = dict[str, float | int | Rows]
     Tables = list[Table]
 
-    def __init__(self) -> None:
+    def __init__(
+        self,
+        file_name_curr: str = "",
+    ) -> None:
         self._column_no: int = 0
         self._column_no_prev: int = 0
         self._columns: LineTypeTable.Columns = []
@@ -35,7 +38,6 @@ class LineTypeTable:
         self._tables: LineTypeTable.Tables = []
         self.no_tables: int = 0
         ...
-
     def _finish_row(self) -> None: ...
     def _finish_table(self) -> None: ...
     def _process_line(self, line_line: dict[str, int | str]) -> str: ...
@@ -43,7 +45,6 @@ class LineTypeTable:
     def _reset_document(self) -> None: ...
     def _reset_row(self) -> None: ...
     def _reset_table(self) -> None: ...
-
     def exists(self) -> bool: ...
     def process_document(
         self,
@@ -51,5 +52,5 @@ class LineTypeTable:
         document_id: int,
         file_name_curr: str,
         file_name_orig: str,
-        parser_line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages,
+        line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages,
     ) -> None: ...
