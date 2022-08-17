@@ -148,7 +148,7 @@ class Setup:
 
     _DCR_ENVIRONMENT_TYPE: ClassVar[str] = "DCR_ENVIRONMENT_TYPE"
 
-    DCR_VERSION: ClassVar[str] = "0.9.4"
+    DCR_VERSION: ClassVar[str] = "0.9.7"
 
     ENVIRONMENT_TYPE_DEV: ClassVar[str] = "dev"
     ENVIRONMENT_TYPE_PROD: ClassVar[str] = "prod"

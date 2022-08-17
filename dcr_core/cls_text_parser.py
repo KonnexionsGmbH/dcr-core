@@ -793,18 +793,18 @@ class TextParser:
         if dcr_core.core_glob.setup.is_parsing_line:
             dcr_core.core_glob.line_type_headers_footers.process_document(
                 file_name_curr=self._file_name_curr,
-                parser_line_pages_json=self.parse_result_line_pages,
+                line_pages_json=self.parse_result_line_pages,
             )
             dcr_core.core_glob.line_type_toc.process_document(
                 file_name_curr=self._file_name_curr,
-                parser_line_pages_json=self.parse_result_line_pages,
+                line_pages_json=self.parse_result_line_pages,
             )
             dcr_core.core_glob.line_type_table.process_document(
                 file_name_curr=self._file_name_curr,
                 directory_name=self._directory_name,
                 document_id=self._document_id,
                 file_name_orig=self._file_name_orig,
-                parser_line_pages_json=self.parse_result_line_pages,
+                line_pages_json=self.parse_result_line_pages,
             )
             dcr_core.core_glob.line_type_list_bullet.process_document(
                 directory_name=self._directory_name,
@@ -812,7 +812,7 @@ class TextParser:
                 environment_variant=self._environment_variant,
                 file_name_curr=self._file_name_curr,
                 file_name_orig=self._file_name_orig,
-                parser_line_pages_json=self.parse_result_line_pages,
+                line_pages_json=self.parse_result_line_pages,
             )
             dcr_core.core_glob.line_type_list_number.process_document(
                 directory_name=self._directory_name,
@@ -820,14 +820,14 @@ class TextParser:
                 environment_variant=self._environment_variant,
                 file_name_curr=self._file_name_curr,
                 file_name_orig=self._file_name_orig,
-                parser_line_pages_json=self.parse_result_line_pages,
+                line_pages_json=self.parse_result_line_pages,
             )
             dcr_core.core_glob.line_type_heading.process_document(
                 directory_name=self._directory_name,
                 document_id=self._document_id,
                 file_name_curr=self._file_name_curr,
                 file_name_orig=self._file_name_orig,
-                parser_line_pages_json=self.parse_result_line_pages,
+                line_pages_json=self.parse_result_line_pages,
             )
             self._create_line_document()
         elif dcr_core.core_glob.setup.is_parsing_page:
