@@ -1,16 +1,22 @@
+# Copyright (c) 2022 Konnexions GmbH. All rights reserved. Use of this
+# source code is governed by the Konnexions Public License (KX-PL)
+# Version 2020.05, that can be found in the LICENSE file.
+
+"""Library stub file."""
 import dcr_core.cls_nlp_core
 
 class LineTypeTable:
     Column = dict[str, float | int | object | str]
     Columns = list[Column]
-
     Row = dict[str, Columns | float | int | str]
     Rows = list[Row]
-
     Table = dict[str, float | int | Rows]
     Tables = list[Table]
 
-    def __init__(self) -> None:
+    def __init__(
+        self,
+        file_name_curr: str = "",
+    ) -> None:
         self._column_no: int = 0
         self._column_no_prev: int = 0
         self._columns: LineTypeTable.Columns = []
@@ -46,5 +52,5 @@ class LineTypeTable:
         document_id: int,
         file_name_curr: str,
         file_name_orig: str,
-        parser_line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages,
+        line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages,
     ) -> None: ...

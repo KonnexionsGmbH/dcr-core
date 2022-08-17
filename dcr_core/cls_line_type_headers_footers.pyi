@@ -1,21 +1,26 @@
+# Copyright (c) 2022 Konnexions GmbH. All rights reserved. Use of this
+# source code is governed by the Konnexions Public License (KX-PL)
+# Version 2020.05, that can be found in the LICENSE file.
+
+"""Library stub file."""
 import dcr_core.cls_nlp_core
 
 class LineTypeHeaderFooters:
     Candidate = tuple[int, int]
     Candidates = list[Candidate]
-
     LineDataCell = tuple[int, str]
     LineDataRow = tuple[LineDataCell, LineDataCell]
     LineData = list[LineDataRow]
-
     LSDDataCell = tuple[int, int, int]
     LSDDataRow = list[LSDDataCell]
     LSDData = list[LSDDataRow]
-
     ResultKey = tuple[int, int]
     ResultData = dict[ResultKey, str]
 
-    def __init__(self) -> None:
+    def __init__(
+        self,
+        file_name_curr: str = "",
+    ) -> None:
         self._exist: bool = False
         self._file_name_curr: str = ""
         self._irregular_footer_cand: LineTypeHeaderFooters.Candidate = (0, 0)
@@ -35,9 +40,9 @@ class LineTypeHeaderFooters:
         self._page_max: int = 0
         self._parser_line_lines_json: dcr_core.cls_nlp_core.NLPCore.ParserLineLines = []
         self._result_data: LineTypeHeaderFooters.ResultData = {}
+        self.line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages = []
         self.no_lines_footer: int = 0
         self.no_lines_header: int = 0
-        self.parser_line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages = []
         ...
     def _calc_levenshtein(self) -> None: ...
     def _check_irregular_footer(self, line_ind: int, text: str) -> None: ...
@@ -52,7 +57,6 @@ class LineTypeHeaderFooters:
     def exists(self) -> bool: ...
     def process_document(
         self,
-        file_name_curr: str,
-        no_pdf_pages: int,
-        parser_line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages,
+        line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages,
+        file_name_curr: str = "",
     ) -> None: ...

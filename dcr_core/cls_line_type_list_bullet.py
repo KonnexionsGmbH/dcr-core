@@ -1,3 +1,22 @@
+# Copyright (c) 2022 Konnexions GmbH. All rights reserved. Use of this
+# source code is governed by the Konnexions Public License (KX-PL)
+# Version 2020.05, that can be found in the LICENSE file.
+
+"""Determine list of bulleted lines.
+
+Typical usage example:
+
+    my_instance = LineTypeListBullet()
+
+    if my_instance.exists():
+
+    my_instance.process_document(directory_name = my_directory,
+                                 document_id = my_document_id,
+                                 environment_variant = my_environment_variant,
+                                 file_name_curr = my_file_name_curr,
+                                 file_name_orig = my_file_name_orig,
+                                 line_pages_json = my_line_pages_json)
+"""
 import json
 import os
 import pathlib
@@ -20,18 +39,19 @@ class LineTypeListBullet:
     List = dict[str, Entries | float | int | str]
     Lists = list[List]
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Initialise the instance.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def __init__(
         self,
-        file_name_curr: str,
+        file_name_curr: str = "",
     ) -> None:
         """Initialise the instance.
 
         Args:
-            file_name_curr (str):
-                    File name of the file to be processed.
+            file_name_curr (str, optional):
+                    File name of the PDF document to be processed - only
+                    For documentation purposes. Defaults to "".
         """
         dcr_core.core_utils.check_exists_object(
             is_line_type_headers_footers=True,
@@ -91,9 +111,9 @@ class LineTypeListBullet:
             f"LineTypeListBullet: End   create instance                ={self._file_name_curr}",
         )
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Finish a list.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _finish_list(self) -> None:
         """Finish a list."""
         if self._no_entries == 0:
@@ -180,12 +200,12 @@ class LineTypeListBullet:
             f"LineTypeListBullet: End   list                    on page={self._page_idx+1}",
         )
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Initialise the bulleted list anti-patterns.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # 1: name:  pattern name
     # 2: regexp regular expression
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _init_anti_patterns(self) -> list[tuple[str, re.Pattern[str]]]:
         """Initialise the bulleted list anti-patterns.
 
@@ -211,11 +231,11 @@ class LineTypeListBullet:
 
         return anti_patterns
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Initialise the valid bullets.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # 1: bullet character(s)
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _init_rules(self) -> dict[str, int]:
         """Initialise the valid bullets.
 
@@ -235,9 +255,9 @@ class LineTypeListBullet:
 
         return dcr_core.cls_nlp_core.NLPCore.get_lt_rules_default_list_bullet()
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Load the valid bulleted list anti-patterns from a JSON file.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     @staticmethod
     def _load_anti_patterns_from_json(
         lt_list_bullet_rule_file: pathlib.Path,
@@ -273,9 +293,9 @@ class LineTypeListBullet:
 
         return anti_patterns
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Load the valid bullets from a JSON file.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     @staticmethod
     def _load_rules_from_json(
         lt_list_bullet_rule_file: pathlib.Path,
@@ -305,9 +325,9 @@ class LineTypeListBullet:
 
         return list_bullet_rules
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Process the line-related data.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _process_line(self, line_line: dict[str, float | int | str]) -> None:  # noqa: C901
         """Process the line-related data.
 
@@ -369,9 +389,9 @@ class LineTypeListBullet:
 
         self._para_no_prev = para_no
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Process the page-related data.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _process_page(self) -> None:
         """Process the page-related data."""
         dcr_core.core_utils.progress_msg(
@@ -393,9 +413,9 @@ class LineTypeListBullet:
             f"LineTypeListBullet: End   page                           ={self._page_idx + 1}",
         )
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Reset the document memory.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _reset_document(self) -> None:
         """Reset the document memory."""
         dcr_core.core_utils.progress_msg(
@@ -409,9 +429,9 @@ class LineTypeListBullet:
 
         self._reset_list()
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Reset the list memory.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _reset_list(self) -> None:
         """Reset the list memory."""
         self._bullet = ""
@@ -428,9 +448,9 @@ class LineTypeListBullet:
 
         dcr_core.core_utils.progress_msg(dcr_core.core_glob.setup.is_verbose_lt_list_bullet, "LineTypeListBullet: Reset the list memory")
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Check the object existence.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def exists(self) -> bool:
         """Check the object existence.
 
@@ -439,9 +459,9 @@ class LineTypeListBullet:
         """
         return self._exist
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Process the document related data.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def process_document(
         self,
         directory_name: str,
@@ -449,7 +469,7 @@ class LineTypeListBullet:
         environment_variant: str,
         file_name_curr: str,
         file_name_orig: str,
-        parser_line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages,
+        line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages,
     ) -> None:
         """Process the document related data.
 
@@ -464,7 +484,7 @@ class LineTypeListBullet:
                     File name of the file to be processed.
             file_name_orig (in):
                     File name of the document file.
-            parser_line_pages_json (dcr_core.cls_nlp_core.NLPCore.LinePages):
+            line_pages_json (dcr_core.cls_nlp_core.NLPCore.LinePages):
                     The document pages formatted in the parser.
         """
         dcr_core.core_utils.check_exists_object(
@@ -486,7 +506,7 @@ class LineTypeListBullet:
 
         self._reset_document()
 
-        for page_idx, page_json in enumerate(parser_line_pages_json):
+        for page_idx, page_json in enumerate(line_pages_json):
             self._page_idx = page_idx
             self._parser_line_lines_json = page_json[dcr_core.cls_nlp_core.NLPCore.JSON_NAME_LINES]
             self._process_page()

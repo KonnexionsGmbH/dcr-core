@@ -1,7 +1,15 @@
+# Copyright (c) 2022 Konnexions GmbH. All rights reserved. Use of this
+# source code is governed by the Konnexions Public License (KX-PL)
+# Version 2020.05, that can be found in the LICENSE file.
+
+"""Library stub file."""
 import dcr_core.cls_nlp_core
 
 class LineTypeToc:
-    def __init__(self) -> None:
+    def __init__(
+        self,
+        file_name_curr: str = "",
+    ) -> None:
         self._exist: bool = False
         self._file_name_curr: str = ""
         self._is_toc_existing: bool = False
@@ -11,7 +19,7 @@ class LineTypeToc:
         self._strategy: str = ""
         self._toc_candidates: list[list[int]] = []
         self.no_lines_toc: int = 0
-        self.parser_line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages = []
+        self.line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages = []
         ...
     def _check_toc_candidate(self) -> None: ...
     def _init_toc_candidate(self) -> None: ...
@@ -24,5 +32,5 @@ class LineTypeToc:
     def process_document(
         self,
         file_name_curr: str,
-        parser_line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages,
+        line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages,
     ) -> None: ...

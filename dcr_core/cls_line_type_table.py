@@ -1,3 +1,22 @@
+# Copyright (c) 2022 Konnexions GmbH. All rights reserved. Use of this
+# source code is governed by the Konnexions Public License (KX-PL)
+# Version 2020.05, that can be found in the LICENSE file.
+
+"""Determine table of content lines.
+
+Typical usage example:
+
+    my_instance = LineTypeTable()
+
+    if my_instance.exists():
+
+    my_instance.process_document(directory_name = my_directory,
+                                 document_id = my_document_id,
+                                 file_name_curr = my_file_name_curr,
+                                 file_name_orig = my_file_name_orig,
+                                 line_pages_json = my_line_pages_json)
+"""
+
 import json
 
 import dcr_core.cls_nlp_core
@@ -20,18 +39,19 @@ class LineTypeTable:
     Table = dict[str, float | int | Rows]
     Tables = list[Table]
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Initialise the instance.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def __init__(
         self,
-        file_name_curr: str,
+        file_name_curr: str = "",
     ) -> None:
         """Initialise the instance.
 
         Args:
-            file_name_curr (str):
-                    File name of the file to be processed.
+            file_name_curr (str, optional):
+                    File name of the PDF document to be processed - only
+                    For documentation purposes. Defaults to "".
         """
         dcr_core.core_utils.check_exists_object(
             is_line_type_headers_footers=True,
@@ -84,9 +104,9 @@ class LineTypeTable:
             f"LineTypeTable: End   create instance                ={self._file_name_curr}",
         )
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Finish a row.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _finish_row(self) -> None:
         """Finish a row."""
         if (no_columns := len(self._columns)) == 0:
@@ -119,9 +139,9 @@ class LineTypeTable:
             f"LineTypeTable: End   row                            ={row_no}",
         )
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Finish a table.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _finish_table(self) -> None:
         """Finish a table."""
         if not self._is_table_open:
@@ -162,9 +182,9 @@ class LineTypeTable:
             f"LineTypeTable: End   table                   on page={self._page_idx+1}",
         )
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Process the line-related data.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _process_line(self, line_line: dict[str, int | str]) -> str:  # noqa: C901
         """Process the line-related data.
 
@@ -238,9 +258,9 @@ class LineTypeTable:
 
         return dcr_core.cls_nlp_core.NLPCore.LINE_TYPE_TABLE
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Process the page-related data.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _process_page(self) -> None:
         """Process the page-related data."""
         self._max_line_line = len(self._parser_line_lines_json)
@@ -255,9 +275,9 @@ class LineTypeTable:
             else:
                 self._finish_table()
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Reset the document memory.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _reset_document(self) -> None:
         """Reset the document memory."""
         self.no_tables = 0
@@ -270,9 +290,9 @@ class LineTypeTable:
 
         self._reset_table()
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Reset the row memory.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _reset_row(self) -> None:
         """Reset the row memory."""
         self._column_no_prev = 0
@@ -283,9 +303,9 @@ class LineTypeTable:
 
         dcr_core.core_utils.progress_msg(dcr_core.core_glob.setup.is_verbose_lt_table, "LineTypeTable: Reset the row memory")
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Reset the table memory.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _reset_table(self) -> None:
         """Reset the table memory."""
         self._first_row_llx = 0.0
@@ -307,9 +327,9 @@ class LineTypeTable:
 
         self._reset_row()
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Check the object existence.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def exists(self) -> bool:
         """Check the object existence.
 
@@ -318,16 +338,16 @@ class LineTypeTable:
         """
         return self._exist
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Process the document related data.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def process_document(
         self,
         directory_name: str,
         document_id: int,
         file_name_curr: str,
         file_name_orig: str,
-        parser_line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages,
+        line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages,
     ) -> None:
         """Process the document related data.
 
@@ -340,7 +360,7 @@ class LineTypeTable:
                     File name of the file to be processed.
             file_name_orig (in):
                     File name of the original document file.
-            parser_line_pages_json (dcr_core.cls_nlp_core.NLPCore.LinePages):
+            line_pages_json (dcr_core.cls_nlp_core.NLPCore.LinePages):
                     The document pages formatted in the parser.
         """
         dcr_core.core_utils.check_exists_object(
@@ -360,7 +380,7 @@ class LineTypeTable:
 
         self._reset_document()
 
-        for page_idx, page_json in enumerate(parser_line_pages_json):
+        for page_idx, page_json in enumerate(line_pages_json):
             self._page_idx = page_idx
             self._parser_line_lines_json = page_json[dcr_core.cls_nlp_core.NLPCore.JSON_NAME_LINES]
             self._process_page()

@@ -1,3 +1,8 @@
+# Copyright (c) 2022 Konnexions GmbH. All rights reserved. Use of this
+# source code is governed by the Konnexions Public License (KX-PL)
+# Version 2020.05, that can be found in the LICENSE file.
+
+"""Global constants and variables."""
 import dcr_core.cls_line_type_headers_footers
 import dcr_core.cls_line_type_heading
 import dcr_core.cls_line_type_list_bullet
@@ -8,9 +13,9 @@ import dcr_core.cls_setup
 import dcr_core.cls_text_parser
 import dcr_core.cls_tokenizer_spacy
 
-# -----------------------------------------------------------------------------
+# ------------------------------------------------------------------
 # Global Constants.
-# -----------------------------------------------------------------------------
+# ------------------------------------------------------------------
 FILE_ENCODING_DEFAULT = "utf-8"
 
 FILE_TYPE_JPEG = "jpeg"
@@ -51,9 +56,9 @@ LOGGER_PROGRESS_UPDATE = "Progress update "
 
 RETURN_OK = ("ok", "")
 
-# -----------------------------------------------------------------------------
+# ------------------------------------------------------------------
 # Global Variables.
-# -----------------------------------------------------------------------------
+# ------------------------------------------------------------------
 line_type_headers_footers: dcr_core.cls_line_type_headers_footers.LineTypeHeaderFooters
 line_type_heading: dcr_core.cls_line_type_heading.LineTypeHeading
 line_type_list_bullet: dcr_core.cls_line_type_list_bullet.LineTypeListBullet

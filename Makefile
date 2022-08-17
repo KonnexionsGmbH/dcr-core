@@ -2,11 +2,13 @@
 
 ifeq ($(OS),Windows_NT)
 	export DELETE_DIST=del /f /q dist\\*
+	export DELETE_DOCS=del /f /q docs\\api-docs\\*
 	export MYPYPATH=
 	export PYTHON=python
 	export PYTHONPATH=dcr_core
 else
 	export DELETE_DIST=rm -f dist/*
+	export DELETE_DOCS=rm -f dist/api-docs/*
 	export MYPYPATH=
 	export PYTHON=python3
 	export PYTHONPATH=dcr_core
@@ -25,11 +27,9 @@ endif
 ## help:               Show this help.
 ## ----------------------------------------------------------------------------
 ## dev:                Format and lint the code.
-#dev: format lint pydocstyle
-dev: format lint
+dev: format lint pydocstyle
 ## docs:               Check the API docs, create and upload the user docs.
-# docs: pydocstyle pydoc-markdown mkdocs
-docs: pydocstyle mkdocs
+docs: pydocstyle lazydocs mkdocs
 ## format:             Format the code with isort, Black and docformatter.
 format: isort black docformatter
 ## lint:               Lint the code with Bandit, Flake8, Pylint and Mypy.
@@ -121,6 +121,20 @@ isort:              ## Edit and sort the imports with isort.
 	pipenv run isort ${PYTHONPATH}
 	@echo Info **********  End:   isort ***************************************
 
+# Generate markdown API documentation for Google-style Python docstring.
+# https://github.com/ml-tooling/lazydocs
+# Configuration file: n/a
+lazydocs:           ## Generate markdown API documentation for Google-style Python docstring.
+	@echo Info **********  Start: lazydocs ************************************
+	@echo DELETE_DOCS=${DELETE_DOCS}
+	@echo MYPYPATH  =${MYPYPATH}
+	@echo PYTHON    =${PYTHON}
+	@echo PYTHONPATH=${PYTHONPATH}
+	@echo ---------------------------------------------------------------------
+	${DELETE_DOCS}
+	pipenv run lazydocs --output-path="./docs/api-docs" --overview-file="README.md" --src-base-url="https://github.com/KonnexionsGmbH/dcr/blob/main/" ${PYTHONPATH}
+	@echo Info **********  End:   lazydocs ************************************
+
 # Project documentation with Markdown.
 # https://github.com/mkdocs/mkdocs/
 # Configuration file: none
@@ -186,19 +200,6 @@ pipenv-prod:        ## Install the package dependencies for production.
 	${PYTHON} -m pip --version
 	@echo Info **********  End:   Installation of Production Packages *********
 
-# Pydoc-Markdown - create Python API documentation in Markdown format.
-# https://github.com/NiklasRosenstein/pydoc-markdown
-# Configuration file: pyproject.toml
-pydoc-markdown:     ## Create Python API documentation in Markdown format with Pydoc-Markdown.
-	@echo Info **********  Start: Pydoc-Markdown ******************************
-	@echo MYPYPATH  =${MYPYPATH}
-	@echo PYTHON    =${PYTHON}
-	@echo PYTHONPATH=${PYTHONPATH}
-	pipenv run pydoc-markdown --version
-	@echo ---------------------------------------------------------------------
-	pipenv run pydoc-markdown -I ${PYTHONPATH} --render-toc > docs/developing_api_documentation.md
-	@echo Info **********  End:   Pydoc-Markdown ******************************
-
 # pydocstyle - docstring style checker.
 # https://github.com/PyCQA/pydocstyle
 # Configuration file: pyproject.toml
@@ -229,6 +230,7 @@ pylint:             ## Lint the code with Pylint.
 # https://pypi.org/project/twine/
 upload-prod:        ## Upload the distribution archive to PyPi.
 	@echo Info **********  Start: twine prod **********************************
+	@echo DELETE_DIST=${DELETE_DIST}
 	@echo MYPYPATH  =${MYPYPATH}
 	@echo PYTHON    =${PYTHON}
 	@echo PYTHONPATH=${PYTHONPATH}

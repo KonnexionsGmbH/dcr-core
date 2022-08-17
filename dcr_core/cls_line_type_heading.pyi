@@ -1,3 +1,8 @@
+# Copyright (c) 2022 Konnexions GmbH. All rights reserved. Use of this
+# source code is governed by the Konnexions Public License (KX-PL)
+# Version 2020.05, that can be found in the LICENSE file.
+
+"""Library stub file."""
 import collections
 import pathlib
 import re
@@ -5,7 +10,10 @@ import re
 import dcr_core.cls_nlp_core
 
 class LineTypeHeading:
-    def __init__(self) -> None:
+    def __init__(
+        self,
+        file_name_curr: str = "",
+    ) -> None:
         self._RULE_NAME_SIZE: int = 0
         self._anti_patterns: list[tuple[str, re.Pattern[str]]] = []
         self._exist: bool = False
@@ -56,5 +64,5 @@ class LineTypeHeading:
         document_id: int,
         file_name_curr: str,
         file_name_orig: str,
-        parser_line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages,
+        line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages,
     ) -> None: ...

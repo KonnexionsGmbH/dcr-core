@@ -1,9 +1,13 @@
+# Copyright (c) 2022 Konnexions GmbH. All rights reserved. Use of this
+# source code is governed by the Konnexions Public License (KX-PL)
+# Version 2020.05, that can be found in the LICENSE file.
+
+"""Library stub file."""
 import configparser
 from typing import ClassVar
 
 class Setup:
     _CONFIG_PARAM_NO: ClassVar[int]
-
     _DCR_CFG_CREATE_EXTRA_FILE_HEADING: ClassVar[str]
     _DCR_CFG_CREATE_EXTRA_FILE_LIST_BULLET: ClassVar[str]
     _DCR_CFG_CREATE_EXTRA_FILE_LIST_NUMBER: ClassVar[str]
@@ -38,7 +42,6 @@ class Setup:
     _DCR_CFG_SECTION: ClassVar[str]
     _DCR_CFG_SECTION_ENV_TEST: ClassVar[str]
     _DCR_CFG_SECTION_SPACY: ClassVar[str]
-
     _DCR_CFG_SPACY_IGNORE_BRACKET: ClassVar[str]
     _DCR_CFG_SPACY_IGNORE_LEFT_PUNCT: ClassVar[str]
     _DCR_CFG_SPACY_IGNORE_LINE_TYPE_FOOTER: ClassVar[str]
@@ -53,7 +56,6 @@ class Setup:
     _DCR_CFG_SPACY_IGNORE_RIGHT_PUNCT: ClassVar[str]
     _DCR_CFG_SPACY_IGNORE_SPACE: ClassVar[str]
     _DCR_CFG_SPACY_IGNORE_STOP: ClassVar[str]
-
     _DCR_CFG_SPACY_TKN_ATTR_CLUSTER: ClassVar[str]
     _DCR_CFG_SPACY_TKN_ATTR_DEP_: ClassVar[str]
     _DCR_CFG_SPACY_TKN_ATTR_DOC: ClassVar[str]
@@ -107,7 +109,6 @@ class Setup:
     _DCR_CFG_SPACY_TKN_ATTR_TEXT_WITH_WS: ClassVar[str]
     _DCR_CFG_SPACY_TKN_ATTR_VOCAB: ClassVar[str]
     _DCR_CFG_SPACY_TKN_ATTR_WHITESPACE_: ClassVar[str]
-
     _DCR_CFG_TESSERACT_TIMEOUT: ClassVar[str]
     _DCR_CFG_TETML_PAGE: ClassVar[str]
     _DCR_CFG_TETML_WORD: ClassVar[str]
@@ -121,15 +122,12 @@ class Setup:
     _DCR_CFG_VERBOSE_LT_TABLE: ClassVar[str]
     _DCR_CFG_VERBOSE_LT_TOC: ClassVar[str]
     _DCR_CFG_VERBOSE_PARSER: ClassVar[str]
-
     _DCR_ENVIRONMENT_TYPE: ClassVar[str]
 
     DCR_VERSION: ClassVar[str]
-
     ENVIRONMENT_TYPE_DEV: ClassVar[str]
     ENVIRONMENT_TYPE_PROD: ClassVar[str]
     ENVIRONMENT_TYPE_TEST: ClassVar[str]
-
     PDF2IMAGE_TYPE_JPEG: ClassVar[str]
     PDF2IMAGE_TYPE_PNG: ClassVar[str]
 

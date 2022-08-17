@@ -1,3 +1,16 @@
+# Copyright (c) 2022 Konnexions GmbH. All rights reserved. Use of this
+# source code is governed by the Konnexions Public License (KX-PL)
+# Version 2020.05, that can be found in the LICENSE file.
+
+"""NLP utility class.
+
+Typical usage example:
+
+    my_instance = NLPCore()
+
+    if my_instance.exists():
+"""
+
 import collections
 import json
 import re
@@ -7,15 +20,15 @@ import dcr_core.core_utils
 
 
 class NLPCore:
-    """Managing the NLP processing.
+    """NLP utility class.
 
     Returns:
-        _type_: LineType instance.
+        _type_: NLPCore instance.
     """
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Global type aliases.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     ParserLineLine = dict[str, int | str]
     ParserLineLines = list[ParserLineLine]
 
@@ -46,9 +59,9 @@ class NLPCore:
 
     ParserWordDocument = dict[str, int | str | ParserWordPages]
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Class variables.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     CODE_SPACY_DEFAULT: ClassVar[str] = "en_core_web_trf"
 
     ENVIRONMENT_TYPE_DEV: ClassVar[str] = "dev"
@@ -265,16 +278,16 @@ class NLPCore:
     SEARCH_STRATEGY_LINES: ClassVar[str] = "lines"
     SEARCH_STRATEGY_TABLE: ClassVar[str] = "table"
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Initialise the instance.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def __init__(self) -> None:
         """Initialise the instance."""
         self._exist = True
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Convert a roman numeral to integer.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     @classmethod
     def _convert_roman_2_int(cls, roman_in: str) -> int:
         """Convert a roman numeral to integer.
@@ -316,13 +329,13 @@ class NLPCore:
 
         return integer
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Get the default heading line type anti-patterns.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # 1: rule_name
     # 2: regexp_str:
     #           regular expression
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     @staticmethod
     def _get_lt_anti_patterns_default_heading() -> list[tuple[str, str]]:
         """Get the default heading line type anti-patterns.
@@ -338,13 +351,13 @@ class NLPCore:
             ("a) * a)", r"^[a-z]{1}\) [a-z A-Z0-9\.!\?]* [a-z]{1}\)"),
         ]
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Get the default bulleted list line type anti-patterns.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # 1: rule_name
     # 2: regexp_str:
     #           regular expression
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     @staticmethod
     def _get_lt_anti_patterns_default_list_bullet(environment_variant: str) -> list[tuple[str, str]]:
         """Get the default bulleted list line type anti-patterns.
@@ -360,13 +373,13 @@ class NLPCore:
 
         return []
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Get the default numbered list line type anti-patterns.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # 1: rule_name
     # 2: regexp_str:
     #           regular expression
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     @staticmethod
     def _get_lt_anti_patterns_default_list_number(environment_variant: str) -> list[tuple[str, str]]:
         """Get the default numbered list line type anti-patterns.
@@ -386,9 +399,9 @@ class NLPCore:
 
         return []
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Get the default heading & numbered list line type rules.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # 1: rule_name
     # 2: is_first_token:
     #           True:  apply rule to first token (split)
@@ -399,7 +412,7 @@ class NLPCore:
     #           compares predecessor and successor
     # 5: start_values:
     #           list of strings
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     @staticmethod
     def _get_lt_rules_default_heading_list_number() -> list[tuple[str, bool, str, collections.abc.Callable[[str, str], bool], list[str]]]:
         """Get the default heading & numbered list line type rules.
@@ -593,11 +606,11 @@ class NLPCore:
             ),
         ]
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Get the default bulleted list line type rules.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # 1: bullet character(s)
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     @staticmethod
     def _get_lt_rules_default_list_bullet() -> dict[str, int]:
         """Get the default bulleted list line type rules.
@@ -641,9 +654,9 @@ class NLPCore:
             "\u29BF": 0,
         }
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Check the object existence.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def exists(self) -> bool:
         """Check the object existence.
 
@@ -652,9 +665,9 @@ class NLPCore:
         """
         return self._exist
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Export the default heading line type rules.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     @staticmethod
     def export_rule_file_heading(is_verbose: bool, file_name: str, file_encoding: str, json_indent: int, is_json_sort_keys: bool) -> None:
         """Export the default heading line type rules.
@@ -724,9 +737,9 @@ class NLPCore:
         if len(rules) > 0:
             dcr_core.core_utils.progress_msg(is_verbose, f"{len(rules):3d} heading       line type rule(s)         exported")
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Export the default bulleted list line type rules.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     @staticmethod
     def export_rule_file_list_bullet(
         is_verbose: bool,
@@ -791,9 +804,9 @@ class NLPCore:
         if len(rules) > 0:
             dcr_core.core_utils.progress_msg(is_verbose, f"{len(rules):3d} bulleted list line type rule(s)         exported")
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Export the default numbered list line type rules.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     @staticmethod
     def export_rule_file_list_number(
         is_verbose: bool,
@@ -870,9 +883,9 @@ class NLPCore:
         if len(rules) > 0:
             dcr_core.core_utils.progress_msg(is_verbose, f"{len(rules):3d} numbered list line type rule(s)         exported")
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Get the default heading line type anti-patterns.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     @staticmethod
     def get_lt_anti_patterns_default_heading() -> list[
         tuple[
@@ -888,9 +901,9 @@ class NLPCore:
         """
         return NLPCore._get_lt_anti_patterns_default_heading()
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Get the default bulleted list line type anti-patterns.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     @staticmethod
     def get_lt_anti_patterns_default_list_bullet(
         environment_variant: str,
@@ -907,9 +920,9 @@ class NLPCore:
         """
         return NLPCore._get_lt_anti_patterns_default_list_bullet(environment_variant)
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Get the default numbered list line type anti-patterns.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     @staticmethod
     def get_lt_anti_patterns_default_list_number(environment_variant: str) -> list[tuple[str, str]]:
         """Get the default numbered list line type anti-patterns.
@@ -924,9 +937,9 @@ class NLPCore:
         """
         return NLPCore._get_lt_anti_patterns_default_list_number(environment_variant)
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Get the default heading line type rules.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     @staticmethod
     def get_lt_rules_default_heading() -> list[tuple[str, bool, str, collections.abc.Callable[[str, str], bool], list[str]]]:
         """Get the default heading line type rules.
@@ -937,9 +950,9 @@ class NLPCore:
         """
         return NLPCore._get_lt_rules_default_heading_list_number()
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Get the default bulleted list line type rules.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     @staticmethod
     def get_lt_rules_default_list_bullet() -> dict[str, int]:
         """Get the default bulleted list line type rules.
@@ -950,9 +963,9 @@ class NLPCore:
         """
         return NLPCore._get_lt_rules_default_list_bullet()
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Get the default numbered list line type rules.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     @staticmethod
     def get_lt_rules_default_list_number() -> list[tuple[str, str, collections.abc.Callable[[str, str], bool], list[str]]]:
         """Get the default numbered list line type rules.
@@ -974,9 +987,9 @@ class NLPCore:
 
         return rules
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Ignore the comparison.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     @classmethod
     def is_asc_ignore(cls, _predecessor: str, _successor: str) -> bool:
         """Ignore the comparison.
@@ -986,9 +999,9 @@ class NLPCore:
         """
         return True
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Compare two lowercase letters on difference ascending 1.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     @classmethod
     def is_asc_lowercase_letters(cls, predecessor: str, successor: str) -> bool:
         """Compare two lowercase_letters on ascending.
@@ -1008,9 +1021,9 @@ class NLPCore:
 
         return False
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Compare two lowercase letters on difference ascending 1 - only first token.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     @classmethod
     def is_asc_lowercase_letters_token(cls, predecessor: str, successor: str) -> bool:
         """Compare two lowercase_letters on ascending - only first token.
@@ -1026,9 +1039,9 @@ class NLPCore:
         """
         return cls.is_asc_lowercase_letters(predecessor.split()[0], successor.split()[0])
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Compare two roman numerals on ascending.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     @classmethod
     def is_asc_romans(cls, predecessor: str, successor: str) -> bool:
         """Compare two roman numerals on ascending.
@@ -1070,9 +1083,9 @@ class NLPCore:
 
         return False
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Compare two roman numerals on ascending - only first token.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     @classmethod
     def is_asc_romans_token(cls, predecessor: str, successor: str) -> bool:
         """Compare two roman numerals on ascending - only first token.
@@ -1095,9 +1108,9 @@ class NLPCore:
         #     successor_net = successor
         return cls.is_asc_romans(predecessor.split()[0], successor.split()[0])
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Compare two strings on ascending.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     @classmethod
     def is_asc_strings(cls, predecessor: str, successor: str) -> bool:
         """Compare two strings on ascending.
@@ -1116,9 +1129,9 @@ class NLPCore:
 
         return True
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Compare two string floats on ascending.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     @classmethod
     def is_asc_string_floats(cls, predecessor: str, successor: str) -> bool:
         """Compare two string float numbers on ascending.
@@ -1138,9 +1151,9 @@ class NLPCore:
 
         return False
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Compare two string floats on ascending - only first token.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     @classmethod
     def is_asc_string_floats_token(cls, predecessor: str, successor: str) -> bool:
         """Compare two string float numbers on ascending - only first token.
@@ -1156,9 +1169,9 @@ class NLPCore:
         """
         return cls.is_asc_string_floats(predecessor.split()[0], successor.split()[0])
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Compare two string integers on difference ascending 1.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     @classmethod
     def is_asc_string_integers(cls, predecessor: str, successor: str) -> bool:
         """Compare two string integers on ascending.
@@ -1178,9 +1191,9 @@ class NLPCore:
 
         return False
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Compare two string integers on difference ascending 1 - only first token.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     @classmethod
     def is_asc_string_integers_token(cls, predecessor: str, successor: str) -> bool:
         """Compare two string integers on ascending - only first token.
@@ -1196,9 +1209,9 @@ class NLPCore:
         """
         return cls.is_asc_string_integers(predecessor.split()[0], successor.split()[0])
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Compare two uppercase letters on difference ascending 1.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     @classmethod
     def is_asc_uppercase_letters(cls, predecessor: str, successor: str) -> bool:
         """Compare two uppercase_letters on ascending.
@@ -1218,9 +1231,9 @@ class NLPCore:
 
         return False
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Compare two uppercase letters on difference ascending 1 - only first token.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     @classmethod
     def is_asc_uppercase_letters_token(cls, predecessor: str, successor: str) -> bool:
         """Compare two uppercase_letters on ascending - only first token.

@@ -1,3 +1,19 @@
+# Copyright (c) 2022 Konnexions GmbH. All rights reserved. Use of this
+# source code is governed by the Konnexions Public License (KX-PL)
+# Version 2020.05, that can be found in the LICENSE file.
+
+"""Determine table of content lines.
+
+Typical usage example:
+
+    my_instance = LineTypeToc()
+
+    if my_instance.exists():
+
+    my_instance.process_document(file_name_curr = my_file_name_curr,
+                                 line_pages_json = my_line_pages_json)
+"""
+
 import dcr_core.cls_nlp_core
 
 
@@ -8,18 +24,19 @@ class LineTypeToc:
         _type_: LineTypeToc instance.
     """
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Initialise the instance.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def __init__(
         self,
-        file_name_curr: str,
+        file_name_curr: str = "",
     ) -> None:
-        """_summary_
+        """Initialise the instance.
 
         Args:
-            file_name_curr (str):
-                    File name of the file to be processed.
+            file_name_curr (str, optional):
+                    File name of the PDF document to be processed - only
+                    For documentation purposes. Defaults to "".
         """
         dcr_core.core_utils.check_exists_object(
             is_line_type_headers_footers=True,
@@ -49,7 +66,7 @@ class LineTypeToc:
 
         self.no_lines_toc = 0
 
-        self.parser_line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages = []
+        self.line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages = []
 
         self._exist = True
 
@@ -58,9 +75,9 @@ class LineTypeToc:
             f"LineTypeToc: End   create instance                ={self._file_name_curr}",
         )
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Check a TOC candidate.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _check_toc_candidate(self) -> None:
         if not self._toc_candidates:
             return
@@ -105,15 +122,15 @@ class LineTypeToc:
             "LineTypeToc: End   check TOC candidate            " + f"={self._is_toc_existing}",
         )
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Initialise the TOC candidate variables.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _init_toc_candidate(self) -> None:
         self._toc_candidates = []
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Process the page-related data - line version.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _process_page_lines(self) -> None:
         """Process the page-related data - line version."""
         if self._is_toc_existing or self._page_no >= dcr_core.core_glob.setup.lt_toc_last_page:
@@ -143,9 +160,9 @@ class LineTypeToc:
             f"LineTypeToc: End   page (lines)                   ={self._page_no}",
         )
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Process the page-related data - table version.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _process_page_table(self) -> None:
         """Process the page-related data - table version."""
         if self._is_toc_existing or self._page_no >= dcr_core.core_glob.setup.lt_toc_last_page:
@@ -173,9 +190,9 @@ class LineTypeToc:
             f"LineTypeToc: End   page (table)                   ={self._page_no}",
         )
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Add a TOC line candidate element.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _process_toc_candidate_line_line(self, line_line: dcr_core.cls_nlp_core.NLPCore.ParserLineLine, page_no_toc: int) -> None:
         """Add a TOC line candidate element.
 
@@ -191,9 +208,9 @@ class LineTypeToc:
 
         self._toc_candidates.append([page_no_toc, self._page_no, para_no, line_no])
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Add a TOC table candidate element.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _process_toc_candidate_table_line(self, line_line: dcr_core.cls_nlp_core.NLPCore.ParserLineLine) -> None:
         """Add a TOC table candidate element.
 
@@ -214,9 +231,9 @@ class LineTypeToc:
         except ValueError:
             self._toc_candidates[-1][0] = -1
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Store the found TOC entries in parser result.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _store_results(self) -> None:  # noqa: C901
         """Store the found TOC entries in parser result."""
         self.no_lines_toc = len(self._toc_candidates)
@@ -239,7 +256,7 @@ class LineTypeToc:
         para_no_from = self._toc_candidates[0][2]
         para_no_till = self._toc_candidates[-1][2]
 
-        for page in self.parser_line_pages_json:
+        for page in self.line_pages_json:
             page_no = page[dcr_core.cls_nlp_core.NLPCore.JSON_NAME_PAGE_NO]
 
             if page_no < page_no_from:
@@ -273,9 +290,9 @@ class LineTypeToc:
             f"LineTypeToc: End   store result                   ={self.no_lines_toc}",
         )
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Check the object existence.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def exists(self) -> bool:
         """Check the object existence.
 
@@ -284,20 +301,20 @@ class LineTypeToc:
         """
         return self._exist
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Process the document related data.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def process_document(
         self,
         file_name_curr: str,
-        parser_line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages,
+        line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages,
     ) -> None:
-        """_summary_
+        """Process the document related data.
 
         Args:
             file_name_curr (str, optional):
                     File name of the file to be processed.
-            parser_line_pages_json (dcr_core.cls_nlp_core.NLPCore.LinePages):
+            line_pages_json (dcr_core.cls_nlp_core.NLPCore.LinePages):
                     The document pages formatted in the parser.
         """
         dcr_core.core_utils.check_exists_object(
@@ -315,9 +332,9 @@ class LineTypeToc:
             return
 
         self._file_name_curr = file_name_curr
-        self.parser_line_pages_json = parser_line_pages_json
+        self.line_pages_json = line_pages_json
 
-        self._parser_no_pages_in_doc = len(self.parser_line_pages_json)
+        self._parser_no_pages_in_doc = len(self.line_pages_json)
 
         dcr_core.core_utils.progress_msg(dcr_core.core_glob.setup.is_verbose_lt_toc, "LineTypeToc")
         dcr_core.core_utils.progress_msg(
@@ -330,7 +347,7 @@ class LineTypeToc:
         # -------------------------------------------------------------------------
         self._strategy = dcr_core.cls_nlp_core.NLPCore.SEARCH_STRATEGY_TABLE
 
-        for page_json in self.parser_line_pages_json:
+        for page_json in self.line_pages_json:
             self._parser_line_lines_json = page_json[dcr_core.cls_nlp_core.NLPCore.JSON_NAME_LINES]
             self._process_page_table()
 
@@ -344,7 +361,7 @@ class LineTypeToc:
             self._strategy = dcr_core.cls_nlp_core.NLPCore.SEARCH_STRATEGY_LINES
             self._page_no = 0
             self._init_toc_candidate()
-            for page_json in self.parser_line_pages_json:
+            for page_json in self.line_pages_json:
                 self._parser_line_lines_json = page_json[dcr_core.cls_nlp_core.NLPCore.JSON_NAME_LINES]
                 self._process_page_lines()
 

@@ -1,3 +1,22 @@
+# Copyright (c) 2022 Konnexions GmbH. All rights reserved. Use of this
+# source code is governed by the Konnexions Public License (KX-PL)
+# Version 2020.05, that can be found in the LICENSE file.
+
+
+"""Determine table of content lines.
+
+Typical usage example:
+
+    my_instance = LineTypeHeading()
+
+    if my_instance.exists():
+
+    my_instance.process_document(directory_name = my_directory,
+                                 document_id = my_document_id,
+                                 file_name_curr = my_file_name_curr,
+                                 file_name_orig = my_file_name_orig,
+                                 line_pages_json = my_line_pages_json)
+"""
 import collections
 import decimal
 import json
@@ -8,9 +27,9 @@ import re
 
 import dcr_core.cls_nlp_core
 
-# -----------------------------------------------------------------------------
+# ------------------------------------------------------------------
 # Global type aliases.
-# -----------------------------------------------------------------------------
+# ------------------------------------------------------------------
 
 
 # pylint: disable=too-many-instance-attributes
@@ -21,18 +40,19 @@ class LineTypeHeading:
         _type_: LineTypeHeading instance.
     """
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Initialise the instance.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def __init__(
         self,
-        file_name_curr: str,
+        file_name_curr: str = "",
     ) -> None:
         """Initialise the instance.
 
         Args:
-            file_name_curr (str):
-                    File name of the file to be processed.
+            file_name_curr (str, optional):
+                    File name of the PDF document to be processed - only
+                    For documentation purposes. Defaults to "".
         """
         dcr_core.core_utils.check_exists_object(
             is_line_type_headers_footers=True,
@@ -54,13 +74,13 @@ class LineTypeHeading:
 
         self._RULE_NAME_SIZE: int = 20
 
-        # -----------------------------------------------------------------------------
+        # ------------------------------------------------------------------
         # Anti-patterns.
-        # -----------------------------------------------------------------------------
+        # ------------------------------------------------------------------
         # 1: name:  pattern name
         # 2: regexp_compiled:
         #           compiled regular expression
-        # -----------------------------------------------------------------------------
+        # ------------------------------------------------------------------
         self._anti_patterns: list[tuple[str, re.Pattern[str]]] = self._init_anti_patterns()
 
         dcr_core.core_glob.setup.lt_heading_max_level_curr = 0
@@ -78,9 +98,9 @@ class LineTypeHeading:
 
         self._rules: list[tuple[str, bool, str, collections.abc.Callable[[str, str], bool], list[str]]] = self._init_rules()
 
-        # -----------------------------------------------------------------------------
+        # ------------------------------------------------------------------
         # Heading rules collection.
-        # -----------------------------------------------------------------------------
+        # ------------------------------------------------------------------
         # 1: rule_name
         # 2: is_first_token:
         #           True:  apply rule to first token (split)
@@ -93,7 +113,7 @@ class LineTypeHeading:
         #           list of strings
         # 6: regexp_str:
         #           regular expression
-        # -----------------------------------------------------------------------------
+        # ------------------------------------------------------------------
         self._rules_collection: list[tuple[str, bool, re.Pattern[str], collections.abc.Callable[[str, str], bool], list[str], str]] = []
 
         for (rule_name, is_first_token, regexp_str, function_is_asc, start_values) in self._rules:
@@ -108,9 +128,9 @@ class LineTypeHeading:
                 )
             )
 
-        # -----------------------------------------------------------------------------
+        # ------------------------------------------------------------------
         # Rules hierarchy for determining the headings.
-        # -----------------------------------------------------------------------------
+        # ------------------------------------------------------------------
         # 1: rule_name
         # 2: is_first_token:
         #           True:  apply rule to first token (split)
@@ -129,7 +149,7 @@ class LineTypeHeading:
         #           predecessor value
         # 9: regexp_str:
         #           regular expression
-        # -----------------------------------------------------------------------------
+        # ------------------------------------------------------------------
         self._rules_hierarchy: list[
             tuple[
                 str,
@@ -162,9 +182,9 @@ class LineTypeHeading:
             f"LineTypeHeading: End   create instance                ={self.file_name_curr}",
         )
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Check whether a valid start value is present.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     @staticmethod
     def _check_valid_start_value(target_value: str, is_first_token: bool, start_values: list[str]) -> bool:  # noqa: C901
         """Check whether a valid start value is present.
@@ -213,9 +233,9 @@ class LineTypeHeading:
 
         return False
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Create a table of content entry.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     #     {
     #         "headingLevel": 99,
     #         "headingText": "xxx",
@@ -223,9 +243,8 @@ class LineTypeHeading:
     #         "headingCtxLine9": "xxx",
     #         "regexp": "xxxx"
     #     }
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _create_toc_entry(self, level: int, text: str) -> None:
-
         """Create a table of content entry.
 
         Args:
@@ -261,9 +280,9 @@ class LineTypeHeading:
 
         self._toc.append(toc_entry)
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Get the next body line.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _get_next_body_line(
         self, page_idx: int, line_lines: dcr_core.cls_nlp_core.NLPCore.ParserLineLines, line_lines_idx: int
     ) -> tuple[str, int, dcr_core.cls_nlp_core.NLPCore.ParserLineLines, int]:
@@ -310,12 +329,12 @@ class LineTypeHeading:
         # not testable
         return "", page_idx, line_lines, line_lines_idx
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Initialise the heading anti-patterns.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # 1: name:  pattern name
     # 2: regexp regular expression
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _init_anti_patterns(self) -> list[tuple[str, re.Pattern[str]]]:
         """Initialise the heading anti-patterns.
 
@@ -339,9 +358,9 @@ class LineTypeHeading:
 
         return anti_patterns
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Initialise the heading rules.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # 1: rule_name
     # 2: is_first_token:
     #           True:  apply rule to first token (split)
@@ -352,7 +371,7 @@ class LineTypeHeading:
     #           compares predecessor and successor
     # 5: start_values:
     #           list of strings
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _init_rules(self) -> list[tuple[str, bool, str, collections.abc.Callable[[str, str], bool], list[str]]]:
         """Initialise the heading rules.
 
@@ -371,9 +390,9 @@ class LineTypeHeading:
 
         return dcr_core.cls_nlp_core.NLPCore.get_lt_rules_default_heading()
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Load the valid heading anti-patterns from a JSON file.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     @staticmethod
     def _load_anti_patterns_from_json(
         lt_heading_rule_file: pathlib.Path,
@@ -408,9 +427,9 @@ class LineTypeHeading:
 
         return anti_patterns
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Load the valid heading rules from a JSON file.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     @staticmethod
     def _load_rules_from_json(
         lt_heading_rule_file: pathlib.Path,
@@ -451,9 +470,9 @@ class LineTypeHeading:
 
         return rules
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Process the line-related data.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _process_line(self, line_line: dict[str, str], text: str, first_token: str) -> int:  # noqa: C901
         """Process the line-related data.
 
@@ -577,9 +596,9 @@ class LineTypeHeading:
 
         return 0
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Process the page-related data.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _process_page(self) -> None:
         """Process the page-related data."""
         dcr_core.core_utils.progress_msg(dcr_core.core_glob.setup.is_verbose_lt_heading, "LineTypeHeading")
@@ -613,9 +632,9 @@ class LineTypeHeading:
             f"LineTypeHeading: End   page (lines)                   ={self._page_idx+1}",
         )
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Check the object existence.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def exists(self) -> bool:
         """Check the object existence.
 
@@ -624,16 +643,16 @@ class LineTypeHeading:
         """
         return self._exist
 
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # Process the document related data.
-    # -----------------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def process_document(
         self,
         directory_name: str,
         document_id: int,
         file_name_curr: str,
         file_name_orig: str,
-        parser_line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages,
+        line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages,
     ) -> None:
         """Process the document related data.
 
@@ -646,7 +665,7 @@ class LineTypeHeading:
                     File name of the file to be processed.
             file_name_orig (in):
                     File name of the document file.
-            parser_line_pages_json (dcr_core.cls_nlp_core.NLPCore.LinePages):
+            line_pages_json (dcr_core.cls_nlp_core.NLPCore.LinePages):
                     The document pages formatted in the parser.
         """
         dcr_core.core_utils.check_exists_object(
@@ -675,7 +694,7 @@ class LineTypeHeading:
 
         self._max_page = dcr_core.core_glob.text_parser.parse_result_no_pages_in_doc
 
-        for page_idx, page_json in enumerate(parser_line_pages_json):
+        for page_idx, page_json in enumerate(line_pages_json):
             self._page_idx = page_idx
             self._parser_line_lines_json = page_json[dcr_core.cls_nlp_core.NLPCore.JSON_NAME_LINES]
             self._process_page()
