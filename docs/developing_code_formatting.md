@@ -1,7 +1,7 @@
 # DCR-CORE - Developing - Code Formatting
 
-![GitHub (Pre-)Release](https://img.shields.io/github/v/release/KonnexionsGmbH/dcr?include_prereleases)
-![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/KonnexionsGmbh/dcr-core)
+![GitHub (Pre-)Release](https://img.shields.io/github/v/release/KonnexionsGmbH/dcr-core?-core?include_prereleases)
+![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/KonnexionsGmbh/dcr-core?-core)
 
 The tools **`Black`**, **`docformatter`** and **`isort`** are used for formatting the programme code:
 

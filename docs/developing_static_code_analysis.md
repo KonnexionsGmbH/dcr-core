@@ -1,7 +1,7 @@
 # DCR-CORE - Developing - Static Code Analysis
 
-![GitHub (Pre-)Release](https://img.shields.io/github/v/release/KonnexionsGmbH/dcr?include_prereleases)
-![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/KonnexionsGmbh/dcr-core)
+![GitHub (Pre-)Release](https://img.shields.io/github/v/release/KonnexionsGmbH/dcr-core?-core?include_prereleases)
+![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/KonnexionsGmbh/dcr-core?-core)
 
 The tools **`Bandit`**, **`Flake8`**, **`Mypy`** and **`Pylint`** are used for static code analysis:
 

@@ -1,7 +1,7 @@
 # DCR-CORE - Developing - Software Documentation
 
-![GitHub (Pre-)Release](https://img.shields.io/github/v/release/KonnexionsGmbH/dcr?include_prereleases)
-![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/KonnexionsGmbh/dcr-core)
+![GitHub (Pre-)Release](https://img.shields.io/github/v/release/KonnexionsGmbH/dcr-core?-core?include_prereleases)
+![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/KonnexionsGmbh/dcr-core?-core)
 
 ### 1. API Documentation
 
@@ -9,7 +9,7 @@ The creation of API documentation for functions, modules and packages is mandato
 **`pydocstyle`** is a static analysis tool for checking compliance with **`Python`** **`Docstring`** conventions.
 **`pydocstyle`** can be executed individually with **`make pydocstyle`** and is also included in both calls **`make docs`** and  **`make dev`**.
 
-The **`Docstring`** format used in **DCR** is that of [type Google](https://github.com/google/styleguide/blob/gh-pages/pyguide.md#383-functions-and-methods){:target="_blank"}. 
+The **`Docstring`** format used in **DCR-CORE** is that of [type Google](https://github.com/google/styleguide/blob/gh-pages/pyguide.md#383-functions-and-methods){:target="_blank"}. 
 For Visual Studio Code, the extension [VSCode Python Docstring Generator](https://github.com/NilsJPWerner/autoDocstring){:target="_blank"} can be used when creating API documentation.  
 With the [Pydoc-Markdown](https://github.com/NiklasRosenstein/pydoc-markdown){:target="_blank"} tool, the API documentation is extracted from the source files and put into Markdown format. 
 In this format, the API documentation can then be integrated into the user documentation.
@@ -18,7 +18,7 @@ In this format, the API documentation can then be integrated into the user docum
 
 **Package Documentation**:
 
-    Package libs: DCR libraries.
+    Package libs: DCR-CORE libraries.
 
 **Module Documentation**:
 
@@ -72,7 +72,7 @@ The remaining documents for the user documentation can be found in the file dire
 |--------------------------|-------------------------------|-------------------------------------------|
 | **`code_of_conduct.md`** | Code of Conduct               |                                           |
 | **`contributing.md`**    | Contributing Guide            |                                           |
-| **`dcr_api.md`**         | API Documentation             |                                           |
+| **`dcr-core?_api.md`**         | API Documentation             |                                           |
 | **`development.md`**     | Development                   | Notes on the software development process |
 | **`index.md`**           | Document Content Recognition  | Background, installation and user guide   |
 | **`license.md`**         | Text of the licence agreement |                                           |

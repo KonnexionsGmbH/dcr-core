@@ -16,13 +16,13 @@ endif
 
 ##                                                                            .
 ## ============================================================================
-## DCR - Document Content Recognition - make Documentation.
-##       ---------------------------------------------------------------
-##       The purpose of this Makefile is to support the whole software
-##       development process for DCR. it contains also the necessary
-##       tools for the CI activities.
-##       ---------------------------------------------------------------
-##       The available make commands are:
+## DCR-CORE - Document Content Recognition API - make Documentation.
+##            ---------------------------------------------------------------
+##            The purpose of this Makefile is to support the whole software
+##            development process for DCR-CORE. it contains also the necessary
+##            tools for the CI activities.
+##            ---------------------------------------------------------------
+##            The available make commands are:
 ## ----------------------------------------------------------------------------
 ## help:               Show this help.
 ## ----------------------------------------------------------------------------
@@ -132,7 +132,7 @@ lazydocs:           ## Generate markdown API documentation for Google-style Pyth
 	@echo PYTHONPATH=${PYTHONPATH}
 	@echo ---------------------------------------------------------------------
 	${DELETE_DOCS}
-	pipenv run lazydocs --output-path="./docs/api-docs" --overview-file="README.md" --src-base-url="https://github.com/KonnexionsGmbH/dcr/blob/main/" ${PYTHONPATH}
+	pipenv run lazydocs --output-path="./docs/api-docs" --overview-file="README.md" --src-base-url="https://github.com/KonnexionsGmbH/dcr-core/blob/main/" ${PYTHONPATH}
 	@echo Info **********  End:   lazydocs ************************************
 
 # Project documentation with Markdown.
@@ -225,6 +225,49 @@ pylint:             ## Lint the code with Pylint.
 	@echo ---------------------------------------------------------------------
 	pipenv run pylint ${PYTHONPATH}
 	@echo Info **********  End:   Pylint **************************************
+
+# pytest: helps you write better programs.
+# https://github.com/pytest-dev/pytest/
+# Configuration file: pyproject.toml
+pytest:             ## Run all tests with pytest.
+	@echo Info **********  Start: pytest **************************************
+	pipenv run pytest --version
+	@echo ---------------------------------------------------------------------
+	pipenv run pytest --dead-fixtures tests
+	pipenv run pytest --cov=${PYTHONPATH} --cov-report term-missing:skip-covered --random-order -v tests
+	@echo Info **********  End:   pytest **************************************
+pytest-ci:          ## Run all tests with pytest after test tool installation.
+	@echo Info **********  Start: pytest **************************************
+	pipenv install pytest
+	pipenv install pytest-cov
+	pipenv install pytest-deadfixtures
+	pipenv install pytest-helpers-namespace
+	pipenv install pytest-random-order
+	pipenv install roman
+	@echo ---------------------------------------------------------------------
+	pipenv run pytest --version
+	@echo ---------------------------------------------------------------------
+	pipenv run pytest --dead-fixtures tests
+	pipenv run pytest --cov=${PYTHONPATH} --cov-report term-missing:skip-covered --random-order -v tests
+	@echo Info **********  End:   pytest **************************************
+pytest-first-issue: ## Run all tests with pytest until the first issue occurs.
+	@echo Info **********  Start: pytest **************************************
+	pipenv run pytest --version
+	@echo ---------------------------------------------------------------------
+	pipenv run pytest --cov=${PYTHONPATH} --cov-report term-missing:skip-covered --random-order -v -x tests
+	@echo Info **********  End:   pytest **************************************
+pytest-issue:       ## Run only the tests with pytest which are marked with 'issue'.
+	@echo Info **********  Start: pytest **************************************
+	pipenv run pytest --version
+	@echo ---------------------------------------------------------------------
+	pipenv run pytest --cov=${PYTHONPATH} --cov-report term-missing:skip-covered -m issue -s --setup-show -v -x tests
+	@echo Info **********  End:   pytest **************************************
+pytest-module:      ## Run tests of specific module(s) with pytest - test_all & test_cfg_cls_setup & test_db_cls.
+	@echo Info **********  Start: pytest **************************************
+	pipenv run pytest --version
+	@echo ---------------------------------------------------------------------
+	pipenv run pytest --cov=${PYTHONPATH} --cov-report term-missing:skip-covered -v tests/test_db_cls_action.py
+	@echo Info **********  End:   pytest **************************************
 
 # twine: Collection of utilities for publishing packages on bPyPI.
 # https://pypi.org/project/twine/

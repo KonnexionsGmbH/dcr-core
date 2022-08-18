@@ -1,9 +1,9 @@
 # DCR-CORE - Developing - System Environment
 
-![GitHub (Pre-)Release](https://img.shields.io/github/v/release/KonnexionsGmbH/dcr?include_prereleases)
-![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/KonnexionsGmbh/dcr-core)
+![GitHub (Pre-)Release](https://img.shields.io/github/v/release/KonnexionsGmbH/dcr-core??include_prereleases)
+![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/KonnexionsGmbh/dcr-core?-core)
 
-**DCR** is developed on the operating systems **`Ubuntu 20.04 LTS`** and **`Microsoft Windows 10`**.
+**DCR-CORE** is developed on the operating systems **`Ubuntu 20.04 LTS`** and **`Microsoft Windows 10`**.
 Ubuntu is used here via the **`VM Workstation Player 16`**.
 **`Ubuntu`** can also be used in conjunction with the **`Windows Subsystem for Linux (WSL2)`**.
 

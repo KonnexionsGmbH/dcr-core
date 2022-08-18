@@ -6,3 +6,4 @@
 /dcr_core/dcr_core.egg-info/
 /dist/
 /site/
+/.coverage
