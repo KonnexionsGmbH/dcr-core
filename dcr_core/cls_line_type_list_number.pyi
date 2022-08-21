@@ -2,32 +2,6 @@
 # source code is governed by the Konnexions Public License (KX-PL)
 # Version 2020.05, that can be found in the LICENSE file.
 
-"""Determines the numbered lists of a parsed PDF document.
-
-Typical usage example:
-
-my_instance = LineTypeBullet()
-my_instance.process_document(directory_name = my_directory,
-                             document_id = my_document_id,
-                             environment_variant = my_environment_variant,
-                             file_name_curr = my_file_name_curr,
-                             file_name_orig = my_file_name_orig,
-                             line_pages_json = my_line_pages_json)
-"""
-
-"""Determines the bulleted lists of a parsed PDF document.
-
-Typical usage example:
-
-my_instance = LineTypeBullet()
-my_instance.process_document(directory_name = my_directory,
-                             document_id = my_document_id,
-                             environment_variant = my_environment_variant,
-                             file_name_curr = my_file_name_curr,
-                             file_name_orig = my_file_name_orig,
-                             line_pages_json = my_line_pages_json)
-"""
-
 """Library stub file."""
 import collections
 import pathlib
@@ -67,7 +41,6 @@ class LineTypeListNumber:
         self._rules_collection: list[LineTypeListNumber.RuleIntern] = []
         self.file_name_curr: str = ""
         self.no_lists: int = 0
-        ...
     def _finish_list(self) -> None: ...
     def _init_anti_patterns(self) -> list[tuple[str, re.Pattern[str]]]: ...
     def _init_rules(self) -> list[LineTypeListNumber.RuleExtern]: ...

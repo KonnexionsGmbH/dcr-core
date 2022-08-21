@@ -514,7 +514,7 @@ class LineTypeListBullet:
         self._finish_list()
 
         if dcr_core.core_glob.setup.is_create_extra_file_list_bullet and self._lists:
-            full_name = dcr_core.core_utils.get_full_name(
+            full_name = dcr_core.core_utils.get_full_name_from_components(
                 directory_name,
                 dcr_core.core_utils.get_stem_name(str(file_name_curr)) + "_list_bullet." + dcr_core.core_glob.FILE_TYPE_JSON,
             )

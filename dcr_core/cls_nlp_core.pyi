@@ -222,7 +222,6 @@ class NLPCore:
 
     def __init__(self) -> None:
         self._exist = None
-        ...
     @classmethod
     def _convert_roman_2_int(cls, roman_in: str) -> int: ...
     @staticmethod

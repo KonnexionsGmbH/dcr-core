@@ -28,19 +28,19 @@ def check_exists_object(  # noqa: C901
 
     Args:
         is_line_type_headers_footers (bool, optional):
-                Check an object of class LineTypeHeadersFooters. Defaults to False.
+            Check an object of class LineTypeHeadersFooters. Defaults to False.
         is_line_type_list_bullet (bool, optional):
-                Check an object of class LineTypeListBullet. Defaults to False.
+            Check an object of class LineTypeListBullet. Defaults to False.
         is_line_type_list_number (bool, optional):
-                Check an object of class LineTypeListNumber. Defaults to False.
+            Check an object of class LineTypeListNumber. Defaults to False.
         is_line_type_table (bool, optional):
-                Check an object of class LineTypeTable. Defaults to False.
+            Check an object of class LineTypeTable. Defaults to False.
         is_line_type_toc (bool, optional):
-                Check an object of class LineTypeToc. Defaults to False.
+            Check an object of class LineTypeToc. Defaults to False.
         is_setup (bool, optional):
-                Check an object of class Setup. Defaults to False.
+            Check an object of class Setup. Defaults to False.
         is_text_parser (bool, optional):
-                Check an object of class TextParser. Defaults to False.
+            Check an object of class TextParser. Defaults to False.
     """
     if is_line_type_headers_footers:
         try:
@@ -100,23 +100,71 @@ def check_exists_object(  # noqa: C901
 
 
 # ------------------------------------------------------------------
-# Get the full name from a directory name or path and a file name or path.
+# Break down the file name of an existing file into components.
 # ------------------------------------------------------------------
-def get_full_name(directory_name: pathlib.Path | str | None, file_name: pathlib.Path | str | None) -> str:
-    """Get the full name from a directory name or path and a file name or path.
+def get_components_from_full_name(
+    full_name: str,
+) -> tuple[str, str, str]:
+    """Break down the full name of an existing file into components.
+
+    The possible components are directory name, stem name and file extension.
 
     Args:
-        directory_name (pathlib.Path | str | None): Directory name or directory path.
-        file_name (pathlib.Path | str | None): File name or file path.
+        full_name (str):
+            Full file name of an existing file.
+
+    Raises:
+        FileNotFoundError:
+            If file with full name doesn't exist.
+        RuntimeError:
+            If an infinite loop is encountered along the resolution path.
 
     Returns:
-        str: Full file name.
+        tuple[str, str, str]:
+            directory name, stem name, file extension.
     """
-    if directory_name is None and file_name is None:
+    try:
+        file_name_resolved: pathlib.Path = pathlib.Path(pathlib.Path.resolve(full_name, strict=True))
+        return str(file_name_resolved.parent), file_name_resolved.stem, file_name_resolved.suffix
+    except FileNotFoundError as exc:
+        raise FileNotFoundError(f"File {full_name} doesn't exist") from exc
+    except RuntimeError as exc:
+        raise RuntimeError(f"An infinite loop is encountered along the resolution path of {full_name}") from exc
+
+
+# ------------------------------------------------------------------
+# Get the full name of a file from its components.
+# ------------------------------------------------------------------
+def get_full_name_from_components(
+    directory_name_in: pathlib.Path | str,
+    stem_name_in: str = "",
+    file_extension_in: str = "",
+) -> str:
+    """Get the full name of a file from its components.
+
+    The possible components are directory name, stem name and file extension.
+
+    Args:
+        directory_name_in (pathlib.Path or str):
+            Directory name or directory path.
+        stem_name_in (str, optional):
+            Stem name or file name including file extension. Defaults to "".
+        file_extension_in (str, optional):
+            File extension. Defaults to "".
+
+    Returns:
+        str:
+            Full file name.
+    """
+    file_name = stem_name_in if file_extension_in == "" else stem_name_in + "." + file_extension_in
+
+    if directory_name_in == "" and file_name == "":
         return ""
 
-    if isinstance(directory_name, pathlib.Path):
-        directory_name = str(directory_name)
+    if isinstance(directory_name_in, pathlib.Path):
+        directory_name = str(directory_name_in)
+    else:
+        directory_name = directory_name_in
 
     if isinstance(file_name, pathlib.Path):
         file_name = str(file_name)
@@ -131,10 +179,12 @@ def get_os_independent_name(name: pathlib.Path | str | None) -> str:
     """Get the platform-independent name..
 
     Args:
-        name (pathlib.Path | str | None): File name or file path.
+        name (pathlib.Path | str | None):
+            File name or file path.
 
     Returns:
-        str: Platform-independent name.
+        str:
+            Platform-independent name.
     """
     if name is None:
         return ""
@@ -152,10 +202,12 @@ def get_stem_name(file_name: pathlib.Path | str | None) -> str:
     """Get the stem name from a file name.
 
     Args:
-        file_name (pathlib.Path | str | None): File name or file path.
+        file_name (pathlib.Path | str | None):
+            File name or file path.
 
     Returns:
-        str: Stem name.
+        str:
+            Stem name.
     """
     if file_name is None:
         return ""
@@ -174,9 +226,9 @@ def progress_msg(is_verbose: bool, msg: str) -> None:
 
     Args:
         is_verbose (bool):
-                If true, processing results are reported.
+            If true, processing results are reported.
         msg (str):
-                Progress message.
+            Progress message.
     """
     if is_verbose:
         progress_msg_core(msg)
@@ -190,7 +242,7 @@ def progress_msg_core(msg: str) -> None:
 
     Args:
         msg (str):
-                Progress message.
+            Progress message.
     """
     final_msg = dcr_core.core_glob.LOGGER_PROGRESS_UPDATE + str(datetime.datetime.now()) + " : " + msg + "."
 
@@ -205,7 +257,7 @@ def terminate_fatal(error_msg: str) -> None:
 
     Args:
         error_msg (str):
-                Error message.
+            Error message.
     """
     print("")
     print(dcr_core.core_glob.LOGGER_FATAL_HEAD)
