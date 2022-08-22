@@ -39,6 +39,8 @@ lint: bandit flake8 pylint mypy
 help:
 	@sed -ne '/@sed/!s/## //p' $(MAKEFILE_LIST)
 
+export DCR_ENVIRONMENT_TYPE=test
+
 # Bandit is a tool designed to find common security issues in Python code.
 # https://github.com/PyCQA/bandit
 # Configuration file: none
@@ -62,7 +64,7 @@ black:              ## Format the code with Black.
 	@echo PYTHONPATH=${PYTHONPATH}
 	pipenv run black --version
 	@echo ---------------------------------------------------------------------
-	pipenv run black ${PYTHONPATH}
+	pipenv run black ${PYTHONPATH} tests
 	@echo Info **********  End:   black ***************************************
 
 # Byte-compile Python libraries
@@ -78,6 +80,16 @@ compileall:         ## Byte-compile the Python libraries.
 	${PYTHON} -m compileall
 	@echo Info **********  End:   Compile All Python Scripts ******************
 
+# Python interface to coveralls.io API
+# https://github.com/TheKevJames/coveralls-python
+# Configuration file: none
+coveralls:          ## Run all the tests and upload the coverage data to coveralls.
+	@echo Info **********  Start: coveralls ***********************************
+	pipenv run pytest --cov=${PYTHONPATH} --cov-report=xml tests
+	@echo ---------------------------------------------------------------------
+	pipenv run coveralls --service=github
+	@echo Info **********  End:   coveralls ***********************************
+
 # Formats docstrings to follow PEP 257
 # https://github.com/PyCQA/docformatter
 # Configuration file: none
@@ -88,7 +100,7 @@ docformatter:       ## Format the docstrings with docformatter.
 	@echo PYTHONPATH=${PYTHONPATH}
 	pipenv run docformatter --version
 	@echo ---------------------------------------------------------------------
-	pipenv run docformatter --in-place -r ${PYTHONPATH}
+	pipenv run docformatter --in-place -r ${PYTHONPATH} tests
 	@echo Info **********  End:   docformatter ********************************
 
 # Flake8: Your Tool For Style Guide Enforcement.
@@ -105,7 +117,7 @@ flake8:             ## Enforce the Python Style Guides with Flake8.
 	@echo PYTHONPATH=${PYTHONPATH}
 	pipenv run flake8 --version
 	@echo ---------------------------------------------------------------------
-	pipenv run flake8 ${PYTHONPATH}
+	pipenv run flake8 ${PYTHONPATH} tests
 	@echo Info **********  End:   Flake8 **************************************
 
 # isort your imports, so you don't have to.
@@ -118,7 +130,7 @@ isort:              ## Edit and sort the imports with isort.
 	@echo PYTHONPATH=${PYTHONPATH}
 	pipenv run isort --version
 	@echo ---------------------------------------------------------------------
-	pipenv run isort ${PYTHONPATH}
+	pipenv run isort ${PYTHONPATH} tests
 	@echo Info **********  End:   isort ***************************************
 
 # Generate markdown API documentation for Google-style Python docstring.
@@ -210,7 +222,7 @@ pydocstyle:         ## Check the API documentation with pydocstyle.
 	@echo PYTHONPATH=${PYTHONPATH}
 	pipenv run pydocstyle --version
 	@echo ---------------------------------------------------------------------
-	pipenv run pydocstyle --count ${PYTHONPATH}
+	pipenv run pydocstyle --count ${PYTHONPATH} tests
 	@echo Info **********  End:   pydocstyle **********************************
 
 # Pylint is a tool that checks for errors in Python code.
@@ -223,7 +235,7 @@ pylint:             ## Lint the code with Pylint.
 	@echo PYTHONPATH=${PYTHONPATH}
 	pipenv run pylint --version
 	@echo ---------------------------------------------------------------------
-	pipenv run pylint ${PYTHONPATH}
+	pipenv run pylint ${PYTHONPATH} tests
 	@echo Info **********  End:   Pylint **************************************
 
 # pytest: helps you write better programs.

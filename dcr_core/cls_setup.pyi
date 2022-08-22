@@ -12,6 +12,7 @@ class Setup:
     _DCR_CFG_CREATE_EXTRA_FILE_LIST_BULLET: ClassVar[str]
     _DCR_CFG_CREATE_EXTRA_FILE_LIST_NUMBER: ClassVar[str]
     _DCR_CFG_CREATE_EXTRA_FILE_TABLE: ClassVar[str]
+    _DCR_CFG_DIRECTORY_INBOX: ClassVar[str]
     _DCR_CFG_FILE: ClassVar[str]
     _DCR_CFG_JSON_INDENT: ClassVar[str]
     _DCR_CFG_JSON_SORT_KEYS: ClassVar[str]
@@ -135,7 +136,6 @@ class Setup:
         self._config: dict[str, str] = {}
         self._config_parser: configparser.ConfigParser = configparser.ConfigParser()
         self._exist: bool = False
-        self.db_initial_data_file: str = ""
         self.directory_inbox: str = ""
         self.directory_inbox_accepted: str = ""
         self.directory_inbox_rejected: str = ""
@@ -254,6 +254,7 @@ class Setup:
         self.tesseract_timeout: int = 0
         self.verbose_parser: str = ""
     def _check_config_core(self) -> None: ...
+    def _check_config_directory_inbox(self) -> None: ...
     def _check_config_pdf2image_type(self) -> None: ...
     def _check_config_verbose_parser(self) -> None: ...
     def _determine_config_param_boolean(

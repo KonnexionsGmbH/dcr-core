@@ -103,15 +103,16 @@ class Process:
 
         Raises:
             RuntimeError: _description_
-            RuntimeError: _description_
-            RuntimeError: _description_
-            RuntimeError: _description_
-            RuntimeError: _description_
 
         Returns:
             tuple[bool, str]: _description_
         """
-        (directory_in, stem_name_in, extension_in) = dcr_core.core_utils.get_components_from_full_name(full_name_in)
+        # Load the configuration parameters.
+        dcr_core.core_glob.setup = dcr_core.cls_setup.Setup()
+
+        (directory_in, stem_name_in, extension) = dcr_core.core_utils.get_components_from_full_name(full_name_in)
+
+        extension_in = extension.lower() if extension else extension
 
         self._file_process_init()
 

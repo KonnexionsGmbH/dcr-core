@@ -32,6 +32,7 @@ class Setup:
     _DCR_CFG_CREATE_EXTRA_FILE_LIST_BULLET: ClassVar[str] = "create_extra_file_list_bullet"
     _DCR_CFG_CREATE_EXTRA_FILE_LIST_NUMBER: ClassVar[str] = "create_extra_file_list_number"
     _DCR_CFG_CREATE_EXTRA_FILE_TABLE: ClassVar[str] = "create_extra_file_table"
+    _DCR_CFG_DIRECTORY_INBOX: ClassVar[str] = "directory_inbox"
     _DCR_CFG_FILE: ClassVar[str] = "setup.cfg"
     _DCR_CFG_JSON_INDENT: ClassVar[str] = "json_indent"
     _DCR_CFG_JSON_SORT_KEYS: ClassVar[str] = "json_sort_keys"
@@ -333,6 +334,8 @@ class Setup:
             Setup._DCR_CFG_CREATE_EXTRA_FILE_TABLE, self.is_create_extra_file_table
         )
 
+        self._check_config_directory_inbox()
+
         self.json_indent = self._determine_config_param_integer(Setup._DCR_CFG_JSON_INDENT, self.json_indent)
 
         self.is_json_sort_keys = self._determine_config_param_boolean(Setup._DCR_CFG_JSON_SORT_KEYS, self.is_json_sort_keys)
@@ -409,6 +412,18 @@ class Setup:
         self.is_verbose_lt_table = self._determine_config_param_boolean(Setup._DCR_CFG_VERBOSE_LT_TABLE, self.is_verbose_lt_table)
         self.is_verbose_lt_toc = self._determine_config_param_boolean(Setup._DCR_CFG_VERBOSE_LT_TOC, self.is_verbose_lt_toc)
         self._check_config_verbose_parser()
+
+    # -----------------------------------------------------------------------------
+    # Check the configuration parameter - directory_inbox.
+    # -----------------------------------------------------------------------------
+    def _check_config_directory_inbox(self) -> None:
+        """Check the configuration parameter - directory_inbox."""
+        if Setup._DCR_CFG_DIRECTORY_INBOX in self._config:
+            self._config[Setup._DCR_CFG_DIRECTORY_INBOX] = str(self._config[Setup._DCR_CFG_DIRECTORY_INBOX])
+
+            self.directory_inbox = dcr_core.core_utils.get_os_independent_name(str(self._config[Setup._DCR_CFG_DIRECTORY_INBOX]))
+        else:
+            dcr_core.core_utils.terminate_fatal(f"Missing configuration parameter '{Setup._DCR_CFG_DIRECTORY_INBOX}'")
 
     # ------------------------------------------------------------------
     # Check the configuration parameter - pdf2image_type.
@@ -705,6 +720,7 @@ class Setup:
                             | Setup._DCR_CFG_CREATE_EXTRA_FILE_LIST_BULLET
                             | Setup._DCR_CFG_CREATE_EXTRA_FILE_LIST_NUMBER
                             | Setup._DCR_CFG_CREATE_EXTRA_FILE_TABLE
+                            | Setup._DCR_CFG_DIRECTORY_INBOX
                             | Setup._DCR_CFG_JSON_INDENT
                             | Setup._DCR_CFG_JSON_SORT_KEYS
                             | Setup._DCR_CFG_LT_FOOTER_MAX_DISTANCE
