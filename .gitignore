@@ -6,4 +6,5 @@
 /dcr_core.egg-info/
 /dcr_core/dcr_core.egg-info/
 /dist/
+/logging_file_handler.log
 /site/

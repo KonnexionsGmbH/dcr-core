@@ -1,5 +1,7 @@
 # pylint: disable=unused-argument
 """Testing Cases."""
+import os
+
 import pytest
 
 import dcr_core
@@ -35,7 +37,7 @@ def test_case_1(fxtr_setup_empty_inbox):
     instance = dcr_core.cls_process.Process()
 
     with pytest.raises(RuntimeError) as e:
-        instance.file_process(full_name)
+        instance.document_process(full_name)
 
     assert e.type == RuntimeError, f"Wrong PDF format - file={full_name}"
     assert str(e.value)[0:6] == "01.903", f"Wrong PDF format - file={full_name}"
@@ -64,7 +66,24 @@ def test_case_2(fxtr_setup_empty_inbox):
     # -------------------------------------------------------------------------
     instance = dcr_core.cls_process.Process()
 
-    instance.file_process(full_name)
+    instance.document_process(full_name)
+
+    # -------------------------------------------------------------------------
+    pytest.helpers.verify_content_of_directory(
+        directory_name,
+        [],
+        [
+            os.path.basename(full_name),
+            stem_name + ".line.json",
+            stem_name + ".line.xml",
+            stem_name + ".line_token.json",
+            stem_name + ".page.json",
+            stem_name + ".page.xml",
+            stem_name + "." + dcr_core.core_glob.FILE_TYPE_PDF,
+            stem_name + ".word.json",
+            stem_name + ".word.xml",
+        ],
+    )
 
 
 # -----------------------------------------------------------------------------
@@ -90,7 +109,25 @@ def test_case_3(fxtr_setup_empty_inbox):
     # -------------------------------------------------------------------------
     instance = dcr_core.cls_process.Process()
 
-    instance.file_process(full_name)
+    instance.document_process(full_name)
+
+    # -------------------------------------------------------------------------
+    pytest.helpers.verify_content_of_directory(
+        directory_name,
+        [],
+        [
+            os.path.basename(full_name),
+            stem_name + ".line.json",
+            stem_name + ".line.xml",
+            stem_name + ".line_list_number.json",
+            stem_name + ".line_token.json",
+            stem_name + ".page.json",
+            stem_name + ".page.xml",
+            stem_name + "." + dcr_core.core_glob.FILE_TYPE_PDF,
+            stem_name + ".word.json",
+            stem_name + ".word.xml",
+        ],
+    )
 
 
 # -----------------------------------------------------------------------------
@@ -116,7 +153,26 @@ def test_case_4(fxtr_setup_empty_inbox):
     # -------------------------------------------------------------------------
     instance = dcr_core.cls_process.Process()
 
-    instance.file_process(full_name)
+    instance.document_process(full_name)
+
+    # -------------------------------------------------------------------------
+    pytest.helpers.verify_content_of_directory(
+        directory_name,
+        [],
+        [
+            os.path.basename(full_name),
+            stem_name + "_0.line.json",
+            stem_name + "_0.line.xml",
+            stem_name + "_0.line_table.json",
+            stem_name + "_0.line_token.json",
+            stem_name + "_0.page.json",
+            stem_name + "_0.page.xml",
+            stem_name + "_0." + dcr_core.core_glob.FILE_TYPE_PDF,
+            stem_name + "_0.word.json",
+            stem_name + "_0.word.xml",
+            stem_name + "_1." + dcr_core.core_glob.FILE_TYPE_JPEG,
+        ],
+    )
 
 
 # -----------------------------------------------------------------------------
@@ -142,7 +198,29 @@ def test_case_5(fxtr_setup_empty_inbox):
     # -------------------------------------------------------------------------
     instance = dcr_core.cls_process.Process()
 
-    instance.file_process(full_name)
+    instance.document_process(full_name)
+
+    # -------------------------------------------------------------------------
+    pytest.helpers.verify_content_of_directory(
+        directory_name,
+        [],
+        [
+            os.path.basename(full_name),
+            stem_name + "_0.line.json",
+            stem_name + "_0.line.xml",
+            stem_name + "_0.line_heading.json",
+            stem_name + "_0.line_list_bullet.json",
+            stem_name + "_0.line_list_number.json",
+            stem_name + "_0.line_token.json",
+            stem_name + "_0.page.json",
+            stem_name + "_0.page.xml",
+            stem_name + "_0." + dcr_core.core_glob.FILE_TYPE_PDF,
+            stem_name + "_0.word.json",
+            stem_name + "_0.word.xml",
+            stem_name + "_1." + dcr_core.core_glob.FILE_TYPE_JPEG,
+            stem_name + "_2." + dcr_core.core_glob.FILE_TYPE_JPEG,
+        ],
+    )
 
 
 # -----------------------------------------------------------------------------
@@ -168,7 +246,24 @@ def test_case_6(fxtr_setup_empty_inbox):
     # -------------------------------------------------------------------------
     instance = dcr_core.cls_process.Process()
 
-    instance.file_process(full_name)
+    instance.document_process(full_name)
+
+    # -------------------------------------------------------------------------
+    pytest.helpers.verify_content_of_directory(
+        directory_name,
+        [],
+        [
+            os.path.basename(full_name),
+            stem_name + ".line.json",
+            stem_name + ".line.xml",
+            stem_name + ".line_token.json",
+            stem_name + ".page.json",
+            stem_name + ".page.xml",
+            stem_name + "." + dcr_core.core_glob.FILE_TYPE_PDF,
+            stem_name + ".word.json",
+            stem_name + ".word.xml",
+        ],
+    )
 
 
 # -----------------------------------------------------------------------------
@@ -195,7 +290,7 @@ def test_case_7(fxtr_setup_empty_inbox):
     instance = dcr_core.cls_process.Process()
 
     with pytest.raises(RuntimeError) as e:
-        instance.file_process(full_name)
+        instance.document_process(full_name)
 
     assert e.type == RuntimeError, f"Unknown file extension - file={full_name}"
     assert str(e.value)[0:6] == "01.901", f"Unknown file extension - file={full_name}"

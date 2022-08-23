@@ -131,7 +131,11 @@ def get_components_from_full_name(
 
         file_name_resolved: pathlib.Path = pathlib.Path(pathlib.Path.resolve(full_name_int, strict=True))
 
-        return str(file_name_resolved.parent), file_name_resolved.stem, file_name_resolved.suffix[1:] if file_name_resolved.suffix else file_name_resolved.suffix
+        return (
+            str(file_name_resolved.parent),
+            file_name_resolved.stem,
+            file_name_resolved.suffix[1:] if file_name_resolved.suffix else file_name_resolved.suffix,
+        )
     except FileNotFoundError as exc:
         raise FileNotFoundError(f"File {full_name} doesn't exist") from exc
     except RuntimeError as exc:

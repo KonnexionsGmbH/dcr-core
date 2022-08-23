@@ -17,20 +17,39 @@ class Process:
     PANDOC_PDF_ENGINE_XELATEX: str
 
     def __init__(self) -> None:
+        self._full_name_in = None
+        self._full_name_in_directory = None
+        self._full_name_in_extension = None
+        self._full_name_in_extension_int = None
+        self._full_name_in_next_step = None
+        self._full_name_in_pandoc = None
+        self._full_name_in_parser_line = None
+        self._full_name_in_parser_page = None
+        self._full_name_in_parser_word = None
+        self._full_name_in_pdf2image = None
         self._full_name_in_pdflib = None
+        self._full_name_in_stem_name = None
+        self._full_name_in_tokenizer_line = None
+        self._full_names_in_tesseract = None
         self._is_process_pandoc = None
         self._is_process_pdf2image = None
         self._is_process_tesseract = None
-        ...
+        self._language_pandoc = None
+        self._language_tesseract = None
+    def _file_process_check_extension(self) -> None: ...
     def _file_process_init(self) -> None: ...
-    def file_process(
+    def _file_process_pandoc(self) -> None: ...
+    def _file_process_parser(self) -> None: ...
+    def _file_process_pdf2image(self) -> None: ...
+    def _file_process_pdflib(self) -> None: ...
+    def _file_process_tesseract(self) -> None: ...
+    def _file_process_tokenizer(self) -> None: ...
+    def document_process(
         self,
         full_name_in: str,
-        full_name_out_pandoc_in: str = ...,
-        full_name_out_tesseract_in: str = ...,
         language_pandoc: str = ...,
         language_tesseract: str = ...,
-    ) -> tuple[bool, str]: ...
+    ) -> None: ...
     @classmethod
     def pandoc_process(cls, full_name_in: str, full_name_out: str, language_pandoc: str) -> tuple[str, str]: ...
     @classmethod

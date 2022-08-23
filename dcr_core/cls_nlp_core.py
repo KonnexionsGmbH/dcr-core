@@ -217,6 +217,10 @@ class NLPCore:
     JSON_NAME_WORDS: ClassVar[str] = "words"
     JSON_NAME_WORD_NO: ClassVar[str] = "wordNo"
 
+    LINE_TET_DOCUMENT_OPT_LIST: ClassVar[str] = "engines={noannotation noimage text notextcolor novector}"
+    LINE_TET_PAGE_OPT_LIST: ClassVar[str] = "granularity=line"
+    LINE_XML_VARIATION: ClassVar[str] = "line."
+
     LINE_TYPE_BODY: ClassVar[str] = "b"
     LINE_TYPE_FOOTER: ClassVar[str] = "f"
     LINE_TYPE_HEADER: ClassVar[str] = "h"
@@ -227,6 +231,10 @@ class NLPCore:
     LINE_TYPE_TOC: ClassVar[str] = "toc"
 
     LOGGER_PROGRESS_UPDATE: ClassVar[str] = "Progress update "
+
+    PAGE_TET_DOCUMENT_OPT_LIST: ClassVar[str] = "engines={noannotation noimage text notextcolor novector} " + "lineseparator=U+0020"
+    PAGE_TET_PAGE_OPT_LIST: ClassVar[str] = "granularity=page"
+    PAGE_XML_VARIATION: ClassVar[str] = "page."
 
     PARSE_NAME_SPACE: ClassVar[str] = "{http://www.pdflib.com/XML/TET5/TET-5.0}"
 
@@ -277,6 +285,10 @@ class NLPCore:
 
     SEARCH_STRATEGY_LINES: ClassVar[str] = "lines"
     SEARCH_STRATEGY_TABLE: ClassVar[str] = "table"
+
+    WORD_TET_DOCUMENT_OPT_LIST: ClassVar[str] = "engines={noannotation noimage text notextcolor novector}"
+    WORD_TET_PAGE_OPT_LIST: ClassVar[str] = "granularity=word tetml={elements={line}}"
+    WORD_XML_VARIATION: ClassVar[str] = "word."
 
     # ------------------------------------------------------------------
     # Initialise the instance.

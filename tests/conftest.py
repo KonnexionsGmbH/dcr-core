@@ -2,6 +2,7 @@
 # source code is governed by the Konnexions Public License (KX-PL)
 # Version 2020.05, that can be found in the LICENSE file.
 
+# pylint: disable=redefined-outer-name
 """Test Configuration and Fixtures.
 
 Setup test configuration and store fixtures.
@@ -252,3 +253,46 @@ def setup_cfg_restore():
         os.remove(FILE_NAME_SETUP_CFG_BACKUP)
     else:
         assert False, f"The backup copy {FILE_NAME_SETUP_CFG_BACKUP} is missing"
+
+
+# -----------------------------------------------------------------------------
+# Verify the content of a file directory.
+# -----------------------------------------------------------------------------
+@pytest.helpers.register
+def verify_content_of_directory(
+    directory_name: str,
+    expected_directories: list[str],
+    expected_files: list[str],
+) -> None:
+    """Verify the content of a file directory.
+
+    Args:
+        directory_name: str:
+                   Name of the file directory to be checked.
+        expected_directories: list[str]:
+                   list of the expected directory names.
+        expected_files: list[str]:
+                   list of the expected file names.
+    """
+
+    directory_content = os.listdir(directory_name)
+
+    # check directory content against expectations
+    for elem in directory_content:
+        elem_path = dcr_core.core_utils.get_full_name_from_components(directory_name, elem)
+        if os.path.isdir(elem_path):
+            assert elem in expected_directories, f"directory {elem} was not expected"
+        else:
+            assert elem in expected_files, f"file {elem} was not expected"
+
+    # check expected directories against directory content
+    for elem in expected_directories:
+        assert elem in directory_content, f"expected directory {elem} is missing"
+        elem_path = dcr_core.core_utils.get_full_name_from_components(directory_name, elem)
+        assert os.path.isdir(dcr_core.core_utils.get_os_independent_name(elem_path)), f"expected directory {elem} is a file"
+
+    # check expected files against directory content
+    for elem in expected_files:
+        assert elem in directory_content, f"expected file {elem} is missing"
+        elem_path = dcr_core.core_utils.get_full_name_from_components(directory_name, elem)
+        assert os.path.isfile(elem_path), f"expected file {elem} is a directory"
