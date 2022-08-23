@@ -86,13 +86,13 @@ tokenizer_spacy: dcr_core.cls_tokenizer_spacy.TokenizerSpacy
 # -----------------------------------------------------------------------------
 # Initialising the logging functionality.
 # -----------------------------------------------------------------------------
-def initialise_logger() -> None:
+def initialise_logger(logger_name="dcr_core") -> None:
     """Initialise the root logging functionality."""
     with open(dcr_core.core_glob.LOGGER_CFG_FILE, "r", encoding=dcr_core.core_glob.FILE_ENCODING_DEFAULT) as file_handle:
         log_config = yaml.safe_load(file_handle.read())
 
     logging.config.dictConfig(log_config)
-    dcr_core.core_glob.logger = logging.getLogger("launcher.py")
+    dcr_core.core_glob.logger = logging.getLogger(logger_name)
     dcr_core.core_glob.logger.setLevel(logging.DEBUG)
 
     dcr_core.core_utils.progress_msg_core("The logger is configured and ready")

@@ -301,19 +301,19 @@ class NLPCore:
     # Convert a roman numeral to integer.
     # ------------------------------------------------------------------
     @classmethod
-    def _convert_roman_2_int(cls, roman_in: str) -> int:
+    def _convert_roman_2_int(cls, roman: str) -> int:
         """Convert a roman numeral to integer.
 
         Args:
-            roman_in (str):
+            roman (str):
                     The roman numeral.
 
         Returns:
             int:    The corresponding integer.
         """
-        roman = re.match(  # type: ignore
+        roman_int = re.match(  # type: ignore
             "(m{0,3}(cm|cd|d?c{0,3})(xc|xl|l?x{0,3})(ix|iv|v?i{0,3}))" + "|(M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3}))",
-            roman_in,
+            roman,
         ).group(0)
 
         tallies = {
@@ -329,15 +329,15 @@ class NLPCore:
 
         integer: int = 0
 
-        for i in range(len(roman) - 1):
-            left = roman[i]
-            right = roman[i + 1]
+        for i in range(len(roman_int) - 1):
+            left = roman_int[i]
+            right = roman_int[i + 1]
             if tallies[left] < tallies[right]:
                 integer -= tallies[left]
             else:
                 integer += tallies[left]
 
-        integer += tallies[roman[-1]]
+        integer += tallies[roman_int[-1]]
 
         return integer
 

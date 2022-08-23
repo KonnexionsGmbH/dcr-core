@@ -146,40 +146,40 @@ def get_components_from_full_name(
 # Get the full name of a file from its components.
 # ------------------------------------------------------------------
 def get_full_name_from_components(
-    directory_name_in: pathlib.Path | str,
-    stem_name_in: str = "",
-    file_extension_in: str = "",
+    directory_name: pathlib.Path | str,
+    stem_name: str = "",
+    file_extension: str = "",
 ) -> str:
     """Get the full name of a file from its components.
 
     The possible components are directory name, stem name and file extension.
 
     Args:
-        directory_name_in (pathlib.Path or str):
+        directory_name (pathlib.Path or str):
             Directory name or directory path.
-        stem_name_in (str, optional):
+        stem_name (str, optional):
             Stem name or file name including file extension. Defaults to "".
-        file_extension_in (str, optional):
+        file_extension (str, optional):
             File extension. Defaults to "".
 
     Returns:
         str:
             Full file name.
     """
-    file_name = stem_name_in if file_extension_in == "" else stem_name_in + "." + file_extension_in
+    file_name_int = stem_name if file_extension == "" else stem_name + "." + file_extension
 
-    if directory_name_in == "" and file_name == "":
+    if directory_name == "" and file_name_int == "":
         return ""
 
-    if isinstance(directory_name_in, pathlib.Path):
-        directory_name = str(directory_name_in)
+    if isinstance(directory_name, pathlib.Path):
+        directory_name_int = str(directory_name)
     else:
-        directory_name = directory_name_in
+        directory_name_int = directory_name
 
-    if isinstance(file_name, pathlib.Path):
-        file_name = str(file_name)
+    if isinstance(file_name_int, pathlib.Path):
+        file_name_int = str(file_name_int)
 
-    return get_os_independent_name(str(os.path.join(directory_name, file_name)))
+    return get_os_independent_name(str(os.path.join(directory_name_int, file_name_int)))
 
 
 # ------------------------------------------------------------------

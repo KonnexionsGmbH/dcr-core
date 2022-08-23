@@ -15,11 +15,11 @@ handlers:
   file_handler:
     class: logging.FileHandler
     level: DEBUG
-    filename: logging_file_handler.log
+    filename: logging_dcr_core.log
     formatter: extended
 
 loggers:
-  launcher.py:
+  dcr_core:
     handlers: [ console ]
 root:
   handlers: [ file_handler ]

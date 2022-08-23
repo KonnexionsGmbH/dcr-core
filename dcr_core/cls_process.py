@@ -7,7 +7,6 @@
 import glob
 import os.path
 
-import cls_nlp_core
 import defusedxml
 import defusedxml.ElementTree
 import fitz
@@ -181,13 +180,13 @@ class Process:
     def _file_process_pdflib(self):
         self._full_name_in_parser_line = dcr_core.core_utils.get_full_name_from_components(
             self._full_name_in_directory,
-            self._full_name_in_stem_name + "_" + cls_nlp_core.NLPCore.LINE_XML_VARIATION + dcr_core.core_glob.FILE_TYPE_XML,
+            self._full_name_in_stem_name + "_" + dcr_core.cls_nlp_core.NLPCore.LINE_XML_VARIATION + dcr_core.core_glob.FILE_TYPE_XML,
         )
         return_code, error_msg = Process.pdflib_process(
             full_name_in=self._full_name_in_pdflib,
             full_name_out=self._full_name_in_parser_line,
-            document_opt_list=cls_nlp_core.NLPCore.LINE_TET_DOCUMENT_OPT_LIST,
-            page_opt_list=cls_nlp_core.NLPCore.LINE_TET_PAGE_OPT_LIST,
+            document_opt_list=dcr_core.cls_nlp_core.NLPCore.LINE_TET_DOCUMENT_OPT_LIST,
+            page_opt_list=dcr_core.cls_nlp_core.NLPCore.LINE_TET_PAGE_OPT_LIST,
         )
         if return_code != "ok":
             raise RuntimeError(error_msg)
@@ -195,13 +194,13 @@ class Process:
         if dcr_core.core_glob.setup.is_tetml_page:
             self._full_name_in_parser_page = dcr_core.core_utils.get_full_name_from_components(
                 self._full_name_in_directory,
-                self._full_name_in_stem_name + "_" + cls_nlp_core.NLPCore.PAGE_XML_VARIATION + dcr_core.core_glob.FILE_TYPE_XML,
+                self._full_name_in_stem_name + "_" + dcr_core.cls_nlp_core.NLPCore.PAGE_XML_VARIATION + dcr_core.core_glob.FILE_TYPE_XML,
             )
             return_code, error_msg = Process.pdflib_process(
                 full_name_in=self._full_name_in_pdflib,
                 full_name_out=self._full_name_in_parser_page,
-                document_opt_list=cls_nlp_core.NLPCore.PAGE_TET_DOCUMENT_OPT_LIST,
-                page_opt_list=cls_nlp_core.NLPCore.PAGE_TET_PAGE_OPT_LIST,
+                document_opt_list=dcr_core.cls_nlp_core.NLPCore.PAGE_TET_DOCUMENT_OPT_LIST,
+                page_opt_list=dcr_core.cls_nlp_core.NLPCore.PAGE_TET_PAGE_OPT_LIST,
             )
             if return_code != "ok":
                 raise RuntimeError(error_msg)
@@ -209,13 +208,13 @@ class Process:
         if dcr_core.core_glob.setup.is_tetml_word:
             self._full_name_in_parser_word = dcr_core.core_utils.get_full_name_from_components(
                 self._full_name_in_directory,
-                self._full_name_in_stem_name + "_" + cls_nlp_core.NLPCore.WORD_XML_VARIATION + dcr_core.core_glob.FILE_TYPE_XML,
+                self._full_name_in_stem_name + "_" + dcr_core.cls_nlp_core.NLPCore.WORD_XML_VARIATION + dcr_core.core_glob.FILE_TYPE_XML,
             )
             return_code, error_msg = Process.pdflib_process(
                 full_name_in=self._full_name_in_pdflib,
                 full_name_out=self._full_name_in_parser_word,
-                document_opt_list=cls_nlp_core.NLPCore.WORD_TET_DOCUMENT_OPT_LIST,
-                page_opt_list=cls_nlp_core.NLPCore.WORD_TET_PAGE_OPT_LIST,
+                document_opt_list=dcr_core.cls_nlp_core.NLPCore.WORD_TET_DOCUMENT_OPT_LIST,
+                page_opt_list=dcr_core.cls_nlp_core.NLPCore.WORD_TET_PAGE_OPT_LIST,
             )
             if return_code != "ok":
                 raise RuntimeError(error_msg)
@@ -278,9 +277,9 @@ class Process:
         dcr_core.core_glob.initialise_logger()
 
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
-        dcr_core.core_glob.logger.debug(f"param full_name_in      ={full_name_in}")
-        dcr_core.core_glob.logger.debug(f"param language_pandoc   ={language_pandoc}")
-        dcr_core.core_glob.logger.debug(f"param language_tesseract={language_tesseract}")
+        dcr_core.core_glob.logger.debug("param full_name_in      =%s", full_name_in)
+        dcr_core.core_glob.logger.debug("param language_pandoc   =%s", language_pandoc)
+        dcr_core.core_glob.logger.debug("param language_tesseract=%s", language_tesseract)
 
         self._file_process_init()
 
@@ -348,9 +347,9 @@ class Process:
                                otherwise a corresponding error code and error message.
         """
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
-        dcr_core.core_glob.logger.debug(f"param full_name_in   ={full_name_in}")
-        dcr_core.core_glob.logger.debug(f"param full_name_out  ={full_name_out}")
-        dcr_core.core_glob.logger.debug(f"param language_pandoc={language_pandoc}")
+        dcr_core.core_glob.logger.debug("param full_name_in   =%s", full_name_in)
+        dcr_core.core_glob.logger.debug("param full_name_out  =%s", full_name_out)
+        dcr_core.core_glob.logger.debug("param language_pandoc=%s", language_pandoc)
 
         # Convert the document
         extra_args = [
@@ -418,11 +417,11 @@ class Process:
                                otherwise a corresponding error code and error message.
         """
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
-        dcr_core.core_glob.logger.debug(f"param document_id   ={document_id}")
-        dcr_core.core_glob.logger.debug(f"param file_name_orig={file_name_orig}")
-        dcr_core.core_glob.logger.debug(f"param full_name_in  ={full_name_in}")
-        dcr_core.core_glob.logger.debug(f"param full_name_out ={full_name_out}")
-        dcr_core.core_glob.logger.debug(f"param no_pdf_pages  ={no_pdf_pages}")
+        dcr_core.core_glob.logger.debug("param document_id   =%i", document_id)
+        dcr_core.core_glob.logger.debug("param file_name_orig=%s", file_name_orig)
+        dcr_core.core_glob.logger.debug("param full_name_in  =%s", full_name_in)
+        dcr_core.core_glob.logger.debug("param full_name_out =%s", full_name_out)
+        dcr_core.core_glob.logger.debug("param no_pdf_pages  =%i", no_pdf_pages)
 
         try:
             # Create the Element tree object
@@ -490,7 +489,7 @@ class Process:
                                       otherwise a corresponding error code and error message.
         """
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
-        dcr_core.core_glob.logger.debug(f"param full_name_in={full_name_in}")
+        dcr_core.core_glob.logger.debug("param full_name_in=%s", full_name_in)
 
         try:
             images = pdf2image.convert_from_path(full_name_in)
@@ -597,10 +596,10 @@ class Process:
                                otherwise a corresponding error code and error message.
         """
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
-        dcr_core.core_glob.logger.debug(f"param full_name_in     ={full_name_in}")
-        dcr_core.core_glob.logger.debug(f"param full_name_out    ={full_name_out}")
-        dcr_core.core_glob.logger.debug(f"param document_opt_list={document_opt_list}")
-        dcr_core.core_glob.logger.debug(f"param page_opt_list    ={page_opt_list}")
+        dcr_core.core_glob.logger.debug("param full_name_in     =%s", full_name_in)
+        dcr_core.core_glob.logger.debug("param full_name_out    =%s", full_name_out)
+        dcr_core.core_glob.logger.debug("param document_opt_list=%s", document_opt_list)
+        dcr_core.core_glob.logger.debug("param page_opt_list    =%s", page_opt_list)
 
         tet = PDFlib.TET.TET()
 
@@ -676,9 +675,9 @@ class Process:
                                       otherwise a corresponding error code and error message.
         """
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
-        dcr_core.core_glob.logger.debug(f"param full_name_in      ={full_name_in}")
-        dcr_core.core_glob.logger.debug(f"param full_name_out     ={full_name_out}")
-        dcr_core.core_glob.logger.debug(f"param language_tesseract={language_tesseract}")
+        dcr_core.core_glob.logger.debug("param full_name_in      =%s", full_name_in)
+        dcr_core.core_glob.logger.debug("param full_name_out     =%s", full_name_out)
+        dcr_core.core_glob.logger.debug("param language_tesseract=%s", language_tesseract)
 
         children: list[str] = []
 
@@ -771,14 +770,14 @@ class Process:
                                otherwise a corresponding error code and error message.
         """
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
-        dcr_core.core_glob.logger.debug(f"param document_id    ={document_id}")
-        dcr_core.core_glob.logger.debug(f"param file_name_orig ={file_name_orig}")
-        dcr_core.core_glob.logger.debug(f"param full_name_in   ={full_name_in}")
-        dcr_core.core_glob.logger.debug(f"param full_name_out  ={full_name_out}")
-        dcr_core.core_glob.logger.debug(f"param no_lines_footer={no_lines_footer}")
-        dcr_core.core_glob.logger.debug(f"param no_lines_header={no_lines_header}")
-        dcr_core.core_glob.logger.debug(f"param no_lines_toc   ={no_lines_toc}")
-        dcr_core.core_glob.logger.debug(f"param pipeline_name  ={pipeline_name}")
+        dcr_core.core_glob.logger.debug("param document_id    =%i", document_id)
+        dcr_core.core_glob.logger.debug("param file_name_orig =%s", file_name_orig)
+        dcr_core.core_glob.logger.debug("param full_name_in   =%s", full_name_in)
+        dcr_core.core_glob.logger.debug("param full_name_out  =%s", full_name_out)
+        dcr_core.core_glob.logger.debug("param no_lines_footer=%i", no_lines_footer)
+        dcr_core.core_glob.logger.debug("param no_lines_header=%i", no_lines_header)
+        dcr_core.core_glob.logger.debug("param no_lines_toc   =%i", no_lines_toc)
+        dcr_core.core_glob.logger.debug("param pipeline_name  =%s", pipeline_name)
 
         try:
             dcr_core.core_glob.text_parser = dcr_core.cls_text_parser.TextParser.from_files(
