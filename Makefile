@@ -1,14 +1,18 @@
 .DEFAULT_GOAL := help
 
 ifeq ($(OS),Windows_NT)
+	export CREATE_DIST=if not exist dist mkdir dist
+	export CREATE_DOCS=if not exist docs\\api-docs mkdir docs\\api-docs
 	export DELETE_DIST=del /f /q dist\\*
 	export DELETE_DOCS=del /f /q docs\\api-docs\\*
 	export MYPYPATH=
 	export PYTHON=python
 	export PYTHONPATH=dcr_core
 else
+	export CREATE_DIST=mkdir -p dist
+	export CREATE_DOCS=mkdir -p docs/api-docs
 	export DELETE_DIST=rm -f dist/*
-	export DELETE_DOCS=rm -f dist/api-docs/*
+	export DELETE_DOCS=rm -f docs/api-docs/*
 	export MYPYPATH=
 	export PYTHON=python3
 	export PYTHONPATH=dcr_core
@@ -138,11 +142,13 @@ isort:              ## Edit and sort the imports with isort.
 # Configuration file: n/a
 lazydocs:           ## Generate markdown API documentation for Google-style Python docstring.
 	@echo Info **********  Start: lazydocs ************************************
+	@echo CREATE_DOCS=${CREATE_DOCS}
 	@echo DELETE_DOCS=${DELETE_DOCS}
 	@echo MYPYPATH  =${MYPYPATH}
 	@echo PYTHON    =${PYTHON}
 	@echo PYTHONPATH=${PYTHONPATH}
 	@echo ---------------------------------------------------------------------
+	${CREATE_DOCS}
 	${DELETE_DOCS}
 	pipenv run lazydocs --output-path="./docs/api-docs" --overview-file="README.md" --src-base-url="https://github.com/KonnexionsGmbH/dcr-core/blob/main/" ${PYTHONPATH}
 	@echo Info **********  End:   lazydocs ************************************
@@ -285,6 +291,7 @@ pytest-module:      ## Run tests of specific module(s) with pytest - test_all & 
 # https://pypi.org/project/twine/
 upload-prod:        ## Upload the distribution archive to PyPi.
 	@echo Info **********  Start: twine prod **********************************
+	@echo CREATE_DIST=${CREATE_DIST}
 	@echo DELETE_DIST=${DELETE_DIST}
 	@echo MYPYPATH  =${MYPYPATH}
 	@echo PYTHON    =${PYTHON}
@@ -292,6 +299,7 @@ upload-prod:        ## Upload the distribution archive to PyPi.
 	${PYTHON} -m build --version
 	${PYTHON} -m twine --version
 	@echo ---------------------------------------------------------------------
+	${CREATE_DIST}
 	${DELETE_DIST}
 	${PYTHON} -m build
 	${PYTHON} -m twine upload -p $(SECRET_PYPI) -u wwe dist/*
@@ -302,6 +310,7 @@ upload-prod:        ## Upload the distribution archive to PyPi.
 # https://test.pypi.org
 upload-test:        ## Upload the distribution archive to Test PyPi.
 	@echo Info **********  Start: twine test **********************************
+	@echo CREATE_DIST=${CREATE_DIST}
 	@echo DELETE_DIST=${DELETE_DIST}
 	@echo MYPYPATH   =${MYPYPATH}
 	@echo PYTHON     =${PYTHON}
@@ -309,6 +318,7 @@ upload-test:        ## Upload the distribution archive to Test PyPi.
 	${PYTHON} -m build --version
 	${PYTHON} -m twine --version
 	@echo ---------------------------------------------------------------------
+	${CREATE_DIST}
 	${DELETE_DIST}
 	${PYTHON} -m build
 	${PYTHON} -m twine upload -p $(SECRET_TEST_PYPI) -r testpypi -u wwe --verbose dist/*
