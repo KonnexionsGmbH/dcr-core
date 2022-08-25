@@ -14,7 +14,7 @@ handlers:
 
   file_handler:
     class: logging.FileHandler
-    level: DEBUG
+    level: INFO
     filename: logging_dcr_core.log
     formatter: extended
 

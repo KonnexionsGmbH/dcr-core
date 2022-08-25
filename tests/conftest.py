@@ -216,7 +216,7 @@ def fxtr_setup_empty_inbox(
 
     yield
 
-    fxtr_rmdir_opt(dcr_core.core_glob.setup.directory_inbox)
+    # wwe fxtr_rmdir_opt(dcr_core.core_glob.setup.directory_inbox)
 
     setup_cfg_restore()
 

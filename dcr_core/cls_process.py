@@ -6,6 +6,7 @@
 
 import glob
 import os.path
+from typing import ClassVar
 
 import defusedxml
 import defusedxml.ElementTree
@@ -35,45 +36,59 @@ class Process:
     # ------------------------------------------------------------------
     # Class variables.
     # ------------------------------------------------------------------
-    ERROR_01_901 = "01.901 Issue (p_i): Document rejected because of unknown file extension='{extension}'."
-    ERROR_01_903 = "01.903 Issue (p_i): Runtime error with fitz.open() processing of file '{file_name}' " + "- error: '{error_msg}'."
+    ERROR_01_901: ClassVar[str] = "01.901 Issue (p_i): Document rejected because of unknown file extension='{extension}'."
+    ERROR_01_903: ClassVar[str] = (
+        "01.903 Issue (p_i): Runtime error with fitz.open() processing of file '{file_name}' " + "- error: '{error_msg}'."
+    )
 
-    ERROR_21_901 = (
+    ERROR_21_901: ClassVar[str] = (
         "21.901 Issue (p_2_i): Processing file '{full_name}' with pdf2image failed - " + "error type: '{error_type}' - error: '{error}'."
     )
-    ERROR_31_902 = (
+    ERROR_31_902: ClassVar[str] = (
         "31.902 Issue (n_2_p): The file '{full_name}' cannot be converted to an "
         + "'pdf' document - "
         + "error type: '{error_type}' - error: '{error_msg}'."
     )
-    ERROR_41_901 = (
+    ERROR_41_901: ClassVar[str] = (
         "41.901 Issue (ocr): Converting the file '{full_name}' with Tesseract OCR failed - "
         + "error type: '{error_type}' - error: '{error}'."
     )
-    ERROR_51_901 = (
+    ERROR_51_901: ClassVar[str] = (
         "51.901 Issue (tet): Opening document '{full_name}' - " + "error no: '{error_no}' - api: '{api_name}' - error: '{error}'."
     )
-    ERROR_61_901 = "61.901 Issue (s_p_j): Parsing the file '{full_name}' failed - " + "error type: '{error_type}' - error: '{error}'."
-    ERROR_71_901 = "71.901 Issue (tkn): Tokenizing the file '{full_name}' failed - " + "error type: '{error_type}' - error: '{error}'."
+    ERROR_61_901: ClassVar[str] = (
+        "61.901 Issue (s_p_j): Parsing the file '{full_name}' failed - " + "error type: '{error_type}' - error: '{error}'."
+    )
+    ERROR_71_901: ClassVar[str] = (
+        "71.901 Issue (tkn): Tokenizing the file '{full_name}' failed - " + "error type: '{error_type}' - error: '{error}'."
+    )
 
-    PANDOC_PDF_ENGINE_LULATEX = "lulatex"
-    PANDOC_PDF_ENGINE_XELATEX = "xelatex"
+    PANDOC_PDF_ENGINE_LULATEX: ClassVar[str] = "lulatex"
+    PANDOC_PDF_ENGINE_XELATEX: ClassVar[str] = "xelatex"
 
     # ------------------------------------------------------------------
     # Initialise the instance.
     # ------------------------------------------------------------------
     def __init__(self) -> None:
         """Initialise the instance."""
+        self._document_id: int = 0
+
         self._full_name_in: str = ""
         self._full_name_in_directory: str = ""
         self._full_name_in_extension: str = ""
         self._full_name_in_extension_int: str = ""
+        self._full_name_in_next_step: str = ""
+        self._full_name_in_pandoc: str = ""
         self._full_name_in_parser_line: str = ""
         self._full_name_in_parser_page: str = ""
         self._full_name_in_parser_word: str = ""
         self._full_name_in_pdf2image: str = ""
         self._full_name_in_pdflib: str = ""
         self._full_name_in_stem_name: str = ""
+        self._full_name_in_tokenizer_line: str = ""
+        self._full_name_in_tokenizer_page: str = ""
+        self._full_name_in_tokenizer_word: str = ""
+        self._full_name_orig: str = ""
         self._full_names_in_tesseract: list[str] = []
 
         self._is_process_pandoc: bool = False
@@ -81,11 +96,16 @@ class Process:
         self._is_process_tesseract: bool = False
 
         self._language_pandoc: str = ""
+        self._language_spacy: str = ""
         self._language_tesseract: str = ""
+
+        self._no_pdf_pages: int = 0
 
         self._exist = True
 
-    def _file_process_check_extension(self):
+    def _document_process_check_extension(self):
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+
         if self._full_name_in_extension_int == dcr_core.core_glob.FILE_TYPE_PDF:
             try:
                 if bool("".join([page.get_text() for page in fitz.open(self._full_name_in)])):
@@ -106,11 +126,15 @@ class Process:
         else:
             raise RuntimeError(Process.ERROR_01_901.replace("{extension}", self._full_name_in_extension_int))
 
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
+
     # ------------------------------------------------------------------
     # Initialize the document recognition process.
     # ------------------------------------------------------------------
-    def _file_process_init(self) -> None:
+    def _document_process_init(self) -> None:
         """Initialize the document recognition process."""
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+
         self._full_name_in: str = ""
         self._full_name_in_directory: str = ""
         self._full_name_in_extension: str = ""
@@ -130,12 +154,16 @@ class Process:
         self._language_pandoc: str = ""
         self._language_tesseract: str = ""
 
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
+
     # ------------------------------------------------------------------
     # Convert the document to pdf format using Pandoc.
     # ------------------------------------------------------------------
-    def _file_process_pandoc(self):
+    def _document_process_pandoc(self):
         """Convert the document to pdf format using Pandoc."""
         if self._is_process_pandoc:
+            dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+
             self._full_name_in_pdflib = dcr_core.core_utils.get_full_name_from_components(
                 self._full_name_in_directory, self._full_name_in_stem_name, dcr_core.core_glob.FILE_TYPE_PDF
             )
@@ -147,41 +175,130 @@ class Process:
             if return_code != "ok":
                 raise RuntimeError(error_msg)
 
+            dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
+
     # ------------------------------------------------------------------
-    # Convert the pdf document to an image file using pdf2image.
+    # Extracting the text from the PDF document.
     # ------------------------------------------------------------------
-    def _file_process_parser(self):
+    def _document_process_parser(self):
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+
         self._full_name_in_tokenizer_line = dcr_core.core_utils.get_full_name_from_components(
-            self._full_name_in_directory, self._full_name_in_stem_name + "_line", dcr_core.core_glob.FILE_TYPE_JSON
+            self._full_name_in_directory,
+            self._full_name_in_stem_name + "." + dcr_core.cls_nlp_core.NLPCore.LINE_XML_VARIATION + dcr_core.core_glob.FILE_TYPE_JSON,
         )
+
+        self._full_name_in_tokenizer_page = dcr_core.core_utils.get_full_name_from_components(
+            self._full_name_in_directory,
+            self._full_name_in_stem_name + "." + dcr_core.cls_nlp_core.NLPCore.PAGE_XML_VARIATION + dcr_core.core_glob.FILE_TYPE_JSON,
+        )
+
+        self._full_name_in_tokenizer_word = dcr_core.core_utils.get_full_name_from_components(
+            self._full_name_in_directory,
+            self._full_name_in_stem_name + "." + dcr_core.cls_nlp_core.NLPCore.WORD_XML_VARIATION + dcr_core.core_glob.FILE_TYPE_JSON,
+        )
+
+        for (full_name_in_parser, full_name_in_tokenizer, tetml_type, is_parsing_line, is_parsing_page, is_parsing_word,) in (
+            (
+                self._full_name_in_parser_line,
+                self._full_name_in_tokenizer_line,
+                dcr_core.cls_nlp_core.NLPCore.TETML_TYPE_LINE,
+                True,
+                False,
+                False,
+            ),
+            (
+                self._full_name_in_parser_page,
+                self._full_name_in_tokenizer_page,
+                dcr_core.cls_nlp_core.NLPCore.TETML_TYPE_PAGE,
+                False,
+                True,
+                False,
+            ),
+            (
+                self._full_name_in_parser_word,
+                self._full_name_in_tokenizer_word,
+                dcr_core.cls_nlp_core.NLPCore.TETML_TYPE_WORD,
+                False,
+                False,
+                True,
+            ),
+        ):
+            self._document_process_parser_tetml_type(
+                full_name_in_parser,
+                full_name_in_tokenizer,
+                tetml_type,
+                is_parsing_line,
+                is_parsing_page,
+                is_parsing_word,
+            )
+
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
+
+    # ------------------------------------------------------------------
+    # Extracting the text from the PDF document.
+    # ------------------------------------------------------------------
+    def _document_process_parser_tetml_type(
+        self,
+        full_name_in_parser,
+        full_name_in_tokenizer,
+        tetml_type,
+        is_parsing_line,
+        is_parsing_page,
+        is_parsing_word,
+    ):
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+
+        dcr_core.core_utils.progress_msg_core(f"Start of processing for tetml type '{tetml_type}'")
+
+        dcr_core.core_glob.setup.is_parsing_line = is_parsing_line
+        dcr_core.core_glob.setup.is_parsing_page = is_parsing_page
+        dcr_core.core_glob.setup.is_parsing_word = is_parsing_word
+
         return_code, error_msg = Process.parser_process(
-            self._full_name_in_parser_line,
-            self._full_name_in_tokenizer_line,
-            self._language_tesseract,
+            full_name_in_parser,
+            full_name_in_tokenizer,
+            self._no_pdf_pages,
+            self._document_id,
+            self._full_name_orig,
         )
         if return_code != "ok":
             raise RuntimeError(error_msg)
 
+        dcr_core.core_utils.progress_msg_core(f"End   of processing for tetml type '{tetml_type}'")
+
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
+
     # ------------------------------------------------------------------
     # Convert the pdf document to an image file using pdf2image.
     # ------------------------------------------------------------------
-    def _file_process_pdf2image(self):
+    def _document_process_pdf2image(self):
         """Convert the pdf document to an image file using pdf2image."""
         if self._is_process_pdf2image:
+            dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+
             return_code, error_msg, self._full_names_out_pdf2image = Process.pdf2image_process(
                 self._full_name_in_pdf2image,
             )
             if return_code != "ok":
                 raise RuntimeError(error_msg)
 
+            dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
+
     # ------------------------------------------------------------------
     # Convert the pdf document to an image file using pdf2image.
     # ------------------------------------------------------------------
-    def _file_process_pdflib(self):
+    def _document_process_pdflib(self):
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+
+        # noinspection PyUnresolvedReferences
+        self._no_pdf_pages = len(PyPDF2.PdfReader(self._full_name_in_pdflib).pages)
+
         self._full_name_in_parser_line = dcr_core.core_utils.get_full_name_from_components(
             self._full_name_in_directory,
-            self._full_name_in_stem_name + "_" + dcr_core.cls_nlp_core.NLPCore.LINE_XML_VARIATION + dcr_core.core_glob.FILE_TYPE_XML,
+            self._full_name_in_stem_name + "." + dcr_core.cls_nlp_core.NLPCore.LINE_XML_VARIATION + dcr_core.core_glob.FILE_TYPE_XML,
         )
+
         return_code, error_msg = Process.pdflib_process(
             full_name_in=self._full_name_in_pdflib,
             full_name_out=self._full_name_in_parser_line,
@@ -194,7 +311,7 @@ class Process:
         if dcr_core.core_glob.setup.is_tetml_page:
             self._full_name_in_parser_page = dcr_core.core_utils.get_full_name_from_components(
                 self._full_name_in_directory,
-                self._full_name_in_stem_name + "_" + dcr_core.cls_nlp_core.NLPCore.PAGE_XML_VARIATION + dcr_core.core_glob.FILE_TYPE_XML,
+                self._full_name_in_stem_name + "." + dcr_core.cls_nlp_core.NLPCore.PAGE_XML_VARIATION + dcr_core.core_glob.FILE_TYPE_XML,
             )
             return_code, error_msg = Process.pdflib_process(
                 full_name_in=self._full_name_in_pdflib,
@@ -208,7 +325,7 @@ class Process:
         if dcr_core.core_glob.setup.is_tetml_word:
             self._full_name_in_parser_word = dcr_core.core_utils.get_full_name_from_components(
                 self._full_name_in_directory,
-                self._full_name_in_stem_name + "_" + dcr_core.cls_nlp_core.NLPCore.WORD_XML_VARIATION + dcr_core.core_glob.FILE_TYPE_XML,
+                self._full_name_in_stem_name + "." + dcr_core.cls_nlp_core.NLPCore.WORD_XML_VARIATION + dcr_core.core_glob.FILE_TYPE_XML,
             )
             return_code, error_msg = Process.pdflib_process(
                 full_name_in=self._full_name_in_pdflib,
@@ -219,12 +336,16 @@ class Process:
             if return_code != "ok":
                 raise RuntimeError(error_msg)
 
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
+
     # ------------------------------------------------------------------
     # Convert the image file to a pdf file using Tesseract OCR.
     # ------------------------------------------------------------------
-    def _file_process_tesseract(self):
+    def _document_process_tesseract(self):
         """Convert the image file to a pdf file using Tesseract OCR."""
         if self._is_process_tesseract:
+            dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+
             self._full_name_in_pdflib = dcr_core.core_utils.get_full_name_from_components(
                 self._full_name_in_directory, self._full_name_in_stem_name, dcr_core.core_glob.FILE_TYPE_PDF
             )
@@ -236,20 +357,33 @@ class Process:
             if return_code != "ok":
                 raise RuntimeError(error_msg)
 
+            dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
+
     # ------------------------------------------------------------------
     # Convert the pdf document to an image file using pdf2image.
     # ------------------------------------------------------------------
-    def _file_process_tokenizer(self):
+    def _document_process_tokenizer(self):
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+
+        try:
+            dcr_core.core_glob.tokenizer_spacy.exists()
+        except AttributeError:
+            dcr_core.core_glob.tokenizer_spacy = dcr_core.cls_tokenizer_spacy.TokenizerSpacy()
+
         self._full_name_in_next_step = dcr_core.core_utils.get_full_name_from_components(
-            self._full_name_in_directory, self._full_name_in_stem_name, dcr_core.core_glob.FILE_TYPE_PDF
+            self._full_name_in_directory,
+            self._full_name_in_stem_name + ".line_token." + dcr_core.core_glob.FILE_TYPE_JSON,
         )
+
         return_code, error_msg = Process.tokenizer_process(
             self._full_name_in_tokenizer_line,
             self._full_name_in_next_step,
-            self._language_tesseract,
+            self._language_spacy,
         )
         if return_code != "ok":
             raise RuntimeError(error_msg)
+
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
 
     # ------------------------------------------------------------------
     # Document content recognition for a specific file.
@@ -257,7 +391,10 @@ class Process:
     def document_process(
         self,
         full_name_in: str,
+        document_id: int = -1,
+        full_name_orig: str = "",
         language_pandoc: str = "",
+        language_spacy: str = "",
         language_tesseract: str = "",
     ) -> None:
         """Document content recognition for a specific file.
@@ -265,8 +402,14 @@ class Process:
         Args:
             full_name_in (str):
                 Full file name of the document file.
+            document_id (int, optional):
+                Document identification. Defaults to -1.
+            full_name_orig (str, optional):
+                Original full file name. Defaults to "".
             language_pandoc (str, optional):
                 Pandoc language code. Defaults to "".
+            language_spacy (str, optional):
+                spaCy language code. Defaults to "".
             language_tesseract (str, optional):
                 Tesseract OCR language code. Defaults to "".
 
@@ -278,14 +421,21 @@ class Process:
 
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
         dcr_core.core_glob.logger.debug("param full_name_in      =%s", full_name_in)
-        dcr_core.core_glob.logger.debug("param language_pandoc   =%s", language_pandoc)
-        dcr_core.core_glob.logger.debug("param language_tesseract=%s", language_tesseract)
+        dcr_core.core_glob.logger.debug("param document_id       =%i", document_id)
 
-        self._file_process_init()
+        self._document_process_init()
 
+        self._document_id = document_id
         self._full_name_in = full_name_in
-        self._language_pandoc = language_pandoc
-        self._language_tesseract = language_tesseract
+        self._full_name_orig = full_name_orig if full_name_orig else full_name_in
+        self._language_pandoc = language_pandoc if language_pandoc else dcr_core.cls_nlp_core.NLPCore.LANGUAGE_PANDOC_DEFAULT
+        self._language_spacy = language_spacy if language_spacy else dcr_core.cls_nlp_core.NLPCore.LANGUAGE_SPACY_DEFAULT
+        self._language_tesseract = language_tesseract if language_tesseract else dcr_core.cls_nlp_core.NLPCore.LANGUAGE_TESSERACT_DEFAULT
+
+        dcr_core.core_glob.logger.debug("param full_name_orig    =%s", self._full_name_orig)
+        dcr_core.core_glob.logger.debug("param language_pandoc   =%s", self._language_pandoc)
+        dcr_core.core_glob.logger.debug("param language_spacy    =%s", self._language_spacy)
+        dcr_core.core_glob.logger.debug("param language_tesseract=%s", self._language_tesseract)
 
         # Load the configuration parameters.
         dcr_core.core_glob.setup = dcr_core.cls_setup.Setup()
@@ -300,13 +450,19 @@ class Process:
             self._full_name_in_extension.lower() if self._full_name_in_extension else self._full_name_in_extension
         )
 
-        self._file_process_check_extension()
+        self._document_process_check_extension()
 
-        self._file_process_pandoc()
+        self._document_process_pandoc()
 
-        self._file_process_pdf2image()
+        self._document_process_pdf2image()
 
-        self._file_process_tesseract()
+        self._document_process_tesseract()
+
+        self._document_process_pdflib()
+
+        self._document_process_parser()
+
+        self._document_process_tokenizer()
 
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
 
@@ -347,9 +503,9 @@ class Process:
                                otherwise a corresponding error code and error message.
         """
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
-        dcr_core.core_glob.logger.debug("param full_name_in   =%s", full_name_in)
-        dcr_core.core_glob.logger.debug("param full_name_out  =%s", full_name_out)
-        dcr_core.core_glob.logger.debug("param language_pandoc=%s", language_pandoc)
+        dcr_core.core_glob.logger.debug("param full_name_in       =%s", full_name_in)
+        dcr_core.core_glob.logger.debug("param full_name_out      =%s", full_name_out)
+        dcr_core.core_glob.logger.debug("param language_pandoc    =%s", language_pandoc)
 
         # Convert the document
         extra_args = [
@@ -372,9 +528,11 @@ class Process:
                 .replace("{error_type}", str(type(err)))
                 .replace("{error}", str(err))
             )
+            dcr_core.core_glob.logger.debug("return               =%s", (error_msg[:6], error_msg))
             dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
             return error_msg[:6], error_msg
 
+        dcr_core.core_glob.logger.debug("return               =%s", dcr_core.core_glob.RETURN_OK)
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
 
         return dcr_core.core_glob.RETURN_OK
@@ -389,7 +547,7 @@ class Process:
         full_name_out: str,
         no_pdf_pages: int,
         document_id: int = -1,
-        file_name_orig: str = dcr_core.core_glob.INFORMATION_NOT_YET_AVAILABLE,
+        full_name_orig: str = dcr_core.core_glob.INFORMATION_NOT_YET_AVAILABLE,
     ) -> tuple[str, str]:
         """Extract the text from the PDF document.
 
@@ -407,7 +565,7 @@ class Process:
             document_id (int, optional):
                     The identification number of the document.
                     Defaults to -1.
-            file_name_orig (str, optional):
+            full_name_orig (str, optional):
                     The file name of the originating document.
                     Defaults to dcr_core.core_glob.INFORMATION_NOT_YET_AVAILABLE.
 
@@ -418,7 +576,7 @@ class Process:
         """
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
         dcr_core.core_glob.logger.debug("param document_id   =%i", document_id)
-        dcr_core.core_glob.logger.debug("param file_name_orig=%s", file_name_orig)
+        dcr_core.core_glob.logger.debug("param full_name_orig=%s", full_name_orig)
         dcr_core.core_glob.logger.debug("param full_name_in  =%s", full_name_in)
         dcr_core.core_glob.logger.debug("param full_name_out =%s", full_name_out)
         dcr_core.core_glob.logger.debug("param no_pdf_pages  =%i", no_pdf_pages)
@@ -442,7 +600,7 @@ class Process:
                             environment_variant=dcr_core.core_glob.setup.environment_variant,
                             file_name_curr=os.path.basename(full_name_in),
                             file_name_next=full_name_out,
-                            file_name_orig=file_name_orig,
+                            file_name_orig=full_name_orig,
                             no_pdf_pages=no_pdf_pages,
                             parent=child,
                             parent_tag=child_tag,
@@ -455,9 +613,11 @@ class Process:
                 .replace("{error_type}", str(type(err)))
                 .replace("{error}", str(err))
             )
+            dcr_core.core_glob.logger.debug("return              =%s", (error_msg[:6], error_msg))
             dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
             return error_msg[:6], error_msg
 
+        dcr_core.core_glob.logger.debug("return              =%s", dcr_core.core_glob.RETURN_OK)
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
 
         return dcr_core.core_glob.RETURN_OK
@@ -549,9 +709,13 @@ class Process:
                 .replace("{error_type}", str(type(err)))
                 .replace("{error}", str(err))
             )
+            dcr_core.core_glob.logger.debug("return            =%s", (error_msg[:6], error_msg, []))
             dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
             return error_msg[:6], error_msg, []
 
+        dcr_core.core_glob.logger.debug(
+            "return            =%s", (dcr_core.core_glob.RETURN_OK[0], dcr_core.core_glob.RETURN_OK[1], children)
+        )
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
 
         return dcr_core.core_glob.RETURN_OK[0], dcr_core.core_glob.RETURN_OK[1], children
@@ -612,6 +776,7 @@ class Process:
                 .replace("{api_name}", tet.get_apiname() + "()")
                 .replace("{error}", tet.get_errmsg())
             )
+            dcr_core.core_glob.logger.debug("return                 =%s", (error_msg[:6], error_msg))
             dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
             return error_msg[:6], error_msg
 
@@ -629,6 +794,7 @@ class Process:
 
         tet.delete()
 
+        dcr_core.core_glob.logger.debug("return                 =%s", dcr_core.core_glob.LOGGER_END)
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
 
         return dcr_core.core_glob.RETURN_OK
@@ -710,6 +876,7 @@ class Process:
                     .replace("{error_type}", str(type(err)))
                     .replace("{error}", str(err))
                 )
+                dcr_core.core_glob.logger.debug("return                  =%s", (error_msg[:6], error_msg, []))
                 dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
                 return error_msg[:6], error_msg, []
 
@@ -717,6 +884,9 @@ class Process:
         with open(full_name_out, "wb") as file_handle:
             pdf_writer.write(file_handle)
 
+        dcr_core.core_glob.logger.debug(
+            "return                  =%s", (dcr_core.core_glob.RETURN_OK[0], dcr_core.core_glob.RETURN_OK[1], children)
+        )
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
 
         return dcr_core.core_glob.RETURN_OK[0], dcr_core.core_glob.RETURN_OK[1], children
@@ -731,7 +901,7 @@ class Process:
         full_name_out: str,
         pipeline_name: str,
         document_id: int = -1,
-        file_name_orig: str = dcr_core.core_glob.INFORMATION_NOT_YET_AVAILABLE,
+        full_name_orig: str = "",
         no_lines_footer: int = -1,
         no_lines_header: int = -1,
         no_lines_toc: int = -1,
@@ -751,9 +921,8 @@ class Process:
             document_id (int, optional):
                     The identification number of the document.
                     Defaults to -1.
-            file_name_orig (str, optional):
-                    The file name of the originating document.
-                    Defaults to dcr_core.core_glob.INFORMATION_NOT_YET_AVAILABLE.
+            full_name_orig (str, optional):
+                    The file name of the originating document. Defaults to "".
             no_lines_footer (int, optional):
                     Total number of footer lines.
                     Defaults to -1.
@@ -771,8 +940,8 @@ class Process:
         """
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
         dcr_core.core_glob.logger.debug("param document_id    =%i", document_id)
-        dcr_core.core_glob.logger.debug("param file_name_orig =%s", file_name_orig)
         dcr_core.core_glob.logger.debug("param full_name_in   =%s", full_name_in)
+        dcr_core.core_glob.logger.debug("param full_name_orig =%s", full_name_orig)
         dcr_core.core_glob.logger.debug("param full_name_out  =%s", full_name_out)
         dcr_core.core_glob.logger.debug("param no_lines_footer=%i", no_lines_footer)
         dcr_core.core_glob.logger.debug("param no_lines_header=%i", no_lines_header)
@@ -787,7 +956,7 @@ class Process:
             dcr_core.core_glob.tokenizer_spacy.process_document(
                 document_id=document_id,
                 file_name_next=full_name_out,
-                file_name_orig=file_name_orig,
+                file_name_orig=full_name_orig,
                 no_lines_footer=no_lines_footer,
                 no_lines_header=no_lines_header,
                 no_lines_toc=no_lines_toc,
@@ -800,9 +969,11 @@ class Process:
                 .replace("{error_type}", str(type(err)))
                 .replace("{error}", str(err))
             )
+            dcr_core.core_glob.logger.debug("return               =%s", (error_msg[:6], error_msg))
             dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
             return error_msg[:6], error_msg
 
+        dcr_core.core_glob.logger.debug("return               =%s", dcr_core.core_glob.RETURN_OK)
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
 
         return dcr_core.core_glob.RETURN_OK

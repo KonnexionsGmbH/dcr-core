@@ -62,8 +62,6 @@ class NLPCore:
     # ------------------------------------------------------------------
     # Class variables.
     # ------------------------------------------------------------------
-    CODE_SPACY_DEFAULT: ClassVar[str] = "en_core_web_trf"
-
     ENVIRONMENT_TYPE_DEV: ClassVar[str] = "dev"
     ENVIRONMENT_TYPE_PROD: ClassVar[str] = "prod"
     ENVIRONMENT_TYPE_TEST: ClassVar[str] = "test"
@@ -217,6 +215,10 @@ class NLPCore:
     JSON_NAME_WORDS: ClassVar[str] = "words"
     JSON_NAME_WORD_NO: ClassVar[str] = "wordNo"
 
+    LANGUAGE_PANDOC_DEFAULT: ClassVar[str] = "en"
+    LANGUAGE_SPACY_DEFAULT: ClassVar[str] = "en_core_web_trf"
+    LANGUAGE_TESSERACT_DEFAULT: ClassVar[str] = "eng"
+
     LINE_TET_DOCUMENT_OPT_LIST: ClassVar[str] = "engines={noannotation noimage text notextcolor novector}"
     LINE_TET_PAGE_OPT_LIST: ClassVar[str] = "granularity=line"
     LINE_XML_VARIATION: ClassVar[str] = "line."
@@ -286,6 +288,10 @@ class NLPCore:
     SEARCH_STRATEGY_LINES: ClassVar[str] = "lines"
     SEARCH_STRATEGY_TABLE: ClassVar[str] = "table"
 
+    TETML_TYPE_LINE: ClassVar[str] = "line"
+    TETML_TYPE_PAGE: ClassVar[str] = "page"
+    TETML_TYPE_WORD: ClassVar[str] = "word"
+
     WORD_TET_DOCUMENT_OPT_LIST: ClassVar[str] = "engines={noannotation noimage text notextcolor novector}"
     WORD_TET_PAGE_OPT_LIST: ClassVar[str] = "granularity=word tetml={elements={line}}"
     WORD_XML_VARIATION: ClassVar[str] = "word."
@@ -295,7 +301,11 @@ class NLPCore:
     # ------------------------------------------------------------------
     def __init__(self) -> None:
         """Initialise the instance."""
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+
         self._exist = True
+
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
 
     # ------------------------------------------------------------------
     # Convert a roman numeral to integer.

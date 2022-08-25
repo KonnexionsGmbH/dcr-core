@@ -197,7 +197,10 @@ pipenv-dev:         ## Install the package dependencies for development.
 	${PYTHON} -m pipenv --rm
 	exit
 	${PYTHON} -m pipenv update --dev
+	pipenv run spacy download en_core_web_trf
+	@echo ---------------------------------------------------------------------
 	pipenv run pip freeze
+	@echo ---------------------------------------------------------------------
 	${PYTHON} --version
 	${PYTHON} -m pip --version
 	@echo Info **********  End:   Installation of Development Packages ********
@@ -213,7 +216,10 @@ pipenv-prod:        ## Install the package dependencies for production.
 	${PYTHON} -m pipenv --rm
 	exit
 	${PYTHON} -m pipenv update
+	pipenv run spacy download en_core_web_trf
+	@echo ---------------------------------------------------------------------
 	pipenv run pip freeze
+	@echo ---------------------------------------------------------------------
 	${PYTHON} --version
 	${PYTHON} -m pip --version
 	@echo Info **********  End:   Installation of Production Packages *********

@@ -45,6 +45,8 @@ class TokenizerSpacy:
     # ------------------------------------------------------------------
     def __init__(self) -> None:
         """Initialise the instance."""
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+
         dcr_core.core_utils.check_exists_object(
             is_setup=True,
         )
@@ -55,7 +57,7 @@ class TokenizerSpacy:
         self._no_lines_footer: int = 0
         self._no_lines_header: int = 0
         self._no_lines_toc: int = 0
-        self._pipeline_name = dcr_core.cls_nlp_core.NLPCore.CODE_SPACY_DEFAULT
+        self._pipeline_name = dcr_core.cls_nlp_core.NLPCore.LANGUAGE_SPACY_DEFAULT
         self._nlp: spacy.Language = spacy.load(self._pipeline_name)
 
         self._column_no: int = 0
@@ -97,6 +99,8 @@ class TokenizerSpacy:
         self.token_pages: TokenizerSpacy.TokenPages = []
 
         self._exist = True
+
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
 
     # ------------------------------------------------------------------
     # Finish current document.
@@ -774,6 +778,15 @@ class TokenizerSpacy:
             pipeline_name (str):
                     SpaCy pipeline name.
         """
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+        dcr_core.core_glob.logger.debug("param document_id    =%i", document_id)
+        dcr_core.core_glob.logger.debug("param file_name_next =%s", file_name_next)
+        dcr_core.core_glob.logger.debug("param file_name_orig =%s", file_name_orig)
+        dcr_core.core_glob.logger.debug("param no_lines_footer=%i", no_lines_footer)
+        dcr_core.core_glob.logger.debug("param no_lines_header=%i", no_lines_header)
+        dcr_core.core_glob.logger.debug("param no_lines_toc   =%i", no_lines_toc)
+        dcr_core.core_glob.logger.debug("param pipeline_name  =%s", pipeline_name)
+
         dcr_core.core_utils.check_exists_object(
             is_setup=True,
             is_text_parser=True,
@@ -812,6 +825,8 @@ class TokenizerSpacy:
         self._finish_document()
 
         self._processing_ok = True
+
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
 
     # ------------------------------------------------------------------
     # Check the processing result.

@@ -39,6 +39,8 @@ class TextParser:
     # ------------------------------------------------------------------
     def __init__(self) -> None:
         """Initialise the instance."""
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+
         dcr_core.core_utils.check_exists_object(
             is_setup=True,
         )
@@ -101,6 +103,8 @@ class TextParser:
 
         self._exist = True
 
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
+
     # ------------------------------------------------------------------
     # Create the data structure line: document.
     # ------------------------------------------------------------------
@@ -121,6 +125,8 @@ class TextParser:
     # }
     # ------------------------------------------------------------------
     def _create_line_document(self) -> None:
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+
         with open(self._full_name, "w", encoding=dcr_core.core_glob.FILE_ENCODING_DEFAULT) as file_handle:
             json.dump(
                 {
@@ -143,6 +149,8 @@ class TextParser:
                 indent=dcr_core.core_glob.setup.json_indent,
                 sort_keys=dcr_core.core_glob.setup.is_json_sort_keys,
             )
+
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
 
     # ------------------------------------------------------------------
     # Create the data structure line: lines.
@@ -212,6 +220,8 @@ class TextParser:
     # }
     # ------------------------------------------------------------------
     def _create_page_document(self) -> None:
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+
         with open(self._full_name, "w", encoding=dcr_core.core_glob.FILE_ENCODING_DEFAULT) as file_handle:
             json.dump(
                 {
@@ -225,6 +235,8 @@ class TextParser:
                 indent=dcr_core.core_glob.setup.json_indent,
                 sort_keys=dcr_core.core_glob.setup.is_json_sort_keys,
             )
+
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
 
     # ------------------------------------------------------------------
     # Create the data structure page: pages.
@@ -278,6 +290,8 @@ class TextParser:
     # }
     # ------------------------------------------------------------------
     def _create_word_document(self) -> None:
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+
         with open(self._full_name, "w", encoding=dcr_core.core_glob.FILE_ENCODING_DEFAULT) as file_handle:
             json.dump(
                 {
@@ -293,6 +307,8 @@ class TextParser:
                 indent=dcr_core.core_glob.setup.json_indent,
                 sort_keys=dcr_core.core_glob.setup.is_json_sort_keys,
             )
+
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
 
     # ------------------------------------------------------------------
     # Create the data structure word: lines.
@@ -1026,6 +1042,12 @@ class TextParser:
             TextParser:
                     The object instance matching the specified database row.
         """
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+        dcr_core.core_glob.logger.debug("param file_encoding =%s", file_encoding)
+        dcr_core.core_glob.logger.debug("param full_name_line=%s", full_name_line)
+        dcr_core.core_glob.logger.debug("param full_name_page=%s", full_name_page)
+        dcr_core.core_glob.logger.debug("param full_name_word=%s", full_name_word)
+
         instance = cls()
 
         if full_name_line != "":
@@ -1039,6 +1061,8 @@ class TextParser:
         if full_name_word != "":
             with open(full_name_word, "r", encoding=file_encoding) as file_handle:
                 instance._parse_result_word_document = json.load(file_handle)
+
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
 
         return instance
 
@@ -1079,6 +1103,17 @@ class TextParser:
             parent_tag (str):
                     Parent tag.
         """
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+        dcr_core.core_glob.logger.debug("param directory_name     =%s", directory_name)
+        dcr_core.core_glob.logger.debug("param document_id        =%i", document_id)
+        dcr_core.core_glob.logger.debug("param environment_variant=%s", environment_variant)
+        dcr_core.core_glob.logger.debug("param file_name_curr     =%s", file_name_curr)
+        dcr_core.core_glob.logger.debug("param file_name_next     =%s", file_name_next)
+        dcr_core.core_glob.logger.debug("param file_name_orig     =%s", file_name_orig)
+        dcr_core.core_glob.logger.debug("param no_pdf_pages       =%i", no_pdf_pages)
+        dcr_core.core_glob.logger.debug("param parent             =%s", parent)
+        dcr_core.core_glob.logger.debug("param parent_tag         =%s", parent_tag)
+
         dcr_core.core_utils.check_exists_object(
             is_setup=True,
         )
@@ -1118,3 +1153,5 @@ class TextParser:
                     self._parse_tag_pages(child_tag, child)
 
         self._debug_xml_element_all("End  ", parent_tag, parent.attrib, parent.text)
+
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
