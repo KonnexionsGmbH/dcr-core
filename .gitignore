@@ -1,6 +1,6 @@
 /*.log
 /.coverage
-/.history/dcr_core/
+/.history/*/
 /.idea/
 /.vscode/
 /PDFlib/

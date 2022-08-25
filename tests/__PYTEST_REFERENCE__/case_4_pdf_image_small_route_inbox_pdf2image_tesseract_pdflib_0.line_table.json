@@ -1,0 +1,338 @@
+{
+    "documentId": 3,
+    "documentFileName": "case_4_pdf_image_small_route_inbox_pdf2image_tesseract_pdflib.pdf",
+    "noTablesInDocument": 3,
+    "tables": [
+        {
+            "firstRowLLX": 81.26,
+            "firstRowURX": 1440.0,
+            "noColumns": 6,
+            "noRows": 2,
+            "pageNoFrom": 1,
+            "pageNoTill": 1,
+            "tableNo": 1,
+            "rows": [
+                {
+                    "firstColumnLLX": 81.26,
+                    "lastColumnURX": 1440.0,
+                    "noColumns": 3,
+                    "rowNo": 1,
+                    "columns": [
+                        {
+                            "columnNo": 1,
+                            "coordLLX": 81.26,
+                            "coordURX": 544.27,
+                            "lineNo": 1,
+                            "lineNoPage": 8,
+                            "paragraphNo": 5,
+                            "text": "From the product headquarters"
+                        },
+                        {
+                            "columnNo": 2,
+                            "coordLLX": 1110.86,
+                            "coordURX": 1222.97,
+                            "lineNo": 1,
+                            "lineNoPage": 9,
+                            "paragraphNo": 5,
+                            "text": ""
+                        },
+                        {
+                            "columnNo": 3,
+                            "coordLLX": 1376.23,
+                            "coordURX": 1440.0,
+                            "lineNo": 1,
+                            "lineNoPage": 9,
+                            "paragraphNo": 5,
+                            "text": ""
+                        }
+                    ]
+                },
+                {
+                    "firstColumnLLX": 82.28,
+                    "lastColumnURX": 1427.24,
+                    "noColumns": 3,
+                    "rowNo": 2,
+                    "columns": [
+                        {
+                            "columnNo": 1,
+                            "coordLLX": 82.28,
+                            "coordURX": 967.2,
+                            "lineNo": 1,
+                            "lineNoPage": 9,
+                            "paragraphNo": 6,
+                            "text": "In the image business, the new model turning on of the A3 high-speed,"
+                        },
+                        {
+                            "columnNo": 2,
+                            "coordLLX": 1110.86,
+                            "coordURX": 1217.31,
+                            "lineNo": 1,
+                            "lineNoPage": 10,
+                            "paragraphNo": 7,
+                            "text": "usually _"
+                        },
+                        {
+                            "columnNo": 3,
+                            "coordLLX": 1376.23,
+                            "coordURX": 1427.24,
+                            "lineNo": 1,
+                            "lineNoPage": 11,
+                            "paragraphNo": 8,
+                            "text": "_bad"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "firstRowLLX": 78.17,
+            "firstRowURX": 1613.42,
+            "noColumns": 15,
+            "noRows": 4,
+            "pageNoFrom": 1,
+            "pageNoTill": 1,
+            "tableNo": 2,
+            "rows": [
+                {
+                    "firstColumnLLX": 78.17,
+                    "lastColumnURX": 1613.42,
+                    "noColumns": 5,
+                    "rowNo": 1,
+                    "columns": [
+                        {
+                            "columnNo": 1,
+                            "coordLLX": 78.17,
+                            "coordURX": 335.2,
+                            "lineNo": 1,
+                            "lineNoPage": 30,
+                            "paragraphNo": 18,
+                            "text": "In-house activity",
+                            "columnSpan": 5
+                        },
+                        {
+                            "columnNo": 1,
+                            "coordLLX": 78.17,
+                            "coordURX": 619.89,
+                            "lineNo": 1,
+                            "lineNoPage": 31,
+                            "paragraphNo": 19,
+                            "text": "The attestation intended for each office in",
+                            "columnSpan": 5
+                        },
+                        {
+                            "columnNo": 6,
+                            "coordLLX": 639.77,
+                            "coordURX": 1487.66,
+                            "lineNo": 1,
+                            "lineNoPage": 32,
+                            "paragraphNo": 20,
+                            "text": "Shinbashi, Kansai, and Tokai was acquired in ",
+                            "columnSpan": 3
+                        },
+                        {
+                            "columnNo": 6,
+                            "coordLLX": 1245.6,
+                            "coordURX": 1487.66,
+                            "lineNo": 2,
+                            "lineNoPage": 33,
+                            "paragraphNo": 20,
+                            "text": "environment ISO in",
+                            "columnSpan": 3
+                        },
+                        {
+                            "columnNo": 9,
+                            "coordLLX": 1507.89,
+                            "coordURX": 1613.42,
+                            "lineNo": 1,
+                            "lineNoPage": 34,
+                            "paragraphNo": 21,
+                            "text": "February,"
+                        }
+                    ]
+                },
+                {
+                    "firstColumnLLX": 77.14,
+                    "lastColumnURX": 1614.38,
+                    "noColumns": 7,
+                    "rowNo": 2,
+                    "columns": [
+                        {
+                            "columnNo": 1,
+                            "coordLLX": 77.14,
+                            "coordURX": 184.46,
+                            "lineNo": 1,
+                            "lineNoPage": 35,
+                            "paragraphNo": 22,
+                            "text": "2006. In"
+                        },
+                        {
+                            "columnNo": 2,
+                            "coordLLX": 204.69,
+                            "coordURX": 300.96,
+                            "lineNo": 1,
+                            "lineNoPage": 36,
+                            "paragraphNo": 23,
+                            "text": "addition,"
+                        },
+                        {
+                            "columnNo": 3,
+                            "coordLLX": 328.12,
+                            "coordURX": 337.75,
+                            "lineNo": 1,
+                            "lineNoPage": 37,
+                            "paragraphNo": 24,
+                            "text": "it"
+                        },
+                        {
+                            "columnNo": 4,
+                            "coordLLX": 354.86,
+                            "coordURX": 531.09,
+                            "lineNo": 1,
+                            "lineNoPage": 38,
+                            "paragraphNo": 25,
+                            "text": "participates in"
+                        },
+                        {
+                            "columnNo": 5,
+                            "coordLLX": 551.32,
+                            "coordURX": 821.83,
+                            "lineNo": 1,
+                            "lineNoPage": 39,
+                            "paragraphNo": 26,
+                            "text": "the minus 6% that is",
+                            "columnSpan": 2
+                        },
+                        {
+                            "columnNo": 7,
+                            "coordLLX": 841.37,
+                            "coordURX": 849.09,
+                            "lineNo": 1,
+                            "lineNoPage": 40,
+                            "paragraphNo": 27,
+                            "text": "a"
+                        },
+                        {
+                            "columnNo": 8,
+                            "coordLLX": 870.17,
+                            "coordURX": 1614.38,
+                            "lineNo": 1,
+                            "lineNoPage": 41,
+                            "paragraphNo": 28,
+                            "text": "national movement of the global warming prevention, and",
+                            "columnSpan": 2
+                        }
+                    ]
+                },
+                {
+                    "firstColumnLLX": 79.2,
+                    "lastColumnURX": 1614.35,
+                    "noColumns": 2,
+                    "rowNo": 3,
+                    "columns": [
+                        {
+                            "columnNo": 1,
+                            "coordLLX": 79.2,
+                            "coordURX": 1614.35,
+                            "lineNo": 1,
+                            "lineNoPage": 42,
+                            "paragraphNo": 29,
+                            "text": "\"Culbiz\" is ",
+                            "columnSpan": 9
+                        },
+                        {
+                            "columnNo": 1,
+                            "coordLLX": 219.09,
+                            "coordURX": 1614.35,
+                            "lineNo": 2,
+                            "lineNoPage": 43,
+                            "paragraphNo": 29,
+                            "text": "done. The scandal of the enterprise has frequently generated is received, concern is sent to the system maintenance",
+                            "columnSpan": 9
+                        }
+                    ]
+                },
+                {
+                    "firstColumnLLX": 167.66,
+                    "lastColumnURX": 818.46,
+                    "noColumns": 1,
+                    "rowNo": 4,
+                    "columns": [
+                        {
+                            "columnNo": 1,
+                            "coordLLX": 167.66,
+                            "coordURX": 818.46,
+                            "lineNo": 1,
+                            "lineNoPage": 44,
+                            "paragraphNo": 30,
+                            "text": "including the observance of the law in recent years.",
+                            "columnSpan": 9
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "firstRowLLX": 77.17,
+            "firstRowURX": 1070.02,
+            "noColumns": 4,
+            "noRows": 2,
+            "pageNoFrom": 1,
+            "pageNoTill": 1,
+            "tableNo": 3,
+            "rows": [
+                {
+                    "firstColumnLLX": 77.17,
+                    "lastColumnURX": 1070.02,
+                    "noColumns": 2,
+                    "rowNo": 1,
+                    "columns": [
+                        {
+                            "columnNo": 1,
+                            "coordLLX": 77.17,
+                            "coordURX": 966.57,
+                            "lineNo": 1,
+                            "lineNoPage": 49,
+                            "paragraphNo": 32,
+                            "text": "employee's individual information appropriately in 2001, and the activ-"
+                        },
+                        {
+                            "columnNo": 2,
+                            "coordLLX": 1051.23,
+                            "coordURX": 1070.02,
+                            "lineNo": 1,
+                            "lineNoPage": 50,
+                            "paragraphNo": 33,
+                            "text": "40"
+                        }
+                    ]
+                },
+                {
+                    "firstColumnLLX": 78.2,
+                    "lastColumnURX": 1070.41,
+                    "noColumns": 2,
+                    "rowNo": 2,
+                    "columns": [
+                        {
+                            "columnNo": 1,
+                            "coordLLX": 78.2,
+                            "coordURX": 963.57,
+                            "lineNo": 1,
+                            "lineNoPage": 51,
+                            "paragraphNo": 34,
+                            "text": "ity based on the protection of individual information policy is continued."
+                        },
+                        {
+                            "columnNo": 2,
+                            "coordLLX": 1052.27,
+                            "coordURX": 1070.41,
+                            "lineNo": 1,
+                            "lineNoPage": 52,
+                            "paragraphNo": 35,
+                            "text": "30"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

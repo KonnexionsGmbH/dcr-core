@@ -14,6 +14,23 @@ import dcr_core.cls_process
 
 
 # -----------------------------------------------------------------------------
+# Verify the created files.
+# -----------------------------------------------------------------------------
+def verify_created_files(directory_name, test_files):
+    """Verify the created files."""
+    pytest.helpers.verify_content_of_directory(
+        directory_name,
+        [],
+        test_files,
+    )
+
+    pytest.helpers.compare_with_reference_files(
+        directory_name,
+        test_files,
+    )
+
+
+# -----------------------------------------------------------------------------
 # Test Case 1.
 # -----------------------------------------------------------------------------
 def test_case_1(fxtr_setup_empty_inbox):
@@ -46,7 +63,6 @@ def test_case_1(fxtr_setup_empty_inbox):
 # -----------------------------------------------------------------------------
 # Test Case 2.
 # -----------------------------------------------------------------------------
-@pytest.mark.issue
 def test_case_2(fxtr_setup_empty_inbox):
     """Test Case 2."""
     # -------------------------------------------------------------------------
@@ -70,21 +86,19 @@ def test_case_2(fxtr_setup_empty_inbox):
     instance.document_process(full_name)
 
     # -------------------------------------------------------------------------
-    pytest.helpers.verify_content_of_directory(
-        directory_name,
-        [],
-        [
-            os.path.basename(full_name),
-            stem_name + ".line.json",
-            stem_name + ".line.xml",
-            stem_name + ".line_token.json",
-            stem_name + ".page.json",
-            stem_name + ".page.xml",
-            stem_name + "." + dcr_core.core_glob.FILE_TYPE_PDF,
-            stem_name + ".word.json",
-            stem_name + ".word.xml",
-        ],
-    )
+    test_files = [
+        os.path.basename(full_name),
+        stem_name + ".line.json",
+        stem_name + ".line.xml",
+        stem_name + ".line_token.json",
+        stem_name + ".page.json",
+        stem_name + ".page.xml",
+        stem_name + "." + dcr_core.core_glob.FILE_TYPE_PDF,
+        stem_name + ".word.json",
+        stem_name + ".word.xml",
+    ]
+
+    verify_created_files(directory_name, test_files)
 
 
 # -----------------------------------------------------------------------------
@@ -113,22 +127,20 @@ def test_case_3(fxtr_setup_empty_inbox):
     instance.document_process(full_name)
 
     # -------------------------------------------------------------------------
-    pytest.helpers.verify_content_of_directory(
-        directory_name,
-        [],
-        [
-            os.path.basename(full_name),
-            stem_name + ".line.json",
-            stem_name + ".line.xml",
-            stem_name + ".line_list_number.json",
-            stem_name + ".line_token.json",
-            stem_name + ".page.json",
-            stem_name + ".page.xml",
-            stem_name + "." + dcr_core.core_glob.FILE_TYPE_PDF,
-            stem_name + ".word.json",
-            stem_name + ".word.xml",
-        ],
-    )
+    test_files = [
+        os.path.basename(full_name),
+        stem_name + ".line.json",
+        stem_name + ".line.xml",
+        stem_name + ".line_list_number.json",
+        stem_name + ".line_token.json",
+        stem_name + ".page.json",
+        stem_name + ".page.xml",
+        stem_name + "." + dcr_core.core_glob.FILE_TYPE_PDF,
+        stem_name + ".word.json",
+        stem_name + ".word.xml",
+    ]
+
+    verify_created_files(directory_name, test_files)
 
 
 # -----------------------------------------------------------------------------
@@ -157,23 +169,21 @@ def test_case_4(fxtr_setup_empty_inbox):
     instance.document_process(full_name)
 
     # -------------------------------------------------------------------------
-    pytest.helpers.verify_content_of_directory(
-        directory_name,
-        [],
-        [
-            os.path.basename(full_name),
-            stem_name + "_0.line.json",
-            stem_name + "_0.line.xml",
-            stem_name + "_0.line_table.json",
-            stem_name + "_0.line_token.json",
-            stem_name + "_0.page.json",
-            stem_name + "_0.page.xml",
-            stem_name + "_0." + dcr_core.core_glob.FILE_TYPE_PDF,
-            stem_name + "_0.word.json",
-            stem_name + "_0.word.xml",
-            stem_name + "_1." + dcr_core.core_glob.FILE_TYPE_JPEG,
-        ],
-    )
+    test_files = [
+        os.path.basename(full_name),
+        stem_name + "_0.line.json",
+        stem_name + "_0.line.xml",
+        stem_name + "_0.line_table.json",
+        stem_name + "_0.line_token.json",
+        stem_name + "_0.page.json",
+        stem_name + "_0.page.xml",
+        stem_name + "_0." + dcr_core.core_glob.FILE_TYPE_PDF,
+        stem_name + "_0.word.json",
+        stem_name + "_0.word.xml",
+        stem_name + "_1." + dcr_core.core_glob.FILE_TYPE_JPEG,
+    ]
+
+    verify_created_files(directory_name, test_files)
 
 
 # -----------------------------------------------------------------------------
@@ -202,31 +212,30 @@ def test_case_5(fxtr_setup_empty_inbox):
     instance.document_process(full_name)
 
     # -------------------------------------------------------------------------
-    pytest.helpers.verify_content_of_directory(
-        directory_name,
-        [],
-        [
-            os.path.basename(full_name),
-            stem_name + "_0.line.json",
-            stem_name + "_0.line.xml",
-            stem_name + "_0.line_heading.json",
-            stem_name + "_0.line_list_bullet.json",
-            stem_name + "_0.line_list_number.json",
-            stem_name + "_0.line_token.json",
-            stem_name + "_0.page.json",
-            stem_name + "_0.page.xml",
-            stem_name + "_0." + dcr_core.core_glob.FILE_TYPE_PDF,
-            stem_name + "_0.word.json",
-            stem_name + "_0.word.xml",
-            stem_name + "_1." + dcr_core.core_glob.FILE_TYPE_JPEG,
-            stem_name + "_2." + dcr_core.core_glob.FILE_TYPE_JPEG,
-        ],
-    )
+    test_files = [
+        os.path.basename(full_name),
+        stem_name + "_0.line.json",
+        stem_name + "_0.line.xml",
+        stem_name + "_0.line_heading.json",
+        stem_name + "_0.line_list_bullet.json",
+        stem_name + "_0.line_list_number.json",
+        stem_name + "_0.line_token.json",
+        stem_name + "_0.page.json",
+        stem_name + "_0.page.xml",
+        stem_name + "_0." + dcr_core.core_glob.FILE_TYPE_PDF,
+        stem_name + "_0.word.json",
+        stem_name + "_0.word.xml",
+        stem_name + "_1." + dcr_core.core_glob.FILE_TYPE_JPEG,
+        stem_name + "_2." + dcr_core.core_glob.FILE_TYPE_JPEG,
+    ]
+
+    verify_created_files(directory_name, test_files)
 
 
 # -----------------------------------------------------------------------------
 # Test Case 6.
 # -----------------------------------------------------------------------------
+@pytest.mark.issue
 def test_case_6(fxtr_setup_empty_inbox):
     """Test Case 6."""
     # -------------------------------------------------------------------------
@@ -250,21 +259,19 @@ def test_case_6(fxtr_setup_empty_inbox):
     instance.document_process(full_name)
 
     # -------------------------------------------------------------------------
-    pytest.helpers.verify_content_of_directory(
-        directory_name,
-        [],
-        [
-            os.path.basename(full_name),
-            stem_name + ".line.json",
-            stem_name + ".line.xml",
-            stem_name + ".line_token.json",
-            stem_name + ".page.json",
-            stem_name + ".page.xml",
-            stem_name + "." + dcr_core.core_glob.FILE_TYPE_PDF,
-            stem_name + ".word.json",
-            stem_name + ".word.xml",
-        ],
-    )
+    test_files = [
+        os.path.basename(full_name),
+        stem_name + ".line.json",
+        stem_name + ".line.xml",
+        stem_name + ".line_token.json",
+        stem_name + ".page.json",
+        stem_name + ".page.xml",
+        stem_name + "." + dcr_core.core_glob.FILE_TYPE_PDF,
+        stem_name + ".word.json",
+        stem_name + ".word.xml",
+    ]
+
+    verify_created_files(directory_name, test_files)
 
 
 # -----------------------------------------------------------------------------

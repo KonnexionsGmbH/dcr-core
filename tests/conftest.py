@@ -11,6 +11,7 @@ Returns:
     [type]: None.
 """
 import configparser
+import filecmp
 import os
 import pathlib
 import shutil
@@ -19,6 +20,7 @@ import pytest
 
 import dcr_core.cls_setup
 import dcr_core.core_glob
+import dcr_core.core_utils
 
 # -----------------------------------------------------------------------------
 # Constants & Globals.
@@ -27,6 +29,28 @@ CONFIG_PARSER: configparser.ConfigParser = configparser.ConfigParser()
 
 FILE_NAME_SETUP_CFG = "setup.cfg"
 FILE_NAME_SETUP_CFG_BACKUP = "setup.cfg_backup"
+
+
+# -----------------------------------------------------------------------------
+# Compare the test files with the reference files.
+# -----------------------------------------------------------------------------
+@pytest.helpers.register
+def compare_with_reference_files(directory_name: str, reference_files: list[str]) -> None:
+    """Compare the test files with the reference files.
+
+    Args:
+        directory_name: str:
+            Name of the file directory to be checked.
+        reference_files: list[str]:
+            list of the reference file names.
+    """
+    reference_directory = get_test_files_reference_directory_name()
+
+    # check expected directories against directory content
+    for reference_file in reference_files:
+        full_name_test_file = dcr_core.core_utils.get_full_name_from_components(directory_name, reference_file)
+        full_name_reference_file = dcr_core.core_utils.get_full_name_from_components(reference_directory, reference_file)
+        assert filecmp.cmp(full_name_test_file, full_name_reference_file, False), f"file {reference_file} does not match reference file"
 
 
 # -----------------------------------------------------------------------------
@@ -44,13 +68,13 @@ def copy_files_4_pytest(file_list: list[tuple[tuple[str, str | None], tuple[path
             ]
         ]): list of files to be copied.
     """
-    assert os.path.isdir(dcr_core.core_utils.get_os_independent_name(get_test_inbox_directory_name())), (
-        "source directory '" + get_test_inbox_directory_name() + "' missing"
+    assert os.path.isdir(dcr_core.core_utils.get_os_independent_name(get_test_files_source_directory_name())), (
+        "source directory '" + get_test_files_source_directory_name() + "' missing"
     )
 
     for ((source_stem, source_ext), (target_dir, target_file_comp, target_ext)) in file_list:
         source_file_name = source_stem if source_ext is None else source_stem + "." + source_ext
-        source_file = dcr_core.core_utils.get_full_name_from_components(get_test_inbox_directory_name(), source_file_name)
+        source_file = dcr_core.core_utils.get_full_name_from_components(get_test_files_source_directory_name(), source_file_name)
         assert os.path.isfile(source_file), "source file '" + str(source_file) + "' missing"
 
         assert os.path.isdir(dcr_core.core_utils.get_os_independent_name(target_dir)), "target directory '" + target_dir + "' missing"
@@ -216,17 +240,33 @@ def fxtr_setup_empty_inbox(
 
     yield
 
-    # wwe fxtr_rmdir_opt(dcr_core.core_glob.setup.directory_inbox)
+    fxtr_rmdir_opt(dcr_core.core_glob.setup.directory_inbox)
 
     setup_cfg_restore()
 
 
 # -----------------------------------------------------------------------------
-# Provide the directory name of the inbox with the test data.
+# Provide the file directory name where the reference files are located.
 # -----------------------------------------------------------------------------
 @pytest.helpers.register
-def get_test_inbox_directory_name():
-    """Provide the directory name of the inbox with the test data."""
+def get_test_files_reference_directory_name():
+    """Provide reference file directory.
+
+    Provide the file directory name where the reference files are
+    located.
+    """
+    return "tests/__PYTEST_REFERENCE__/"
+
+
+# -----------------------------------------------------------------------------
+# Provide the file directory name where the test files are located.
+# -----------------------------------------------------------------------------
+@pytest.helpers.register
+def get_test_files_source_directory_name():
+    """Provide test file directory.
+
+    Provide the file directory name where the test files are located.
+    """
     return "tests/__PYTEST_FILES__/"
 
 
@@ -274,7 +314,6 @@ def verify_content_of_directory(
         expected_files: list[str]:
                    list of the expected file names.
     """
-
     directory_content = os.listdir(directory_name)
 
     # check directory content against expectations

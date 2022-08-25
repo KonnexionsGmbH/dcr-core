@@ -77,6 +77,13 @@ warn_unreachable = false
 warn_unused_configs = true
 warn_unused_ignores = true
 
+[tool.pytest.ini_options]
+console_output_style = "count"
+markers = ["issue"]
+norecursedirs = "./tests/helpers"
+pythonpath = "./dcr_core/"
+testpaths = "./tests/"
+
 [tool.setuptools]
 packages = ["dcr_core"]
 

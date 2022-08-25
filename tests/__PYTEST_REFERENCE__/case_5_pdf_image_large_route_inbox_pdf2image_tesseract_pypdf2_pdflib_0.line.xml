@@ -1,0 +1,923 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created by the PDFlib Text and Image Extraction Toolkit TET (www.pdflib.com) -->
+<TET xmlns="http://www.pdflib.com/XML/TET5/TET-5.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.pdflib.com/XML/TET5/TET-5.0
+ http://www.pdflib.com/XML/TET5/TET-5.0.xsd"
+ version="5.2">
+<Creation platform="Win64" tetVersion="5.3" date="2022-08-25T14:10:34+02:00" />
+<Document filename="data\inbox_dev_accepted\case_5_pdf_image_large_route_inbox_pdf2image_tesseract_pypdf2_pdflib_0.pdf" pageCount="2" filesize="1005457" linearized="false" pdfVersion="1.5">
+<DocInfo>
+<Producer>PyPDF2</Producer>
+</DocInfo>
+<Options>tetml={filename={data\inbox_dev_accepted\case_5_pdf_image_large_route_inbox_pdf2image_tesseract_pypdf2_pdflib_0.line.xml}} engines={noannotation noimage text notextcolor novector}</Options>
+<Pages>
+<Page number="1" width="1748.57" height="2262.86">
+<Options>granularity=line</Options>
+<Content granularity="line" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="145.03" lly="2177.66" urx="172.81" ury="2199.66">
+  <Line llx="145.03" lly="2177.66" urx="172.81" ury="2199.66">
+   <Text>324</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="674.74" lly="2173.54" ulx="674.88" uly="2195.54" urx="1646.82" ury="2189.71" lrx="1646.56" lry="2167.63">
+  <Line llx="674.74" lly="2173.54" ulx="674.88" uly="2195.54" urx="1646.82" ury="2189.71" lrx="1646.56" lry="2167.63">
+   <Text>IEEE TRANSACTIONS ON SOFTWARE ENGINEERING, VOL. SE-11, NO. 4, APRIL 1985</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="384.69" lly="1969.89" urx="869.14" ury="2124.57">
+  <Line llx="384.69" lly="2102.57" urx="868.94" ury="2124.57">
+   <Text>Member of IBM’s Santa Teresa Laboratory during</Text>
+  </Line>
+  <Line llx="428.92" lly="2075.83" urx="869.14" ury="2098.83">
+   <Text>the summers of 1982 and 1983. He has</Text>
+  </Line>
+  <Line llx="385.71" lly="2049.09" urx="865.71" ury="2072.09">
+   <Text>published papers in switching and automata</Text>
+  </Line>
+  <Line llx="385.71" lly="2022.34" urx="866.97" ury="2044.34">
+   <Text>theory, computer graphics, operating systems,</Text>
+  </Line>
+  <Line llx="384.69" lly="1996.63" urx="868.12" ury="2018.63">
+   <Text>database, and most recently, software engineering</Text>
+  </Line>
+  <Line llx="422.74" lly="1969.89" urx="632.00" ury="1992.89">
+   <Text>and software metrics.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1155.46" lly="1989.43" ulx="1156.25" uly="2121.46" urx="1642.79" ury="2118.54" lrx="1641.87" lry="1986.46">
+  <Line llx="1156.11" lly="2098.46" ulx="1156.25" uly="2121.46" urx="1642.14" ury="2118.54" lrx="1641.87" lry="2095.48">
+   <Text>Stephen M. Thebaut (S’79-M’83) received the</Text>
+  </Line>
+  <Line llx="1157.15" lly="2070.69" ulx="1157.29" uly="2093.69" urx="1642.31" ury="2090.78" lrx="1642.03" lry="2067.71">
+   <Text>B.A. degree in mathematics from Duke University,</Text>
+  </Line>
+  <Line llx="1242.53" lly="2043.42" ulx="1242.67" uly="2066.42" urx="1639.84" ury="2064.04" lrx="1639.57" lry="2040.97">
+   <Text>Durham, NC, and the M.S, and Ph. D.</Text>
+  </Line>
+  <Line llx="1156.13" lly="2017.20" ulx="1156.27" uly="2040.14" urx="1642.30" ury="2037.22" lrx="1642.04" lry="2014.23">
+   <Text>degrees in computer science from Purdue University,</Text>
+  </Line>
+  <Line llx="1238.43" lly="1989.45" ulx="1238.58" uly="2014.66" urx="1640.54" ury="2012.25" lrx="1640.25" lry="1986.98">
+   <Text>West Lafayette, IN, in 1979 and 1983,</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1156.15" lly="1963.71" ulx="1156.27" uly="1984.71" urx="1273.88" ury="1984.01" lrx="1273.63" lry="1962.95">
+  <Line llx="1156.15" lly="1963.71" ulx="1156.27" uly="1984.71" urx="1273.88" ury="1984.01" lrx="1273.63" lry="1962.95">
+   <Text>respectively.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1174.67" lly="1938.91" ulx="1174.81" uly="1962.03" urx="1639.10" ury="1959.24" lrx="1638.82" lry="1936.07">
+  <Line llx="1174.67" lly="1938.91" ulx="1174.81" uly="1962.03" urx="1639.10" ury="1959.24" lrx="1638.82" lry="1936.07">
+   <Text>He joined the Department of Computer and</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1155.13" lly="1912.28" ulx="1155.26" uly="1934.28" urx="1640.21" ury="1931.37" lrx="1639.94" lry="1909.31">
+  <Line llx="1155.13" lly="1912.28" ulx="1155.26" uly="1934.28" urx="1640.21" ury="1931.37" lrx="1639.94" lry="1909.31">
+   <Text>Information Sciences, University of Florida,</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="909.32" lly="1807.99" ulx="909.93" uly="1909.99" urx="1643.33" ury="1905.59" lrx="1642.58" lry="1803.53">
+  <Line llx="1154.11" lly="1884.51" ulx="1154.25" uly="1908.52" urx="1643.33" ury="1905.59" lrx="1643.05" lry="1881.52">
+   <Text>Gainesville, FL, as an Assistant Professor in</Text>
+  </Line>
+  <Line llx="1156.17" lly="1858.79" ulx="1156.31" uly="1881.80" urx="1639.32" ury="1878.90" lrx="1639.04" lry="1855.83">
+   <Text>1983, and was supported by an IBM Postdoctoral</Text>
+  </Line>
+  <Line llx="1218.92" lly="1831.80" ulx="1219.07" uly="1856.56" urx="1638.88" ury="1854.04" lrx="1638.59" lry="1829.22">
+   <Text>Research Fellowship during the 1983-</Text>
+  </Line>
+  <Line llx="909.32" lly="1807.99" ulx="909.47" uly="1833.36" urx="1638.44" ury="1828.99" lrx="1638.14" lry="1803.56">
+   <Text>1984 academic year. His current research interests include software</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="907.12" lly="1756.91" ulx="907.40" uly="1803.62" urx="1639.60" ury="1799.23" lrx="1639.19" lry="1752.45">
+  <Line llx="907.27" lly="1782.15" ulx="907.40" uly="1803.62" urx="1639.60" ury="1799.23" lrx="1639.34" lry="1777.70">
+   <Text>reliability, program maintenance, and the large-scale software development</Text>
+  </Line>
+  <Line llx="993.69" lly="1756.93" ulx="993.81" uly="1776.93" urx="1064.32" ury="1776.50" lrx="1064.08" lry="1756.45">
+   <Text>process.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="926.83" lly="1728.53" ulx="926.98" uly="1753.14" urx="1638.91" ury="1748.87" lrx="1638.62" lry="1724.21">
+  <Line llx="926.83" lly="1728.53" ulx="926.98" uly="1753.14" urx="1638.91" ury="1748.87" lrx="1638.62" lry="1724.21">
+   <Text>Prof. Thebaut is a member of the Association for Computing Machinery,</Text>
+  </Line>
+ </Box>
+ <Box llx="907.29" lly="1702.31" ulx="907.43" uly="1725.42" urx="1512.48" ury="1721.60" lrx="1512.21" lry="1698.63">
+  <Line llx="996.78" lly="1701.77" ulx="996.92" uly="1724.69" urx="1512.48" ury="1721.60" lrx="1512.21" lry="1698.63">
+   <Text>the IEEE Computer Society, and the 356 Registry.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="387.34" lly="1548.19" ulx="387.95" uly="1624.69" urx="872.83" ury="1620.81" lrx="872.03" lry="1544.24">
+  <Line llx="387.77" lly="1602.69" ulx="387.95" uly="1624.69" urx="871.47" ury="1620.82" lrx="871.12" lry="1598.74">
+   <Text>Tze-Jie Yu received the B.S. degree in electrical</Text>
+  </Line>
+  <Line llx="387.78" lly="1574.91" ulx="387.97" uly="1598.90" urx="872.62" ury="1595.02" lrx="872.25" lry="1570.96">
+   <Text>engineering from National Taiwan University in</Text>
+  </Line>
+  <Line llx="389.85" lly="1548.17" ulx="390.05" uly="1573.91" urx="869.95" ury="1570.07" lrx="869.55" lry="1544.26">
+   <Text>1979, and the M.S. degree in computer science</Text>
+  </Line>
+ </Box>
+ <Box llx="388.83" lly="1521.43" ulx="389.02" uly="1545.34" urx="870.83" ury="1541.48" lrx="870.46" lry="1517.50">
+  <Line llx="388.83" lly="1521.43" ulx="389.02" uly="1545.34" urx="870.83" ury="1541.48" lrx="870.46" lry="1517.50">
+   <Text>from Purdue University, West Lafayette, IN,</Text>
+  </Line>
+ </Box>
+ <Box llx="387.81" lly="1495.71" ulx="388.01" uly="1520.95" urx="462.27" ury="1520.35" lrx="461.87" lry="1495.07">
+  <Line llx="387.81" lly="1495.71" ulx="388.01" uly="1520.95" urx="462.27" ury="1520.35" lrx="461.87" lry="1495.07">
+   <Text>in 1983.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="385.82" lly="1309.53" ulx="387.30" uly="1493.80" urx="871.86" ury="1489.92" lrx="870.20" lry="1305.59">
+  <Line llx="407.36" lly="1468.98" ulx="407.56" uly="1493.64" urx="869.57" ury="1489.94" lrx="869.19" lry="1465.19">
+   <Text>From 1981 to the present, he has beena Ph. D.</Text>
+  </Line>
+  <Line llx="387.83" lly="1442.23" ulx="388.03" uly="1466.98" urx="868.70" ury="1463.13" lrx="868.32" lry="1438.30">
+   <Text>candidate and Research Assistant at Purdue</Text>
+  </Line>
+  <Line llx="387.84" lly="1416.51" ulx="388.02" uly="1439.39" urx="868.55" ury="1435.54" lrx="868.19" lry="1412.59">
+   <Text>University. He worked for IBM’s Santa Teresa</Text>
+  </Line>
+  <Line llx="387.85" lly="1388.74" ulx="388.05" uly="1413.65" urx="870.89" ury="1409.79" lrx="870.51" lry="1384.79">
+   <Text>Laboratory as a Systems Analyst during the</Text>
+  </Line>
+  <Line llx="387.86" lly="1361.99" ulx="388.07" uly="1387.73" urx="869.63" ury="1383.88" lrx="869.23" lry="1358.05">
+   <Text>summer of 1983. His research interests include</Text>
+  </Line>
+  <Line llx="387.87" lly="1336.28" ulx="388.07" uly="1361.09" urx="870.80" ury="1357.23" lrx="870.42" lry="1332.34">
+   <Text>software quality assessment, software tools,</Text>
+  </Line>
+  <Line llx="385.82" lly="1309.53" ulx="386.01" uly="1332.76" urx="663.19" ury="1330.54" lrx="662.82" lry="1307.25">
+   <Text>and software cost modeling.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="140.02" lly="1231.27" ulx="140.65" uly="1310.71" urx="872.62" ury="1304.85" lrx="871.80" lry="1225.35">
+  <Line llx="160.57" lly="1284.77" ulx="160.78" uly="1310.55" urx="868.12" ury="1304.89" lrx="867.73" lry="1279.04">
+   <Text>Mr. Yu is a member of the Association for Computing Machinery and</Text>
+  </Line>
+  <Line llx="141.04" lly="1258.01" ulx="141.24" uly="1283.02" urx="872.40" ury="1277.17" lrx="872.02" lry="1252.12">
+   <Text>its Special Interest Group on Software Engineering, and a member of</Text>
+  </Line>
+  <Line llx="140.02" lly="1231.27" ulx="140.20" uly="1253.56" urx="424.38" ury="1251.28" lrx="424.02" lry="1228.93">
+   <Text>the IEEE Computer Society.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1155.09" lly="1570.80" ulx="1155.09" uly="1620.54" urx="1643.27" ury="1620.54" lrx="1643.27" lry="1569.03">
+  <Line llx="1155.09" lly="1597.54" urx="1642.29" ury="1620.54">
+   <Text>Lorri R. Paulsen received the B.S. degree in</Text>
+  </Line>
+  <Line llx="1156.12" lly="1569.03" urx="1643.27" ury="1593.80">
+   <Text>mathematics from Wagner College, Staten Island,</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1156.12" lly="1545.09" urx="1278.52" ury="1570.09">
+  <Line llx="1156.12" lly="1545.09" urx="1278.52" ury="1570.09">
+   <Text>NY, in 1968.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1154.06" lly="1464.86" urx="1643.66" ury="1539.31">
+  <Line llx="1173.60" lly="1517.31" urx="1643.66" ury="1539.31">
+   <Text>She joined IBM in 1968, and is currently a</Text>
+  </Line>
+  <Line llx="1155.09" lly="1490.57" urx="1638.77" ury="1513.57">
+   <Text>Program Development Manager for IBM General</Text>
+  </Line>
+  <Line llx="1154.06" lly="1464.86" urx="1638.51" ury="1488.86">
+   <Text>Products Division at Santa Teresa Laboratory,</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="906.17" lly="1227.26" ulx="906.17" uly="1459.12" urx="1640.83" ury="1459.12" lrx="1640.83" lry="1225.77">
+  <Line llx="1154.06" lly="1438.12" urx="1640.58" ury="1459.12">
+   <Text>San Jose, CA. During her IBM career, she has</Text>
+  </Line>
+  <Line llx="1153.03" lly="1411.37" urx="1640.83" ury="1433.37">
+   <Text>been associated with systems design and development,</Text>
+  </Line>
+  <Line llx="1277.49" lly="1384.63" urx="1638.51" ury="1407.63">
+   <Text>working on the ASP Version 3 and</Text>
+  </Line>
+  <Line llx="1154.06" lly="1357.89" urx="1638.28" ury="1380.89">
+   <Text>JES3 products. In 1979 she became involved</Text>
+  </Line>
+  <Line llx="1153.03" lly="1332.17" urx="1638.90" ury="1355.17">
+   <Text>with the measurement of programmer’s productivity,</Text>
+  </Line>
+  <Line llx="977.14" lly="1306.46" urx="1639.54" ury="1328.46">
+   <Text>which led to her research with Software Science metrics and the</Text>
+  </Line>
+  <Line llx="908.22" lly="1279.72" urx="1640.82" ury="1301.72">
+   <Text>prediction of error-prone modules. She is currently managing the development</Text>
+  </Line>
+  <Line llx="1024.45" lly="1251.94" urx="1636.71" ury="1274.94">
+   <Text>of software engineering tools to assist with the design and</Text>
+  </Line>
+  <Line llx="907.20" lly="1225.77" urx="1242.31" ury="1249.26">
+   <Text>implementation of IBM products.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="187.95" lly="906.81" ulx="188.40" uly="1021.31" urx="1572.97" ury="1015.78" lrx="1572.34" lry="901.16">
+  <Line llx="188.23" lly="977.31" ulx="188.40" uly="1021.31" urx="1572.97" ury="1015.78" lrx="1572.62" lry="971.67">
+   <Text>Translating SOL Into Relational Algebra: Optimization,</Text>
+  </Line>
+  <Line llx="314.72" lly="906.30" ulx="314.90" uly="951.19" urx="1447.41" ury="946.66" lrx="1447.06" lry="901.66">
+   <Text>Semantics, and Equivalence of SOL Queries</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="635.66" lly="809.66" ulx="635.77" uly="838.66" urx="1129.87" ury="836.68" lrx="1129.63" lry="807.62">
+  <Line llx="635.66" lly="809.66" ulx="635.77" uly="838.66" urx="1129.87" ury="836.68" lrx="1129.63" lry="807.62">
+   <Text>STEFANO CERI anp GEORG GOTTLOB</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="135.55" lly="582.34" ulx="135.99" uly="692.87" urx="862.42" ury="689.97" lrx="861.89" lry="579.39">
+  <Line llx="154.29" lly="670.80" ulx="154.37" uly="692.80" urx="862.42" ury="689.97" lrx="862.24" lry="667.93">
+   <Text>Abstract—In this paper, we present a translator from a relevant subset</Text>
+  </Line>
+  <Line llx="135.78" lly="640.97" ulx="135.87" uly="664.04" urx="861.73" ury="661.13" lrx="861.54" lry="638.02">
+   <Text>of SQL into relational algebra, The translation is syntax-directed, with</Text>
+  </Line>
+  <Line llx="136.82" lly="611.14" ulx="136.91" uly="634.20" urx="861.12" ury="631.30" lrx="860.94" lry="608.21">
+   <Text>translation rules associated with grammar productions; each production</Text>
+  </Line>
+  <Line llx="135.80" lly="582.34" ulx="135.89" uly="605.46" urx="640.19" ury="603.44" lrx="640.01" lry="580.28">
+   <Text>corresponds to a particular type of SQL subquery.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="133.55" lly="378.46" ulx="134.34" uly="575.59" urx="864.72" ury="572.67" lrx="863.84" lry="375.50">
+  <Line llx="154.32" lly="552.51" ulx="154.41" uly="575.51" urx="863.45" ury="572.68" lrx="863.27" lry="549.63">
+   <Text>The translation is performed in two steps, associated with two different</Text>
+  </Line>
+  <Line llx="176.96" lly="523.54" ulx="177.05" uly="546.61" urx="860.58" ury="543.88" lrx="860.39" lry="520.76">
+   <Text>grammars of SQL. The first step, driven by the larger grammar,</Text>
+  </Line>
+  <Line llx="135.82" lly="494.00" ulx="135.91" uly="517.91" urx="864.24" ury="514.99" lrx="864.06" lry="491.05">
+   <Text>transforms SQL queries into equivalent SQL queries that can be accepted</Text>
+  </Line>
+  <Line llx="216.05" lly="463.86" ulx="216.15" uly="486.65" urx="859.10" ury="484.08" lrx="858.92" lry="461.25">
+   <Text>by a restricted grammar. The second step transforms SQL</Text>
+  </Line>
+  <Line llx="133.78" lly="436.28" ulx="133.87" uly="459.36" urx="864.26" ury="456.44" lrx="864.08" lry="433.32">
+   <Text>queries accepted by the restricted grammar into expressions of relational</Text>
+  </Line>
+  <Line llx="201.68" lly="407.22" ulx="201.77" uly="430.28" urx="859.47" ury="427.65" lrx="859.29" lry="404.55">
+   <Text>algebra. This approach allows performing the second step, which</Text>
+  </Line>
+  <Line llx="133.80" lly="378.46" ulx="133.89" uly="401.68" urx="779.30" ury="399.09" lrx="779.12" lry="375.84">
+   <Text>is the most difficult one, on a restricted number of productions.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="132.79" lly="320.05" ulx="133.00" uly="372.96" urx="865.44" ury="370.03" lrx="865.14" lry="317.08">
+  <Line llx="152.32" lly="348.94" ulx="152.42" uly="372.88" urx="859.49" ury="370.05" lrx="859.30" lry="346.07">
+   <Text>The translator can be used in conjunction with an optimizer which</Text>
+  </Line>
+  <Line llx="132.79" lly="320.05" ulx="132.88" uly="343.13" urx="865.32" ury="340.20" lrx="865.14" lry="317.08">
+   <Text>operates on expressions of relational algebra, thus taking advantage of a</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="131.65" lly="229.55" ulx="131.95" uly="279.43" urx="863.05" ury="275.04" lrx="862.62" lry="225.10">
+  <Line llx="155.31" lly="256.29" ulx="155.45" uly="279.29" urx="863.05" ury="275.04" lrx="862.78" lry="251.98">
+   <Text>Manuscript received June 13, 1984; revised September 6, 1984. This</Text>
+  </Line>
+  <Line llx="131.65" lly="229.55" ulx="131.80" uly="254.10" urx="809.45" ury="250.03" lrx="809.16" lry="225.42">
+   <Text>work was supported in part by a grant from Data Base Informatica.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="154.27" lly="202.80" ulx="154.42" uly="226.81" urx="865.30" ury="222.54" lrx="865.02" lry="198.48">
+  <Line llx="154.27" lly="202.80" ulx="154.42" uly="226.81" urx="865.30" ury="222.54" lrx="865.02" lry="198.48">
+   <Text>The authors are with the Dipartimento di Elettronica, Politecnico di</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="135.75" lly="176.85" ulx="135.90" uly="201.09" urx="436.10" ury="199.29" lrx="435.81" lry="175.01">
+  <Line llx="135.75" lly="176.85" ulx="135.90" uly="201.09" urx="436.10" ury="199.29" lrx="435.81" lry="175.01">
+   <Text>Milano, I 20133 Milano, Italy.</Text>
+  </Line>
+ </Box>
+ <Box llx="901.96" lly="519.60" ulx="902.63" uly="688.66" urx="1637.62" ury="685.72" lrx="1636.86" lry="516.62">
+  <Line llx="904.11" lly="665.66" ulx="904.21" uly="688.66" urx="1634.94" ury="685.73" lrx="1634.75" lry="662.69">
+   <Text>body of knowledge on the optimization of algebraic expressions. Moreover,</Text>
+  </Line>
+  <Line llx="965.83" lly="636.61" ulx="965.92" uly="659.61" urx="1635.75" ury="656.93" lrx="1635.57" lry="633.89">
+   <Text>the proposed approach indicates a methodology for the correct</Text>
+  </Line>
+  <Line llx="904.12" lly="607.03" ulx="904.22" uly="631.00" urx="1637.27" ury="628.07" lrx="1637.09" lry="604.06">
+   <Text>specification and fast implementation of new relational query languages.</Text>
+  </Line>
+  <Line llx="998.76" lly="577.98" ulx="998.85" uly="600.82" urx="1637.27" ury="598.27" lrx="1637.09" lry="575.39">
+   <Text>Finally, the translator defines the semantics of the SQL language,</Text>
+  </Line>
+  <Line llx="977.17" lly="549.12" ulx="977.26" uly="572.13" urx="1634.74" ury="569.50" lrx="1634.55" lry="546.45">
+   <Text>and can be used for the proof of equivalence of SQL queries</Text>
+  </Line>
+  <Line llx="904.14" lly="519.59" ulx="904.23" uly="542.60" urx="1231.96" ury="541.29" lrx="1231.78" lry="518.24">
+   <Text>which are syntactically different.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="901.95" lly="407.48" ulx="902.28" uly="490.22" urx="1636.45" ury="487.28" lrx="1636.03" lry="404.51">
+  <Line llx="921.60" lly="467.14" ulx="921.69" uly="490.14" urx="1636.45" ury="487.28" lrx="1636.27" lry="464.24">
+   <Text>Index Terms—Program translation, query equivalence, query languages,</Text>
+  </Line>
+  <Line llx="994.64" lly="436.95" ulx="994.73" uly="460.01" urx="1633.12" ury="457.45" lrx="1632.93" lry="434.36">
+   <Text>query optimization, relational algebra, relational database</Text>
+  </Line>
+  <Line llx="903.10" lly="407.48" ulx="903.19" uly="429.80" urx="1021.36" ury="429.33" lrx="1021.18" lry="406.97">
+   <Text>model, SQL.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1162.29" lly="322.11" urx="1366.10" ury="348.11">
+  <Line llx="1162.29" lly="322.11" urx="1366.10" ury="348.11">
+   <Text>I. INTRODUCTION</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="960.69" lly="278.91" ulx="960.77" uly="306.91" urx="1629.31" ury="304.91" lrx="1629.15" lry="276.87">
+  <Line llx="960.69" lly="278.91" ulx="960.77" uly="306.91" urx="1629.31" ury="304.91" lrx="1629.15" lry="276.87">
+   <Text>HE use of the relational model and languages is becoming</Text>
+  </Line>
+ </Box>
+ <Box llx="903.09" lly="207.94" ulx="903.28" uly="271.12" urx="1634.51" ury="268.92" lrx="1634.23" lry="205.72">
+  <Line llx="960.69" lly="243.94" ulx="960.77" uly="270.94" urx="1633.19" ury="268.93" lrx="1633.03" lry="241.89">
+   <Text>more and more popular for the development of new database</Text>
+  </Line>
+  <Line llx="962.74" lly="207.77" ulx="962.83" uly="235.92" urx="1634.40" ury="233.91" lrx="1634.23" lry="205.72">
+   <Text>management systems. Formal languages, such as the relational</Text>
+  </Line>
+ </Box>
+ <Box llx="902.06" lly="172.97" ulx="902.15" uly="203.12" urx="1627.64" ury="200.94" lrx="1627.46" lry="170.78">
+  <Line llx="982.29" lly="172.74" ulx="982.38" uly="202.88" urx="1627.64" ury="200.94" lrx="1627.46" lry="170.78">
+   <Text>calculus and algebra, have been proposed by Codd [1]</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="601.71" lly="100.97" ulx="601.88" uly="128.97" urx="1161.60" ury="125.61" lrx="1161.27" lry="97.52">
+  <Line llx="601.71" lly="100.97" ulx="601.88" uly="128.97" urx="1161.60" ury="125.61" lrx="1161.27" lry="97.52">
+   <Text>0098-5589/85/0400-0324$01.00 © 1985 IEEE</Text>
+  </Line>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Page number="2" width="1748.57" height="2262.86">
+<Options>granularity=line</Options>
+<Content granularity="line" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="148.11" lly="2108.74" ulx="148.05" uly="2129.74" urx="940.89" ury="2132.16" lrx="940.89" lry="2111.12">
+  <Line llx="148.11" lly="2108.74" ulx="148.05" uly="2129.74" urx="940.89" ury="2132.16" lrx="940.89" lry="2111.12">
+   <Text>CERI AND GOTTLOB: TRANSLATING SQL INTO RELATIONAL ALGEBRA</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1553.14" lly="2114.91" urx="1580.14" ury="2135.91">
+  <Line llx="1553.14" lly="2114.91" urx="1580.14" ury="2135.91">
+   <Text>325</Text>
+  </Line>
+ </Box>
+ <Box llx="149.41" lly="1971.94" ulx="149.03" uly="2065.80" urx="841.90" ury="2068.62" lrx="842.17" lry="1974.71">
+  <Line llx="149.14" lly="2038.80" ulx="149.03" uly="2065.80" urx="838.95" ury="2068.61" lrx="838.95" lry="2041.56">
+   <Text>and later developed in the literature of database management</Text>
+  </Line>
+  <Line llx="151.19" lly="2004.86" ulx="151.07" uly="2032.82" urx="841.99" ury="2035.62" lrx="841.99" lry="2007.62">
+   <Text>systems [2], [3]. In particular, relational algebra can be used</Text>
+  </Line>
+  <Line llx="150.14" lly="1971.94" ulx="150.04" uly="1997.94" urx="842.17" ury="2000.76" lrx="842.17" lry="1974.71">
+   <Text>as a model for describing many approaches to query optimization</Text>
+  </Line>
+ </Box>
+ <Box llx="150.13" lly="1938.31" ulx="150.02" uly="1967.03" urx="426.81" ury="1967.92" lrx="426.82" lry="1939.42">
+  <Line llx="205.67" lly="1938.53" ulx="205.56" uly="1967.00" urx="426.81" ury="1967.92" lrx="426.82" lry="1939.42">
+   <Text>[3] -[6] , [16]-[19].</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="151.06" lly="1703.48" ulx="150.15" uly="1932.06" urx="844.99" ury="1934.89" lrx="845.80" lry="1706.26">
+  <Line llx="172.75" lly="1905.07" ulx="172.64" uly="1932.15" urx="841.24" ury="1934.87" lrx="841.25" lry="1907.75">
+   <Text>Although some earlier proposals for relational manipulation</Text>
+  </Line>
+  <Line llx="151.13" lly="1870.11" ulx="151.02" uly="1897.12" urx="844.05" ury="1899.92" lrx="844.06" lry="1872.88">
+   <Text>languages have been in fact based on relational algebra [7] or</Text>
+  </Line>
+  <Line llx="152.15" lly="1837.20" ulx="152.04" uly="1864.20" urx="843.15" ury="1867.01" lrx="843.15" lry="1839.96">
+   <Text>calculus [8], the trend in the design of relational languages</Text>
+  </Line>
+  <Line llx="151.11" lly="1803.25" ulx="151.00" uly="1830.22" urx="845.40" ury="1833.03" lrx="845.40" lry="1806.03">
+   <Text>has at some point moved toward a different direction; this</Text>
+  </Line>
+  <Line llx="151.09" lly="1769.31" ulx="150.98" uly="1797.20" urx="842.07" ury="1800.01" lrx="842.08" lry="1772.07">
+   <Text>was probably due to the success of the SQL query language</Text>
+  </Line>
+  <Line llx="155.19" lly="1736.39" ulx="155.08" uly="1764.39" urx="844.60" ury="1767.18" lrx="844.60" lry="1739.15">
+   <Text>[9], developed for the System R prototype [10] , which has</Text>
+  </Line>
+  <Line llx="151.06" lly="1703.48" ulx="150.96" uly="1729.48" urx="842.92" ury="1732.30" lrx="842.92" lry="1706.25">
+   <Text>become de facto a standard used by many other systems</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="155.17" lly="1669.54" ulx="155.05" uly="1697.54" urx="267.39" ury="1698.03" lrx="267.39" lry="1669.99">
+  <Line llx="155.17" lly="1669.54" ulx="155.05" uly="1697.54" urx="267.39" ury="1698.03" lrx="267.39" lry="1669.99">
+   <Text>{11J-[13].</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="152.03" lly="1536.85" ulx="151.52" uly="1664.48" urx="845.92" ury="1667.30" lrx="846.33" lry="1539.63">
+  <Line llx="173.67" lly="1636.61" ulx="173.56" uly="1664.57" urx="844.02" ury="1667.29" lrx="844.03" lry="1639.30">
+   <Text>SQL is an easy-to-use language with a number of high-level</Text>
+  </Line>
+  <Line llx="152.06" lly="1603.71" ulx="151.94" uly="1632.71" urx="845.33" ury="1635.52" lrx="845.34" lry="1606.48">
+   <Text>constructs. In general, small SQL queries are quite easy to</Text>
+  </Line>
+  <Line llx="152.04" lly="1569.77" ulx="151.93" uly="1597.67" urx="845.08" ury="1600.48" lrx="845.08" lry="1572.54">
+   <Text>understand; however, SQL allows writing very complex queries,</Text>
+  </Line>
+  <Line llx="152.03" lly="1536.85" ulx="151.92" uly="1563.83" urx="846.32" ury="1566.64" lrx="846.33" lry="1539.63">
+   <Text>whose meaning is quite obscure, and whose optimization is extremely</Text>
+  </Line>
+ </Box>
+ <Box llx="152.02" lly="1503.94" ulx="151.90" uly="1532.89" urx="841.94" ury="1535.70" lrx="841.95" lry="1506.84">
+  <Line llx="246.65" lly="1504.46" ulx="246.54" uly="1533.27" urx="841.94" ury="1535.70" lrx="841.95" lry="1506.84">
+   <Text>hard [14]. Sometimes, two complex queries in SQL</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="152.54" lly="1334.22" ulx="151.89" uly="1496.87" urx="847.39" ury="1499.68" lrx="847.93" lry="1337.00">
+  <Line llx="152.00" lly="1467.94" ulx="151.89" uly="1496.87" urx="846.09" ury="1499.67" lrx="846.11" lry="1470.71">
+   <Text>happen to have the same meaning, although they are very different</Text>
+  </Line>
+  <Line llx="231.19" lly="1435.57" ulx="231.07" uly="1464.26" urx="845.46" ury="1466.76" lrx="845.47" lry="1438.02">
+   <Text>from a syntactic point of view. In this paper, we propose</Text>
+  </Line>
+  <Line llx="211.64" lly="1401.57" ulx="211.52" uly="1431.28" urx="847.65" ury="1433.86" lrx="847.66" lry="1404.12">
+   <Text>a method for translating SQL queries into expressions of</Text>
+  </Line>
+  <Line llx="154.02" lly="1367.14" ulx="153.90" uly="1397.14" urx="846.26" ury="1399.94" lrx="846.27" lry="1369.91">
+   <Text>relational algebra. This method also suggests an approach to</Text>
+  </Line>
+  <Line llx="154.01" lly="1334.22" ulx="153.90" uly="1362.21" urx="528.60" ury="1363.75" lrx="528.61" lry="1335.72">
+   <Text>the design of new query languages.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="173.54" lly="1300.40" ulx="173.44" uly="1326.30" urx="845.88" ury="1329.04" lrx="845.89" lry="1303.09">
+  <Line llx="173.54" lly="1300.40" ulx="173.44" uly="1326.30" urx="845.88" ury="1329.04" lrx="845.89" lry="1303.09">
+   <Text>SQL has a basic structure based on the query block or</Text>
+  </Line>
+ </Box>
+ <Box llx="152.95" lly="1266.34" ulx="152.85" uly="1293.34" urx="250.17" ury="1293.77" lrx="250.17" lry="1266.73">
+  <Line llx="152.95" lly="1266.34" ulx="152.85" uly="1293.34" urx="250.17" ury="1293.77" lrx="250.17" lry="1266.73">
+   <Text>subquery:</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="164.57" lly="1221.09" ulx="164.44" uly="1247.09" urx="820.81" ury="1250.44" lrx="820.81" lry="1224.37">
+  <Line llx="164.57" lly="1221.09" ulx="164.44" uly="1247.09" urx="820.81" ury="1250.44" lrx="820.81" lry="1224.37">
+   <Text>“SELECT target_list FROM relation_list WHERE predicate”.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="150.59" lly="1004.95" ulx="149.42" uly="1200.77" urx="844.44" ury="1205.00" lrx="845.45" lry="1009.12">
+  <Line llx="150.17" lly="1173.77" ulx="150.01" uly="1200.77" urx="841.38" ury="1204.99" lrx="841.38" lry="1177.92">
+   <Text>If the predicate corresponds to a selection formula in the sense</Text>
+  </Line>
+  <Line llx="150.17" lly="1139.82" ulx="150.01" uly="1166.83" urx="844.64" ury="1171.06" lrx="844.65" lry="1143.98">
+   <Text>of Ullman [2], then a query block is easily mapped to a relational</Text>
+  </Line>
+  <Line llx="225.27" lly="1106.39" ulx="225.10" uly="1134.25" urx="843.65" ury="1138.02" lrx="843.65" lry="1110.10">
+   <Text>algebra expression. However, SQL allows several features</Text>
+  </Line>
+  <Line llx="210.87" lly="1073.06" ulx="210.71" uly="1100.28" urx="548.63" ury="1102.38" lrx="548.63" lry="1075.09">
+   <Text>which are not trivially mapped:</Text>
+  </Line>
+  <Line llx="173.85" lly="1038.69" ulx="173.69" uly="1065.03" urx="583.22" ury="1067.53" lrx="583.22" lry="1041.15">
+   <Text>1) the nesting of several query blocks</Text>
+  </Line>
+  <Line llx="172.82" lly="1005.09" ulx="172.66" uly="1031.21" urx="844.83" ury="1035.30" lrx="844.83" lry="1009.12">
+   <Text>2) the use of keywords such as: EXISTS, ALL, ANY, IN in</Text>
+  </Line>
+ </Box>
+ <Box llx="151.42" lly="939.13" ulx="151.07" uly="997.17" urx="840.88" ury="1001.36" lrx="841.07" lry="943.27">
+  <Line llx="151.22" lly="971.85" ulx="151.07" uly="997.17" urx="557.51" ury="999.66" lrx="557.52" lry="974.28">
+   <Text>the connection between query blocks</Text>
+  </Line>
+  <Line llx="172.83" lly="939.26" ulx="172.67" uly="965.37" urx="841.07" ury="969.45" lrx="841.07" lry="943.27">
+   <Text>3) the use of variables and of predicates connecting query</Text>
+  </Line>
+ </Box>
+ <Box llx="151.43" lly="872.48" ulx="151.08" uly="931.34" urx="841.05" ury="935.54" lrx="841.25" lry="876.62">
+  <Line llx="151.23" lly="905.88" ulx="151.08" uly="931.34" urx="325.71" ury="932.45" lrx="325.71" lry="906.93">
+   <Text>blocks indirectly</Text>
+  </Line>
+  <Line llx="172.84" lly="872.61" ulx="172.68" uly="899.43" urx="841.24" ury="903.48" lrx="841.25" lry="876.62">
+   <Text>4) the use of set comparison operations between two query</Text>
+  </Line>
+ </Box>
+ <Box llx="151.44" lly="805.58" ulx="151.08" uly="865.48" urx="843.80" ury="869.70" lrx="844.00" lry="809.74">
+  <Line llx="151.24" lly="839.48" ulx="151.08" uly="865.48" urx="218.74" ury="865.95" lrx="218.74" lry="839.89">
+   <Text>blocks.</Text>
+  </Line>
+  <Line llx="173.88" lly="805.72" ulx="173.71" uly="833.57" urx="843.99" ury="837.64" lrx="844.00" lry="809.74">
+   <Text>5) the grouping of tuples of a relation into subsets and the</Text>
+  </Line>
+ </Box>
+ <Box llx="152.47" lly="739.58" ulx="152.12" uly="798.63" urx="839.18" ury="802.81" lrx="839.38" lry="743.71">
+  <Line llx="152.28" lly="772.54" ulx="152.12" uly="798.63" urx="685.85" ury="801.89" lrx="685.85" lry="775.74">
+   <Text>evaluation of aggregate functions on each subset.</Text>
+  </Line>
+  <Line llx="173.88" lly="739.71" ulx="173.72" uly="765.83" urx="839.38" ury="769.90" lrx="839.38" lry="743.71">
+   <Text>In this paper, we show how all these features can be mapped</Text>
+  </Line>
+ </Box>
+ <Box llx="152.49" lly="671.85" ulx="152.12" uly="732.77" urx="847.07" ury="736.98" lrx="847.27" lry="676.01">
+  <Line llx="152.29" lly="705.57" ulx="152.12" uly="732.77" urx="535.61" ury="735.11" lrx="535.61" lry="707.87">
+   <Text>to expressions of relational algebra.</Text>
+  </Line>
+  <Line llx="173.89" lly="671.97" ulx="173.73" uly="699.86" urx="847.27" ury="703.96" lrx="847.27" lry="676.01">
+   <Text>Relational algebra has been preferred to relational calculus as</Text>
+  </Line>
+ </Box>
+ <Box llx="153.32" lly="638.81" ulx="153.16" uly="665.91" urx="688.65" ury="669.18" lrx="688.65" lry="642.03">
+  <Line llx="153.32" lly="638.81" ulx="153.16" uly="665.91" urx="688.65" ury="669.18" lrx="688.65" lry="642.03">
+   <Text>target of our translator for the following reasons:</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="152.71" lly="504.16" ulx="151.94" uly="631.96" urx="844.34" ury="636.16" lrx="844.94" lry="508.32">
+  <Line llx="176.99" lly="604.97" ulx="176.82" uly="632.11" urx="844.34" ury="636.16" lrx="844.34" lry="608.97">
+   <Text>1) It is more procedural, because algebraic expressions also</Text>
+  </Line>
+  <Line llx="152.30" lly="572.05" ulx="152.15" uly="598.05" urx="841.89" ury="602.26" lrx="841.89" lry="576.19">
+   <Text>give the order of application of operations in the computation</Text>
+  </Line>
+  <Line llx="153.34" lly="538.11" ulx="153.18" uly="564.11" urx="843.18" ury="568.32" lrx="843.18" lry="542.25">
+   <Text>of the query; thus, it is a more appropriate model for query</Text>
+  </Line>
+  <Line llx="153.34" lly="504.17" ulx="153.19" uly="530.39" urx="605.79" ury="533.17" lrx="605.80" lry="506.88">
+   <Text>optimization and system implementation.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="154.38" lly="403.37" ulx="153.82" uly="497.22" urx="844.18" ury="501.42" lrx="844.58" lry="407.51">
+  <Line llx="175.98" lly="470.23" ulx="175.81" uly="497.35" urx="844.04" ury="501.42" lrx="844.04" lry="474.23">
+   <Text>2) Many existing approaches to query optimization and</Text>
+  </Line>
+  <Line llx="155.41" lly="437.31" ulx="155.25" uly="464.32" urx="844.37" ury="468.51" lrx="844.37" lry="441.44">
+   <Text>equivalence are (or can easily be) expressed in relational</Text>
+  </Line>
+  <Line llx="154.38" lly="403.37" ulx="154.22" uly="430.37" urx="229.36" ury="430.87" lrx="229.36" lry="403.82">
+   <Text>algebra.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="155.82" lly="235.46" ulx="154.85" uly="396.40" urx="846.23" ury="400.61" lrx="847.03" lry="239.60">
+  <Line llx="175.99" lly="369.42" ulx="175.82" uly="396.53" urx="845.08" ury="400.61" lrx="845.09" lry="373.44">
+   <Text>3) Relational algebra uses relations (or sets) as operands,</Text>
+  </Line>
+  <Line llx="155.42" lly="335.48" ulx="155.26" uly="361.48" urx="845.30" ury="365.68" lrx="845.30" lry="339.62">
+   <Text>while calculus is based on tuple variables. For the optimization</Text>
+  </Line>
+  <Line llx="212.00" lly="301.88" ulx="211.84" uly="328.89" urx="846.63" ury="332.76" lrx="846.64" lry="305.68">
+   <Text>of queries, particularly with distributed environments or</Text>
+  </Line>
+  <Line llx="156.46" lly="268.62" ulx="156.30" uly="294.63" urx="846.64" ury="298.84" lrx="846.64" lry="272.76">
+   <Text>special-purpose database machines, set-oriented models are</Text>
+  </Line>
+  <Line llx="156.46" lly="235.46" ulx="156.30" uly="261.71" urx="722.18" ury="265.17" lrx="722.18" lry="238.86">
+   <Text>more appropriate than tuple-oriented models [19] .</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="156.48" lly="134.03" ulx="155.91" uly="227.64" urx="847.13" ury="231.85" lrx="847.54" lry="138.18">
+  <Line llx="177.04" lly="200.94" ulx="176.88" uly="227.77" urx="846.81" ury="231.85" lrx="846.82" lry="204.96">
+   <Text>We have used standard relational algebra, with the only addition</Text>
+  </Line>
+  <Line llx="213.04" lly="168.16" ulx="212.89" uly="194.16" urx="847.34" ury="198.03" lrx="847.34" lry="171.97">
+   <Text>of a new operation for the evaluation of aggregate functions,</Text>
+  </Line>
+  <Line llx="225.39" lly="134.45" ulx="225.22" uly="162.23" urx="832.76" ury="165.94" lrx="832.77" lry="138.09">
+   <Text>which was required by the last feature in the above list.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1170.51" lly="2052.17" urx="1195.97" ury="2077.17">
+  <Line llx="1170.51" lly="2052.17" urx="1195.97" ury="2077.17">
+   <Text>SQL</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1213.71" lly="1869.09" ulx="1192.71" uly="1868.83" urx="1153.43" ury="1985.64" lrx="1212.31" lry="1986.35">
+  <Line llx="1213.71" lly="1869.09" ulx="1192.71" uly="1868.83" urx="1153.43" ury="1985.64" lrx="1212.31" lry="1986.35">
+   <Text>“|</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1217.83" lly="2052.17" urx="1266.69" ury="2077.17">
+  <Line llx="1217.83" lly="2052.17" urx="1266.69" ury="2077.17">
+   <Text>Query</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1108.80" lly="1950.34" urx="1349.69" ury="1968.34">
+  <Line llx="1108.80" lly="1950.34" urx="1349.69" ury="1968.34">
+   <Text>NAMING TRANSFORMATION</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1170.51" lly="1849.54" urx="1196.75" ury="1872.54">
+  <Line llx="1170.51" lly="1849.54" urx="1196.75" ury="1872.54">
+   <Text>SQL</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1218.86" lly="1849.54" urx="1267.71" ury="1872.54">
+  <Line llx="1218.86" lly="1849.54" urx="1267.71" ury="1872.54">
+   <Text>Query</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1136.57" lly="1828.97" urx="1269.60" ury="1847.97">
+  <Line llx="1136.57" lly="1828.97" urx="1269.60" ury="1847.97">
+   <Text>(accepted by</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1290.86" lly="1828.97" urx="1314.77" ury="1847.97">
+  <Line llx="1290.86" lly="1828.97" urx="1314.77" ury="1847.97">
+   <Text>EG)</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1123.20" lly="1747.71" urx="1302.83" ury="1765.71">
+  <Line llx="1123.20" lly="1747.71" urx="1302.83" ury="1765.71">
+   <Text>PRE — PROCESSING</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1171.54" lly="1646.91" urx="1197.00" ury="1668.91">
+  <Line llx="1171.54" lly="1646.91" urx="1197.00" ury="1668.91">
+   <Text>SQL</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1216.80" lly="1666.46" ulx="1195.80" uly="1666.31" urx="1141.56" ury="1740.51" lrx="1216.28" lry="1741.03">
+  <Line llx="1216.80" lly="1666.46" ulx="1195.80" uly="1666.31" urx="1141.56" ury="1740.51" lrx="1216.28" lry="1741.03">
+   <Text>‘</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1219.89" lly="1646.91" urx="1268.74" ury="1668.91">
+  <Line llx="1219.89" lly="1646.91" urx="1268.74" ury="1668.91">
+   <Text>Query</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1137.60" lly="1626.34" urx="1270.29" ury="1642.34">
+  <Line llx="1137.60" lly="1626.34" urx="1270.29" ury="1642.34">
+   <Text>(accepted by</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1216.80" lly="1464.86" ulx="1194.80" uly="1464.86" urx="1141.20" ury="1540.46" lrx="1216.80" lry="1540.46">
+  <Line llx="1216.80" lly="1464.86" ulx="1194.80" uly="1464.86" urx="1141.20" ury="1540.46" lrx="1216.80" lry="1540.46">
+   <Text>‘</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1291.89" lly="1626.34" urx="1315.80" ury="1642.34">
+  <Line llx="1291.89" lly="1626.34" urx="1315.80" ury="1642.34">
+   <Text>RG)</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1111.89" lly="1445.31" urx="1339.77" ury="1462.31">
+  <Line llx="1111.89" lly="1445.31" urx="1339.77" ury="1462.31">
+   <Text>algebraic expression</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1124.23" lly="1344.51" urx="1316.10" ury="1362.51">
+  <Line llx="1124.23" lly="1344.51" urx="1316.10" ury="1362.51">
+   <Text>POST - PROCESSING</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1213.71" lly="1263.26" ulx="1192.71" uly="1263.26" urx="1126.29" ury="1350.69" lrx="1213.71" lry="1350.69">
+  <Line llx="1213.71" lly="1263.26" ulx="1192.71" uly="1263.26" urx="1126.29" ury="1350.69" lrx="1213.71" lry="1350.69">
+   <Text>|</Text>
+  </Line>
+ </Box>
+ <Box llx="1111.89" lly="1242.69" ulx="1111.73" uly="1259.69" urx="1340.80" ury="1261.84" lrx="1340.80" lry="1244.75">
+  <Line llx="1111.89" lly="1242.69" ulx="1111.73" uly="1259.69" urx="1340.80" ury="1261.84" lrx="1340.80" lry="1244.75">
+   <Text>algebraic expression</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1021.37" lly="1200.51" ulx="1021.22" uly="1222.51" urx="1452.27" ury="1225.59" lrx="1452.27" lry="1203.53">
+  <Line llx="1021.37" lly="1200.51" ulx="1021.22" uly="1222.51" urx="1452.27" ury="1225.59" lrx="1452.27" lry="1203.53">
+   <Text>Fig. 1. Overall architecture of the translator.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="883.89" lly="840.34" ulx="882.38" uly="1141.14" urx="1581.91" ury="1144.70" lrx="1583.28" lry="843.83">
+  <Line llx="882.51" lly="1115.14" ulx="882.38" uly="1141.14" urx="1315.66" ury="1143.37" lrx="1315.66" lry="1117.31">
+   <Text>A. Overview of the Proposed Approach</Text>
+  </Line>
+  <Line llx="905.14" lly="1074.00" ulx="905.01" uly="1101.00" urx="1566.52" ury="1104.37" lrx="1566.52" lry="1077.31">
+   <Text>The overall architecture of the translator is shown in Fig. 1.</Text>
+  </Line>
+  <Line llx="905.16" lly="1039.98" ulx="905.02" uly="1066.06" urx="1581.96" ury="1069.49" lrx="1581.96" lry="1043.37">
+   <Text>The translator is based on two grammars for the SQL language:</Text>
+  </Line>
+  <Line llx="969.97" lly="1006.64" ulx="969.84" uly="1033.26" urx="1577.60" ury="1036.37" lrx="1577.61" lry="1009.68">
+   <Text>an extended grammar EG, and a restricted grammar</Text>
+  </Line>
+  <Line llx="884.61" lly="973.19" ulx="884.47" uly="1000.00" urx="1580.45" ury="1003.53" lrx="1580.46" lry="976.67">
+   <Text>RG. EG does not accept all the statements accepted by the</Text>
+  </Line>
+  <Line llx="885.65" lly="940.28" ulx="885.51" uly="968.08" urx="1582.78" ury="971.61" lrx="1582.78" lry="943.76">
+   <Text>SQL grammar of [9], but it has approximately the same expressive</Text>
+  </Line>
+  <Line llx="985.43" lly="907.70" ulx="985.30" uly="933.84" urx="1580.47" ury="936.87" lrx="1580.47" lry="910.68">
+   <Text>power; it also includes some elements (such as the</Text>
+  </Line>
+  <Line llx="885.68" lly="873.42" ulx="885.54" uly="900.23" urx="1579.97" ury="903.75" lrx="1579.98" lry="876.89">
+   <Text>EXISTS and ALL keywords in the predicates) which were not</Text>
+  </Line>
+  <Line llx="885.69" lly="840.35" ulx="885.55" uly="867.50" urx="1578.95" ury="871.02" lrx="1578.95" lry="843.81">
+   <Text>present in the grammar of [9]. In the sequel, we will be more</Text>
+  </Line>
+ </Box>
+ <Box llx="885.70" lly="806.56" ulx="885.57" uly="832.37" urx="1579.74" ury="835.89" lrx="1579.75" lry="810.03">
+  <Line llx="885.70" lly="806.56" ulx="885.57" uly="832.37" urx="1579.74" ury="835.89" lrx="1579.75" lry="810.03">
+   <Text>specific on the SQL statements which are not accepted by EG.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="885.37" lly="605.98" ulx="884.39" uly="800.65" urx="1585.15" ury="804.20" lrx="1585.99" lry="609.48">
+  <Line llx="884.69" lly="773.47" ulx="884.55" uly="800.65" urx="1585.15" ury="804.20" lrx="1585.15" lry="776.98">
+   <Text>The main difference between the grammar of [9] and EG is</Text>
+  </Line>
+  <Line llx="884.70" lly="739.53" ulx="884.57" uly="765.70" urx="1582.28" ury="769.23" lrx="1582.28" lry="743.02">
+   <Text>that EG allows a correspondence between types of SQL subqueries</Text>
+  </Line>
+  <Line llx="981.40" lly="706.07" ulx="981.27" uly="732.21" urx="1584.66" ury="735.28" lrx="1584.66" lry="709.09">
+   <Text>and productions of the grammar, thus allowing a</Text>
+  </Line>
+  <Line llx="886.78" lly="672.70" ulx="886.65" uly="699.85" urx="1578.28" ury="703.36" lrx="1578.28" lry="676.16">
+   <Text>syntax-directed translation [15]. RG has a smaller number</Text>
+  </Line>
+  <Line llx="885.76" lly="638.73" ulx="885.63" uly="664.90" urx="1579.80" ury="668.42" lrx="1579.80" lry="642.20">
+   <Text>of productions than EG, representing few types of SQL</Text>
+  </Line>
+  <Line llx="886.81" lly="605.99" ulx="886.68" uly="631.99" urx="999.01" ury="632.60" lrx="999.01" lry="606.55">
+   <Text>subqueries.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="886.85" lly="504.16" ulx="886.37" uly="598.85" urx="1583.68" ury="602.38" lrx="1584.03" lry="507.64">
+  <Line llx="908.42" lly="572.05" ulx="908.29" uly="598.96" urx="1583.68" ury="602.38" lrx="1583.69" lry="575.43">
+   <Text>The queries which are accepted by the EG but not by the</Text>
+  </Line>
+  <Line llx="887.86" lly="538.10" ulx="887.73" uly="564.90" urx="1583.18" ury="568.42" lrx="1583.19" lry="541.58">
+   <Text>RG are preprocessed and transformed into queries which are</Text>
+  </Line>
+  <Line llx="886.85" lly="504.16" ulx="886.71" uly="530.94" urx="1583.64" ury="534.46" lrx="1583.64" lry="507.64">
+   <Text>accepted by the RG; thus, the preprocessing consists in a transformation</Text>
+  </Line>
+ </Box>
+ <Box llx="888.91" lly="470.21" ulx="888.77" uly="500.02" urx="1585.52" ury="503.54" lrx="1585.53" lry="474.02">
+  <Line llx="1010.29" lly="471.15" ulx="1010.14" uly="500.62" urx="1585.52" ury="503.54" lrx="1585.53" lry="474.02">
+   <Text>from SQL into SQL. For the queries which are accepted</Text>
+  </Line>
+ </Box>
+ <Box llx="889.09" lly="136.95" ulx="887.45" uly="464.03" urx="1592.12" ury="467.60" lrx="1593.62" lry="140.47">
+  <Line llx="974.30" lly="437.83" ulx="974.16" uly="464.46" urx="1582.94" ury="467.55" lrx="1582.94" lry="440.88">
+   <Text>by the RG, we have defined the meaning in relational</Text>
+  </Line>
+  <Line llx="887.91" lly="404.25" ulx="887.78" uly="430.39" urx="1582.55" ury="433.91" lrx="1582.55" lry="407.72">
+   <Text>algebra; thus, the meaning of a query consists in a translation</Text>
+  </Line>
+  <Line llx="887.92" lly="369.42" ulx="887.78" uly="397.17" urx="1583.02" ury="400.69" lrx="1583.02" lry="372.89">
+   <Text>from the query in SQL into an expression of relational algebra.</Text>
+  </Line>
+  <Line llx="888.96" lly="336.50" ulx="888.82" uly="364.32" urx="1585.06" ury="367.84" lrx="1585.07" lry="339.98">
+   <Text>Both the definitions of the preprocessing and of meaning are</Text>
+  </Line>
+  <Line llx="888.97" lly="302.56" ulx="888.84" uly="330.31" urx="1582.76" ury="333.83" lrx="1582.76" lry="306.02">
+   <Text>syntax-directed: rules are in correspondence with the productions</Text>
+  </Line>
+  <Line llx="952.76" lly="270.04" ulx="952.62" uly="296.77" urx="1584.57" ury="299.98" lrx="1584.57" lry="273.20">
+   <Text>of the EG and RG. The rationale for distinguishing the</Text>
+  </Line>
+  <Line llx="889.00" lly="236.56" ulx="888.87" uly="262.73" urx="1582.01" ury="266.25" lrx="1582.01" lry="240.03">
+   <Text>preprocessing from the meaning is that the meaning of an SQL</Text>
+  </Line>
+  <Line llx="890.04" lly="202.78" ulx="889.91" uly="229.56" urx="1585.37" ury="233.09" lrx="1585.37" lry="206.26">
+   <Text>subquery is, in general, rather difficult. Thus, we have determined</Text>
+  </Line>
+  <Line llx="967.19" lly="170.35" ulx="967.06" uly="197.08" urx="1587.95" ury="200.22" lrx="1587.95" lry="173.46">
+   <Text>a small set of subqueries which are representative of all</Text>
+  </Line>
+  <Line llx="890.06" lly="136.96" ulx="889.93" uly="164.74" urx="1593.62" ury="168.32" lrx="1593.62" lry="140.47">
+   <Text>other subqueries, and we have given the meaning just for them.</Text>
+  </Line>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Resources>
+<Fonts>
+ <Font id="F0" name="GlyphLessFont" type="TrueType (CID)" embedded="true" ascender="720.00" capheight="1000.00" italicangle="0.00" descender="0.00" weight="400.00" xheight="475.00"/>
+ <Font id="F1" name="GlyphLessFont" type="TrueType (CID)" embedded="true" ascender="720.00" capheight="1000.00" italicangle="0.00" descender="0.00" weight="400.00" xheight="475.00"/>
+</Fonts>
+</Resources>
+</Pages>
+</Document>
+</TET>

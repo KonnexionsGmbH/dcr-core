@@ -31,10 +31,10 @@ class Process:
         self._full_name_in_pdf2image = None
         self._full_name_in_pdflib = None
         self._full_name_in_stem_name = None
+        self._full_name_in_tesseract = None
         self._full_name_in_tokenizer_line = None
         self._full_name_in_tokenizer_page = None
         self._full_name_in_tokenizer_word = None
-        self._full_names_in_tesseract = None
         self._full_name_orig = None
         self._is_process_pandoc = None
         self._is_process_pdf2image = None
@@ -47,7 +47,15 @@ class Process:
     def _document_process_init(self) -> None: ...
     def _document_process_pandoc(self) -> None: ...
     def _document_process_parser(self) -> None: ...
-    def _document_process_parser_tetml_type(self, full_name_in_parser: str, full_name_in_tokenizer: str, tetml_type: str) -> None: ...
+    def _document_process_parser_tetml_type(
+        self,
+        full_name_in_parser: str,
+        full_name_in_tokenizer: str,
+        tetml_type: str,
+        is_parsing_line: bool,
+        is_parsing_page: bool,
+        is_parsing_word: bool,
+    ) -> None: ...
     def _document_process_pdf2image(self) -> None: ...
     def _document_process_pdflib(self) -> None: ...
     def _document_process_tesseract(self) -> None: ...
