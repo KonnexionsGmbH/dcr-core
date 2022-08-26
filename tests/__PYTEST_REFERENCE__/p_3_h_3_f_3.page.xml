@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created by the PDFlib Text and Image Extraction Toolkit TET (www.pdflib.com) -->
+<TET xmlns="http://www.pdflib.com/XML/TET5/TET-5.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.pdflib.com/XML/TET5/TET-5.0
+ http://www.pdflib.com/XML/TET5/TET-5.0.xsd"
+ version="5.2">
+<Creation platform="Win64" tetVersion="5.3" date="2022-08-26T10:39:38+02:00" />
+<Document filename="data\inbox_dev_accepted\p_3_h_3_f_3.pdf" pageCount="3" filesize="68586" linearized="true" pdfVersion="1.5" tagged="true">
+<DocInfo>
+<Author>Walter Weinmann</Author>
+<CreationDate>2022-05-25T10:42:41+02:00</CreationDate>
+<Creator>Acrobat PDFMaker 11 for Word</Creator>
+<ModDate>2022-05-25T10:42:41+02:00</ModDate>
+<Producer>Adobe PDF Library 11.0</Producer>
+<Custom key="SourceModified">D:20220427123737</Custom>
+<Custom key="ContentTypeId">0x0101006EDDDB5EE6D98C44930B742096920B300400F5B6D36B3EF94B4E9A635CDF2A18F5B8</Custom>
+</DocInfo>
+<Metadata>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.4-c006 80.159825, 2016/09/16-03:31:08        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""
+            xmlns:xmp="http://ns.adobe.com/xap/1.0/"
+            xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/"
+            xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:pdf="http://ns.adobe.com/pdf/1.3/"
+            xmlns:pdfx="http://ns.adobe.com/pdfx/1.3/">
+         <xmp:ModifyDate>2022-05-25T10:42:41+02:00</xmp:ModifyDate>
+         <xmp:CreateDate>2022-05-25T10:42:41+02:00</xmp:CreateDate>
+         <xmp:MetadataDate>2022-05-25T10:42:41+02:00</xmp:MetadataDate>
+         <xmp:CreatorTool>Acrobat PDFMaker 11 for Word</xmp:CreatorTool>
+         <xmpMM:DocumentID>uuid:4b56bb3f-82b3-4728-9237-153ebfffa8b2</xmpMM:DocumentID>
+         <xmpMM:InstanceID>uuid:a403561b-eac8-4a70-a2df-47eac182bd3c</xmpMM:InstanceID>
+         <xmpMM:subject>
+            <rdf:Seq>
+               <rdf:li>7</rdf:li>
+            </rdf:Seq>
+         </xmpMM:subject>
+         <dc:format>application/pdf</dc:format>
+         <dc:title>
+            <rdf:Alt>
+               <rdf:li xml:lang="x-default"/>
+            </rdf:Alt>
+         </dc:title>
+         <dc:description>
+            <rdf:Alt>
+               <rdf:li xml:lang="x-default"/>
+            </rdf:Alt>
+         </dc:description>
+         <dc:creator>
+            <rdf:Seq>
+               <rdf:li>Walter Weinmann</rdf:li>
+            </rdf:Seq>
+         </dc:creator>
+         <pdf:Producer>Adobe PDF Library 11.0</pdf:Producer>
+         <pdf:Keywords/>
+         <pdfx:SourceModified>D:20220427123737</pdfx:SourceModified>
+         <pdfx:Company/>
+         <pdfx:Comments/>
+         <pdfx:InternalTags/>
+         <pdfx:ContentTypeId>0x0101006EDDDB5EE6D98C44930B742096920B300400F5B6D36B3EF94B4E9A635CDF2A18F5B8</pdfx:ContentTypeId>
+         <pdfx:FeatureTags/>
+         <pdfx:LocalizationTags/>
+         <pdfx:CampaignTags/>
+         <pdfx:ScenarioTags/>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta>
+</Metadata>
+<Options>tetml={filename={data\inbox_dev_accepted\p_3_h_3_f_3.page.xml}} engines={noannotation noimage text notextcolor novector} lineseparator=U+0020</Options>
+<Pages>
+<Page number="1" width="612.00" height="792.00">
+<Options>granularity=page</Options>
+<Content granularity="page" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="72.00" lly="718.69" urx="112.87" ury="756.60">
+  <Text artifact="true">Header 1 Header 2 Header 3</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="665.05" urx="406.05" ury="702.96">
+  <Text>Seite 1 Zeile 1 This chapter uses Volto to change displaying the dates in Seite 1 Zeile 2 talkview and talklistview. To meet the same requirements in Seite 1 Zeile 3 classic Plone see the chapter Turning Talks into Events.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="56.06" urx="109.75" ury="80.53">
+  <Text artifact="true">Footer 1 Footer 2</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="39.74" ulx="72.00" uly="50.78" urx="243.64" ury="53.76" lrx="243.64" lry="39.72">
+  <Text artifact="true">Footer 3 pg. 1</Text>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Page number="2" width="612.00" height="792.00">
+<Options>granularity=page</Options>
+<Content granularity="page" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="72.00" lly="678.48" urx="427.49" ury="756.60">
+  <Text artifact="true">Header 1 Header 2 Header 3 Seite 2 Zeile 1 We use a technique called component shadowing to override an Seite 2 Zeile 2 existing Volto component with our local custom version, without Seite 2 Zeile 3 having to modify Volto&apos;s source code at all. You have to place the</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="56.06" urx="109.75" ury="80.53">
+  <Text artifact="true">Footer 1 Footer 2</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="39.74" ulx="72.00" uly="50.78" urx="243.64" ury="53.76" lrx="243.64" lry="39.72">
+  <Text artifact="true">Footer 3 pg. 2</Text>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Page number="3" width="612.00" height="792.00">
+<Options>granularity=page</Options>
+<Content granularity="page" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="72.00" lly="678.48" urx="433.98" ury="756.60">
+  <Text artifact="true">Header 1 Header 2 Header 3 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato. The overall font is defined in Volto and can be found in</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="56.06" urx="109.75" ury="80.53">
+  <Text artifact="true">Footer 1 Footer 2</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="39.74" ulx="72.00" uly="50.78" urx="243.64" ury="53.76" lrx="243.64" lry="39.72">
+  <Text artifact="true">Footer 3 pg. 3</Text>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Resources>
+<Fonts>
+ <Font id="F0" name="Calibri" fullname="JGOLYQ+Calibri" type="TrueType" embedded="true" ascender="750.00" capheight="632.00" italicangle="0.00" descender="-250.00" weight="400.00" xheight="464.00"/>
+ <Font id="F1" name="Calibri-Light" fullname="YNZXAM+Calibri-Light" type="TrueType" embedded="true" ascender="750.00" capheight="632.00" italicangle="0.00" descender="-250.00" weight="300.00" xheight="462.00"/>
+</Fonts>
+<ColorSpaces>
+ <ColorSpace id="CS0" name="ICCBased" components="1" iccprofile="ICC0"/>
+</ColorSpaces>
+</Resources>
+<Graphics>
+<ICCProfiles>
+ <ICCProfile id="ICC0" embedded="true" iccversion="2.1" profilename="Gray Gamma 2.2" checksum="66043AD0DE86F27B977BAB702FB1A778" profilecs="GRAY" deviceclass="mntr" fromCIE="true" toCIE="true"/>
+</ICCProfiles>
+</Graphics>
+</Pages>
+</Document>
+</TET>

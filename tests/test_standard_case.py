@@ -12,23 +12,6 @@ import dcr_core.cls_process
 
 
 # -----------------------------------------------------------------------------
-# Verify the created files.
-# -----------------------------------------------------------------------------
-def verify_created_files(directory_name, test_files):
-    """Verify the created files."""
-    pytest.helpers.verify_content_of_directory(
-        directory_name,
-        [],
-        test_files,
-    )
-
-    pytest.helpers.compare_with_reference_files(
-        directory_name,
-        test_files,
-    )
-
-
-# -----------------------------------------------------------------------------
 # Test Case 1.
 # -----------------------------------------------------------------------------
 def test_case_1(fxtr_setup_empty_inbox):
@@ -64,6 +47,7 @@ def test_case_1(fxtr_setup_empty_inbox):
 @pytest.mark.parametrize(
     "input_output",
     [
+        # input_output0
         (
             "case_2_docx_route_inbox_pandoc_pdflib",
             "docx",
@@ -79,6 +63,7 @@ def test_case_1(fxtr_setup_empty_inbox):
                 "case_2_docx_route_inbox_pandoc_pdflib.word.xml",
             ],
         ),
+        # input_output1
         (
             "case_3_pdf_text_route_inbox_pdflib",
             "pdf",
@@ -94,6 +79,7 @@ def test_case_1(fxtr_setup_empty_inbox):
                 "case_3_pdf_text_route_inbox_pdflib.word.xml",
             ],
         ),
+        # input_output2
         (
             "case_4_pdf_image_small_route_inbox_pdf2image_tesseract_pdflib",
             "pdf",
@@ -111,6 +97,7 @@ def test_case_1(fxtr_setup_empty_inbox):
                 "case_4_pdf_image_small_route_inbox_pdf2image_tesseract_pdflib_1.jpeg",
             ],
         ),
+        # input_output3
         (
             "case_5_pdf_image_large_route_inbox_pdf2image_tesseract_pypdf2_pdflib",
             "pdf",
@@ -131,6 +118,7 @@ def test_case_1(fxtr_setup_empty_inbox):
                 "case_5_pdf_image_large_route_inbox_pdf2image_tesseract_pypdf2_pdflib_2.jpeg",
             ],
         ),
+        # input_output4
         (
             "case_6_jpg_route_inbox_tesseract_pdflib",
             "jpg",
@@ -170,7 +158,7 @@ def test_cases_2_6(input_output: tuple[str, str, list[str]], fxtr_setup_empty_in
     instance.document_process(full_name)
 
     # -------------------------------------------------------------------------
-    verify_created_files(directory_name, test_files)
+    pytest.helpers.verify_created_files(directory_name, test_files)
 
 
 # -----------------------------------------------------------------------------

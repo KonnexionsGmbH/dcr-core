@@ -418,3 +418,21 @@ def verify_content_of_directory(
         assert elem in directory_content, f"expected file {elem} is missing"
         elem_path = dcr_core.core_utils.get_full_name_from_components(directory_name, elem)
         assert os.path.isfile(elem_path), f"expected file {elem} is a directory"
+
+
+# -----------------------------------------------------------------------------
+# Verify the created files.
+# -----------------------------------------------------------------------------
+@pytest.helpers.register
+def verify_created_files(directory_name, test_files):
+    """Verify the created files."""
+    verify_content_of_directory(
+        directory_name,
+        [],
+        test_files,
+    )
+
+    compare_with_reference_files(
+        directory_name,
+        test_files,
+    )
