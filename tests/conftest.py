@@ -112,6 +112,49 @@ def compare_with_reference_files(directory_name: str, reference_files: list[str]
 
 
 # -----------------------------------------------------------------------------
+# Delete the original configuration parameter value.
+# -----------------------------------------------------------------------------
+@pytest.helpers.register
+def config_param_delete(config_section: str, config_param: str) -> None:
+    """Delete the original configuration parameter value.
+
+    Args:
+        config_section (str): Configuration section.
+        config_param (str): Configuration parameter.
+    """
+    CONFIG_PARSER.read(dcr_core.cls_setup.Setup._DCR_CFG_FILE)
+
+    del CONFIG_PARSER[config_section][config_param]
+
+    with open(dcr_core.cls_setup.Setup._DCR_CFG_FILE, "w", encoding=dcr_core.core_glob.FILE_ENCODING_DEFAULT) as configfile:
+        CONFIG_PARSER.write(configfile)
+
+
+# -----------------------------------------------------------------------------
+# modify configuration parameter values.
+# -----------------------------------------------------------------------------
+# noinspection PyProtectedMember
+@pytest.helpers.register
+def config_params_modify(
+    config_section: str,
+    config_params: list[tuple[str, str]],
+) -> None:
+    """Backup and modify configuration parameter values.
+
+    Args:
+        config_section (str): Configuration section.
+        config_params (list[tuple[str, str]]): Configuration parameter modifications.
+    """
+    CONFIG_PARSER.read(dcr_core.cls_setup.Setup._DCR_CFG_FILE)
+
+    for (config_param, config_value) in config_params:
+        CONFIG_PARSER[config_section][config_param] = config_value
+
+    with open(dcr_core.cls_setup.Setup._DCR_CFG_FILE, "w", encoding=dcr_core.core_glob.FILE_ENCODING_DEFAULT) as configfile:
+        CONFIG_PARSER.write(configfile)
+
+
+# -----------------------------------------------------------------------------
 # Copy files from the sample test file directory.
 # -----------------------------------------------------------------------------
 @pytest.helpers.register
@@ -313,7 +356,7 @@ def get_test_files_reference_directory_name():
     Provide the file directory name where the reference files are
     located.
     """
-    return "tests/__PYTEST_REFERENCE__/"
+    return "tests/__PYTEST_REFERENCES__/"
 
 
 # -----------------------------------------------------------------------------

@@ -12,7 +12,7 @@ import dcr_core.cls_process
 
 
 # -----------------------------------------------------------------------------
-# Test Cases 2, 3, 4, 5, and 6.
+# Test Cases Line Type Headers & Footers.
 # -----------------------------------------------------------------------------
 @pytest.mark.parametrize(
     "input_output",
@@ -387,3 +387,41 @@ def test_line_type_headers_footers(input_output: tuple[str, str, list[str]], fxt
 
     # -------------------------------------------------------------------------
     pytest.helpers.verify_created_files(directory_name, test_files)
+
+# -----------------------------------------------------------------------------
+# Test Cases Line Type Headers & Footers - Coverage.
+# -----------------------------------------------------------------------------
+def test_line_type_headers_footers_coverage(fxtr_rmdir_opt, fxtr_setup_empty_inbox):
+    """Test Cases Line Type Headers & Footers - Coverage."""
+    # -------------------------------------------------------------------------
+    pytest.helpers.config_params_modify(
+        dcr_core.cls_setup.Setup._DCR_CFG_SECTION_ENV_TEST,
+        [
+            (dcr_core.cls_setup.Setup._DCR_CFG_LT_FOOTER_MAX_LINES, "0"),
+            (dcr_core.cls_setup.Setup._DCR_CFG_LT_HEADER_MAX_LINES, "0"),
+            (dcr_core.cls_setup.Setup._DCR_CFG_TOKENIZE_2_JSONFILE, "false"),
+            (dcr_core.cls_setup.Setup._DCR_CFG_VERBOSE_LT_HEADERS_FOOTERS, "true"),
+        ],
+    )
+
+    # -------------------------------------------------------------------------
+    directory_name = dcr_core.core_glob.setup.directory_inbox
+    stem_name =             "p_5_h_4_f_4_empty_center"
+    file_extension =             "pdf"
+
+    full_name = dcr_core.core_utils.get_full_name_from_components(directory_name, stem_name, file_extension)
+
+    # -------------------------------------------------------------------------
+    pytest.helpers.copy_files_4_pytest_2_dir(
+        source_files=[
+            (stem_name, file_extension),
+        ],
+        target_path=directory_name,
+    )
+
+    # -------------------------------------------------------------------------
+    instance = dcr_core.cls_process.Process()
+
+    instance.document_process(full_name)
+
+

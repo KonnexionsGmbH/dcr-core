@@ -151,7 +151,7 @@ class LineTypeHeaderFooters:
     # ------------------------------------------------------------------
     def _check_irregular_footer(self, line_ind: int, text: str) -> None:
         try:
-            if text == "":
+            if text.strip() == "":
                 return
 
             page_no_cand = int(text.split()[-1])
@@ -178,7 +178,7 @@ class LineTypeHeaderFooters:
     # ------------------------------------------------------------------
     def _check_irregular_header(self, line_ind: int, text: str) -> None:
         try:
-            if text == "":
+            if text.strip() == "":
                 return
 
             page_no_cand = int(text.split()[-1])

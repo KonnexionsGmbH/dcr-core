@@ -149,7 +149,6 @@ lazydocs:           ## Generate markdown API documentation for Google-style Pyth
 	@echo MYPYPATH   =${MYPYPATH}
 	@echo PYTHON     =${PYTHON}
 	@echo PYTHONPATH =${PYTHONPATH}
-	pipenv run lazydocs --version
 	@echo ---------------------------------------------------------------------
 	${CREATE_DOCS}
 	${DELETE_DOCS}
