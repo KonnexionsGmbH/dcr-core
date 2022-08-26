@@ -5,8 +5,8 @@
     "tables": [
         {
             "firstRowLLX": 81.26,
-            "firstRowURX": 1440.0,
-            "noColumns": 6,
+            "firstRowURX": 544.27,
+            "noColumns": 4,
             "noRows": 2,
             "pageNoFrom": 1,
             "pageNoTill": 1,
@@ -14,8 +14,8 @@
             "rows": [
                 {
                     "firstColumnLLX": 81.26,
-                    "lastColumnURX": 1440.0,
-                    "noColumns": 3,
+                    "lastColumnURX": 544.27,
+                    "noColumns": 1,
                     "rowNo": 1,
                     "columns": [
                         {
@@ -26,24 +26,6 @@
                             "lineNoPage": 8,
                             "paragraphNo": 5,
                             "text": "From the product headquarters"
-                        },
-                        {
-                            "columnNo": 2,
-                            "coordLLX": 1110.86,
-                            "coordURX": 1222.97,
-                            "lineNo": 1,
-                            "lineNoPage": 9,
-                            "paragraphNo": 5,
-                            "text": ""
-                        },
-                        {
-                            "columnNo": 3,
-                            "coordLLX": 1376.23,
-                            "coordURX": 1440.0,
-                            "lineNo": 1,
-                            "lineNoPage": 9,
-                            "paragraphNo": 5,
-                            "text": ""
                         }
                     ]
                 },

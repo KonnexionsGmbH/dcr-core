@@ -99,6 +99,9 @@ class Process:
         self._language_spacy: str = ""
         self._language_tesseract: str = ""
 
+        self._no_lines_footer: int = 0
+        self._no_lines_header: int = 0
+        self._no_lines_toc: int = 0
         self._no_pdf_pages: int = 0
 
         self._exist = True
@@ -173,6 +176,9 @@ class Process:
         self._language_spacy: str = ""
         self._language_tesseract: str = ""
 
+        self._no_lines_footer: int = 0
+        self._no_lines_header: int = 0
+        self._no_lines_toc: int = 0
         self._no_pdf_pages: int = 0
 
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
@@ -255,6 +261,11 @@ class Process:
                 is_parsing_page,
                 is_parsing_word,
             )
+
+            if is_parsing_line:
+                self._no_lines_footer = dcr_core.core_glob.line_type_headers_footers.no_lines_footer
+                self._no_lines_header = dcr_core.core_glob.line_type_headers_footers.no_lines_header
+                self._no_lines_toc = dcr_core.core_glob.line_type_toc.no_lines_toc
 
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
 
@@ -424,9 +435,14 @@ class Process:
         )
 
         return_code, error_msg = Process.tokenizer_process(
-            self._full_name_in_tokenizer_line,
-            self._full_name_in_next_step,
-            self._language_spacy,
+            full_name_in=self._full_name_in_tokenizer_line,
+            full_name_out=self._full_name_in_next_step,
+            pipeline_name=self._language_spacy,
+            document_id=self._document_id,
+            full_name_orig=self._full_name_orig,
+            no_lines_footer=self._no_lines_footer,
+            no_lines_header=self._no_lines_header,
+            no_lines_toc=self._no_lines_toc,
         )
         if return_code != "ok":
             raise RuntimeError(error_msg)

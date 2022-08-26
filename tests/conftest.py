@@ -11,7 +11,6 @@ Returns:
     [type]: None.
 """
 import configparser
-import filecmp
 import os
 import pathlib
 import shutil
@@ -35,7 +34,7 @@ FILE_NAME_SETUP_CFG_BACKUP = "setup.cfg_backup"
 # Compare the test files with the reference files.
 # -----------------------------------------------------------------------------
 @pytest.helpers.register
-def compare_with_reference_files(directory_name: str, reference_files: list[str]) -> None:
+def compare_with_reference_files(directory_name: str, reference_files: list[str]) -> None:  # noqa: C901
     """Compare the test files with the reference files.
 
     Args:
@@ -46,11 +45,70 @@ def compare_with_reference_files(directory_name: str, reference_files: list[str]
     """
     reference_directory = get_test_files_reference_directory_name()
 
-    # check expected directories against directory content
     for reference_file in reference_files:
-        full_name_test_file = dcr_core.core_utils.get_full_name_from_components(directory_name, reference_file)
-        full_name_reference_file = dcr_core.core_utils.get_full_name_from_components(reference_directory, reference_file)
-        assert filecmp.cmp(full_name_test_file, full_name_reference_file, False), f"file {reference_file} does not match reference file"
+        extension = pathlib.Path(reference_file).suffix.lower()[1:]
+
+        if extension not in (dcr_core.core_glob.FILE_TYPE_JSON, dcr_core.core_glob.FILE_TYPE_XML):
+            continue
+
+        with open(
+            dcr_core.core_utils.get_full_name_from_components(directory_name, reference_file),
+            "r",
+            encoding=dcr_core.core_glob.FILE_ENCODING_DEFAULT,
+        ) as tst_file:
+            tst_lines = tst_file.readlines()
+            tst_len = len(tst_lines)
+
+        with open(
+            dcr_core.core_utils.get_full_name_from_components(reference_directory, reference_file),
+            "r",
+            encoding=dcr_core.core_glob.FILE_ENCODING_DEFAULT,
+        ) as ref_file:
+            ref_lines = ref_file.readlines()
+            ref_len = len(ref_lines)
+
+        if tst_len != ref_len:
+            tst_file.close()
+            ref_file.close()
+            assert False, f"file {reference_file} has {tst_len} lines instead of {ref_len}"
+
+        is_equal = True
+
+        for i in range(ref_len):
+            if tst_lines[i] == ref_lines[i]:
+                continue
+
+            if extension == dcr_core.core_glob.FILE_TYPE_JSON:
+                # multiple lines
+                if is_line_type('                                    "tknRank": ', tst_lines[i], ref_lines[i]):
+                    continue
+                # single line
+                if is_line_type('    "documentFileName": ', tst_lines[i], ref_lines[i]) or is_line_type(
+                    '    "documentId": ', tst_lines[i], ref_lines[i]
+                ):
+                    continue
+
+            if extension == dcr_core.core_glob.FILE_TYPE_XML:
+                # multiple lines
+                # single line
+                if (
+                    is_line_type("<CreationDate>", tst_lines[i], ref_lines[i])
+                    or is_line_type("<Creation platform=", tst_lines[i], ref_lines[i])
+                    or is_line_type("<Document filename=", tst_lines[i], ref_lines[i])
+                    or is_line_type(' <Font id="F0" name="LMRoman10-Regular" fullname="', tst_lines[i], ref_lines[i])
+                    or is_line_type("<Options>tetml=", tst_lines[i], ref_lines[i])
+                ):
+                    continue
+
+            print(f"line no. : {i}")
+            print(f"test file: {tst_lines[i].rstrip()}")
+            print(f"reference: {ref_lines[i].rstrip()}")
+            is_equal = False
+
+        tst_file.close()
+        ref_file.close()
+
+        assert is_equal, f"file {reference_file} does not match reference file"
 
 
 # -----------------------------------------------------------------------------
@@ -240,7 +298,7 @@ def fxtr_setup_empty_inbox(
 
     yield
 
-    fxtr_rmdir_opt(dcr_core.core_glob.setup.directory_inbox)
+    # fxtr_rmdir_opt(dcr_core.core_glob.setup.directory_inbox)
 
     setup_cfg_restore()
 
@@ -280,6 +338,31 @@ def setup_cfg_backup() -> None:
         shutil.copy2(FILE_NAME_SETUP_CFG_BACKUP, FILE_NAME_SETUP_CFG)
     else:
         shutil.copy2(FILE_NAME_SETUP_CFG, FILE_NAME_SETUP_CFG_BACKUP)
+
+
+# -----------------------------------------------------------------------------
+# Search for a substring optionally starting from a certain position.
+# -----------------------------------------------------------------------------
+def is_line_type(search: str, line_1: str, line_2: str, search_pos: int = 0) -> bool:
+    """Search for a substring optionally starting from a certain position.
+
+    Args:
+        search (str):
+            Searched substring.
+        line_1 (str):
+            First line.
+        line_2 (str):
+            Second line.
+        search_pos (int, optional):
+            Expected position of the search string in the rows - relative to 0. Defaults to 0.
+
+    Returns:
+        bool: _description_
+    """
+    if line_1.find(search) == search_pos and line_2.find(search) == search_pos:
+        return True
+
+    return False
 
 
 # -----------------------------------------------------------------------------

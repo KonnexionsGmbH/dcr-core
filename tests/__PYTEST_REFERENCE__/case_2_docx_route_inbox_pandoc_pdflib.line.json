@@ -2,7 +2,7 @@
     "documentId": 1,
     "documentFileName": "case_2_docx_route_inbox_pandoc_pdflib.docx",
     "noLinesFooter": 1,
-    "noLinesHeader": 1,
+    "noLinesHeader": 0,
     "noLinesInDocument": 6,
     "noLinesToc": 0,
     "noListsBulletInDocument": 0,

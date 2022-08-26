@@ -42,6 +42,9 @@ class Process:
         self._language_pandoc = None
         self._language_spacy = None
         self._language_tesseract = None
+        self._no_lines_footer = None
+        self._no_lines_header = None
+        self._no_lines_toc = None
         self._no_pdf_pages = None
     def _document_process_check_extension(self) -> None: ...
     def _document_process_init(self) -> None: ...
