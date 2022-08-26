@@ -1,0 +1,103 @@
+{
+    "documentId": 8,
+    "documentFileName": "p_2_h_2_f_2.pdf",
+    "noLinesFooter": 3,
+    "noLinesHeader": 1,
+    "noLinesInDocument": 8,
+    "noLinesToc": 0,
+    "noListsBulletInDocument": 0,
+    "noListsNumberInDocument": 0,
+    "noPagesInDocument": 2,
+    "noParagraphsInDocument": 4,
+    "noTablesInDocument": 0,
+    "noTitlesInDocument": 0,
+    "titles": [],
+    "pages": [
+        {
+            "pageNo": 1,
+            "noLinesInPage": 4,
+            "noParagraphsInPage": 2,
+            "lines": [
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 112.87,
+                    "lineNo": 1,
+                    "lineNoPage": 1,
+                    "lineType": "h",
+                    "paragraphNo": 1,
+                    "text": "Header 1"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 112.87,
+                    "lineNo": 2,
+                    "lineNoPage": 2,
+                    "lineType": "f",
+                    "paragraphNo": 1,
+                    "text": "Header 2"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 243.64,
+                    "lineNo": 1,
+                    "lineNoPage": 3,
+                    "lineType": "f",
+                    "paragraphNo": 2,
+                    "text": "Footer 1 pg. 1"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 109.75,
+                    "lineNo": 2,
+                    "lineNoPage": 4,
+                    "lineType": "f",
+                    "paragraphNo": 2,
+                    "text": "Footer 2"
+                }
+            ]
+        },
+        {
+            "pageNo": 2,
+            "noLinesInPage": 4,
+            "noParagraphsInPage": 2,
+            "lines": [
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 112.87,
+                    "lineNo": 1,
+                    "lineNoPage": 1,
+                    "lineType": "h",
+                    "paragraphNo": 1,
+                    "text": "Header 1"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 112.87,
+                    "lineNo": 2,
+                    "lineNoPage": 2,
+                    "lineType": "f",
+                    "paragraphNo": 1,
+                    "text": "Header 2"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 243.64,
+                    "lineNo": 1,
+                    "lineNoPage": 3,
+                    "lineType": "f",
+                    "paragraphNo": 2,
+                    "text": "Footer 1 pg. 2"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 109.75,
+                    "lineNo": 2,
+                    "lineNoPage": 4,
+                    "lineType": "f",
+                    "paragraphNo": 2,
+                    "text": "Footer 2"
+                }
+            ]
+        }
+    ]
+}

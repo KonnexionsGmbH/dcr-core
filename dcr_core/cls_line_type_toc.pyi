@@ -2,7 +2,7 @@
 # source code is governed by the Konnexions Public License (KX-PL)
 # Version 2020.05, that can be found in the LICENSE file.
 
-"""Library stub file."""
+"""Module stub file."""
 import dcr_core.cls_nlp_core
 
 class LineTypeToc:
@@ -20,7 +20,6 @@ class LineTypeToc:
         self._toc_candidates: list[list[int]] = []
         self.no_lines_toc: int = 0
         self.line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages = []
-        ...
     def _check_toc_candidate(self) -> None: ...
     def _init_toc_candidate(self) -> None: ...
     def _process_page_lines(self) -> None: ...

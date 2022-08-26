@@ -2,7 +2,7 @@
 # source code is governed by the Konnexions Public License (KX-PL)
 # Version 2020.05, that can be found in the LICENSE file.
 
-"""Library stub file."""
+"""Module stub file."""
 import pathlib
 import re
 
@@ -35,7 +35,6 @@ class LineTypeListBullet:
         self._parser_line_lines_json: dcr_core.cls_nlp_core.NLPCore.ParserLineLines = []
         self._rules: dict[str, int] = {}
         self.no_lists: int = 0
-        ...
     def _finish_list(self) -> None: ...
     def _init_anti_patterns(self) -> list[tuple[str, re.Pattern[str]]]: ...
     def _init_rules(self) -> dict[str, int]: ...

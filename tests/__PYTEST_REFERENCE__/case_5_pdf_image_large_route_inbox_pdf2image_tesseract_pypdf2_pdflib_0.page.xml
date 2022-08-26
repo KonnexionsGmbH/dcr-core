@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created by the PDFlib Text and Image Extraction Toolkit TET (www.pdflib.com) -->
+<TET xmlns="http://www.pdflib.com/XML/TET5/TET-5.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.pdflib.com/XML/TET5/TET-5.0
+ http://www.pdflib.com/XML/TET5/TET-5.0.xsd"
+ version="5.2">
+<Creation platform="Win64" tetVersion="5.3" date="2022-08-26T09:12:33+02:00" />
+<Document filename="data\inbox_dev_accepted\case_5_pdf_image_large_route_inbox_pdf2image_tesseract_pypdf2_pdflib_0.pdf" pageCount="2" filesize="1005457" linearized="false" pdfVersion="1.5">
+<DocInfo>
+<Producer>PyPDF2</Producer>
+</DocInfo>
+<Options>tetml={filename={data\inbox_dev_accepted\case_5_pdf_image_large_route_inbox_pdf2image_tesseract_pypdf2_pdflib_0.page.xml}} engines={noannotation noimage text notextcolor novector} lineseparator=U+0020</Options>
+<Pages>
+<Page number="1" width="1748.57" height="2262.86">
+<Options>granularity=page</Options>
+<Content granularity="page" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="145.03" lly="2177.66" urx="172.81" ury="2199.66">
+  <Text>324</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="674.74" lly="2173.54" ulx="674.88" uly="2195.54" urx="1646.82" ury="2189.71" lrx="1646.56" lry="2167.63">
+  <Text>IEEE TRANSACTIONS ON SOFTWARE ENGINEERING, VOL. SE-11, NO. 4, APRIL 1985</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="384.69" lly="1969.89" urx="869.14" ury="2124.57">
+  <Text>Member of IBM’s Santa Teresa Laboratory during the summers of 1982 and 1983. He has published papers in switching and automata theory, computer graphics, operating systems, database, and most recently, software engineering and software metrics.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1155.46" lly="1989.43" ulx="1156.25" uly="2121.46" urx="1642.79" ury="2118.54" lrx="1641.87" lry="1986.46">
+  <Text>Stephen M. Thebaut (S’79-M’83) received the B.A. degree in mathematics from Duke University, Durham, NC, and the M.S, and Ph. D. degrees in computer science from Purdue University, West Lafayette, IN, in 1979 and 1983,</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1156.15" lly="1963.71" ulx="1156.27" uly="1984.71" urx="1273.88" ury="1984.01" lrx="1273.63" lry="1962.95">
+  <Text>respectively.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1174.67" lly="1938.91" ulx="1174.81" uly="1962.03" urx="1639.10" ury="1959.24" lrx="1638.82" lry="1936.07">
+  <Text>He joined the Department of Computer and</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1155.13" lly="1912.28" ulx="1155.26" uly="1934.28" urx="1640.21" ury="1931.37" lrx="1639.94" lry="1909.31">
+  <Text>Information Sciences, University of Florida,</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="909.32" lly="1807.99" ulx="909.93" uly="1909.99" urx="1643.33" ury="1905.59" lrx="1642.58" lry="1803.53">
+  <Text>Gainesville, FL, as an Assistant Professor in 1983, and was supported by an IBM Postdoctoral Research Fellowship during the 1983- 1984 academic year. His current research interests include software</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="907.12" lly="1756.91" ulx="907.40" uly="1803.62" urx="1639.60" ury="1799.23" lrx="1639.19" lry="1752.45">
+  <Text>reliability, program maintenance, and the large-scale software development process.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="926.83" lly="1728.53" ulx="926.98" uly="1753.14" urx="1638.91" ury="1748.87" lrx="1638.62" lry="1724.21">
+  <Text>Prof. Thebaut is a member of the Association for Computing Machinery, the IEEE Computer Society, and the 356 Registry.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="387.34" lly="1548.19" ulx="387.95" uly="1624.69" urx="872.83" ury="1620.81" lrx="872.03" lry="1544.24">
+  <Text>Tze-Jie Yu received the B.S. degree in electrical engineering from National Taiwan University in 1979, and the M.S. degree in computer science from Purdue University, West Lafayette, IN, in 1983.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="385.82" lly="1309.53" ulx="387.30" uly="1493.80" urx="871.86" ury="1489.92" lrx="870.20" lry="1305.59">
+  <Text>From 1981 to the present, he has beena Ph. D. candidate and Research Assistant at Purdue University. He worked for IBM’s Santa Teresa Laboratory as a Systems Analyst during the summer of 1983. His research interests include software quality assessment, software tools, and software cost modeling.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="140.02" lly="1231.27" ulx="140.65" uly="1310.71" urx="872.62" ury="1304.85" lrx="871.80" lry="1225.35">
+  <Text>Mr. Yu is a member of the Association for Computing Machinery and its Special Interest Group on Software Engineering, and a member of the IEEE Computer Society.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1155.09" lly="1570.80" ulx="1155.09" uly="1620.54" urx="1643.27" ury="1620.54" lrx="1643.27" lry="1569.03">
+  <Text>Lorri R. Paulsen received the B.S. degree in mathematics from Wagner College, Staten Island,</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1156.12" lly="1545.09" urx="1278.52" ury="1570.09">
+  <Text>NY, in 1968.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1154.06" lly="1464.86" urx="1643.66" ury="1539.31">
+  <Text>She joined IBM in 1968, and is currently a Program Development Manager for IBM General Products Division at Santa Teresa Laboratory,</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="906.17" lly="1227.26" ulx="906.17" uly="1459.12" urx="1640.83" ury="1459.12" lrx="1640.83" lry="1225.77">
+  <Text>San Jose, CA. During her IBM career, she has been associated with systems design and development, working on the ASP Version 3 and JES3 products. In 1979 she became involved with the measurement of programmer’s productivity, which led to her research with Software Science metrics and the prediction of error-prone modules. She is currently managing the development of software engineering tools to assist with the design and implementation of IBM products.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="187.95" lly="906.81" ulx="188.40" uly="1021.31" urx="1572.97" ury="1015.78" lrx="1572.34" lry="901.16">
+  <Text>Translating SOL Into Relational Algebra: Optimization,</Text>
+  <Text>Semantics, and Equivalence of SOL Queries</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="635.66" lly="809.66" ulx="635.77" uly="838.66" urx="1129.87" ury="836.68" lrx="1129.63" lry="807.62">
+  <Text>STEFANO CERI anp GEORG GOTTLOB</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="135.55" lly="582.34" ulx="135.99" uly="692.87" urx="862.42" ury="689.97" lrx="861.89" lry="579.39">
+  <Text>Abstract—In this paper, we present a translator from a relevant subset of SQL into relational algebra, The translation is syntax-directed, with translation rules associated with grammar productions; each production corresponds to a particular type of SQL subquery.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="133.55" lly="378.46" ulx="134.34" uly="575.59" urx="864.72" ury="572.67" lrx="863.84" lry="375.50">
+  <Text>The translation is performed in two steps, associated with two different grammars of SQL. The first step, driven by the larger grammar, transforms SQL queries into equivalent SQL queries that can be accepted by a restricted grammar. The second step transforms SQL queries accepted by the restricted grammar into expressions of relational algebra. This approach allows performing the second step, which is the most difficult one, on a restricted number of productions.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="132.79" lly="320.05" ulx="133.00" uly="372.96" urx="865.44" ury="370.03" lrx="865.14" lry="317.08">
+  <Text>The translator can be used in conjunction with an optimizer which operates on expressions of relational algebra, thus taking advantage of a</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="131.65" lly="229.55" ulx="131.95" uly="279.43" urx="863.05" ury="275.04" lrx="862.62" lry="225.10">
+  <Text>Manuscript received June 13, 1984; revised September 6, 1984. This work was supported in part by a grant from Data Base Informatica.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="154.27" lly="202.80" ulx="154.42" uly="226.81" urx="865.30" ury="222.54" lrx="865.02" lry="198.48">
+  <Text>The authors are with the Dipartimento di Elettronica, Politecnico di</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="135.75" lly="176.85" ulx="135.90" uly="201.09" urx="436.10" ury="199.29" lrx="435.81" lry="175.01">
+  <Text>Milano, I 20133 Milano, Italy.</Text>
+ </Box>
+ <Box llx="901.96" lly="519.60" ulx="902.63" uly="688.66" urx="1637.62" ury="685.72" lrx="1636.86" lry="516.62">
+  <Text>body of knowledge on the optimization of algebraic expressions. Moreover, the proposed approach indicates a methodology for the correct specification and fast implementation of new relational query languages. Finally, the translator defines the semantics of the SQL language, and can be used for the proof of equivalence of SQL queries which are syntactically different.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="901.95" lly="407.48" ulx="902.28" uly="490.22" urx="1636.45" ury="487.28" lrx="1636.03" lry="404.51">
+  <Text>Index Terms—Program translation, query equivalence, query languages, query optimization, relational algebra, relational database model, SQL.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1162.29" lly="322.11" urx="1366.10" ury="348.11">
+  <Text>I. INTRODUCTION</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="960.69" lly="278.91" ulx="960.77" uly="306.91" urx="1629.31" ury="304.91" lrx="1629.15" lry="276.87">
+  <Text>HE use of the relational model and languages is becoming more and more popular for the development of new database management systems. Formal languages, such as the relational calculus and algebra, have been proposed by Codd [1]</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="601.71" lly="100.97" ulx="601.88" uly="128.97" urx="1161.60" ury="125.61" lrx="1161.27" lry="97.52">
+  <Text>0098-5589/85/0400-0324$01.00 © 1985 IEEE</Text>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Page number="2" width="1748.57" height="2262.86">
+<Options>granularity=page</Options>
+<Content granularity="page" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="148.11" lly="2108.74" ulx="148.05" uly="2129.74" urx="940.89" ury="2132.16" lrx="940.89" lry="2111.12">
+  <Text>CERI AND GOTTLOB: TRANSLATING SQL INTO RELATIONAL ALGEBRA</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1553.14" lly="2114.91" urx="1580.14" ury="2135.91">
+  <Text>325</Text>
+ </Box>
+ <Box llx="149.41" lly="1971.94" ulx="149.03" uly="2065.80" urx="841.90" ury="2068.62" lrx="842.17" lry="1974.71">
+  <Text>and later developed in the literature of database management systems [2], [3]. In particular, relational algebra can be used as a model for describing many approaches to query optimization [3] -[6] , [16]-[19].</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="151.06" lly="1703.48" ulx="150.15" uly="1932.06" urx="844.99" ury="1934.89" lrx="845.80" lry="1706.26">
+  <Text>Although some earlier proposals for relational manipulation languages have been in fact based on relational algebra [7] or calculus [8], the trend in the design of relational languages has at some point moved toward a different direction; this was probably due to the success of the SQL query language [9], developed for the System R prototype [10] , which has become de facto a standard used by many other systems</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="155.17" lly="1669.54" ulx="155.05" uly="1697.54" urx="267.39" ury="1698.03" lrx="267.39" lry="1669.99">
+  <Text>{11J-[13].</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="152.03" lly="1536.85" ulx="151.52" uly="1664.48" urx="845.92" ury="1667.30" lrx="846.33" lry="1539.63">
+  <Text>SQL is an easy-to-use language with a number of high-level constructs. In general, small SQL queries are quite easy to understand; however, SQL allows writing very complex queries, whose meaning is quite obscure, and whose optimization is extremely hard [14]. Sometimes, two complex queries in SQL</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="152.54" lly="1334.22" ulx="151.89" uly="1496.87" urx="847.39" ury="1499.68" lrx="847.93" lry="1337.00">
+  <Text>happen to have the same meaning, although they are very different from a syntactic point of view. In this paper, we propose a method for translating SQL queries into expressions of relational algebra. This method also suggests an approach to the design of new query languages.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="173.54" lly="1300.40" ulx="173.44" uly="1326.30" urx="845.88" ury="1329.04" lrx="845.89" lry="1303.09">
+  <Text>SQL has a basic structure based on the query block or subquery:</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="164.57" lly="1221.09" ulx="164.44" uly="1247.09" urx="820.81" ury="1250.44" lrx="820.81" lry="1224.37">
+  <Text>“SELECT target_list FROM relation_list WHERE predicate”.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="150.59" lly="1004.95" ulx="149.42" uly="1200.77" urx="844.44" ury="1205.00" lrx="845.45" lry="1009.12">
+  <Text>If the predicate corresponds to a selection formula in the sense of Ullman [2], then a query block is easily mapped to a relational algebra expression. However, SQL allows several features which are not trivially mapped: 1) the nesting of several query blocks 2) the use of keywords such as: EXISTS, ALL, ANY, IN in the connection between query blocks 3) the use of variables and of predicates connecting query blocks indirectly 4) the use of set comparison operations between two query blocks. 5) the grouping of tuples of a relation into subsets and the evaluation of aggregate functions on each subset. In this paper, we show how all these features can be mapped to expressions of relational algebra. Relational algebra has been preferred to relational calculus as target of our translator for the following reasons:</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="152.71" lly="504.16" ulx="151.94" uly="631.96" urx="844.34" ury="636.16" lrx="844.94" lry="508.32">
+  <Text>1) It is more procedural, because algebraic expressions also give the order of application of operations in the computation of the query; thus, it is a more appropriate model for query optimization and system implementation.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="154.38" lly="403.37" ulx="153.82" uly="497.22" urx="844.18" ury="501.42" lrx="844.58" lry="407.51">
+  <Text>2) Many existing approaches to query optimization and equivalence are (or can easily be) expressed in relational algebra.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="155.82" lly="235.46" ulx="154.85" uly="396.40" urx="846.23" ury="400.61" lrx="847.03" lry="239.60">
+  <Text>3) Relational algebra uses relations (or sets) as operands, while calculus is based on tuple variables. For the optimization of queries, particularly with distributed environments or special-purpose database machines, set-oriented models are more appropriate than tuple-oriented models [19] .</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="156.48" lly="134.03" ulx="155.91" uly="227.64" urx="847.13" ury="231.85" lrx="847.54" lry="138.18">
+  <Text>We have used standard relational algebra, with the only addition of a new operation for the evaluation of aggregate functions, which was required by the last feature in the above list.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1170.51" lly="2052.17" urx="1195.97" ury="2077.17">
+  <Text>SQL</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1213.71" lly="1869.09" ulx="1192.71" uly="1868.83" urx="1153.43" ury="1985.64" lrx="1212.31" lry="1986.35">
+  <Text>“|</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1217.83" lly="2052.17" urx="1266.69" ury="2077.17">
+  <Text>Query</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1108.80" lly="1950.34" urx="1349.69" ury="1968.34">
+  <Text>NAMING TRANSFORMATION</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1170.51" lly="1849.54" urx="1196.75" ury="1872.54">
+  <Text>SQL</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1218.86" lly="1849.54" urx="1267.71" ury="1872.54">
+  <Text>Query</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1136.57" lly="1828.97" urx="1269.60" ury="1847.97">
+  <Text>(accepted by</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1290.86" lly="1828.97" urx="1314.77" ury="1847.97">
+  <Text>EG)</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1123.20" lly="1747.71" urx="1302.83" ury="1765.71">
+  <Text>PRE — PROCESSING</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1171.54" lly="1646.91" urx="1197.00" ury="1668.91">
+  <Text>SQL</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1216.80" lly="1666.46" ulx="1195.80" uly="1666.31" urx="1141.56" ury="1740.51" lrx="1216.28" lry="1741.03">
+  <Text>‘</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1219.89" lly="1646.91" urx="1268.74" ury="1668.91">
+  <Text>Query</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1137.60" lly="1626.34" urx="1270.29" ury="1642.34">
+  <Text>(accepted by</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1216.80" lly="1464.86" ulx="1194.80" uly="1464.86" urx="1141.20" ury="1540.46" lrx="1216.80" lry="1540.46">
+  <Text>‘</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1291.89" lly="1626.34" urx="1315.80" ury="1642.34">
+  <Text>RG)</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1111.89" lly="1445.31" urx="1339.77" ury="1462.31">
+  <Text>algebraic expression</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1124.23" lly="1344.51" urx="1316.10" ury="1362.51">
+  <Text>POST - PROCESSING</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1213.71" lly="1263.26" ulx="1192.71" uly="1263.26" urx="1126.29" ury="1350.69" lrx="1213.71" lry="1350.69">
+  <Text>|</Text>
+ </Box>
+ <Box llx="1111.89" lly="1242.69" ulx="1111.73" uly="1259.69" urx="1340.80" ury="1261.84" lrx="1340.80" lry="1244.75">
+  <Text>algebraic expression</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1021.37" lly="1200.51" ulx="1021.22" uly="1222.51" urx="1452.27" ury="1225.59" lrx="1452.27" lry="1203.53">
+  <Text>Fig. 1. Overall architecture of the translator.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="883.89" lly="840.34" ulx="882.38" uly="1141.14" urx="1581.91" ury="1144.70" lrx="1583.28" lry="843.83">
+  <Text>A. Overview of the Proposed Approach</Text>
+  <Text>The overall architecture of the translator is shown in Fig. 1. The translator is based on two grammars for the SQL language: an extended grammar EG, and a restricted grammar RG. EG does not accept all the statements accepted by the SQL grammar of [9], but it has approximately the same expressive power; it also includes some elements (such as the EXISTS and ALL keywords in the predicates) which were not present in the grammar of [9]. In the sequel, we will be more specific on the SQL statements which are not accepted by EG.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="885.37" lly="605.98" ulx="884.39" uly="800.65" urx="1585.15" ury="804.20" lrx="1585.99" lry="609.48">
+  <Text>The main difference between the grammar of [9] and EG is that EG allows a correspondence between types of SQL subqueries and productions of the grammar, thus allowing a syntax-directed translation [15]. RG has a smaller number of productions than EG, representing few types of SQL subqueries.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="886.85" lly="504.16" ulx="886.37" uly="598.85" urx="1583.68" ury="602.38" lrx="1584.03" lry="507.64">
+  <Text>The queries which are accepted by the EG but not by the RG are preprocessed and transformed into queries which are accepted by the RG; thus, the preprocessing consists in a transformation from SQL into SQL. For the queries which are accepted by the RG, we have defined the meaning in relational algebra; thus, the meaning of a query consists in a translation from the query in SQL into an expression of relational algebra. Both the definitions of the preprocessing and of meaning are syntax-directed: rules are in correspondence with the productions of the EG and RG. The rationale for distinguishing the preprocessing from the meaning is that the meaning of an SQL subquery is, in general, rather difficult. Thus, we have determined a small set of subqueries which are representative of all other subqueries, and we have given the meaning just for them.</Text>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Resources>
+<Fonts>
+ <Font id="F0" name="GlyphLessFont" type="TrueType (CID)" embedded="true" ascender="720.00" capheight="1000.00" italicangle="0.00" descender="0.00" weight="400.00" xheight="475.00"/>
+ <Font id="F1" name="GlyphLessFont" type="TrueType (CID)" embedded="true" ascender="720.00" capheight="1000.00" italicangle="0.00" descender="0.00" weight="400.00" xheight="475.00"/>
+</Fonts>
+</Resources>
+</Pages>
+</Document>
+</TET>

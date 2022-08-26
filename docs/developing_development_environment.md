@@ -1,7 +1,7 @@
 # DCR-CORE - Developing - Development Environment
 
-![GitHub (Pre-)Release](https://img.shields.io/github/v/release/KonnexionsGmbH/dcr?include_prereleases)
-![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/KonnexionsGmbh/dcr-core)
+![GitHub (Pre-)Release](https://img.shields.io/github/v/release/KonnexionsGmbH/dcr-core?-core?include_prereleases)
+![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/KonnexionsGmbh/dcr-core?-core)
 
 To set up a suitable development environment under **`Ubuntu 20.04 LTS`**, on the one hand a suitable ready-made Docker image is provided and on the other hand two scripts to create the development system in a standalone system, a virtual environment or the **`Windows Subsystem for Linux (WSL2)`** are available.
 
@@ -9,7 +9,7 @@ To set up a suitable development environment under **`Ubuntu 20.04 LTS`**, on th
 
 The ready-made Docker images are available on [DockerHub](https://hub.docker.com){:target="_blank"} under the following link:
 
-[dcr_dev - Document Content Recognition Development Image](https://hub.docker.com/repository/docker/konnexionsgmbh/dcr_dev){:target="_blank"}
+[dcr-core?_dev - Document Content Recognition Development Image](https://hub.docker.com/repository/docker/konnexionsgmbh/dcr-core?_dev){:target="_blank"}
 
 When selecting the Docker image, care must be taken to select the appropriate version of the Docker image.
 

@@ -1,0 +1,497 @@
+{
+    "documentId": 2,
+    "documentFileName": "case_3_pdf_text_route_inbox_pdflib.pdf",
+    "noLinesFooter": 0,
+    "noLinesHeader": 0,
+    "noLinesInDocument": 51,
+    "noLinesToc": 0,
+    "noListsBulletInDocument": 0,
+    "noListsNumberInDocument": 2,
+    "noPagesInDocument": 3,
+    "noParagraphsInDocument": 19,
+    "noTablesInDocument": 0,
+    "noTitlesInDocument": 0,
+    "titles": [],
+    "pages": [
+        {
+            "pageNo": 1,
+            "noLinesInPage": 21,
+            "noParagraphsInPage": 10,
+            "lines": [
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 152.42,
+                    "lineNo": 1,
+                    "lineNoPage": 1,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "Start Document ..."
+                },
+                {
+                    "coordLLX": 138.0,
+                    "coordURX": 288.7,
+                    "lineNo": 1,
+                    "lineNoPage": 2,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "Konnexions Public License (KX-PL)"
+                },
+                {
+                    "coordLLX": 147.89,
+                    "coordURX": 270.25,
+                    "lineNo": 2,
+                    "lineNoPage": 3,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "Version 2020.05, May 2020"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 507.72,
+                    "lineNo": 3,
+                    "lineNoPage": 4,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "https://github.com/KonnexionsGmbH/shared_resources/blob/master/License/KX-PL-2020.05.pdf"
+                },
+                {
+                    "coordLLX": 78.34,
+                    "coordURX": 453.22,
+                    "lineNo": 1,
+                    "lineNoPage": 5,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "This license governs use of the accompanying software. If you use the software, you"
+                },
+                {
+                    "coordLLX": 78.34,
+                    "coordURX": 419.73,
+                    "lineNo": 2,
+                    "lineNoPage": 6,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "accept this license. If you do not accept the license, do not use the software."
+                },
+                {
+                    "coordLLX": 78.34,
+                    "coordURX": 140.51,
+                    "lineNo": 1,
+                    "lineNoPage": 7,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "1. Definitions."
+                },
+                {
+                    "coordLLX": 85.77,
+                    "coordURX": 434.59,
+                    "lineNo": 1,
+                    "lineNoPage": 8,
+                    "lineType": "b",
+                    "paragraphNo": 5,
+                    "text": "The terms \"reproduce\", \"reproduction\", \"derivative works\", and \"distribution\""
+                },
+                {
+                    "coordLLX": 85.77,
+                    "coordURX": 342.33,
+                    "lineNo": 2,
+                    "lineNoPage": 9,
+                    "lineType": "b",
+                    "paragraphNo": 5,
+                    "text": "have the same meaning here as under U.S. copyright law."
+                },
+                {
+                    "coordLLX": 85.77,
+                    "coordURX": 421.64,
+                    "lineNo": 1,
+                    "lineNoPage": 10,
+                    "lineType": "b",
+                    "paragraphNo": 6,
+                    "text": "A \"contribution\" is the original software, or any additions or changes to the"
+                },
+                {
+                    "coordLLX": 85.77,
+                    "coordURX": 128.15,
+                    "lineNo": 2,
+                    "lineNoPage": 11,
+                    "lineType": "b",
+                    "paragraphNo": 6,
+                    "text": "software."
+                },
+                {
+                    "coordLLX": 85.77,
+                    "coordURX": 406.02,
+                    "lineNo": 1,
+                    "lineNoPage": 12,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "A \"contributor\" is any person that distributes its contribution under this"
+                },
+                {
+                    "coordLLX": 85.77,
+                    "coordURX": 119.27,
+                    "lineNo": 2,
+                    "lineNoPage": 13,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "license."
+                },
+                {
+                    "coordLLX": 85.77,
+                    "coordURX": 424.37,
+                    "lineNo": 1,
+                    "lineNoPage": 14,
+                    "lineType": "b",
+                    "paragraphNo": 8,
+                    "text": "\"Licensed patents\" are a contributor's patent claims that read directly on its"
+                },
+                {
+                    "coordLLX": 85.77,
+                    "coordURX": 144.24,
+                    "lineNo": 2,
+                    "lineNoPage": 15,
+                    "lineType": "b",
+                    "paragraphNo": 8,
+                    "text": "contribution."
+                },
+                {
+                    "coordLLX": 78.34,
+                    "coordURX": 156.33,
+                    "lineNo": 1,
+                    "lineNoPage": 16,
+                    "lineType": "b",
+                    "paragraphNo": 9,
+                    "text": "2. Grant of Rights"
+                },
+                {
+                    "coordLLX": 85.77,
+                    "coordURX": 431.09,
+                    "lineNo": 1,
+                    "lineNoPage": 17,
+                    "lineType": "ln",
+                    "paragraphNo": 10,
+                    "text": "(a) Copyright Grant- Subject to the terms of this license, including the license"
+                },
+                {
+                    "coordLLX": 98.24,
+                    "coordURX": 428.16,
+                    "lineNo": 2,
+                    "lineNoPage": 18,
+                    "lineType": "ln",
+                    "paragraphNo": 10,
+                    "text": "conditions and limitations in section 3, each contributor grants you a nonexclusive,"
+                },
+                {
+                    "coordLLX": 143.82,
+                    "coordURX": 400.88,
+                    "lineNo": 3,
+                    "lineNoPage": 19,
+                    "lineType": "ln",
+                    "paragraphNo": 10,
+                    "text": "worldwide, royalty-free copyright license to reproduce its"
+                },
+                {
+                    "coordLLX": 98.22,
+                    "coordURX": 421.32,
+                    "lineNo": 4,
+                    "lineNoPage": 20,
+                    "lineType": "ln",
+                    "paragraphNo": 10,
+                    "text": "contribution, prepare derivative works of its contribution, and distribute"
+                },
+                {
+                    "coordLLX": 98.22,
+                    "coordURX": 347.35,
+                    "lineNo": 5,
+                    "lineNoPage": 21,
+                    "lineType": "ln",
+                    "paragraphNo": 10,
+                    "text": "its contribution or any derivative works that you create."
+                }
+            ]
+        },
+        {
+            "pageNo": 2,
+            "noLinesInPage": 25,
+            "noParagraphsInPage": 7,
+            "lines": [
+                {
+                    "coordLLX": 85.79,
+                    "coordURX": 417.67,
+                    "lineNo": 1,
+                    "lineNoPage": 1,
+                    "lineType": "ln",
+                    "paragraphNo": 1,
+                    "text": "(b) Patent Grant- Subject to the terms of this license, including the license"
+                },
+                {
+                    "coordLLX": 98.25,
+                    "coordURX": 428.18,
+                    "lineNo": 2,
+                    "lineNoPage": 2,
+                    "lineType": "ln",
+                    "paragraphNo": 1,
+                    "text": "conditions and limitations in section 3, each contributor grants you a nonexclusive,"
+                },
+                {
+                    "coordLLX": 143.83,
+                    "coordURX": 411.87,
+                    "lineNo": 3,
+                    "lineNoPage": 3,
+                    "lineType": "ln",
+                    "paragraphNo": 1,
+                    "text": "worldwide, royalty-free license under its licensed patents to"
+                },
+                {
+                    "coordLLX": 98.12,
+                    "coordURX": 435.86,
+                    "lineNo": 4,
+                    "lineNoPage": 4,
+                    "lineType": "ln",
+                    "paragraphNo": 1,
+                    "text": "make, have made, use, sell, offer for sale, import, and/or otherwise dispose"
+                },
+                {
+                    "coordLLX": 98.12,
+                    "coordURX": 424.4,
+                    "lineNo": 5,
+                    "lineNoPage": 5,
+                    "lineType": "ln",
+                    "paragraphNo": 1,
+                    "text": "of its contribution in the software or derivative works of the contribution"
+                },
+                {
+                    "coordLLX": 98.22,
+                    "coordURX": 168.79,
+                    "lineNo": 6,
+                    "lineNoPage": 6,
+                    "lineType": "ln",
+                    "paragraphNo": 1,
+                    "text": "in the software."
+                },
+                {
+                    "coordLLX": 78.32,
+                    "coordURX": 208.27,
+                    "lineNo": 1,
+                    "lineNoPage": 7,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "3. Conditions and Limitations"
+                },
+                {
+                    "coordLLX": 85.75,
+                    "coordURX": 422.29,
+                    "lineNo": 1,
+                    "lineNoPage": 8,
+                    "lineType": "ln",
+                    "paragraphNo": 3,
+                    "text": "(a) No Trademark License- This license does not grant you rights to use any"
+                },
+                {
+                    "coordLLX": 98.22,
+                    "coordURX": 279.79,
+                    "lineNo": 2,
+                    "lineNoPage": 9,
+                    "lineType": "ln",
+                    "paragraphNo": 3,
+                    "text": "contributors' name, logo, or trademarks."
+                },
+                {
+                    "coordLLX": 85.75,
+                    "coordURX": 425.69,
+                    "lineNo": 1,
+                    "lineNoPage": 10,
+                    "lineType": "ln",
+                    "paragraphNo": 4,
+                    "text": "(b) If you bring a patent claim against any contributor over patents that you"
+                },
+                {
+                    "coordLLX": 98.22,
+                    "coordURX": 392.87,
+                    "lineNo": 2,
+                    "lineNoPage": 11,
+                    "lineType": "ln",
+                    "paragraphNo": 4,
+                    "text": "claim are infringed by the software, your patent license from such"
+                },
+                {
+                    "coordLLX": 98.23,
+                    "coordURX": 316.08,
+                    "lineNo": 3,
+                    "lineNoPage": 12,
+                    "lineType": "ln",
+                    "paragraphNo": 4,
+                    "text": "contributor to the software ends automatically.0"
+                },
+                {
+                    "coordLLX": 85.76,
+                    "coordURX": 434.43,
+                    "lineNo": 1,
+                    "lineNoPage": 13,
+                    "lineType": "ln",
+                    "paragraphNo": 5,
+                    "text": "(c) If you distribute any portion of the software, you must retain all copyright,"
+                },
+                {
+                    "coordLLX": 98.23,
+                    "coordURX": 435.31,
+                    "lineNo": 2,
+                    "lineNoPage": 14,
+                    "lineType": "ln",
+                    "paragraphNo": 5,
+                    "text": "patent, trademark, and attribution notices that are present in the software."
+                },
+                {
+                    "coordLLX": 85.76,
+                    "coordURX": 448.54,
+                    "lineNo": 1,
+                    "lineNoPage": 15,
+                    "lineType": "ln",
+                    "paragraphNo": 6,
+                    "text": "(d) If you distribute any portion of the software in source code form, you may do"
+                },
+                {
+                    "coordLLX": 98.23,
+                    "coordURX": 429.44,
+                    "lineNo": 2,
+                    "lineNoPage": 16,
+                    "lineType": "ln",
+                    "paragraphNo": 6,
+                    "text": "so only under this license by including a complete copy of this license with"
+                },
+                {
+                    "coordLLX": 98.14,
+                    "coordURX": 429.32,
+                    "lineNo": 3,
+                    "lineNoPage": 17,
+                    "lineType": "ln",
+                    "paragraphNo": 6,
+                    "text": "your distribution. If you distribute any portion of the software in compiled"
+                },
+                {
+                    "coordLLX": 98.12,
+                    "coordURX": 434.02,
+                    "lineNo": 4,
+                    "lineNoPage": 18,
+                    "lineType": "ln",
+                    "paragraphNo": 6,
+                    "text": "or object code form, you may only do so under a license that complies with"
+                },
+                {
+                    "coordLLX": 98.22,
+                    "coordURX": 150.55,
+                    "lineNo": 5,
+                    "lineNoPage": 19,
+                    "lineType": "ln",
+                    "paragraphNo": 6,
+                    "text": "this license."
+                },
+                {
+                    "coordLLX": 85.75,
+                    "coordURX": 389.92,
+                    "lineNo": 1,
+                    "lineNoPage": 20,
+                    "lineType": "ln",
+                    "paragraphNo": 7,
+                    "text": "(e) The software is licensed \"as-is.\" You bear the risk of using it. The"
+                },
+                {
+                    "coordLLX": 98.21,
+                    "coordURX": 435.26,
+                    "lineNo": 2,
+                    "lineNoPage": 21,
+                    "lineType": "ln",
+                    "paragraphNo": 7,
+                    "text": "contributors give no express warranties, guarantees or conditions. You may"
+                },
+                {
+                    "coordLLX": 98.21,
+                    "coordURX": 420.58,
+                    "lineNo": 3,
+                    "lineNoPage": 22,
+                    "lineType": "ln",
+                    "paragraphNo": 7,
+                    "text": "have additional consumer rights under your local laws which this license"
+                },
+                {
+                    "coordLLX": 98.21,
+                    "coordURX": 394.32,
+                    "lineNo": 4,
+                    "lineNoPage": 23,
+                    "lineType": "ln",
+                    "paragraphNo": 7,
+                    "text": "cannot change. To the extent permitted under your local laws, the"
+                },
+                {
+                    "coordLLX": 98.21,
+                    "coordURX": 436.8,
+                    "lineNo": 5,
+                    "lineNoPage": 24,
+                    "lineType": "ln",
+                    "paragraphNo": 7,
+                    "text": "contributors exclude the implied warranties of merchantability, fitness for a"
+                },
+                {
+                    "coordLLX": 98.21,
+                    "coordURX": 284.12,
+                    "lineNo": 6,
+                    "lineNoPage": 25,
+                    "lineType": "ln",
+                    "paragraphNo": 7,
+                    "text": "particular purpose and non-infringement."
+                }
+            ]
+        },
+        {
+            "pageNo": 3,
+            "noLinesInPage": 5,
+            "noParagraphsInPage": 2,
+            "lines": [
+                {
+                    "coordLLX": 85.79,
+                    "coordURX": 432.73,
+                    "lineNo": 1,
+                    "lineNoPage": 1,
+                    "lineType": "ln",
+                    "paragraphNo": 1,
+                    "text": "(f) Source code usage under this License is limited to review, compilation and"
+                },
+                {
+                    "coordLLX": 98.25,
+                    "coordURX": 422.83,
+                    "lineNo": 2,
+                    "lineNoPage": 2,
+                    "lineType": "ln",
+                    "paragraphNo": 1,
+                    "text": "contributions. Contributions to Konnexions software products under this"
+                },
+                {
+                    "coordLLX": 98.25,
+                    "coordURX": 467.08,
+                    "lineNo": 3,
+                    "lineNoPage": 3,
+                    "lineType": "ln",
+                    "paragraphNo": 1,
+                    "text": "License may only be made in consultation with Konnexions GmbH and through the"
+                },
+                {
+                    "coordLLX": 98.25,
+                    "coordURX": 306.13,
+                    "lineNo": 4,
+                    "lineNoPage": 4,
+                    "lineType": "ln",
+                    "paragraphNo": 1,
+                    "text": "appropriate Konnexions software repositories."
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 147.81,
+                    "lineNo": 1,
+                    "lineNoPage": 5,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "... End Document"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created by the PDFlib Text and Image Extraction Toolkit TET (www.pdflib.com) -->
+<TET xmlns="http://www.pdflib.com/XML/TET5/TET-5.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.pdflib.com/XML/TET5/TET-5.0
+ http://www.pdflib.com/XML/TET5/TET-5.0.xsd"
+ version="5.2">
+<Creation platform="Win64" tetVersion="5.3" date="2022-08-26T09:12:33+02:00" />
+<Document filename="data\inbox_dev_accepted\case_4_pdf_image_small_route_inbox_pdf2image_tesseract_pdflib_0.pdf" pageCount="1" filesize="419027" linearized="false" pdfVersion="1.5">
+<DocInfo>
+<Producer>PyPDF2</Producer>
+</DocInfo>
+<Options>tetml={filename={data\inbox_dev_accepted\case_4_pdf_image_small_route_inbox_pdf2image_tesseract_pdflib_0.line.xml}} engines={noannotation noimage text notextcolor novector}</Options>
+<Pages>
+<Page number="1" width="1708.46" height="2406.86">
+<Options>granularity=line</Options>
+<Content granularity="line" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="78.17" lly="2322.69" urx="381.60" ury="2349.69">
+  <Line llx="78.17" lly="2322.69" urx="381.60" ury="2349.69">
+   <Text>PFU Business report</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="169.71" lly="2172.51" ulx="169.51" uly="2240.51" urx="1235.06" ury="2243.84" lrx="1235.06" lry="2175.71">
+  <Line llx="169.71" lly="2172.51" ulx="169.51" uly="2240.51" urx="1235.06" ury="2243.84" lrx="1235.06" lry="2175.71">
+   <Text>New customer&apos;s development</Text>
+  </Line>
+ </Box>
+ <Box llx="172.82" lly="2077.82" ulx="172.61" uly="2148.51" urx="1387.57" ury="2152.26" lrx="1387.57" lry="2081.46">
+  <Line llx="172.82" lly="2077.82" ulx="172.61" uly="2148.51" urx="1387.57" ury="2152.26" lrx="1387.57" lry="2081.46">
+   <Text>and increasing the sale of product</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="83.39" lly="1902.98" ulx="83.17" uly="2013.23" urx="1466.71" ury="2016.03" lrx="1466.87" lry="1905.74">
+  <Line llx="83.31" lly="1982.23" ulx="83.25" uly="2013.23" urx="1422.52" ury="2015.94" lrx="1422.52" lry="1984.91">
+   <Text>My country economy at this season keeps escaping from Odoba of business though holds a crude oil</Text>
+  </Line>
+  <Line llx="83.30" lly="1943.72" ulx="83.24" uly="1974.17" urx="1181.13" ury="1976.39" lrx="1181.14" lry="1945.91">
+   <Text>high so on unstable element that continues still, and recovering gradually and well.</Text>
+  </Line>
+  <Line llx="84.32" lly="1902.98" ulx="84.26" uly="1935.06" urx="1466.87" ury="1937.84" lrx="1466.87" lry="1905.74">
+   <Text>In the IT industry, there is an influence such as competing intensification in narrowing investment field.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="87.43" lly="1769.31" urx="807.43" ury="1800.31">
+  <Line llx="87.43" lly="1769.31" urx="807.43" ury="1800.31">
+   <Text>[The main product and service at this season)</Text>
+  </Line>
+ </Box>
+</Para>
+<Table llx="80.28" lly="1647.51" urx="1429.24" ury="1727.66">
+ <Row>
+  <Cell llx="81.26" lly="1695.26" urx="979.20" ury="1722.26">
+   <Para>
+    <Box llx="81.26" lly="1695.26" urx="544.27" ury="1722.26">
+     <Line llx="81.26" lly="1695.26" urx="544.27" ury="1722.26">
+      <Text>From the product headquarters</Text>
+     </Line>
+    </Box>
+   </Para>
+  </Cell>
+  <Cell llx="1110.86" lly="1695.26" urx="1222.97" ury="1722.26">
+  </Cell>
+  <Cell llx="1376.23" lly="1695.26" urx="1440.00" ury="1722.26">
+  </Cell>
+ </Row>
+ <Row>
+  <Cell llx="81.26" lly="1653.11" urx="979.20" ury="1688.11">
+   <Para>
+    <Box llx="82.28" lly="1654.11" urx="967.20" ury="1687.11">
+     <Line llx="82.28" lly="1654.11" urx="967.20" ury="1687.11">
+      <Text>In the image business, the new model turning on of the A3 high-speed,</Text>
+     </Line>
+    </Box>
+   </Para>
+  </Cell>
+  <Cell llx="1110.86" lly="1653.11" urx="1222.97" ury="1688.11">
+   <Para>
+    <Box llx="1110.86" lly="1654.11" urx="1217.31" ury="1687.11">
+     <Line llx="1110.86" lly="1654.11" urx="1217.31" ury="1687.11">
+      <Text>usually _</Text>
+     </Line>
+    </Box>
+   </Para>
+  </Cell>
+  <Cell llx="1376.23" lly="1653.11" urx="1440.00" ury="1688.11">
+   <Para>
+    <Box llx="1376.23" lly="1654.11" urx="1427.24" ury="1687.11">
+     <Line llx="1376.23" lly="1654.11" urx="1427.24" ury="1687.11">
+      <Text>_bad</Text>
+     </Line>
+    </Box>
+   </Para>
+  </Cell>
+ </Row>
+</Table>
+<Para>
+ <Box llx="80.23" lly="1567.71" ulx="80.23" uly="1637.88" urx="1366.45" ury="1639.92" lrx="1366.45" lry="1567.71">
+  <Line llx="80.23" lly="1609.88" urx="1366.45" ury="1639.92">
+   <Text>two sided color scanner that achieved a high-speed reading aimed at. : ~</Text>
+  </Line>
+  <Line llx="81.25" lly="1567.71" urx="406.28" ury="1594.71">
+   <Text>wroom was established in</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="424.80" lly="1567.71" urx="947.67" ury="1594.71">
+  <Line llx="424.80" lly="1567.71" urx="947.67" ury="1594.71">
+   <Text>United States, Europe, and Asia/Oceania.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="81.26" lly="1381.54" urx="812.98" ury="1498.94">
+  <Line llx="81.26" lly="1467.94" urx="320.57" ury="1498.94">
+   <Text>@lImage business</Text>
+  </Line>
+  <Line llx="84.34" lly="1424.74" urx="283.20" ury="1455.74">
+   <Text>1) Scanner class</Text>
+  </Line>
+  <Line llx="81.26" lly="1381.54" urx="812.98" ury="1411.54">
+   <Text>A3 high-speed, two sided color scanner &quot;fi-5900C&quot; that</Text>
+  </Line>
+ </Box>
+ <Box llx="80.23" lly="1339.37" urx="213.94" ury="1367.37">
+  <Line llx="80.23" lly="1339.37" urx="213.94" ury="1367.37">
+   <Text>function to</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="839.32" lly="1381.54" urx="969.21" ury="1411.54">
+  <Line llx="839.32" lly="1381.54" urx="969.21" ury="1411.54">
+   <Text>100 high-n</Text>
+  </Line>
+ </Box>
+ <Box llx="81.26" lly="1297.20" urx="973.37" ury="1367.37">
+  <Line llx="236.57" lly="1339.37" urx="973.37" ury="1367.37">
+   <Text>enable industry-leading was installed was announced in</Text>
+  </Line>
+  <Line llx="81.26" lly="1297.20" urx="912.55" ury="1324.20">
+   <Text>ScanSnap gotten popular because of an office and individual use.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="80.23" lly="1255.03" urx="386.36" ury="1287.03">
+  <Line llx="80.23" lly="1255.03" urx="386.36" ury="1287.03">
+   <Text>2) DLM solution scanner</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="79.20" lly="1165.54" ulx="79.20" uly="1238.77" urx="971.17" ury="1237.05" lrx="971.17" lry="1168.31">
+  <Line llx="79.20" lly="1208.05" urx="971.17" ury="1238.77">
+   <Text>The DLM solution that used received the rise of the concern to efficient</Text>
+  </Line>
+  <Line llx="79.20" lly="1165.54" urx="968.53" ury="1197.31">
+   <Text>management and internal management of the corporate private circum-</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1157.14" lly="1207.45" ulx="1157.14" uly="1236.45" urx="1504.16" ury="1235.86" lrx="1504.16" lry="1206.86">
+  <Line llx="1157.14" lly="1206.86" urx="1504.16" ury="1236.45">
+   <Text>Satisfaction rating to new product</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="79.20" lly="1122.34" urx="1469.83" ury="1151.34">
+  <Line llx="79.20" lly="1122.34" urx="1469.83" ury="1151.34">
+   <Text>stances report in recent years and attracted attention. The function of software that the inspection of data is</Text>
+  </Line>
+ </Box>
+ <Box llx="78.17" lly="1079.14" ulx="78.17" uly="1106.14" urx="1218.24" ury="1108.91" lrx="1218.24" lry="1081.91">
+  <Line llx="78.17" lly="1079.14" urx="1218.24" ury="1108.91">
+   <Text>the sense that turns over the file is strengthened, and easiness to use has been improved.</Text>
+  </Line>
+ </Box>
+ <Box llx="1486.29" lly="1122.34" urx="1622.40" ury="1151.34">
+  <Line llx="1486.29" lly="1122.34" urx="1622.40" ury="1151.34">
+   <Text>possible by</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="84.34" lly="943.37" urx="517.37" ury="972.17">
+  <Line llx="84.34" lly="943.37" urx="517.37" ury="972.17">
+   <Text>[approach on business risk]</Text>
+  </Line>
+ </Box>
+</Para>
+<Table llx="73.14" lly="689.89" ulx="73.14" uly="907.54" urx="1618.38" ury="907.54" lrx="1618.38" lry="688.03">
+ <Row>
+  <Cell colSpan="5" llx="78.17" lly="825.09" urx="626.40" ury="901.34">
+   <Para>
+    <Box llx="78.17" lly="870.34" urx="335.20" ury="901.34">
+     <Line llx="78.17" lly="870.34" urx="335.20" ury="901.34">
+      <Text>In-house activity</Text>
+     </Line>
+    </Box>
+   </Para>
+   <Para>
+    <Box llx="78.17" lly="825.09" ulx="78.17" uly="853.09" urx="619.89" ury="854.14" lrx="619.89" lry="826.14">
+     <Line llx="78.17" lly="825.09" urx="619.89" ury="854.14">
+      <Text>The attestation intended for each office in</Text>
+     </Line>
+    </Box>
+   </Para>
+  </Cell>
+  <Cell colSpan="3" llx="639.77" lly="825.09" urx="1494.52" ury="901.34">
+   <Para>
+    <Box llx="639.77" lly="826.21" ulx="639.77" uly="854.21" urx="1227.43" ury="855.35" lrx="1227.43" lry="827.35">
+     <Line llx="639.77" lly="826.21" urx="1487.66" ury="855.87">
+      <Text>Shinbashi, Kansai, and Tokai was acquired in </Text>
+     </Line>
+     <Line llx="1245.60" lly="827.41" urx="1487.66" ury="855.87">
+      <Text>environment ISO in</Text>
+     </Line>
+    </Box>
+   </Para>
+  </Cell>
+  <Cell llx="1507.89" lly="825.09" urx="1625.15" ury="901.34">
+   <Para>
+    <Box llx="1507.89" lly="827.94" urx="1613.42" ury="855.94">
+     <Line llx="1507.89" lly="827.94" urx="1613.42" ury="855.94">
+      <Text>February,</Text>
+     </Line>
+    </Box>
+   </Para>
+  </Cell>
+ </Row>
+ <Row>
+  <Cell llx="77.14" lly="780.11" urx="191.32" ury="814.85">
+   <Para>
+    <Box llx="77.14" lly="780.86" ulx="77.14" uly="810.86" urx="184.46" ury="811.04" lrx="184.46" lry="781.04">
+     <Line llx="77.14" lly="780.86" urx="184.46" ury="811.04">
+      <Text>2006. In</Text>
+     </Line>
+    </Box>
+   </Para>
+  </Cell>
+  <Cell llx="204.69" lly="780.11" urx="311.66" ury="814.85">
+   <Para>
+    <Box llx="204.69" lly="781.11" urx="300.96" ury="811.11">
+     <Line llx="204.69" lly="781.11" urx="300.96" ury="811.11">
+      <Text>addition,</Text>
+     </Line>
+    </Box>
+   </Para>
+  </Cell>
+  <Cell llx="328.12" lly="780.11" urx="342.56" ury="814.85">
+   <Para>
+    <Box llx="328.12" lly="781.36" urx="337.75" ury="811.36">
+     <Line llx="328.12" lly="781.36" urx="337.75" ury="811.36">
+      <Text>it</Text>
+     </Line>
+    </Box>
+   </Para>
+  </Cell>
+  <Cell llx="354.86" lly="780.11" urx="537.95" ury="814.85">
+   <Para>
+    <Box llx="354.86" lly="781.41" ulx="354.86" uly="811.41" urx="531.09" ury="811.73" lrx="531.09" lry="781.73">
+     <Line llx="354.86" lly="781.41" urx="531.09" ury="811.73">
+      <Text>participates in</Text>
+     </Line>
+    </Box>
+   </Para>
+  </Cell>
+  <Cell colSpan="2" llx="551.32" lly="780.11" urx="828.00" ury="814.85">
+   <Para>
+    <Box llx="551.32" lly="781.80" ulx="551.32" uly="811.80" urx="821.83" ury="812.32" lrx="821.83" lry="782.32">
+     <Line llx="551.32" lly="781.80" urx="821.83" ury="812.32">
+      <Text>the minus 6% that is</Text>
+     </Line>
+    </Box>
+   </Para>
+  </Cell>
+  <Cell llx="841.37" lly="780.11" urx="856.80" ury="814.85">
+   <Para>
+    <Box llx="841.37" lly="782.38" urx="849.09" ury="812.38">
+     <Line llx="841.37" lly="782.38" urx="849.09" ury="812.38">
+      <Text>a</Text>
+     </Line>
+    </Box>
+   </Para>
+  </Cell>
+  <Cell colSpan="2" llx="870.17" lly="780.11" urx="1626.22" ury="814.85">
+   <Para>
+    <Box llx="870.17" lly="782.44" ulx="870.17" uly="812.44" urx="1614.38" ury="813.85" lrx="1614.38" lry="783.85">
+     <Line llx="870.17" lly="782.44" urx="1614.38" ury="813.85">
+      <Text>national movement of the global warming prevention, and</Text>
+     </Line>
+    </Box>
+   </Para>
+  </Cell>
+ </Row>
+ <Row>
+  <Cell colSpan="9" llx="78.17" lly="737.03" urx="1626.18" ury="771.52">
+   <Para>
+    <Box llx="79.20" lly="737.66" ulx="79.20" uly="766.66" urx="203.66" ury="766.96" lrx="203.66" lry="737.96">
+     <Line llx="79.20" lly="737.66" urx="1614.35" ury="770.52">
+      <Text>&quot;Culbiz&quot; is </Text>
+     </Line>
+     <Line llx="219.09" lly="738.03" urx="1614.35" ury="770.52">
+      <Text>done. The scandal of the enterprise has frequently generated is received, concern is sent to the system maintenance</Text>
+     </Line>
+    </Box>
+   </Para>
+  </Cell>
+ </Row>
+ <Row>
+  <Cell colSpan="9" llx="78.17" lly="693.63" urx="1626.18" ury="723.49">
+   <Para>
+    <Box llx="78.17" lly="695.49" ulx="78.17" uly="723.49" urx="818.46" ury="721.63" lrx="818.46" lry="693.63">
+     <Line llx="167.66" lly="693.63" urx="818.46" ury="723.24">
+      <Text>including the observance of the law in recent years.</Text>
+     </Line>
+    </Box>
+   </Para>
+  </Cell>
+ </Row>
+</Table>
+<Para>
+ <Box llx="77.97" lly="562.80" ulx="78.30" uly="628.94" urx="1070.52" ury="623.98" lrx="1070.06" lry="557.78">
+  <Line llx="78.17" lly="603.94" ulx="78.30" uly="628.94" urx="1059.69" ury="624.04" lrx="1059.44" lry="598.94">
+   <Text>Enhancement of system of management 1</Text>
+  </Line>
+  <Line llx="78.18" lly="562.80" ulx="78.32" uly="591.80" urx="1070.33" ury="586.84" lrx="1070.06" lry="557.78">
+   <Text>The committee that aimed at the decrease of a variety of business 80</Text>
+  </Line>
+ </Box>
+ <Box llx="78.18" lly="518.57" ulx="78.35" uly="551.57" urx="1070.36" ury="546.61" lrx="1070.06" lry="513.56">
+  <Line llx="78.18" lly="518.57" ulx="78.35" uly="551.57" urx="1070.36" ury="546.61" lrx="1070.06" lry="513.56">
+   <Text>risks in an individual business talk was newly established. Moreover, 70</Text>
+  </Line>
+ </Box>
+ <Box llx="77.16" lly="475.37" ulx="77.36" uly="515.35" urx="1575.42" ury="507.86" lrx="1575.07" lry="467.83">
+  <Line llx="77.16" lly="475.37" ulx="77.36" uly="515.35" urx="1575.42" ury="507.86" lrx="1575.07" lry="467.83">
+   <Text>the recognition of &quot;Privacy mark&quot; is received to manage customer and s ; ‘iia we</Text>
+  </Line>
+ </Box>
+</Para>
+<Table llx="76.16" lly="383.59" ulx="76.59" uly="465.60" urx="1072.48" ury="467.63" lrx="1072.05" lry="386.63">
+ <Row>
+  <Cell llx="77.17" lly="432.54" urx="976.28" ury="463.29">
+   <Para>
+    <Box llx="77.17" lly="433.20" ulx="77.33" uly="466.17" urx="966.57" ury="461.72" lrx="966.27" lry="428.69">
+     <Line llx="77.17" lly="433.20" ulx="77.33" uly="466.17" urx="966.57" ury="461.72" lrx="966.27" lry="428.69">
+      <Text>employee&apos;s individual information appropriately in 2001, and the activ-</Text>
+     </Line>
+    </Box>
+   </Para>
+  </Cell>
+  <Cell llx="1051.23" lly="432.54" urx="1079.17" ury="463.29">
+   <Para>
+    <Box llx="1051.23" lly="435.33" ulx="1051.37" uly="462.33" urx="1070.02" ury="462.24" lrx="1069.75" lry="435.19">
+     <Line llx="1051.23" lly="435.33" ulx="1051.37" uly="462.33" urx="1070.02" ury="462.24" lrx="1069.75" lry="435.19">
+      <Text>40</Text>
+     </Line>
+    </Box>
+   </Para>
+  </Cell>
+ </Row>
+ <Row>
+  <Cell llx="77.17" lly="389.80" urx="976.28" ury="426.09">
+   <Para>
+    <Box llx="78.20" lly="390.00" ulx="78.39" uly="428.30" urx="963.57" ury="423.87" lrx="963.22" lry="385.54">
+     <Line llx="78.20" lly="390.00" ulx="78.39" uly="428.30" urx="963.57" ury="423.87" lrx="963.22" lry="385.54">
+      <Text>ity based on the protection of individual information policy is continued.</Text>
+     </Line>
+    </Box>
+   </Para>
+  </Cell>
+  <Cell llx="1051.23" lly="389.80" urx="1079.17" ury="426.09">
+   <Para>
+    <Box llx="1052.27" lly="393.13" ulx="1052.43" uly="425.13" urx="1070.41" ury="425.04" lrx="1070.09" lry="393.00">
+     <Line llx="1052.27" lly="393.13" ulx="1052.43" uly="425.13" urx="1070.41" ury="425.04" lrx="1070.09" lry="393.00">
+      <Text>30</Text>
+     </Line>
+    </Box>
+   </Para>
+  </Cell>
+ </Row>
+</Table>
+<Para>
+ <Box llx="78.20" lly="344.74" ulx="78.39" uly="381.70" urx="1079.29" ury="376.70" lrx="1078.97" lry="339.71">
+  <Line llx="78.20" lly="344.74" ulx="78.39" uly="381.70" urx="1079.29" ury="376.70" lrx="1078.97" lry="339.71">
+   <Text>It is ..bAsia/Oceania in globalln addition, our technology, commodity 20)</Text>
+  </Line>
+ </Box>
+ <Box llx="76.15" lly="300.51" ulx="76.36" uly="342.97" urx="1566.35" ury="335.52" lrx="1565.99" lry="293.00">
+  <Line llx="76.15" lly="300.51" ulx="76.36" uly="342.97" urx="1566.35" ury="335.52" lrx="1565.99" lry="293.00">
+   <Text>power, and correspondence power were evaluating acquired. 10 | 7</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1065.65" lly="278.02" ulx="1065.74" uly="296.02" urx="1089.83" ury="295.90" lrx="1089.65" lry="277.84">
+  <Line llx="1065.65" lly="278.02" ulx="1065.74" uly="296.02" urx="1089.83" ury="295.90" lrx="1089.65" lry="277.84">
+   <Text>Ot</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1101.60" lly="253.20" ulx="1101.79" uly="285.20" urx="1580.49" ury="282.33" lrx="1580.10" lry="250.26">
+  <Line llx="1101.60" lly="253.20" ulx="1101.79" uly="285.20" urx="1580.49" ury="282.33" lrx="1580.10" lry="250.26">
+   <Text>1998 1999 2000 2001 2002 2003 2004</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="1156.11" lly="185.31" urx="1512.03" ury="206.31">
+  <Line llx="1156.11" lly="185.31" urx="1512.03" ury="206.31">
+   <Text>Satisfaction rating to new product</Text>
+  </Line>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Resources>
+<Fonts>
+ <Font id="F0" name="GlyphLessFont" type="TrueType (CID)" embedded="true" ascender="720.00" capheight="1000.00" italicangle="0.00" descender="0.00" weight="400.00" xheight="475.00"/>
+</Fonts>
+</Resources>
+</Pages>
+</Document>
+</TET>

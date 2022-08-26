@@ -2,7 +2,7 @@
 # source code is governed by the Konnexions Public License (KX-PL)
 # Version 2020.05, that can be found in the LICENSE file.
 
-"""Library stub file."""
+"""Module stub file."""
 import dcr_core.cls_nlp_core
 
 class LineTypeHeaderFooters:
@@ -43,7 +43,6 @@ class LineTypeHeaderFooters:
         self.line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages = []
         self.no_lines_footer: int = 0
         self.no_lines_header: int = 0
-        ...
     def _calc_levenshtein(self) -> None: ...
     def _check_irregular_footer(self, line_ind: int, text: str) -> None: ...
     def _check_irregular_header(self, line_ind: int, text: str) -> None: ...

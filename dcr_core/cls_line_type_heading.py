@@ -700,7 +700,7 @@ class LineTypeHeading:
             self._process_page()
 
         if dcr_core.core_glob.setup.is_create_extra_file_heading and self._toc:
-            full_name = dcr_core.core_utils.get_full_name(
+            full_name = dcr_core.core_utils.get_full_name_from_components(
                 directory_name,
                 dcr_core.core_utils.get_stem_name(str(file_name_curr)) + "_heading." + dcr_core.core_glob.FILE_TYPE_JSON,
             )

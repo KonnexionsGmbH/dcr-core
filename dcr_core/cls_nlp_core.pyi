@@ -2,7 +2,7 @@
 # source code is governed by the Konnexions Public License (KX-PL)
 # Version 2020.05, that can be found in the LICENSE file.
 
-"""Library stub file."""
+"""Module stub file."""
 import collections
 from typing import ClassVar
 
@@ -27,7 +27,6 @@ class NLPCore:
     ParserWordPages = list[ParserWordPage]
     ParserWordDocument = dict[str, int | str | ParserWordPages]
 
-    CODE_SPACY_DEFAULT: ClassVar[str]
     ENVIRONMENT_TYPE_DEV: ClassVar[str]
     ENVIRONMENT_TYPE_PROD: ClassVar[str]
     ENVIRONMENT_TYPE_TEST: ClassVar[str]
@@ -164,6 +163,12 @@ class NLPCore:
     JSON_NAME_UPPER_RIGHT_X: ClassVar[str]
     JSON_NAME_WORDS: ClassVar[str]
     JSON_NAME_WORD_NO: ClassVar[str]
+    LANGUAGE_PANDOC_DEFAULT: ClassVar[str]
+    LANGUAGE_SPACY_DEFAULT: ClassVar[str]
+    LANGUAGE_TESSERACT_DEFAULT: ClassVar[str]
+    LINE_TET_DOCUMENT_OPT_LIST: ClassVar[str]
+    LINE_TET_PAGE_OPT_LIST: ClassVar[str]
+    LINE_XML_VARIATION: ClassVar[str]
     LINE_TYPE_BODY: ClassVar[str]
     LINE_TYPE_FOOTER: ClassVar[str]
     LINE_TYPE_HEADER: ClassVar[str]
@@ -173,6 +178,9 @@ class NLPCore:
     LINE_TYPE_TABLE: ClassVar[str]
     LINE_TYPE_TOC: ClassVar[str]
     LOGGER_PROGRESS_UPDATE: ClassVar[str]
+    PAGE_TET_DOCUMENT_OPT_LIST: ClassVar[str]
+    PAGE_TET_PAGE_OPT_LIST: ClassVar[str]
+    PAGE_XML_VARIATION: ClassVar[str]
     PARSE_NAME_SPACE: ClassVar[str]
     PARSE_ATTR_COL_SPAN: ClassVar[str]
     PARSE_ATTR_LLX: ClassVar[str]
@@ -219,12 +227,17 @@ class NLPCore:
     PARSE_ELEM_XFA: ClassVar[str]
     SEARCH_STRATEGY_LINES: ClassVar[str]
     SEARCH_STRATEGY_TABLE: ClassVar[str]
+    TETML_TYPE_LINE: ClassVar[str]
+    TETML_TYPE_PAGE: ClassVar[str]
+    TETML_TYPE_WORD: ClassVar[str]
+    WORD_TET_DOCUMENT_OPT_LIST: ClassVar[str]
+    WORD_TET_PAGE_OPT_LIST: ClassVar[str]
+    WORD_XML_VARIATION: ClassVar[str]
 
     def __init__(self) -> None:
         self._exist = None
-        ...
     @classmethod
-    def _convert_roman_2_int(cls, roman_in: str) -> int: ...
+    def _convert_roman_2_int(cls, roman: str) -> int: ...
     @staticmethod
     def _get_lt_anti_patterns_default_heading() -> list[tuple[str, str]]: ...
     @staticmethod

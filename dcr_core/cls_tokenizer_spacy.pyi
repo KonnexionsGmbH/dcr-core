@@ -2,7 +2,7 @@
 # source code is governed by the Konnexions Public License (KX-PL)
 # Version 2020.05, that can be found in the LICENSE file.
 
-"""Library stub file."""
+"""Module stub file."""
 import spacy.tokens
 
 class TokenizerSpacy:
@@ -56,7 +56,6 @@ class TokenizerSpacy:
         self._token_sents: TokenizerSpacy.TokenSents = []
         self._token_tokens: TokenizerSpacy.TokenTokens = []
         self.token_pages: TokenizerSpacy.TokenPages = []
-        ...
     def _finish_document(self) -> None: ...
     def _finish_page(self) -> None: ...
     def _finish_para(self) -> None: ...

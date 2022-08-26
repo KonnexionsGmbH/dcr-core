@@ -62,8 +62,6 @@ class NLPCore:
     # ------------------------------------------------------------------
     # Class variables.
     # ------------------------------------------------------------------
-    CODE_SPACY_DEFAULT: ClassVar[str] = "en_core_web_trf"
-
     ENVIRONMENT_TYPE_DEV: ClassVar[str] = "dev"
     ENVIRONMENT_TYPE_PROD: ClassVar[str] = "prod"
     ENVIRONMENT_TYPE_TEST: ClassVar[str] = "test"
@@ -217,6 +215,14 @@ class NLPCore:
     JSON_NAME_WORDS: ClassVar[str] = "words"
     JSON_NAME_WORD_NO: ClassVar[str] = "wordNo"
 
+    LANGUAGE_PANDOC_DEFAULT: ClassVar[str] = "en"
+    LANGUAGE_SPACY_DEFAULT: ClassVar[str] = "en_core_web_trf"
+    LANGUAGE_TESSERACT_DEFAULT: ClassVar[str] = "eng"
+
+    LINE_TET_DOCUMENT_OPT_LIST: ClassVar[str] = "engines={noannotation noimage text notextcolor novector}"
+    LINE_TET_PAGE_OPT_LIST: ClassVar[str] = "granularity=line"
+    LINE_XML_VARIATION: ClassVar[str] = "line."
+
     LINE_TYPE_BODY: ClassVar[str] = "b"
     LINE_TYPE_FOOTER: ClassVar[str] = "f"
     LINE_TYPE_HEADER: ClassVar[str] = "h"
@@ -227,6 +233,10 @@ class NLPCore:
     LINE_TYPE_TOC: ClassVar[str] = "toc"
 
     LOGGER_PROGRESS_UPDATE: ClassVar[str] = "Progress update "
+
+    PAGE_TET_DOCUMENT_OPT_LIST: ClassVar[str] = "engines={noannotation noimage text notextcolor novector} " + "lineseparator=U+0020"
+    PAGE_TET_PAGE_OPT_LIST: ClassVar[str] = "granularity=page"
+    PAGE_XML_VARIATION: ClassVar[str] = "page."
 
     PARSE_NAME_SPACE: ClassVar[str] = "{http://www.pdflib.com/XML/TET5/TET-5.0}"
 
@@ -278,30 +288,42 @@ class NLPCore:
     SEARCH_STRATEGY_LINES: ClassVar[str] = "lines"
     SEARCH_STRATEGY_TABLE: ClassVar[str] = "table"
 
+    TETML_TYPE_LINE: ClassVar[str] = "line"
+    TETML_TYPE_PAGE: ClassVar[str] = "page"
+    TETML_TYPE_WORD: ClassVar[str] = "word"
+
+    WORD_TET_DOCUMENT_OPT_LIST: ClassVar[str] = "engines={noannotation noimage text notextcolor novector}"
+    WORD_TET_PAGE_OPT_LIST: ClassVar[str] = "granularity=word tetml={elements={line}}"
+    WORD_XML_VARIATION: ClassVar[str] = "word."
+
     # ------------------------------------------------------------------
     # Initialise the instance.
     # ------------------------------------------------------------------
     def __init__(self) -> None:
         """Initialise the instance."""
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+
         self._exist = True
+
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
 
     # ------------------------------------------------------------------
     # Convert a roman numeral to integer.
     # ------------------------------------------------------------------
     @classmethod
-    def _convert_roman_2_int(cls, roman_in: str) -> int:
+    def _convert_roman_2_int(cls, roman: str) -> int:
         """Convert a roman numeral to integer.
 
         Args:
-            roman_in (str):
+            roman (str):
                     The roman numeral.
 
         Returns:
             int:    The corresponding integer.
         """
-        roman = re.match(  # type: ignore
+        roman_int = re.match(  # type: ignore
             "(m{0,3}(cm|cd|d?c{0,3})(xc|xl|l?x{0,3})(ix|iv|v?i{0,3}))" + "|(M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3}))",
-            roman_in,
+            roman,
         ).group(0)
 
         tallies = {
@@ -317,15 +339,15 @@ class NLPCore:
 
         integer: int = 0
 
-        for i in range(len(roman) - 1):
-            left = roman[i]
-            right = roman[i + 1]
+        for i in range(len(roman_int) - 1):
+            left = roman_int[i]
+            right = roman_int[i + 1]
             if tallies[left] < tallies[right]:
                 integer -= tallies[left]
             else:
                 integer += tallies[left]
 
-        integer += tallies[roman[-1]]
+        integer += tallies[roman_int[-1]]
 
         return integer
 

@@ -2,7 +2,7 @@
 # source code is governed by the Konnexions Public License (KX-PL)
 # Version 2020.05, that can be found in the LICENSE file.
 
-"""Library stub file."""
+"""Module stub file."""
 import dcr_core.cls_nlp_core
 
 class LineTypeTable:
@@ -37,7 +37,6 @@ class LineTypeTable:
         self._rows: LineTypeTable.Rows = []
         self._tables: LineTypeTable.Tables = []
         self.no_tables: int = 0
-        ...
     def _finish_row(self) -> None: ...
     def _finish_table(self) -> None: ...
     def _process_line(self, line_line: dict[str, int | str]) -> str: ...

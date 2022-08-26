@@ -2,7 +2,9 @@
 # source code is governed by the Konnexions Public License (KX-PL)
 # Version 2020.05, that can be found in the LICENSE file.
 
-"""Library stub file."""
+"""Module stub file."""
+from __future__ import annotations
+
 import collections.abc
 
 import dcr_core.cls_nlp_core
@@ -50,7 +52,6 @@ class TextParser:
         self.parse_result_line_pages: dcr_core.cls_nlp_core.NLPCore.ParserLinePages = []
         self.parse_result_no_pages_in_doc: int = 0
         self.parse_result_titles: list[str] = []
-        ...
     def _create_line_document(self) -> None: ...
     def _create_line_lines(self) -> None: ...
     def _create_line_pages(self) -> None: ...
