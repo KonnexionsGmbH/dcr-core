@@ -30,7 +30,7 @@ endif
 ## ----------------------------------------------------------------------------
 ## help:               Show this help.
 ## ----------------------------------------------------------------------------
-## dev:                Format and lint the code.
+## dev:                Format, lint and test the code.
 dev: format lint pydocstyle tests
 ## docs:               Check the API docs, create and upload the user docs.
 docs: pydocstyle lazydocs mkdocs
@@ -123,7 +123,7 @@ flake8:             ## Enforce the Python Style Guides with Flake8.
 	@echo PYTHONPATH=${PYTHONPATH}
 	pipenv run flake8 --version
 	@echo ---------------------------------------------------------------------
-	pipenv run flake8 ${PYTHONPATH} tests
+	pipenv run flake8 --exclude TET.py ${PYTHONPATH} tests
 	@echo Info **********  End:   Flake8 **************************************
 
 # isort your imports, so you don't have to.
@@ -146,9 +146,10 @@ lazydocs:           ## Generate markdown API documentation for Google-style Pyth
 	@echo Info **********  Start: lazydocs ************************************
 	@echo CREATE_DOCS=${CREATE_DOCS}
 	@echo DELETE_DOCS=${DELETE_DOCS}
-	@echo MYPYPATH  =${MYPYPATH}
-	@echo PYTHON    =${PYTHON}
-	@echo PYTHONPATH=${PYTHONPATH}
+	@echo MYPYPATH   =${MYPYPATH}
+	@echo PYTHON     =${PYTHON}
+	@echo PYTHONPATH =${PYTHONPATH}
+	pipenv run lazydocs --version
 	@echo ---------------------------------------------------------------------
 	${CREATE_DOCS}
 	${DELETE_DOCS}
@@ -178,7 +179,7 @@ mypy:               ## Find typing issues with Mypy.
 	@echo PYTHONPATH=${PYTHONPATH}
 	pipenv run mypy --version
 	@echo ---------------------------------------------------------------------
-	pipenv run mypy ${PYTHONPATH}
+	pipenv run mypy --exclude TET.py ${PYTHONPATH}
 	@echo Info **********  End:   Mypy ****************************************
 
 # pip is the package installer for Python.
@@ -278,18 +279,21 @@ pytest-ci:          ## Run all tests with pytest after test tool installation.
 	@echo Info **********  End:   pytest **************************************
 pytest-first-issue: ## Run all tests with pytest until the first issue occurs.
 	@echo Info **********  Start: pytest **************************************
+	@echo DCR_ENVIRONMENT_TYPE=${DCR_ENVIRONMENT_TYPE}
 	pipenv run pytest --version
 	@echo ---------------------------------------------------------------------
 	pipenv run pytest --cov=${PYTHONPATH} --cov-report term-missing:skip-covered --random-order -v -x tests
 	@echo Info **********  End:   pytest **************************************
 pytest-issue:       ## Run only the tests with pytest which are marked with 'issue'.
 	@echo Info **********  Start: pytest **************************************
+	@echo DCR_ENVIRONMENT_TYPE=${DCR_ENVIRONMENT_TYPE}
 	pipenv run pytest --version
 	@echo ---------------------------------------------------------------------
 	pipenv run pytest --cov=${PYTHONPATH} --cov-report term-missing:skip-covered -m issue -s --setup-show -v -x tests
 	@echo Info **********  End:   pytest **************************************
 pytest-module:      ## Run tests of specific module(s) with pytest - test_all & test_cfg_cls_setup & test_db_cls.
 	@echo Info **********  Start: pytest **************************************
+	@echo DCR_ENVIRONMENT_TYPE=${DCR_ENVIRONMENT_TYPE}
 	pipenv run pytest --version
 	@echo ---------------------------------------------------------------------
 	pipenv run pytest --cov=${PYTHONPATH} --cov-report term-missing:skip-covered -v tests/test_db_cls_action.py
