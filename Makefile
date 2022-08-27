@@ -31,9 +31,11 @@ endif
 ## help:               Show this help.
 ## ----------------------------------------------------------------------------
 ## dev:                Format, lint and test the code.
-dev: format lint docs tests
+dev: format lint tests
 ## docs:               Check the API docs, create and upload the user docs.
 docs: pydocstyle lazydocs mkdocs
+## final:              Format, lint and test the code.
+final: format lint docs tests
 ## format:             Format the code with isort, Black and docformatter.
 format: isort black docformatter
 ## lint:               Lint the code with Bandit, Flake8, Pylint and Mypy.
