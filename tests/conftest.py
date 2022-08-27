@@ -112,6 +112,49 @@ def compare_with_reference_files(directory_name: str, reference_files: list[str]
 
 
 # -----------------------------------------------------------------------------
+# Delete the original configuration parameter value.
+# -----------------------------------------------------------------------------
+@pytest.helpers.register
+def config_param_delete(config_section: str, config_param: str) -> None:
+    """Delete the original configuration parameter value.
+
+    Args:
+        config_section (str): Configuration section.
+        config_param (str): Configuration parameter.
+    """
+    CONFIG_PARSER.read(dcr_core.cls_setup.Setup._DCR_CFG_FILE)
+
+    del CONFIG_PARSER[config_section][config_param]
+
+    with open(dcr_core.cls_setup.Setup._DCR_CFG_FILE, "w", encoding=dcr_core.core_glob.FILE_ENCODING_DEFAULT) as configfile:
+        CONFIG_PARSER.write(configfile)
+
+
+# -----------------------------------------------------------------------------
+# modify configuration parameter values.
+# -----------------------------------------------------------------------------
+# noinspection PyProtectedMember
+@pytest.helpers.register
+def config_params_modify(
+    config_section: str,
+    config_params: list[tuple[str, str]],
+) -> None:
+    """Backup and modify configuration parameter values.
+
+    Args:
+        config_section (str): Configuration section.
+        config_params (list[tuple[str, str]]): Configuration parameter modifications.
+    """
+    CONFIG_PARSER.read(dcr_core.cls_setup.Setup._DCR_CFG_FILE)
+
+    for (config_param, config_value) in config_params:
+        CONFIG_PARSER[config_section][config_param] = config_value
+
+    with open(dcr_core.cls_setup.Setup._DCR_CFG_FILE, "w", encoding=dcr_core.core_glob.FILE_ENCODING_DEFAULT) as configfile:
+        CONFIG_PARSER.write(configfile)
+
+
+# -----------------------------------------------------------------------------
 # Copy files from the sample test file directory.
 # -----------------------------------------------------------------------------
 @pytest.helpers.register
@@ -179,6 +222,7 @@ def fxtr_before_any_test():
         (dcr_core.cls_setup.Setup._DCR_CFG_CREATE_EXTRA_FILE_LIST_BULLET, "true"),
         (dcr_core.cls_setup.Setup._DCR_CFG_CREATE_EXTRA_FILE_LIST_NUMBER, "true"),
         (dcr_core.cls_setup.Setup._DCR_CFG_CREATE_EXTRA_FILE_TABLE, "true"),
+        (dcr_core.cls_setup.Setup._DCR_CFG_DIRECTORY_INBOX, "data/inbox_test"),
         (dcr_core.cls_setup.Setup._DCR_CFG_JSON_INDENT, "4"),
         (dcr_core.cls_setup.Setup._DCR_CFG_JSON_SORT_KEYS, "false"),
         (dcr_core.cls_setup.Setup._DCR_CFG_LT_EXPORT_RULE_FILE_HEADING, "tmp/lt_export_rule_heading.json"),
@@ -189,7 +233,7 @@ def fxtr_before_any_test():
         (dcr_core.cls_setup.Setup._DCR_CFG_LT_HEADER_MAX_DISTANCE, "3"),
         (dcr_core.cls_setup.Setup._DCR_CFG_LT_HEADER_MAX_LINES, "3"),
         (dcr_core.cls_setup.Setup._DCR_CFG_LT_HEADING_FILE_INCL_NO_CTX, "3"),
-        (dcr_core.cls_setup.Setup._DCR_CFG_LT_HEADING_FILE_INCL_REGEXP, "false"),
+        (dcr_core.cls_setup.Setup._DCR_CFG_LT_HEADING_FILE_INCL_REGEXP, "true"),
         (dcr_core.cls_setup.Setup._DCR_CFG_LT_HEADING_MAX_LEVEL, "3"),
         (dcr_core.cls_setup.Setup._DCR_CFG_LT_HEADING_MIN_PAGES, "2"),
         (dcr_core.cls_setup.Setup._DCR_CFG_LT_HEADING_RULE_FILE, "data/lt_export_rule_heading_test.json"),
@@ -197,7 +241,7 @@ def fxtr_before_any_test():
         (dcr_core.cls_setup.Setup._DCR_CFG_LT_LIST_BULLET_MIN_ENTRIES, "2"),
         (dcr_core.cls_setup.Setup._DCR_CFG_LT_LIST_BULLET_RULE_FILE, "data/lt_export_rule_list_bullet_test.json"),
         (dcr_core.cls_setup.Setup._DCR_CFG_LT_LIST_BULLET_TOLERANCE_LLX, "5"),
-        (dcr_core.cls_setup.Setup._DCR_CFG_LT_LIST_NUMBER_FILE_INCL_REGEXP, "false"),
+        (dcr_core.cls_setup.Setup._DCR_CFG_LT_LIST_NUMBER_FILE_INCL_REGEXP, "true"),
         (dcr_core.cls_setup.Setup._DCR_CFG_LT_LIST_NUMBER_MIN_ENTRIES, "2"),
         (dcr_core.cls_setup.Setup._DCR_CFG_LT_LIST_NUMBER_RULE_FILE, "data/lt_export_rule_list_number_test.json"),
         (dcr_core.cls_setup.Setup._DCR_CFG_LT_LIST_NUMBER_TOLERANCE_LLX, "5"),
@@ -313,7 +357,7 @@ def get_test_files_reference_directory_name():
     Provide the file directory name where the reference files are
     located.
     """
-    return "tests/__PYTEST_REFERENCE__/"
+    return "tests/__PYTEST_REFERENCES__/"
 
 
 # -----------------------------------------------------------------------------

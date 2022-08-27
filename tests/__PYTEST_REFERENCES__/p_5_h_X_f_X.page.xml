@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created by the PDFlib Text and Image Extraction Toolkit TET (www.pdflib.com) -->
+<TET xmlns="http://www.pdflib.com/XML/TET5/TET-5.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.pdflib.com/XML/TET5/TET-5.0
+ http://www.pdflib.com/XML/TET5/TET-5.0.xsd"
+ version="5.2">
+<Creation platform="Win64" tetVersion="5.3" date="2022-08-26T10:39:40+02:00" />
+<Document filename="data\inbox_dev_accepted\p_5_h_X_f_X.pdf" pageCount="5" filesize="71948" linearized="true" pdfVersion="1.5" tagged="true">
+<DocInfo>
+<Author>Walter Weinmann</Author>
+<CreationDate>2022-07-14T10:17:50+02:00</CreationDate>
+<Creator>Acrobat PDFMaker 11 for Word</Creator>
+<ModDate>2022-07-14T10:17:51+02:00</ModDate>
+<Producer>Adobe PDF Library 11.0</Producer>
+<Custom key="SourceModified">D:20220714081728</Custom>
+</DocInfo>
+<Metadata>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.4-c006 80.159825, 2016/09/16-03:31:08        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""
+            xmlns:xmp="http://ns.adobe.com/xap/1.0/"
+            xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/"
+            xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:pdf="http://ns.adobe.com/pdf/1.3/"
+            xmlns:pdfx="http://ns.adobe.com/pdfx/1.3/">
+         <xmp:ModifyDate>2022-07-14T10:17:51+02:00</xmp:ModifyDate>
+         <xmp:CreateDate>2022-07-14T10:17:50+02:00</xmp:CreateDate>
+         <xmp:MetadataDate>2022-07-14T10:17:51+02:00</xmp:MetadataDate>
+         <xmp:CreatorTool>Acrobat PDFMaker 11 for Word</xmp:CreatorTool>
+         <xmpMM:DocumentID>uuid:aae71f2e-912a-41a1-a663-f8f97c86682c</xmpMM:DocumentID>
+         <xmpMM:InstanceID>uuid:29aad25e-97f9-4a68-b165-beacc915cd6b</xmpMM:InstanceID>
+         <xmpMM:subject>
+            <rdf:Seq>
+               <rdf:li>40</rdf:li>
+            </rdf:Seq>
+         </xmpMM:subject>
+         <dc:format>application/pdf</dc:format>
+         <dc:creator>
+            <rdf:Seq>
+               <rdf:li>Walter Weinmann</rdf:li>
+            </rdf:Seq>
+         </dc:creator>
+         <pdf:Producer>Adobe PDF Library 11.0</pdf:Producer>
+         <pdfx:SourceModified>D:20220714081728</pdfx:SourceModified>
+         <pdfx:Company/>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta>
+</Metadata>
+<Options>tetml={filename={data\inbox_dev_accepted\p_5_h_X_f_X.page.xml}} engines={noannotation noimage text notextcolor novector} lineseparator=U+0020</Options>
+<Pages>
+<Page number="1" width="595.32" height="841.92">
+<Options>granularity=page</Options>
+<Content granularity="page" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="70.80" lly="733.09" urx="141.00" ury="772.68">
+  <Text>FIRST TOKEN 1 FIRST TOKEN LAST TOKEN LAST TOKEN 1</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="671.91" urx="308.40" ury="731.89">
+  <Text>ALTERNATE LEFT RIGHT 1 ALTERNATE LEFT RIGHT ALTERNATE RIGHT LEFT ALTERNATE RIGHT LEFT 1 REGULAR EXPRESSION Page REGULAR EXPRESSION REGULAR EXPRESSION Page 1 REGULAR EXPRESSION</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="590.33" urx="519.00" ury="640.12">
+  <Text>Es hatte ein Mann einen Esel, der schon viele Jahre die Säcke unverdrossen zur Mühle getragen hatte, dessen Kräfte aber nun zu Ende gingen, so dass er zur Arbeit immer untauglicher wurde. Da dachte der Herr daran, ihn aus dem Weg zu räumen, aber der Esel merkte, dass kein guter Wind wehte, lief fort und machte sich auf den Weg nach Bremen. Dort, meinte er, könnte er ja Stadtmusikant werden.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="519.07" urx="141.00" ury="558.54">
+  <Text>FIRST TOKEN 1 FIRST TOKEN LAST TOKEN LAST TOKEN 1</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="457.89" urx="308.40" ury="517.87">
+  <Text>ALTERNATE LEFT RIGHT 1 ALTERNATE LEFT RIGHT ALTERNATE RIGHT LEFT ALTERNATE RIGHT LEFT 1 REGULAR EXPRESSION Page REGULAR EXPRESSION REGULAR EXPRESSION Page 1 REGULAR EXPRESSION</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="51.84" urx="108.08" ury="62.88">
+  <Text artifact="true">Page | 1</Text>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Page number="2" width="595.32" height="841.92">
+<Options>granularity=page</Options>
+<Content granularity="page" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="70.80" lly="671.91" urx="178.80" ury="772.68">
+  <Text>2 SECOND 2 SECOND SECOND 2 SECOND 2 SECOND 2 SECOND 2 2 SECOND 2 SECOND SECOND Page 2 SECOND SECOND Page 2 SECOND</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="559.74" urx="513.60" ury="640.12">
+  <Text>Als er ein Weilchen fortgegangen war, fand er einen Jagdhund auf dem Weg liegen, der japste wie einer, der sich müde gelaufen hat. „Nun, was japst du so?“, fragte der Esel. „Ach“, sagte der Hund, „weil ich alt bin und jeden Tag schwächer werde, auch auf der Jagd nicht mehr mit kann, hat mich mein Herr totschlagen wollen, da hab ich Reißaus genommen. Aber womit soll ich nun mein Brot verdienen?“ „Weißt du was“, sprach der Esel, „ich gehe nach Bremen und werde dort Stadtmusikant, geh mit und lass dich auch bei der Musik annehmen. Ich spiele die Laute, und du schlägst die Pauken.“</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="427.30" urx="178.80" ury="528.07">
+  <Text>2 SECOND 2 SECOND SECOND 2 SECOND 2 SECOND 2 SECOND 2 2 SECOND 2 SECOND SECOND Page 2 SECOND SECOND Page 2 SECOND</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="51.84" urx="108.08" ury="62.88">
+  <Text artifact="true">Page | 2</Text>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Page number="3" width="595.32" height="841.92">
+<Options>granularity=page</Options>
+<Content granularity="page" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="70.80" lly="671.91" urx="168.00" ury="772.68">
+  <Text>3 THIRD 3 THIRD THIRD 3 THIRD 3 3 THIRD 3 THIRD THIRD 3 THIRD 3 THIRD Page 3 THIRD THIRD Page 3 THIRD</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="549.54" urx="519.00" ury="640.12">
+  <Text>Der Hund war zufrieden, und sie gingen weiter. Es dauerte nicht lange, so saß da eine Katze an dem Weg und machte ein Gesicht wie drei Tage Regenwetter. „Nun, was ist dir in die Quere gekommen, alter Bartputzer?“, fragte der Esel. „Wer kann da lustig sein, wenn es einem an den Kragen geht“, antwortete die Katze. „Weil ich nun in die Jahre komme, meine Zähne stumpf werden und ich lieber hinter dem Ofen sitze, als nach Mäusen herumzujagen, hat mich meine Frau ersäufen wollen. Ich habe mich zwar noch fortgemacht, aber nun ist guter Rat teuer. Wo soll ich hin?“ „Geh mit uns nach Bremen, du verstehst doch etwas von Nachtmusik, da kannst du ein Stadtmusikant werden!“, entgegnete der Esel. Die Katze hielt das für gut und ging mit.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="417.10" urx="168.00" ury="517.87">
+  <Text>3 THIRD 3 THIRD THIRD 3 THIRD 3 3 THIRD 3 THIRD THIRD 3 THIRD 3 THIRD Page 3 THIRD THIRD Page 3 THIRD</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="51.84" urx="108.08" ury="62.88">
+  <Text artifact="true">Page | 3</Text>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Page number="4" width="595.32" height="841.92">
+<Options>granularity=page</Options>
+<Content granularity="page" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="70.80" lly="671.91" urx="178.80" ury="772.68">
+  <Text>4 FOURTH 4 FOURTH FOURTH 4 FOURTH 4 FOURTH 4 FOURTH 4 4 FOURTH 4 FOURTH FOURTH Page 4 FOURTH FOURTH Page 4 FOURTH</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="519.07" urx="519.00" ury="640.12">
+  <Text>Darauf kamen die drei Landesflüchtigen an einem Hof vorbei, da saß auf dem Tor der Haushahn und schrie aus Leibeskräften. „Du schreist einem durch Mark und Bein“, sprach der Esel, „was hast du vor?“ „Da hab ich gutes Wetter prophezeit“, sprach der Hahn, „weil unserer lieben Frauen Tag ist, wo sie dem Christkindlein die Hemdchen gewaschen hat und sie trocknen will. Aber weil am Sonntag Gäste kommen, so hat die Hausfrau doch kein Erbarmen und hat der Köchin gesagt, sie wolle mich in der Suppe essen und da solle ich mir heute Abend noch den Kopf abschneiden lassen. Nun schrei ich aus vollem Hals, solang ich noch kann.“ „Ei was, du Rotkopf“, sagte der Esel, „zieh lieber mit uns fort, wir gehen nach Bremen, etwas Besseres als den Tod findest du überall. Du hast eine gute Stimme, und wenn wir zusammen musizieren, so wäre dies wohl fantastisch.“ Der Hahn ließ sich den Vorschlag gefallen und sie gingen alle zusammen fort.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="386.51" urx="178.80" ury="487.28">
+  <Text>4 FOURTH 4 FOURTH FOURTH 4 FOURTH 4 FOURTH 4 FOURTH 4 4 FOURTH 4 FOURTH FOURTH Page 4 FOURTH FOURTH Page 4 FOURTH</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="51.84" urx="108.08" ury="62.88">
+  <Text artifact="true">Page | 4</Text>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Page number="5" width="595.32" height="841.92">
+<Options>granularity=page</Options>
+<Content granularity="page" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="70.80" lly="763.68" urx="141.00" ury="772.68">
+  <Text>5 FIRST TOKEN</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="722.89" urx="189.60" ury="762.48">
+  <Text>FIRST TOKEN LAST TOKEN 5 LAST TOKEN 5 ALTERNATE LEFT RIGHT</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="671.91" urx="308.40" ury="721.70">
+  <Text>ALTERNATE LEFT RIGHT ALTERNATE RIGHT LEFT 5 ALTERNATE RIGHT LEFT REGULAR EXPRESSION Page 5 REGULAR EXPRESSION REGULAR EXPRESSION Page REGULAR EXPRESSION</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="519.07" urx="519.00" ury="640.12">
+  <Text>Sie konnten aber die Stadt Bremen in einem Tag nicht erreichen und kamen abends in einen Wald, wo sie übernachten wollten. Der Esel und der Hund legten sich unter einen großen Baum, die Katze und der Hahn machten es sich auf den Ästen bequem, der Hahn aber flog bis auf die Spitze, wo er sich sicher fühlte. Bevor er einschlief, sah er sich noch einmal nach allen vier Himmelsrichtungen um. Da dachte er, er sähe in der Ferne ein Fünkchen brennen und so rief er seinen Gesellen zu, es müsste gar nicht weit ein Haus sein, denn es scheine ein Licht. Sprach der Esel: „So müssen wir uns aufmachen und noch hingehen, denn hier ist die Herberge schlecht.“ Der Hund meinte, ein paar Knochen und etwas Fleisch dran täten ihm auch gut. Also machten sie sich auf den Weg zu der Gegend, wo das Licht war und sahen es bald heller schimmern. Es wurde immer größer, bis sie vor ein hell erleuchtetes Räuberhaus kamen.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="478.28" urx="141.00" ury="487.28">
+  <Text>5 FIRST TOKEN</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="437.49" urx="189.60" ury="477.08">
+  <Text>FIRST TOKEN LAST TOKEN 5 LAST TOKEN 5 ALTERNATE LEFT RIGHT</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="386.51" urx="308.40" ury="436.30">
+  <Text>ALTERNATE LEFT RIGHT ALTERNATE RIGHT LEFT 5 ALTERNATE RIGHT LEFT REGULAR EXPRESSION Page 5 REGULAR EXPRESSION REGULAR EXPRESSION Page REGULAR EXPRESSION</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="51.84" urx="108.08" ury="62.88">
+  <Text artifact="true">Page | 5</Text>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Resources>
+<Fonts>
+ <Font id="F0" name="Calibri" fullname="QWUFTM+Calibri" type="TrueType" embedded="true" ascender="750.00" capheight="632.00" italicangle="0.00" descender="-250.00" weight="400.00" xheight="464.00"/>
+ <Font id="F1" name="CourierNewPSMT" type="TrueType" embedded="false" ascender="1021.00" capheight="571.00" italicangle="0.00" descender="-680.00" weight="400.00" xheight="423.00"/>
+ <Font id="F2" name="CambriaMath" fullname="ZUDCPU+CambriaMath" type="TrueType" embedded="true" ascender="778.00" capheight="667.00" italicangle="0.00" descender="-222.00" weight="400.00" xheight="467.00"/>
+</Fonts>
+<ColorSpaces>
+ <ColorSpace id="CS0" name="ICCBased" components="1" iccprofile="ICC0"/>
+</ColorSpaces>
+</Resources>
+<Graphics>
+<ICCProfiles>
+ <ICCProfile id="ICC0" embedded="true" iccversion="2.1" profilename="Gray Gamma 2.2" checksum="66043AD0DE86F27B977BAB702FB1A778" profilecs="GRAY" deviceclass="mntr" fromCIE="true" toCIE="true"/>
+</ICCProfiles>
+</Graphics>
+</Pages>
+</Document>
+</TET>

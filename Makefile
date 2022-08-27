@@ -31,9 +31,11 @@ endif
 ## help:               Show this help.
 ## ----------------------------------------------------------------------------
 ## dev:                Format, lint and test the code.
-dev: format lint pydocstyle tests
+dev: format lint tests
 ## docs:               Check the API docs, create and upload the user docs.
 docs: pydocstyle lazydocs mkdocs
+## final:              Format, lint and test the code.
+final: format lint docs tests
 ## format:             Format the code with isort, Black and docformatter.
 format: isort black docformatter
 ## lint:               Lint the code with Bandit, Flake8, Pylint and Mypy.
@@ -149,11 +151,10 @@ lazydocs:           ## Generate markdown API documentation for Google-style Pyth
 	@echo MYPYPATH   =${MYPYPATH}
 	@echo PYTHON     =${PYTHON}
 	@echo PYTHONPATH =${PYTHONPATH}
-	pipenv run lazydocs --version
 	@echo ---------------------------------------------------------------------
 	${CREATE_DOCS}
 	${DELETE_DOCS}
-	pipenv run lazydocs --output-path="./docs/api-docs" --overview-file="README.md" --src-base-url="https://github.com/KonnexionsGmbH/dcr-core/blob/main/" ${PYTHONPATH}
+	pipenv run lazydocs --output-path="./docs/api-docs" --overview-file="README.md" --src-base-url="https://github.com/KonnexionsGmbH/dcr-core" ${PYTHONPATH}
 	@echo Info **********  End:   lazydocs ************************************
 
 # Project documentation with Markdown.

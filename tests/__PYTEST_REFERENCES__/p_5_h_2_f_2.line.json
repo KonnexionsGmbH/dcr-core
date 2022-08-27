@@ -1,0 +1,367 @@
+{
+    "documentId": 21,
+    "documentFileName": "p_5_h_2_f_2.pdf",
+    "noLinesFooter": 2,
+    "noLinesHeader": 2,
+    "noLinesInDocument": 35,
+    "noLinesToc": 0,
+    "noListsBulletInDocument": 0,
+    "noListsNumberInDocument": 0,
+    "noPagesInDocument": 5,
+    "noParagraphsInDocument": 15,
+    "noTablesInDocument": 0,
+    "noTitlesInDocument": 0,
+    "titles": [],
+    "pages": [
+        {
+            "pageNo": 1,
+            "noLinesInPage": 7,
+            "noParagraphsInPage": 3,
+            "lines": [
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 112.87,
+                    "lineNo": 1,
+                    "lineNoPage": 1,
+                    "lineType": "h",
+                    "paragraphNo": 1,
+                    "text": "Header 1"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 112.87,
+                    "lineNo": 2,
+                    "lineNoPage": 2,
+                    "lineType": "h",
+                    "paragraphNo": 1,
+                    "text": "Header 2"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 389.4,
+                    "lineNo": 1,
+                    "lineNoPage": 3,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "Seite 1 Zeile 1 This chapter uses Volto to change displaying the dates in"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 406.05,
+                    "lineNo": 2,
+                    "lineNoPage": 4,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "Seite 1 Zeile 2 talkview and talklistview. To meet the same requirements in"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 381.48,
+                    "lineNo": 3,
+                    "lineNoPage": 5,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "Seite 1 Zeile 3 classic Plone see the chapter Turning Talks into Events."
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 109.75,
+                    "lineNo": 1,
+                    "lineNoPage": 6,
+                    "lineType": "f",
+                    "paragraphNo": 3,
+                    "text": "Footer 1"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 243.64,
+                    "lineNo": 2,
+                    "lineNoPage": 7,
+                    "lineType": "f",
+                    "paragraphNo": 3,
+                    "text": "Footer 2 pg. 1"
+                }
+            ]
+        },
+        {
+            "pageNo": 2,
+            "noLinesInPage": 7,
+            "noParagraphsInPage": 3,
+            "lines": [
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 112.87,
+                    "lineNo": 1,
+                    "lineNoPage": 1,
+                    "lineType": "h",
+                    "paragraphNo": 1,
+                    "text": "Header 1"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 112.87,
+                    "lineNo": 2,
+                    "lineNoPage": 2,
+                    "lineType": "h",
+                    "paragraphNo": 1,
+                    "text": "Header 2"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 424.18,
+                    "lineNo": 1,
+                    "lineNoPage": 3,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "Seite 2 Zeile 1 We use a technique called component shadowing to override an"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 425.83,
+                    "lineNo": 2,
+                    "lineNoPage": 4,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "Seite 2 Zeile 2 existing Volto component with our local custom version, without"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 427.49,
+                    "lineNo": 3,
+                    "lineNoPage": 5,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "Seite 2 Zeile 3 having to modify Volto's source code at all. You have to place the"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 109.75,
+                    "lineNo": 1,
+                    "lineNoPage": 6,
+                    "lineType": "f",
+                    "paragraphNo": 3,
+                    "text": "Footer 1"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 243.64,
+                    "lineNo": 2,
+                    "lineNoPage": 7,
+                    "lineType": "f",
+                    "paragraphNo": 3,
+                    "text": "Footer 2 pg. 2"
+                }
+            ]
+        },
+        {
+            "pageNo": 3,
+            "noLinesInPage": 7,
+            "noParagraphsInPage": 3,
+            "lines": [
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 112.87,
+                    "lineNo": 1,
+                    "lineNoPage": 1,
+                    "lineType": "h",
+                    "paragraphNo": 1,
+                    "text": "Header 1"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 112.87,
+                    "lineNo": 2,
+                    "lineNoPage": 2,
+                    "lineType": "h",
+                    "paragraphNo": 1,
+                    "text": "Header 2"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 420.52,
+                    "lineNo": 1,
+                    "lineNoPage": 3,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "Seite 3 Zeile 1 replacing component in the same original folder path inside the"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 433.98,
+                    "lineNo": 2,
+                    "lineNoPage": 4,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "Seite 3 Zeile 2 We start with the first case and change the font to another Google"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 429.92,
+                    "lineNo": 3,
+                    "lineNoPage": 5,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "Seite 3 Zeile 3 font, Lato. The overall font is defined in Volto and can be found in"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 109.75,
+                    "lineNo": 1,
+                    "lineNoPage": 6,
+                    "lineType": "f",
+                    "paragraphNo": 3,
+                    "text": "Footer 1"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 243.64,
+                    "lineNo": 2,
+                    "lineNoPage": 7,
+                    "lineType": "f",
+                    "paragraphNo": 3,
+                    "text": "Footer 2 pg. 3"
+                }
+            ]
+        },
+        {
+            "pageNo": 4,
+            "noLinesInPage": 7,
+            "noParagraphsInPage": 3,
+            "lines": [
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 112.87,
+                    "lineNo": 1,
+                    "lineNoPage": 1,
+                    "lineType": "h",
+                    "paragraphNo": 1,
+                    "text": "Header 1"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 112.87,
+                    "lineNo": 2,
+                    "lineNoPage": 2,
+                    "lineType": "h",
+                    "paragraphNo": 1,
+                    "text": "Header 2"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 389.4,
+                    "lineNo": 1,
+                    "lineNoPage": 3,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "Seite 1 Zeile 1 This chapter uses Volto to change displaying the dates in"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 406.05,
+                    "lineNo": 2,
+                    "lineNoPage": 4,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "Seite 1 Zeile 2 talkview and talklistview. To meet the same requirements in"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 381.48,
+                    "lineNo": 3,
+                    "lineNoPage": 5,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "Seite 1 Zeile 3 classic Plone see the chapter Turning Talks into Events."
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 109.75,
+                    "lineNo": 1,
+                    "lineNoPage": 6,
+                    "lineType": "f",
+                    "paragraphNo": 3,
+                    "text": "Footer 1"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 243.64,
+                    "lineNo": 2,
+                    "lineNoPage": 7,
+                    "lineType": "f",
+                    "paragraphNo": 3,
+                    "text": "Footer 2 pg. 4"
+                }
+            ]
+        },
+        {
+            "pageNo": 5,
+            "noLinesInPage": 7,
+            "noParagraphsInPage": 3,
+            "lines": [
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 112.87,
+                    "lineNo": 1,
+                    "lineNoPage": 1,
+                    "lineType": "h",
+                    "paragraphNo": 1,
+                    "text": "Header 1"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 112.87,
+                    "lineNo": 2,
+                    "lineNoPage": 2,
+                    "lineType": "h",
+                    "paragraphNo": 1,
+                    "text": "Header 2"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 424.18,
+                    "lineNo": 1,
+                    "lineNoPage": 3,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "Seite 2 Zeile 1 We use a technique called component shadowing to override an"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 425.83,
+                    "lineNo": 2,
+                    "lineNoPage": 4,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "Seite 2 Zeile 2 existing Volto component with our local custom version, without"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 427.5,
+                    "lineNo": 3,
+                    "lineNoPage": 5,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "Seite 2 Zeile 3 having to modify Volto's source code at all. You have to place the"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 109.75,
+                    "lineNo": 1,
+                    "lineNoPage": 6,
+                    "lineType": "f",
+                    "paragraphNo": 3,
+                    "text": "Footer 1"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 243.64,
+                    "lineNo": 2,
+                    "lineNoPage": 7,
+                    "lineType": "f",
+                    "paragraphNo": 3,
+                    "text": "Footer 2 pg. 5"
+                }
+            ]
+        }
+    ]
+}

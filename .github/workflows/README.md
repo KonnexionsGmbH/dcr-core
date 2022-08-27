@@ -1,4 +1,4 @@
-# DCR - File Directory **`.github`**
+# DCR-CORE - File Directory **`.github`**
 
 This directory contains the following GitHub Action workflows:
 

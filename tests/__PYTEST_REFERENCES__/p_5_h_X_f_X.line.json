@@ -1,0 +1,1411 @@
+{
+    "documentId": 26,
+    "documentFileName": "p_5_h_X_f_X.pdf",
+    "noLinesFooter": 1,
+    "noLinesHeader": 0,
+    "noLinesInDocument": 151,
+    "noLinesToc": 0,
+    "noListsBulletInDocument": 0,
+    "noListsNumberInDocument": 0,
+    "noPagesInDocument": 5,
+    "noParagraphsInDocument": 26,
+    "noTablesInDocument": 0,
+    "noTitlesInDocument": 0,
+    "titles": [],
+    "pages": [
+        {
+            "pageNo": 1,
+            "noLinesInPage": 26,
+            "noParagraphsInPage": 6,
+            "lines": [
+                {
+                    "coordLLX": 81.6,
+                    "coordURX": 141.0,
+                    "lineNo": 1,
+                    "lineNoPage": 1,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "FIRST TOKEN"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 141.0,
+                    "lineNo": 2,
+                    "lineNoPage": 2,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "1 FIRST TOKEN"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 124.8,
+                    "lineNo": 3,
+                    "lineNoPage": 3,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "LAST TOKEN"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 135.6,
+                    "lineNo": 4,
+                    "lineNoPage": 4,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "LAST TOKEN 1"
+                },
+                {
+                    "coordLLX": 81.6,
+                    "coordURX": 189.6,
+                    "lineNo": 1,
+                    "lineNoPage": 5,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "ALTERNATE LEFT RIGHT"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 189.6,
+                    "lineNo": 2,
+                    "lineNoPage": 6,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "1 ALTERNATE LEFT RIGHT"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 178.8,
+                    "lineNo": 3,
+                    "lineNoPage": 7,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "ALTERNATE RIGHT LEFT"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 189.6,
+                    "lineNo": 4,
+                    "lineNoPage": 8,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "ALTERNATE RIGHT LEFT 1"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 308.4,
+                    "lineNo": 5,
+                    "lineNoPage": 9,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "REGULAR EXPRESSION Page REGULAR EXPRESSION"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 308.4,
+                    "lineNo": 6,
+                    "lineNoPage": 10,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "REGULAR EXPRESSION Page 1 REGULAR EXPRESSION"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 492.0,
+                    "lineNo": 1,
+                    "lineNoPage": 11,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "Es hatte ein Mann einen Esel, der schon viele Jahre die S\u00e4cke unverdrossen zur"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 513.6,
+                    "lineNo": 2,
+                    "lineNoPage": 12,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "M\u00fchle getragen hatte, dessen Kr\u00e4fte aber nun zu Ende gingen, so dass er zur Arbeit"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 519.0,
+                    "lineNo": 3,
+                    "lineNoPage": 13,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "immer untauglicher wurde. Da dachte der Herr daran, ihn aus dem Weg zu r\u00e4umen, aber"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 513.6,
+                    "lineNo": 4,
+                    "lineNoPage": 14,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "der Esel merkte, dass kein guter Wind wehte, lief fort und machte sich auf den Weg"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 416.4,
+                    "lineNo": 5,
+                    "lineNoPage": 15,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "nach Bremen. Dort, meinte er, k\u00f6nnte er ja Stadtmusikant werden."
+                },
+                {
+                    "coordLLX": 81.6,
+                    "coordURX": 141.0,
+                    "lineNo": 1,
+                    "lineNoPage": 16,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "FIRST TOKEN"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 141.0,
+                    "lineNo": 2,
+                    "lineNoPage": 17,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "1 FIRST TOKEN"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 124.8,
+                    "lineNo": 3,
+                    "lineNoPage": 18,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "LAST TOKEN"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 135.6,
+                    "lineNo": 4,
+                    "lineNoPage": 19,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "LAST TOKEN 1"
+                },
+                {
+                    "coordLLX": 81.6,
+                    "coordURX": 189.6,
+                    "lineNo": 1,
+                    "lineNoPage": 20,
+                    "lineType": "b",
+                    "paragraphNo": 5,
+                    "text": "ALTERNATE LEFT RIGHT"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 189.6,
+                    "lineNo": 2,
+                    "lineNoPage": 21,
+                    "lineType": "b",
+                    "paragraphNo": 5,
+                    "text": "1 ALTERNATE LEFT RIGHT"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 178.8,
+                    "lineNo": 3,
+                    "lineNoPage": 22,
+                    "lineType": "b",
+                    "paragraphNo": 5,
+                    "text": "ALTERNATE RIGHT LEFT"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 189.6,
+                    "lineNo": 4,
+                    "lineNoPage": 23,
+                    "lineType": "b",
+                    "paragraphNo": 5,
+                    "text": "ALTERNATE RIGHT LEFT 1"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 308.4,
+                    "lineNo": 5,
+                    "lineNoPage": 24,
+                    "lineType": "b",
+                    "paragraphNo": 5,
+                    "text": "REGULAR EXPRESSION Page REGULAR EXPRESSION"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 308.4,
+                    "lineNo": 6,
+                    "lineNoPage": 25,
+                    "lineType": "b",
+                    "paragraphNo": 5,
+                    "text": "REGULAR EXPRESSION Page 1 REGULAR EXPRESSION"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 108.08,
+                    "lineNo": 1,
+                    "lineNoPage": 26,
+                    "lineType": "f",
+                    "paragraphNo": 6,
+                    "text": "Page | 1"
+                }
+            ]
+        },
+        {
+            "pageNo": 2,
+            "noLinesInPage": 29,
+            "noParagraphsInPage": 4,
+            "lines": [
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 114.0,
+                    "lineNo": 1,
+                    "lineNoPage": 1,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "2 SECOND"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 114.0,
+                    "lineNo": 2,
+                    "lineNoPage": 2,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "2 SECOND"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 114.0,
+                    "lineNo": 3,
+                    "lineNoPage": 3,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "SECOND 2"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 114.0,
+                    "lineNo": 4,
+                    "lineNoPage": 4,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "SECOND 2"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 114.0,
+                    "lineNo": 5,
+                    "lineNoPage": 5,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "SECOND 2"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 114.0,
+                    "lineNo": 6,
+                    "lineNoPage": 6,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "SECOND 2"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 114.0,
+                    "lineNo": 7,
+                    "lineNoPage": 7,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "2 SECOND"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 114.0,
+                    "lineNo": 8,
+                    "lineNoPage": 8,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "2 SECOND"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 178.8,
+                    "lineNo": 9,
+                    "lineNoPage": 9,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "SECOND Page 2 SECOND"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 178.8,
+                    "lineNo": 10,
+                    "lineNoPage": 10,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "SECOND Page 2 SECOND"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 502.8,
+                    "lineNo": 1,
+                    "lineNoPage": 11,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "Als er ein Weilchen fortgegangen war, fand er einen Jagdhund auf dem Weg liegen,"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 508.2,
+                    "lineNo": 2,
+                    "lineNoPage": 12,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "der japste wie einer, der sich m\u00fcde gelaufen hat. \u201eNun, was japst du so?\u201c, fragte"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 508.2,
+                    "lineNo": 3,
+                    "lineNoPage": 13,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "der Esel. \u201eAch\u201c, sagte der Hund, \u201eweil ich alt bin und jeden Tag schw\u00e4cher werde,"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 502.8,
+                    "lineNo": 4,
+                    "lineNoPage": 14,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "auch auf der Jagd nicht mehr mit kann, hat mich mein Herr totschlagen wollen, da"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 508.2,
+                    "lineNo": 5,
+                    "lineNoPage": 15,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "hab ich Rei\u00dfaus genommen. Aber womit soll ich nun mein Brot verdienen?\u201c \u201eWei\u00dft du"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 513.6,
+                    "lineNo": 6,
+                    "lineNoPage": 16,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "was\u201c, sprach der Esel, \u201eich gehe nach Bremen und werde dort Stadtmusikant, geh mit"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 502.8,
+                    "lineNo": 7,
+                    "lineNoPage": 17,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "und lass dich auch bei der Musik annehmen. Ich spiele die Laute, und du schl\u00e4gst"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 135.6,
+                    "lineNo": 8,
+                    "lineNoPage": 18,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "die Pauken.\u201c"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 114.0,
+                    "lineNo": 1,
+                    "lineNoPage": 19,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "2 SECOND"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 114.0,
+                    "lineNo": 2,
+                    "lineNoPage": 20,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "2 SECOND"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 114.0,
+                    "lineNo": 3,
+                    "lineNoPage": 21,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "SECOND 2"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 114.0,
+                    "lineNo": 4,
+                    "lineNoPage": 22,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "SECOND 2"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 114.0,
+                    "lineNo": 5,
+                    "lineNoPage": 23,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "SECOND 2"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 114.0,
+                    "lineNo": 6,
+                    "lineNoPage": 24,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "SECOND 2"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 114.0,
+                    "lineNo": 7,
+                    "lineNoPage": 25,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "2 SECOND"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 114.0,
+                    "lineNo": 8,
+                    "lineNoPage": 26,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "2 SECOND"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 178.8,
+                    "lineNo": 9,
+                    "lineNoPage": 27,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "SECOND Page 2 SECOND"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 178.8,
+                    "lineNo": 10,
+                    "lineNoPage": 28,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "SECOND Page 2 SECOND"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 108.08,
+                    "lineNo": 1,
+                    "lineNoPage": 29,
+                    "lineType": "f",
+                    "paragraphNo": 4,
+                    "text": "Page | 2"
+                }
+            ]
+        },
+        {
+            "pageNo": 3,
+            "noLinesInPage": 30,
+            "noParagraphsInPage": 4,
+            "lines": [
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 108.6,
+                    "lineNo": 1,
+                    "lineNoPage": 1,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "3 THIRD"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 108.6,
+                    "lineNo": 2,
+                    "lineNoPage": 2,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "3 THIRD"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 108.6,
+                    "lineNo": 3,
+                    "lineNoPage": 3,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "THIRD 3"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 108.6,
+                    "lineNo": 4,
+                    "lineNoPage": 4,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "THIRD 3"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 108.6,
+                    "lineNo": 5,
+                    "lineNoPage": 5,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "3 THIRD"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 108.6,
+                    "lineNo": 6,
+                    "lineNoPage": 6,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "3 THIRD"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 108.6,
+                    "lineNo": 7,
+                    "lineNoPage": 7,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "THIRD 3"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 108.6,
+                    "lineNo": 8,
+                    "lineNoPage": 8,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "THIRD 3"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 168.0,
+                    "lineNo": 9,
+                    "lineNoPage": 9,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "THIRD Page 3 THIRD"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 168.0,
+                    "lineNo": 10,
+                    "lineNoPage": 10,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "THIRD Page 3 THIRD"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 502.8,
+                    "lineNo": 1,
+                    "lineNoPage": 11,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "Der Hund war zufrieden, und sie gingen weiter. Es dauerte nicht lange, so sa\u00df da"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 508.2,
+                    "lineNo": 2,
+                    "lineNoPage": 12,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "eine Katze an dem Weg und machte ein Gesicht wie drei Tage Regenwetter. \u201eNun, was"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 502.8,
+                    "lineNo": 3,
+                    "lineNoPage": 13,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "ist dir in die Quere gekommen, alter Bartputzer?\u201c, fragte der Esel. \u201eWer kann da"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 519.0,
+                    "lineNo": 4,
+                    "lineNoPage": 14,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "lustig sein, wenn es einem an den Kragen geht\u201c, antwortete die Katze. \u201eWeil ich nun"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 519.0,
+                    "lineNo": 5,
+                    "lineNoPage": 15,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "in die Jahre komme, meine Z\u00e4hne stumpf werden und ich lieber hinter dem Ofen sitze,"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 502.8,
+                    "lineNo": 6,
+                    "lineNoPage": 16,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "als nach M\u00e4usen herumzujagen, hat mich meine Frau ers\u00e4ufen wollen. Ich habe mich"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 519.0,
+                    "lineNo": 7,
+                    "lineNoPage": 17,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "zwar noch fortgemacht, aber nun ist guter Rat teuer. Wo soll ich hin?\u201c \u201eGeh mit uns"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 519.0,
+                    "lineNo": 8,
+                    "lineNoPage": 18,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "nach Bremen, du verstehst doch etwas von Nachtmusik, da kannst du ein Stadtmusikant"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 459.6,
+                    "lineNo": 9,
+                    "lineNoPage": 19,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "werden!\u201c, entgegnete der Esel. Die Katze hielt das f\u00fcr gut und ging mit."
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 108.6,
+                    "lineNo": 1,
+                    "lineNoPage": 20,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "3 THIRD"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 108.6,
+                    "lineNo": 2,
+                    "lineNoPage": 21,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "3 THIRD"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 108.6,
+                    "lineNo": 3,
+                    "lineNoPage": 22,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "THIRD 3"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 108.6,
+                    "lineNo": 4,
+                    "lineNoPage": 23,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "THIRD 3"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 108.6,
+                    "lineNo": 5,
+                    "lineNoPage": 24,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "3 THIRD"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 108.6,
+                    "lineNo": 6,
+                    "lineNoPage": 25,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "3 THIRD"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 108.6,
+                    "lineNo": 7,
+                    "lineNoPage": 26,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "THIRD 3"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 108.6,
+                    "lineNo": 8,
+                    "lineNoPage": 27,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "THIRD 3"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 168.0,
+                    "lineNo": 9,
+                    "lineNoPage": 28,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "THIRD Page 3 THIRD"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 168.0,
+                    "lineNo": 10,
+                    "lineNoPage": 29,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "THIRD Page 3 THIRD"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 108.08,
+                    "lineNo": 1,
+                    "lineNoPage": 30,
+                    "lineType": "f",
+                    "paragraphNo": 4,
+                    "text": "Page | 3"
+                }
+            ]
+        },
+        {
+            "pageNo": 4,
+            "noLinesInPage": 33,
+            "noParagraphsInPage": 4,
+            "lines": [
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 114.0,
+                    "lineNo": 1,
+                    "lineNoPage": 1,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "4 FOURTH"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 114.0,
+                    "lineNo": 2,
+                    "lineNoPage": 2,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "4 FOURTH"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 114.0,
+                    "lineNo": 3,
+                    "lineNoPage": 3,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "FOURTH 4"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 114.0,
+                    "lineNo": 4,
+                    "lineNoPage": 4,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "FOURTH 4"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 114.0,
+                    "lineNo": 5,
+                    "lineNoPage": 5,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "FOURTH 4"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 114.0,
+                    "lineNo": 6,
+                    "lineNoPage": 6,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "FOURTH 4"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 114.0,
+                    "lineNo": 7,
+                    "lineNoPage": 7,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "4 FOURTH"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 114.0,
+                    "lineNo": 8,
+                    "lineNoPage": 8,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "4 FOURTH"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 178.8,
+                    "lineNo": 9,
+                    "lineNoPage": 9,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "FOURTH Page 4 FOURTH"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 178.8,
+                    "lineNo": 10,
+                    "lineNoPage": 10,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "FOURTH Page 4 FOURTH"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 513.6,
+                    "lineNo": 1,
+                    "lineNoPage": 11,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "Darauf kamen die drei Landesfl\u00fcchtigen an einem Hof vorbei, da sa\u00df auf dem Tor der"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 497.4,
+                    "lineNo": 2,
+                    "lineNoPage": 12,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "Haushahn und schrie aus Leibeskr\u00e4ften. \u201eDu schreist einem durch Mark und Bein\u201c,"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 502.8,
+                    "lineNo": 3,
+                    "lineNoPage": 13,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "sprach der Esel, \u201ewas hast du vor?\u201c \u201eDa hab ich gutes Wetter prophezeit\u201c, sprach"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 481.2,
+                    "lineNo": 4,
+                    "lineNoPage": 14,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "der Hahn, \u201eweil unserer lieben Frauen Tag ist, wo sie dem Christkindlein die"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 519.0,
+                    "lineNo": 5,
+                    "lineNoPage": 15,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "Hemdchen gewaschen hat und sie trocknen will. Aber weil am Sonntag G\u00e4ste kommen, so"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 502.8,
+                    "lineNo": 6,
+                    "lineNoPage": 16,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "hat die Hausfrau doch kein Erbarmen und hat der K\u00f6chin gesagt, sie wolle mich in"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 513.6,
+                    "lineNo": 7,
+                    "lineNoPage": 17,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "der Suppe essen und da solle ich mir heute Abend noch den Kopf abschneiden lassen."
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 513.6,
+                    "lineNo": 8,
+                    "lineNoPage": 18,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "Nun schrei ich aus vollem Hals, solang ich noch kann.\u201c \u201eEi was, du Rotkopf\u201c, sagte"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 513.6,
+                    "lineNo": 9,
+                    "lineNoPage": 19,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "der Esel, \u201ezieh lieber mit uns fort, wir gehen nach Bremen, etwas Besseres als den"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 519.0,
+                    "lineNo": 10,
+                    "lineNoPage": 20,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "Tod findest du \u00fcberall. Du hast eine gute Stimme, und wenn wir zusammen musizieren,"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 508.2,
+                    "lineNo": 11,
+                    "lineNoPage": 21,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "so w\u00e4re dies wohl fantastisch.\u201c Der Hahn lie\u00df sich den Vorschlag gefallen und sie"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 211.2,
+                    "lineNo": 12,
+                    "lineNoPage": 22,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "gingen alle zusammen fort."
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 114.0,
+                    "lineNo": 1,
+                    "lineNoPage": 23,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "4 FOURTH"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 114.0,
+                    "lineNo": 2,
+                    "lineNoPage": 24,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "4 FOURTH"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 114.0,
+                    "lineNo": 3,
+                    "lineNoPage": 25,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "FOURTH 4"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 114.0,
+                    "lineNo": 4,
+                    "lineNoPage": 26,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "FOURTH 4"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 114.0,
+                    "lineNo": 5,
+                    "lineNoPage": 27,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "FOURTH 4"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 114.0,
+                    "lineNo": 6,
+                    "lineNoPage": 28,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "FOURTH 4"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 114.0,
+                    "lineNo": 7,
+                    "lineNoPage": 29,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "4 FOURTH"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 114.0,
+                    "lineNo": 8,
+                    "lineNoPage": 30,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "4 FOURTH"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 178.8,
+                    "lineNo": 9,
+                    "lineNoPage": 31,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "FOURTH Page 4 FOURTH"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 178.8,
+                    "lineNo": 10,
+                    "lineNoPage": 32,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "FOURTH Page 4 FOURTH"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 108.08,
+                    "lineNo": 1,
+                    "lineNoPage": 33,
+                    "lineType": "f",
+                    "paragraphNo": 4,
+                    "text": "Page | 4"
+                }
+            ]
+        },
+        {
+            "pageNo": 5,
+            "noLinesInPage": 33,
+            "noParagraphsInPage": 8,
+            "lines": [
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 141.0,
+                    "lineNo": 1,
+                    "lineNoPage": 1,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "5 FIRST TOKEN"
+                },
+                {
+                    "coordLLX": 81.6,
+                    "coordURX": 141.0,
+                    "lineNo": 1,
+                    "lineNoPage": 2,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "FIRST TOKEN"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 135.6,
+                    "lineNo": 2,
+                    "lineNoPage": 3,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "LAST TOKEN 5"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 124.8,
+                    "lineNo": 3,
+                    "lineNoPage": 4,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "LAST TOKEN"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 189.6,
+                    "lineNo": 4,
+                    "lineNoPage": 5,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "5 ALTERNATE LEFT RIGHT"
+                },
+                {
+                    "coordLLX": 81.6,
+                    "coordURX": 189.6,
+                    "lineNo": 1,
+                    "lineNoPage": 6,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "ALTERNATE LEFT RIGHT"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 189.6,
+                    "lineNo": 2,
+                    "lineNoPage": 7,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "ALTERNATE RIGHT LEFT 5"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 178.8,
+                    "lineNo": 3,
+                    "lineNoPage": 8,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "ALTERNATE RIGHT LEFT"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 308.4,
+                    "lineNo": 4,
+                    "lineNoPage": 9,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "REGULAR EXPRESSION Page 5 REGULAR EXPRESSION"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 308.4,
+                    "lineNo": 5,
+                    "lineNoPage": 10,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "REGULAR EXPRESSION Page REGULAR EXPRESSION"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 513.6,
+                    "lineNo": 1,
+                    "lineNoPage": 11,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "Sie konnten aber die Stadt Bremen in einem Tag nicht erreichen und kamen abends in"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 497.4,
+                    "lineNo": 2,
+                    "lineNoPage": 12,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "einen Wald, wo sie \u00fcbernachten wollten. Der Esel und der Hund legten sich unter"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 519.0,
+                    "lineNo": 3,
+                    "lineNoPage": 13,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "einen gro\u00dfen Baum, die Katze und der Hahn machten es sich auf den \u00c4sten bequem, der"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 508.2,
+                    "lineNo": 4,
+                    "lineNoPage": 14,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "Hahn aber flog bis auf die Spitze, wo er sich sicher f\u00fchlte. Bevor er einschlief,"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 519.0,
+                    "lineNo": 5,
+                    "lineNoPage": 15,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "sah er sich noch einmal nach allen vier Himmelsrichtungen um. Da dachte er, er s\u00e4he"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 513.6,
+                    "lineNo": 6,
+                    "lineNoPage": 16,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "in der Ferne ein F\u00fcnkchen brennen und so rief er seinen Gesellen zu, es m\u00fcsste gar"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 502.8,
+                    "lineNo": 7,
+                    "lineNoPage": 17,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "nicht weit ein Haus sein, denn es scheine ein Licht. Sprach der Esel: \u201eSo m\u00fcssen"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 519.0,
+                    "lineNo": 8,
+                    "lineNoPage": 18,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "wir uns aufmachen und noch hingehen, denn hier ist die Herberge schlecht.\u201c Der Hund"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 502.8,
+                    "lineNo": 9,
+                    "lineNoPage": 19,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "meinte, ein paar Knochen und etwas Fleisch dran t\u00e4ten ihm auch gut. Also machten"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 486.6,
+                    "lineNo": 10,
+                    "lineNoPage": 20,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "sie sich auf den Weg zu der Gegend, wo das Licht war und sahen es bald heller"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 492.0,
+                    "lineNo": 11,
+                    "lineNoPage": 21,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "schimmern. Es wurde immer gr\u00f6\u00dfer, bis sie vor ein hell erleuchtetes R\u00e4uberhaus"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 103.2,
+                    "lineNo": 12,
+                    "lineNoPage": 22,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "kamen."
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 141.0,
+                    "lineNo": 1,
+                    "lineNoPage": 23,
+                    "lineType": "b",
+                    "paragraphNo": 5,
+                    "text": "5 FIRST TOKEN"
+                },
+                {
+                    "coordLLX": 81.6,
+                    "coordURX": 141.0,
+                    "lineNo": 1,
+                    "lineNoPage": 24,
+                    "lineType": "b",
+                    "paragraphNo": 6,
+                    "text": "FIRST TOKEN"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 135.6,
+                    "lineNo": 2,
+                    "lineNoPage": 25,
+                    "lineType": "b",
+                    "paragraphNo": 6,
+                    "text": "LAST TOKEN 5"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 124.8,
+                    "lineNo": 3,
+                    "lineNoPage": 26,
+                    "lineType": "b",
+                    "paragraphNo": 6,
+                    "text": "LAST TOKEN"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 189.6,
+                    "lineNo": 4,
+                    "lineNoPage": 27,
+                    "lineType": "b",
+                    "paragraphNo": 6,
+                    "text": "5 ALTERNATE LEFT RIGHT"
+                },
+                {
+                    "coordLLX": 81.6,
+                    "coordURX": 189.6,
+                    "lineNo": 1,
+                    "lineNoPage": 28,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "ALTERNATE LEFT RIGHT"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 189.6,
+                    "lineNo": 2,
+                    "lineNoPage": 29,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "ALTERNATE RIGHT LEFT 5"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 178.8,
+                    "lineNo": 3,
+                    "lineNoPage": 30,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "ALTERNATE RIGHT LEFT"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 308.4,
+                    "lineNo": 4,
+                    "lineNoPage": 31,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "REGULAR EXPRESSION Page 5 REGULAR EXPRESSION"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 308.4,
+                    "lineNo": 5,
+                    "lineNoPage": 32,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "REGULAR EXPRESSION Page REGULAR EXPRESSION"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 108.08,
+                    "lineNo": 1,
+                    "lineNoPage": 33,
+                    "lineType": "f",
+                    "paragraphNo": 8,
+                    "text": "Page | 5"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created by the PDFlib Text and Image Extraction Toolkit TET (www.pdflib.com) -->
+<TET xmlns="http://www.pdflib.com/XML/TET5/TET-5.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.pdflib.com/XML/TET5/TET-5.0
+ http://www.pdflib.com/XML/TET5/TET-5.0.xsd"
+ version="5.2">
+<Creation platform="Win64" tetVersion="5.3" date="2022-08-26T09:12:33+02:00" />
+<Document filename="data\inbox_dev_accepted\case_6_jpg_route_inbox_tesseract_pdflib.pdf" pageCount="1" filesize="381212" linearized="false" pdfVersion="1.5">
+<DocInfo>
+<Producer>PyPDF2</Producer>
+</DocInfo>
+<Options>tetml={filename={data\inbox_dev_accepted\case_6_jpg_route_inbox_tesseract_pdflib.page.xml}} engines={noannotation noimage text notextcolor novector} lineseparator=U+0020</Options>
+<Pages>
+<Page number="1" width="595.44" height="841.92">
+<Options>granularity=page</Options>
+<Content granularity="page" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="71.04" lly="759.64" urx="146.80" ury="768.64">
+  <Text>Start Document...</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="138.96" lly="692.20" urx="284.19" ury="702.20">
+  <Text>Konnexions Public License (KX-PL)</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="71.52" lly="647.08" urx="502.94" ury="678.88">
+  <Text>Version 2020.05, May 2020</Text>
+  <Text>https://github.com/KonnexionsGmbH/shared_resources/blob/master/License/KX-PL-2020.05.pdf</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="78.24" lly="602.20" urx="448.50" ury="612.20">
+  <Text>This license governs use of the accompanying software. If you use the software, you</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="78.72" lly="579.64" urx="414.70" ury="588.64">
+  <Text>accept this license. If you do not accept the license, do not use the software.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="79.20" lly="534.76" urx="135.86" ury="543.76">
+  <Text>1. Definitions.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="85.68" lly="467.32" urx="429.74" ury="498.64">
+  <Text>The terms &quot;reproduce&quot;, &quot;reproduction&quot;, &quot;derivative works&quot;, and &quot;distribution&quot;</Text>
+  <Text>have the same meaning here as under U.S. copyright law.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="85.92" lly="422.44" urx="417.60" ury="431.44">
+  <Text>A &quot;contribution&quot; is</Text>
+  <Text>the original software, or any additions or changes to the</Text>
+ </Box>
+ <Box llx="86.16" lly="399.88" urx="123.10" ury="408.88">
+  <Text>software.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="85.92" lly="354.52" urx="161.60" ury="363.52">
+  <Text>A &quot;contributor&quot; is</Text>
+ </Box>
+ <Box llx="166.80" lly="354.52" urx="402.48" ury="363.52">
+  <Text>any person that distributes its contribution under this</Text>
+ </Box>
+ <Box llx="86.40" lly="332.44" urx="114.77" ury="341.44">
+  <Text>license.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="86.40" lly="287.08" urx="421.50" ury="296.08">
+  <Text>&quot;Licensed patents&quot; are a</Text>
+  <Text>contributor&apos;s patent claims that read directly on its</Text>
+ </Box>
+ <Box llx="86.16" lly="265.00" urx="139.20" ury="274.00">
+  <Text>contribution.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="78.72" lly="219.88" urx="152.06" ury="228.88">
+  <Text>2. Grant of Rights</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="86.40" lly="175.00" urx="94.32" ury="185.00">
+  <Text>(a)</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="98.64" lly="129.88" urx="426.87" ury="185.00">
+  <Text>Copyright Grant- Subject to the terms of this license, including the license</Text>
+  <Text>conditions and limitations in section 3, each contributor grants you a nonexclusive, worldwide, royalty-free copyright license to reproduce its</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="98.64" lly="84.76" urx="417.10" ury="116.08">
+  <Text>contribution, prepare derivative works of its contribution, and distribute its contribution or any derivative works that you create.</Text>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Resources>
+<Fonts>
+ <Font id="F0" name="GlyphLessFont" type="TrueType (CID)" embedded="true" ascender="720.00" capheight="1000.00" italicangle="0.00" descender="0.00" weight="400.00" xheight="475.00"/>
+</Fonts>
+</Resources>
+</Pages>
+</Document>
+</TET>

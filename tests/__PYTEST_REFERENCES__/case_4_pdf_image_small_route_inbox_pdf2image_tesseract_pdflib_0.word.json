@@ -1,0 +1,2250 @@
+{
+    "documentId": 3,
+    "documentFileName": "case_4_pdf_image_small_route_inbox_pdf2image_tesseract_pdflib.pdf",
+    "noLinesInDocument": 46,
+    "noPagesInDocument": 1,
+    "noParagraphsInDocument": 28,
+    "noWordsInDocument": 440,
+    "pages": [
+        {
+            "pageNo": 1,
+            "noLinesInPage": 46,
+            "noParagraphsInPage": 28,
+            "noWordsInPage": 440,
+            "paragraphs": [
+                {
+                    "paragraphNo": 1,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 3,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 3,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "PFU"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "Business"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "report"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 2,
+                    "noLinesInParagraph": 2,
+                    "noWordsInParagraph": 11,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 5,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "New"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "customer"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "'"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "s"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "development"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 2,
+                            "noWordsInLine": 6,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "and"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "increasing"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "the"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "sale"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "of"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "product"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 3,
+                    "noLinesInParagraph": 3,
+                    "noWordsInParagraph": 50,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 17,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "My"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "country"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "economy"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "at"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "this"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "season"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "keeps"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "escaping"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "from"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "Odoba"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "of"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "business"
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": "though"
+                                },
+                                {
+                                    "wordNo": 14,
+                                    "text": "holds"
+                                },
+                                {
+                                    "wordNo": 15,
+                                    "text": "a"
+                                },
+                                {
+                                    "wordNo": 16,
+                                    "text": "crude"
+                                },
+                                {
+                                    "wordNo": 17,
+                                    "text": "oil"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 2,
+                            "noWordsInLine": 15,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "high"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "so"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "on"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "unstable"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "element"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "that"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "continues"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "still"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "and"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "recovering"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "gradually"
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": "and"
+                                },
+                                {
+                                    "wordNo": 14,
+                                    "text": "well"
+                                },
+                                {
+                                    "wordNo": 15,
+                                    "text": "."
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 3,
+                            "noWordsInLine": 18,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "In"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "the"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "IT"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "industry"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "there"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "is"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "an"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "influence"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "such"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "as"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "competing"
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": "intensification"
+                                },
+                                {
+                                    "wordNo": 14,
+                                    "text": "in"
+                                },
+                                {
+                                    "wordNo": 15,
+                                    "text": "narrowing"
+                                },
+                                {
+                                    "wordNo": 16,
+                                    "text": "investment"
+                                },
+                                {
+                                    "wordNo": 17,
+                                    "text": "field"
+                                },
+                                {
+                                    "wordNo": 18,
+                                    "text": "."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 4,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 10,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 10,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "["
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "The"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "main"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "product"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "and"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "service"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "at"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "this"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "season"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": ")"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 5,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 4,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 4,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "From"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "the"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "product"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "headquarters"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 6,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 15,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 15,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "In"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "the"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "image"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "business"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "the"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "new"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "model"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "turning"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "on"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "of"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "the"
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": "A3"
+                                },
+                                {
+                                    "wordNo": 14,
+                                    "text": "high-speed"
+                                },
+                                {
+                                    "wordNo": 15,
+                                    "text": ","
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 7,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 2,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "usually"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "_"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 8,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 2,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "_"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "bad"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 9,
+                    "noLinesInParagraph": 2,
+                    "noWordsInParagraph": 28,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 14,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "two"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "sided"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "color"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "scanner"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "that"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "achieved"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "a"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "high-speed"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "reading"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "aimed"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "at"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "."
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": ":"
+                                },
+                                {
+                                    "wordNo": 14,
+                                    "text": "~"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 2,
+                            "noWordsInLine": 14,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "wroom"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "was"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "established"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "in"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "United"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "States"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "Europe"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "and"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "Asia"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "/"
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": "Oceania"
+                                },
+                                {
+                                    "wordNo": 14,
+                                    "text": "."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 10,
+                    "noLinesInParagraph": 4,
+                    "noWordsInParagraph": 20,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 3,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "@"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "lImage"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "business"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 2,
+                            "noWordsInLine": 4,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "1"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": ")"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "Scanner"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "class"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 3,
+                            "noWordsInLine": 11,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "A3"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "high-speed"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "two"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "sided"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "color"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "scanner"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "\""
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "fi-5900C"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "\""
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "that"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 4,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "function"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "to"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 11,
+                    "noLinesInParagraph": 3,
+                    "noWordsInParagraph": 20,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "100"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "high-n"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 2,
+                            "noWordsInLine": 7,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "enable"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "industry-leading"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "was"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "installed"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "was"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "announced"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "in"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 3,
+                            "noWordsInLine": 11,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "ScanSnap"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "gotten"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "popular"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "because"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "of"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "an"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "office"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "and"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "individual"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "use"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 12,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 5,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 5,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "2"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": ")"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "DLM"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "solution"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "scanner"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 13,
+                    "noLinesInParagraph": 2,
+                    "noWordsInParagraph": 22,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 13,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "The"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "DLM"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "solution"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "that"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "used"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "received"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "the"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "rise"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "of"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "the"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "concern"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "to"
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": "efficient"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 2,
+                            "noWordsInLine": 9,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "management"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "and"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "internal"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "management"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "of"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "the"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "corporate"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "private"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "circum-"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 14,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 5,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 5,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "Satisfaction"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "rating"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "to"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "new"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "product"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 15,
+                    "noLinesInParagraph": 3,
+                    "noWordsInParagraph": 39,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 19,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "stances"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "report"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "in"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "recent"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "years"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "and"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "attracted"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "attention"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "."
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "The"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "function"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "of"
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": "software"
+                                },
+                                {
+                                    "wordNo": 14,
+                                    "text": "that"
+                                },
+                                {
+                                    "wordNo": 15,
+                                    "text": "the"
+                                },
+                                {
+                                    "wordNo": 16,
+                                    "text": "inspection"
+                                },
+                                {
+                                    "wordNo": 17,
+                                    "text": "of"
+                                },
+                                {
+                                    "wordNo": 18,
+                                    "text": "data"
+                                },
+                                {
+                                    "wordNo": 19,
+                                    "text": "is"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 2,
+                            "noWordsInLine": 18,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "the"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "sense"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "that"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "turns"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "over"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "the"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "file"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "is"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "strengthened"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "and"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "easiness"
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": "to"
+                                },
+                                {
+                                    "wordNo": 14,
+                                    "text": "use"
+                                },
+                                {
+                                    "wordNo": 15,
+                                    "text": "has"
+                                },
+                                {
+                                    "wordNo": 16,
+                                    "text": "been"
+                                },
+                                {
+                                    "wordNo": 17,
+                                    "text": "improved"
+                                },
+                                {
+                                    "wordNo": 18,
+                                    "text": "."
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 3,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "possible"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "by"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 16,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 6,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 6,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "["
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "approach"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "on"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "business"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "risk"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "]"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 17,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 2,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "In-house"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "activity"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 18,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 21,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 21,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "The"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "attestation"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "intended"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "for"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "each"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "office"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "in"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "Shinbashi"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "Kansai"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "and"
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": "Tokai"
+                                },
+                                {
+                                    "wordNo": 14,
+                                    "text": "was"
+                                },
+                                {
+                                    "wordNo": 15,
+                                    "text": "acquired"
+                                },
+                                {
+                                    "wordNo": 16,
+                                    "text": "in"
+                                },
+                                {
+                                    "wordNo": 17,
+                                    "text": "environment"
+                                },
+                                {
+                                    "wordNo": 18,
+                                    "text": "ISO"
+                                },
+                                {
+                                    "wordNo": 19,
+                                    "text": "in"
+                                },
+                                {
+                                    "wordNo": 20,
+                                    "text": "February"
+                                },
+                                {
+                                    "wordNo": 21,
+                                    "text": ","
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 19,
+                    "noLinesInParagraph": 3,
+                    "noWordsInParagraph": 58,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 24,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "2006"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "."
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "In"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "addition"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "it"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "participates"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "in"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "the"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "minus"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "6"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "%"
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": "that"
+                                },
+                                {
+                                    "wordNo": 14,
+                                    "text": "is"
+                                },
+                                {
+                                    "wordNo": 15,
+                                    "text": "a"
+                                },
+                                {
+                                    "wordNo": 16,
+                                    "text": "national"
+                                },
+                                {
+                                    "wordNo": 17,
+                                    "text": "movement"
+                                },
+                                {
+                                    "wordNo": 18,
+                                    "text": "of"
+                                },
+                                {
+                                    "wordNo": 19,
+                                    "text": "the"
+                                },
+                                {
+                                    "wordNo": 20,
+                                    "text": "global"
+                                },
+                                {
+                                    "wordNo": 21,
+                                    "text": "warming"
+                                },
+                                {
+                                    "wordNo": 22,
+                                    "text": "prevention"
+                                },
+                                {
+                                    "wordNo": 23,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 24,
+                                    "text": "and"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 2,
+                            "noWordsInLine": 24,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "\""
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "Culbiz"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "\""
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "is"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "done"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "."
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "The"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "scandal"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "of"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "the"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "enterprise"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "has"
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": "frequently"
+                                },
+                                {
+                                    "wordNo": 14,
+                                    "text": "generated"
+                                },
+                                {
+                                    "wordNo": 15,
+                                    "text": "is"
+                                },
+                                {
+                                    "wordNo": 16,
+                                    "text": "received"
+                                },
+                                {
+                                    "wordNo": 17,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 18,
+                                    "text": "concern"
+                                },
+                                {
+                                    "wordNo": 19,
+                                    "text": "is"
+                                },
+                                {
+                                    "wordNo": 20,
+                                    "text": "sent"
+                                },
+                                {
+                                    "wordNo": 21,
+                                    "text": "to"
+                                },
+                                {
+                                    "wordNo": 22,
+                                    "text": "the"
+                                },
+                                {
+                                    "wordNo": 23,
+                                    "text": "system"
+                                },
+                                {
+                                    "wordNo": 24,
+                                    "text": "maintenance"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 3,
+                            "noWordsInLine": 10,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "including"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "the"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "observance"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "of"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "the"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "law"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "in"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "recent"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "years"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 20,
+                    "noLinesInParagraph": 4,
+                    "noWordsInParagraph": 50,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 6,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "Enhancement"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "of"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "system"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "of"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "management"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "1"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 2,
+                            "noWordsInLine": 13,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "The"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "committee"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "that"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "aimed"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "at"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "the"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "decrease"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "of"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "a"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "variety"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "of"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "business"
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": "80"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 3,
+                            "noWordsInLine": 13,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "risks"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "in"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "an"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "individual"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "business"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "talk"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "was"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "newly"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "established"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "."
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "Moreover"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": "70"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 4,
+                            "noWordsInLine": 18,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "the"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "recognition"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "of"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "\""
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "Privacy"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "mark"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "\""
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "is"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "received"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "to"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "manage"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "customer"
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": "and"
+                                },
+                                {
+                                    "wordNo": 14,
+                                    "text": "s"
+                                },
+                                {
+                                    "wordNo": 15,
+                                    "text": ";"
+                                },
+                                {
+                                    "wordNo": 16,
+                                    "text": "\u2018"
+                                },
+                                {
+                                    "wordNo": 17,
+                                    "text": "iia"
+                                },
+                                {
+                                    "wordNo": 18,
+                                    "text": "we"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 21,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 12,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 12,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "employee"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "'"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "s"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "individual"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "information"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "appropriately"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "in"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "2001"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "and"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "the"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "activ-"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 22,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 1,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 1,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "40"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 23,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 12,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 12,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "ity"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "based"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "on"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "the"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "protection"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "of"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "individual"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "information"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "policy"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "is"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "continued"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 24,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 1,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 1,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "30"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 25,
+                    "noLinesInParagraph": 2,
+                    "noWordsInParagraph": 28,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 16,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "It"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "is"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": ".."
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "bAsia"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "/"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "Oceania"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "in"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "globalln"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "addition"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "our"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "technology"
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 14,
+                                    "text": "commodity"
+                                },
+                                {
+                                    "wordNo": 15,
+                                    "text": "20"
+                                },
+                                {
+                                    "wordNo": 16,
+                                    "text": ")"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 2,
+                            "noWordsInLine": 12,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "power"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "and"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "correspondence"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "power"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "were"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "evaluating"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "acquired"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "."
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "10"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "|"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "7"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 26,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 1,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 1,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "Ot"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 27,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 7,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 7,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "1998"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "1999"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "2000"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "2001"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "2002"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "2003"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "2004"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 28,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 5,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 5,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "Satisfaction"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "rating"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "to"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "new"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "product"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

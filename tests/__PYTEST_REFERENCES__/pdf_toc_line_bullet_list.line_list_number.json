@@ -1,0 +1,41 @@
+{
+    "documentId": 4,
+    "documentFileName": "pdf_toc_line_bullet_list.pdf",
+    "noListsNumberInDocument": 1,
+    "listsNumber": [
+        {
+            "number": "999.",
+            "listNo": 1,
+            "noEntries": 3,
+            "pageNoFrom": 4,
+            "pageNoTill": 4,
+            "regexp": "\\d+\\.",
+            "entries": [
+                {
+                    "entryNo": 1,
+                    "lineNoPageFrom": 8,
+                    "lineNoPageTill": 8,
+                    "pageNo": 4,
+                    "paragraphNo": 7,
+                    "text": "1. Numbered 1"
+                },
+                {
+                    "entryNo": 2,
+                    "lineNoPageFrom": 9,
+                    "lineNoPageTill": 9,
+                    "pageNo": 4,
+                    "paragraphNo": 7,
+                    "text": "2. Numbered 2"
+                },
+                {
+                    "entryNo": 3,
+                    "lineNoPageFrom": 10,
+                    "lineNoPageTill": 10,
+                    "pageNo": 4,
+                    "paragraphNo": 7,
+                    "text": "3. Numbered 3"
+                }
+            ]
+        }
+    ]
+}

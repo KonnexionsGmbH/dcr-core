@@ -1,0 +1,123 @@
+{
+    "documentId": 1,
+    "documentFileName": "docx_heading.pdf",
+    "toc": [
+        {
+            "headingLevel": 1,
+            "headingText": "1.0 Start",
+            "pageNo": 1,
+            "headingCtxLine1": "1.001 3. Dez",
+            "headingCtxLine2": "cccccccccccc",
+            "headingCtxLine3": "1.010 2. Dez",
+            "regexp": "\\d+\\."
+        },
+        {
+            "headingLevel": 2,
+            "headingText": "1.001 3. Dez",
+            "pageNo": 1,
+            "headingCtxLine1": "1.010 2. Dez",
+            "headingCtxLine2": "dddddddddddd",
+            "headingCtxLine3": "1.100 1. Dez",
+            "regexp": "\\d+\\."
+        },
+        {
+            "headingLevel": 3,
+            "headingText": "1.010 2. Dez",
+            "pageNo": 1,
+            "headingCtxLine1": "1.100 1. Dez",
+            "headingCtxLine2": "eeeeeeeeeeee",
+            "headingCtxLine3": "2.000 Ganz",
+            "regexp": "\\d+\\."
+        },
+        {
+            "headingLevel": 4,
+            "headingText": "1.100 1. Dez",
+            "pageNo": 1,
+            "headingCtxLine1": "2.000 Ganz",
+            "headingCtxLine2": "11. Format 999.99",
+            "headingCtxLine3": "aaaaaaaaaaaa",
+            "regexp": "\\d+\\."
+        },
+        {
+            "headingLevel": 4,
+            "headingText": "2.000 Ganz",
+            "pageNo": 1,
+            "headingCtxLine1": "aaaaaaaaaaaa",
+            "headingCtxLine2": "1.00 Start",
+            "headingCtxLine3": "bbbbbbbbbbbb",
+            "regexp": "\\d+\\."
+        },
+        {
+            "headingLevel": 5,
+            "headingText": "1.00 Start",
+            "pageNo": 1,
+            "headingCtxLine1": "1.01 2. Dez",
+            "headingCtxLine2": "cccccccccccc",
+            "headingCtxLine3": "1.10 1. Dez",
+            "regexp": "\\d+\\."
+        },
+        {
+            "headingLevel": 6,
+            "headingText": "1.01 2. Dez",
+            "pageNo": 1,
+            "headingCtxLine1": "1.10 1. Dez",
+            "headingCtxLine2": "Ddddddddddd",
+            "headingCtxLine3": "2.00 Ganz",
+            "regexp": "\\d+\\."
+        },
+        {
+            "headingLevel": 7,
+            "headingText": "1.10 1. Dez",
+            "pageNo": 1,
+            "headingCtxLine1": "2.00 Ganz",
+            "headingCtxLine2": "eeeeeeeeeeeeeee",
+            "headingCtxLine3": "12. Format 999.9",
+            "regexp": "\\d+\\."
+        },
+        {
+            "headingLevel": 7,
+            "headingText": "2.00 Ganz",
+            "pageNo": 1,
+            "headingCtxLine1": "12. Format 999.9",
+            "headingCtxLine2": "aaaaaaaaaaaaaa",
+            "headingCtxLine3": "1.0 Start",
+            "regexp": "\\d+\\."
+        },
+        {
+            "headingLevel": 8,
+            "headingText": "1.0 Start",
+            "pageNo": 1,
+            "headingCtxLine1": "1.1 1. Dez",
+            "headingCtxLine2": "cccccccccccccc",
+            "headingCtxLine3": "2.0 Ganz",
+            "regexp": "\\d+\\."
+        },
+        {
+            "headingLevel": 9,
+            "headingText": "1.1 1. Dez",
+            "pageNo": 1,
+            "headingCtxLine1": "2.0 Ganz",
+            "headingCtxLine2": "dddddddddddddd",
+            "headingCtxLine3": "1.9 Not ascending",
+            "regexp": "\\d+\\."
+        },
+        {
+            "headingLevel": 9,
+            "headingText": "2.0 Ganz",
+            "pageNo": 1,
+            "headingCtxLine1": "1.9 Not ascending",
+            "headingCtxLine2": "dddddddddddddd",
+            "headingCtxLine3": "13. Table",
+            "regexp": "\\d+\\."
+        },
+        {
+            "headingLevel": 10,
+            "headingText": "1.9 Not ascending",
+            "pageNo": 1,
+            "headingCtxLine1": "13. Table",
+            "headingCtxLine2": "eeeeeeeeeeeeeee",
+            "headingCtxLine3": "... End Document",
+            "regexp": "\\d+\\."
+        }
+    ]
+}

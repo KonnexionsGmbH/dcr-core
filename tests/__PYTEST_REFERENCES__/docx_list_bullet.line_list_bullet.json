@@ -1,0 +1,319 @@
+{
+    "documentId": 2,
+    "documentFileName": "docx_list_bullet.pdf",
+    "noListsBulletInDocument": 8,
+    "listsBullet": [
+        {
+            "bullet": ".",
+            "listNo": 1,
+            "noEntries": 4,
+            "pageNoFrom": 1,
+            "pageNoTill": 1,
+            "entries": [
+                {
+                    "entryNo": 1,
+                    "lineNoPageFrom": 2,
+                    "lineNoPageTill": 2,
+                    "pageNo": 1,
+                    "paragraphNo": 2,
+                    "text": ". Aaaa"
+                },
+                {
+                    "entryNo": 2,
+                    "lineNoPageFrom": 3,
+                    "lineNoPageTill": 3,
+                    "pageNo": 1,
+                    "paragraphNo": 2,
+                    "text": ". Bbbb"
+                },
+                {
+                    "entryNo": 3,
+                    "lineNoPageFrom": 4,
+                    "lineNoPageTill": 4,
+                    "pageNo": 1,
+                    "paragraphNo": 2,
+                    "text": ". Ccccc"
+                },
+                {
+                    "entryNo": 4,
+                    "lineNoPageFrom": 5,
+                    "lineNoPageTill": 5,
+                    "pageNo": 1,
+                    "paragraphNo": 2,
+                    "text": ". dddd"
+                }
+            ]
+        },
+        {
+            "bullet": "-",
+            "listNo": 2,
+            "noEntries": 4,
+            "pageNoFrom": 1,
+            "pageNoTill": 1,
+            "entries": [
+                {
+                    "entryNo": 1,
+                    "lineNoPageFrom": 9,
+                    "lineNoPageTill": 9,
+                    "pageNo": 1,
+                    "paragraphNo": 6,
+                    "text": "- Aaaa"
+                },
+                {
+                    "entryNo": 2,
+                    "lineNoPageFrom": 10,
+                    "lineNoPageTill": 10,
+                    "pageNo": 1,
+                    "paragraphNo": 6,
+                    "text": "- Bbbb"
+                },
+                {
+                    "entryNo": 3,
+                    "lineNoPageFrom": 11,
+                    "lineNoPageTill": 11,
+                    "pageNo": 1,
+                    "paragraphNo": 6,
+                    "text": "- Ccccc"
+                },
+                {
+                    "entryNo": 4,
+                    "lineNoPageFrom": 12,
+                    "lineNoPageTill": 12,
+                    "pageNo": 1,
+                    "paragraphNo": 6,
+                    "text": "- dddd"
+                }
+            ]
+        },
+        {
+            "bullet": "\u2022",
+            "listNo": 3,
+            "noEntries": 3,
+            "pageNoFrom": 1,
+            "pageNoTill": 1,
+            "entries": [
+                {
+                    "entryNo": 1,
+                    "lineNoPageFrom": 17,
+                    "lineNoPageTill": 17,
+                    "pageNo": 1,
+                    "paragraphNo": 11,
+                    "text": "\u2022 bbbb"
+                },
+                {
+                    "entryNo": 2,
+                    "lineNoPageFrom": 18,
+                    "lineNoPageTill": 18,
+                    "pageNo": 1,
+                    "paragraphNo": 12,
+                    "text": "\u2022 ccccc"
+                },
+                {
+                    "entryNo": 3,
+                    "lineNoPageFrom": 19,
+                    "lineNoPageTill": 19,
+                    "pageNo": 1,
+                    "paragraphNo": 13,
+                    "text": "\u2022 dddd"
+                }
+            ]
+        },
+        {
+            "bullet": "o",
+            "listNo": 4,
+            "noEntries": 4,
+            "pageNoFrom": 1,
+            "pageNoTill": 1,
+            "entries": [
+                {
+                    "entryNo": 1,
+                    "lineNoPageFrom": 23,
+                    "lineNoPageTill": 23,
+                    "pageNo": 1,
+                    "paragraphNo": 17,
+                    "text": "o 1111"
+                },
+                {
+                    "entryNo": 2,
+                    "lineNoPageFrom": 24,
+                    "lineNoPageTill": 24,
+                    "pageNo": 1,
+                    "paragraphNo": 17,
+                    "text": "o 2222"
+                },
+                {
+                    "entryNo": 3,
+                    "lineNoPageFrom": 25,
+                    "lineNoPageTill": 25,
+                    "pageNo": 1,
+                    "paragraphNo": 17,
+                    "text": "o 3333"
+                },
+                {
+                    "entryNo": 4,
+                    "lineNoPageFrom": 26,
+                    "lineNoPageTill": 26,
+                    "pageNo": 1,
+                    "paragraphNo": 17,
+                    "text": "o 4444"
+                }
+            ]
+        },
+        {
+            "bullet": "\u2022",
+            "listNo": 5,
+            "noEntries": 4,
+            "pageNoFrom": 2,
+            "pageNoTill": 2,
+            "entries": [
+                {
+                    "entryNo": 1,
+                    "lineNoPageFrom": 4,
+                    "lineNoPageTill": 4,
+                    "pageNo": 2,
+                    "paragraphNo": 4,
+                    "text": "\u2022 aaaa"
+                },
+                {
+                    "entryNo": 2,
+                    "lineNoPageFrom": 5,
+                    "lineNoPageTill": 5,
+                    "pageNo": 2,
+                    "paragraphNo": 5,
+                    "text": "\u2022 bbbb"
+                },
+                {
+                    "entryNo": 3,
+                    "lineNoPageFrom": 6,
+                    "lineNoPageTill": 6,
+                    "pageNo": 2,
+                    "paragraphNo": 6,
+                    "text": "\u2022 cccc"
+                },
+                {
+                    "entryNo": 4,
+                    "lineNoPageFrom": 7,
+                    "lineNoPageTill": 7,
+                    "pageNo": 2,
+                    "paragraphNo": 7,
+                    "text": "\u2022 dddd"
+                }
+            ]
+        },
+        {
+            "bullet": "\u2023",
+            "listNo": 6,
+            "noEntries": 4,
+            "pageNoFrom": 2,
+            "pageNoTill": 2,
+            "entries": [
+                {
+                    "entryNo": 1,
+                    "lineNoPageFrom": 22,
+                    "lineNoPageTill": 22,
+                    "pageNo": 2,
+                    "paragraphNo": 16,
+                    "text": "\u2023 1111"
+                },
+                {
+                    "entryNo": 2,
+                    "lineNoPageFrom": 23,
+                    "lineNoPageTill": 23,
+                    "pageNo": 2,
+                    "paragraphNo": 17,
+                    "text": "\u2023 2222"
+                },
+                {
+                    "entryNo": 3,
+                    "lineNoPageFrom": 24,
+                    "lineNoPageTill": 24,
+                    "pageNo": 2,
+                    "paragraphNo": 18,
+                    "text": "\u2023 3333"
+                },
+                {
+                    "entryNo": 4,
+                    "lineNoPageFrom": 25,
+                    "lineNoPageTill": 25,
+                    "pageNo": 2,
+                    "paragraphNo": 19,
+                    "text": "\u2023 4444"
+                }
+            ]
+        },
+        {
+            "bullet": "o",
+            "listNo": 7,
+            "noEntries": 4,
+            "pageNoFrom": 3,
+            "pageNoTill": 3,
+            "entries": [
+                {
+                    "entryNo": 1,
+                    "lineNoPageFrom": 8,
+                    "lineNoPageTill": 8,
+                    "pageNo": 3,
+                    "paragraphNo": 5,
+                    "text": "o Mixed start"
+                },
+                {
+                    "entryNo": 2,
+                    "lineNoPageFrom": 9,
+                    "lineNoPageTill": 9,
+                    "pageNo": 3,
+                    "paragraphNo": 5,
+                    "text": "o Aaaa"
+                },
+                {
+                    "entryNo": 3,
+                    "lineNoPageFrom": 10,
+                    "lineNoPageTill": 10,
+                    "pageNo": 3,
+                    "paragraphNo": 5,
+                    "text": "o Bbbb"
+                },
+                {
+                    "entryNo": 4,
+                    "lineNoPageFrom": 11,
+                    "lineNoPageTill": 11,
+                    "pageNo": 3,
+                    "paragraphNo": 5,
+                    "text": "o Cccc"
+                }
+            ]
+        },
+        {
+            "bullet": "\u2022",
+            "listNo": 8,
+            "noEntries": 3,
+            "pageNoFrom": 3,
+            "pageNoTill": 3,
+            "entries": [
+                {
+                    "entryNo": 1,
+                    "lineNoPageFrom": 12,
+                    "lineNoPageTill": 12,
+                    "pageNo": 3,
+                    "paragraphNo": 6,
+                    "text": "\u2022 Aaaa"
+                },
+                {
+                    "entryNo": 2,
+                    "lineNoPageFrom": 13,
+                    "lineNoPageTill": 13,
+                    "pageNo": 3,
+                    "paragraphNo": 7,
+                    "text": "\u2022 Bbbb"
+                },
+                {
+                    "entryNo": 3,
+                    "lineNoPageFrom": 14,
+                    "lineNoPageTill": 18,
+                    "pageNo": 3,
+                    "paragraphNo": 8,
+                    "text": "\u2022 Cccc \ufffd Aaaa \ufffd Bbbb \ufffd Cccc \ufffd Mixed end"
+                }
+            ]
+        }
+    ]
+}

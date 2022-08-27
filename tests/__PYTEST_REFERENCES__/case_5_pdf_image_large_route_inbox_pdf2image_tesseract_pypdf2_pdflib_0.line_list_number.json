@@ -1,0 +1,91 @@
+{
+    "documentId": 4,
+    "documentFileName": "case_5_pdf_image_large_route_inbox_pdf2image_tesseract_pypdf2_pdflib.pdf",
+    "noListsNumberInDocument": 2,
+    "listsNumber": [
+        {
+            "number": "999)",
+            "listNo": 1,
+            "noEntries": 5,
+            "pageNoFrom": 2,
+            "pageNoTill": 2,
+            "regexp": "\\d+\\)$",
+            "entries": [
+                {
+                    "entryNo": 1,
+                    "lineNoPageFrom": 32,
+                    "lineNoPageTill": 32,
+                    "pageNo": 2,
+                    "paragraphNo": 9,
+                    "text": "1) the nesting of several query blocks"
+                },
+                {
+                    "entryNo": 2,
+                    "lineNoPageFrom": 33,
+                    "lineNoPageTill": 34,
+                    "pageNo": 2,
+                    "paragraphNo": 9,
+                    "text": "2) the use of keywords such as: EXISTS, ALL, ANY, IN in the connection between query blocks"
+                },
+                {
+                    "entryNo": 3,
+                    "lineNoPageFrom": 35,
+                    "lineNoPageTill": 36,
+                    "pageNo": 2,
+                    "paragraphNo": 9,
+                    "text": "3) the use of variables and of predicates connecting query blocks indirectly"
+                },
+                {
+                    "entryNo": 4,
+                    "lineNoPageFrom": 37,
+                    "lineNoPageTill": 38,
+                    "pageNo": 2,
+                    "paragraphNo": 9,
+                    "text": "4) the use of set comparison operations between two query blocks."
+                },
+                {
+                    "entryNo": 5,
+                    "lineNoPageFrom": 39,
+                    "lineNoPageTill": 44,
+                    "pageNo": 2,
+                    "paragraphNo": 9,
+                    "text": "5) the grouping of tuples of a relation into subsets and the evaluation of aggregate functions on each subset. In this paper, we show how all these features can be mapped to expressions of relational algebra. Relational algebra has been preferred to relational calculus as target of our translator for the following reasons:"
+                }
+            ]
+        },
+        {
+            "number": "999)",
+            "listNo": 2,
+            "noEntries": 3,
+            "pageNoFrom": 2,
+            "pageNoTill": 2,
+            "regexp": "\\d+\\)$",
+            "entries": [
+                {
+                    "entryNo": 1,
+                    "lineNoPageFrom": 45,
+                    "lineNoPageTill": 46,
+                    "pageNo": 2,
+                    "paragraphNo": 10,
+                    "text": "1) It is more procedural, because algebraic expressions also give the order of application of operations in the computation"
+                },
+                {
+                    "entryNo": 2,
+                    "lineNoPageFrom": 49,
+                    "lineNoPageTill": 51,
+                    "pageNo": 2,
+                    "paragraphNo": 11,
+                    "text": "2) Many existing approaches to query optimization and equivalence are (or can easily be) expressed in relational algebra."
+                },
+                {
+                    "entryNo": 3,
+                    "lineNoPageFrom": 52,
+                    "lineNoPageTill": 56,
+                    "pageNo": 2,
+                    "paragraphNo": 12,
+                    "text": "3) Relational algebra uses relations (or sets) as operands, while calculus is based on tuple variables. For the optimization of queries, particularly with distributed environments or special-purpose database machines, set-oriented models are more appropriate than tuple-oriented models [19] ."
+                }
+            ]
+        }
+    ]
+}

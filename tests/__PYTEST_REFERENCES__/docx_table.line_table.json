@@ -1,0 +1,519 @@
+{
+    "documentId": 2,
+    "documentFileName": "docx_table.pdf",
+    "noTablesInDocument": 4,
+    "tables": [
+        {
+            "firstRowLLX": 76.56,
+            "firstRowURX": 421.68,
+            "noColumns": 10,
+            "noRows": 3,
+            "pageNoFrom": 1,
+            "pageNoTill": 1,
+            "tableNo": 1,
+            "rows": [
+                {
+                    "firstColumnLLX": 76.56,
+                    "lastColumnURX": 421.68,
+                    "noColumns": 4,
+                    "rowNo": 1,
+                    "columns": [
+                        {
+                            "columnNo": 1,
+                            "coordLLX": 76.56,
+                            "coordURX": 135.96,
+                            "lineNo": 1,
+                            "lineNoPage": 3,
+                            "paragraphNo": 3,
+                            "text": "wwe Table 1"
+                        },
+                        {
+                            "columnNo": 2,
+                            "coordLLX": 189.72,
+                            "coordURX": 195.12,
+                            "lineNo": 1,
+                            "lineNoPage": 4,
+                            "paragraphNo": 4,
+                            "text": "B"
+                        },
+                        {
+                            "columnNo": 3,
+                            "coordLLX": 303.0,
+                            "coordURX": 308.4,
+                            "lineNo": 1,
+                            "lineNoPage": 5,
+                            "paragraphNo": 5,
+                            "text": "C"
+                        },
+                        {
+                            "columnNo": 4,
+                            "coordLLX": 416.28,
+                            "coordURX": 421.68,
+                            "lineNo": 1,
+                            "lineNoPage": 6,
+                            "paragraphNo": 6,
+                            "text": "D"
+                        }
+                    ]
+                },
+                {
+                    "firstColumnLLX": 76.56,
+                    "lastColumnURX": 432.48,
+                    "noColumns": 2,
+                    "rowNo": 2,
+                    "columns": [
+                        {
+                            "columnNo": 1,
+                            "coordLLX": 76.56,
+                            "coordURX": 92.76,
+                            "lineNo": 1,
+                            "lineNoPage": 7,
+                            "paragraphNo": 7,
+                            "text": "1.1"
+                        },
+                        {
+                            "columnNo": 4,
+                            "coordLLX": 416.28,
+                            "coordURX": 432.48,
+                            "lineNo": 1,
+                            "lineNoPage": 8,
+                            "paragraphNo": 8,
+                            "text": "1.4"
+                        }
+                    ]
+                },
+                {
+                    "firstColumnLLX": 76.56,
+                    "lastColumnURX": 432.48,
+                    "noColumns": 4,
+                    "rowNo": 3,
+                    "columns": [
+                        {
+                            "columnNo": 1,
+                            "coordLLX": 76.56,
+                            "coordURX": 92.76,
+                            "lineNo": 1,
+                            "lineNoPage": 9,
+                            "paragraphNo": 9,
+                            "text": "2.1"
+                        },
+                        {
+                            "columnNo": 2,
+                            "coordLLX": 189.72,
+                            "coordURX": 205.92,
+                            "lineNo": 1,
+                            "lineNoPage": 10,
+                            "paragraphNo": 10,
+                            "text": "2.2"
+                        },
+                        {
+                            "columnNo": 3,
+                            "coordLLX": 303.0,
+                            "coordURX": 319.2,
+                            "lineNo": 1,
+                            "lineNoPage": 11,
+                            "paragraphNo": 11,
+                            "text": "2.3"
+                        },
+                        {
+                            "columnNo": 4,
+                            "coordLLX": 416.28,
+                            "coordURX": 432.48,
+                            "lineNo": 1,
+                            "lineNoPage": 12,
+                            "paragraphNo": 12,
+                            "text": "2.4"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "firstRowLLX": 77.76,
+            "firstRowURX": 383.96,
+            "noColumns": 6,
+            "noRows": 2,
+            "pageNoFrom": 1,
+            "pageNoTill": 1,
+            "tableNo": 2,
+            "rows": [
+                {
+                    "firstColumnLLX": 77.76,
+                    "lastColumnURX": 383.96,
+                    "noColumns": 3,
+                    "rowNo": 1,
+                    "columns": [
+                        {
+                            "columnNo": 1,
+                            "coordLLX": 77.76,
+                            "coordURX": 137.36,
+                            "lineNo": 1,
+                            "lineNoPage": 28,
+                            "paragraphNo": 15,
+                            "text": "wwe Table 2"
+                        },
+                        {
+                            "columnNo": 2,
+                            "coordLLX": 228.0,
+                            "coordURX": 234.19,
+                            "lineNo": 1,
+                            "lineNoPage": 29,
+                            "paragraphNo": 16,
+                            "text": "B"
+                        },
+                        {
+                            "columnNo": 3,
+                            "coordLLX": 378.12,
+                            "coordURX": 383.96,
+                            "lineNo": 1,
+                            "lineNoPage": 30,
+                            "paragraphNo": 17,
+                            "text": "C"
+                        }
+                    ]
+                },
+                {
+                    "firstColumnLLX": 77.76,
+                    "lastColumnURX": 392.12,
+                    "noColumns": 3,
+                    "rowNo": 2,
+                    "columns": [
+                        {
+                            "columnNo": 1,
+                            "coordLLX": 77.76,
+                            "coordURX": 91.88,
+                            "lineNo": 1,
+                            "lineNoPage": 31,
+                            "paragraphNo": 18,
+                            "text": "1.1"
+                        },
+                        {
+                            "columnNo": 2,
+                            "coordLLX": 228.0,
+                            "coordURX": 242.0,
+                            "lineNo": 1,
+                            "lineNoPage": 32,
+                            "paragraphNo": 19,
+                            "text": "1.2"
+                        },
+                        {
+                            "columnNo": 3,
+                            "coordLLX": 378.12,
+                            "coordURX": 392.12,
+                            "lineNo": 1,
+                            "lineNoPage": 33,
+                            "paragraphNo": 20,
+                            "text": "1.3"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "firstRowLLX": 76.56,
+            "firstRowURX": 423.24,
+            "noColumns": 8,
+            "noRows": 5,
+            "pageNoFrom": 1,
+            "pageNoTill": 1,
+            "tableNo": 3,
+            "rows": [
+                {
+                    "firstColumnLLX": 76.56,
+                    "lastColumnURX": 423.24,
+                    "noColumns": 4,
+                    "rowNo": 1,
+                    "columns": [
+                        {
+                            "columnNo": 1,
+                            "coordLLX": 76.56,
+                            "coordURX": 136.16,
+                            "lineNo": 1,
+                            "lineNoPage": 34,
+                            "paragraphNo": 21,
+                            "text": "wwe Table 3"
+                        },
+                        {
+                            "columnNo": 2,
+                            "coordLLX": 189.72,
+                            "coordURX": 195.91,
+                            "lineNo": 1,
+                            "lineNoPage": 35,
+                            "paragraphNo": 22,
+                            "text": "B"
+                        },
+                        {
+                            "columnNo": 3,
+                            "coordLLX": 303.0,
+                            "coordURX": 308.84,
+                            "lineNo": 1,
+                            "lineNoPage": 36,
+                            "paragraphNo": 23,
+                            "text": "C"
+                        },
+                        {
+                            "columnNo": 4,
+                            "coordLLX": 416.28,
+                            "coordURX": 423.24,
+                            "lineNo": 1,
+                            "lineNoPage": 37,
+                            "paragraphNo": 24,
+                            "text": "D"
+                        }
+                    ]
+                },
+                {
+                    "firstColumnLLX": 76.56,
+                    "lastColumnURX": 90.68,
+                    "noColumns": 1,
+                    "rowNo": 2,
+                    "columns": [
+                        {
+                            "columnNo": 1,
+                            "coordLLX": 76.56,
+                            "coordURX": 90.68,
+                            "lineNo": 1,
+                            "lineNoPage": 38,
+                            "paragraphNo": 25,
+                            "text": "1.1"
+                        }
+                    ]
+                },
+                {
+                    "firstColumnLLX": 189.72,
+                    "lastColumnURX": 203.72,
+                    "noColumns": 1,
+                    "rowNo": 3,
+                    "columns": [
+                        {
+                            "columnNo": 2,
+                            "coordLLX": 189.72,
+                            "coordURX": 203.72,
+                            "lineNo": 1,
+                            "lineNoPage": 39,
+                            "paragraphNo": 26,
+                            "text": "2.2"
+                        }
+                    ]
+                },
+                {
+                    "firstColumnLLX": 303.0,
+                    "lastColumnURX": 317.0,
+                    "noColumns": 1,
+                    "rowNo": 4,
+                    "columns": [
+                        {
+                            "columnNo": 3,
+                            "coordLLX": 303.0,
+                            "coordURX": 317.0,
+                            "lineNo": 1,
+                            "lineNoPage": 40,
+                            "paragraphNo": 27,
+                            "text": "3.3"
+                        }
+                    ]
+                },
+                {
+                    "firstColumnLLX": 416.28,
+                    "lastColumnURX": 430.28,
+                    "noColumns": 1,
+                    "rowNo": 5,
+                    "columns": [
+                        {
+                            "columnNo": 4,
+                            "coordLLX": 416.28,
+                            "coordURX": 430.28,
+                            "lineNo": 1,
+                            "lineNoPage": 41,
+                            "paragraphNo": 28,
+                            "text": "4.4"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "firstRowLLX": 76.56,
+            "firstRowURX": 384.44,
+            "noColumns": 12,
+            "noRows": 8,
+            "pageNoFrom": 2,
+            "pageNoTill": 3,
+            "tableNo": 4,
+            "rows": [
+                {
+                    "firstColumnLLX": 76.56,
+                    "lastColumnURX": 384.44,
+                    "noColumns": 3,
+                    "rowNo": 1,
+                    "columns": [
+                        {
+                            "columnNo": 1,
+                            "coordLLX": 76.56,
+                            "coordURX": 135.96,
+                            "lineNo": 1,
+                            "lineNoPage": 10,
+                            "paragraphNo": 5,
+                            "text": "wwe Table 5"
+                        },
+                        {
+                            "columnNo": 2,
+                            "coordLLX": 227.52,
+                            "coordURX": 233.71,
+                            "lineNo": 1,
+                            "lineNoPage": 11,
+                            "paragraphNo": 6,
+                            "text": "B"
+                        },
+                        {
+                            "columnNo": 3,
+                            "coordLLX": 378.6,
+                            "coordURX": 384.44,
+                            "lineNo": 1,
+                            "lineNoPage": 12,
+                            "paragraphNo": 7,
+                            "text": "C"
+                        }
+                    ]
+                },
+                {
+                    "firstColumnLLX": 76.56,
+                    "lastColumnURX": 82.16,
+                    "noColumns": 1,
+                    "rowNo": 2,
+                    "columns": [
+                        {
+                            "columnNo": 1,
+                            "coordLLX": 76.56,
+                            "coordURX": 82.16,
+                            "lineNo": 1,
+                            "lineNoPage": 13,
+                            "paragraphNo": 8,
+                            "text": "1"
+                        }
+                    ]
+                },
+                {
+                    "firstColumnLLX": 227.52,
+                    "lastColumnURX": 233.12,
+                    "noColumns": 1,
+                    "rowNo": 3,
+                    "columns": [
+                        {
+                            "columnNo": 2,
+                            "coordLLX": 227.52,
+                            "coordURX": 233.12,
+                            "lineNo": 1,
+                            "lineNoPage": 14,
+                            "paragraphNo": 9,
+                            "text": "2"
+                        }
+                    ]
+                },
+                {
+                    "firstColumnLLX": 378.6,
+                    "lastColumnURX": 384.2,
+                    "noColumns": 2,
+                    "rowNo": 4,
+                    "columns": [
+                        {
+                            "columnNo": 3,
+                            "coordLLX": 378.6,
+                            "coordURX": 384.2,
+                            "lineNo": 1,
+                            "lineNoPage": 15,
+                            "paragraphNo": 10,
+                            "text": "3"
+                        },
+                        {
+                            "columnNo": 3,
+                            "coordLLX": 378.6,
+                            "coordURX": 384.2,
+                            "lineNo": 2,
+                            "lineNoPage": 16,
+                            "paragraphNo": 10,
+                            "text": "4"
+                        }
+                    ]
+                },
+                {
+                    "firstColumnLLX": 227.52,
+                    "lastColumnURX": 233.12,
+                    "noColumns": 1,
+                    "rowNo": 5,
+                    "columns": [
+                        {
+                            "columnNo": 2,
+                            "coordLLX": 227.52,
+                            "coordURX": 233.12,
+                            "lineNo": 1,
+                            "lineNoPage": 17,
+                            "paragraphNo": 11,
+                            "text": "5"
+                        }
+                    ]
+                },
+                {
+                    "firstColumnLLX": 76.56,
+                    "lastColumnURX": 82.16,
+                    "noColumns": 2,
+                    "rowNo": 6,
+                    "columns": [
+                        {
+                            "columnNo": 1,
+                            "coordLLX": 76.56,
+                            "coordURX": 82.16,
+                            "lineNo": 1,
+                            "lineNoPage": 18,
+                            "paragraphNo": 12,
+                            "text": "6"
+                        },
+                        {
+                            "columnNo": 1,
+                            "coordLLX": 76.56,
+                            "coordURX": 82.16,
+                            "lineNo": 2,
+                            "lineNoPage": 19,
+                            "paragraphNo": 12,
+                            "text": "7"
+                        }
+                    ]
+                },
+                {
+                    "firstColumnLLX": 227.52,
+                    "lastColumnURX": 233.12,
+                    "noColumns": 1,
+                    "rowNo": 7,
+                    "columns": [
+                        {
+                            "columnNo": 2,
+                            "coordLLX": 227.52,
+                            "coordURX": 233.12,
+                            "lineNo": 1,
+                            "lineNoPage": 20,
+                            "paragraphNo": 13,
+                            "text": "8"
+                        }
+                    ]
+                },
+                {
+                    "firstColumnLLX": 378.6,
+                    "lastColumnURX": 384.2,
+                    "noColumns": 1,
+                    "rowNo": 8,
+                    "columns": [
+                        {
+                            "columnNo": 3,
+                            "coordLLX": 378.6,
+                            "coordURX": 384.2,
+                            "lineNo": 1,
+                            "lineNoPage": 21,
+                            "paragraphNo": 14,
+                            "text": "9"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

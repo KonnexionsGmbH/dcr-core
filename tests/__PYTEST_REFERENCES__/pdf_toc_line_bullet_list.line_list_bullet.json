@@ -1,0 +1,40 @@
+{
+    "documentId": 4,
+    "documentFileName": "pdf_toc_line_bullet_list.pdf",
+    "noListsBulletInDocument": 1,
+    "listsBullet": [
+        {
+            "bullet": "\u2022",
+            "listNo": 1,
+            "noEntries": 3,
+            "pageNoFrom": 3,
+            "pageNoTill": 3,
+            "entries": [
+                {
+                    "entryNo": 1,
+                    "lineNoPageFrom": 9,
+                    "lineNoPageTill": 9,
+                    "pageNo": 3,
+                    "paragraphNo": 7,
+                    "text": "\u2022 Bullet 1"
+                },
+                {
+                    "entryNo": 2,
+                    "lineNoPageFrom": 10,
+                    "lineNoPageTill": 10,
+                    "pageNo": 3,
+                    "paragraphNo": 8,
+                    "text": "\u2022 Bullet 2"
+                },
+                {
+                    "entryNo": 3,
+                    "lineNoPageFrom": 11,
+                    "lineNoPageTill": 11,
+                    "pageNo": 3,
+                    "paragraphNo": 9,
+                    "text": "\u2022 Bullet 3"
+                }
+            ]
+        }
+    ]
+}
