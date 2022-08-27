@@ -164,6 +164,8 @@ class Setup:
     # pylint: disable=too-many-statements
     def __init__(self) -> None:
         """Initialise the instance."""
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+
         self._get_environment_variant()
 
         self._config: dict[str, str] = {}
@@ -315,6 +317,8 @@ class Setup:
         dcr_core.core_utils.progress_msg_core("The configuration parameters (dcr_core) are checked and loaded")
 
         self._exist = True
+
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
 
     # ------------------------------------------------------------------
     # Check the configuration parameters.
