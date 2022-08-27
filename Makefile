@@ -31,7 +31,7 @@ endif
 ## help:               Show this help.
 ## ----------------------------------------------------------------------------
 ## dev:                Format, lint and test the code.
-dev: format lint pydocstyle tests
+dev: format lint docs tests
 ## docs:               Check the API docs, create and upload the user docs.
 docs: pydocstyle lazydocs mkdocs
 ## format:             Format the code with isort, Black and docformatter.

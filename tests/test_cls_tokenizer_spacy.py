@@ -1,9 +1,6 @@
 # pylint: disable=unused-argument
-"""Testing Class NLPCore."""
-import pytest
-
+"""Testing Class TokenizerSpacy."""
 import dcr_core
-import dcr_core.cls_process
 
 # -----------------------------------------------------------------------------
 # Constants & Globals.
@@ -12,11 +9,11 @@ import dcr_core.cls_process
 
 
 # -----------------------------------------------------------------------------
-# Test Cases NNLPCore - Coverage.
+# Test Cases TokenizerSpacy - Coverage.
 # -----------------------------------------------------------------------------
-def test_nlp_core_coverage(fxtr_rmdir_opt, fxtr_setup_empty_inbox):
-    """Test Cases NLPCore - Coverage."""
+def test_tokenizer_spacy_coverage():
+    """Test Cases TokenizerSpacy - Coverage."""
     # -------------------------------------------------------------------------
-    instance_e = dcr_core.cls_nlp_core.NLPCore()
+    instance_e = dcr_core.cls_nlp_core.TokenizerSpacy()
 
     instance_e.exists()
