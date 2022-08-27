@@ -1,0 +1,1361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created by the PDFlib Text and Image Extraction Toolkit TET (www.pdflib.com) -->
+<TET xmlns="http://www.pdflib.com/XML/TET5/TET-5.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.pdflib.com/XML/TET5/TET-5.0
+ http://www.pdflib.com/XML/TET5/TET-5.0.xsd"
+ version="5.2">
+<Creation platform="Win64" tetVersion="5.3" date="2022-08-27T02:38:12+02:00" />
+<Document filename="data\inbox_dev_accepted\docx_heading.pdf" pageCount="5" filesize="51470" linearized="true" pdfVersion="1.5" tagged="true">
+<DocInfo>
+<Author>Walter Weinmann</Author>
+<CreationDate>2022-07-02T11:35:49+02:00</CreationDate>
+<Creator>Acrobat PDFMaker 11 for Word</Creator>
+<ModDate>2022-07-02T11:35:50+02:00</ModDate>
+<Producer>Adobe PDF Library 11.0</Producer>
+<Custom key="SourceModified">D:20220702093540</Custom>
+</DocInfo>
+<Metadata>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.4-c006 80.159825, 2016/09/16-03:31:08        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""
+            xmlns:xmp="http://ns.adobe.com/xap/1.0/"
+            xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/"
+            xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:pdf="http://ns.adobe.com/pdf/1.3/"
+            xmlns:pdfx="http://ns.adobe.com/pdfx/1.3/">
+         <xmp:ModifyDate>2022-07-02T11:35:50+02:00</xmp:ModifyDate>
+         <xmp:CreateDate>2022-07-02T11:35:49+02:00</xmp:CreateDate>
+         <xmp:MetadataDate>2022-07-02T11:35:50+02:00</xmp:MetadataDate>
+         <xmp:CreatorTool>Acrobat PDFMaker 11 for Word</xmp:CreatorTool>
+         <xmpMM:DocumentID>uuid:6d8f66d0-f965-48e7-884a-d7d7ab89b9b0</xmpMM:DocumentID>
+         <xmpMM:InstanceID>uuid:6da33a7d-5437-4fbe-a689-acfe623f3fe6</xmpMM:InstanceID>
+         <xmpMM:subject>
+            <rdf:Seq>
+               <rdf:li>39</rdf:li>
+            </rdf:Seq>
+         </xmpMM:subject>
+         <dc:format>application/pdf</dc:format>
+         <dc:creator>
+            <rdf:Seq>
+               <rdf:li>Walter Weinmann</rdf:li>
+            </rdf:Seq>
+         </dc:creator>
+         <pdf:Producer>Adobe PDF Library 11.0</pdf:Producer>
+         <pdfx:SourceModified>D:20220702093540</pdfx:SourceModified>
+         <pdfx:Company/>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta>
+</Metadata>
+<Options>tetml={filename={data\inbox_dev_accepted\docx_heading.line.xml}} engines={noannotation noimage text notextcolor novector}</Options>
+<Pages>
+<Page number="1" width="595.32" height="841.92">
+<Options>granularity=line</Options>
+<Content granularity="line" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="70.80" lly="753.48" urx="394.80" ury="772.68">
+  <Line llx="70.80" lly="763.68" urx="168.00" ury="772.68">
+   <Text>Start Document ...</Text>
+  </Line>
+  <Line llx="216.60" lly="753.48" urx="394.80" ury="762.48">
+   <Text>Konnexions Public License (KX-PL)</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="702.50" urx="519.00" ury="752.29">
+  <Line llx="238.20" lly="743.29" urx="373.20" ury="752.29">
+   <Text>Version 2020.05, May 2020</Text>
+  </Line>
+  <Line llx="70.80" lly="733.09" urx="486.60" ury="742.09">
+   <Text>https://github.com/KonnexionsGmbH/shared_resources/blob/master/License/KX-PL-</Text>
+  </Line>
+  <Line llx="70.80" lly="722.89" urx="130.20" ury="731.89">
+   <Text>2020.05.pdf</Text>
+  </Line>
+  <Line llx="70.80" lly="712.70" urx="519.00" ury="721.70">
+   <Text>This license governs use of the accompanying software. If you use the software, you</Text>
+  </Line>
+  <Line llx="70.80" lly="702.50" urx="497.40" ury="711.50">
+   <Text>accept this license. If you do not accept the license, do not use the software.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="671.91" urx="151.80" ury="680.91">
+  <Line llx="70.80" lly="671.91" urx="151.80" ury="680.91">
+   <Text>1. Definitions.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="610.68" urx="504.60" ury="670.71">
+  <Line llx="70.80" lly="661.71" urx="389.40" ury="670.71">
+   <Text>1.1 Heading Level 2 #1. Sentence 2. Sentence 3. Sentence 4.</Text>
+  </Line>
+  <Line llx="106.80" lly="651.51" urx="225.60" ury="660.51">
+   <Text>(i) Heading Level 3 #1</Text>
+  </Line>
+  <Line llx="106.80" lly="641.32" urx="155.40" ury="650.32">
+   <Text>(ii) Xxxx</Text>
+  </Line>
+  <Line llx="142.80" lly="631.08" urx="499.20" ury="640.08">
+   <Text>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</Text>
+  </Line>
+  <Line llx="142.80" lly="620.88" urx="504.60" ury="629.88">
+   <Text>nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat</Text>
+  </Line>
+  <Line llx="142.80" lly="610.68" urx="191.40" ury="619.68">
+   <Text>volutpat.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="569.88" urx="504.60" ury="609.48">
+  <Line llx="106.80" lly="600.48" urx="160.80" ury="609.48">
+   <Text>(iii) Yxxx</Text>
+  </Line>
+  <Line llx="142.80" lly="590.28" urx="499.20" ury="599.28">
+   <Text>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</Text>
+  </Line>
+  <Line llx="142.80" lly="580.08" urx="504.60" ury="589.08">
+   <Text>nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat</Text>
+  </Line>
+  <Line llx="142.80" lly="569.88" urx="191.40" ury="578.88">
+   <Text>volutpat.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="406.83" urx="504.60" ury="568.68">
+  <Line llx="106.80" lly="559.68" urx="128.40" ury="568.68">
+   <Text>(iv)</Text>
+  </Line>
+  <Line llx="142.80" lly="549.48" urx="499.20" ury="558.48">
+   <Text>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</Text>
+  </Line>
+  <Line llx="142.80" lly="539.28" urx="504.60" ury="548.28">
+   <Text>nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat</Text>
+  </Line>
+  <Line llx="142.80" lly="529.20" urx="191.40" ury="538.20">
+   <Text>volutpat.</Text>
+  </Line>
+  <Line llx="106.80" lly="519.00" urx="225.60" ury="528.00">
+   <Text>(v) Heading Level 3 #2</Text>
+  </Line>
+  <Line llx="106.80" lly="508.80" urx="139.20" ury="517.80">
+   <Text>(vi) 6</Text>
+  </Line>
+  <Line llx="106.80" lly="498.61" urx="144.60" ury="507.61">
+   <Text>(vii) 7</Text>
+  </Line>
+  <Line llx="106.80" lly="488.41" urx="150.00" ury="497.41">
+   <Text>(viii) 8</Text>
+  </Line>
+  <Line llx="106.80" lly="478.21" urx="139.20" ury="487.21">
+   <Text>(ix) 9</Text>
+  </Line>
+  <Line llx="106.80" lly="468.01" urx="139.20" ury="477.01">
+   <Text>(x) 10</Text>
+  </Line>
+  <Line llx="106.80" lly="457.82" urx="144.60" ury="466.82">
+   <Text>(xi) 11</Text>
+  </Line>
+  <Line llx="106.80" lly="447.62" urx="150.00" ury="456.62">
+   <Text>(xii) 12</Text>
+  </Line>
+  <Line llx="106.80" lly="437.42" urx="155.40" ury="446.42">
+   <Text>(xiii) 13</Text>
+  </Line>
+  <Line llx="106.80" lly="427.23" urx="150.00" ury="436.23">
+   <Text>(xiv) 14</Text>
+  </Line>
+  <Line llx="70.80" lly="417.03" urx="486.60" ury="426.03">
+   <Text>The terms &quot;reproduce&quot;, &quot;reproduction&quot;, &quot;derivative works&quot;, and &quot;distribution&quot;</Text>
+  </Line>
+  <Line llx="70.80" lly="406.83" urx="367.80" ury="415.83">
+   <Text>have the same meaning here as under U.S. copyright law.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="376.24" urx="486.60" ury="405.64">
+  <Line llx="114.00" lly="396.64" urx="243.60" ury="405.64">
+   <Text>(iii) Heading Level 3 #2</Text>
+  </Line>
+  <Line llx="70.80" lly="386.44" urx="486.60" ury="395.44">
+   <Text>The terms &quot;reproduce&quot;, &quot;reproduction&quot;, &quot;derivative works&quot;, and &quot;distribution&quot;</Text>
+  </Line>
+  <Line llx="70.80" lly="376.24" urx="367.80" ury="385.24">
+   <Text>have the same meaning here as under U.S. copyright law.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="294.60" urx="497.40" ury="375.04">
+  <Line llx="106.80" lly="366.04" urx="231.00" ury="375.04">
+   <Text>(ii) Heading Level 3 #2</Text>
+  </Line>
+  <Line llx="70.80" lly="355.85" urx="486.60" ury="364.85">
+   <Text>The terms &quot;reproduce&quot;, &quot;reproduction&quot;, &quot;derivative works&quot;, and &quot;distribution&quot;</Text>
+  </Line>
+  <Line llx="70.80" lly="345.65" urx="367.80" ury="354.65">
+   <Text>have the same meaning here as under U.S. copyright law.</Text>
+  </Line>
+  <Line llx="70.80" lly="335.45" urx="119.40" ury="344.45">
+   <Text>A B C D E</Text>
+  </Line>
+  <Line llx="70.80" lly="325.26" urx="189.60" ury="334.26">
+   <Text>1.2 Heading Level 2 #2</Text>
+  </Line>
+  <Line llx="70.80" lly="315.00" urx="497.40" ury="324.00">
+   <Text>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh</Text>
+  </Line>
+  <Line llx="70.80" lly="304.80" urx="416.40" ury="313.80">
+   <Text>euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</Text>
+  </Line>
+  <Line llx="70.80" lly="294.60" urx="189.60" ury="303.60">
+   <Text>1.3 Heading Level 2 #2</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="70.32" urx="504.60" ury="273.13">
+  <Line llx="70.80" lly="264.13" urx="470.40" ury="273.13">
+   <Text>A &quot;contributor&quot; is any person that distributes its contribution under this</Text>
+  </Line>
+  <Line llx="70.80" lly="253.93" urx="114.00" ury="262.93">
+   <Text>license.</Text>
+  </Line>
+  <Line llx="70.80" lly="243.73" urx="492.00" ury="252.73">
+   <Text>&quot;Licensed patents&quot; are a contributor&apos;s patent claims that read directly on its</Text>
+  </Line>
+  <Line llx="70.80" lly="233.54" urx="141.00" ury="242.54">
+   <Text>contribution.</Text>
+  </Line>
+  <Line llx="70.80" lly="223.34" urx="389.40" ury="232.34">
+   <Text>1.4 Heading Level 2 #1. Sentence 2. Sentence 3. Sentence 4.</Text>
+  </Line>
+  <Line llx="106.80" lly="213.14" urx="220.20" ury="222.14">
+   <Text>i. Heading Level 3 #1</Text>
+  </Line>
+  <Line llx="106.80" lly="202.94" urx="150.00" ury="211.94">
+   <Text>ii. Xxxx</Text>
+  </Line>
+  <Line llx="142.80" lly="192.72" urx="499.20" ury="201.72">
+   <Text>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</Text>
+  </Line>
+  <Line llx="142.80" lly="182.52" urx="504.60" ury="191.52">
+   <Text>nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat</Text>
+  </Line>
+  <Line llx="142.80" lly="172.32" urx="191.40" ury="181.32">
+   <Text>volutpat.</Text>
+  </Line>
+  <Line llx="106.80" lly="162.12" urx="155.40" ury="171.12">
+   <Text>iii. Yxxx</Text>
+  </Line>
+  <Line llx="142.80" lly="151.92" urx="499.20" ury="160.92">
+   <Text>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</Text>
+  </Line>
+  <Line llx="142.80" lly="141.72" urx="504.60" ury="150.72">
+   <Text>nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat</Text>
+  </Line>
+  <Line llx="142.80" lly="131.52" urx="191.40" ury="140.52">
+   <Text>volutpat.</Text>
+  </Line>
+  <Line llx="106.80" lly="121.32" urx="123.00" ury="130.32">
+   <Text>iv.</Text>
+  </Line>
+  <Line llx="142.80" lly="111.12" urx="499.20" ury="120.12">
+   <Text>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</Text>
+  </Line>
+  <Line llx="142.80" lly="100.92" urx="504.60" ury="109.92">
+   <Text>nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat</Text>
+  </Line>
+  <Line llx="142.80" lly="90.72" urx="191.40" ury="99.72">
+   <Text>volutpat.</Text>
+  </Line>
+  <Line llx="106.80" lly="80.52" urx="220.20" ury="89.52">
+   <Text>v. Heading Level 3 #2</Text>
+  </Line>
+  <Line llx="106.80" lly="70.32" urx="133.80" ury="79.32">
+   <Text>vi. 6</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="51.84" urx="108.08" ury="62.88">
+  <Line llx="70.80" lly="51.84" urx="108.08" ury="62.88">
+   <Text artifact="true">Page | 1</Text>
+  </Line>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Page number="2" width="595.32" height="841.92">
+<Options>granularity=line</Options>
+<Content granularity="line" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="106.80" lly="692.30" urx="150.00" ury="772.68">
+  <Line llx="106.80" lly="763.68" urx="139.20" ury="772.68">
+   <Text>vii. 7</Text>
+  </Line>
+  <Line llx="106.80" lly="753.48" urx="144.60" ury="762.48">
+   <Text>viii. 8</Text>
+  </Line>
+  <Line llx="106.80" lly="743.29" urx="133.80" ury="752.29">
+   <Text>ix. 9</Text>
+  </Line>
+  <Line llx="106.80" lly="733.09" urx="133.80" ury="742.09">
+   <Text>x. 10</Text>
+  </Line>
+  <Line llx="106.80" lly="722.89" urx="139.20" ury="731.89">
+   <Text>xi. 11</Text>
+  </Line>
+  <Line llx="106.80" lly="712.70" urx="144.60" ury="721.70">
+   <Text>xii. 12</Text>
+  </Line>
+  <Line llx="106.80" lly="702.50" urx="150.00" ury="711.50">
+   <Text>xiii. 13</Text>
+  </Line>
+  <Line llx="106.80" lly="692.30" urx="144.60" ury="701.30">
+   <Text>xiv. 14</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="661.71" urx="173.40" ury="670.71">
+  <Line llx="70.80" lly="661.71" urx="173.40" ury="670.71">
+   <Text>2. Grant of Rights.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="600.53" urx="497.40" ury="660.51">
+  <Line llx="103.20" lly="651.51" urx="497.40" ury="660.51">
+   <Text>(a) Copyright Grant- Subject to the terms of this license, including the</Text>
+  </Line>
+  <Line llx="70.80" lly="641.32" urx="108.60" ury="650.32">
+   <Text>license</Text>
+  </Line>
+  <Line llx="70.80" lly="631.12" urx="475.80" ury="640.12">
+   <Text>conditions and limitations in section 3, each contributor grants you a nonexclusive,</Text>
+  </Line>
+  <Line llx="130.20" lly="620.92" urx="443.40" ury="629.92">
+   <Text>worldwide, royalty-free copyright license to reproduce its</Text>
+  </Line>
+  <Line llx="70.80" lly="610.73" urx="470.40" ury="619.73">
+   <Text>contribution, prepare derivative works of its contribution, and distribute</Text>
+  </Line>
+  <Line llx="70.80" lly="600.53" urx="378.60" ury="609.53">
+   <Text>its contribution or any derivative works that you create.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="529.27" urx="481.20" ury="599.33">
+  <Line llx="103.20" lly="590.33" urx="481.20" ury="599.33">
+   <Text>(b) Patent Grant- Subject to the terms of this license, including the</Text>
+  </Line>
+  <Line llx="70.80" lly="580.13" urx="108.60" ury="589.13">
+   <Text>license</Text>
+  </Line>
+  <Line llx="70.80" lly="569.94" urx="475.80" ury="578.94">
+   <Text>conditions and limitations in section 3, each contributor grants you a nonexclusive,</Text>
+  </Line>
+  <Line llx="130.20" lly="559.74" urx="459.60" ury="568.74">
+   <Text>worldwide, royalty-free license under its licensed patents to</Text>
+  </Line>
+  <Line llx="70.80" lly="549.54" urx="481.20" ury="558.54">
+   <Text>make, have made, use, sell, offer for sale, import, and/or otherwise dispose</Text>
+  </Line>
+  <Line llx="70.80" lly="539.35" urx="475.80" ury="548.35">
+   <Text>of its contribution in the software or derivative works of the contribution</Text>
+  </Line>
+  <Line llx="70.80" lly="529.27" urx="157.20" ury="538.27">
+   <Text>in the software.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="478.28" urx="513.60" ury="507.67">
+  <Line llx="70.80" lly="498.67" urx="232.80" ury="507.67">
+   <Text>3. Conditions and Limitations.</Text>
+  </Line>
+  <Line llx="103.20" lly="488.48" urx="513.60" ury="497.48">
+   <Text>(a) No Trademark License- This license does not grant you rights to use any</Text>
+  </Line>
+  <Line llx="70.80" lly="478.28" urx="286.80" ury="487.28">
+   <Text>contributors&apos; name, logo, or trademarks.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="437.49" urx="502.80" ury="477.08">
+  <Line llx="103.20" lly="468.08" urx="502.80" ury="477.08">
+   <Text>(b) If you bring a patent claim against any contributor over patents that</Text>
+  </Line>
+  <Line llx="70.80" lly="457.89" urx="87.00" ury="466.89">
+   <Text>you</Text>
+  </Line>
+  <Line llx="70.80" lly="447.69" urx="421.80" ury="456.69">
+   <Text>claim is infringed by the software, your patent license from such</Text>
+  </Line>
+  <Line llx="70.80" lly="437.49" urx="330.00" ury="446.49">
+   <Text>contributor to the software ends automatically.0</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="88.80" lly="315.00" urx="524.41" ury="436.30">
+  <Line llx="88.80" lly="427.30" urx="128.40" ury="436.30">
+   <Text>(1) Test</Text>
+  </Line>
+  <Line llx="124.80" lly="417.10" urx="168.00" ury="426.10">
+   <Text>(i) Test</Text>
+  </Line>
+  <Line llx="124.80" lly="406.80" urx="481.20" ury="415.80">
+   <Text>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</Text>
+  </Line>
+  <Line llx="124.80" lly="396.60" urx="486.60" ury="405.60">
+   <Text>nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat</Text>
+  </Line>
+  <Line llx="124.80" lly="386.40" urx="173.40" ury="395.40">
+   <Text>volutpat.</Text>
+  </Line>
+  <Line llx="124.80" lly="376.20" urx="173.40" ury="385.20">
+   <Text>(ii) Test</Text>
+  </Line>
+  <Line llx="358.80" lly="366.00" urx="402.00" ury="375.00">
+   <Text>(3) Test</Text>
+  </Line>
+  <Line llx="358.80" lly="355.80" urx="524.41" ury="364.80">
+   <Text>Lorem ipsum dolor sit amet,</Text>
+  </Line>
+  <Line llx="358.80" lly="345.60" urx="524.39" ury="354.60">
+   <Text>consectetuer adipiscing elit,</Text>
+  </Line>
+  <Line llx="358.80" lly="335.40" urx="524.39" ury="344.40">
+   <Text>sed diam nonummy nibh euismod</Text>
+  </Line>
+  <Line llx="358.80" lly="325.20" urx="524.39" ury="334.20">
+   <Text>tincidunt ut laoreet dolore</Text>
+  </Line>
+  <Line llx="358.80" lly="315.00" urx="510.00" ury="324.00">
+   <Text>magna aliquam erat volutpat.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="88.80" lly="294.60" urx="168.00" ury="313.80">
+  <Line llx="124.80" lly="304.80" urx="168.00" ury="313.80">
+   <Text>(4) Test</Text>
+  </Line>
+  <Line llx="88.80" lly="294.60" urx="128.40" ury="303.60">
+   <Text>(2) Test</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="264.13" urx="486.60" ury="293.41">
+  <Line llx="103.20" lly="284.41" urx="486.60" ury="293.41">
+   <Text>(c) If you distribute any portion of the software, you must retain all</Text>
+  </Line>
+  <Line llx="70.80" lly="274.21" urx="124.80" ury="283.21">
+   <Text>copyright,</Text>
+  </Line>
+  <Line llx="70.80" lly="264.13" urx="481.20" ury="273.13">
+   <Text>patent, trademark, and attribution notices that are present in the software.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="202.95" urx="508.20" ury="262.93">
+  <Line llx="103.20" lly="253.93" urx="508.20" ury="262.93">
+   <Text>(d) If you distribute any portion of the software in source code form, you</Text>
+  </Line>
+  <Line llx="70.80" lly="243.74" urx="103.20" ury="252.74">
+   <Text>may do</Text>
+  </Line>
+  <Line llx="70.80" lly="233.54" urx="481.20" ury="242.54">
+   <Text>so only under this license by including a complete copy of this license with</Text>
+  </Line>
+  <Line llx="70.80" lly="223.34" urx="481.20" ury="232.34">
+   <Text>your distribution. If you distribute any portion of the software in compiled</Text>
+  </Line>
+  <Line llx="70.80" lly="213.14" urx="470.40" ury="222.14">
+   <Text>or object code form, you may only do so under a license that complies with</Text>
+  </Line>
+  <Line llx="70.80" lly="202.95" urx="141.00" ury="211.95">
+   <Text>this license.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="141.76" urx="497.40" ury="201.75">
+  <Line llx="103.20" lly="192.75" urx="497.40" ury="201.75">
+   <Text>(e) The software is licensed &quot;as-is.&quot; You bear the risk of using it. The</Text>
+  </Line>
+  <Line llx="70.80" lly="182.55" urx="470.40" ury="191.55">
+   <Text>contributors give no express warranties, guarantees or conditions. You may</Text>
+  </Line>
+  <Line llx="70.80" lly="172.36" urx="459.60" ury="181.36">
+   <Text>have additional consumer rights under your local laws which this license</Text>
+  </Line>
+  <Line llx="70.80" lly="162.16" urx="421.80" ury="171.16">
+   <Text>cannot change. To the extent permitted under your local laws, the</Text>
+  </Line>
+  <Line llx="70.80" lly="151.96" urx="486.60" ury="160.96">
+   <Text>contributors exclude the implied warranties of merchantability, fitness for a</Text>
+  </Line>
+  <Line llx="70.80" lly="141.76" urx="286.80" ury="150.76">
+   <Text>particular purpose and non-infringement.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="90.78" urx="508.20" ury="140.57">
+  <Line llx="103.20" lly="131.57" urx="508.20" ury="140.57">
+   <Text>(f) Source code usage under this License is limited to review, compilation</Text>
+  </Line>
+  <Line llx="70.80" lly="121.37" urx="87.00" ury="130.37">
+   <Text>and</Text>
+  </Line>
+  <Line llx="70.80" lly="111.17" urx="454.20" ury="120.17">
+   <Text>contributions. Contributions to Konnexions software products under this</Text>
+  </Line>
+  <Line llx="70.80" lly="100.98" urx="486.60" ury="109.98">
+   <Text>License may only be made in consultation with Konnexions GmbH and through the</Text>
+  </Line>
+  <Line llx="70.80" lly="90.78" urx="313.80" ury="99.78">
+   <Text>appropriate Konnexions software repositories.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="51.84" urx="108.08" ury="62.88">
+  <Line llx="70.80" lly="51.84" urx="108.08" ury="62.88">
+   <Text artifact="true">Page | 2</Text>
+  </Line>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Page number="3" width="595.32" height="841.92">
+<Options>granularity=line</Options>
+<Content granularity="line" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="70.80" lly="763.68" urx="151.80" ury="772.68">
+  <Line llx="70.80" lly="763.68" urx="151.80" ury="772.68">
+   <Text>4. ARTICLE XXX.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="702.48" urx="504.60" ury="762.48">
+  <Line llx="70.80" lly="753.48" urx="438.00" ury="762.48">
+   <Text>ARTICLE AAA: Heading Level 2 #1. Sentence 2. Sentence 3. Sentence 4.</Text>
+  </Line>
+  <Line llx="106.80" lly="743.29" urx="225.60" ury="752.29">
+   <Text>(a) Heading Level 3 #1</Text>
+  </Line>
+  <Line llx="106.80" lly="733.09" urx="150.00" ury="742.09">
+   <Text>(b) Xxxx</Text>
+  </Line>
+  <Line llx="142.80" lly="722.88" urx="499.20" ury="731.88">
+   <Text>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</Text>
+  </Line>
+  <Line llx="142.80" lly="712.68" urx="504.60" ury="721.68">
+   <Text>nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat</Text>
+  </Line>
+  <Line llx="142.80" lly="702.48" urx="191.40" ury="711.48">
+   <Text>volutpat.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="661.68" urx="504.60" ury="701.28">
+  <Line llx="106.80" lly="692.28" urx="150.00" ury="701.28">
+   <Text>(a) Xxxx</Text>
+  </Line>
+  <Line llx="142.80" lly="682.08" urx="499.20" ury="691.08">
+   <Text>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</Text>
+  </Line>
+  <Line llx="142.80" lly="671.88" urx="504.60" ury="680.88">
+   <Text>nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat</Text>
+  </Line>
+  <Line llx="142.80" lly="661.68" urx="191.40" ury="670.68">
+   <Text>volutpat.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="651.48" urx="438.00" ury="660.48">
+  <Line llx="70.80" lly="651.48" urx="438.00" ury="660.48">
+   <Text>ARTICLE BBB: Heading Level 2 #1. Sentence 2. Sentence 3. Sentence 4.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="610.68" urx="504.60" ury="650.28">
+  <Line llx="106.80" lly="641.28" urx="155.40" ury="650.28">
+   <Text>(aa) Yxxx</Text>
+  </Line>
+  <Line llx="142.80" lly="631.08" urx="499.20" ury="640.08">
+   <Text>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</Text>
+  </Line>
+  <Line llx="142.80" lly="620.88" urx="504.60" ury="629.88">
+   <Text>nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat</Text>
+  </Line>
+  <Line llx="142.80" lly="610.68" urx="191.40" ury="619.68">
+   <Text>volutpat.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="569.88" urx="504.60" ury="609.48">
+  <Line llx="106.80" lly="600.48" urx="123.00" ury="609.48">
+   <Text>(b)</Text>
+  </Line>
+  <Line llx="142.80" lly="590.28" urx="499.20" ury="599.28">
+   <Text>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</Text>
+  </Line>
+  <Line llx="142.80" lly="580.08" urx="504.60" ury="589.08">
+   <Text>nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat</Text>
+  </Line>
+  <Line llx="142.80" lly="569.88" urx="191.40" ury="578.88">
+   <Text>volutpat.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="539.29" urx="486.60" ury="568.68">
+  <Line llx="106.80" lly="559.68" urx="225.60" ury="568.68">
+   <Text>(c) Heading Level 3 #2</Text>
+  </Line>
+  <Line llx="70.80" lly="549.48" urx="486.60" ury="558.48">
+   <Text>The terms &quot;reproduce&quot;, &quot;reproduction&quot;, &quot;derivative works&quot;, and &quot;distribution&quot;</Text>
+  </Line>
+  <Line llx="70.80" lly="539.29" urx="367.80" ury="548.29">
+   <Text>have the same meaning here as under U.S. copyright law.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="498.62" urx="438.00" ury="517.81">
+  <Line llx="70.80" lly="508.81" urx="141.00" ury="517.81">
+   <Text>5. EXHIBIT A.</Text>
+  </Line>
+  <Line llx="70.80" lly="498.62" urx="438.00" ury="507.62">
+   <Text>ARTICLE AAA: Heading Level 2 #1. Sentence 2. Sentence 3. Sentence 4.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="457.80" urx="504.60" ury="497.42">
+  <Line llx="106.80" lly="488.42" urx="155.40" ury="497.42">
+   <Text>EXHIBIT A</Text>
+  </Line>
+  <Line llx="142.80" lly="478.20" urx="499.20" ury="487.20">
+   <Text>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</Text>
+  </Line>
+  <Line llx="142.80" lly="468.00" urx="504.60" ury="477.00">
+   <Text>nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat</Text>
+  </Line>
+  <Line llx="142.80" lly="457.80" urx="191.40" ury="466.80">
+   <Text>volutpat.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="417.00" urx="504.60" ury="456.60">
+  <Line llx="106.80" lly="447.60" urx="155.40" ury="456.60">
+   <Text>EXHIBIT B</Text>
+  </Line>
+  <Line llx="142.80" lly="437.40" urx="499.20" ury="446.40">
+   <Text>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</Text>
+  </Line>
+  <Line llx="142.80" lly="427.20" urx="504.60" ury="436.20">
+   <Text>nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat</Text>
+  </Line>
+  <Line llx="142.80" lly="417.00" urx="191.40" ury="426.00">
+   <Text>volutpat.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="376.20" urx="504.60" ury="415.80">
+  <Line llx="106.80" lly="406.80" urx="155.40" ury="415.80">
+   <Text>EXHIBIT A</Text>
+  </Line>
+  <Line llx="142.80" lly="396.60" urx="499.20" ury="405.60">
+   <Text>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</Text>
+  </Line>
+  <Line llx="142.80" lly="386.40" urx="504.60" ury="395.40">
+   <Text>nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat</Text>
+  </Line>
+  <Line llx="142.80" lly="376.20" urx="191.40" ury="385.20">
+   <Text>volutpat.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="366.00" urx="438.00" ury="375.00">
+  <Line llx="70.80" lly="366.00" urx="438.00" ury="375.00">
+   <Text>ARTICLE BBB: Heading Level 2 #1. Sentence 2. Sentence 3. Sentence 4.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="325.20" urx="504.60" ury="364.80">
+  <Line llx="106.80" lly="355.80" urx="155.40" ury="364.80">
+   <Text>(aa) Yxxx</Text>
+  </Line>
+  <Line llx="142.80" lly="345.60" urx="499.20" ury="354.60">
+   <Text>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</Text>
+  </Line>
+  <Line llx="142.80" lly="335.40" urx="504.60" ury="344.40">
+   <Text>nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat</Text>
+  </Line>
+  <Line llx="142.80" lly="325.20" urx="191.40" ury="334.20">
+   <Text>volutpat.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="284.40" urx="504.60" ury="324.00">
+  <Line llx="106.80" lly="315.00" urx="123.00" ury="324.00">
+   <Text>(b)</Text>
+  </Line>
+  <Line llx="142.80" lly="304.80" urx="499.20" ury="313.80">
+   <Text>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</Text>
+  </Line>
+  <Line llx="142.80" lly="294.60" urx="504.60" ury="303.60">
+   <Text>nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat</Text>
+  </Line>
+  <Line llx="142.80" lly="284.40" urx="191.40" ury="293.40">
+   <Text>volutpat.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="253.92" urx="486.60" ury="283.20">
+  <Line llx="106.80" lly="274.20" urx="225.60" ury="283.20">
+   <Text>(c) Heading Level 3 #2</Text>
+  </Line>
+  <Line llx="70.80" lly="264.12" urx="486.60" ury="273.12">
+   <Text>The terms &quot;reproduce&quot;, &quot;reproduction&quot;, &quot;derivative works&quot;, and &quot;distribution&quot;</Text>
+  </Line>
+  <Line llx="70.80" lly="253.92" urx="367.80" ury="262.92">
+   <Text>have the same meaning here as under U.S. copyright law.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="213.13" urx="438.00" ury="232.33">
+  <Line llx="70.80" lly="223.33" urx="173.40" ury="232.33">
+   <Text>6. Section 999.999.</Text>
+  </Line>
+  <Line llx="70.80" lly="213.13" urx="438.00" ury="222.13">
+   <Text>ARTICLE AAA: Heading Level 2 #1. Sentence 2. Sentence 3. Sentence 4.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="172.32" urx="504.60" ury="211.94">
+  <Line llx="106.80" lly="202.94" urx="144.60" ury="211.94">
+   <Text>001.001</Text>
+  </Line>
+  <Line llx="142.80" lly="192.72" urx="499.20" ury="201.72">
+   <Text>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</Text>
+  </Line>
+  <Line llx="142.80" lly="182.52" urx="504.60" ury="191.52">
+   <Text>nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat</Text>
+  </Line>
+  <Line llx="142.80" lly="172.32" urx="191.40" ury="181.32">
+   <Text>volutpat.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="131.52" urx="504.60" ury="171.12">
+  <Line llx="106.80" lly="162.12" urx="144.60" ury="171.12">
+   <Text>001.002</Text>
+  </Line>
+  <Line llx="142.80" lly="151.92" urx="499.20" ury="160.92">
+   <Text>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</Text>
+  </Line>
+  <Line llx="142.80" lly="141.72" urx="504.60" ury="150.72">
+   <Text>nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat</Text>
+  </Line>
+  <Line llx="142.80" lly="131.52" urx="191.40" ury="140.52">
+   <Text>volutpat.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="90.72" urx="504.60" ury="130.32">
+  <Line llx="106.80" lly="121.32" urx="144.60" ury="130.32">
+   <Text>001.001</Text>
+  </Line>
+  <Line llx="142.80" lly="111.12" urx="499.20" ury="120.12">
+   <Text>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</Text>
+  </Line>
+  <Line llx="142.80" lly="100.92" urx="504.60" ury="109.92">
+   <Text>nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat</Text>
+  </Line>
+  <Line llx="142.80" lly="90.72" urx="191.40" ury="99.72">
+   <Text>volutpat.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="80.52" urx="144.60" ury="89.52">
+  <Line llx="106.80" lly="80.52" urx="144.60" ury="89.52">
+   <Text>001.503</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="51.84" urx="108.08" ury="62.88">
+  <Line llx="70.80" lly="51.84" urx="108.08" ury="62.88">
+   <Text artifact="true">Page | 3</Text>
+  </Line>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Page number="4" width="595.32" height="841.92">
+<Options>granularity=line</Options>
+<Content granularity="line" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="142.80" lly="743.28" urx="504.60" ury="772.68">
+  <Line llx="142.80" lly="763.68" urx="499.20" ury="772.68">
+   <Text>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</Text>
+  </Line>
+  <Line llx="142.80" lly="753.48" urx="504.60" ury="762.48">
+   <Text>nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat</Text>
+  </Line>
+  <Line llx="142.80" lly="743.28" urx="191.40" ury="752.28">
+   <Text>volutpat.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="702.48" urx="504.60" ury="742.08">
+  <Line llx="106.80" lly="733.08" urx="144.60" ury="742.08">
+   <Text>002.004</Text>
+  </Line>
+  <Line llx="142.80" lly="722.88" urx="499.20" ury="731.88">
+   <Text>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</Text>
+  </Line>
+  <Line llx="142.80" lly="712.68" urx="504.60" ury="721.68">
+   <Text>nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat</Text>
+  </Line>
+  <Line llx="142.80" lly="702.48" urx="191.40" ury="711.48">
+   <Text>volutpat.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="661.68" urx="477.60" ury="701.28">
+  <Line llx="106.80" lly="692.28" urx="144.60" ury="701.28">
+   <Text>003.003</Text>
+  </Line>
+  <Line llx="142.80" lly="682.08" urx="477.60" ury="691.08">
+   <Text>The terms &quot;reproduce&quot;, &quot;reproduction&quot;, &quot;derivative works&quot;, and</Text>
+  </Line>
+  <Line llx="142.80" lly="671.88" urx="218.40" ury="680.88">
+   <Text>&quot;distribution&quot;</Text>
+  </Line>
+  <Line llx="70.80" lly="661.68" urx="367.80" ury="670.68">
+   <Text>have the same meaning here as under U.S. copyright law.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="620.89" urx="438.00" ury="640.09">
+  <Line llx="70.80" lly="631.09" urx="146.40" ury="640.09">
+   <Text>7. Article 999</Text>
+  </Line>
+  <Line llx="70.80" lly="620.89" urx="438.00" ury="629.89">
+   <Text>ARTICLE AAA: Heading Level 2 #1. Sentence 2. Sentence 3. Sentence 4.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="580.08" urx="504.60" ury="619.70">
+  <Line llx="106.80" lly="610.70" urx="160.80" ury="619.70">
+   <Text>Article 1:</Text>
+  </Line>
+  <Line llx="142.80" lly="600.48" urx="499.20" ury="609.48">
+   <Text>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</Text>
+  </Line>
+  <Line llx="142.80" lly="590.28" urx="504.60" ury="599.28">
+   <Text>nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat</Text>
+  </Line>
+  <Line llx="142.80" lly="580.08" urx="191.40" ury="589.08">
+   <Text>volutpat.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="539.28" urx="504.60" ury="578.88">
+  <Line llx="106.80" lly="569.88" urx="160.80" ury="578.88">
+   <Text>Article 2:</Text>
+  </Line>
+  <Line llx="142.80" lly="559.68" urx="499.20" ury="568.68">
+   <Text>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</Text>
+  </Line>
+  <Line llx="142.80" lly="549.48" urx="504.60" ury="558.48">
+   <Text>nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat</Text>
+  </Line>
+  <Line llx="142.80" lly="539.28" urx="191.40" ury="548.28">
+   <Text>volutpat.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="498.60" urx="504.60" ury="538.20">
+  <Line llx="106.80" lly="529.20" urx="160.80" ury="538.20">
+   <Text>Article 3:</Text>
+  </Line>
+  <Line llx="142.80" lly="519.00" urx="499.20" ury="528.00">
+   <Text>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</Text>
+  </Line>
+  <Line llx="142.80" lly="508.80" urx="504.60" ury="517.80">
+   <Text>nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat</Text>
+  </Line>
+  <Line llx="142.80" lly="498.60" urx="191.40" ury="507.60">
+   <Text>volutpat.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="457.80" urx="504.60" ury="497.40">
+  <Line llx="106.80" lly="488.40" urx="160.80" ury="497.40">
+   <Text>Article 2:</Text>
+  </Line>
+  <Line llx="142.80" lly="478.20" urx="499.20" ury="487.20">
+   <Text>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</Text>
+  </Line>
+  <Line llx="142.80" lly="468.00" urx="504.60" ury="477.00">
+   <Text>nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat</Text>
+  </Line>
+  <Line llx="142.80" lly="457.80" urx="191.40" ury="466.80">
+   <Text>volutpat.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="417.00" urx="504.60" ury="456.60">
+  <Line llx="106.80" lly="447.60" urx="160.80" ury="456.60">
+   <Text>Article 4:</Text>
+  </Line>
+  <Line llx="142.80" lly="437.40" urx="499.20" ury="446.40">
+   <Text>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</Text>
+  </Line>
+  <Line llx="142.80" lly="427.20" urx="504.60" ury="436.20">
+   <Text>nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat</Text>
+  </Line>
+  <Line llx="142.80" lly="417.00" urx="191.40" ury="426.00">
+   <Text>volutpat.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="386.40" urx="520.80" ury="415.80">
+  <Line llx="106.80" lly="406.80" urx="160.80" ury="415.80">
+   <Text>Article 3:</Text>
+  </Line>
+  <Line llx="142.80" lly="396.60" urx="477.60" ury="405.60">
+   <Text>The terms &quot;reproduce&quot;, &quot;reproduction&quot;, &quot;derivative works&quot;, and</Text>
+  </Line>
+  <Line llx="142.80" lly="386.40" urx="520.80" ury="395.40">
+   <Text>&quot;distribution&quot; have the same meaning here as under U.S. copyright law.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="338.16" urx="114.00" ury="347.16">
+  <Line llx="70.80" lly="338.16" urx="114.00" ury="347.16">
+   <Text>8. Table</Text>
+  </Line>
+ </Box>
+</Para>
+<Table llx="74.56" lly="294.12" urx="434.48" ury="328.08">
+ <Row>
+  <Cell llx="76.56" lly="316.38" urx="98.16" ury="327.18">
+   <Para>
+    <Box llx="76.56" lly="317.28" urx="81.96" ury="326.28">
+     <Line llx="76.56" lly="317.28" urx="81.96" ury="326.28">
+      <Text>A</Text>
+     </Line>
+    </Box>
+   </Para>
+  </Cell>
+  <Cell llx="189.72" lly="316.38" urx="211.32" ury="327.18">
+   <Para>
+    <Box llx="189.72" lly="317.28" urx="195.12" ury="326.28">
+     <Line llx="189.72" lly="317.28" urx="195.12" ury="326.28">
+      <Text>B</Text>
+     </Line>
+    </Box>
+   </Para>
+  </Cell>
+  <Cell llx="303.00" lly="316.38" urx="324.60" ury="327.18">
+   <Para>
+    <Box llx="303.00" lly="317.28" urx="308.40" ury="326.28">
+     <Line llx="303.00" lly="317.28" urx="308.40" ury="326.28">
+      <Text>C</Text>
+     </Line>
+    </Box>
+   </Para>
+  </Cell>
+  <Cell llx="416.28" lly="316.38" urx="437.88" ury="327.18">
+   <Para>
+    <Box llx="416.28" lly="317.28" urx="421.68" ury="326.28">
+     <Line llx="416.28" lly="317.28" urx="421.68" ury="326.28">
+      <Text>D</Text>
+     </Line>
+    </Box>
+   </Para>
+  </Cell>
+ </Row>
+ <Row>
+  <Cell llx="76.56" lly="305.70" urx="98.16" ury="316.50">
+   <Para>
+    <Box llx="76.56" lly="306.60" urx="92.76" ury="315.60">
+     <Line llx="76.56" lly="306.60" urx="92.76" ury="315.60">
+      <Text>1.1</Text>
+     </Line>
+    </Box>
+   </Para>
+  </Cell>
+  <Cell llx="189.72" lly="305.70" urx="211.32" ury="316.50">
+  </Cell>
+  <Cell llx="303.00" lly="305.70" urx="324.60" ury="316.50">
+  </Cell>
+  <Cell llx="416.28" lly="305.70" urx="437.88" ury="316.50">
+   <Para>
+    <Box llx="416.28" lly="306.60" urx="432.48" ury="315.60">
+     <Line llx="416.28" lly="306.60" urx="432.48" ury="315.60">
+      <Text>1.4</Text>
+     </Line>
+    </Box>
+   </Para>
+  </Cell>
+ </Row>
+ <Row>
+  <Cell llx="76.56" lly="295.02" urx="98.16" ury="305.82">
+   <Para>
+    <Box llx="76.56" lly="295.92" urx="92.76" ury="304.92">
+     <Line llx="76.56" lly="295.92" urx="92.76" ury="304.92">
+      <Text>2.1</Text>
+     </Line>
+    </Box>
+   </Para>
+  </Cell>
+  <Cell llx="189.72" lly="295.02" urx="211.32" ury="305.82">
+   <Para>
+    <Box llx="189.72" lly="295.92" urx="205.92" ury="304.92">
+     <Line llx="189.72" lly="295.92" urx="205.92" ury="304.92">
+      <Text>2.2</Text>
+     </Line>
+    </Box>
+   </Para>
+  </Cell>
+  <Cell llx="303.00" lly="295.02" urx="324.60" ury="305.82">
+   <Para>
+    <Box llx="303.00" lly="295.92" urx="319.20" ury="304.92">
+     <Line llx="303.00" lly="295.92" urx="319.20" ury="304.92">
+      <Text>2.3</Text>
+     </Line>
+    </Box>
+   </Para>
+  </Cell>
+  <Cell llx="416.28" lly="295.02" urx="437.88" ury="305.82">
+   <Para>
+    <Box llx="416.28" lly="295.92" urx="432.48" ury="304.92">
+     <Line llx="416.28" lly="295.92" urx="432.48" ury="304.92">
+      <Text>2.4</Text>
+     </Line>
+    </Box>
+   </Para>
+  </Cell>
+ </Row>
+</Table>
+<Para>
+ <Box llx="70.80" lly="245.88" urx="438.00" ury="265.08">
+  <Line llx="70.80" lly="256.08" urx="103.20" ury="265.08">
+   <Text>9. (A)</Text>
+  </Line>
+  <Line llx="70.80" lly="245.88" urx="438.00" ury="254.88">
+   <Text>ARTICLE AAA: Heading Level 2 #1. Sentence 2. Sentence 3. Sentence 4.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="205.08" urx="504.60" ury="244.69">
+  <Line llx="106.80" lly="235.69" urx="123.00" ury="244.69">
+   <Text>(A)</Text>
+  </Line>
+  <Line llx="142.80" lly="225.48" urx="499.20" ury="234.48">
+   <Text>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</Text>
+  </Line>
+  <Line llx="142.80" lly="215.28" urx="504.60" ury="224.28">
+   <Text>nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat</Text>
+  </Line>
+  <Line llx="142.80" lly="205.08" urx="191.40" ury="214.08">
+   <Text>volutpat.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="82.68" urx="522.60" ury="203.88">
+  <Line llx="106.80" lly="194.88" urx="123.00" ury="203.88">
+   <Text>(B)</Text>
+  </Line>
+  <Line llx="142.80" lly="184.68" urx="499.20" ury="193.68">
+   <Text>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</Text>
+  </Line>
+  <Line llx="142.80" lly="174.48" urx="504.60" ury="183.48">
+   <Text>nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat</Text>
+  </Line>
+  <Line llx="142.80" lly="164.28" urx="191.40" ury="173.28">
+   <Text>volutpat.</Text>
+  </Line>
+  <Line llx="106.80" lly="154.08" urx="501.00" ury="163.08">
+   <Text>(a) Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</Text>
+  </Line>
+  <Line llx="106.80" lly="143.88" urx="522.60" ury="152.88">
+   <Text>nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</Text>
+  </Line>
+  <Line llx="106.80" lly="133.68" urx="501.00" ury="142.68">
+   <Text>(i) Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</Text>
+  </Line>
+  <Line llx="106.80" lly="123.48" urx="522.60" ury="132.48">
+   <Text>nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</Text>
+  </Line>
+  <Line llx="106.80" lly="113.28" urx="484.80" ury="122.28">
+   <Text>(C) Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</Text>
+  </Line>
+  <Line llx="106.80" lly="103.08" urx="522.60" ury="112.08">
+   <Text>nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</Text>
+  </Line>
+  <Line llx="106.80" lly="92.88" urx="484.80" ury="101.88">
+   <Text>(C) Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</Text>
+  </Line>
+  <Line llx="106.80" lly="82.68" urx="522.60" ury="91.68">
+   <Text>nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="51.84" urx="108.08" ury="62.88">
+  <Line llx="70.80" lly="51.84" urx="108.08" ury="62.88">
+   <Text artifact="true">Page | 4</Text>
+  </Line>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Page number="5" width="595.32" height="841.92">
+<Options>granularity=line</Options>
+<Content granularity="line" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="106.80" lly="753.48" urx="123.00" ury="762.48">
+  <Line llx="106.80" lly="753.48" urx="123.00" ury="762.48">
+   <Text>(B)</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="712.68" urx="123.00" ury="721.68">
+  <Line llx="106.80" lly="712.68" urx="123.00" ury="721.68">
+   <Text>(D)</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="671.88" urx="123.00" ury="680.88">
+  <Line llx="106.80" lly="671.88" urx="123.00" ury="680.88">
+   <Text>(E)</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="142.80" lly="722.88" urx="504.60" ury="752.28">
+  <Line llx="142.80" lly="743.28" urx="499.20" ury="752.28">
+   <Text>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</Text>
+  </Line>
+  <Line llx="142.80" lly="733.08" urx="504.60" ury="742.08">
+   <Text>nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat</Text>
+  </Line>
+  <Line llx="142.80" lly="722.88" urx="191.40" ury="731.88">
+   <Text>volutpat.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="142.80" lly="682.08" urx="504.60" ury="711.48">
+  <Line llx="142.80" lly="702.48" urx="499.20" ury="711.48">
+   <Text>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</Text>
+  </Line>
+  <Line llx="142.80" lly="692.28" urx="504.60" ury="701.28">
+   <Text>nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat</Text>
+  </Line>
+  <Line llx="142.80" lly="682.08" urx="191.40" ury="691.08">
+   <Text>volutpat.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="142.80" lly="651.48" urx="520.80" ury="670.68">
+  <Line llx="142.80" lly="661.68" urx="477.60" ury="670.68">
+   <Text>The terms &quot;reproduce&quot;, &quot;reproduction&quot;, &quot;derivative works&quot;, and</Text>
+  </Line>
+  <Line llx="142.80" lly="651.48" urx="520.80" ury="660.48">
+   <Text>&quot;distribution&quot; have the same meaning here as under U.S. copyright law.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="284.50" urx="168.00" ury="640.08">
+  <Line llx="70.80" lly="631.08" urx="168.00" ury="640.08">
+   <Text>10. Format 999.999</Text>
+  </Line>
+  <Line llx="70.80" lly="620.89" urx="135.60" ury="629.89">
+   <Text>aaaaaaaaaaaa</Text>
+  </Line>
+  <Line llx="70.80" lly="610.69" urx="129.36" ury="619.69">
+   <Text>1.0 Start</Text>
+  </Line>
+  <Line llx="70.80" lly="600.49" urx="146.40" ury="609.49">
+   <Text>bbbbbbbbbbbbbb</Text>
+  </Line>
+  <Line llx="70.80" lly="590.30" urx="135.60" ury="599.30">
+   <Text>1.001 3. Dez</Text>
+  </Line>
+  <Line llx="70.80" lly="580.10" urx="135.60" ury="589.10">
+   <Text>cccccccccccc</Text>
+  </Line>
+  <Line llx="70.80" lly="569.90" urx="135.60" ury="578.90">
+   <Text>1.010 2. Dez</Text>
+  </Line>
+  <Line llx="70.80" lly="559.70" urx="135.60" ury="568.70">
+   <Text>dddddddddddd</Text>
+  </Line>
+  <Line llx="70.80" lly="549.51" urx="135.60" ury="558.51">
+   <Text>1.100 1. Dez</Text>
+  </Line>
+  <Line llx="70.80" lly="539.31" urx="135.60" ury="548.31">
+   <Text>eeeeeeeeeeee</Text>
+  </Line>
+  <Line llx="70.80" lly="529.23" urx="124.80" ury="538.23">
+   <Text>2.000 Ganz</Text>
+  </Line>
+  <Line llx="70.80" lly="519.03" urx="162.60" ury="528.03">
+   <Text>11. Format 999.99</Text>
+  </Line>
+  <Line llx="70.80" lly="508.84" urx="135.60" ury="517.84">
+   <Text>aaaaaaaaaaaa</Text>
+  </Line>
+  <Line llx="70.80" lly="498.64" urx="124.80" ury="507.64">
+   <Text>1.00 Start</Text>
+  </Line>
+  <Line llx="70.80" lly="488.44" urx="135.60" ury="497.44">
+   <Text>bbbbbbbbbbbb</Text>
+  </Line>
+  <Line llx="70.80" lly="478.25" urx="130.20" ury="487.25">
+   <Text>1.01 2. Dez</Text>
+  </Line>
+  <Line llx="70.80" lly="468.05" urx="135.60" ury="477.05">
+   <Text>cccccccccccc</Text>
+  </Line>
+  <Line llx="70.80" lly="457.85" urx="130.20" ury="466.85">
+   <Text>1.10 1. Dez</Text>
+  </Line>
+  <Line llx="70.80" lly="447.65" urx="130.20" ury="456.65">
+   <Text>Ddddddddddd</Text>
+  </Line>
+  <Line llx="70.80" lly="437.46" urx="119.40" ury="446.46">
+   <Text>2.00 Ganz</Text>
+  </Line>
+  <Line llx="70.80" lly="427.26" urx="151.80" ury="436.26">
+   <Text>eeeeeeeeeeeeeee</Text>
+  </Line>
+  <Line llx="70.80" lly="417.06" urx="157.20" ury="426.06">
+   <Text>12. Format 999.9</Text>
+  </Line>
+  <Line llx="70.80" lly="406.87" urx="146.40" ury="415.87">
+   <Text>aaaaaaaaaaaaaa</Text>
+  </Line>
+  <Line llx="70.80" lly="396.67" urx="119.40" ury="405.67">
+   <Text>1.0 Start</Text>
+  </Line>
+  <Line llx="70.80" lly="386.47" urx="146.40" ury="395.47">
+   <Text>bbbbbbbbbbbbbb</Text>
+  </Line>
+  <Line llx="70.80" lly="376.27" urx="124.80" ury="385.27">
+   <Text>1.1 1. Dez</Text>
+  </Line>
+  <Line llx="70.80" lly="366.08" urx="146.40" ury="375.08">
+   <Text>cccccccccccccc</Text>
+  </Line>
+  <Line llx="70.80" lly="355.88" urx="114.00" ury="364.88">
+   <Text>2.0 Ganz</Text>
+  </Line>
+  <Line llx="70.80" lly="345.68" urx="146.40" ury="354.68">
+   <Text>dddddddddddddd</Text>
+  </Line>
+  <Line llx="70.80" lly="335.49" urx="162.60" ury="344.49">
+   <Text>1.9 Not ascending</Text>
+  </Line>
+  <Line llx="70.80" lly="325.29" urx="146.40" ury="334.29">
+   <Text>dddddddddddddd</Text>
+  </Line>
+  <Line llx="70.80" lly="315.09" urx="119.40" ury="324.09">
+   <Text>13. Table</Text>
+  </Line>
+  <Line llx="70.80" lly="304.90" urx="151.80" ury="313.90">
+   <Text>eeeeeeeeeeeeeee</Text>
+  </Line>
+  <Line llx="70.80" lly="294.70" urx="157.20" ury="303.70">
+   <Text>... End Document</Text>
+  </Line>
+  <Line llx="70.80" lly="284.50" urx="119.40" ury="293.50">
+   <Text>14. Table</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="51.84" urx="108.08" ury="62.88">
+  <Line llx="70.80" lly="51.84" urx="108.08" ury="62.88">
+   <Text artifact="true">Page | 5</Text>
+  </Line>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Resources>
+<Fonts>
+ <Font id="F0" name="Calibri" fullname="TYKMEL+Calibri" type="TrueType" embedded="true" ascender="750.00" capheight="632.00" italicangle="0.00" descender="-250.00" weight="400.00" xheight="464.00"/>
+ <Font id="F1" name="CourierNewPSMT" type="TrueType" embedded="false" ascender="1021.00" capheight="571.00" italicangle="0.00" descender="-680.00" weight="400.00" xheight="423.00"/>
+ <Font id="F2" name="ArialMT" type="TrueType" embedded="false" ascender="1040.00" capheight="716.00" italicangle="0.00" descender="-325.00" weight="400.00" xheight="519.00"/>
+</Fonts>
+<ColorSpaces>
+ <ColorSpace id="CS0" name="ICCBased" components="1" iccprofile="ICC0"/>
+ <ColorSpace id="CS1" name="ICCBased" components="3" iccprofile="ICC1"/>
+</ColorSpaces>
+</Resources>
+<Graphics>
+<ICCProfiles>
+ <ICCProfile id="ICC0" embedded="true" iccversion="2.1" profilename="Gray Gamma 2.2" checksum="66043AD0DE86F27B977BAB702FB1A778" profilecs="GRAY" deviceclass="mntr" fromCIE="true" toCIE="true"/>
+ <ICCProfile id="ICC1" embedded="true" iccversion="2.1" profilename="sRGB IEC61966-2.1" checksum="1D3FDA2EDB4A89AB60A23C5F7C7D81DD" profilecs="RGB " deviceclass="mntr" fromCIE="true" toCIE="true"/>
+</ICCProfiles>
+</Graphics>
+</Pages>
+</Document>
+</TET>

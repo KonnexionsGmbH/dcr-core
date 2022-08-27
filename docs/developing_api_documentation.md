@@ -6,4 +6,4 @@
 
 ### Core Functionality
 
-::: dcr-core?_core
+::: dcr_core

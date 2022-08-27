@@ -520,6 +520,7 @@ class LineTypeHeading:
 
                 coord_llx_curr_float = float(coord_llx_curr)
                 coord_llx_float = float(coord_llx)
+
                 if (
                     coord_llx_curr_float < coord_llx_float * (100 - dcr_core.core_glob.setup.lt_heading_tolerance_llx) / 100
                     or coord_llx_curr_float > coord_llx_float * (100 + dcr_core.core_glob.setup.lt_heading_tolerance_llx) / 100
