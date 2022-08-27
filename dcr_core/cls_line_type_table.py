@@ -54,7 +54,7 @@ class LineTypeTable:
                     For documentation purposes. Defaults to "".
         """
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
-        dcr_core.core_glob.logger.debug("param file_name_curr =%s", file_name_curr)
+        dcr_core.core_glob.logger.debug("param file_name_curr=%s", file_name_curr)
 
         dcr_core.core_utils.check_exists_object(
             is_line_type_headers_footers=True,
