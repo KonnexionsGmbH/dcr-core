@@ -23,6 +23,8 @@ import pathlib
 import re
 
 import dcr_core.cls_nlp_core
+import dcr_core.core_glob
+
 
 
 # pylint: disable=too-many-instance-attributes
@@ -53,7 +55,12 @@ class LineTypeListBullet:
                     File name of the PDF document to be processed - only
                     For documentation purposes. Defaults to "".
         """
-        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+        try:
+            dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+        except AttributeError:
+            dcr_core.core_glob.initialise_logger()
+            dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+
         dcr_core.core_glob.logger.debug("param file_name_curr=%s", file_name_curr)
 
         dcr_core.core_utils.check_exists_object(

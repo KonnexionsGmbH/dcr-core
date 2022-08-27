@@ -71,6 +71,12 @@ class Process:
     # ------------------------------------------------------------------
     def __init__(self) -> None:
         """Initialise the instance."""
+        try:
+            dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+        except AttributeError:
+            dcr_core.core_glob.initialise_logger()
+            dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+
         self._document_id: int = 0
 
         self._full_name_in: str = ""
@@ -105,6 +111,8 @@ class Process:
         self._no_pdf_pages: int = 0
 
         self._exist = True
+
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
 
     # ------------------------------------------------------------------
     # Check the document by the file extension and determine further
@@ -569,7 +577,12 @@ class Process:
                     ("ok", "") if the processing has been completed successfully,
                                otherwise a corresponding error code and error message.
         """
-        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+        try:
+            dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+        except AttributeError:
+            dcr_core.core_glob.initialise_logger()
+            dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+
         dcr_core.core_glob.logger.debug("param full_name_in   =%s", full_name_in)
         dcr_core.core_glob.logger.debug("param full_name_out  =%s", full_name_out)
         dcr_core.core_glob.logger.debug("param language_pandoc=%s", language_pandoc)
@@ -641,7 +654,12 @@ class Process:
                     ("ok", "") if the processing has been completed successfully,
                                otherwise a corresponding error code and error message.
         """
-        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+        try:
+            dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+        except AttributeError:
+            dcr_core.core_glob.initialise_logger()
+            dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+
         dcr_core.core_glob.logger.debug("param document_id   =%i", document_id)
         dcr_core.core_glob.logger.debug("param full_name_orig=%s", full_name_orig)
         dcr_core.core_glob.logger.debug("param full_name_in  =%s", full_name_in)
@@ -715,7 +733,12 @@ class Process:
                     ("ok", "", [...]) if the processing has been completed successfully,
                                       otherwise a corresponding error code and error message.
         """
-        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+        try:
+            dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+        except AttributeError:
+            dcr_core.core_glob.initialise_logger()
+            dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+
         dcr_core.core_glob.logger.debug("param full_name_in=%s", full_name_in)
 
         try:
@@ -826,7 +849,12 @@ class Process:
                     ("ok", "") if the processing has been completed successfully,
                                otherwise a corresponding error code and error message.
         """
-        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+        try:
+            dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+        except AttributeError:
+            dcr_core.core_glob.initialise_logger()
+            dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+
         dcr_core.core_glob.logger.debug("param full_name_in     =%s", full_name_in)
         dcr_core.core_glob.logger.debug("param full_name_out    =%s", full_name_out)
         dcr_core.core_glob.logger.debug("param document_opt_list=%s", document_opt_list)
@@ -907,7 +935,12 @@ class Process:
                     ("ok", "", [...]) if the processing has been completed successfully,
                                       otherwise a corresponding error code and error message.
         """
-        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+        try:
+            dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+        except AttributeError:
+            dcr_core.core_glob.initialise_logger()
+            dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+
         dcr_core.core_glob.logger.debug("param full_name_in      =%s", full_name_in)
         dcr_core.core_glob.logger.debug("param full_name_out     =%s", full_name_out)
         dcr_core.core_glob.logger.debug("param language_tesseract=%s", language_tesseract)
@@ -1005,7 +1038,12 @@ class Process:
                     ("ok", "") if the processing has been completed successfully,
                                otherwise a corresponding error code and error message.
         """
-        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+        try:
+            dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+        except AttributeError:
+            dcr_core.core_glob.initialise_logger()
+            dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+
         dcr_core.core_glob.logger.debug("param document_id    =%i", document_id)
         dcr_core.core_glob.logger.debug("param full_name_in   =%s", full_name_in)
         dcr_core.core_glob.logger.debug("param full_name_orig =%s", full_name_orig)

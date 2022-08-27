@@ -24,6 +24,8 @@ import dcr_core.cls_line_type_list_number
 import dcr_core.cls_line_type_table
 import dcr_core.cls_line_type_toc
 import dcr_core.cls_nlp_core
+import dcr_core.core_glob
+
 
 
 # pylint: disable=too-many-instance-attributes
@@ -39,7 +41,11 @@ class TextParser:
     # ------------------------------------------------------------------
     def __init__(self) -> None:
         """Initialise the instance."""
-        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+        try:
+            dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+        except AttributeError:
+            dcr_core.core_glob.initialise_logger()
+            dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
 
         dcr_core.core_utils.check_exists_object(
             is_setup=True,
