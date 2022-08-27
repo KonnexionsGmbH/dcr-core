@@ -26,8 +26,6 @@ import pathlib
 import re
 
 import dcr_core.cls_nlp_core
-import dcr_core.core_glob
-
 
 # ------------------------------------------------------------------
 # Global type aliases.

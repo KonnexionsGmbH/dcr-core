@@ -17,7 +17,6 @@ import re
 from typing import ClassVar
 
 import dcr_core.core_utils
-import dcr_core.core_glob
 
 
 class NLPCore:

@@ -24,8 +24,6 @@ import dcr_core.cls_line_type_list_number
 import dcr_core.cls_line_type_table
 import dcr_core.cls_line_type_toc
 import dcr_core.cls_nlp_core
-import dcr_core.core_glob
-
 
 
 # pylint: disable=too-many-instance-attributes

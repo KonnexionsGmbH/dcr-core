@@ -14,8 +14,6 @@ import spacy
 import spacy.tokens
 
 import dcr_core.cls_nlp_core
-import dcr_core.core_glob
-
 
 
 # pylint: disable=too-many-branches

@@ -27,8 +27,6 @@ import pathlib
 import re
 
 import dcr_core.cls_nlp_core
-import dcr_core.core_glob
-
 
 
 # pylint: disable=too-many-instance-attributes
