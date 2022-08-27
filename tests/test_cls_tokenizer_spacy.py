@@ -1,6 +1,6 @@
-# pylint: disable=unused-argument
 """Testing Class TokenizerSpacy."""
 import dcr_core
+import dcr_core.cls_tokenizer_spacy
 
 # -----------------------------------------------------------------------------
 # Constants & Globals.
@@ -14,6 +14,6 @@ import dcr_core
 def test_tokenizer_spacy_coverage():
     """Test Cases TokenizerSpacy - Coverage."""
     # -------------------------------------------------------------------------
-    instance_e = dcr_core.cls_nlp_core.TokenizerSpacy()
+    instance_e = dcr_core.cls_tokenizer_spacy.TokenizerSpacy()
 
     instance_e.exists()

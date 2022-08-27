@@ -1,6 +1,6 @@
-# pylint: disable=unused-argument
 """Testing Class NLPCore."""
 import dcr_core
+import dcr_core.cls_nlp_core
 
 # -----------------------------------------------------------------------------
 # Constants & Globals.
