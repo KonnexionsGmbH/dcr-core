@@ -53,6 +53,9 @@ class LineTypeTable:
                     File name of the PDF document to be processed - only
                     For documentation purposes. Defaults to "".
         """
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+        dcr_core.core_glob.logger.debug("param file_name_curr =%s", file_name_curr)
+
         dcr_core.core_utils.check_exists_object(
             is_line_type_headers_footers=True,
             is_line_type_toc=True,
@@ -103,6 +106,8 @@ class LineTypeTable:
             dcr_core.core_glob.setup.is_verbose_lt_table,
             f"LineTypeTable: End   create instance                ={self._file_name_curr}",
         )
+
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
 
     # ------------------------------------------------------------------
     # Finish a row.
@@ -363,6 +368,13 @@ class LineTypeTable:
             line_pages_json (dcr_core.cls_nlp_core.NLPCore.LinePages):
                     The document pages formatted in the parser.
         """
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+        dcr_core.core_glob.logger.debug("param directory_name =%s", directory_name)
+        dcr_core.core_glob.logger.debug("param document_id    =%i", document_id)
+        dcr_core.core_glob.logger.debug("param file_name_curr =%s", file_name_curr)
+        dcr_core.core_glob.logger.debug("param file_name_orig =%s", file_name_orig)
+        dcr_core.core_glob.logger.debug("param line_pages_json=%s", line_pages_json)
+
         dcr_core.core_utils.check_exists_object(
             is_line_type_headers_footers=True,
             is_line_type_toc=True,
@@ -420,3 +432,5 @@ class LineTypeTable:
             dcr_core.core_glob.setup.is_verbose_lt_table,
             f"LineTypeTable: End   document                       ={self._file_name_curr}",
         )
+
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)

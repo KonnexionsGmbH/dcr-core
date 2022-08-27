@@ -61,6 +61,9 @@ class LineTypeHeaderFooters:
                     File name of the PDF document to be processed - only
                     For documentation purposes. Defaults to "".
         """
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+        dcr_core.core_glob.logger.debug("param file_name_curr =%s", file_name_curr)
+
         dcr_core.core_utils.check_exists_object(
             is_setup=True,
             is_text_parser=True,
@@ -111,6 +114,8 @@ class LineTypeHeaderFooters:
             dcr_core.core_glob.setup.is_verbose_lt_headers_footers,
             f"LineTypeHeaderFooters: End   create instance                ={self._file_name_curr}",
         )
+
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
 
     # ------------------------------------------------------------------
     # Calculate the Levenshtein distances.
@@ -527,6 +532,10 @@ class LineTypeHeaderFooters:
                 File name of the PDF document to be processed - only
                 For documentation purposes. Defaults to "".
         """
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+        dcr_core.core_glob.logger.debug("param file_name_curr =%s", file_name_curr)
+        dcr_core.core_glob.logger.debug("param line_pages_json=%s", line_pages_json)
+
         dcr_core.core_utils.check_exists_object(
             is_setup=True,
             is_text_parser=True,
@@ -610,3 +619,5 @@ class LineTypeHeaderFooters:
             dcr_core.core_glob.setup.is_verbose_lt_headers_footers,
             f"LineTypeHeaderFooters: End document                         ={self._file_name_curr}",
         )
+
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)

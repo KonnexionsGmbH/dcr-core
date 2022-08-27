@@ -38,6 +38,9 @@ class LineTypeToc:
                     File name of the PDF document to be processed - only
                     For documentation purposes. Defaults to "".
         """
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+        dcr_core.core_glob.logger.debug("param file_name_curr =%s", file_name_curr)
+
         dcr_core.core_utils.check_exists_object(
             is_line_type_headers_footers=True,
             is_setup=True,
@@ -74,6 +77,8 @@ class LineTypeToc:
             dcr_core.core_glob.setup.is_verbose_lt_toc,
             f"LineTypeToc: End   create instance                ={self._file_name_curr}",
         )
+
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
 
     # ------------------------------------------------------------------
     # Check a TOC candidate.
@@ -317,6 +322,10 @@ class LineTypeToc:
             line_pages_json (dcr_core.cls_nlp_core.NLPCore.LinePages):
                     The document pages formatted in the parser.
         """
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+        dcr_core.core_glob.logger.debug("param file_name_curr =%s", file_name_curr)
+        dcr_core.core_glob.logger.debug("param line_pages_json=%s", line_pages_json)
+
         dcr_core.core_utils.check_exists_object(
             is_line_type_headers_footers=True,
             is_setup=True,
@@ -378,3 +387,5 @@ class LineTypeToc:
             dcr_core.core_glob.setup.is_verbose_lt_toc,
             f"LineTypeToc: End   document                       ={self._file_name_curr}",
         )
+
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
