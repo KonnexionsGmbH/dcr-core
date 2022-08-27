@@ -1,5 +1,5 @@
 # pylint: disable=unused-argument
-"""Testing Class LineTypeHeading."""
+"""Testing Class LineTypeTable."""
 import pytest
 
 import dcr_core
@@ -12,33 +12,31 @@ import dcr_core.cls_process
 
 
 # -----------------------------------------------------------------------------
-# Test Cases Line Type Heading.
+# Test Cases Line Type Table.
 # -----------------------------------------------------------------------------
 @pytest.mark.parametrize(
     "input_output",
     [
         # input_output0
         (
-            "docx_heading",
+            "docx_table",
             "pdf",
             [
-                "docx_heading.line.json",
-                "docx_heading.line.xml",
-                "docx_heading.line_heading.json",
-                "docx_heading.line_list_number.json",
-                "docx_heading.line_table.json",
-                "docx_heading.line_token.json",
-                "docx_heading.page.json",
-                "docx_heading.page.xml",
-                "docx_heading.pdf",
-                "docx_heading.word.json",
-                "docx_heading.word.xml",
+                "docx_table.line.json",
+                "docx_table.line.xml",
+                "docx_table.line_table.json",
+                "docx_table.line_token.json",
+                "docx_table.page.json",
+                "docx_table.page.xml",
+                "docx_table.pdf",
+                "docx_table.word.json",
+                "docx_table.word.xml",
             ],
         ),
     ],
 )
-def test_line_type_heading(input_output: tuple[str, str, list[str]], fxtr_setup_empty_inbox):
-    """Test Cases Line Type Heading."""
+def test_line_type_table(input_output: tuple[str, str, list[str]], fxtr_setup_empty_inbox):
+    """Test Cases Line Type Table."""
     # -------------------------------------------------------------------------
     directory_name = dcr_core.core_glob.setup.directory_inbox
     (stem_name, file_extension, test_files) = input_output
@@ -63,23 +61,22 @@ def test_line_type_heading(input_output: tuple[str, str, list[str]], fxtr_setup_
 
 
 # -----------------------------------------------------------------------------
-# Test Cases Line Type Heading - Coverage.
+# Test Cases Line Type Table - Coverage.
 # -----------------------------------------------------------------------------
-def test_line_type_heading_coverage(fxtr_rmdir_opt, fxtr_setup_empty_inbox):
-    """Test Cases Line Type Heading - Coverage."""
+def test_line_type_table_coverage(fxtr_rmdir_opt, fxtr_setup_empty_inbox):
+    """Test Cases Line Type Table - Coverage."""
     # -------------------------------------------------------------------------
     pytest.helpers.config_params_modify(
         dcr_core.cls_setup.Setup._DCR_CFG_SECTION_ENV_TEST,
         [
-            (dcr_core.cls_setup.Setup._DCR_CFG_CREATE_EXTRA_FILE_HEADING, "false"),
-            (dcr_core.cls_setup.Setup._DCR_CFG_LT_HEADING_FILE_INCL_REGEXP, "false"),
-            (dcr_core.cls_setup.Setup._DCR_CFG_VERBOSE_LT_HEADING, "true"),
+            (dcr_core.cls_setup.Setup._DCR_CFG_CREATE_EXTRA_FILE_TABLE, "false"),
+            (dcr_core.cls_setup.Setup._DCR_CFG_VERBOSE_LT_TABLE, "true"),
         ],
     )
 
     # -------------------------------------------------------------------------
     directory_name = dcr_core.core_glob.setup.directory_inbox
-    stem_name = "docx_heading"
+    stem_name = "docx_table"
     file_extension = "pdf"
 
     full_name = dcr_core.core_utils.get_full_name_from_components(directory_name, stem_name, file_extension)
@@ -98,6 +95,6 @@ def test_line_type_heading_coverage(fxtr_rmdir_opt, fxtr_setup_empty_inbox):
     instance.document_process(full_name)
 
     # -------------------------------------------------------------------------
-    instance_e = dcr_core.cls_line_type_heading.LineTypeHeading()
+    instance_e = dcr_core.cls_line_type_table.LineTypeTable()
 
     instance_e.exists()

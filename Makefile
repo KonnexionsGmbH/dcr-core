@@ -152,7 +152,7 @@ lazydocs:           ## Generate markdown API documentation for Google-style Pyth
 	@echo ---------------------------------------------------------------------
 	${CREATE_DOCS}
 	${DELETE_DOCS}
-	pipenv run lazydocs --output-path="./docs/api-docs" --overview-file="README.md" --src-base-url="https://github.com/KonnexionsGmbH/dcr-core/blob/main/" ${PYTHONPATH}
+	pipenv run lazydocs --output-path="./docs/api-docs" --overview-file="README.md" --src-base-url="https://github.com/KonnexionsGmbH/dcr-core" ${PYTHONPATH}
 	@echo Info **********  End:   lazydocs ************************************
 
 # Project documentation with Markdown.

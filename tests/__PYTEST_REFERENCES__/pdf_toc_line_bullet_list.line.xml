@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created by the PDFlib Text and Image Extraction Toolkit TET (www.pdflib.com) -->
+<TET xmlns="http://www.pdflib.com/XML/TET5/TET-5.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.pdflib.com/XML/TET5/TET-5.0
+ http://www.pdflib.com/XML/TET5/TET-5.0.xsd"
+ version="5.2">
+<Creation platform="Win64" tetVersion="5.3" date="2022-08-27T05:01:31+02:00" />
+<Document filename="data\inbox_dev_accepted\pdf_toc_line_bullet_list.pdf" pageCount="7" filesize="113098" linearized="true" pdfVersion="1.5" tagged="true">
+<DocInfo>
+<Author>Walter Weinmann</Author>
+<CreationDate>2022-07-13T09:52:35+02:00</CreationDate>
+<Creator>Acrobat PDFMaker 11 for Word</Creator>
+<ModDate>2022-07-13T09:52:36+02:00</ModDate>
+<Producer>Adobe PDF Library 11.0</Producer>
+<Custom key="SourceModified">D:20220713075227</Custom>
+<Custom key="ContentTypeId">0x0101006EDDDB5EE6D98C44930B742096920B300400F5B6D36B3EF94B4E9A635CDF2A18F5B8</Custom>
+</DocInfo>
+<Metadata>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.4-c006 80.159825, 2016/09/16-03:31:08        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""
+            xmlns:xmp="http://ns.adobe.com/xap/1.0/"
+            xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/"
+            xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:pdf="http://ns.adobe.com/pdf/1.3/"
+            xmlns:pdfx="http://ns.adobe.com/pdfx/1.3/">
+         <xmp:ModifyDate>2022-07-13T09:52:36+02:00</xmp:ModifyDate>
+         <xmp:CreateDate>2022-07-13T09:52:35+02:00</xmp:CreateDate>
+         <xmp:MetadataDate>2022-07-13T09:52:36+02:00</xmp:MetadataDate>
+         <xmp:CreatorTool>Acrobat PDFMaker 11 for Word</xmp:CreatorTool>
+         <xmpMM:DocumentID>uuid:4e74eb60-d90a-4ce9-92a6-13b1407e8a3d</xmpMM:DocumentID>
+         <xmpMM:InstanceID>uuid:5c74a5df-1a6f-45da-8d32-4270a852f32d</xmpMM:InstanceID>
+         <xmpMM:subject>
+            <rdf:Seq>
+               <rdf:li>6</rdf:li>
+            </rdf:Seq>
+         </xmpMM:subject>
+         <dc:format>application/pdf</dc:format>
+         <dc:title>
+            <rdf:Alt>
+               <rdf:li xml:lang="x-default"/>
+            </rdf:Alt>
+         </dc:title>
+         <dc:description>
+            <rdf:Alt>
+               <rdf:li xml:lang="x-default"/>
+            </rdf:Alt>
+         </dc:description>
+         <dc:creator>
+            <rdf:Seq>
+               <rdf:li>Walter Weinmann</rdf:li>
+            </rdf:Seq>
+         </dc:creator>
+         <pdf:Producer>Adobe PDF Library 11.0</pdf:Producer>
+         <pdf:Keywords/>
+         <pdfx:SourceModified>D:20220713075227</pdfx:SourceModified>
+         <pdfx:Company/>
+         <pdfx:Comments/>
+         <pdfx:InternalTags/>
+         <pdfx:ContentTypeId>0x0101006EDDDB5EE6D98C44930B742096920B300400F5B6D36B3EF94B4E9A635CDF2A18F5B8</pdfx:ContentTypeId>
+         <pdfx:FeatureTags/>
+         <pdfx:LocalizationTags/>
+         <pdfx:CampaignTags/>
+         <pdfx:ScenarioTags/>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta>
+</Metadata>
+<Options>tetml={filename={data\inbox_dev_accepted\pdf_toc_line_bullet_list.line.xml}} engines={noannotation noimage text notextcolor novector}</Options>
+<Bookmarks>
+<Bookmark open="true" destination="D0">
+ <Title>Heading 1.1</Title>
+ <Action type="GoTo" trigger="activate"/>
+ <Bookmark destination="D1">
+  <Title>Heading 2.1</Title>
+  <Action type="GoTo" trigger="activate"/>
+ </Bookmark>
+ <Bookmark destination="D2">
+  <Title>Heading 2.2</Title>
+  <Action type="GoTo" trigger="activate"/>
+ </Bookmark>
+</Bookmark>
+<Bookmark open="true" destination="D3">
+ <Title>Heading 1.2</Title>
+ <Action type="GoTo" trigger="activate"/>
+ <Bookmark destination="D4">
+  <Title>Heading 2.2</Title>
+  <Action type="GoTo" trigger="activate"/>
+ </Bookmark>
+</Bookmark>
+<Bookmark open="true" destination="D5">
+ <Title>Heading 1.2</Title>
+ <Action type="GoTo" trigger="activate"/>
+ <Bookmark destination="D6">
+  <Title>Heading 2.2</Title>
+  <Action type="GoTo" trigger="activate"/>
+ </Bookmark>
+</Bookmark>
+<Bookmark open="true" destination="D7">
+ <Title>Heading 1.2</Title>
+ <Action type="GoTo" trigger="activate"/>
+ <Bookmark destination="D8">
+  <Title>Heading 2.2</Title>
+  <Action type="GoTo" trigger="activate"/>
+ </Bookmark>
+</Bookmark>
+<Bookmark destination="D9">
+ <Title>Heading 1.2</Title>
+ <Action type="GoTo" trigger="activate"/>
+</Bookmark>
+</Bookmarks>
+<Pages>
+<Page number="1" width="612.00" height="792.00">
+<Options>granularity=line</Options>
+<Content granularity="line" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="72.00" lly="732.12" urx="112.88" ury="756.60">
+  <Line llx="72.00" lly="745.56" urx="112.88" ury="756.60">
+   <Text artifact="true">Header 1</Text>
+  </Line>
+  <Line llx="72.00" lly="732.12" urx="112.87" ury="743.16">
+   <Text artifact="true">Header 2</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="39.73" ulx="72.00" uly="67.09" urx="243.64" ury="67.09" lrx="243.64" lry="39.72">
+  <Line llx="72.00" lly="56.05" urx="109.75" ury="67.09">
+   <Text artifact="true">Footer 1</Text>
+  </Line>
+  <Line llx="72.00" lly="39.72" urx="243.64" ury="53.76">
+   <Text artifact="true">Footer 2 pg. 1</Text>
+  </Line>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Page number="2" width="612.00" height="792.00">
+<Options>granularity=line</Options>
+<Annotations>
+<Annotation id="ANN0" type="Link" destination="D0">
+ <Box llx="69.75" lly="158.24" urx="541.75" ury="176.67"/>
+ <Action type="GoTo" trigger="activate"/>
+</Annotation>
+<Annotation id="ANN1" type="Link" destination="D1">
+ <Box llx="80.75" lly="139.81" urx="541.75" ury="158.24"/>
+ <Action type="GoTo" trigger="activate"/>
+</Annotation>
+<Annotation id="ANN2" type="Link" destination="D2">
+ <Box llx="80.75" lly="121.38" urx="541.75" ury="139.81"/>
+ <Action type="GoTo" trigger="activate"/>
+</Annotation>
+<Annotation id="ANN3" type="Link" destination="D3">
+ <Box llx="69.75" lly="102.96" urx="541.75" ury="121.38"/>
+ <Action type="GoTo" trigger="activate"/>
+</Annotation>
+<Annotation id="ANN4" type="Link" destination="D10">
+ <Box llx="69.75" lly="84.53" urx="541.75" ury="102.96"/>
+ <Action type="GoTo" trigger="activate"/>
+</Annotation>
+</Annotations>
+<Content granularity="line" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="72.00" lly="732.12" urx="112.88" ury="756.60">
+  <Line llx="72.00" lly="745.56" urx="112.88" ury="756.60">
+   <Text artifact="true">Header 1</Text>
+  </Line>
+  <Line llx="72.00" lly="732.12" urx="112.87" ury="743.16">
+   <Text artifact="true">Header 2</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="182.52" urx="130.15" ury="198.48">
+  <Line llx="72.00" lly="182.52" urx="130.15" ury="198.48">
+   <Text>Contents</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="92.52" urx="539.60" ury="177.24">
+  <Line llx="72.00" lly="166.20" urx="539.60" ury="177.24">
+   <Text>Heading 1.1 ................................................................................................................................................... 3</Text>
+  </Line>
+  <Line llx="83.04" lly="147.84" urx="539.60" ury="158.88">
+   <Text>Heading 2.1 ............................................................................................................................................... 3</Text>
+  </Line>
+  <Line llx="83.04" lly="129.36" urx="539.60" ury="140.40">
+   <Text>Heading 2.2 ............................................................................................................................................... 4</Text>
+  </Line>
+  <Line llx="72.00" lly="111.00" urx="539.60" ury="122.04">
+   <Text>Heading 1.2 ................................................................................................................................................... 4</Text>
+  </Line>
+  <Line llx="72.00" lly="92.52" urx="539.60" ury="103.56">
+   <Text>Heading 1.3 ................................................................................................................................................... 5</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="39.73" ulx="72.00" uly="67.09" urx="243.64" ury="67.09" lrx="243.64" lry="39.72">
+  <Line llx="72.00" lly="56.05" urx="109.75" ury="67.09">
+   <Text artifact="true">Footer 1</Text>
+  </Line>
+  <Line llx="72.00" lly="39.72" urx="243.64" ury="53.76">
+   <Text artifact="true">Footer 2 pg. 2</Text>
+  </Line>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Page number="3" width="612.00" height="792.00">
+<Options>granularity=line</Options>
+<Annotations>
+<Annotation id="ANN0" type="Link" destination="D11">
+ <Box llx="80.75" lly="701.57" urx="541.75" ury="720.00"/>
+ <Action type="GoTo" trigger="activate"/>
+</Annotation>
+<Annotation id="ANN1" type="Link" destination="D12">
+ <Box llx="80.75" lly="683.14" urx="541.75" ury="701.57"/>
+ <Action type="GoTo" trigger="activate"/>
+</Annotation>
+</Annotations>
+<Content granularity="line" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="72.00" lly="732.12" urx="112.88" ury="756.60">
+  <Line llx="72.00" lly="745.56" urx="112.88" ury="756.60">
+   <Text artifact="true">Header 1</Text>
+  </Line>
+  <Line llx="72.00" lly="732.12" urx="112.87" ury="743.16">
+   <Text artifact="true">Header 2</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="83.04" lly="691.08" urx="539.59" ury="720.60">
+  <Line llx="83.04" lly="709.56" urx="539.59" ury="720.60">
+   <Text>Heading 2.3 ............................................................................................................................................... 6</Text>
+  </Line>
+  <Line llx="83.04" lly="691.08" urx="539.59" ury="702.12">
+   <Text>Heading 2.4 ............................................................................................................................................... 7</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="602.28" urx="148.73" ury="618.24">
+  <Line llx="72.00" lly="602.28" urx="148.73" ury="618.24">
+   <Text>Heading 1.1</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="574.08" urx="389.41" ury="585.12">
+  <Line llx="72.00" lly="574.08" urx="389.41" ury="585.12">
+   <Text>Seite 1 Zeile 1 This chapter uses Volto to change displaying the dates in</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="543.24" urx="134.25" ury="556.20">
+  <Line llx="72.00" lly="543.24" urx="134.25" ury="556.20">
+   <Text>Heading 2.1</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="515.88" urx="406.06" ury="526.92">
+  <Line llx="72.00" lly="515.88" urx="406.06" ury="526.92">
+   <Text>Seite 1 Zeile 2 talkview and talklistview. To meet the same requirements in</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="90.00" lly="488.41" urx="142.14" ury="499.45">
+  <Line llx="90.00" lly="488.41" urx="142.14" ury="499.45">
+   <Text>• Bullet 1</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="90.01" lly="474.48" urx="142.15" ury="485.52">
+  <Line llx="90.01" lly="474.48" urx="142.15" ury="485.52">
+   <Text>• Bullet 2</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="90.02" lly="460.44" urx="142.17" ury="471.48">
+  <Line llx="90.02" lly="460.44" urx="142.17" ury="471.48">
+   <Text>• Bullet 3</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.02" lly="433.57" urx="381.51" ury="444.61">
+  <Line llx="72.02" lly="433.57" urx="381.51" ury="444.61">
+   <Text>Seite 1 Zeile 3 classic Plone see the chapter Turning Talks into Events.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="39.73" ulx="72.00" uly="67.09" urx="243.64" ury="67.09" lrx="243.64" lry="39.72">
+  <Line llx="72.00" lly="56.05" urx="109.75" ury="67.09">
+   <Text artifact="true">Footer 1</Text>
+  </Line>
+  <Line llx="72.00" lly="39.72" urx="243.64" ury="53.76">
+   <Text artifact="true">Footer 2 pg. 3</Text>
+  </Line>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Page number="4" width="612.00" height="792.00">
+<Options>granularity=line</Options>
+<Content granularity="line" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="72.00" lly="732.12" urx="112.88" ury="756.60">
+  <Line llx="72.00" lly="745.56" urx="112.88" ury="756.60">
+   <Text artifact="true">Header 1</Text>
+  </Line>
+  <Line llx="72.00" lly="732.12" urx="112.87" ury="743.16">
+   <Text artifact="true">Header 2</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="709.56" urx="424.18" ury="720.60">
+  <Line llx="72.00" lly="709.56" urx="424.18" ury="720.60">
+   <Text>Seite 2 Zeile 1 We use a technique called component shadowing to override an</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="678.72" urx="134.25" ury="691.68">
+  <Line llx="72.00" lly="678.72" urx="134.25" ury="691.68">
+   <Text>Heading 2.2</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="651.36" urx="425.84" ury="662.40">
+  <Line llx="72.00" lly="651.36" urx="425.84" ury="662.40">
+   <Text>Seite 2 Zeile 2 existing Volto component with our local custom version, without</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="607.80" urx="148.73" ury="623.76">
+  <Line llx="72.00" lly="607.80" urx="148.73" ury="623.76">
+   <Text>Heading 1.2</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="579.60" urx="427.46" ury="590.64">
+  <Line llx="72.00" lly="579.60" urx="427.46" ury="590.64">
+   <Text>Seite 2 Zeile 3 having to modify Volto&apos;s source code at all. You have to place the</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="90.00" lly="525.86" urx="164.11" ury="563.77">
+  <Line llx="90.00" lly="552.73" urx="164.11" ury="563.77">
+   <Text>1. Numbered 1</Text>
+  </Line>
+  <Line llx="90.00" lly="539.30" urx="164.11" ury="550.34">
+   <Text>2. Numbered 2</Text>
+  </Line>
+  <Line llx="90.00" lly="525.86" urx="164.11" ury="536.90">
+   <Text>3. Numbered 3</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="39.73" ulx="72.00" uly="67.09" urx="243.64" ury="67.09" lrx="243.64" lry="39.72">
+  <Line llx="72.00" lly="56.05" urx="109.75" ury="67.09">
+   <Text artifact="true">Footer 1</Text>
+  </Line>
+  <Line llx="72.00" lly="39.72" urx="243.64" ury="53.76">
+   <Text artifact="true">Footer 2 pg. 4</Text>
+  </Line>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Page number="5" width="612.00" height="792.00">
+<Options>granularity=line</Options>
+<Content granularity="line" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="72.00" lly="732.12" urx="112.88" ury="756.60">
+  <Line llx="72.00" lly="745.56" urx="112.88" ury="756.60">
+   <Text artifact="true">Header 1</Text>
+  </Line>
+  <Line llx="72.00" lly="732.12" urx="112.87" ury="743.16">
+   <Text artifact="true">Header 2</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="704.76" urx="148.73" ury="720.72">
+  <Line llx="72.00" lly="704.76" urx="148.73" ury="720.72">
+   <Text>Heading 1.3</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="649.80" urx="433.98" ury="687.60">
+  <Line llx="72.00" lly="676.56" urx="420.52" ury="687.60">
+   <Text>Seite 3 Zeile 1 replacing component in the same original folder path inside the</Text>
+  </Line>
+  <Line llx="72.00" lly="663.24" urx="433.98" ury="674.28">
+   <Text>Seite 3 Zeile 2 We start with the first case and change the font to another Google</Text>
+  </Line>
+  <Line llx="72.00" lly="649.80" urx="429.91" ury="660.84">
+   <Text>Seite 3 Zeile 3 font, Lato. The overall font is defined in Volto and can be found in</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="39.73" ulx="72.00" uly="67.09" urx="243.64" ury="67.09" lrx="243.64" lry="39.72">
+  <Line llx="72.00" lly="56.05" urx="109.75" ury="67.09">
+   <Text artifact="true">Footer 1</Text>
+  </Line>
+  <Line llx="72.00" lly="39.72" urx="243.64" ury="53.76">
+   <Text artifact="true">Footer 2 pg. 5</Text>
+  </Line>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Page number="6" width="612.00" height="792.00">
+<Options>granularity=line</Options>
+<Content granularity="line" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="72.00" lly="732.12" urx="112.88" ury="756.60">
+  <Line llx="72.00" lly="745.56" urx="112.88" ury="756.60">
+   <Text artifact="true">Header 1</Text>
+  </Line>
+  <Line llx="72.00" lly="732.12" urx="112.87" ury="743.16">
+   <Text artifact="true">Header 2</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="692.16" urx="134.25" ury="705.12">
+  <Line llx="72.00" lly="692.16" urx="134.25" ury="705.12">
+   <Text>Heading 2.3</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="638.04" urx="406.06" ury="675.84">
+  <Line llx="72.00" lly="664.80" urx="389.41" ury="675.84">
+   <Text>Seite 1 Zeile 1 This chapter uses Volto to change displaying the dates in</Text>
+  </Line>
+  <Line llx="72.00" lly="651.37" urx="406.06" ury="662.41">
+   <Text>Seite 1 Zeile 2 talkview and talklistview. To meet the same requirements in</Text>
+  </Line>
+  <Line llx="72.00" lly="638.04" urx="381.49" ury="649.08">
+   <Text>Seite 1 Zeile 3 classic Plone see the chapter Turning Talks into Events.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="39.73" ulx="72.00" uly="67.09" urx="243.64" ury="67.09" lrx="243.64" lry="39.72">
+  <Line llx="72.00" lly="56.05" urx="109.75" ury="67.09">
+   <Text artifact="true">Footer 1</Text>
+  </Line>
+  <Line llx="72.00" lly="39.72" urx="243.64" ury="53.76">
+   <Text artifact="true">Footer 2 pg. 6</Text>
+  </Line>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Page number="7" width="612.00" height="792.00">
+<Options>granularity=line</Options>
+<Content granularity="line" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="72.00" lly="732.12" urx="112.88" ury="756.60">
+  <Line llx="72.00" lly="745.56" urx="112.88" ury="756.60">
+   <Text artifact="true">Header 1</Text>
+  </Line>
+  <Line llx="72.00" lly="732.12" urx="112.87" ury="743.16">
+   <Text artifact="true">Header 2</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="707.64" urx="134.25" ury="720.60">
+  <Line llx="72.00" lly="707.64" urx="134.25" ury="720.60">
+   <Text>Heading 2.4</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="653.41" urx="427.46" ury="691.32">
+  <Line llx="72.00" lly="680.28" urx="424.19" ury="691.32">
+   <Text>Seite 2 Zeile 1 We use a technique called component shadowing to override an</Text>
+  </Line>
+  <Line llx="72.00" lly="666.85" urx="425.83" ury="677.89">
+   <Text>Seite 2 Zeile 2 existing Volto component with our local custom version, without</Text>
+  </Line>
+  <Line llx="72.00" lly="653.41" urx="427.46" ury="664.45">
+   <Text>Seite 2 Zeile 3 having to modify Volto&apos;s source code at all. You have to place the</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="39.73" ulx="72.00" uly="67.09" urx="243.64" ury="67.09" lrx="243.64" lry="39.72">
+  <Line llx="72.00" lly="56.05" urx="109.75" ury="67.09">
+   <Text artifact="true">Footer 1</Text>
+  </Line>
+  <Line llx="72.00" lly="39.72" urx="243.64" ury="53.76">
+   <Text artifact="true">Footer 2 pg. 7</Text>
+  </Line>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Resources>
+<Fonts>
+ <Font id="F0" name="Calibri" fullname="HGRKXP+Calibri" type="TrueType" embedded="true" ascender="750.00" capheight="632.00" italicangle="0.00" descender="-250.00" weight="400.00" xheight="464.00"/>
+ <Font id="F1" name="Calibri-Light" fullname="VOSQLN+Calibri-Light" type="TrueType" embedded="true" ascender="750.00" capheight="632.00" italicangle="0.00" descender="-250.00" weight="300.00" xheight="462.00"/>
+ <Font id="F2" name="Calibri-Bold" fullname="OBBVRB+Calibri-Bold" type="TrueType" embedded="true" ascender="750.00" capheight="632.00" italicangle="0.00" descender="-250.00" weight="700.00" xheight="469.00"/>
+ <Font id="F3" name="SymbolMT" fullname="KVDXNJ+SymbolMT" type="TrueType (CID)" embedded="true" ascender="693.00" capheight="700.00" italicangle="0.00" descender="-216.00" weight="400.00" xheight="500.00"/>
+ <Font id="F4" name="ArialMT" type="TrueType" embedded="false" ascender="1040.00" capheight="716.00" italicangle="0.00" descender="-325.00" weight="400.00" xheight="519.00"/>
+</Fonts>
+<ColorSpaces>
+ <ColorSpace id="CS0" name="ICCBased" components="1" iccprofile="ICC0"/>
+ <ColorSpace id="CS1" name="ICCBased" components="3" iccprofile="ICC1"/>
+</ColorSpaces>
+</Resources>
+<Graphics>
+<ICCProfiles>
+ <ICCProfile id="ICC0" embedded="true" iccversion="2.1" profilename="Gray Gamma 2.2" checksum="66043AD0DE86F27B977BAB702FB1A778" profilecs="GRAY" deviceclass="mntr" fromCIE="true" toCIE="true"/>
+ <ICCProfile id="ICC1" embedded="true" iccversion="2.1" profilename="sRGB IEC61966-2.1" checksum="1D3FDA2EDB4A89AB60A23C5F7C7D81DD" profilecs="RGB " deviceclass="mntr" fromCIE="true" toCIE="true"/>
+</ICCProfiles>
+</Graphics>
+</Pages>
+<Destinations>
+ <Destination id="D0" page="3" type="XYZ" left="70.0" bottom="0.0" right="612.0" top="629.0"/>
+ <Destination id="D1" page="3" type="XYZ" left="70.0" bottom="0.0" right="612.0" top="558.0"/>
+ <Destination id="D2" page="4" type="XYZ" left="70.0" bottom="0.0" right="612.0" top="693.0"/>
+ <Destination id="D3" page="4" type="XYZ" left="70.0" bottom="0.0" right="612.0" top="635.0"/>
+ <Destination id="D4" page="5" type="XYZ" left="70.0" bottom="0.0" right="612.0" top="693.0"/>
+ <Destination id="D5" page="5" type="XYZ" left="70.0" bottom="0.0" right="612.0" top="635.0"/>
+ <Destination id="D6" page="6" type="XYZ" left="70.0" bottom="0.0" right="612.0" top="693.0"/>
+ <Destination id="D7" page="6" type="XYZ" left="70.0" bottom="0.0" right="612.0" top="635.0"/>
+ <Destination id="D8" page="7" type="XYZ" left="70.0" bottom="0.0" right="612.0" top="693.0"/>
+ <Destination id="D9" page="7" type="XYZ" left="70.0" bottom="0.0" right="612.0" top="635.0"/>
+ <Destination id="D10" page="5" type="XYZ" left="70.0" bottom="0.0" right="612.0" top="720.0"/>
+ <Destination id="D11" page="6" type="XYZ" left="70.0" bottom="0.0" right="612.0" top="707.0"/>
+ <Destination id="D12" page="7" type="XYZ" left="70.0" bottom="0.0" right="612.0" top="720.0"/>
+</Destinations>
+</Document>
+</TET>

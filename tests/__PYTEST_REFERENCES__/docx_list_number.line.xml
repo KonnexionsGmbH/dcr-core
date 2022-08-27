@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created by the PDFlib Text and Image Extraction Toolkit TET (www.pdflib.com) -->
+<TET xmlns="http://www.pdflib.com/XML/TET5/TET-5.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.pdflib.com/XML/TET5/TET-5.0
+ http://www.pdflib.com/XML/TET5/TET-5.0.xsd"
+ version="5.2">
+<Creation platform="Win64" tetVersion="5.3" date="2022-08-27T04:20:27+02:00" />
+<Document filename="data\inbox_dev_accepted\docx_list_number.pdf" pageCount="5" filesize="51869" linearized="true" pdfVersion="1.5" tagged="true">
+<DocInfo>
+<Author>Walter Weinmann</Author>
+<CreationDate>2022-07-04T12:28:26+02:00</CreationDate>
+<Creator>Acrobat PDFMaker 11 for Word</Creator>
+<ModDate>2022-07-04T12:28:27+02:00</ModDate>
+<Producer>Adobe PDF Library 11.0</Producer>
+<Custom key="SourceModified">D:20220704102819</Custom>
+</DocInfo>
+<Metadata>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.4-c006 80.159825, 2016/09/16-03:31:08        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""
+            xmlns:xmp="http://ns.adobe.com/xap/1.0/"
+            xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/"
+            xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:pdf="http://ns.adobe.com/pdf/1.3/"
+            xmlns:pdfx="http://ns.adobe.com/pdfx/1.3/">
+         <xmp:ModifyDate>2022-07-04T12:28:27+02:00</xmp:ModifyDate>
+         <xmp:CreateDate>2022-07-04T12:28:26+02:00</xmp:CreateDate>
+         <xmp:MetadataDate>2022-07-04T12:28:27+02:00</xmp:MetadataDate>
+         <xmp:CreatorTool>Acrobat PDFMaker 11 for Word</xmp:CreatorTool>
+         <xmpMM:DocumentID>uuid:fb89f6ce-e9f6-4e2f-908d-7f8a9f8137dc</xmpMM:DocumentID>
+         <xmpMM:InstanceID>uuid:bbf989a6-5db2-403c-8e43-85c1fef0b4ea</xmpMM:InstanceID>
+         <xmpMM:subject>
+            <rdf:Seq>
+               <rdf:li>59</rdf:li>
+            </rdf:Seq>
+         </xmpMM:subject>
+         <dc:format>application/pdf</dc:format>
+         <dc:creator>
+            <rdf:Seq>
+               <rdf:li>Walter Weinmann</rdf:li>
+            </rdf:Seq>
+         </dc:creator>
+         <pdf:Producer>Adobe PDF Library 11.0</pdf:Producer>
+         <pdfx:SourceModified>D:20220704102819</pdfx:SourceModified>
+         <pdfx:Company/>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta>
+</Metadata>
+<Options>tetml={filename={data\inbox_dev_accepted\docx_list_number.line.xml}} engines={noannotation noimage text notextcolor novector}</Options>
+<Pages>
+<Page number="1" width="595.32" height="841.92">
+<Options>granularity=line</Options>
+<Content granularity="line" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="70.80" lly="51.84" urx="136.84" ury="807.12">
+  <Line llx="70.80" lly="796.08" urx="103.57" ury="807.12">
+   <Text artifact="true">Header</Text>
+  </Line>
+  <Line llx="70.80" lly="51.84" urx="108.08" ury="62.88">
+   <Text artifact="true">Page | 1</Text>
+  </Line>
+  <Line llx="70.80" lly="762.00" urx="130.23" ury="773.04">
+   <Text>a. 1_Aaaa</Text>
+  </Line>
+  <Line llx="70.80" lly="741.48" urx="130.23" ury="752.52">
+   <Text>b. 1_Bbbb</Text>
+  </Line>
+  <Line llx="70.80" lly="721.08" urx="130.23" ury="732.12">
+   <Text>c. 1_Cccc</Text>
+  </Line>
+  <Line llx="70.80" lly="700.56" urx="130.23" ury="711.60">
+   <Text>d. 1_dddd</Text>
+  </Line>
+  <Line llx="70.80" lly="680.16" urx="130.23" ury="691.20">
+   <Text>e. 1_eeee</Text>
+  </Line>
+  <Line llx="70.80" lly="659.64" urx="130.23" ury="670.68">
+   <Text>f. 1_ffff</Text>
+  </Line>
+  <Line llx="70.80" lly="639.24" urx="130.23" ury="650.28">
+   <Text>g. 1_gggg</Text>
+  </Line>
+  <Line llx="70.80" lly="618.72" urx="130.23" ury="629.76">
+   <Text>h. 1_hhhh</Text>
+  </Line>
+  <Line llx="70.80" lly="598.32" urx="123.64" ury="609.36">
+   <Text>h. ERROR</Text>
+  </Line>
+  <Line llx="70.80" lly="557.40" urx="136.84" ury="568.44">
+   <Text>Trennlinie</Text>
+  </Line>
+  <Line llx="70.80" lly="516.36" urx="123.64" ury="527.40">
+   <Text>i. ERROR</Text>
+  </Line>
+  <Line llx="70.80" lly="495.96" urx="123.64" ury="507.00">
+   <Text>j. ERROR</Text>
+  </Line>
+  <Line llx="70.80" lly="455.04" urx="136.84" ury="466.08">
+   <Text>Trennlinie</Text>
+  </Line>
+  <Line llx="70.80" lly="414.12" urx="130.23" ury="425.16">
+   <Text>1. 2_Aaaa</Text>
+  </Line>
+  <Line llx="70.80" lly="393.60" urx="130.23" ury="404.64">
+   <Text>2. 2_Bbbb</Text>
+  </Line>
+  <Line llx="70.80" lly="373.20" urx="130.23" ury="384.24">
+   <Text>3. 2_Cccc</Text>
+  </Line>
+  <Line llx="70.80" lly="352.68" urx="130.22" ury="363.72">
+   <Text>4. 2_Dddd</Text>
+  </Line>
+  <Line llx="70.80" lly="332.28" urx="130.24" ury="343.32">
+   <Text>5. 2_Eeee</Text>
+  </Line>
+  <Line llx="70.80" lly="311.76" urx="130.24" ury="322.80">
+   <Text>6. 2_Ffff</Text>
+  </Line>
+  <Line llx="70.80" lly="291.36" urx="123.63" ury="302.40">
+   <Text>8. ERROR</Text>
+  </Line>
+  <Line llx="70.80" lly="250.44" urx="136.84" ury="261.48">
+   <Text>Trennlinie</Text>
+  </Line>
+  <Line llx="70.80" lly="209.52" urx="123.63" ury="220.56">
+   <Text>9. ERROR</Text>
+  </Line>
+  <Line llx="70.80" lly="189.00" urx="130.23" ury="200.04">
+   <Text>10. ERROR</Text>
+  </Line>
+  <Line llx="70.80" lly="148.08" urx="136.84" ury="159.12">
+   <Text>Trennlinie</Text>
+  </Line>
+  <Line llx="70.80" lly="107.16" urx="117.04" ury="118.20">
+   <Text>a ERROR</Text>
+  </Line>
+  <Line llx="70.80" lly="86.76" urx="130.23" ury="97.80">
+   <Text>I. 3_bbbb</Text>
+  </Line>
+  <Line llx="70.80" lly="66.24" urx="136.83" ury="77.28">
+   <Text>II. 3_cccc</Text>
+  </Line>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Page number="2" width="595.32" height="841.92">
+<Options>granularity=line</Options>
+<Content granularity="line" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="70.80" lly="796.08" urx="103.57" ury="807.12">
+  <Line llx="70.80" lly="796.08" urx="103.57" ury="807.12">
+   <Text artifact="true">Header</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="762.00" urx="143.43" ury="773.04">
+  <Line llx="70.80" lly="762.00" urx="143.43" ury="773.04">
+   <Text>III. 3_dddd</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="700.56" urx="136.83" ury="732.12">
+  <Line llx="70.80" lly="721.08" urx="136.83" ury="732.12">
+   <Text>IV. 3_eeee</Text>
+  </Line>
+  <Line llx="70.80" lly="700.56" urx="130.23" ury="711.60">
+   <Text>V. 3_ffff</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="659.64" urx="136.84" ury="670.68">
+  <Line llx="70.80" lly="659.64" urx="136.84" ury="670.68">
+   <Text>Trennlinie</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="557.40" urx="136.83" ury="629.76">
+  <Line llx="70.80" lly="618.72" urx="136.83" ury="629.76">
+   <Text>(1) 4_1111</Text>
+  </Line>
+  <Line llx="70.80" lly="598.32" urx="136.83" ury="609.36">
+   <Text>(2) 4_2222</Text>
+  </Line>
+  <Line llx="70.80" lly="577.80" urx="136.83" ury="588.84">
+   <Text>(3) 4_3333</Text>
+  </Line>
+  <Line llx="70.80" lly="557.40" urx="136.83" ury="568.44">
+   <Text>(4) 4_4444</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="516.36" urx="136.84" ury="527.40">
+  <Line llx="70.80" lly="516.36" urx="136.84" ury="527.40">
+   <Text>Trennlinie</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="455.04" urx="130.23" ury="486.48">
+  <Line llx="70.80" lly="475.44" urx="130.23" ury="486.48">
+   <Text>(5) ERROR</Text>
+  </Line>
+  <Line llx="70.80" lly="455.04" urx="130.23" ury="466.08">
+   <Text>(6) ERROR</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="332.28" urx="130.24" ury="425.16">
+  <Line llx="70.80" lly="414.12" urx="130.24" ury="425.16">
+   <Text>A) 5_aaaa</Text>
+  </Line>
+  <Line llx="70.80" lly="393.60" urx="130.24" ury="404.64">
+   <Text>B) 5_bbbb</Text>
+  </Line>
+  <Line llx="70.80" lly="373.20" urx="130.24" ury="384.24">
+   <Text>C) 5_cccc</Text>
+  </Line>
+  <Line llx="70.80" lly="352.68" urx="130.24" ury="363.72">
+   <Text>D) 5_dddd</Text>
+  </Line>
+  <Line llx="70.80" lly="332.28" urx="123.64" ury="343.32">
+   <Text>D) ERROR</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="291.36" urx="136.84" ury="302.40">
+  <Line llx="70.80" lly="291.36" urx="136.84" ury="302.40">
+   <Text>Trennlinie</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="229.92" urx="123.64" ury="261.48">
+  <Line llx="70.80" lly="250.44" urx="123.64" ury="261.48">
+   <Text>E) ERROR</Text>
+  </Line>
+  <Line llx="70.80" lly="229.92" urx="123.64" ury="240.96">
+   <Text>F) ERROR</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="127.68" urx="130.23" ury="200.04">
+  <Line llx="70.80" lly="189.00" urx="130.23" ury="200.04">
+   <Text>a. 6_1111</Text>
+  </Line>
+  <Line llx="70.80" lly="168.60" urx="130.23" ury="179.64">
+   <Text>b. 6_2222</Text>
+  </Line>
+  <Line llx="70.80" lly="148.08" urx="130.23" ury="159.12">
+   <Text>c. 6_3333</Text>
+  </Line>
+  <Line llx="70.80" lly="127.68" urx="130.23" ury="138.72">
+   <Text>d. 6_4444</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="86.76" urx="136.84" ury="97.80">
+  <Line llx="70.80" lly="86.76" urx="136.84" ury="97.80">
+   <Text>Trennlinie</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="51.84" urx="108.08" ury="62.88">
+  <Line llx="70.80" lly="51.84" urx="108.08" ury="62.88">
+   <Text artifact="true">Page | 2</Text>
+  </Line>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Page number="3" width="595.32" height="841.92">
+<Options>granularity=line</Options>
+<Content granularity="line" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="70.80" lly="796.08" urx="103.57" ury="807.12">
+  <Line llx="70.80" lly="796.08" urx="103.57" ury="807.12">
+   <Text artifact="true">Header</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="741.48" urx="123.63" ury="773.04">
+  <Line llx="70.80" lly="762.00" urx="123.63" ury="773.04">
+   <Text>e. ERROR</Text>
+  </Line>
+  <Line llx="70.80" lly="741.48" urx="123.63" ury="752.52">
+   <Text>f. ERROR</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="688.08" urx="524.52" ury="711.60">
+  <Line llx="70.80" lly="700.56" urx="524.52" ury="711.60">
+   <Text>i. 7_aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa</Text>
+  </Line>
+  <Line llx="70.80" lly="688.08" urx="524.51" ury="699.12">
+   <Text>aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="626.76" urx="524.69" ury="678.72">
+  <Line llx="70.80" lly="667.68" urx="136.83" ury="678.72">
+   <Text>ii. 7_bbbb</Text>
+  </Line>
+  <Line llx="70.80" lly="647.16" urx="143.43" ury="658.20">
+   <Text>iii. 7_cccc</Text>
+  </Line>
+  <Line llx="70.80" lly="626.76" urx="524.69" ury="637.80">
+   <Text>iv. 7_dddd dddd dddd dddd dddd dddd dddd dddd dddd dddd dddd dddd dddd</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="585.84" urx="136.84" ury="596.88">
+  <Line llx="70.80" lly="585.84" urx="136.84" ury="596.88">
+   <Text>Trennlinie</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="524.40" urx="136.83" ury="555.96">
+  <Line llx="70.80" lly="544.92" urx="130.23" ury="555.96">
+   <Text>vi. ERROR</Text>
+  </Line>
+  <Line llx="70.80" lly="524.40" urx="136.83" ury="535.44">
+   <Text>vii. ERROR</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="360.72" urx="130.23" ury="494.52">
+  <Line llx="70.80" lly="483.48" urx="130.23" ury="494.52">
+   <Text>a. 8_1111</Text>
+  </Line>
+  <Line llx="70.80" lly="463.08" urx="130.23" ury="474.12">
+   <Text>b. 8_2222</Text>
+  </Line>
+  <Line llx="70.80" lly="442.56" urx="130.23" ury="453.60">
+   <Text>c. 8_3333</Text>
+  </Line>
+  <Line llx="70.80" lly="422.16" urx="130.23" ury="433.20">
+   <Text>d. 8_4444</Text>
+  </Line>
+  <Line llx="70.80" lly="401.64" urx="130.23" ury="412.68">
+   <Text>e. 8_5555</Text>
+  </Line>
+  <Line llx="70.80" lly="381.24" urx="130.23" ury="392.28">
+   <Text>f. 8_6666</Text>
+  </Line>
+  <Line llx="70.80" lly="360.72" urx="130.23" ury="371.76">
+   <Text>g. 8_7777</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="319.80" urx="136.84" ury="330.84">
+  <Line llx="70.80" lly="319.80" urx="136.84" ury="330.84">
+   <Text>Trennlinie</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="258.48" urx="123.63" ury="289.92">
+  <Line llx="70.80" lly="278.88" urx="123.63" ury="289.92">
+   <Text>h. ERROR</Text>
+  </Line>
+  <Line llx="70.80" lly="258.48" urx="123.63" ury="269.52">
+   <Text>i. ERROR</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="156.12" urx="123.63" ury="228.60">
+  <Line llx="70.80" lly="217.56" urx="123.63" ury="228.60">
+   <Text>j. ERROR</Text>
+  </Line>
+  <Line llx="70.80" lly="197.04" urx="123.63" ury="208.08">
+   <Text>k. ERROR</Text>
+  </Line>
+  <Line llx="70.80" lly="176.64" urx="123.63" ury="187.68">
+   <Text>l. ERROR</Text>
+  </Line>
+  <Line llx="70.80" lly="156.12" urx="123.63" ury="167.16">
+   <Text>m. ERROR</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="115.20" urx="136.84" ury="126.24">
+  <Line llx="70.80" lly="115.20" urx="136.84" ury="126.24">
+   <Text>Trennlinie</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="51.84" urx="123.63" ury="85.32">
+  <Line llx="70.80" lly="74.28" urx="123.63" ury="85.32">
+   <Text>n. ERROR</Text>
+  </Line>
+  <Line llx="70.80" lly="51.84" urx="108.08" ury="62.88">
+   <Text artifact="true">Page | 3</Text>
+  </Line>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Page number="4" width="595.32" height="841.92">
+<Options>granularity=line</Options>
+<Annotations>
+<Annotation id="ANN0" type="Link">
+ <Box llx="170.96" lly="328.01" urx="288.02" ury="340.47"/>
+ <Action type="URI" trigger="activate" URI="https://www.faz.net/aktuell/feuilleton/thema/peter-sloterdijk"/>
+</Annotation>
+</Annotations>
+<Content granularity="line" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="70.80" lly="796.08" urx="103.57" ury="807.12">
+  <Line llx="70.80" lly="796.08" urx="103.57" ury="807.12">
+   <Text artifact="true">Header</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="762.00" urx="123.63" ury="773.04">
+  <Line llx="70.80" lly="762.00" urx="123.63" ury="773.04">
+   <Text>o. ERROR</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="659.64" urx="176.43" ury="732.12">
+  <Line llx="70.80" lly="721.08" urx="176.43" ury="732.12">
+   <Text>1. A_Mixed start</Text>
+  </Line>
+  <Line llx="70.80" lly="700.56" urx="130.23" ury="711.60">
+   <Text>2. A_Aaaa</Text>
+  </Line>
+  <Line llx="70.80" lly="680.16" urx="130.23" ury="691.20">
+   <Text>3. A_Bbbb</Text>
+  </Line>
+  <Line llx="70.80" lly="659.64" urx="130.23" ury="670.68">
+   <Text>4. A_Cccc</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="577.80" urx="130.23" ury="629.76">
+  <Line llx="70.80" lly="618.72" urx="130.23" ury="629.76">
+   <Text>1) B_Aaaa</Text>
+  </Line>
+  <Line llx="70.80" lly="598.32" urx="130.23" ury="609.36">
+   <Text>2) B_Bbbb</Text>
+  </Line>
+  <Line llx="70.80" lly="577.80" urx="130.23" ury="588.84">
+   <Text>3) B_Cccc</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="475.44" urx="169.83" ury="547.92">
+  <Line llx="70.80" lly="536.88" urx="136.83" ury="547.92">
+   <Text>(1) C_Aaaa</Text>
+  </Line>
+  <Line llx="70.80" lly="516.36" urx="136.83" ury="527.40">
+   <Text>(2) C_Bbbb</Text>
+  </Line>
+  <Line llx="70.80" lly="495.96" urx="136.83" ury="507.00">
+   <Text>(3) C_Cccc</Text>
+  </Line>
+  <Line llx="70.80" lly="475.44" urx="169.83" ury="486.48">
+   <Text>(4) C_Mixed end</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="434.52" urx="136.84" ury="445.56">
+  <Line llx="70.80" lly="434.52" urx="136.84" ury="445.56">
+   <Text>Trennlinie</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="69.00" lly="69.74" urx="524.64" ury="404.76">
+  <Line llx="75.60" lly="393.72" urx="524.53" ury="404.76">
+   <Text>i. A Ein Buch, das mit der Frage „Woher das Gute?“ im „Herz der</Text>
+  </Line>
+  <Line llx="106.80" lly="381.24" urx="524.63" ury="392.28">
+   <Text>Seinsfrage“ endet, nachdem es „Grauzonenkunde“ betrieben, also</Text>
+  </Line>
+  <Line llx="106.80" lly="368.76" urx="524.64" ury="379.80">
+   <Text>die Bedeutung des Vermischten, Mittleren und Kompromisshaften</Text>
+  </Line>
+  <Line llx="106.80" lly="356.28" urx="524.48" ury="367.32">
+   <Text>für die menschliche Selbst- und Welterkenntnis herausgearbeitet</Text>
+  </Line>
+  <Line llx="106.80" lly="343.80" urx="524.32" ury="354.84">
+   <Text>und mit Aplomb in der Kunst dingfest gemacht hat – ein solches</Text>
+  </Line>
+  <Line llx="106.80" lly="331.32" urx="524.47" ury="342.36">
+   <Text>Buch von Peter Sloterdijk darf vielleicht als Schlussstein</Text>
+  </Line>
+  <Line llx="106.80" lly="318.96" urx="524.38" ury="330.00">
+   <Text>gelten für ein opulentes Lebenswerk, das letztlich die Seinsfrage</Text>
+  </Line>
+  <Line llx="106.80" lly="306.48" urx="524.61" ury="317.52">
+   <Text>umkreist. Doch geantwortet wird bei Sloterdijk nie in</Text>
+  </Line>
+  <Line llx="106.80" lly="294.00" urx="524.52" ury="305.04">
+   <Text>Deduktionen, sondern mit intellektueller Überwältigung,</Text>
+  </Line>
+  <Line llx="106.80" lly="281.52" urx="524.61" ury="292.56">
+   <Text>untermauert von stupender Belesenheit. Wenn dieses Denken in</Text>
+  </Line>
+  <Line llx="106.80" lly="269.04" urx="524.50" ury="280.08">
+   <Text>Sphären und Blasen eines nicht ist, dann graue Theorie. Eher</Text>
+  </Line>
+  <Line llx="106.80" lly="256.56" urx="524.53" ury="267.60">
+   <Text>schon handelt es sich um spektralbunte Abenteuerphilosophie.</Text>
+  </Line>
+  <Line llx="106.80" lly="244.20" urx="524.49" ury="255.24">
+   <Text>Blendwerk lautet denn auch der hartnäckige Vorwurf der Kritiker.</Text>
+  </Line>
+  <Line llx="106.80" lly="231.72" urx="524.51" ury="242.76">
+   <Text>Da ist es durchaus gewitzt, nun eine Abblendung folgen zu lassen,</Text>
+  </Line>
+  <Line llx="106.80" lly="219.24" urx="524.33" ury="230.28">
+   <Text>die ausgerechnet den Sinn für das Abblenden – das Denken des Grau</Text>
+  </Line>
+  <Line llx="106.80" lly="206.76" urx="524.54" ury="217.80">
+   <Text>– zum Lackmustest für Philosophie macht, den neben Sloterdijk</Text>
+  </Line>
+  <Line llx="106.80" lly="194.28" urx="524.55" ury="205.32">
+   <Text>selbst nur dessen Hausgötter bestehen: Platon, Hegel, Heidegger,</Text>
+  </Line>
+  <Line llx="106.80" lly="181.80" urx="524.64" ury="192.84">
+   <Text>Nietzsche und in Maßen auch Kant. Einige Größen aus Literatur</Text>
+  </Line>
+  <Line llx="106.80" lly="169.32" urx="403.84" ury="180.36">
+   <Text>und Malerei – Männer allesamt – kommen hinzu.</Text>
+  </Line>
+  <Line llx="69.00" lly="156.96" urx="524.42" ury="168.00">
+   <Text>ii. B Cézanne war es, der den Autor mit dem Satz „Solange man nicht</Text>
+  </Line>
+  <Line llx="106.80" lly="144.48" urx="524.33" ury="155.52">
+   <Text>ein Grau gemalt hat, ist man kein Maler“ auf die Idee brachte,</Text>
+  </Line>
+  <Line llx="106.81" lly="132.00" urx="524.33" ury="143.04">
+   <Text>dieses Konditional auf die Philosophie auszudehnen. Durch allen</Text>
+  </Line>
+  <Line llx="106.82" lly="119.53" urx="524.58" ury="130.57">
+   <Text>rhetorischen Bombast hindurch lässt sich bei Sloterdijk eine</Text>
+  </Line>
+  <Line llx="106.83" lly="107.05" urx="524.34" ury="118.09">
+   <Text>kulturhistorische Makroperspektive ausmachen. Bis zum</Text>
+  </Line>
+  <Line llx="106.83" lly="94.58" urx="524.48" ury="105.62">
+   <Text>neunzehnten Jahrhundert hatte demnach das strahlende Weiß eine</Text>
+  </Line>
+  <Line llx="106.84" lly="82.21" urx="524.48" ury="93.25">
+   <Text>Sonderstellung, ein letztes Refugium der uralten</Text>
+  </Line>
+  <Line llx="106.84" lly="69.74" urx="524.60" ury="80.78">
+   <Text>Lichtmetaphysik. Dann habe auch im Bereich der Farben die große</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="51.84" urx="108.08" ury="62.88">
+  <Line llx="70.80" lly="51.84" urx="108.08" ury="62.88">
+   <Text artifact="true">Page | 4</Text>
+  </Line>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Page number="5" width="595.32" height="841.92">
+<Options>granularity=line</Options>
+<Annotations>
+<Annotation id="ANN0" type="Link">
+ <Box llx="157.41" lly="671.38" urx="250.21" ury="683.84"/>
+ <Action type="URI" trigger="activate" URI="https://www.faz.net/aktuell/politik/thema/angela-merkel"/>
+</Annotation>
+</Annotations>
+<Content granularity="line" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="70.80" lly="796.08" urx="103.57" ury="807.12">
+  <Line llx="70.80" lly="796.08" urx="103.57" ury="807.12">
+   <Text artifact="true">Header</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="62.40" lly="288.48" urx="524.68" ury="773.04">
+  <Line llx="106.80" lly="762.00" urx="524.44" ury="773.04">
+   <Text>Enthierarchisierung und Säkularisierung eingesetzt. Statt einer</Text>
+  </Line>
+  <Line llx="106.81" lly="749.52" urx="524.43" ury="760.56">
+   <Text>liturgisch-allegorisch festgelegten Farbrangfolge herrschten nun</Text>
+  </Line>
+  <Line llx="106.80" lly="737.05" urx="524.43" ury="748.09">
+   <Text>die „United Colors of Everything“, eine polychrome Idylle der</Text>
+  </Line>
+  <Line llx="106.80" lly="724.57" urx="524.56" ury="735.61">
+   <Text>totalen Toleranz. Wobei nicht der Regenbogen für Sloterdijk das</Text>
+  </Line>
+  <Line llx="106.81" lly="712.10" urx="509.45" ury="723.14">
+   <Text>treffende Symbol ist, sondern ein Schmutzgrau des Vermengten.</Text>
+  </Line>
+  <Line llx="62.40" lly="699.72" urx="524.35" ury="710.76">
+   <Text>iii. C Eine „graue Ethik“ habe denn auch diese einst von der Kunst</Text>
+  </Line>
+  <Line llx="106.80" lly="687.24" urx="524.55" ury="698.28">
+   <Text>mit angeführte Freiheitsbewegung begleitet. Dazu eine erwartbare</Text>
+  </Line>
+  <Line llx="106.80" lly="674.76" urx="524.60" ury="685.80">
+   <Text>Spitze: Angela Merkel, „zugleich lau und machtbesessen“, gilt</Text>
+  </Line>
+  <Line llx="106.80" lly="662.28" urx="524.49" ury="673.32">
+   <Text>Sloterdijk als vorläufiger Gipfelpunkt der sich um alle</Text>
+  </Line>
+  <Line llx="106.80" lly="649.80" urx="524.52" ury="660.84">
+   <Text>Entscheidungen drückenden Bewegung zur Mitte hin, die vermutlich</Text>
+  </Line>
+  <Line llx="106.80" lly="637.32" urx="524.54" ury="648.36">
+   <Text>in einer graugrünen „ökobürokratischen Verordnungspolitik“ enden</Text>
+  </Line>
+  <Line llx="106.80" lly="624.84" urx="524.52" ury="635.88">
+   <Text>werde: „Dreckfarbigkeit bildet das unumgängliche Resultat der</Text>
+  </Line>
+  <Line llx="106.80" lly="612.48" urx="524.38" ury="623.52">
+   <Text>postmodernen Mixophilie.“ Das Grau wäre so „die farblose Allfarbe</Text>
+  </Line>
+  <Line llx="106.80" lly="600.00" urx="285.07" ury="611.04">
+   <Text>der entfremdeten Freiheit“.</Text>
+  </Line>
+  <Line llx="69.00" lly="587.52" urx="524.61" ury="598.56">
+   <Text>iv. D Aber diese wenig originelle Verfallserzählung, der moderne</Text>
+  </Line>
+  <Line llx="106.80" lly="575.04" urx="524.64" ury="586.08">
+   <Text>Staat als „der Große Graue“, der „die ‚absolute‘ Monarchie an</Text>
+  </Line>
+  <Line llx="106.80" lly="562.56" urx="524.54" ury="573.60">
+   <Text>Ausdehnung seiner Zuständigkeiten und Durchdringungstiefe seiner</Text>
+  </Line>
+  <Line llx="106.80" lly="550.08" urx="524.62" ury="561.12">
+   <Text>Maßnahmen um ein Vielfaches übertrifft“, ist nur das eine.</Text>
+  </Line>
+  <Line llx="106.80" lly="537.72" urx="524.67" ury="548.76">
+   <Text>Sloterdijk scheint es mit Goethes Farbenlehre zu halten, in der</Text>
+  </Line>
+  <Line llx="106.80" lly="525.24" urx="524.37" ury="536.28">
+   <Text>er „zweierlei Grau“ unterschieden sieht: neben dem „trüben“</Text>
+  </Line>
+  <Line llx="106.80" lly="512.76" urx="524.49" ury="523.80">
+   <Text>Farbmischgrau ein Reingrau, also durch weißes Licht abgetöntes</Text>
+  </Line>
+  <Line llx="106.80" lly="500.28" urx="524.33" ury="511.32">
+   <Text>Schwarz. Und so wird das „Grau-in-Grau“ der Philosophen oder das</Text>
+  </Line>
+  <Line llx="106.80" lly="487.80" urx="524.68" ury="498.84">
+   <Text>der Künstler, „das dich berührt“, hier keineswegs diskreditiert.</Text>
+  </Line>
+  <Line llx="106.80" lly="475.32" urx="524.49" ury="486.36">
+   <Text>Im Gegenteil: Grau in Reinform gilt für Sloterdijk als Farbe des</Text>
+  </Line>
+  <Line llx="106.80" lly="462.96" urx="524.61" ury="474.00">
+   <Text>Denkens. In den Kapiteln, die assoziativ Motivgeschichte und</Text>
+  </Line>
+  <Line llx="106.80" lly="450.48" urx="463.33" ury="461.52">
+   <Text>Metaphorologie überkreuzen, ist das Buch am stärksten.</Text>
+  </Line>
+  <Line llx="75.60" lly="438.00" urx="524.44" ury="449.04">
+   <Text>v. E Schön liest sich, wie der Autor literarische Grau-Figurationen</Text>
+  </Line>
+  <Line llx="106.80" lly="425.52" urx="524.55" ury="436.56">
+   <Text>aufstöbert. Zu ihnen gehört natürlich das Husum-Gedicht „Die</Text>
+  </Line>
+  <Line llx="106.80" lly="413.04" urx="524.54" ury="424.08">
+   <Text>Stadt“ von Theodor Storm („Am grauen Strand, am grauen Meer“),</Text>
+  </Line>
+  <Line llx="106.80" lly="400.56" urx="524.49" ury="411.60">
+   <Text>aber fast erstaunlicherweise nicht Herbert Grönemeyers</Text>
+  </Line>
+  <Line llx="106.80" lly="388.20" urx="524.50" ury="399.24">
+   <Text>Coverversion als „Bochum“-Song („vor Arbeit ganz grau“). Grandios</Text>
+  </Line>
+  <Line llx="106.80" lly="375.72" urx="524.54" ury="386.76">
+   <Text>sind die religionsgeschichtlichen Überlegungen zum Übergang vom</Text>
+  </Line>
+  <Line llx="106.80" lly="363.24" urx="524.49" ury="374.28">
+   <Text>Manichäismus zum Christentum, womit der Punkt aufgespürt ist, an</Text>
+  </Line>
+  <Line llx="106.80" lly="350.76" urx="524.49" ury="361.80">
+   <Text>dem das Dritte zwischen Licht und Dunkel die Bühne betritt, Grau</Text>
+  </Line>
+  <Line llx="106.80" lly="338.28" urx="524.64" ury="349.32">
+   <Text>in seiner welthaltigsten Manifestation. Weniger „zynisch“ als</Text>
+  </Line>
+  <Line llx="106.80" lly="325.80" urx="524.64" ury="336.84">
+   <Text>platt wirkt indes die Engführung von „Grau und Frau“, Geraune</Text>
+  </Line>
+  <Line llx="106.80" lly="313.32" urx="524.49" ury="324.36">
+   <Text>über Altweibergraues bei Goethe, Schnitzler und Musil, zumal das</Text>
+  </Line>
+  <Line llx="106.80" lly="300.96" urx="524.48" ury="312.00">
+   <Text>Kapitel abgebrochen wird mit der Vermutung, „wenn man keine Frau</Text>
+  </Line>
+  <Line llx="106.80" lly="288.48" urx="443.52" ury="299.52">
+   <Text>ist, kann man so etwas heute nicht mehr schreiben“.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="51.84" urx="108.08" ury="62.88">
+  <Line llx="70.80" lly="51.84" urx="108.08" ury="62.88">
+   <Text artifact="true">Page | 5</Text>
+  </Line>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Resources>
+<Fonts>
+ <Font id="F0" name="Calibri" fullname="BILMVR+Calibri" type="TrueType" embedded="true" ascender="750.00" capheight="632.00" italicangle="0.00" descender="-250.00" weight="400.00" xheight="464.00"/>
+ <Font id="F1" name="CourierNewPSMT" type="TrueType" embedded="false" ascender="1021.00" capheight="571.00" italicangle="0.00" descender="-680.00" weight="400.00" xheight="423.00"/>
+ <Font id="F2" name="ArialMT" type="TrueType" embedded="false" ascender="1040.00" capheight="716.00" italicangle="0.00" descender="-325.00" weight="400.00" xheight="519.00"/>
+</Fonts>
+<ColorSpaces>
+ <ColorSpace id="CS0" name="ICCBased" components="1" iccprofile="ICC0"/>
+ <ColorSpace id="CS1" name="ICCBased" components="3" iccprofile="ICC1"/>
+</ColorSpaces>
+</Resources>
+<Graphics>
+<ICCProfiles>
+ <ICCProfile id="ICC0" embedded="true" iccversion="2.1" profilename="Gray Gamma 2.2" checksum="66043AD0DE86F27B977BAB702FB1A778" profilecs="GRAY" deviceclass="mntr" fromCIE="true" toCIE="true"/>
+ <ICCProfile id="ICC1" embedded="true" iccversion="2.1" profilename="sRGB IEC61966-2.1" checksum="1D3FDA2EDB4A89AB60A23C5F7C7D81DD" profilecs="RGB " deviceclass="mntr" fromCIE="true" toCIE="true"/>
+</ICCProfiles>
+</Graphics>
+</Pages>
+</Document>
+</TET>
