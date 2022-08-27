@@ -54,7 +54,7 @@ class LineTypeListBullet:
                     For documentation purposes. Defaults to "".
         """
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
-        dcr_core.core_glob.logger.debug("param file_name_curr =%s", file_name_curr)
+        dcr_core.core_glob.logger.debug("param file_name_curr=%s", file_name_curr)
 
         dcr_core.core_utils.check_exists_object(
             is_line_type_headers_footers=True,
@@ -493,12 +493,12 @@ class LineTypeListBullet:
                     The document pages formatted in the parser.
         """
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
-        dcr_core.core_glob.logger.debug("param directory_name      =%s", directory_name)
-        dcr_core.core_glob.logger.debug("param document_id         =%i", document_id)
-        dcr_core.core_glob.logger.debug("param environment_variant =%s", environment_variant)
-        dcr_core.core_glob.logger.debug("param file_name_curr      =%s", file_name_curr)
-        dcr_core.core_glob.logger.debug("param file_name_orig      =%s", file_name_orig)
-        dcr_core.core_glob.logger.debug("param line_pages_json     =%s", line_pages_json)
+        dcr_core.core_glob.logger.debug("param directory_name     =%s", directory_name)
+        dcr_core.core_glob.logger.debug("param document_id        =%i", document_id)
+        dcr_core.core_glob.logger.debug("param environment_variant=%s", environment_variant)
+        dcr_core.core_glob.logger.debug("param file_name_curr     =%s", file_name_curr)
+        dcr_core.core_glob.logger.debug("param file_name_orig     =%s", file_name_orig)
+        dcr_core.core_glob.logger.debug("param line_pages_json    =%s", line_pages_json)
 
         dcr_core.core_utils.check_exists_object(
             is_line_type_headers_footers=True,

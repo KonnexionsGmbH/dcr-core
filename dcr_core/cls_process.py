@@ -345,6 +345,9 @@ class Process:
         # noinspection PyUnresolvedReferences
         self._no_pdf_pages = len(PyPDF2.PdfReader(self._full_name_in_pdflib).pages)
 
+        if self._no_pdf_pages == 0:
+            raise RuntimeError(f"The number of pages of the PDF document {self._full_name_in_pdflib} cannot be determined")
+
         self._full_name_in_parser_line = dcr_core.core_utils.get_full_name_from_components(
             self._full_name_in_directory,
             self._full_name_in_stem_name + "." + dcr_core.cls_nlp_core.NLPCore.LINE_XML_VARIATION + dcr_core.core_glob.FILE_TYPE_XML,
@@ -484,8 +487,8 @@ class Process:
         dcr_core.core_glob.initialise_logger()
 
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
-        dcr_core.core_glob.logger.debug("param full_name_in      =%s", full_name_in)
-        dcr_core.core_glob.logger.debug("param document_id       =%i", document_id)
+        dcr_core.core_glob.logger.debug("param full_name_in=%s", full_name_in)
+        dcr_core.core_glob.logger.debug("param document_id =%i", document_id)
 
         self._document_process_init()
 
@@ -567,9 +570,9 @@ class Process:
                                otherwise a corresponding error code and error message.
         """
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
-        dcr_core.core_glob.logger.debug("param full_name_in       =%s", full_name_in)
-        dcr_core.core_glob.logger.debug("param full_name_out      =%s", full_name_out)
-        dcr_core.core_glob.logger.debug("param language_pandoc    =%s", language_pandoc)
+        dcr_core.core_glob.logger.debug("param full_name_in   =%s", full_name_in)
+        dcr_core.core_glob.logger.debug("param full_name_out  =%s", full_name_out)
+        dcr_core.core_glob.logger.debug("param language_pandoc=%s", language_pandoc)
 
         # Convert the document
         extra_args = [
