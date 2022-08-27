@@ -534,7 +534,7 @@ class LineTypeHeaderFooters:
         """
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
         dcr_core.core_glob.logger.debug("param file_name_curr =%s", file_name_curr)
-        dcr_core.core_glob.logger.debug("param line_pages_json=%i", line_pages_json)
+        dcr_core.core_glob.logger.debug("param line_pages_json=%s", line_pages_json)
 
         dcr_core.core_utils.check_exists_object(
             is_setup=True,

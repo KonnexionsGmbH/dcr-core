@@ -71,8 +71,6 @@ class Process:
     # ------------------------------------------------------------------
     def __init__(self) -> None:
         """Initialise the instance."""
-        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
-
         self._document_id: int = 0
 
         self._full_name_in: str = ""
@@ -107,8 +105,6 @@ class Process:
         self._no_pdf_pages: int = 0
 
         self._exist = True
-
-        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
 
     # ------------------------------------------------------------------
     # Check the document by the file extension and determine further

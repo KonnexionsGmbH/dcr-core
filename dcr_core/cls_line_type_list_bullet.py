@@ -498,7 +498,7 @@ class LineTypeListBullet:
         dcr_core.core_glob.logger.debug("param environment_variant =%s", environment_variant)
         dcr_core.core_glob.logger.debug("param file_name_curr      =%s", file_name_curr)
         dcr_core.core_glob.logger.debug("param file_name_orig      =%s", file_name_orig)
-        dcr_core.core_glob.logger.debug("param line_pages_json     =%i", line_pages_json)
+        dcr_core.core_glob.logger.debug("param line_pages_json     =%s", line_pages_json)
 
         dcr_core.core_utils.check_exists_object(
             is_line_type_headers_footers=True,
