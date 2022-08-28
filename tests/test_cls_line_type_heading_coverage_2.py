@@ -25,7 +25,7 @@ def test(fxtr_rmdir_opt, fxtr_setup_empty_inbox):  # noqa: C901
     # -------------------------------------------------------------------------
     try:
         del dcr_core.core_glob.text_parser
-    except NameError:
+    except (AttributeError, NameError):
         pass
 
     with pytest.raises(SystemExit) as expt:
@@ -39,7 +39,7 @@ def test(fxtr_rmdir_opt, fxtr_setup_empty_inbox):  # noqa: C901
     # -------------------------------------------------------------------------
     try:
         del dcr_core.core_glob.line_type_header_footer
-    except NameError:
+    except (AttributeError, NameError):
         pass
 
     with pytest.raises(SystemExit) as expt:
@@ -53,7 +53,7 @@ def test(fxtr_rmdir_opt, fxtr_setup_empty_inbox):  # noqa: C901
     # -------------------------------------------------------------------------
     try:
         del dcr_core.core_glob.line_type_toc
-    except NameError:
+    except (AttributeError, NameError):
         pass
 
     with pytest.raises(SystemExit) as expt:
@@ -67,7 +67,7 @@ def test(fxtr_rmdir_opt, fxtr_setup_empty_inbox):  # noqa: C901
     # -------------------------------------------------------------------------
     try:
         del dcr_core.core_glob.line_type_table
-    except NameError:
+    except (AttributeError, NameError):
         pass
 
     with pytest.raises(SystemExit) as expt:
@@ -81,7 +81,7 @@ def test(fxtr_rmdir_opt, fxtr_setup_empty_inbox):  # noqa: C901
     # -------------------------------------------------------------------------
     try:
         del dcr_core.core_glob.line_type_list_bullet
-    except NameError:
+    except (AttributeError, NameError):
         pass
 
     with pytest.raises(SystemExit) as expt:
@@ -95,7 +95,7 @@ def test(fxtr_rmdir_opt, fxtr_setup_empty_inbox):  # noqa: C901
     # -------------------------------------------------------------------------
     try:
         del dcr_core.core_glob.line_type_list_number
-    except NameError:
+    except (AttributeError, NameError):
         pass
 
     with pytest.raises(SystemExit) as expt:

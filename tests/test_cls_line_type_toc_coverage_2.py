@@ -21,7 +21,7 @@ def test(fxtr_rmdir_opt, fxtr_setup_empty_inbox):
     # -------------------------------------------------------------------------
     try:
         del dcr_core.core_glob.text_parser
-    except NameError:
+    except (AttributeError, NameError):
         pass
 
     with pytest.raises(SystemExit) as expt:
@@ -35,7 +35,7 @@ def test(fxtr_rmdir_opt, fxtr_setup_empty_inbox):
     # -------------------------------------------------------------------------
     try:
         del dcr_core.core_glob.line_type_header_footer
-    except NameError:
+    except (AttributeError, NameError):
         pass
 
     with pytest.raises(SystemExit) as expt:

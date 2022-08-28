@@ -16,6 +16,11 @@ import dcr_core.cls_tokenizer_spacy
 def test():
     """Test Cases TokenizerSpacy - Coverage."""
     # -------------------------------------------------------------------------
+    try:
+        del dcr_core.core_glob.setup
+    except (AttributeError, NameError):
+        pass
+
     with pytest.raises(SystemExit) as expt:
         dcr_core.cls_tokenizer_spacy.TokenizerSpacy()
 
