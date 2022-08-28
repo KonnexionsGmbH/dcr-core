@@ -273,8 +273,8 @@ class Process:
             )
 
             if is_parsing_line:
-                self._no_lines_footer = dcr_core.core_glob.line_type_headers_footers.no_lines_footer
-                self._no_lines_header = dcr_core.core_glob.line_type_headers_footers.no_lines_header
+                self._no_lines_footer = dcr_core.core_glob.line_type_header_footer.no_lines_footer
+                self._no_lines_header = dcr_core.core_glob.line_type_header_footer.no_lines_header
                 self._no_lines_toc = dcr_core.core_glob.line_type_toc.no_lines_toc
 
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)

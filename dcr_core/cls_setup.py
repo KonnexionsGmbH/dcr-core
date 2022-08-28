@@ -139,7 +139,7 @@ class Setup:
     _DCR_CFG_TOKENIZE_2_DATABASE: ClassVar[str] = "tokenize_2_database"
     _DCR_CFG_TOKENIZE_2_JSONFILE: ClassVar[str] = "tokenize_2_jsonfile"
     _DCR_CFG_VERBOSE: ClassVar[str] = "verbose"
-    _DCR_CFG_VERBOSE_LT_HEADERS_FOOTERS: ClassVar[str] = "verbose_lt_headers_footers"
+    _DCR_CFG_VERBOSE_LT_HEADER_FOOTER: ClassVar[str] = "verbose_lt_header_footer"
     _DCR_CFG_VERBOSE_LT_HEADING: ClassVar[str] = "verbose_lt_heading"
     _DCR_CFG_VERBOSE_LT_LIST_BULLET: ClassVar[str] = "verbose_lt_list_bullet"
     _DCR_CFG_VERBOSE_LT_LIST_NUMBER: ClassVar[str] = "verbose_lt_list_number"
@@ -226,7 +226,7 @@ class Setup:
         self.is_tokenize_2_database = True
         self.is_tokenize_2_jsonfile = True
         self.is_verbose = True
-        self.is_verbose_lt_headers_footers = False
+        self.is_verbose_lt_header_footer = False
         self.is_verbose_lt_heading = False
         self.is_verbose_lt_list_bullet = False
         self.is_verbose_lt_list_number = False
@@ -399,8 +399,8 @@ class Setup:
                 )
 
         self.is_verbose = self._determine_config_param_boolean(Setup._DCR_CFG_VERBOSE, self.is_verbose)
-        self.is_verbose_lt_headers_footers = self._determine_config_param_boolean(
-            Setup._DCR_CFG_VERBOSE_LT_HEADERS_FOOTERS, self.is_verbose_lt_headers_footers
+        self.is_verbose_lt_header_footer = self._determine_config_param_boolean(
+            Setup._DCR_CFG_VERBOSE_LT_HEADER_FOOTER, self.is_verbose_lt_header_footer
         )
         self.is_verbose_lt_heading = self._determine_config_param_boolean(Setup._DCR_CFG_VERBOSE_LT_HEADING, self.is_verbose_lt_heading)
         self.is_verbose_lt_list_bullet = self._determine_config_param_boolean(
@@ -814,7 +814,7 @@ class Setup:
                             | Setup._DCR_CFG_TOKENIZE_2_DATABASE
                             | Setup._DCR_CFG_TOKENIZE_2_JSONFILE
                             | Setup._DCR_CFG_VERBOSE
-                            | Setup._DCR_CFG_VERBOSE_LT_HEADERS_FOOTERS
+                            | Setup._DCR_CFG_VERBOSE_LT_HEADER_FOOTER
                             | Setup._DCR_CFG_VERBOSE_LT_HEADING
                             | Setup._DCR_CFG_VERBOSE_LT_LIST_BULLET
                             | Setup._DCR_CFG_VERBOSE_LT_LIST_NUMBER

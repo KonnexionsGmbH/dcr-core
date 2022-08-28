@@ -1,4 +1,6 @@
 """Testing Class TokenizerSpacy."""
+import pytest
+
 import dcr_core
 import dcr_core.cls_tokenizer_spacy
 
@@ -11,9 +13,18 @@ import dcr_core.cls_tokenizer_spacy
 # -----------------------------------------------------------------------------
 # Test Cases TokenizerSpacy - Coverage.
 # -----------------------------------------------------------------------------
-def test_tokenizer_spacy_coverage():
+def test():
     """Test Cases TokenizerSpacy - Coverage."""
     # -------------------------------------------------------------------------
-    instance_e = dcr_core.cls_tokenizer_spacy.TokenizerSpacy()
+    with pytest.raises(SystemExit) as expt:
+        dcr_core.cls_tokenizer_spacy.TokenizerSpacy()
 
-    instance_e.exists()
+    assert expt.type == SystemExit, "Instance of Setup is missing"
+    assert expt.value.code == 1, "Instance of Setup is missing"
+
+    dcr_core.core_glob.setup = dcr_core.cls_setup.Setup()
+
+    # -------------------------------------------------------------------------
+    instance = dcr_core.cls_tokenizer_spacy.TokenizerSpacy()
+
+    instance.exists()

@@ -63,7 +63,7 @@ class LineTypeHeading:
         dcr_core.core_glob.logger.debug("param file_name_curr=%s", file_name_curr)
 
         dcr_core.core_utils.check_exists_object(
-            is_line_type_headers_footers=True,
+            is_line_type_header_footer=True,
             is_line_type_list_bullet=True,
             is_line_type_list_number=True,
             is_line_type_table=True,
@@ -687,7 +687,7 @@ class LineTypeHeading:
         dcr_core.core_glob.logger.debug("param line_pages_json=%s", line_pages_json)
 
         dcr_core.core_utils.check_exists_object(
-            is_line_type_headers_footers=True,
+            is_line_type_header_footer=True,
             is_line_type_list_bullet=True,
             is_line_type_list_number=True,
             is_line_type_table=True,

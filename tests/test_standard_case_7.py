@@ -1,12 +1,9 @@
 # pylint: disable=unused-argument
-"""Testing Class LineTypeTable."""
+"""Testing Standard Cases."""
 import pytest
 
 import dcr_core
-import dcr_core.cls_line_type_header_footer
-import dcr_core.cls_line_type_toc
 import dcr_core.cls_process
-import dcr_core.cls_text_parser
 
 # -----------------------------------------------------------------------------
 # Constants & Globals.
@@ -15,34 +12,14 @@ import dcr_core.cls_text_parser
 
 
 # -----------------------------------------------------------------------------
-# Test Cases Line Type Table.
+# Test Case 7.
 # -----------------------------------------------------------------------------
-@pytest.mark.parametrize(
-    "input_output",
-    [
-        # input_output0
-        (
-            "docx_table",
-            "pdf",
-            [
-                "docx_table.line.json",
-                "docx_table.line.xml",
-                "docx_table.line_table.json",
-                "docx_table.line_token.json",
-                "docx_table.page.json",
-                "docx_table.page.xml",
-                "docx_table.pdf",
-                "docx_table.word.json",
-                "docx_table.word.xml",
-            ],
-        ),
-    ],
-)
-def test(input_output: tuple[str, str, list[str]], fxtr_setup_empty_inbox):
-    """Test Cases Line Type Table."""
+def test(fxtr_setup_empty_inbox):
+    """Test Case 7."""
     # -------------------------------------------------------------------------
     directory_name = dcr_core.core_glob.setup.directory_inbox
-    (stem_name, file_extension, test_files) = input_output
+    stem_name = "case_7_cfg_wrong_extension"
+    file_extension = "cfg"
 
     full_name = dcr_core.core_utils.get_full_name_from_components(directory_name, stem_name, file_extension)
 
@@ -57,7 +34,8 @@ def test(input_output: tuple[str, str, list[str]], fxtr_setup_empty_inbox):
     # -------------------------------------------------------------------------
     instance = dcr_core.cls_process.Process()
 
-    instance.document_process(full_name)
+    with pytest.raises(RuntimeError) as e:
+        instance.document_process(full_name)
 
-    # -------------------------------------------------------------------------
-    pytest.helpers.verify_created_files(directory_name, test_files)
+    assert e.type == RuntimeError, f"Unknown file extension - file={full_name}"
+    assert str(e.value)[0:6] == "01.901", f"Unknown file extension - file={full_name}"

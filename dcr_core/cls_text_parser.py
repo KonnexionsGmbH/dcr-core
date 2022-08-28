@@ -17,7 +17,7 @@ import collections.abc
 import datetime
 import json
 
-import dcr_core.cls_line_type_headers_footers
+import dcr_core.cls_line_type_header_footer
 import dcr_core.cls_line_type_heading
 import dcr_core.cls_line_type_list_bullet
 import dcr_core.cls_line_type_list_number
@@ -136,8 +136,8 @@ class TextParser:
                 {
                     dcr_core.cls_nlp_core.NLPCore.JSON_NAME_DOC_ID: self._document_id,
                     dcr_core.cls_nlp_core.NLPCore.JSON_NAME_DOC_FILE_NAME: self._file_name_orig,
-                    dcr_core.cls_nlp_core.NLPCore.JSON_NAME_NO_LINES_FOOTER: dcr_core.core_glob.line_type_headers_footers.no_lines_footer,
-                    dcr_core.cls_nlp_core.NLPCore.JSON_NAME_NO_LINES_HEADER: dcr_core.core_glob.line_type_headers_footers.no_lines_header,
+                    dcr_core.cls_nlp_core.NLPCore.JSON_NAME_NO_LINES_FOOTER: dcr_core.core_glob.line_type_header_footer.no_lines_footer,
+                    dcr_core.cls_nlp_core.NLPCore.JSON_NAME_NO_LINES_HEADER: dcr_core.core_glob.line_type_header_footer.no_lines_header,
                     dcr_core.cls_nlp_core.NLPCore.JSON_NAME_NO_LINES_IN_DOC: self._parse_result_no_lines_in_doc,
                     dcr_core.cls_nlp_core.NLPCore.JSON_NAME_NO_LINES_TOC: dcr_core.core_glob.line_type_toc.no_lines_toc,
                     dcr_core.cls_nlp_core.NLPCore.JSON_NAME_NO_LISTS_BULLET_IN_DOC: dcr_core.core_glob.line_type_list_bullet.no_lists,
@@ -776,7 +776,7 @@ class TextParser:
         if dcr_core.core_glob.setup.is_parsing_line:
             self._parse_result_no_lines_in_doc = 0
             self.parse_result_line_pages = []
-            dcr_core.core_glob.line_type_headers_footers = dcr_core.cls_line_type_headers_footers.LineTypeHeaderFooters(
+            dcr_core.core_glob.line_type_header_footer = dcr_core.cls_line_type_header_footer.LineTypeHeaderFooter(
                 file_name_curr=self._file_name_curr,
             )
             dcr_core.core_glob.line_type_toc = dcr_core.cls_line_type_toc.LineTypeToc(
@@ -811,7 +811,7 @@ class TextParser:
                     self._parse_tag_page(child_tag, child)
 
         if dcr_core.core_glob.setup.is_parsing_line:
-            dcr_core.core_glob.line_type_headers_footers.process_document(
+            dcr_core.core_glob.line_type_header_footer.process_document(
                 file_name_curr=self._file_name_curr,
                 line_pages_json=self.parse_result_line_pages,
             )

@@ -6,7 +6,7 @@
 import pathlib
 
 def check_exists_object(
-    is_line_type_headers_footers: bool = False,
+    is_line_type_header_footer: bool = False,
     is_line_type_list_bullet: bool = False,
     is_line_type_list_number: bool = False,
     is_line_type_table: bool = False,

@@ -16,7 +16,7 @@ import dcr_core
 # Check the existence of objects.
 # ------------------------------------------------------------------
 def check_exists_object(  # noqa: C901
-    is_line_type_headers_footers: bool = False,
+    is_line_type_header_footer: bool = False,
     is_line_type_list_bullet: bool = False,
     is_line_type_list_number: bool = False,
     is_line_type_table: bool = False,
@@ -27,7 +27,7 @@ def check_exists_object(  # noqa: C901
     """Check the existence of objects.
 
     Args:
-        is_line_type_headers_footers (bool, optional):
+        is_line_type_header_footer (bool, optional):
             Check an object of class LineTypeHeadersFooters. Defaults to False.
         is_line_type_list_bullet (bool, optional):
             Check an object of class LineTypeListBullet. Defaults to False.
@@ -42,9 +42,9 @@ def check_exists_object(  # noqa: C901
         is_text_parser (bool, optional):
             Check an object of class TextParser. Defaults to False.
     """
-    if is_line_type_headers_footers:
+    if is_line_type_header_footer:
         try:
-            dcr_core.core_glob.line_type_headers_footers.exists()  # type: ignore
+            dcr_core.core_glob.line_type_header_footer.exists()  # type: ignore
         except AttributeError:
             terminate_fatal(
                 "The required instance of the class 'LineTypeHeadersFooters' does not yet exist.",

@@ -11,9 +11,9 @@ import dcr_core.cls_nlp_core
 # -----------------------------------------------------------------------------
 # Test Cases NLPCore - Coverage.
 # -----------------------------------------------------------------------------
-def test_nlp_core_coverage():
+def test():
     """Test Cases NLPCore - Coverage."""
     # -------------------------------------------------------------------------
-    instance_e = dcr_core.cls_nlp_core.NLPCore()
+    instance = dcr_core.cls_nlp_core.NLPCore()
 
-    instance_e.exists()
+    instance.exists()

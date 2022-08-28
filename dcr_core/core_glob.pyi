@@ -5,7 +5,7 @@
 """Module stub file."""
 import logging
 
-import dcr_core.cls_line_type_headers_footers
+import dcr_core.cls_line_type_header_footer
 import dcr_core.cls_line_type_heading
 import dcr_core.cls_line_type_list_bullet
 import dcr_core.cls_line_type_list_number
@@ -35,7 +35,7 @@ LOGGER_PROGRESS_UPDATE: str
 LOGGER_START: str
 RETURN_OK: tuple[str, str]
 
-line_type_headers_footers: dcr_core.cls_line_type_headers_footers.LineTypeHeaderFooters
+line_type_header_footer: dcr_core.cls_line_type_header_footer.LineTypeHeaderFooter
 line_type_heading: dcr_core.cls_line_type_heading.LineTypeHeading
 line_type_list_bullet: dcr_core.cls_line_type_list_bullet.LineTypeListBullet
 line_type_list_number: dcr_core.cls_line_type_list_number.LineTypeListNumber
