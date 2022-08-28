@@ -56,9 +56,6 @@ jobs:
             sudo dpkg -i pandoc-${VERSION_PANDOC}-1-amd64.deb
       - name: Install Step 3 - Tesseract OCR
         run: |
-  #         sudo apt-get install -y apt-transport-https
-  #         echo "deb https://notesalexp.org/tesseract-ocr5/$(lsb_release -cs)/ $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/notesalexp.list > /dev/null
-  #         wget -O - https://notesalexp.org/debian/alexp_key.asc | sudo apt-key add -
             sudo apt-get update -y
             sudo add-apt-repository ppa:alex-p/tesseract-ocr-devel
             sudo apt-get install -y tesseract-ocr
