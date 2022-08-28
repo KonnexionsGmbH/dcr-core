@@ -18,7 +18,8 @@ jobs:
     strategy:
       max-parallel: 4
       matrix:
-        os: ["ubuntu-20.04", "ubuntu-22.04"]
+#        os: ["ubuntu-20.04", "ubuntu-22.04"]
+        os: ["ubuntu-20.04"]
         python-version: ["3.10.6"]
     steps:
       - uses: actions/checkout@v3
@@ -49,18 +50,21 @@ jobs:
             sudo apt-get install -y poppler-utils
             sudo apt-get install -y texlive-full
             sudo apt-get install -y wget
-            echo "Current version of Poppler: $(pdftocairo -v)"
-            echo "Current version of TeX Live: $(pdflatex --version)"
       - name: Install Step 2 - Pandoc
         run: |
             wget https://github.com/jgm/pandoc/releases/download/${VERSION_PANDOC}/pandoc-${VERSION_PANDOC}-1-amd64.deb
             sudo dpkg -i pandoc-${VERSION_PANDOC}-1-amd64.deb
-            echo "Current version of Pandoc: $(pandoc -v)"
       - name: Install Step 3 - Tesseract OCR
         run: |
             sudo add-apt-repository ppa:alex-p/tesseract-ocr-devel
             sudo apt-get update -y
             sudo apt-get install -y tesseract-ocr
-            echo "Current version of Tesseract OCR: $(tesseract --version)"
       - name: Run pytest for writing better program
-        run: make pytest
+        run: |
+            echo "================================================================================"
+            echo "Current version of Poppler: $(pdftocairo -v)"
+            echo "Current version of TeX Live: $(pdflatex --version)"
+            echo "Current version of Pandoc: $(pandoc -v)"
+            echo "Current version of Tesseract OCR: $(tesseract --version)"
+            echo "================================================================================"
+            make pytest
