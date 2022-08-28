@@ -54,6 +54,7 @@ class Process:
         "41.901 Issue (ocr): Converting the file '{full_name}' with Tesseract OCR failed - "
         + "error type: '{error_type}' - error: '{error}'."
     )
+    ERROR_41_911: ClassVar[str] = "41.911 Issue (ocr): The number of pages of the PDF document {full_name} cannot be determined"
     ERROR_51_901: ClassVar[str] = (
         "51.901 Issue (tet): Opening document '{full_name}' - " + "error no: '{error_no}' - api: '{api_name}' - error: '{error}'."
     )
@@ -967,6 +968,12 @@ class Process:
                 with open(full_name_out, "w+b") as file_handle:
                     # PDF type is bytes by default
                     file_handle.write(pdf)
+
+                if len(PyPDF2.PdfReader(full_name_out).pages) == 0:
+                    error_msg = Process.ERROR_41_911.replace("{full_name_out}", full_name_out)
+                    dcr_core.core_glob.logger.debug("return                  =%s", (error_msg[:6], error_msg, []))
+                    dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
+                    return error_msg[:6], error_msg, []
 
                 pdf_reader = PyPDF2.PdfReader(full_name_out)
 

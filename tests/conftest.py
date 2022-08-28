@@ -92,11 +92,12 @@ def compare_with_reference_files(directory_name: str, reference_files: list[str]
                 # multiple lines
                 # single line
                 if (
-                    is_line_type("<CreationDate>", tst_lines[i], ref_lines[i])
+                    is_line_type("<CreationDate>", tst_lines[i], ref_lines[i])  # pylint: disable=too-many-boolean-expressions
                     or is_line_type("<Creation platform=", tst_lines[i], ref_lines[i])
                     or is_line_type("<Document filename=", tst_lines[i], ref_lines[i])
                     or is_line_type(' <Font id="F0" name="LMRoman10-Regular" fullname="', tst_lines[i], ref_lines[i])
                     or is_line_type("<Options>tetml=", tst_lines[i], ref_lines[i])
+                    or is_line_type("<Producer>", tst_lines[i], ref_lines[i])
                 ):
                     continue
 

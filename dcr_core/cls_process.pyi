@@ -12,6 +12,7 @@ class Process:
     ERROR_31_902: ClassVar[str]
     ERROR_31_911: ClassVar[str]
     ERROR_41_901: ClassVar[str]
+    ERROR_41_911: ClassVar[str]
     ERROR_51_901: ClassVar[str]
     ERROR_61_901: ClassVar[str]
     ERROR_71_901: ClassVar[str]
