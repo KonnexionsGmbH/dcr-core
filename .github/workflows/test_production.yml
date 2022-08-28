@@ -34,10 +34,9 @@ jobs:
         run: make compileall
       - name: Install Step 1 - Necessary system software (incl. Poppler & TeX Live)
         run: |
-            sudo apt-get update  -y
             sudo apt-get install -y software-properties-common  
-            sudo apt-get update  -y
             sudo apt-get install -y ca-certificates
+            sudo apt-get update  -y
             sudo apt-get install -y gnupg
             sudo apt-get install -y libgif-dev
             sudo apt-get install -y libjpeg-dev
@@ -50,14 +49,18 @@ jobs:
             sudo apt-get install -y poppler-utils
             sudo apt-get install -y texlive-full
             sudo apt-get install -y wget
+            echo "Current version of Poppler: $(pdftocairo -v)"
+            echo "Current version of TeX Live: $(pdflatex --version)"
       - name: Install Step 2 - Pandoc
         run: |
             wget https://github.com/jgm/pandoc/releases/download/${VERSION_PANDOC}/pandoc-${VERSION_PANDOC}-1-amd64.deb
             sudo dpkg -i pandoc-${VERSION_PANDOC}-1-amd64.deb
+            echo "Current version of Pandoc: $(pandoc -v)"
       - name: Install Step 3 - Tesseract OCR
         run: |
-            sudo apt-get update -y
             sudo add-apt-repository ppa:alex-p/tesseract-ocr-devel
+            sudo apt-get update -y
             sudo apt-get install -y tesseract-ocr
+            echo "Current version of Tesseract OCR: $(tesseract --version)"
       - name: Run pytest for writing better program
         run: make pytest-ci
