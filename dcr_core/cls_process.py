@@ -49,6 +49,7 @@ class Process:
         + "'PDF' document - "
         + "error type: '{error_type}' - error: '{error_msg}'."
     )
+    ERROR_31_911: ClassVar[str] = "31.911 Issue (n_2_p): The number of pages of the PDF document {full_name} cannot be determined"
     ERROR_41_901: ClassVar[str] = (
         "41.901 Issue (ocr): Converting the file '{full_name}' with Tesseract OCR failed - "
         + "error type: '{error_type}' - error: '{error}'."
@@ -352,7 +353,6 @@ class Process:
 
         # noinspection PyUnresolvedReferences
         self._no_pdf_pages = len(PyPDF2.PdfReader(self._full_name_in_pdflib).pages)
-
         if self._no_pdf_pages == 0:
             raise RuntimeError(f"The number of pages of the PDF document {self._full_name_in_pdflib} cannot be determined")
 
@@ -601,6 +601,12 @@ class Process:
                 extra_args=extra_args,
                 outputfile=full_name_out,
             )
+
+            if len(PyPDF2.PdfReader(full_name_out).pages) == 0:
+                error_msg = Process.ERROR_31_911.replace("{full_name}", full_name_out)
+                dcr_core.core_glob.logger.debug("return               =%s", (error_msg[:6], error_msg))
+                dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
+                return error_msg[:6], error_msg
 
         except (FileNotFoundError, RuntimeError) as err:
             error_msg = (
