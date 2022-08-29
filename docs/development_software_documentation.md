@@ -68,18 +68,21 @@ In Visual Studio Code, the [VSCode Python Docstring Generator](https://github.co
 
 The remaining documents for the user documentation can be found in the file directory **`docs`** in Markdown format:
 
-| File                      | Headline                      | Remarks                                   |
-|---------------------------|-------------------------------|-------------------------------------------|
-| **`code_of_conduct.md`**  | Code of Conduct               |                                           |
-| **`contributing.md`**     | Contributing Guide            |                                           |
-| **`dcr-core?_api.md`**    | API Documentation             |                                           |
-| **`development.md`**      | Development                   | Notes on the software development process |
-| **`index.md`**            | Document Content Recognition  | Background, installation and user guide   |
-| **`license.md`**          | Text of the licence agreement |                                           |
-| **`release_history.md`**  | Release History               | Previous release notes                    |
-| **`release_notes.md`**    | Release Notes                 | Release notes of the current version      |
-| **`research.md`**         | Research                      | Reference to the relevant research papers |
+| File                     | Headline                      | Remarks                                   |
+|--------------------------|-------------------------------|-------------------------------------------|
+| **`api-docs/*`**         | API Documentation             |                                           |
+| **`css/*`**              | CSS files                     |                                           |
+| **`img/*`**              | Image files                   |                                           |
+| **`application_*.md`**   | Appplication                  | Notes on the software application         |
+| **`code_of_conduct.md`** | Code of Conduct               |                                           |
+| **`contributing.md`**    | Contributing Guide            |                                           |
+| **`development_*.md`**   | Development                   | Notes on the software development process |
+| **`index.md`**           | Document Content Recognition  | Background, installation and user guide   |
+| **`license.md`**         | Text of the licence agreement |                                           |
+| **`README.md`**          | Directory content list.       |                                           |
+| **`release_history.md`** | Release History               | Previous release notes                    |
+| **`release_notes.md`**   | Release Notes                 | Release notes of the current version      |
 
 The [MkDocs](https://github.com/mkdocs/mkdocs){:target="_blank"} tool is used to create the user documentation. 
 With the command **`make mkdocs`** the user documentation is created by MkDocs and uploaded to the GitHub pages of the repository.
-The command **`make mkdocs`** is also included in the calls **`make docs`** and **`make dev`**.
+The command **`make mkdocs`** is also included in the calls **`make docs`** and **`make final`**.
