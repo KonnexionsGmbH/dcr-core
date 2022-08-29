@@ -21,7 +21,7 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Applying DCR-CORE:
+  - Application:
       - Requirementes: application_requirements.md
       - Installaion: application_installation.md
       - Configuration: application_configuration.md
@@ -30,20 +30,20 @@ nav:
   - Release Documents:
     - Release Notes: release_notes.md
     - Release History: release_history.md
-  - Developing DCR-CORE:
+  - Development:
       - Research Notes: developing_research_notes.md
-      - System Environment: developing_system_environment.md
-      - Coding Standards: developing_coding_standards.md
-      - Code Formatting: developing_code_formatting.md
-      - Static Code Analysis: developing_static_code_analysis.md
+      - System Environment: development_system_environment.md
+      - Coding Standards: development_coding_standards.md
+      - Code Formatting: development_code_formatting.md
+      - Static Code Analysis: development_static_code_analysis.md
       - Documentation:
-        - Software Documentation: developing_software_documentation.md
-        - Line Type Algorithms: developing_line_type.md
-        - API Documentation: developing_api_documentation.md
-      - Software Testing: developing_software_testing.md
-      - Continuous Delivery: developing_continuous_delivery.md
-      - Development Environment: developing_development_environment.md
-      - Version Planning: developing_version_planning.md
+        - Software Documentation: development_software_documentation.md
+        - Line Type Algorithms: development_line_type.md
+        - API Documentation: development_api_documentation.md
+      - Software Testing: development_software_testing.md
+      - Continuous Delivery: development_continuous_delivery.md
+      - Environment: development_development_environment.md
+      - Version Planning: development_version_planning.md
   - Code of Conduct: code_of_conduct.md
   - Contributing Guide: contributing.md
   - License: license.md

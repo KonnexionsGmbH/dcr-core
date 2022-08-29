@@ -4,7 +4,7 @@
 ![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/KonnexionsGmbh/dcr-core)
 
 The required software is listed below. 
-Regarding the corresponding software versions, you will find the detailed information in the **[Release Notes](https://konnexionsgmbh.github.io/dcr-core/release_notes)**. 
+Regarding the corresponding software versions, you will find the detailed information in the [Release Notes](https://konnexionsgmbh.github.io/dcr-core/release_notes). 
 
 ## 1. Operating System
 

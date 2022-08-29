@@ -1,4 +1,4 @@
-# DCR-CORE - Developing - Version Planning
+# DCR-CORE - Development - Version Planning
 
 ![GitHub (Pre-)Release](https://img.shields.io/github/v/release/KonnexionsGmbH/dcr-core??include_prereleases)
 ![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/KonnexionsGmbh/dcr-core?-core)
@@ -16,15 +16,6 @@
 | Version | Feature(s)                             |
 |---------|----------------------------------------|
 | 0.9.6   | Extracting an API                      |
-| 0.9.3   | Extending NLP capabilities             |
-| 0.9.2   | Refactoring database and code          |
-| 0.9.1   | Core text preprocessing and wrangling  |
-| 0.9.0   | Parser                                 |
-| 0.8.0   | PDFlib TET processing                  |
-| 0.7.0   | Tesseract OCR processing               |
-| 0.6.5   | Pandoc processing                      |
-| 0.6.0   | **`pdf`** for Tesseract OCR processing |
-| 0.5.0   | Inbox processing                       |
 
 ## 2. Next Development Steps
 

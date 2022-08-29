@@ -40,14 +40,14 @@ Please see the **[Documentation](https://konnexionsgmbh.github.io/dcr-core)** fo
 
 ### 2.1 Directories
 
-| Directory         | Content                                                           |
-|-------------------|-------------------------------------------------------------------|
-| .github/workflows | [GitHub Action](https://github.com/actions) workflows             |
-| PDFlib            | TET package of [PDFlib TET](https://www.pdflib.com/products/tet/) |
-| data              | Example rule files for document line classification               |
-| dcr_core          | Python scripts                                                    |
-| docs              | **DCR-CORE** documentation files                                  |
-| tests             | Scripts and data for pytest                                       |
+| Directory         | Content                                                               |
+|-------------------|-----------------------------------------------------------------------|
+| .github/workflows | [GitHub Action](https://github.com/actions) workflows.                |
+| PDFlib            | Python package of [PDFlib TET](https://www.pdflib.com/products/tet/). |
+| data              | Example rule files for document line classification.                  |
+| dcr_core          | Python package.                                                       |
+| docs              | **DCR-CORE** documentation files.                                     |
+| tests             | Scripts and data for pytest.                                          |
 
 ### 2.2 Files
 
