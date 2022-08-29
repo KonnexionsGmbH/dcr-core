@@ -10,11 +10,11 @@ Based on the paper "Unfolding the Structure of a Document using Deep Learning" (
 The processing logic is as follows:
 
 - New documents are made available in the file directory **` inbox`**. If required, other language-related file directories can also be used (see section [Document Language](https://konnexionsgmbh.github.io/dcr-core?-core/running_document_language){:target="_blank"}).
-- Documents in a file format accepted by **DCR-CORE** are registered and moved to the file directory **`ìnbox_accepted`**. All other documents are registered and moved to the file directory **`ìnbox_rejected`**.
+- Documents in a file format accepted by **`DCR-CORE`** are registered and moved to the file directory **`ìnbox_accepted`**. All other documents are registered and moved to the file directory **`ìnbox_rejected`**.
 - Documents not in **`pdf`** format are converted to **`pdf`** format using [Pandoc](https://pandoc.org){:target="_blank"} and [TeX Live](https://www.tug.org/texlive){:target="_blank"}. 
 - Documents based on scanning which, therefore, do not contain text elements, are scanned and converted to **`pdf`** format using the [Tesseract OCR](https://github.com/tesseract-ocr/tesseract){:target="_blank"} software. This process applies to all image format files e.g. **`jpeg`**, **`tiff`** etc., as well as scanned images in **`pdf`** format.  
 - From all **`pdf`** documents, the text and associated metadata is extracted into a document-specific **`xml`** file using [PDFlib TET](https://www.pdflib.com/products/tet/){:target="_blank"}.
-- The document-specific **`xml`** files are then parsed and the **DCR-CORE**-relevant contents are written to the **`JSON`** files. 
+- The document-specific **`xml`** files are then parsed and the **`DCR-CORE`**-relevant contents are written to the **`JSON`** files. 
 - From the **`JSON`** file(s) [spaCy](https://spacy.io){:target="_blank"} extracts qualified tokens and stores them either in a **`JSON`** file or in the database table **`token`**.
 
 ### 1.1 Rahman & Finin Paper
@@ -22,7 +22,7 @@ The processing logic is as follows:
 ![](img/index_rahman_finin.png)
 ### 1.2 Supported File Types
 
-**DCR-CORE** can handle the following file types based on the file extension:
+**`DCR-CORE`** can handle the following file types based on the file extension:
 
 - **`bmp`** [bitmap image file](https://en.wikipedia.org/wiki/BMP_file_format){:target="_blank"}
 - **`csv`** [comma-separated values](https://en.wikipedia.org/wiki/Comma-separated_values){:target="_blank"}

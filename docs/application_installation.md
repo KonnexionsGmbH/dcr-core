@@ -3,9 +3,9 @@
 ![GitHub (Pre-)Release](https://img.shields.io/github/v/release/KonnexionsGmbH/dcr-core?include_prereleases)
 ![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/KonnexionsGmbh/dcr-core)
 
-1. Clone or copy the **DCR-CORE** repository from [here](https://github.com/KonnexionsGmbH/dcr-core){:target="_blank"}.
+1. Clone or copy the **`DCR-CORE`** repository from [here](https://github.com/KonnexionsGmbH/dcr-core){:target="_blank"}.
 
-2. Switch to the file directory **DCR-CORE**:
+2. Switch to the file directory **`DCR-CORE`**:
 
     **`cd dcr`**
 
@@ -15,8 +15,8 @@
 
     - **`data/db_initial_data_file.json`**: to configure the document languages to be used
     - **`logging_cfg.yaml`**: for the logging functionality
-    - **`setup.cfg`**: for the **DCR-CORE** application in section **DCR-CORE**
+    - **`setup.cfg`**: for the **`DCR-CORE`** application in section **`DCR-CORE`**
  
 5. Create a PostgreSQL database container by running the script **`scripts/run_setup_postgresql`** with action **`prod`**.
 
-6. Create the **DCR-CORE** database by running the script **`run_dcr_prod`** with action **`db_c`**.
+6. Create the **`DCR-CORE`** database by running the script **`run_dcr_prod`** with action **`db_c`**.

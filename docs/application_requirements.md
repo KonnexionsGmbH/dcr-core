@@ -21,7 +21,7 @@ The installation of the [TeX Live](https://www.tug.org/texlive){:target="_blank"
 ## 3. [PDFlib TET](https://www.pdflib.com/products/tet/){:target="_blank"}
 
 The software library [PDFlib TET](https://www.pdflib.com/products/tet/){:target="_blank"} is used to tokenize the **`pdf`** documents. 
-**DCR-CORE** contains the free version of [PDFlib TET](https://www.pdflib.com/products/tet/){:target="_blank"}. 
+**`DCR-CORE`** contains the free version of [PDFlib TET](https://www.pdflib.com/products/tet/){:target="_blank"}. 
 This free version is limited to files with a maximum size of 1 MB and a maximum number of pages of 10. 
 If larger files are to be processed, a licence must be purchased from [PDFlib GmbH](https://www.pdflib.com){:target="_blank"}. 
 Details on the conditions can be found [here](https://www.pdflib.com/buy/){:target="_blank"}.

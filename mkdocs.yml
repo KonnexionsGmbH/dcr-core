@@ -31,8 +31,8 @@ nav:
     - Release Notes: release_notes.md
     - Release History: release_history.md
   - Development:
-      - Research Notes: developing_research_notes.md
-      - System Environment: development_system_environment.md
+      - Research Notes: development_research_notes.md
+      - Environment: development_environment.md
       - Coding Standards: development_coding_standards.md
       - Code Formatting: development_code_formatting.md
       - Static Code Analysis: development_static_code_analysis.md
@@ -42,7 +42,6 @@ nav:
         - API Documentation: development_api_documentation.md
       - Software Testing: development_software_testing.md
       - Continuous Delivery: development_continuous_delivery.md
-      - Environment: development_development_environment.md
       - Version Planning: development_version_planning.md
   - Code of Conduct: code_of_conduct.md
   - Contributing Guide: contributing.md

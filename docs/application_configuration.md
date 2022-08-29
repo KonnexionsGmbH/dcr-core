@@ -117,7 +117,7 @@ This file controls the logging behaviour of the application.
 
 ## 3. **`setup.cfg`**
 
-This file controls the behaviour of the **DCR-CORE** application. 
+This file controls the behaviour of the **`DCR-CORE`** application. 
 
 The customisable entries are:
 
@@ -193,15 +193,15 @@ The customisable entries are:
 | create_extra_file_table          | **`true`**                                  | Create a separate **`JSON`** file with the tables.                                                                      |
 | db_connection_port               | environment specific                        | Port number the DBMS server is listening on.                                                                            |
 | db_connection_prefix             | **`postgresql+psycopg2://`**                | Front part of the database URL.                                                                                         |
-| db_database                      | environment specific                        | **DCR-CORE** database name.                                                                                                  |
+| db_database                      | environment specific                        | **`DCR-CORE`** database name.                                                                                                  |
 | db_database_admin                | environment specific                        | Administrative database name.                                                                                           |
 | db_dialect                       | **`postgresql`**                            | DBMS used, currently: only PostgreSQL allowed.                                                                          |
 | db_host                          | **`localhost`**                             | Host name of the DBMS server.                                                                                           |
 | db_initial_data_file             | **`data/db_initial_data_file.json`**        | File with initial database contents.                                                                                    |
-| db_password                      | **`postgresql`**                            | **DCR-CORE** database user password.                                                                                         |
+| db_password                      | **`postgresql`**                            | **`DCR-CORE`** database user password.                                                                                         |
 | db_password_admin                | **`postgresql`**                            | Administrative database password.                                                                                       |
 | db_schema                        | **`dcr_schema`**                            | Database schema name.                                                                                                   |
-| db_user                          | **`postgresql`**                            | **DCR-CORE** database user name.                                                                                             |
+| db_user                          | **`postgresql`**                            | **`DCR-CORE`** database user name.                                                                                             |
 | db_user_admin                    | **`postgresql`**                            | Administrative database user name.                                                                                      |
 | delete_auxiliary_files           | **`true`**                                  | Delete the auxiliary files after a successful <br>processing step.                                                      |
 | directory_inbox                  | **`data/inbox_prod`**                       | Directory for the new documents received.                                                                               |
@@ -418,6 +418,6 @@ The available options are described below.
  | spacy_tkn_attr_whitespace_          | true    | Trailing space character if present.                                                                          |
 
 More information about the [spaCy](https://spacy.io){:target="_blank"} token attributes can be found [here](https://spacy.io/api/token#attributes){:target="_blank"}.
-**DCR-CORE** currently supports only a subset of the possible attributes, but this can easily be extended if required.
+**`DCR-CORE`** currently supports only a subset of the possible attributes, but this can easily be extended if required.
 
 Detailed information about the universal POS tags can be found [here](https://universaldependencies.org/u/pos/){:target="_blank"}.

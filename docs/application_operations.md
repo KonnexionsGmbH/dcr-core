@@ -3,7 +3,7 @@
 ![GitHub (Pre-)Release](https://img.shields.io/github/v/release/KonnexionsGmbH/dcr-core?include_prereleases)
 ![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/KonnexionsGmbh/dcr-core)
 
-**DCR-CORE** should be operated via the script **`run_dcr_prod`**. 
+**`DCR-CORE`** should be operated via the script **`run_dcr_prod`**. 
 The following actions are available:
 
 | Action      | Process                                                                                                            |
@@ -33,8 +33,8 @@ The action **`all - run the complete processing of all new documents`** includes
 | **`s_p_j`** | Store the parser result in a JSON file.             |
 | **`tkn`**   | Create qualified document tokens.                   |
 
-The action **`db_c - create the database`** is only required once when installing **`DCR`**.  
+The action **`db_c - create the database`** is only required once when installing **`DCR-CORE`**.  
 
-The action **`db_u - upgrade the database`** is necessary once for each version change of **`DCR`**.  
+The action **`db_u - upgrade the database`** is necessary once for each version change of **`DCR-CORE`**.  
 
 The actions **`m_d`** and **`m_p`** correspond to the commands **`make pipenv-dev`** and **`make pipenv-prod`** for installing or updating the necessary Python libraries. 

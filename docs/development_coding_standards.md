@@ -7,4 +7,4 @@
 - All program code must be commented with type hinting instructions.
 - All public functions, modules and packages must be commented with **`Docstring`**.
 - The program code must be covered as far as possible with appropriate tests - the aim is always 100 % test coverage.
-- The successful execution of **`make dev`** ensures that the program code meets the required standards.
+- The successful execution of **`make final`** ensures that the program code meets the required standards.

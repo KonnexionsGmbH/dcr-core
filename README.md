@@ -8,7 +8,7 @@
 Based on the paper "Unfolding the Structure of a Document using Deep Learning" (**[Rahman and Finin, 2019](https://arxiv.org/abs/1910.03678)**), this software project aims to use various software techniques to automatically detect the structure in arbitrary **`pdf`** documents and thus make these documents more searchable.
 
 The computer linguistic methods used here assume that the documents to be processed are in **`pdf`** format.
-However, in order to be flexible in the selection of documents with respect to file format, **DCR-CORE** includes a sophisticated preprocessor mechanism that can convert many of the non **`pdf`** formats to **`pdf`** format.
+However, in order to be flexible in the selection of documents with respect to file format, **`DCR-CORE`** includes a sophisticated preprocessor mechanism that can convert many of the non **`pdf`** formats to **`pdf`** format.
 
 From the documents in **`pdf`** format, the next steps extract the text with the relevant metadata word by word, line by line, or page by page. In line-by-line extraction, an attempt is made to classify the individual lines and mark them accordingly, so that these line classifications can later be taken into account in token generation.
 
@@ -46,7 +46,7 @@ Please see the **[Documentation](https://konnexionsgmbh.github.io/dcr-core)** fo
 | PDFlib            | Python package of [PDFlib TET](https://www.pdflib.com/products/tet/). |
 | data              | Example rule files for document line classification.                  |
 | dcr_core          | Python package.                                                       |
-| docs              | **DCR-CORE** documentation files.                                     |
+| docs              | **`DCR-CORE`** documentation files.                                     |
 | tests             | Scripts and data for pytest.                                          |
 
 ### 2.2 Files
@@ -68,12 +68,12 @@ Please see the **[Documentation](https://konnexionsgmbh.github.io/dcr-core)** fo
 
 ## 3. Support
 
-If you need help with **DCR-CORE**, do not hesitate to get in contact with us!
+If you need help with **`DCR-CORE`**, do not hesitate to get in contact with us!
 
 - For questions and high-level discussions, use **[Discussions](https://github.com/KonnexionsGmbH/dcr-core/discussions)** on GitHub.
 - To report a bug or make a feature request, open an **[Issue](https://github.com/KonnexionsGmbH/dcr-core/issues)** on GitHub.
 
-Please note that we may only provide support for problems / questions regarding core features of **DCR-CORE**.
+Please note that we may only provide support for problems / questions regarding core features of **`DCR-CORE`**.
 Any questions or bug reports about features of third-party themes, plugins, extensions or similar should be made to their respective projects. 
 But, such questions are **not** banned from the **[Discussions](https://github.com/KonnexionsGmbH/dcr-core/discussions)**.
 
@@ -87,13 +87,13 @@ Make sure to stick around to answer some questions as well!
 
 ## 5. Contributing to DCR
 
-The **DCR-CORE** project welcomes, and depends on, contributions from developers and users in the open source community. 
+The **`DCR-CORE`** project welcomes, and depends on, contributions from developers and users in the open source community. 
 Please see the **[Contributing Guide](https://konnexionsgmbh.github.io/dcr-core/contributing)** for
 information on how you can help.
 
 ## 6. Code of Conduct
 
-Everyone who interacts in the **DCR-CORE** project's codebase, issue trackers, and discussion forums is expected to follow the **[Code of Conduct](https://konnexionsgmbh.github.io/dcr-core/code_of_conduct)**.
+Everyone who interacts in the **`DCR-CORE`** project's codebase, issue trackers, and discussion forums is expected to follow the **[Code of Conduct](https://konnexionsgmbh.github.io/dcr-core/code_of_conduct)**.
 
 ## 7. License
 
