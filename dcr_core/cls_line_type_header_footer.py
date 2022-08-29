@@ -22,12 +22,10 @@ class LineTypeHeaderFooter:
     """Determines the headers and footers of a parsed PDF document.
 
     Attributes:
-        line_pages_json (dcr_core.cls_nlp_core.NLPCore.ParserLinePages):
-            A list of the lines provided with line types per page.
-        no_lines_footer (int):
-            The number of footers found.
-        no_lines_header (int):
-            The number of headers found.
+        line_pages_json (dcr_core.cls_nlp_core.NLPCore.ParserLinePages): A list
+            of the lines provided with line types per page.
+        no_lines_footer (int): The number of footers found.
+        no_lines_header (int): The number of headers found.
     """
 
     Candidate = tuple[int, int]
@@ -57,9 +55,8 @@ class LineTypeHeaderFooter:
         """Initialise an instance.
 
         Args:
-            file_name_curr (str, optional):
-                    File name of the PDF document to be processed - only
-                    For documentation purposes. Defaults to "".
+            file_name_curr (str, optional): File name of the PDF document to be processed -
+                only for documentation purposes. Defaults to "".
         """
         try:
             dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
@@ -503,7 +500,7 @@ class LineTypeHeaderFooter:
         """Check the existence of the instance.
 
         Returns:
-            bool:   Always true
+            bool: Always true.
         """
         return self._exist
 
@@ -518,12 +515,10 @@ class LineTypeHeaderFooter:
         """Process the document related data.
 
         Args:
-            line_pages_json
-                (dcr_core.cls_nlp_core.NLPCore.ParserLinePages):
-                The document pages formatted in the parser.
-            file_name_curr (str, optional):
-                File name of the PDF document to be processed - only
-                For documentation purposes. Defaults to "".
+            line_pages_json (dcr_core.cls_nlp_core.NLPCore.ParserLinePages): The
+                document pages formatted in the parser.
+            file_name_curr (str, optional): File name of the PDF document to be processed -
+                only for documentation purposes. Defaults to "".
         """
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
         dcr_core.core_glob.logger.debug("param file_name_curr =%s", file_name_curr)

@@ -847,6 +847,6 @@ class Setup:
         """Check the object existence.
 
         Returns:
-            bool:   Always true
+            bool: Always true.
         """
         return self._exist

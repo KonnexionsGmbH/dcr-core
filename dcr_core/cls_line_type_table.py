@@ -26,8 +26,7 @@ import dcr_core.cls_nlp_core
 class LineTypeTable:
     """Determine table of content lines.
 
-    Returns:
-        _type_: LineTypeTable instance.
+    Returns: _type_: LineTypeTable instance.
     """
 
     Column = dict[str, float | int | object | str]
@@ -49,9 +48,8 @@ class LineTypeTable:
         """Initialise the instance.
 
         Args:
-            file_name_curr (str, optional):
-                    File name of the PDF document to be processed - only
-                    For documentation purposes. Defaults to "".
+            file_name_curr (str, optional): File name of the PDF document to be processed -
+                only for documentation purposes. Defaults to "".
         """
         try:
             dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
@@ -199,11 +197,10 @@ class LineTypeTable:
         """Process the line-related data.
 
         Args:
-            line_line (dict[str, str]):
-                    The line to be processed.
+            line_line (dict[str, str]): The line to be processed.
 
         Returns:
-            str:    The new or the old line type.
+            str: The new or the old line type.
         """
         if dcr_core.cls_nlp_core.NLPCore.JSON_NAME_ROW_NO not in line_line:
             return dcr_core.cls_nlp_core.NLPCore.LINE_TYPE_BODY
@@ -343,8 +340,7 @@ class LineTypeTable:
     def exists(self) -> bool:
         """Check the object existence.
 
-        Returns:
-            bool:   Always true
+        Returns: bool: Always true.
         """
         return self._exist
 
@@ -362,16 +358,12 @@ class LineTypeTable:
         """Process the document related data.
 
         Args:
-            directory_name (str):
-                    Directory name of the output file.
-            document_id (int):
-                    Identification of the document.
-            file_name_curr (str):
-                    File name of the file to be processed.
-            file_name_orig (in):
-                    File name of the original document file.
-            line_pages_json (dcr_core.cls_nlp_core.NLPCore.LinePages):
-                    The document pages formatted in the parser.
+            directory_name (str): Directory name of the output file.
+            document_id (int): Identification of the document.
+            file_name_curr (str): File name of the file to be processed.
+            file_name_orig (in): File name of the original document file.
+            line_pages_json (dcr_core.cls_nlp_core.NLPCore.LinePages): The
+                document pages formatted in the parser.
         """
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
         dcr_core.core_glob.logger.debug("param directory_name =%s", directory_name)
