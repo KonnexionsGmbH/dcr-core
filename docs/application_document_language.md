@@ -1,4 +1,4 @@
-_# DCR-CORE - Application - Document Language
+# DCR-CORE - Application - Document Language
 
 ![GitHub (Pre-)Release](https://img.shields.io/github/v/release/KonnexionsGmbH/dcr-core?include_prereleases)
 ![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/KonnexionsGmbh/dcr-core)
@@ -7,7 +7,6 @@ _# DCR-CORE - Application - Document Language
 
 **`DCR-CORE`** supports the processing of documents in different languages. 
 The supported languages must be accepted by [Pandoc](https://pandoc.org){:target="_blank"} respectively [Babel](http://mirrors.ctan.org/macros/latex/required/babel/base/babel.pdf){:target="_blank"}, [spaCy](https://spacy.io/usage/models){:target="_blank"} and [Tesseract OCR](https://tesseract-ocr.github.io/tessdoc/Data-Files-in-different-versions.html){:target="_blank"}. 
-Furthermore, for each of the languages in question there must be a corresponding entry in the database table **`language`**.
 
 ## 2. Default Document Language
 

@@ -3,87 +3,7 @@
 ![GitHub (Pre-)Release](https://img.shields.io/github/v/release/KonnexionsGmbH/dcr-core?include_prereleases)
 ![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/KonnexionsGmbh/dcr-core)
 
-## 1. **`data/initial_database_dat.json`**
-
-This file contains the initial values relating to the database table **`language`**.
-The existing entries can be modified or deleted, but new entries can also be added.
-
-**Syntax**:
-
-    {
-      "apiVersion": "9.9.9",
-      "data": {
-        "tables": [
-          {
-            "tableName": "language",
-            "rows": [
-              {
-                "row": [
-                  {
-                    "columnName": "active",
-                    "columnValue": true | false
-                  },
-                  {
-                    "columnName": "code_iso_639_3",
-                    "columnValue": "deu"
-                  },
-                  {
-                    "columnName": "code_spacy",
-                    "columnValue": "..."
-                  },
-                  {
-                    "columnName": "code_tesseract",
-                    "columnValue": "..."
-                  },
-                  {
-                    "columnName": "directory_name_inbox",
-                    "columnValue": null | "..."
-                  },
-                  {
-                    "columnName": "iso_language_name",
-                    "columnValue": "..."
-                  }
-                ]
-              },
-              ...
-            ]
-          }
-        ]
-      }
-    }
-
-**Example entry for a language**:
-
-    {
-      "row": [
-        {
-          "columnName": "active",
-          "columnValue": false
-        },
-        {
-          "columnName": "code_iso_639_3",
-          "columnValue": "fra"
-        },
-        {
-          "columnName": "code_spacy",
-          "columnValue": "fr_dep_news_trf"
-        },
-        {
-          "columnName": "code_tesseract",
-          "columnValue": "fra"
-        },
-        {
-          "columnName": "directory_name_inbox",
-          "columnValue": null
-        },
-        {
-          "columnName": "iso_language_name",
-          "columnValue": "French"
-        }
-      ]
-    },
-
-## 2. **`logging_cfg.yaml`**
+## 1. **`logging_cfg.yaml`**
 
 This file controls the logging behaviour of the application. 
 
@@ -106,50 +26,29 @@ This file controls the logging behaviour of the application.
       file_handler:
         class: logging.FileHandler
         level: INFO
-        filename: logging_dcr.log
+        filename: logging_dcr_core.log
         formatter: extended
     
     loggers:
-      launcher.py:
+      dcr_core:
         handlers: [ console ]
     root:
       handlers: [ file_handler ]
 
-## 3. **`setup.cfg`**
+## 2. **`setup.cfg`**
 
 This file controls the behaviour of the **`DCR-CORE`** application. 
 
 The customisable entries are:
 
-    [dcr]
+    [dcr_core]
     create_extra_file_heading = true
     create_extra_file_list_bullet = true
     create_extra_file_list_number = true
     create_extra_file_table = true
-    db_connection_port = 5432
-    db_connection_prefix = postgresql+psycopg2://
-    db_container_port = 5432
-    db_database = dcr_db_prod
-    db_database_admin = dcr_db_prod_admin
-    db_dialect = postgresql
-    db_host = localhost
-    db_initial_data_file = data/db_initial_data_file.json
-    db_password = postgresql
-    db_password_admin = postgresql
-    db_schema = dcr_schema
-    db_user = dcr_user
-    db_user_admin = dcr_user_admin
-    delete_auxiliary_files = true
     directory_inbox = data/inbox_prod
-    directory_inbox_accepted = data/inbox_prod_accepted
-    directory_inbox_rejected = data/inbox_prod_rejected
-    doc_id_in_file_name = none
-    ignore_duplicates = false
     json_indent = 4
     json_sort_keys = false
-    lt_export_rule_file_heading=data/lt_export_rule_heading.json
-    lt_export_rule_file_list_bullet=data/lt_export_rule_list_bullet.json
-    lt_export_rule_file_list_number=data/lt_export_rule_list_number.json
     lt_footer_max_distance = 3
     lt_footer_max_lines = 3
     lt_header_max_distance = 3
@@ -159,14 +58,14 @@ The customisable entries are:
     lt_heading_max_level = 3
     lt_heading_min_pages = 2
     lt_heading_rule_file = none
-    lt_heading_tolerance_llx = 5
+    lt_heading_tolerance_llx = 10
     lt_list_bullet_min_entries = 2
     lt_list_bullet_rule_file = none
-    lt_list_bullet_tolerance_llx = 5
+    lt_list_bullet_tolerance_llx = 10
     lt_list_number_file_incl_regexp = false
     lt_list_number_min_entries = 2
     lt_list_number_rule_file = none
-    lt_list_number_tolerance_llx = 5
+    lt_list_number_tolerance_llx = 10
     lt_table_file_incl_empty_columns = true
     lt_toc_last_page = 5
     lt_toc_min_entries = 5
@@ -177,7 +76,7 @@ The customisable entries are:
     tokenize_2_database = true
     tokenize_2_jsonfile = true
     verbose = true
-    verbose_lt_headers_footers = false
+    verbose_lt_header_footer = false
     verbose_lt_heading = false
     verbose_lt_list_bullet = false
     verbose_lt_list_number = false
@@ -191,29 +90,10 @@ The customisable entries are:
 | create_extra_file_list_bullet    | **`true`**                                  | Create a separate **`JSON`** file with the bulleted lists.                                                              |
 | create_extra_file_list_number    | **`true`**                                  | Create a separate **`JSON`** file with the numbered lists.                                                              |
 | create_extra_file_table          | **`true`**                                  | Create a separate **`JSON`** file with the tables.                                                                      |
-| db_connection_port               | environment specific                        | Port number the DBMS server is listening on.                                                                            |
-| db_connection_prefix             | **`postgresql+psycopg2://`**                | Front part of the database URL.                                                                                         |
-| db_database                      | environment specific                        | **`DCR-CORE`** database name.                                                                                                  |
-| db_database_admin                | environment specific                        | Administrative database name.                                                                                           |
-| db_dialect                       | **`postgresql`**                            | DBMS used, currently: only PostgreSQL allowed.                                                                          |
-| db_host                          | **`localhost`**                             | Host name of the DBMS server.                                                                                           |
-| db_initial_data_file             | **`data/db_initial_data_file.json`**        | File with initial database contents.                                                                                    |
-| db_password                      | **`postgresql`**                            | **`DCR-CORE`** database user password.                                                                                         |
-| db_password_admin                | **`postgresql`**                            | Administrative database password.                                                                                       |
-| db_schema                        | **`dcr_schema`**                            | Database schema name.                                                                                                   |
-| db_user                          | **`postgresql`**                            | **`DCR-CORE`** database user name.                                                                                             |
-| db_user_admin                    | **`postgresql`**                            | Administrative database user name.                                                                                      |
 | delete_auxiliary_files           | **`true`**                                  | Delete the auxiliary files after a successful <br>processing step.                                                      |
 | directory_inbox                  | **`data/inbox_prod`**                       | Directory for the new documents received.                                                                               |
-| directory_inbox_accepted         | **`data/inbox_prod_accepted`**              | Directory for the accepted documents.                                                                                   |
-| directory_inbox_rejected         | **`data/inbox_prod_rejected`**              | Complete file name for the **`JSON`** file with the <br>database initialisation data.                                   |
-| doc_id_in_file_name              | **`none`**                                  | Position of the document id in the file name : <br>**`after`**, **`before`** or **`none`**.                             |
-| ignore_duplicates                | **`false`**                                 | Accept presumably duplicated documents <br/>based on a SHA256 hash key.                                                 |
 | json_indent                      | **`4`**                                     | Improves the readability of the **`JSON`** file.                                                                        |
 | json_sort_keys                   | **`false`**                                 | If it is set to **`true`**, the keys are set <br/>in ascending order else, they appear as <br/>in the Python object.    |
-| lt_export_rule_file_heading      | **`data/lt_export_rule_heading.json`**      | File name for the export of the heading rules.                                                                          |
-| lt_export_rule_file_list_bullet  | **`data/lt_export_rule_list_bullet.json`**  | File name for the export of the bulleted list rules.                                                                    |
-| lt_export_rule_file_list_number  | **`data/lt_export_rule_list_number.json`**  | File name for the export of the numbered list rules.                                                                    |
 | lt_footer_max_distance           | **`3`**                                     | Maximum Levenshtein distance for a footer line.                                                                         |
 | lt_footer_max_lines              | **`3`**                                     | Maximum number of footers.                                                                                              |
 | lt_header_max_distance           | **`3`**                                     | Maximum Levenshtein distance for a header line.                                                                         |
@@ -253,14 +133,19 @@ The configuration parameters can be set differently for the individual environme
 
 **Examples**:
       
-    [dcr.env.dev]
-    db_connection_port = 5433
-    db_database = dcr_db_dev
-    db_database_admin = dcr_db_dev_admin
-    db_host = localhost
-    db_password = postgresql
-    db_password_admin = postgresql
-    db_user = dcr_user
+    [dcr_core.env.dev]
+    directory_inbox = data/inbox_dev
+    lt_footer_max_lines = 3
+    lt_header_max_lines = 3
+    lt_heading_file_incl_no_ctx = 3
+    lt_heading_file_incl_regexp = true
+    lt_heading_tolerance_llx = 5
+    lt_list_bullet_tolerance_llx = 5
+    lt_list_number_file_incl_regexp = true
+    lt_list_number_tolerance_llx = 5
+    lt_table_file_incl_empty_columns = false
+    tetml_page = true
+    tetml_word = true
     ...
     
 ## 4. **`setup.cfg`** - [spaCy](https://spacy.io){:target="_blank"} Token Attributes
@@ -268,154 +153,145 @@ The configuration parameters can be set differently for the individual environme
 The tokens derived from the documents can be qualified via various attributes. 
 The available options are described below.
 
-    [dcr.spacy]
-    spacy_ignore_bracket = true
-    spacy_ignore_left_punct = true
-    spacy_ignore_line_type_footer = true
-    spacy_ignore_line_type_header = true
+    [dcr_core.spacy]
+    spacy_ignore_bracket = false
+    spacy_ignore_left_punct = false
+    spacy_ignore_line_type_footer = false
+    spacy_ignore_line_type_header = false
     spacy_ignore_line_type_heading = false
     spacy_ignore_line_type_list_bullet = false
     spacy_ignore_line_type_list_number = false
     spacy_ignore_line_type_table = false
-    spacy_ignore_line_type_toc = true
-    spacy_ignore_punct = true
-    spacy_ignore_quote = true
-    spacy_ignore_right_punct = true
-    spacy_ignore_space = true
-    spacy_ignore_stop = true
-
-    spacy_tkn_attr_cluster = false
-    spacy_tkn_attr_dep_ = false
-    spacy_tkn_attr_doc = false
+    spacy_ignore_line_type_toc = false
+    spacy_ignore_punct = false
+    spacy_ignore_quote = false
+    spacy_ignore_right_punct = false
+    spacy_ignore_space = false
+    spacy_ignore_stop = false
+    spacy_tkn_attr_cluster = true
+    spacy_tkn_attr_dep_ = true
+    spacy_tkn_attr_doc = true
     spacy_tkn_attr_ent_iob_ = true
-    spacy_tkn_attr_ent_kb_id_ = false
+    spacy_tkn_attr_ent_kb_id_ = true
     spacy_tkn_attr_ent_type_ = true
-    spacy_tkn_attr_head = false
+    spacy_tkn_attr_head = true
     spacy_tkn_attr_i = true
-    spacy_tkn_attr_idx = false
-    spacy_tkn_attr_is_alpha = false
-    spacy_tkn_attr_is_ascii = false
-    spacy_tkn_attr_is_bracket = false
+    spacy_tkn_attr_idx = true
+    spacy_tkn_attr_is_alpha = true
+    spacy_tkn_attr_is_ascii = true
+    spacy_tkn_attr_is_bracket = true
     spacy_tkn_attr_is_currency = true
     spacy_tkn_attr_is_digit = true
-    spacy_tkn_attr_is_left_punct = false
-    spacy_tkn_attr_is_lower = false
+    spacy_tkn_attr_is_left_punct = true
+    spacy_tkn_attr_is_lower = true
     spacy_tkn_attr_is_oov = true
     spacy_tkn_attr_is_punct = true
-    spacy_tkn_attr_is_quote = false
-    spacy_tkn_attr_is_right_punct = false
+    spacy_tkn_attr_is_quote = true
+    spacy_tkn_attr_is_right_punct = true
     spacy_tkn_attr_is_sent_end = true
     spacy_tkn_attr_is_sent_start = true
-    spacy_tkn_attr_is_space = false
+    spacy_tkn_attr_is_space = true
     spacy_tkn_attr_is_stop = true
     spacy_tkn_attr_is_title = true
-    spacy_tkn_attr_is_upper = false
-    spacy_tkn_attr_lang_ = false
-    spacy_tkn_attr_left_edge = false
+    spacy_tkn_attr_is_upper = true
+    spacy_tkn_attr_lang_ = true
+    spacy_tkn_attr_left_edge = true
     spacy_tkn_attr_lemma_ = true
-    spacy_tkn_attr_lex = false
-    spacy_tkn_attr_lex_id = false
+    spacy_tkn_attr_lex = true
+    spacy_tkn_attr_lex_id = true
     spacy_tkn_attr_like_email = true
     spacy_tkn_attr_like_num = true
     spacy_tkn_attr_like_url = true
-    spacy_tkn_attr_lower_ = false
-    spacy_tkn_attr_morph = false
+    spacy_tkn_attr_lower_ = true
+    spacy_tkn_attr_morph = true
     spacy_tkn_attr_norm_ = true
-    spacy_tkn_attr_orth_ = false
+    spacy_tkn_attr_orth_ = true
     spacy_tkn_attr_pos_ = true
-    spacy_tkn_attr_prefix_ = false
-    spacy_tkn_attr_prob = false
-    spacy_tkn_attr_rank = false
-    spacy_tkn_attr_right_edge = false
-    spacy_tkn_attr_sent = false
-    spacy_tkn_attr_sentiment = false
-    spacy_tkn_attr_shape_ = false
-    spacy_tkn_attr_suffix_ = false
+    spacy_tkn_attr_prefix_ = true
+    spacy_tkn_attr_prob = true
+    spacy_tkn_attr_rank = true
+    spacy_tkn_attr_right_edge = true
+    spacy_tkn_attr_sent = true
+    spacy_tkn_attr_sentiment = true
+    spacy_tkn_attr_shape_ = true
+    spacy_tkn_attr_suffix_ = true
     spacy_tkn_attr_tag_ = true
-    spacy_tkn_attr_tensor = false
+    spacy_tkn_attr_tensor = true
     spacy_tkn_attr_text = true
-    spacy_tkn_attr_text_with_ws = false
-    spacy_tkn_attr_vocab = false
+    spacy_tkn_attr_text_with_ws = true
+    spacy_tkn_attr_vocab = true
     spacy_tkn_attr_whitespace_ = true
-
-    spacy_ignore_line_type_footer = true
-    spacy_ignore_line_type_header = true
-    spacy_ignore_line_type_heading = false
-    spacy_ignore_line_type_list_bullet = false
-    spacy_ignore_line_type_list_number = false
-    spacy_ignore_line_type_table = false
-    spacy_ignore_line_type_toc = true
     
-| Parameter                           | Default | Description                                                                                                   |
-|-------------------------------------|---------|---------------------------------------------------------------------------------------------------------------|
- | spacy_ignore_bracket                | true    | Ignore the tokens which are brackets ?                                                                        |
- | spacy_ignore_left_punct             | true    | Ignore the tokens which are left punctuation marks, e.g. "(" ?                                                |
- | spacy_ignore_line_type_footer       | true    | Ignore the tokens from line type footer ?                                                                     |
- | spacy_ignore_line_type_header       | true    | Ignore the tokens from line type header ?                                                                     |
- | spacy_ignore_line_type_heading      | false   | Ignore the tokens from line type heading ?                                                                    |
- | spacy_ignore_line_type_list_bullet  | false   | Ignore the tokens from line type bulleted list ?                                                              |
- | spacy_ignore_line_type_list_number  | false   | Ignore the tokens from line type numbered list ?                                                              |
- | spacy_ignore_line_type_table        | false   | Ignore the tokens from line type table ?                                                                      |
- | spacy_ignore_line_type_toc          | true    | Ignore the tokens from line type TOC ?                                                                        |
- | spacy_ignore_punct                  | true    | Ignore the tokens which are punctuations ?                                                                    |
- | spacy_ignore_quote                  | true    | Ignore the tokens which are quotation marks ?                                                                 |
- | spacy_ignore_right_punct            | true    | Ignore the tokens which are right punctuation marks, e.g. ")" ?                                               |
- | spacy_ignore_space                  | true    | Ignore the tokens which consist of whitespace characters ?                                                    |
- | spacy_ignore_stop                   | true    | Ignore the tokens which are part of a “stop list” ?                                                           |
- |                                     |         |                                                                                                               |
- | spacy_tkn_attr_cluster              | false   | Brown cluster ID.                                                                                             |
- | spacy_tkn_attr_dep_                 | false   | Syntactic dependency relation.                                                                                |
- | spacy_tkn_attr_doc                  | false   | The parent document.                                                                                          |
- | spacy_tkn_attr_ent_iob_             | true    | IOB code of named entity tag.                                                                                 |
- | spacy_tkn_attr_ent_kb_id_           | false   | Knowledge base ID that refers to the named entity <br>this token is a part of, if any.                        |
- | spacy_tkn_attr_ent_type_            | true    | Named entity type.                                                                                            |
- | spacy_tkn_attr_head                 | false   | The syntactic parent, or “governor”, of this token.                                                           |
- | spacy_tkn_attr_i                    | true    | The index of the token within the parent document.                                                            |
- | spacy_tkn_attr_idx                  | false   | The character offset of the token within the parent document.                                                 |
- | spacy_tkn_attr_is_alpha             | false   | Does the token consist of alphabetic characters?                                                              |
- | spacy_tkn_attr_is_ascii             | false   | Does the token consist of ASCII characters? <br>Equivalent to all (ord(c) < 128 for c in token.text).         |
- | spacy_tkn_attr_is_bracket           | false   | Is the token a bracket?                                                                                       |
- | spacy_tkn_attr_is_currency          | true    | Is the token a currency symbol?                                                                               |
- | spacy_tkn_attr_is_digit             | true    | Does the token consist of digits?                                                                             |
- | spacy_tkn_attr_is_left_punct        | false   | Is the token a left punctuation mark, e.g. "(" ?                                                              |
- | spacy_tkn_attr_is_lower             | false   | Is the token in lowercase? Equivalent to token.text.islower().                                                |
- | spacy_tkn_attr_is_oov               | true    | Is the token out-of-vocabulary?                                                                               |
- | spacy_tkn_attr_is_punct             | true    | Is the token punctuation?                                                                                     |
- | spacy_tkn_attr_is_quote             | false   | Is the token a quotation mark?                                                                                |
- | spacy_tkn_attr_is_right_punct       | false   | Is the token a right punctuation mark, e.g. ")" ?                                                             |
- | spacy_tkn_attr_is_sent_end          | true    | Does the token end a sentence?                                                                                |
- | spacy_tkn_attr_is_sent_start        | true    | Does the token start a sentence?                                                                              |
- | spacy_tkn_attr_is_space             | false   | Does the token consist of whitespace characters? <br>Equivalent to token.text.isspace().                      |
- | spacy_tkn_attr_is_stop              | true    | Is the token part of a “stop list”?                                                                           |
- | spacy_tkn_attr_is_title             | true    | Is the token in titlecase?                                                                                    |
- | spacy_tkn_attr_is_upper             | false   | Is the token in uppercase? Equivalent to token.text.isupper().                                                |
- | spacy_tkn_attr_lang_                | false   | Language of the parent document’s vocabulary.                                                                 |
- | spacy_tkn_attr_left_edge            | false   | The leftmost token of this token’s syntactic descendants.                                                     |
- | spacy_tkn_attr_lemma_               | true    | Base form of the token, with no inflectional suffixes.                                                        |
- | spacy_tkn_attr_lex                  | false   | The underlying lexeme.                                                                                        |
- | spacy_tkn_attr_lex_id               | false   | Sequential ID of the token’s lexical type, used to index into tables, e.g. for word vectors.                  |
- | spacy_tkn_attr_like_email           | true    | Does the token resemble an email address?                                                                     |
- | spacy_tkn_attr_like_num             | true    | Does the token represent a number?                                                                            |
- | spacy_tkn_attr_like_url             | true    | Does the token resemble a URL?                                                                                |
- | spacy_tkn_attr_lower_               | false   | Lowercase form of the token text. Equivalent to Token.text.lower().                                           |
- | spacy_tkn_attr_morph                | false   | Morphological analysis.                                                                                       |
- | spacy_tkn_attr_norm_                | true    | The token’s norm, i.e. a normalized form of the token text.                                                   |
- | spacy_tkn_attr_orth_                | false   | Verbatim text content (identical to Token.text). <br>Exists mostly for consistency with the other attributes. |
- | spacy_tkn_attr_pos_                 | true    | Coarse-grained part-of-speech from the Universal POS tag set.                                                 |
- | spacy_tkn_attr_prefix_              | false   | A length-N substring from the start of the token. <br>Defaults to N=1.                                        |
- | spacy_tkn_attr_prob                 | false   | Smoothed log probability estimate of token’s word type <br>(context-independent entry in the vocabulary).     |
- | spacy_tkn_attr_rank                 | false   | Sequential ID of the token’s lexical type, used to index <br>into tables, e.g. for word vectors.              |
- | spacy_tkn_attr_right_edge           | false   | The rightmost token of this token’s syntactic descendants.                                                    |
- | spacy_tkn_attr_sent                 | false   | The sentence span that this token is a part of.                                                               |
- | spacy_tkn_attr_sentiment            | false   | A scalar value indicating the positivity or negativity of the token.                                          |
- | spacy_tkn_attr_shape_               | false   | Transform of the token’s string to show orthographic features.                                                |
- | spacy_tkn_attr_suffix_              | false   | Length-N substring from the end of the token. Defaults to N=3.                                                |
- | spacy_tkn_attr_tag_                 | true    | Fine-grained part-of-speech.                                                                                  |
- | spacy_tkn_attr_tensor               | false   | The token’s slice of the parent Doc’s tensor.                                                                 |
- | spacy_tkn_attr_text                 | true    | Verbatim text content.                                                                                        |
- | spacy_tkn_attr_text_with_ws         | false   | Text content, with trailing space character if present.                                                       |
- | spacy_tkn_attr_vocab                | false   | The vocab object of the parent Doc.                                                                           |
- | spacy_tkn_attr_whitespace_          | true    | Trailing space character if present.                                                                          |
+| Parameter                          | Description                                                                                                   |
+|------------------------------------|---------------------------------------------------------------------------------------------------------------|
+ | spacy_ignore_bracket               | Ignore the tokens which are brackets ?                                                                        |
+ | spacy_ignore_left_punct            | Ignore the tokens which are left punctuation marks, e.g. "(" ?                                                |
+ | spacy_ignore_line_type_footer      | Ignore the tokens from line type footer ?                                                                     |
+ | spacy_ignore_line_type_header      | Ignore the tokens from line type header ?                                                                     |
+ | spacy_ignore_line_type_heading     | Ignore the tokens from line type heading ?                                                                    |
+ | spacy_ignore_line_type_list_bullet | Ignore the tokens from line type bulleted list ?                                                              |
+ | spacy_ignore_line_type_list_number | Ignore the tokens from line type numbered list ?                                                              |
+ | spacy_ignore_line_type_table       | Ignore the tokens from line type table ?                                                                      |
+ | spacy_ignore_line_type_toc         | Ignore the tokens from line type TOC ?                                                                        |
+ | spacy_ignore_punct                 | Ignore the tokens which are punctuations ?                                                                    |
+ | spacy_ignore_quote                 | Ignore the tokens which are quotation marks ?                                                                 |
+ | spacy_ignore_right_punct           | Ignore the tokens which are right punctuation marks, e.g. ")" ?                                               |
+ | spacy_ignore_space                 | Ignore the tokens which consist of whitespace characters ?                                                    |
+ | spacy_ignore_stop                  | Ignore the tokens which are part of a “stop list” ?                                                           |
+ |                                    |                                                                                                               |                                                                                                               |
+ | spacy_tkn_attr_cluster             | Brown cluster ID.                                                                                             |
+ | spacy_tkn_attr_dep_                | Syntactic dependency relation.                                                                                |
+ | spacy_tkn_attr_doc                 | The parent document.                                                                                          |
+ | spacy_tkn_attr_ent_iob_            | IOB code of named entity tag.                                                                                 |
+ | spacy_tkn_attr_ent_kb_id_          | Knowledge base ID that refers to the named entity <br>this token is a part of, if any.                        |
+ | spacy_tkn_attr_ent_type_           | Named entity type.                                                                                            |
+ | spacy_tkn_attr_head                | The syntactic parent, or “governor”, of this token.                                                           |
+ | spacy_tkn_attr_i                   | The index of the token within the parent document.                                                            |
+ | spacy_tkn_attr_idx                 | The character offset of the token within the parent document.                                                 |
+ | spacy_tkn_attr_is_alpha            | Does the token consist of alphabetic characters?                                                              |
+ | spacy_tkn_attr_is_ascii            | Does the token consist of ASCII characters? <br>Equivalent to all (ord(c) < 128 for c in token.text).         |
+ | spacy_tkn_attr_is_bracket          | Is the token a bracket?                                                                                       |
+ | spacy_tkn_attr_is_currency         | Is the token a currency symbol?                                                                               |
+ | spacy_tkn_attr_is_digit            | Does the token consist of digits?                                                                             |
+ | spacy_tkn_attr_is_left_punct       | Is the token a left punctuation mark, e.g. "(" ?                                                              |
+ | spacy_tkn_attr_is_lower            | Is the token in lowercase? Equivalent to token.text.islower().                                                |
+ | spacy_tkn_attr_is_oov              | Is the token out-of-vocabulary?                                                                               |
+ | spacy_tkn_attr_is_punct            | Is the token punctuation?                                                                                     |
+ | spacy_tkn_attr_is_quote            | Is the token a quotation mark?                                                                                |
+ | spacy_tkn_attr_is_right_punct      | Is the token a right punctuation mark, e.g. ")" ?                                                             |
+ | spacy_tkn_attr_is_sent_end         | Does the token end a sentence?                                                                                |
+ | spacy_tkn_attr_is_sent_start       | Does the token start a sentence?                                                                              |
+ | spacy_tkn_attr_is_space            | Does the token consist of whitespace characters? <br>Equivalent to token.text.isspace().                      |
+ | spacy_tkn_attr_is_stop             | Is the token part of a “stop list”?                                                                           |
+ | spacy_tkn_attr_is_title            | Is the token in titlecase?                                                                                    |
+ | spacy_tkn_attr_is_upper            | Is the token in uppercase? Equivalent to token.text.isupper().                                                |
+ | spacy_tkn_attr_lang_               | Language of the parent document’s vocabulary.                                                                 |
+ | spacy_tkn_attr_left_edge           | The leftmost token of this token’s syntactic descendants.                                                     |
+ | spacy_tkn_attr_lemma_              | Base form of the token, with no inflectional suffixes.                                                        |
+ | spacy_tkn_attr_lex                 | The underlying lexeme.                                                                                        |
+ | spacy_tkn_attr_lex_id              | Sequential ID of the token’s lexical type, used to index into tables, e.g. for word vectors.                  |
+ | spacy_tkn_attr_like_email          | Does the token resemble an email address?                                                                     |
+ | spacy_tkn_attr_like_num            | Does the token represent a number?                                                                            |
+ | spacy_tkn_attr_like_url            | Does the token resemble a URL?                                                                                |
+ | spacy_tkn_attr_lower_              | Lowercase form of the token text. Equivalent to Token.text.lower().                                           |
+ | spacy_tkn_attr_morph               | Morphological analysis.                                                                                       |
+ | spacy_tkn_attr_norm_               | The token’s norm, i.e. a normalized form of the token text.                                                   |
+ | spacy_tkn_attr_orth_               | Verbatim text content (identical to Token.text). <br>Exists mostly for consistency with the other attributes. |
+ | spacy_tkn_attr_pos_                | Coarse-grained part-of-speech from the Universal POS tag set.                                                 |
+ | spacy_tkn_attr_prefix_             | A length-N substring from the start of the token. <br>Defaults to N=1.                                        |
+ | spacy_tkn_attr_prob                | Smoothed log probability estimate of token’s word type <br>(context-independent entry in the vocabulary).     |
+ | spacy_tkn_attr_rank                | Sequential ID of the token’s lexical type, used to index <br>into tables, e.g. for word vectors.              |
+ | spacy_tkn_attr_right_edge          | The rightmost token of this token’s syntactic descendants.                                                    |
+ | spacy_tkn_attr_sent                | The sentence span that this token is a part of.                                                               |
+ | spacy_tkn_attr_sentiment           | A scalar value indicating the positivity or negativity of the token.                                          |
+ | spacy_tkn_attr_shape_              | Transform of the token’s string to show orthographic features.                                                |
+ | spacy_tkn_attr_suffix_             | Length-N substring from the end of the token. Defaults to N=3.                                                |
+ | spacy_tkn_attr_tag_                | Fine-grained part-of-speech.                                                                                  |
+ | spacy_tkn_attr_tensor              | The token’s slice of the parent Doc’s tensor.                                                                 |
+ | spacy_tkn_attr_text                | Verbatim text content.                                                                                        |
+ | spacy_tkn_attr_text_with_ws        | Text content, with trailing space character if present.                                                       |
+ | spacy_tkn_attr_vocab               | The vocab object of the parent Doc.                                                                           |
+ | spacy_tkn_attr_whitespace_         | Trailing space character if present.                                                                          |
 
 More information about the [spaCy](https://spacy.io){:target="_blank"} token attributes can be found [here](https://spacy.io/api/token#attributes){:target="_blank"}.
 **`DCR-CORE`** currently supports only a subset of the possible attributes, but this can easily be extended if required.

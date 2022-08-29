@@ -230,9 +230,6 @@ class Setup:
         self.is_verbose_lt_table: bool = False
         self.is_verbose_lt_toc: bool = False
         self.json_indent: int = 0
-        self.lt_export_rule_file_heading: str = ""
-        self.lt_export_rule_file_list_bullet: str = ""
-        self.lt_export_rule_file_list_number: str = ""
         self.lt_footer_max_distance: int = 0
         self.lt_footer_max_lines: int = 0
         self.lt_header_max_distance: int = 0
