@@ -36,7 +36,7 @@ The headings are determined with rule-enriched regular expressions.
 
 The following parameter controls both the classification of the headers and the footers:
 
-- **`verbose_lt_headers_footers`**
+- **`verbose_lt_header_footer`**
 
 Default value: **`false`** - the verbose mode is an option that provides additional details as to what the processing algorithm is doing.
 

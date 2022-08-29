@@ -1,11 +1,9 @@
 # pylint: disable=unused-argument
-"""Testing Class LineTypeListBullet."""
+"""Testing Class LineTypeHeaderFooter."""
 import pytest
 
 import dcr_core
 import dcr_core.cls_line_type_header_footer
-import dcr_core.cls_line_type_table
-import dcr_core.cls_line_type_toc
 import dcr_core.cls_process
 import dcr_core.cls_text_parser
 
@@ -16,34 +14,24 @@ import dcr_core.cls_text_parser
 
 
 # -----------------------------------------------------------------------------
-# Test Cases Line Type ListBullet.
+# Test Cases Line Type Headers & Footers - Coverage.
 # -----------------------------------------------------------------------------
-@pytest.mark.parametrize(
-    "input_output",
-    [
-        # input_output0
-        (
-            "docx_list_bullet",
-            "pdf",
-            [
-                "docx_list_bullet.line.json",
-                "docx_list_bullet.line.xml",
-                "docx_list_bullet.line_list_bullet.json",
-                "docx_list_bullet.line_token.json",
-                "docx_list_bullet.page.json",
-                "docx_list_bullet.page.xml",
-                "docx_list_bullet.pdf",
-                "docx_list_bullet.word.json",
-                "docx_list_bullet.word.xml",
-            ],
-        ),
-    ],
-)
-def test(input_output: tuple[str, str, list[str]], fxtr_setup_empty_inbox):
-    """Test Cases Line Type ListBullet."""
+def test(fxtr_rmdir_opt, fxtr_setup_empty_inbox):
+    """Test Cases Line Type Headers & Footers - Coverage."""
+    # -------------------------------------------------------------------------
+    pytest.helpers.config_params_modify(
+        dcr_core.cls_setup.Setup._DCR_CFG_SECTION_ENV_TEST,
+        [
+            (dcr_core.cls_setup.Setup._DCR_CFG_LT_FOOTER_MAX_LINES, "0"),
+            (dcr_core.cls_setup.Setup._DCR_CFG_LT_HEADER_MAX_LINES, "0"),
+            (dcr_core.cls_setup.Setup._DCR_CFG_VERBOSE_LT_HEADER_FOOTER, "true"),
+        ],
+    )
+
     # -------------------------------------------------------------------------
     directory_name = dcr_core.core_glob.setup.directory_inbox
-    (stem_name, file_extension, test_files) = input_output
+    stem_name = "p_5_h_4_f_4_empty_center"
+    file_extension = "pdf"
 
     full_name = dcr_core.core_utils.get_full_name_from_components(directory_name, stem_name, file_extension)
 
@@ -59,6 +47,3 @@ def test(input_output: tuple[str, str, list[str]], fxtr_setup_empty_inbox):
     instance = dcr_core.cls_process.Process()
 
     instance.document_process(full_name)
-
-    # -------------------------------------------------------------------------
-    pytest.helpers.verify_created_files(directory_name, test_files)

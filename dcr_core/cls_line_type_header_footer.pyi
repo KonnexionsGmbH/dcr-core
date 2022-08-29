@@ -5,7 +5,7 @@
 """Module stub file."""
 import dcr_core.cls_nlp_core
 
-class LineTypeHeaderFooters:
+class LineTypeHeaderFooter:
     Candidate = tuple[int, int]
     Candidates = list[Candidate]
     LineDataCell = tuple[int, str]
@@ -23,23 +23,23 @@ class LineTypeHeaderFooters:
     ) -> None:
         self._exist: bool = False
         self._file_name_curr: str = ""
-        self._irregular_footer_cand: LineTypeHeaderFooters.Candidate = (0, 0)
-        self._irregular_footer_cand_fp: LineTypeHeaderFooters.Candidates = []
-        self._irregular_footer_cands: LineTypeHeaderFooters.Candidates = []
-        self._irregular_header_cand: LineTypeHeaderFooters.Candidate = (0, 0)
-        self._irregular_header_cand_fp: LineTypeHeaderFooters.Candidates = []
-        self._irregular_header_cands: LineTypeHeaderFooters.Candidates = []
+        self._irregular_footer_cand: LineTypeHeaderFooter.Candidate = (0, 0)
+        self._irregular_footer_cand_fp: LineTypeHeaderFooter.Candidates = []
+        self._irregular_footer_cands: LineTypeHeaderFooter.Candidates = []
+        self._irregular_header_cand: LineTypeHeaderFooter.Candidate = (0, 0)
+        self._irregular_header_cand_fp: LineTypeHeaderFooter.Candidates = []
+        self._irregular_header_cands: LineTypeHeaderFooter.Candidates = []
         self._is_irregular_footer: bool = False
         self._is_irregular_header: bool = False
-        self._line_data: LineTypeHeaderFooters.LineData = []
+        self._line_data: LineTypeHeaderFooter.LineData = []
         self._line_data_max: int = 0
-        self._lsd_data: LineTypeHeaderFooters.LSDData = []
+        self._lsd_data: LineTypeHeaderFooter.LSDData = []
         self._no_irregular_footer: int = 0
         self._no_irregular_header: int = 0
         self._page_ind: int = 0
         self._page_max: int = 0
         self._parser_line_lines_json: dcr_core.cls_nlp_core.NLPCore.ParserLineLines = []
-        self._result_data: LineTypeHeaderFooters.ResultData = {}
+        self._result_data: LineTypeHeaderFooter.ResultData = {}
         self.line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages = []
         self.no_lines_footer: int = 0
         self.no_lines_header: int = 0

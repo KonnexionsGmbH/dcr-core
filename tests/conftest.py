@@ -92,11 +92,12 @@ def compare_with_reference_files(directory_name: str, reference_files: list[str]
                 # multiple lines
                 # single line
                 if (
-                    is_line_type("<CreationDate>", tst_lines[i], ref_lines[i])
+                    is_line_type("<CreationDate>", tst_lines[i], ref_lines[i])  # pylint: disable=too-many-boolean-expressions
                     or is_line_type("<Creation platform=", tst_lines[i], ref_lines[i])
                     or is_line_type("<Document filename=", tst_lines[i], ref_lines[i])
                     or is_line_type(' <Font id="F0" name="LMRoman10-Regular" fullname="', tst_lines[i], ref_lines[i])
                     or is_line_type("<Options>tetml=", tst_lines[i], ref_lines[i])
+                    or is_line_type("<Producer>", tst_lines[i], ref_lines[i])
                 ):
                     continue
 
@@ -255,7 +256,7 @@ def fxtr_before_any_test():
         (dcr_core.cls_setup.Setup._DCR_CFG_TOKENIZE_2_DATABASE, "true"),
         (dcr_core.cls_setup.Setup._DCR_CFG_TOKENIZE_2_JSONFILE, "true"),
         (dcr_core.cls_setup.Setup._DCR_CFG_VERBOSE, "true"),
-        (dcr_core.cls_setup.Setup._DCR_CFG_VERBOSE_LT_HEADERS_FOOTERS, "false"),
+        (dcr_core.cls_setup.Setup._DCR_CFG_VERBOSE_LT_HEADER_FOOTER, "false"),
         (dcr_core.cls_setup.Setup._DCR_CFG_VERBOSE_LT_HEADING, "false"),
         (dcr_core.cls_setup.Setup._DCR_CFG_VERBOSE_LT_LIST_BULLET, "false"),
         (dcr_core.cls_setup.Setup._DCR_CFG_VERBOSE_LT_LIST_NUMBER, "false"),
@@ -325,14 +326,14 @@ def fxtr_rmdir_opt(fxtr_rmdir):
 
 
 # -----------------------------------------------------------------------------
-# Fixture - Setup empty database and empty inboxes.
+# Fixture - an empty directory.
 # -----------------------------------------------------------------------------
 @pytest.fixture()
 def fxtr_setup_empty_inbox(
     fxtr_mkdir,
     fxtr_rmdir_opt,
 ):
-    """Fixture: Setup empty database and empty inboxes."""
+    """Fixture: Setup an empty directory."""
     setup_cfg_backup()
 
     dcr_core.core_glob.setup = dcr_core.cls_setup.Setup()
@@ -341,8 +342,6 @@ def fxtr_setup_empty_inbox(
     fxtr_mkdir(dcr_core.core_glob.setup.directory_inbox)
 
     yield
-
-    # fxtr_rmdir_opt(dcr_core.core_glob.setup.directory_inbox)
 
     setup_cfg_restore()
 

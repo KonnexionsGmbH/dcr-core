@@ -49,10 +49,12 @@ class Process:
         + "'PDF' document - "
         + "error type: '{error_type}' - error: '{error_msg}'."
     )
+    ERROR_31_911: ClassVar[str] = "31.911 Issue (n_2_p): The number of pages of the PDF document {full_name} cannot be determined"
     ERROR_41_901: ClassVar[str] = (
         "41.901 Issue (ocr): Converting the file '{full_name}' with Tesseract OCR failed - "
         + "error type: '{error_type}' - error: '{error}'."
     )
+    ERROR_41_911: ClassVar[str] = "41.911 Issue (ocr): The number of pages of the PDF document {full_name} cannot be determined"
     ERROR_51_901: ClassVar[str] = (
         "51.901 Issue (tet): Opening document '{full_name}' - " + "error no: '{error_no}' - api: '{api_name}' - error: '{error}'."
     )
@@ -71,6 +73,12 @@ class Process:
     # ------------------------------------------------------------------
     def __init__(self) -> None:
         """Initialise the instance."""
+        try:
+            dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+        except AttributeError:
+            dcr_core.core_glob.initialise_logger()
+            dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+
         self._document_id: int = 0
 
         self._full_name_in: str = ""
@@ -105,6 +113,8 @@ class Process:
         self._no_pdf_pages: int = 0
 
         self._exist = True
+
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
 
     # ------------------------------------------------------------------
     # Check the document by the file extension and determine further
@@ -263,8 +273,8 @@ class Process:
             )
 
             if is_parsing_line:
-                self._no_lines_footer = dcr_core.core_glob.line_type_headers_footers.no_lines_footer
-                self._no_lines_header = dcr_core.core_glob.line_type_headers_footers.no_lines_header
+                self._no_lines_footer = dcr_core.core_glob.line_type_header_footer.no_lines_footer
+                self._no_lines_header = dcr_core.core_glob.line_type_header_footer.no_lines_header
                 self._no_lines_toc = dcr_core.core_glob.line_type_toc.no_lines_toc
 
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
@@ -344,7 +354,6 @@ class Process:
 
         # noinspection PyUnresolvedReferences
         self._no_pdf_pages = len(PyPDF2.PdfReader(self._full_name_in_pdflib).pages)
-
         if self._no_pdf_pages == 0:
             raise RuntimeError(f"The number of pages of the PDF document {self._full_name_in_pdflib} cannot be determined")
 
@@ -569,7 +578,12 @@ class Process:
                     ("ok", "") if the processing has been completed successfully,
                                otherwise a corresponding error code and error message.
         """
-        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+        try:
+            dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+        except AttributeError:
+            dcr_core.core_glob.initialise_logger()
+            dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+
         dcr_core.core_glob.logger.debug("param full_name_in   =%s", full_name_in)
         dcr_core.core_glob.logger.debug("param full_name_out  =%s", full_name_out)
         dcr_core.core_glob.logger.debug("param language_pandoc=%s", language_pandoc)
@@ -588,6 +602,12 @@ class Process:
                 extra_args=extra_args,
                 outputfile=full_name_out,
             )
+
+            if len(PyPDF2.PdfReader(full_name_out).pages) == 0:
+                error_msg = Process.ERROR_31_911.replace("{full_name}", full_name_out)
+                dcr_core.core_glob.logger.debug("return               =%s", (error_msg[:6], error_msg))
+                dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
+                return error_msg[:6], error_msg
 
         except (FileNotFoundError, RuntimeError) as err:
             error_msg = (
@@ -641,7 +661,12 @@ class Process:
                     ("ok", "") if the processing has been completed successfully,
                                otherwise a corresponding error code and error message.
         """
-        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+        try:
+            dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+        except AttributeError:
+            dcr_core.core_glob.initialise_logger()
+            dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+
         dcr_core.core_glob.logger.debug("param document_id   =%i", document_id)
         dcr_core.core_glob.logger.debug("param full_name_orig=%s", full_name_orig)
         dcr_core.core_glob.logger.debug("param full_name_in  =%s", full_name_in)
@@ -715,7 +740,12 @@ class Process:
                     ("ok", "", [...]) if the processing has been completed successfully,
                                       otherwise a corresponding error code and error message.
         """
-        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+        try:
+            dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+        except AttributeError:
+            dcr_core.core_glob.initialise_logger()
+            dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+
         dcr_core.core_glob.logger.debug("param full_name_in=%s", full_name_in)
 
         try:
@@ -826,7 +856,12 @@ class Process:
                     ("ok", "") if the processing has been completed successfully,
                                otherwise a corresponding error code and error message.
         """
-        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+        try:
+            dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+        except AttributeError:
+            dcr_core.core_glob.initialise_logger()
+            dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+
         dcr_core.core_glob.logger.debug("param full_name_in     =%s", full_name_in)
         dcr_core.core_glob.logger.debug("param full_name_out    =%s", full_name_out)
         dcr_core.core_glob.logger.debug("param document_opt_list=%s", document_opt_list)
@@ -907,7 +942,12 @@ class Process:
                     ("ok", "", [...]) if the processing has been completed successfully,
                                       otherwise a corresponding error code and error message.
         """
-        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+        try:
+            dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+        except AttributeError:
+            dcr_core.core_glob.initialise_logger()
+            dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+
         dcr_core.core_glob.logger.debug("param full_name_in      =%s", full_name_in)
         dcr_core.core_glob.logger.debug("param full_name_out     =%s", full_name_out)
         dcr_core.core_glob.logger.debug("param language_tesseract=%s", language_tesseract)
@@ -928,6 +968,12 @@ class Process:
                 with open(full_name_out, "w+b") as file_handle:
                     # PDF type is bytes by default
                     file_handle.write(pdf)
+
+                if len(PyPDF2.PdfReader(full_name_out).pages) == 0:
+                    error_msg = Process.ERROR_41_911.replace("{full_name_out}", full_name_out)
+                    dcr_core.core_glob.logger.debug("return                  =%s", (error_msg[:6], error_msg, []))
+                    dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
+                    return error_msg[:6], error_msg, []
 
                 pdf_reader = PyPDF2.PdfReader(full_name_out)
 
@@ -1005,7 +1051,12 @@ class Process:
                     ("ok", "") if the processing has been completed successfully,
                                otherwise a corresponding error code and error message.
         """
-        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+        try:
+            dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+        except AttributeError:
+            dcr_core.core_glob.initialise_logger()
+            dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+
         dcr_core.core_glob.logger.debug("param document_id    =%i", document_id)
         dcr_core.core_glob.logger.debug("param full_name_in   =%s", full_name_in)
         dcr_core.core_glob.logger.debug("param full_name_orig =%s", full_name_orig)

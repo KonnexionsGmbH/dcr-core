@@ -20,7 +20,8 @@ jobs:
     strategy:
       max-parallel: 1
       matrix:
-        os: ["ubuntu-22.04"]
+#        os: ["ubuntu-22.04"]
+        os: ["ubuntu-20.04"]
         python-version: ["3.10.6"]
     steps:
       - uses: actions/checkout@v3
@@ -40,10 +41,9 @@ jobs:
         run: make docs
       - name: Install Step 1 - Necessary system software (incl. Poppler & TeX Live)
         run: |
-            sudo apt-get update  -y
             sudo apt-get install -y software-properties-common  
-            sudo apt-get update  -y
             sudo apt-get install -y ca-certificates
+            sudo apt-get update -y
             sudo apt-get install -y gnupg
             sudo apt-get install -y libgif-dev
             sudo apt-get install -y libjpeg-dev
@@ -62,10 +62,15 @@ jobs:
             sudo dpkg -i pandoc-${VERSION_PANDOC}-1-amd64.deb
       - name: Install Step 3 - Tesseract OCR
         run: |
-            sudo apt-get install -y apt-transport-https
-            echo "deb https://notesalexp.org/tesseract-ocr5/$(lsb_release -cs)/ $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/notesalexp.list > /dev/null
-            wget -O - https://notesalexp.org/debian/alexp_key.asc | sudo apt-key add -
-            sudo apt-get update  -y
+            sudo add-apt-repository ppa:alex-p/tesseract-ocr-devel
+            sudo apt-get update -y
             sudo apt-get install -y tesseract-ocr
       - name: Publish the code coverage to coveralls.io
-        run: make coveralls
+        run: |
+            echo "================================================================================"
+            echo "Current version of Poppler: $(pdftocairo -v)"
+            echo "Current version of TeX Live: $(pdflatex --version)"
+            echo "Current version of Pandoc: $(pandoc -v)"
+            echo "Current version of Tesseract OCR: $(tesseract --version)"
+            echo "================================================================================"
+            make coveralls

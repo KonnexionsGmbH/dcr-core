@@ -116,7 +116,7 @@ class Setup:
     _DCR_CFG_TOKENIZE_2_DATABASE: ClassVar[str]
     _DCR_CFG_TOKENIZE_2_JSONFILE: ClassVar[str]
     _DCR_CFG_VERBOSE: ClassVar[str]
-    _DCR_CFG_VERBOSE_LT_HEADERS_FOOTERS: ClassVar[str]
+    _DCR_CFG_VERBOSE_LT_HEADER_FOOTER: ClassVar[str]
     _DCR_CFG_VERBOSE_LT_HEADING: ClassVar[str]
     _DCR_CFG_VERBOSE_LT_LIST_BULLET: ClassVar[str]
     _DCR_CFG_VERBOSE_LT_LIST_NUMBER: ClassVar[str]
@@ -223,7 +223,7 @@ class Setup:
         self.is_tokenize_2_database: bool = False
         self.is_tokenize_2_jsonfile: bool = False
         self.is_verbose: bool = False
-        self.is_verbose_lt_headers_footers: bool = False
+        self.is_verbose_lt_header_footer: bool = False
         self.is_verbose_lt_heading: bool = False
         self.is_verbose_lt_list_bullet: bool = False
         self.is_verbose_lt_list_number: bool = False

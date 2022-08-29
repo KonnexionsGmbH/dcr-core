@@ -53,11 +53,16 @@ class LineTypeListBullet:
                     File name of the PDF document to be processed - only
                     For documentation purposes. Defaults to "".
         """
-        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+        try:
+            dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+        except AttributeError:
+            dcr_core.core_glob.initialise_logger()
+            dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+
         dcr_core.core_glob.logger.debug("param file_name_curr=%s", file_name_curr)
 
         dcr_core.core_utils.check_exists_object(
-            is_line_type_headers_footers=True,
+            is_line_type_header_footer=True,
             is_line_type_table=True,
             is_line_type_toc=True,
             is_setup=True,
@@ -501,7 +506,7 @@ class LineTypeListBullet:
         dcr_core.core_glob.logger.debug("param line_pages_json    =%s", line_pages_json)
 
         dcr_core.core_utils.check_exists_object(
-            is_line_type_headers_footers=True,
+            is_line_type_header_footer=True,
             is_line_type_table=True,
             is_line_type_toc=True,
             is_setup=True,
