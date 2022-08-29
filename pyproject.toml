@@ -29,14 +29,14 @@ maintainers = [
 name = "dcr-core"
 readme = "README.md"
 requires-python = ">=3.10"
-version = "0.9.6.1.9.9.1"
+version = "0.9.6.1.9.9.2"
 
 [project.urls]
 "Bug Tracker" = "https://github.com/KonnexionsGmbH/dcr-core/issues"
-#"Documentation" = "https://konnexionsgmbh.github.io/dcr-core/"
+"Documentation" = "https://konnexionsgmbh.github.io/dcr-core/"
 "Homepage" = "https://github.com/KonnexionsGmbH/dcr-core"
-#"Release History" = "TBD"
-#"Release Notes" = "TBD"
+"Release Notes" = "https://konnexionsgmbh.github.io/dcr-core/release_notes/"
+"Release History" = "https://konnexionsgmbh.github.io/dcr-core/release_history/"
 
 [tool.bandit]
 

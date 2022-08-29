@@ -34,7 +34,7 @@ Please see the **[Documentation](https://konnexionsgmbh.github.io/dcr-core)** fo
 - Extract text and metadata from **`pdf`** documents with [PDFlib TET](https://www.pdflib.com/products/tet/).
 - Classification of lines in the document, e.g. body, footer, header lines, etc.
 - Sentence-by-sentence determination of the token structure using [spaCy](https://spacy.io).
-- Storage of the analysis result in a JSON flat file.
+- Storage of the analysis results in JSON and XML flat files.
 
 ## 2. Directory and File Structure of this Repository
 
