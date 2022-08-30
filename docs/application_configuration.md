@@ -168,6 +168,7 @@ The available options are described below.
     spacy_ignore_right_punct = false
     spacy_ignore_space = false
     spacy_ignore_stop = false
+
     spacy_tkn_attr_cluster = true
     spacy_tkn_attr_dep_ = true
     spacy_tkn_attr_doc = true

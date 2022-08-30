@@ -27,11 +27,7 @@ import dcr_core.cls_nlp_core
 
 # pylint: disable=too-many-instance-attributes
 class LineTypeListBullet:
-    """Determine list of bulleted lines.
-
-    Returns:
-        _type_: LineTypeListBullet instance.
-    """
+    """Determine list of bulleted lines."""
 
     Entry = dict[str, int | str]
     Entries = list[Entry]

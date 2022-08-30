@@ -13,7 +13,7 @@ Version **`3.10`** is used for the **`Python`** programming language.
 
 To set up a suitable development environment under **`Ubuntu`**, on the one hand a suitable ready-made Docker image is provided and on the other hand two scripts to create the development system in a standalone system, a virtual environment or the **`Windows Subsystem for Linux (WSL2)`** are available.
 
-### 1. Docker Image
+## 1. Docker Image
 
 The ready-made Docker images are available on [DockerHub](https://hub.docker.com){:target="_blank"} under the following link:
 
@@ -21,7 +21,7 @@ The ready-made Docker images are available on [DockerHub](https://hub.docker.com
 
 When selecting the Docker image, care must be taken to select the appropriate version of the Docker image.
 
-### 2. Script-based Solution
+## 2. Script-based Solution
 
 Alternatively, for a **`Ubuntu`** environment that is as unspoiled as possible, the following two scripts are available in the **`scripts`** file directory:
 

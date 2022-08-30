@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "cc9a534dd6a3c43e5d2a5ccf2684c5c1c1753f542d239fa7c600c69426898dcb"
+            "sha256": "c525a7f361155fc92fd9c288b8e381c368e7bac77d5f0d449e2743734402bd1f"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -756,11 +756,11 @@
         },
         "pypdf2": {
             "hashes": [
-                "sha256:0217ff7ab1909777234c87f2be931d09ec82107a7f3aaa7e116e3a60cc3aaa06",
-                "sha256:de6c595ca64e370a23da2b325d06cd5258083fa96d7439eac0d381632dcf04db"
+                "sha256:f08e341e9ec8aaa77f77bde11e6e5e8c32c61f56abe4b26839012a78520549dc",
+                "sha256:f090c5fc7990cf5a6d6364ce2362834974e32136d52291babb2372e5d647d188"
             ],
             "index": "pypi",
-            "version": "==2.10.3"
+            "version": "==2.10.4"
         },
         "pyphen": {
             "hashes": [
@@ -1138,11 +1138,11 @@
     "develop": {
         "astroid": {
             "hashes": [
-                "sha256:39fa822c82dc112f5072a208ddf01c58184043aa90e3e469786fa0520c71aaa7",
-                "sha256:af71cdc0775b6e4d88076746620e2c8cd1bf4533a9977cfdd00eeea97d95530c"
+                "sha256:396c88d0a58d7f8daadf730b2ce90838bf338c6752558db719ec6f99c18ec20e",
+                "sha256:d612609242996c4365aeb0345e61edba34363eaaba55f1c0addf6a98f073bef6"
             ],
             "markers": "python_full_version >= '3.7.2'",
-            "version": "==2.12.4"
+            "version": "==2.12.5"
         },
         "atomicwrites": {
             "hashes": [
@@ -1368,7 +1368,7 @@
                 "sha256:65c94cba634d6ad397c495b04ed5fd3f06d9b16c4f9f78bd63be9ea34d6b7113",
                 "sha256:a3c25a2b7bf729ecee7cd455b4eff548f01c620b8f58a8097a800caad221f12e"
             ],
-            "markers": "python_version >= '3.7'",
+            "index": "pypi",
             "version": "==0.22.0"
         },
         "idna": {
@@ -1452,14 +1452,6 @@
             ],
             "markers": "python_version >= '3.6'",
             "version": "==1.7.1"
-        },
-        "lazydocs": {
-            "hashes": [
-                "sha256:8ac1fda05f03e0c5ae1d30b81eaeb785476efa161194a5e8bfa8630e14af9562",
-                "sha256:cebdce88c8e01ae19c63da77fc25a16abd6f7a7055930001644703643e608fed"
-            ],
-            "index": "pypi",
-            "version": "==0.4.8"
         },
         "mando": {
             "hashes": [
@@ -1904,16 +1896,8 @@
                 "sha256:25d4e2e446c453be6360c67ddfb88838cfc42026322770ba13d1fbd403a93a5c",
                 "sha256:3235a9010fae54323e727c3ac06fb720752fe6635b3426e379daec60fbd44a83"
             ],
-            "markers": "python_version >= '3.6' and python_version < '4'",
+            "markers": "python_version >= '3.6' and python_version < '4.0'",
             "version": "==0.11.4"
-        },
-        "typer": {
-            "hashes": [
-                "sha256:023bae00d1baf358a6cc7cea45851639360bb716de687b42b0a4641cd99173f1",
-                "sha256:b8261c6c0152dd73478b5ba96ba677e5d6948c715c310f7c91079f311f62ec03"
-            ],
-            "markers": "python_version >= '3.6'",
-            "version": "==0.4.2"
         },
         "types-psycopg2": {
             "hashes": [

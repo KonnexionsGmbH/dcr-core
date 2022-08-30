@@ -20,10 +20,7 @@ import dcr_core.core_utils
 
 
 class NLPCore:
-    """NLP utility class.
-
-    Returns: _type_: NLPCore instance.
-    """
+    """NLP utility class."""
 
     # ------------------------------------------------------------------
     # Global type aliases.

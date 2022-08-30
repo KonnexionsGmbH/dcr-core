@@ -28,11 +28,7 @@ import dcr_core.cls_nlp_core
 
 # pylint: disable=too-many-instance-attributes
 class TextParser:
-    """Extract text and metadata from PDFlib TET.
-
-    Returns:
-        _type_: TextParser instance.
-    """
+    """Extract text and metadata from PDFlib TET."""
 
     # ------------------------------------------------------------------
     # Initialise the instance.

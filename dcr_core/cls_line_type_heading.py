@@ -34,11 +34,7 @@ import dcr_core.cls_nlp_core
 
 # pylint: disable=too-many-instance-attributes
 class LineTypeHeading:
-    """Determine table of content lines.
-
-    Returns:
-        _type_: LineTypeHeading instance.
-    """
+    """Determine table of content lines."""
 
     # ------------------------------------------------------------------
     # Initialise the instance.

@@ -31,11 +31,7 @@ import dcr_core.cls_nlp_core
 
 # pylint: disable=too-many-instance-attributes
 class LineTypeListNumber:
-    """Determine list of numbered lines.
-
-    Returns:
-        _type_: LineTypeListNumber instance.
-    """
+    """Determine list of numbered lines."""
 
     Entry = dict[str, int | str]
     Entries = list[Entry]

@@ -17,11 +17,7 @@ import dcr_core.core_utils
 
 # pylint: disable=too-many-instance-attributes
 class Setup:
-    """Managing the application configuration parameters.
-
-    Returns:
-        _type_: Application configuration parameters.
-    """
+    """Managing the application configuration parameters."""
 
     # ------------------------------------------------------------------
     # Class variables.

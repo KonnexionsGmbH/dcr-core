@@ -3,7 +3,7 @@
 ![GitHub (Pre-)Release](https://img.shields.io/github/v/release/KonnexionsGmbH/dcr-core?-core?include_prereleases)
 ![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/KonnexionsGmbh/dcr-core?-core)
 
-### 1. API Documentation
+## 1. API Documentation
 
 The creation of API documentation for functions, modules and packages is mandatory and enforced with the static analysis tool [pydocstyle](https://github.com/PyCQA/pydocstyle){:target="_blank"}.
 **`pydocstyle`** is a static analysis tool for checking compliance with **`Python`** **`Docstring`** conventions.
@@ -14,7 +14,7 @@ For Visual Studio Code, the extension [VSCode Python Docstring Generator](https:
 With the [Pydoc-Markdown](https://github.com/NiklasRosenstein/pydoc-markdown){:target="_blank"} tool, the API documentation is extracted from the source files and put into Markdown format. 
 In this format, the API documentation can then be integrated into the user documentation.
 
-### 2. Examples for the format of the API documentation
+## 2. Examples for the format of the API documentation
 
 **Package Documentation**:
 
@@ -64,7 +64,7 @@ In this format, the API documentation can then be integrated into the user docum
 
 In Visual Studio Code, the [VSCode Python Docstring Generator](https://github.com/NilsJPWerner/autoDocstring){:target="_blank"} tool can be used to create a framework for API documentation.
 
-### 3. User Documentation
+## 3. User Documentation
 
 The remaining documents for the user documentation can be found in the file directory **`docs`** in Markdown format:
 

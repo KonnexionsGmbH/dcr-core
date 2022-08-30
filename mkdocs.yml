@@ -14,6 +14,7 @@ extra_javascript:
 
 markdown_extensions:
   - attr_list
+  - pymdownx.highlight
   - pymdownx.tilde
   - toc : {
     toc_depth: "1-3"
@@ -48,18 +49,20 @@ nav:
   - License: license.md
 
 plugins:
-  - search
+  - autorefs
   - awesome-pages
   - mkdocstrings:
       default_handler: python
       handlers:
         python:
           options:
-            heading_level: 3
-            paths: [src]
+            heading_level: 2
+            paths: [dcr_core]
             show_root_heading: false
             show_source: true
+  - search
 
+repo_name: GitHub
 repo_url: https://github.com/KonnexionsGmbH/dcr-core/
 
 site_name: DCR-CORE - Document Content Recognition API

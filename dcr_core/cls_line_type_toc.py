@@ -18,11 +18,7 @@ import dcr_core.cls_nlp_core
 
 
 class LineTypeToc:
-    """Determine table of content lines.
-
-    Returns:
-        _type_: LineTypeToc instance.
-    """
+    """Determine table of content lines."""
 
     # ------------------------------------------------------------------
     # Initialise the instance.

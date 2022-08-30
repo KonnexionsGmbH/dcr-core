@@ -27,11 +27,7 @@ import PDFlib.TET
 
 # pylint: disable=too-many-instance-attributes
 class Process:
-    """Process utility class.
-
-    Returns:
-        _type_: Process instance.
-    """
+    """Process utility class."""
 
     # ------------------------------------------------------------------
     # Class variables.

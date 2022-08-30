@@ -20,11 +20,7 @@ import dcr_core.cls_nlp_core
 # pylint: disable=too-many-instance-attributes
 # pylint: disable=too-many-statements
 class TokenizerSpacy:
-    """Tokenize the document.
-
-    Returns:
-        _type_: TokenizeSpacy instance.
-    """
+    """Tokenize the document."""
 
     TokenToken = dict[str, bool | float | int | str]
     TokenTokens = list[TokenToken]

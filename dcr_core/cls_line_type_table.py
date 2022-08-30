@@ -24,10 +24,7 @@ import dcr_core.cls_nlp_core
 
 # pylint: disable=too-many-instance-attributes
 class LineTypeTable:
-    """Determine table of content lines.
-
-    Returns: _type_: LineTypeTable instance.
-    """
+    """Determine table of content lines."""
 
     Column = dict[str, float | int | object | str]
     Columns = list[Column]
