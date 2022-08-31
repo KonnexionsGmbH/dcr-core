@@ -2,6 +2,12 @@
 div.doc-contents:not(.first) {
   padding-left: 25px;
   border-left: .05rem solid var(--md-typeset-table-color);
+
+ .doc-label { border-radius: 15px; padding: 0 5px; }
+ .doc-label-special { background-color: blue; color: white; }
+ .doc-label-private { background-color: red; color: white; }
+ .doc-label-property { background-color: green; color: white; }
+ .doc-label-read-only { background-color: yellow; color: black; }
 }
 
 /* Mark external links as such. */

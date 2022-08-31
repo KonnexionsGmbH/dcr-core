@@ -27,6 +27,7 @@ nav:
       - Installaion: application_installation.md
       - Configuration: application_configuration.md
       - Operations: application_operations.md
+      - API Documentation: application_api_documentation.md
       - Document Language: application_document_language.md
   - Release Documents:
     - Release Notes: release_notes.md
@@ -40,7 +41,6 @@ nav:
       - Documentation:
         - Software Documentation: development_software_documentation.md
         - Line Type Algorithms: development_line_type.md
-        - API Documentation: development_api_documentation.md
       - Software Testing: development_software_testing.md
       - Continuous Delivery: development_continuous_delivery.md
       - Version Planning: development_version_planning.md
@@ -56,7 +56,7 @@ plugins:
       handlers:
         python:
           options:
-            heading_level: 2
+            heading_level: 3
             paths: [dcr_core]
             show_root_heading: false
             show_source: true

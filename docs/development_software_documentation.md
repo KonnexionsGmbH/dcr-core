@@ -11,7 +11,7 @@ The creation of API documentation for functions, modules and packages is mandato
 
 The **`Docstring`** format used in **`DCR-CORE`** is that of [type Google](https://github.com/google/styleguide/blob/gh-pages/pyguide.md#383-functions-and-methods){:target="_blank"}. 
 For Visual Studio Code, the extension [VSCode Python Docstring Generator](https://github.com/NilsJPWerner/autoDocstring){:target="_blank"} can be used when creating API documentation.  
-With the [Pydoc-Markdown](https://github.com/NiklasRosenstein/pydoc-markdown){:target="_blank"} tool, the API documentation is extracted from the source files and put into Markdown format. 
+With the [mkdocstrings](https://github.com/mkdocstrings/mkdocstrings){:target="_blank"} tool, the API documentation is extracted from the source files and put into Markdown format. 
 In this format, the API documentation can then be integrated into the user documentation.
 
 ## 2. Examples for the format of the API documentation

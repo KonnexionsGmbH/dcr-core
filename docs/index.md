@@ -24,23 +24,25 @@ The processing logic is as follows:
 
 **`DCR-CORE`** can handle the following file types based on the file extension:
 
-- **`bmp`** [bitmap image file](https://en.wikipedia.org/wiki/BMP_file_format){:target="_blank"}
-- **`csv`** [comma-separated values](https://en.wikipedia.org/wiki/Comma-separated_values){:target="_blank"}
-- **`docx`** [Office Open XML](https://www.ecma-international.org/publications-and-standards/standards/ecma-376/){:target="_blank"}
-- **`epub`** [e-book file format](https://www.w3.org/publishing/epub32/){:target="_blank"}
-- **`gif`** [Graphics Interchange Format](https://www.w3.org/Graphics/GIF/spec-gif89a.txt){:target="_blank"}
-- **`html`** [HyperText Markup Language](https://html.spec.whatwg.org){:target="_blank"}
-- **`jp2`** [JPEG 2000](https://en.wikipedia.org/wiki/JPEG_2000){:target="_blank"}
-- **`jpeg`** [Joint Photographic Experts Group](https://jpeg.org/jpeg/){:target="_blank"}
-- **`odt`** [Open Document Format for Office Applications](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=office){:target="_blank"}
-- **`pdf`** [Portable Document Format](https://www.iso.org/standard/75839.html){:target="_blank"}
-- **`png`** [Portable Network Graphics](https://en.wikipedia.org/wiki/Portable_Network_Graphics){:target="_blank"}
-- **`pnm`** [portable any-map format](https://en.wikipedia.org/wiki/Netpbm#File_formats){:target="_blank"}
-- **`rst`** [reStructuredText (RST](https://docutils.sourceforge.io/rst.html){:target="_blank"}
-- **`rtf`** [Rich Text Format](https://en.wikipedia.org/wiki/Rich_Text_Format){:target="_blank"}
-- **`tif`** [Tag Image File Format](https://en.wikipedia.org/wiki/TIFF){:target="_blank"}
-- **`tiff`** [Tag Image File Format](https://en.wikipedia.org/wiki/TIFF){:target="_blank"}
-- **`webp`** [Image file format with lossless and lossy compression](https://developers.google.com/speed/webp){:target="_blank"}
+| File extension | File type                                                                                                                            | Initial processing |
+|----------------|--------------------------------------------------------------------------------------------------------------------------------------|--------------------|
+| **`bmp`**      | [bitmap image file](https://en.wikipedia.org/wiki/BMP_file_format){:target="_blank"}                                                 | tesseract          |
+| **`csv`**      | [comma-separated values](https://en.wikipedia.org/wiki/Comma-separated_values){:target="_blank"}                                     | pandoc             |
+| **`docx`**     | [Office Open XML](https://www.ecma-international.org/publications-and-standards/standards/ecma-376/){:target="_blank"}               | pandoc             |
+| **`epub`**     | [e-book file format](https://www.w3.org/publishing/epub32/){:target="_blank"}                                                        | pandoc             |
+| **`gif`**      | [Graphics Interchange Format](https://www.w3.org/Graphics/GIF/spec-gif89a.txt){:target="_blank"}                                     | tesseract          |
+| **`html`**     | [HyperText Markup Language](https://html.spec.whatwg.org){:target="_blank"}                                                          | pandoc             |
+| **`jp2`**      | [JPEG 2000](https://en.wikipedia.org/wiki/JPEG_2000){:target="_blank"}                                                               | tesseract          |
+| **`jpeg`**     | [Joint Photographic Experts Group](https://jpeg.org/jpeg/){:target="_blank"}                                                         | tesseract          |
+| **`odt`**      | [Open Document Format for Office Applications](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=office){:target="_blank"} | pandoc             | 
+| **`pdf`**      | [Portable Document Format](https://www.iso.org/standard/75839.html){:target="_blank"}                                                | pdflib / pdf2image |
+| **`png`**      | [Portable Network Graphics](https://en.wikipedia.org/wiki/Portable_Network_Graphics){:target="_blank"}                               | tesseract          |
+| **`pnm`**      | [portable any-map format](https://en.wikipedia.org/wiki/Netpbm#File_formats){:target="_blank"}                                       | tesseract          |                                     
+| **`rst`**      | [reStructuredText (RST](https://docutils.sourceforge.io/rst.html){:target="_blank"}                                                  | pandoc             |
+| **`rtf`**      | [Rich Text Format](https://en.wikipedia.org/wiki/Rich_Text_Format){:target="_blank"}                                                 | pandoc             |
+| **`tif`**      | [Tag Image File Format](https://en.wikipedia.org/wiki/TIFF){:target="_blank"}                                                        | tesseract          |
+| **`tiff`**     | [Tag Image File Format](https://en.wikipedia.org/wiki/TIFF){:target="_blank"}                                                        | tesseract          |
+| **`webp`**     | [Image file format with lossless and lossy compression](https://developers.google.com/speed/webp){:target="_blank"}                  | tesseract          |
 
 ## 2. Detailed Processing Actions
 

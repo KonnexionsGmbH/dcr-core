@@ -22,13 +22,13 @@ Release Date: 07.08.2022
 | Python3                                                                       | 3.10.6                 |                                     |        |
 | Python3 - pip                                                                 | 22.1.2                 |                                     |        |
 | [Tesseract OCR](https://github.com/tesseract-ocr/tesseract){:target="_blank"} | 5.1.0                  | base version                        |        |
-| [TeX Live](https://www.tug.org/texlive){:target="_blank"}                     | 2019                   | base version                        |        |
+| [TeX Live](https://www.tug.org/texlive){:target="_blank"}                     | 2022                   | base version                        |        |
 | [TeX Live](https://www.tug.org/texlive){:target="_blank"} - pdfTeX            | 3.14159265-2.6-1.40.20 | base version                        |        |
 
 #### Windows-specific Software
 
-| Software                                                                                | Version | Remark                   | Status |
-|:----------------------------------------------------------------------------------------|:--------|:-------------------------|--------|
-| [Grep for Windows](http://gnuwin32.sourceforge.net/packages/grep.htm){:target="_blank"} | 2.5.4   | base version             |        |
-| [Make for Windows](http://gnuwin32.sourceforge.net/packages/make.htm){:target="_blank"} | 3.81    | base version             |        |
-| [sed for Windows](http://gnuwin32.sourceforge.net/packages/sed.htm){:target="_blank"}   | 4.2.1   | base version             |        |
+| Software                                                                                | Version | Remark        | Status |
+|:----------------------------------------------------------------------------------------|:--------|:--------------|--------|
+| [Grep for Windows](http://gnuwin32.sourceforge.net/packages/grep.htm){:target="_blank"} | 2.5.4   | base version  |        |
+| [Make for Windows](http://gnuwin32.sourceforge.net/packages/make.htm){:target="_blank"} | 3.81    | base version  |        |
+| [sed for Windows](http://gnuwin32.sourceforge.net/packages/sed.htm){:target="_blank"}   | 4.2.1   | base version  |        |
