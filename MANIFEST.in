@@ -1,3 +1,4 @@
 # MANIFEST.in
 
+include dcr_core/PDFlib/*
 include dcr_core/py.typed

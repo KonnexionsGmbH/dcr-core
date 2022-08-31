@@ -53,9 +53,9 @@ class Setup:
     _DCR_CFG_LT_TOC_LAST_PAGE: ClassVar[str] = "lt_toc_last_page"
     _DCR_CFG_LT_TOC_MIN_ENTRIES: ClassVar[str] = "lt_toc_min_entries"
     _DCR_CFG_PDF2IMAGE_TYPE: ClassVar[str] = "pdf2image_type"
-    _DCR_CFG_SECTION: ClassVar[str] = "dcr_core"
-    _DCR_CFG_SECTION_ENV_TEST: ClassVar[str] = "dcr_core.env.test"
-    _DCR_CFG_SECTION_SPACY: ClassVar[str] = "dcr_core.spacy"
+    _DCR_CFG_SECTION_CORE: ClassVar[str] = "dcr_core"
+    _DCR_CFG_SECTION_CORE_ENV_TEST: ClassVar[str] = "dcr_core.env.test"
+    _DCR_CFG_SECTION_CORE_SPACY: ClassVar[str] = "dcr_core.spacy"
 
     _DCR_CFG_SPACY_IGNORE_BRACKET: ClassVar[str] = "spacy_ignore_bracket"
     _DCR_CFG_SPACY_IGNORE_LEFT_PUNCT: ClassVar[str] = "spacy_ignore_left_punct"
@@ -301,7 +301,7 @@ class Setup:
         self.is_spacy_tkn_attr_vocab = False
         self.is_spacy_tkn_attr_whitespace_ = True
 
-        self._load_config_core()
+        self._load_config()
 
         dcr_core.core_utils.progress_msg_core("The configuration parameters (dcr_core) are checked and loaded")
 
@@ -310,7 +310,7 @@ class Setup:
     # ------------------------------------------------------------------
     # Check the configuration parameters.
     # ------------------------------------------------------------------
-    def _check_config_core(self) -> None:
+    def _check_config(self) -> None:
         """Check the configuration parameters."""
         self.is_create_extra_file_heading = self._determine_config_param_boolean(
             Setup._DCR_CFG_CREATE_EXTRA_FILE_HEADING, self.is_create_extra_file_heading
@@ -693,13 +693,13 @@ class Setup:
     # ------------------------------------------------------------------
     # Load and check the configuration parameters.
     # ------------------------------------------------------------------
-    def _load_config_core(self) -> None:
+    def _load_config(self) -> None:
         """Load and check the configuration parameters."""
         for section in self._config_parser.sections():
             if section in (
-                Setup._DCR_CFG_SECTION,
-                Setup._DCR_CFG_SECTION + ".env." + self.environment_variant,
-                Setup._DCR_CFG_SECTION_SPACY,
+                Setup._DCR_CFG_SECTION_CORE,
+                Setup._DCR_CFG_SECTION_CORE + ".env." + self.environment_variant,
+                Setup._DCR_CFG_SECTION_CORE_SPACY,
             ):
                 for (key, value) in self._config_parser.items(section):
                     self._config[key] = value
@@ -823,7 +823,7 @@ class Setup:
                         case _:
                             pass
 
-        self._check_config_core()
+        self._check_config()
 
     # ------------------------------------------------------------------
     # Check the object existence.
