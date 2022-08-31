@@ -50,4 +50,4 @@ def test(fxtr_rmdir_opt, fxtr_setup_empty_inbox):
     # -------------------------------------------------------------------------
     instance = dcr_core.cls_process.Process()
 
-    instance.document_process(full_name)
+    instance.document(full_name)

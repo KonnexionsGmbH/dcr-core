@@ -16,9 +16,6 @@ class Setup:
     _DCR_CFG_FILE: ClassVar[str]
     _DCR_CFG_JSON_INDENT: ClassVar[str]
     _DCR_CFG_JSON_SORT_KEYS: ClassVar[str]
-    _DCR_CFG_LT_EXPORT_RULE_FILE_HEADING: ClassVar[str]
-    _DCR_CFG_LT_EXPORT_RULE_FILE_LIST_BULLET: ClassVar[str]
-    _DCR_CFG_LT_EXPORT_RULE_FILE_LIST_NUMBER: ClassVar[str]
     _DCR_CFG_LT_FOOTER_MAX_DISTANCE: ClassVar[str]
     _DCR_CFG_LT_FOOTER_MAX_LINES: ClassVar[str]
     _DCR_CFG_LT_HEADER_MAX_DISTANCE: ClassVar[str]
@@ -230,9 +227,6 @@ class Setup:
         self.is_verbose_lt_table: bool = False
         self.is_verbose_lt_toc: bool = False
         self.json_indent: int = 0
-        self.lt_export_rule_file_heading: str = ""
-        self.lt_export_rule_file_list_bullet: str = ""
-        self.lt_export_rule_file_list_number: str = ""
         self.lt_footer_max_distance: int = 0
         self.lt_footer_max_lines: int = 0
         self.lt_header_max_distance: int = 0

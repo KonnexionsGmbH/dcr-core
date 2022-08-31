@@ -35,7 +35,7 @@ def test(fxtr_setup_empty_inbox):
     instance = dcr_core.cls_process.Process()
 
     with pytest.raises(RuntimeError) as e:
-        instance.document_process(full_name)
+        instance.document(full_name)
 
     assert e.type == RuntimeError, f"Wrong PDF format - file={full_name}"
     assert str(e.value)[0:6] == "01.903", f"Wrong PDF format - file={full_name}"

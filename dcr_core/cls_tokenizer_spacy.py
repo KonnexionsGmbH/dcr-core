@@ -20,11 +20,7 @@ import dcr_core.cls_nlp_core
 # pylint: disable=too-many-instance-attributes
 # pylint: disable=too-many-statements
 class TokenizerSpacy:
-    """Tokenize the document.
-
-    Returns:
-        _type_: TokenizeSpacy instance.
-    """
+    """Tokenize the document."""
 
     TokenToken = dict[str, bool | float | int | str]
     TokenTokens = list[TokenToken]
@@ -747,7 +743,7 @@ class TokenizerSpacy:
         """Check the object existence.
 
         Returns:
-            bool:   Always true
+            bool: Always true.
         """
         return self._exist
 
@@ -767,20 +763,13 @@ class TokenizerSpacy:
         """Process a whole new document.
 
         Args:
-            document_id (int):
-                    Identification of the document.
-            file_name_next (str):
-                    File name of the output file.
-            file_name_orig (in):
-                    File name of the document file.
-            no_lines_footer (int):
-                    Number footer lines.
-            no_lines_header (int):
-                    Number header lines.
-            no_lines_toc (int):
-                    Nummer TOC lines.
-            pipeline_name (str):
-                    SpaCy pipeline name.
+            document_id (int): Identification of the document.
+            file_name_next (str): File name of the output file.
+            file_name_orig (in): File name of the document file.
+            no_lines_footer (int): Number footer lines.
+            no_lines_header (int): Number header lines.
+            no_lines_toc (int): Nummer TOC lines.
+            pipeline_name (str): SpaCy pipeline name.
         """
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
         dcr_core.core_glob.logger.debug("param document_id    =%i", document_id)
@@ -839,6 +828,6 @@ class TokenizerSpacy:
         """Check the processing result.
 
         Returns:
-            bool:   True if processing has been completed without errors.
+            bool: True if processing has been completed without errors.
         """
         return self._processing_ok

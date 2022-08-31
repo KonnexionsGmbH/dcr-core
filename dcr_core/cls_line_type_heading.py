@@ -34,11 +34,7 @@ import dcr_core.cls_nlp_core
 
 # pylint: disable=too-many-instance-attributes
 class LineTypeHeading:
-    """Determine table of content lines.
-
-    Returns:
-        _type_: LineTypeHeading instance.
-    """
+    """Determine table of content lines."""
 
     # ------------------------------------------------------------------
     # Initialise the instance.
@@ -50,9 +46,8 @@ class LineTypeHeading:
         """Initialise the instance.
 
         Args:
-            file_name_curr (str, optional):
-                    File name of the PDF document to be processed - only
-                    For documentation purposes. Defaults to "".
+            file_name_curr (str, optional): File name of the PDF document to be processed -
+                only for documentation purposes. Defaults to "".
         """
         try:
             dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
@@ -200,15 +195,12 @@ class LineTypeHeading:
         """Check whether a valid start value is present.
 
         Args:
-            target_value (str):
-                    Value to be checked.
-            is_first_token (bool):
-                    Restrict the check to the first token.
-            start_values (list[str]):
-                    Valid start values.
+            target_value (str): Value to be checked.
+            is_first_token (bool): Restrict the check to the first token.
+            start_values (list[str]): Valid start values.
 
         Returns:
-            bool:   True if a valid start value is present, false else.
+            bool: True if a valid start value is present, false else.
         """
         if is_first_token:
             try:
@@ -299,16 +291,13 @@ class LineTypeHeading:
         """Get the next body line.
 
         Args:
-            page_idx (int):
-                    Start with this page number.
-            line_lines (LineLines):
-                    The lines of the start page.
-            line_lines_idx (int):
-                    Start with this line number.
+            page_idx (int): Start with this page number.
+            line_lines (LineLines): The lines of the start page.
+            line_lines_idx (int): Start with this line number.
 
         Returns:
-            tuple[str, int, LineLines, int]:
-                    found line or empty, last page searched, lines of this page, last checked line.
+            tuple[str, int, LineLines, int]: Found line or empty,
+                last page searched, lines of this page, last checked line.
         """
         for idx in range(line_lines_idx + 1, len(line_lines)):
             line_line: dcr_core.cls_nlp_core.NLPCore.ParserLineLine = line_lines[idx]
@@ -349,8 +338,7 @@ class LineTypeHeading:
         """Initialise the heading anti-patterns.
 
         Returns:
-            list[tuple[str, re.Pattern[str]]]:
-                The valid heading anti-patterns.
+            list[tuple[str, re.Pattern[str]]]: The valid heading anti-patterns.
         """
         if dcr_core.core_glob.setup.lt_heading_rule_file and dcr_core.core_glob.setup.lt_heading_rule_file.lower() != "none":
             lt_heading_rule_file_path = dcr_core.core_utils.get_os_independent_name(dcr_core.core_glob.setup.lt_heading_rule_file)
@@ -386,8 +374,8 @@ class LineTypeHeading:
         """Initialise the heading rules.
 
         Returns:
-            list[tuple[str, bool, str, collections.abc.Callable[[str, str], bool], list[str]]]:
-                The valid heading rules.
+            list[tuple[str, bool, str, collections.abc.Callable[[str, str], bool], list[str]]]: The
+                valid heading rules.
         """
         if dcr_core.core_glob.setup.lt_heading_rule_file and dcr_core.core_glob.setup.lt_heading_rule_file.lower() != "none":
             lt_heading_rule_file_path = dcr_core.core_utils.get_os_independent_name(dcr_core.core_glob.setup.lt_heading_rule_file)
@@ -410,12 +398,10 @@ class LineTypeHeading:
         """Load the valid heading anti-patterns from a JSON file.
 
         Args:
-            lt_heading_rule_file (Path):
-                    JSON file.
+            lt_heading_rule_file (Path): JSON file.
 
         Returns:
-            list[tuple[str, re.Pattern[str]]]:
-                    The valid heading anti-patterns from the JSON file,
+            list[tuple[str, re.Pattern[str]]]: The valid heading anti-patterns from the JSON file,
         """
         anti_patterns = []
 
@@ -447,12 +433,11 @@ class LineTypeHeading:
         """Load the valid heading rules from a JSON file.
 
         Args:
-            lt_heading_rule_file (Path):
-                    JSON file.
+            lt_heading_rule_file (Path): JSON file.
 
         Returns:
-            list[tuple[str, bool, str, collections.abc.Callable[[str, str], bool], list[str]]]:
-                The valid heading rules from the JSON file,
+            list[tuple[str, bool, str, collections.abc.Callable[[str, str], bool], list[str]]]: The
+                valid heading rules from the JSON file,
         """
         rules = []
 
@@ -487,12 +472,9 @@ class LineTypeHeading:
         """Process the line-related data.
 
         Args:
-            line_line (dict[str, str]):
-                    The line to be processed.
-            text (str):
-                    The text of the line.
-            first_token (str):
-                    The first token of the text.
+            line_line (dict[str, str]): The line to be processed.
+            text (str): The text of the line.
+            first_token (str): The first token of the text.
 
         Returns:
             int: The heading level or zero.
@@ -650,7 +632,7 @@ class LineTypeHeading:
         """Check the object existence.
 
         Returns:
-            bool:   Always true
+            bool: Always true.
         """
         return self._exist
 
@@ -668,16 +650,12 @@ class LineTypeHeading:
         """Process the document related data.
 
         Args:
-            directory_name (str):
-                    Directory name of the output file.
-            document_id (int):
-                    Identification of the document.
-            file_name_curr (str):
-                    File name of the file to be processed.
-            file_name_orig (in):
-                    File name of the document file.
-            line_pages_json (dcr_core.cls_nlp_core.NLPCore.LinePages):
-                    The document pages formatted in the parser.
+            directory_name (str): Directory name of the output file.
+            document_id (int): Identification of the document.
+            file_name_curr (str): File name of the file to be processed.
+            file_name_orig (in): File name of the document file.
+            line_pages_json (dcr_core.cls_nlp_core.NLPCore.LinePages): The
+                document pages formatted in the parser.
         """
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
         dcr_core.core_glob.logger.debug("param directory_name =%s", directory_name)

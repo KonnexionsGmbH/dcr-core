@@ -28,11 +28,7 @@ import dcr_core.cls_nlp_core
 
 # pylint: disable=too-many-instance-attributes
 class TextParser:
-    """Extract text and metadata from PDFlib TET.
-
-    Returns:
-        _type_: TextParser instance.
-    """
+    """Extract text and metadata from PDFlib TET."""
 
     # ------------------------------------------------------------------
     # Initialise the instance.
@@ -403,14 +399,10 @@ class TextParser:
         """Debug an XML element detailed.
 
         Args:
-            event (str):
-                    Event: 'start' or 'end'.
-            parent_tag (str):
-                    Parent tag.
-            attrib (dict[str,str]):
-                    Attributes.
-            text (collections.abc.Iterable[str|None]):
-                    XML element.
+            event (str): Event: 'start' or 'end'.
+            parent_tag (str): Parent tag.
+            attrib (dict[str,str]): Attributes.
+            text (collections.abc.Iterable[str|None]): XML element.
         """
         if dcr_core.core_glob.setup.verbose_parser == "all":
             print(f"{event} tag   ={parent_tag}")
@@ -473,10 +465,8 @@ class TextParser:
         """Process tag 'Bookmark'.
 
         Args:
-            parent_tag (str):
-                    Parent tag.
-            parent (collections.abc.Iterable[str]):
-                    Parent data structure.
+            parent_tag (str): Parent tag.
+            parent (collections.abc.Iterable[str]): Parent data structure.
         """
         self._debug_xml_element_all("Start", parent_tag, parent.attrib, parent.text)
 
@@ -499,10 +489,8 @@ class TextParser:
         """Process tag 'Bookmarks'.
 
         Args:
-            parent_tag (str):
-                    Parent tag.
-            parent (collections.abc.Iterable[str]):
-                    Parent data structure.
+            parent_tag (str): Parent tag.
+            parent (collections.abc.Iterable[str]): Parent data structure.
         """
         self._debug_xml_element_all("Start", parent_tag, parent.attrib, parent.text)
 
@@ -523,10 +511,8 @@ class TextParser:
         """Process tag 'Box'.
 
         Args:
-            parent_tag (str):
-                    Parent tag.
-            parent (collections.abc.Iterable[str]):
-                    Parent data structure.
+            parent_tag (str): Parent tag.
+            parent (collections.abc.Iterable[str]): Parent data structure.
         """
         self._debug_xml_element_all("Start", parent_tag, parent.attrib, parent.text)
 
@@ -547,10 +533,8 @@ class TextParser:
         """Process tag 'Cell'.
 
         Args:
-            parent_tag (str):
-                    Parent tag.
-            parent (collections.abc.Iterable[str]):
-                    Parent data structure.
+            parent_tag (str): Parent tag.
+            parent (collections.abc.Iterable[str]): Parent data structure.
         """
         self._debug_xml_element_all("Start", parent_tag, parent.attrib, parent.text)
 
@@ -602,10 +586,8 @@ class TextParser:
         """Process tag 'Content'.
 
         Args:
-            parent_tag (str):
-                    Parent tag.
-            parent (collections.abc.Iterable[str]):
-                    Parent data structure.
+            parent_tag (str): Parent tag.
+            parent (collections.abc.Iterable[str]): Parent data structure.
         """
         self._debug_xml_element_all("Start", parent_tag, parent.attrib, parent.text)
 
@@ -629,10 +611,8 @@ class TextParser:
         """Process tag 'DocInfo'.
 
         Args:
-            parent_tag (str):
-                    Parent tag.
-            parent (collections.abc.Iterable[str]):
-                    Parent data structure.
+            parent_tag (str): Parent tag.
+            parent (collections.abc.Iterable[str]): Parent data structure.
         """
         self._debug_xml_element_all("Start", parent_tag, parent.attrib, parent.text)
 
@@ -662,10 +642,8 @@ class TextParser:
         """Process tag 'Line'.
 
         Args:
-            parent_tag (str):
-                    Parent tag.
-            parent (collections.abc.Iterable[str]):
-                    Parent data structure.
+            parent_tag (str): Parent tag.
+            parent (collections.abc.Iterable[str]): Parent data structure.
         """
         self._debug_xml_element_all("Start", parent_tag, parent.attrib, parent.text)
 
@@ -705,10 +683,8 @@ class TextParser:
         """Process tag 'Page'.
 
         Args:
-            parent_tag (str):
-                    Parent tag.
-            parent (collections.abc.Iterable[str]):
-                    Parent data structure.
+            parent_tag (str): Parent tag.
+            parent (collections.abc.Iterable[str]): Parent data structure.
         """
         self._debug_xml_element_all("Start", parent_tag, parent.attrib, parent.text)
 
@@ -763,10 +739,8 @@ class TextParser:
         """Process tag 'Pages'.
 
         Args:
-            parent_tag (str):
-                    Parent tag.
-            parent (collections.abc.Iterable[str]):
-                    Parent data structure.
+            parent_tag (str): Parent tag.
+            parent (collections.abc.Iterable[str]): Parent data structure.
         """
         self._debug_xml_element_all("Start", parent_tag, parent.attrib, parent.text)
 
@@ -864,10 +838,8 @@ class TextParser:
         """Process tag 'Para'.
 
         Args:
-            parent_tag (str):
-                    Parent tag.
-            parent (collections.abc.Iterable[str]):
-                    Parent data structure.
+            parent_tag (str): Parent tag.
+            parent (collections.abc.Iterable[str]): Parent data structure.
         """
         self._debug_xml_element_all("Start", parent_tag, parent.attrib, parent.text)
 
@@ -904,10 +876,8 @@ class TextParser:
         """Process tag 'Row'.
 
         Args:
-            parent_tag (str):
-                    Parent tag.
-            parent (collections.abc.Iterable[str]):
-                    Parent data structure.
+            parent_tag (str): Parent tag.
+            parent (collections.abc.Iterable[str]): Parent data structure.
         """
         self._debug_xml_element_all("Start", parent_tag, parent.attrib, parent.text)
 
@@ -930,10 +900,8 @@ class TextParser:
         """Process tag 'Table'.
 
         Args:
-            parent_tag (str):
-                    Parent tag.
-            parent (collections.abc.Iterable[str]):
-                    Parent data structure.
+            parent_tag (str): Parent tag.
+            parent (collections.abc.Iterable[str]): Parent data structure.
         """
         self._debug_xml_element_all("Start", parent_tag, parent.attrib, parent.text)
 
@@ -957,10 +925,8 @@ class TextParser:
         """Process tag 'Text'.
 
         Args:
-            parent_tag (str):
-                    Parent tag.
-            parent (collections.abc.Iterable[str]):
-                    Parent data structure.
+            parent_tag (str): Parent tag.
+            parent (collections.abc.Iterable[str]): Parent data structure.
         """
         self._debug_xml_element_all("Start", parent_tag, parent.attrib, parent.text)
 
@@ -975,10 +941,8 @@ class TextParser:
         """Process tag 'Title'.
 
         Args:
-            parent_tag (str):
-                    Parent tag.
-            parent (collections.abc.Iterable[str]):
-                    Parent data structure.
+            parent_tag (str): Parent tag.
+            parent (collections.abc.Iterable[str]): Parent data structure.
         """
         self._debug_xml_element_all("Start", parent_tag, parent.attrib, parent.text)
 
@@ -993,10 +957,8 @@ class TextParser:
         """Process tag 'Word'.
 
         Args:
-            parent_tag (str):
-                    Parent tag.
-            parent (collections.abc.Iterable[str]):
-                    Parent data structure.
+            parent_tag (str): Parent tag.
+            parent (collections.abc.Iterable[str]): Parent data structure.
         """
         self._debug_xml_element_all("Start", parent_tag, parent.attrib, parent.text)
 
@@ -1021,7 +983,7 @@ class TextParser:
         """Check the object existence.
 
         Returns:
-            bool:   Always true
+            bool: Always true
         """
         return self._exist
 
@@ -1033,18 +995,13 @@ class TextParser:
         """Initialise from JSON files.
 
         Args:
-            file_encoding (str):
-                    The encoding of the output file.
-            full_name_line (str):
-                    Name of the file with the line-related JSON data.
-            full_name_page (str):
-                    Name of the file with the page-related JSON data.
-            full_name_word (str):
-                    Name of the file with the word-related JSON data.
+            file_encoding (str): The encoding of the output file.
+            full_name_line (str): Name of the file with the line-related JSON data.
+            full_name_page (str): Name of the file with the page-related JSON data.
+            full_name_word (str): Name of the file with the word-related JSON data.
 
         Returns:
-            TextParser:
-                    The object instance matching the specified database row.
+            TextParser: The object instance matching the specified database row.
         """
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
         dcr_core.core_glob.logger.debug("param file_encoding =%s", file_encoding)
@@ -1088,24 +1045,15 @@ class TextParser:
         """Process tag 'Document'.
 
         Args:
-            directory_name (str):
-                    Directory name of the output file.
-            document_id (int):
-                    Identification of the document.
-            environment_variant (str):
-                    Environment variant: dev, prod or test.
-            file_name_curr (str):
-                    File name of the current file.
-            file_name_next (str):
-                    File name of the output file.
-            file_name_orig (in):
-                    File name of the document file.
-            no_pdf_pages (int):
-                    Number ODF pages.
-            parent (collections.abc.Iterable[str]):
-                    Parent data structure.
-            parent_tag (str):
-                    Parent tag.
+            directory_name (str): Directory name of the output file.
+            document_id (int): Identification of the document.
+            environment_variant (str): Environment variant: dev, prod or test.
+            file_name_curr (str): File name of the current file.
+            file_name_next (str): File name of the output file.
+            file_name_orig (in): File name of the document file.
+            no_pdf_pages (int): Number ODF pages.
+            parent (collections.abc.Iterable[str]): Parent data structure.
+            parent_tag (str): Parent tag.
         """
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
         dcr_core.core_glob.logger.debug("param directory_name     =%s", directory_name)

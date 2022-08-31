@@ -27,20 +27,27 @@ def check_exists_object(  # noqa: C901
     """Check the existence of objects.
 
     Args:
-        is_line_type_header_footer (bool, optional):
-            Check an object of class LineTypeHeadersFooters. Defaults to False.
-        is_line_type_list_bullet (bool, optional):
-            Check an object of class LineTypeListBullet. Defaults to False.
-        is_line_type_list_number (bool, optional):
-            Check an object of class LineTypeListNumber. Defaults to False.
-        is_line_type_table (bool, optional):
-            Check an object of class LineTypeTable. Defaults to False.
-        is_line_type_toc (bool, optional):
-            Check an object of class LineTypeToc. Defaults to False.
-        is_setup (bool, optional):
-            Check an object of class Setup. Defaults to False.
-        is_text_parser (bool, optional):
-            Check an object of class TextParser. Defaults to False.
+        is_line_type_header_footer (bool, optional): Check an object
+            of class LineTypeHeadersFooters.
+            Defaults to False.
+        is_line_type_list_bullet (bool, optional): Check an object
+            of class LineTypeListBullet.
+            Defaults to False.
+        is_line_type_list_number (bool, optional): Check an object
+            of class LineTypeListNumber.
+            Defaults to False.
+        is_line_type_table (bool, optional): Check an object
+            of class LineTypeTable.
+            Defaults to False.
+        is_line_type_toc (bool, optional): Check an object
+            of class LineTypeToc.
+            Defaults to False.
+        is_setup (bool, optional): Check an object
+            of class Setup.
+            Defaults to False.
+        is_text_parser (bool, optional): Check an object
+            of class TextParser.
+            Defaults to False.
     """
     if is_line_type_header_footer:
         try:
@@ -110,18 +117,14 @@ def get_components_from_full_name(
     The possible components are directory name, stem name and file extension.
 
     Args:
-        full_name (str):
-            Full file name of an existing file.
+        full_name (str): Full file name of an existing file.
 
     Raises:
-        FileNotFoundError:
-            If file with full name doesn't exist.
-        RuntimeError:
-            If an infinite loop is encountered along the resolution path.
+        FileNotFoundError: If file with full name doesn't exist.
+        RuntimeError: If an infinite loop is encountered along the resolution path.
 
     Returns:
-        tuple[str, str, str]:
-            directory name, stem name, file extension.
+        tuple[str, str, str]: directory name, stem name, file extension.
     """
     try:
         if isinstance(full_name, str):
@@ -155,16 +158,14 @@ def get_full_name_from_components(
     The possible components are directory name, stem name and file extension.
 
     Args:
-        directory_name (pathlib.Path or str):
-            Directory name or directory path.
-        stem_name (str, optional):
-            Stem name or file name including file extension. Defaults to "".
-        file_extension (str, optional):
-            File extension. Defaults to "".
+        directory_name (pathlib.Path or str): Directory name or directory path.
+        stem_name (str, optional): Stem name or file name including file extension.
+            Defaults to "".
+        file_extension (str, optional): File extension.
+            Defaults to "".
 
     Returns:
-        str:
-            Full file name.
+        str: Full file name.
     """
     file_name_int = stem_name if file_extension == "" else stem_name + "." + file_extension
 
@@ -189,12 +190,10 @@ def get_os_independent_name(name: pathlib.Path | str | None) -> str:
     """Get the platform-independent name..
 
     Args:
-        name (pathlib.Path | str | None):
-            File name or file path.
+        name (pathlib.Path | str | None): File name or file path.
 
     Returns:
-        str:
-            Platform-independent name.
+        str: Platform-independent name.
     """
     if name is None:
         return ""
@@ -212,12 +211,10 @@ def get_stem_name(file_name: pathlib.Path | str | None) -> str:
     """Get the stem name from a file name.
 
     Args:
-        file_name (pathlib.Path | str | None):
-            File name or file path.
+        file_name (pathlib.Path | str | None): File name or file path.
 
     Returns:
-        str:
-            Stem name.
+        str: Stem name.
     """
     if file_name is None:
         return ""
@@ -235,10 +232,8 @@ def progress_msg(is_verbose: bool, msg: str) -> None:
     """Create a progress message.
 
     Args:
-        is_verbose (bool):
-            If true, processing results are reported.
-        msg (str):
-            Progress message.
+        is_verbose (bool): If true, processing results are reported.
+        msg (str): Progress message.
     """
     if is_verbose:
         progress_msg_core(msg)
@@ -251,8 +246,7 @@ def progress_msg_core(msg: str) -> None:
     """Create a progress message.
 
     Args:
-        msg (str):
-            Progress message.
+        msg (str): Progress message.
     """
     final_msg = dcr_core.core_glob.LOGGER_PROGRESS_UPDATE + str(datetime.datetime.now()) + " : " + msg + "."
 
@@ -266,8 +260,7 @@ def terminate_fatal(error_msg: str) -> None:
     """Terminate the application immediately.
 
     Args:
-        error_msg (str):
-            Error message.
+        error_msg (str): Error message.
     """
     print("")
     print(dcr_core.core_glob.LOGGER_FATAL_HEAD)

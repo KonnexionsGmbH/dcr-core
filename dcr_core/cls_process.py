@@ -27,11 +27,7 @@ import PDFlib.TET
 
 # pylint: disable=too-many-instance-attributes
 class Process:
-    """Process utility class.
-
-    Returns:
-        _type_: Process instance.
-    """
+    """Process utility class."""
 
     # ------------------------------------------------------------------
     # Class variables.
@@ -99,9 +95,9 @@ class Process:
         self._full_name_in_tokenizer_word: str = ""
         self._full_name_orig: str = ""
 
-        self._is_process_pandoc: bool = False
-        self._is_process_pdf2image: bool = False
-        self._is_process_tesseract: bool = False
+        self._is_pandoc: bool = False
+        self._is_pdf2image: bool = False
+        self._is_tesseract: bool = False
 
         self._language_pandoc: str = ""
         self._language_spacy: str = ""
@@ -120,11 +116,14 @@ class Process:
     # Check the document by the file extension and determine further
     # processing.
     # ------------------------------------------------------------------
-    def _document_process_check_extension(self):
+    def _document_check_extension(self):
         """Document processing control.
 
         Check the document by the file extension and determine further
         processing.
+
+        Raises:
+            RuntimeError: ERROR_01_903
         """
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
 
@@ -133,18 +132,18 @@ class Process:
                 if bool("".join([page.get_text() for page in fitz.open(self._full_name_in)])):
                     self._full_name_in_pdflib = self._full_name_in
                 else:
-                    self._is_process_pdf2image = True
-                    self._is_process_tesseract = True
+                    self._is_pdf2image = True
+                    self._is_tesseract = True
                     self._full_name_in_pdf2image = self._full_name_in
             except RuntimeError as exc:
                 raise RuntimeError(
                     Process.ERROR_01_903.replace("{file_name}", self._full_name_in).replace("{error_msg}", str(exc)),
                 ) from exc
         elif self._full_name_in_extension_int in dcr_core.core_glob.FILE_TYPE_PANDOC:
-            self._is_process_pandoc = True
+            self._is_pandoc = True
             self._full_name_in_pandoc = self._full_name_in
         elif self._full_name_in_extension_int in dcr_core.core_glob.FILE_TYPE_TESSERACT:
-            self._is_process_tesseract = True
+            self._is_tesseract = True
             self._full_name_in_tesseract = self._full_name_in
         else:
             raise RuntimeError(Process.ERROR_01_901.replace("{extension}", self._full_name_in_extension_int))
@@ -154,7 +153,7 @@ class Process:
     # ------------------------------------------------------------------
     # Initialize the document recognition process.
     # ------------------------------------------------------------------
-    def _document_process_init(self) -> None:
+    def _document_init(self) -> None:
         """Initialize the document recognition process."""
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
 
@@ -178,9 +177,9 @@ class Process:
         self._full_name_in_tokenizer_word: str = ""
         self._full_name_orig: str = ""
 
-        self._is_process_pandoc: bool = False
-        self._is_process_pdf2image: bool = False
-        self._is_process_tesseract: bool = False
+        self._is_pandoc: bool = False
+        self._is_pdf2image: bool = False
+        self._is_tesseract: bool = False
 
         self._language_pandoc: str = ""
         self._language_spacy: str = ""
@@ -196,16 +195,20 @@ class Process:
     # ------------------------------------------------------------------
     # Convert the document to PDF format using Pandoc.
     # ------------------------------------------------------------------
-    def _document_process_pandoc(self):
-        """Convert the document to PDF format using Pandoc."""
-        if self._is_process_pandoc:
+    def _document_pandoc(self):
+        """Convert the document to PDF format using Pandoc.
+
+        Raises:
+            RuntimeError: Any Pandoc issue.
+        """
+        if self._is_pandoc:
             dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
 
             self._full_name_in_pdflib = dcr_core.core_utils.get_full_name_from_components(
                 self._full_name_in_directory, self._full_name_in_stem_name, dcr_core.core_glob.FILE_TYPE_PDF
             )
 
-            return_code, error_msg = Process.pandoc_process(
+            return_code, error_msg = Process.pandoc(
                 self._full_name_in_pandoc,
                 self._full_name_in_pdflib,
                 self._language_pandoc,
@@ -218,7 +221,7 @@ class Process:
     # ------------------------------------------------------------------
     # Extract the text for all granularities from the PDF document.
     # ------------------------------------------------------------------
-    def _document_process_parser(self):
+    def _document_parser(self):
         """Extract the text for all granularities from the PDF document."""
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
 
@@ -263,7 +266,7 @@ class Process:
                 True,
             ),
         ):
-            self._document_process_parser_tetml_type(
+            self._document_parser_tetml_type(
                 full_name_in_parser,
                 full_name_in_tokenizer,
                 tetml_type,
@@ -282,7 +285,7 @@ class Process:
     # ------------------------------------------------------------------
     # Extract the text for a specific granularity from the PDF document.
     # ------------------------------------------------------------------
-    def _document_process_parser_tetml_type(
+    def _document_parser_tetml_type(
         self,
         full_name_in_parser,
         full_name_in_tokenizer,
@@ -295,6 +298,9 @@ class Process:
 
         Extract the text for a specific granularity from the PDF
         document.
+
+        Raises:
+            RuntimeError: Any parser issue.
         """
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
 
@@ -304,7 +310,7 @@ class Process:
         dcr_core.core_glob.setup.is_parsing_page = is_parsing_page
         dcr_core.core_glob.setup.is_parsing_word = is_parsing_word
 
-        return_code, error_msg = Process.parser_process(
+        return_code, error_msg = Process.parser(
             full_name_in_parser,
             full_name_in_tokenizer,
             self._no_pdf_pages,
@@ -321,9 +327,13 @@ class Process:
     # ------------------------------------------------------------------
     # Convert the PDF document to an image file using pdf2image.
     # ------------------------------------------------------------------
-    def _document_process_pdf2image(self):
-        """Convert the PDF document to an image file using pdf2image."""
-        if self._is_process_pdf2image:
+    def _document_pdf2image(self):
+        """Convert the PDF document to an image file using pdf2image.
+
+        Raises:
+            RuntimeError: Any pdf2image issue.
+        """
+        if self._is_pdf2image:
             dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
 
             self._full_name_in_tesseract = dcr_core.core_utils.get_full_name_from_components(
@@ -337,7 +347,7 @@ class Process:
                 ),
             )
 
-            return_code, error_msg, _ = Process.pdf2image_process(
+            return_code, error_msg, _ = Process.pdf2image(
                 self._full_name_in_pdf2image,
             )
             if return_code != "ok":
@@ -348,8 +358,12 @@ class Process:
     # ------------------------------------------------------------------
     # Extract the text and metadata from a PDF document to an XML file.
     # ------------------------------------------------------------------
-    def _document_process_pdflib(self):
-        """Extract the text and metadata from a PDF document to an XML file."""
+    def _document_pdflib(self):
+        """Extract the text and metadata from a PDF document to an XML file.
+
+        Raises:
+            RuntimeError: Any PDFlib TET issue.
+        """
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
 
         # noinspection PyUnresolvedReferences
@@ -362,7 +376,7 @@ class Process:
             self._full_name_in_stem_name + "." + dcr_core.cls_nlp_core.NLPCore.LINE_XML_VARIATION + dcr_core.core_glob.FILE_TYPE_XML,
         )
 
-        return_code, error_msg = Process.pdflib_process(
+        return_code, error_msg = Process.pdflib(
             full_name_in=self._full_name_in_pdflib,
             full_name_out=self._full_name_in_parser_line,
             document_opt_list=dcr_core.cls_nlp_core.NLPCore.LINE_TET_DOCUMENT_OPT_LIST,
@@ -376,7 +390,7 @@ class Process:
                 self._full_name_in_directory,
                 self._full_name_in_stem_name + "." + dcr_core.cls_nlp_core.NLPCore.PAGE_XML_VARIATION + dcr_core.core_glob.FILE_TYPE_XML,
             )
-            return_code, error_msg = Process.pdflib_process(
+            return_code, error_msg = Process.pdflib(
                 full_name_in=self._full_name_in_pdflib,
                 full_name_out=self._full_name_in_parser_page,
                 document_opt_list=dcr_core.cls_nlp_core.NLPCore.PAGE_TET_DOCUMENT_OPT_LIST,
@@ -390,7 +404,7 @@ class Process:
                 self._full_name_in_directory,
                 self._full_name_in_stem_name + "." + dcr_core.cls_nlp_core.NLPCore.WORD_XML_VARIATION + dcr_core.core_glob.FILE_TYPE_XML,
             )
-            return_code, error_msg = Process.pdflib_process(
+            return_code, error_msg = Process.pdflib(
                 full_name_in=self._full_name_in_pdflib,
                 full_name_out=self._full_name_in_parser_word,
                 document_opt_list=dcr_core.cls_nlp_core.NLPCore.WORD_TET_DOCUMENT_OPT_LIST,
@@ -404,23 +418,26 @@ class Process:
     # ------------------------------------------------------------------
     # Convert one or more image files to a PDF file using Tesseract OCR.
     # ------------------------------------------------------------------
-    def _document_process_tesseract(self):
-        """Tesseract OCR processing.
+    def _document_tesseract(self):
+        """Process the document with Tesseract OCR.
 
         Convert one or more image files to a PDF file using Tesseract
         OCR.
+
+        Raises:
+            RuntimeError: Any Tesseract OCR issue.
         """
-        if self._is_process_tesseract:
+        if self._is_tesseract:
             dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
 
-            if self._is_process_pdf2image:
+            if self._is_pdf2image:
                 self._full_name_in_stem_name += "_0"
 
             self._full_name_in_pdflib = dcr_core.core_utils.get_full_name_from_components(
                 self._full_name_in_directory, self._full_name_in_stem_name, dcr_core.core_glob.FILE_TYPE_PDF
             )
 
-            return_code, error_msg, _ = Process.tesseract_process(
+            return_code, error_msg, _ = Process.tesseract(
                 self._full_name_in_tesseract,
                 self._full_name_in_pdflib,
                 self._language_tesseract,
@@ -433,7 +450,12 @@ class Process:
     # ------------------------------------------------------------------
     # Convert the PDF document to an image file using pdf2image.
     # ------------------------------------------------------------------
-    def _document_process_tokenizer(self):
+    def _document_tokenizer(self) -> None:
+        """Tokenize the document with spaCy.
+
+        Raises:
+            RuntimeError: Any spaCy issue.
+        """
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
 
         try:
@@ -446,7 +468,7 @@ class Process:
             self._full_name_in_stem_name + ".line_token." + dcr_core.core_glob.FILE_TYPE_JSON,
         )
 
-        return_code, error_msg = Process.tokenizer_process(
+        return_code, error_msg = Process.tokenizer(
             full_name_in=self._full_name_in_tokenizer_line,
             full_name_out=self._full_name_in_next_step,
             pipeline_name=self._language_spacy,
@@ -464,14 +486,14 @@ class Process:
     # ------------------------------------------------------------------
     # Document content recognition for a specific file.
     # ------------------------------------------------------------------
-    def document_process(
+    def document(
         self,
         full_name_in: str,
-        document_id: int = -1,
-        full_name_orig: str = "",
-        language_pandoc: str = "",
-        language_spacy: str = "",
-        language_tesseract: str = "",
+        document_id: int = None,
+        full_name_orig: str = None,
+        language_pandoc: str = None,
+        language_spacy: str = None,
+        language_tesseract: str = None,
     ) -> None:
         """Document content recognition for a specific file.
 
@@ -479,18 +501,23 @@ class Process:
             full_name_in (str):
                 Full file name of the document file.
             document_id (int, optional):
-                Document identification. Defaults to -1.
+                Document identification.
+                Defaults to "-1".
             full_name_orig (str, optional):
-                Original full file name. Defaults to "".
+                Original full file name.
+                Defaults to the full file name of the document file.
             language_pandoc (str, optional):
-                Pandoc language code. Defaults to "".
+                Pandoc language code.
+                Defaults to English.
             language_spacy (str, optional):
-                spaCy language code. Defaults to "".
+                spaCy language code.
+                Defaults to English transformer pipeline (roberta-base)..
             language_tesseract (str, optional):
-                Tesseract OCR language code. Defaults to "".
+                Tesseract OCR language code.
+                Defaults to English.
 
         Raises:
-            RuntimeError: _description_
+            RuntimeError: Any issue from Pandoc, pdf2image, PDFlib TET, spaCy, or Tesseract OCR.
         """
         # Initialise the logging functionality.
         dcr_core.core_glob.initialise_logger()
@@ -499,9 +526,9 @@ class Process:
         dcr_core.core_glob.logger.debug("param full_name_in=%s", full_name_in)
         dcr_core.core_glob.logger.debug("param document_id =%i", document_id)
 
-        self._document_process_init()
+        self._document_init()
 
-        self._document_id = document_id
+        self._document_id = document_id if document_id else -1
         self._full_name_in = full_name_in
         self._full_name_orig = full_name_orig if full_name_orig else full_name_in
         self._language_pandoc = language_pandoc if language_pandoc else dcr_core.cls_nlp_core.NLPCore.LANGUAGE_PANDOC_DEFAULT
@@ -526,19 +553,19 @@ class Process:
             self._full_name_in_extension.lower() if self._full_name_in_extension else self._full_name_in_extension
         )
 
-        self._document_process_check_extension()
+        self._document_check_extension()
 
-        self._document_process_pandoc()
+        self._document_pandoc()
 
-        self._document_process_pdf2image()
+        self._document_pdf2image()
 
-        self._document_process_tesseract()
+        self._document_tesseract()
 
-        self._document_process_pdflib()
+        self._document_pdflib()
 
-        self._document_process_parser()
+        self._document_parser()
 
-        self._document_process_tokenizer()
+        self._document_tokenizer()
 
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
 
@@ -546,7 +573,7 @@ class Process:
     # Converting a Non-PDF file to a PDF file.
     # ------------------------------------------------------------------
     @classmethod
-    def pandoc_process(
+    def pandoc(
         cls,
         full_name_in: str,
         full_name_out: str,
@@ -557,13 +584,13 @@ class Process:
         The following file formats are converted into
         PDF format here with the help of Pandoc:
 
-        - csv  comma-separated values
-        - docx Office Open XML
-        - epub e-book file format
-        - html HyperText Markup Language
-        - odt  Open Document Format for Office Applications
-        - rst  reStructuredText (RST
-        - rtf  Rich Text Format
+        - csv - comma-separated values
+        - docx - Office Open XML
+        - epub - e-book file format
+        - html - HyperText Markup Language
+        - odt - Open Document Format for Office Applications
+        - rst - reStructuredText (RST
+        - rtf - Rich Text Format
 
         Args:
             full_name_in (str):
@@ -628,7 +655,7 @@ class Process:
     # Extracting the text from the PDF document.
     # ------------------------------------------------------------------
     @classmethod
-    def parser_process(
+    def parser(
         cls,
         full_name_in: str,
         full_name_out: str,
@@ -718,7 +745,7 @@ class Process:
     # Converting a scanned PDF file to a set of image files.
     # ------------------------------------------------------------------
     @classmethod
-    def pdf2image_process(
+    def pdf2image(
         cls,
         full_name_in: str,
     ) -> tuple[str, str, list[tuple[str, str]]]:
@@ -821,7 +848,7 @@ class Process:
     # Processing a PDF file with PDFlib TET.
     # ------------------------------------------------------------------
     @classmethod
-    def pdflib_process(
+    def pdflib(
         cls,
         full_name_in: str,
         full_name_out: str,
@@ -905,7 +932,7 @@ class Process:
     # Converting image files to PDF files via OCR.
     # ------------------------------------------------------------------
     @classmethod
-    def tesseract_process(
+    def tesseract(
         cls,
         full_name_in: str,
         full_name_out: str,
@@ -916,13 +943,13 @@ class Process:
         The documents of the following document types are converted
         to the PDF format using Tesseract OCR:
 
-        - bmp  - bitmap image file
-        - gif  - Graphics Interchange Format
-        - jp2  - JPEG 2000
+        - bmp - bitmap image file
+        - gif - Graphics Interchange Format
+        - jp2 - JPEG 2000
         - jpeg - Joint Photographic Experts Group
-        - png  - Portable Network Graphics
-        - pnm  - portable any-map format
-        - tif  - Tag Image File Format
+        - png - Portable Network Graphics
+        - pnm - portable any-map format
+        - tif - Tag Image File Format
         - tiff - Tag Image File Format
         - webp - Image file format with lossless and lossy compression
 
@@ -1008,7 +1035,7 @@ class Process:
     # Tokenizing the text from the PDF document.
     # ------------------------------------------------------------------
     @classmethod
-    def tokenizer_process(
+    def tokenizer(
         cls,
         full_name_in: str,
         full_name_out: str,

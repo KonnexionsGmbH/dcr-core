@@ -58,7 +58,7 @@ def test(input_output: tuple[str, str, list[str]], fxtr_setup_empty_inbox):
     # -------------------------------------------------------------------------
     instance = dcr_core.cls_process.Process()
 
-    instance.document_process(full_name)
+    instance.document(full_name)
 
     # -------------------------------------------------------------------------
     pytest.helpers.verify_created_files(directory_name, test_files)

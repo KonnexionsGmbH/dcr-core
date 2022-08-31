@@ -32,9 +32,9 @@ endif
 ## ----------------------------------------------------------------------------
 ## dev:                Format, lint and test the code.
 dev: format lint tests
-## docs:               Check the API docs, create and upload the user docs.
-docs: pydocstyle lazydocs mkdocs
-## final:              Format, lint and test the code.
+## docs:               Check the API documentation, create and upload the user documentation.
+docs: pydocstyle mkdocs
+## final:              Format, lint and test the code and create the documentation.
 final: format lint docs tests
 ## format:             Format the code with isort, Black and docformatter.
 format: isort black docformatter
@@ -140,22 +140,6 @@ isort:              ## Edit and sort the imports with isort.
 	@echo ---------------------------------------------------------------------
 	pipenv run isort ${PYTHONPATH} tests
 	@echo Info **********  End:   isort ***************************************
-
-# Generate markdown API documentation for Google-style Python docstring.
-# https://github.com/ml-tooling/lazydocs
-# Configuration file: n/a
-lazydocs:           ## Generate markdown API documentation for Google-style Python docstring.
-	@echo Info **********  Start: lazydocs ************************************
-	@echo CREATE_DOCS=${CREATE_DOCS}
-	@echo DELETE_DOCS=${DELETE_DOCS}
-	@echo MYPYPATH   =${MYPYPATH}
-	@echo PYTHON     =${PYTHON}
-	@echo PYTHONPATH =${PYTHONPATH}
-	@echo ---------------------------------------------------------------------
-	${CREATE_DOCS}
-	${DELETE_DOCS}
-	pipenv run lazydocs --output-path="./docs/api-docs" --overview-file="README.md" --src-base-url="https://github.com/KonnexionsGmbH/dcr-core" ${PYTHONPATH}
-	@echo Info **********  End:   lazydocs ************************************
 
 # Project documentation with Markdown.
 # https://github.com/mkdocs/mkdocs/

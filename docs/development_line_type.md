@@ -1,4 +1,4 @@
-# DCR-CORE - Developing - Line Type Algorithms
+# DCR-CORE - Development - Line Type Algorithms
 
 ![GitHub (Pre-)Release](https://img.shields.io/github/v/release/KonnexionsGmbH/dcr-core?-core?include_prereleases)
 ![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/KonnexionsGmbh/dcr-core?-core)
@@ -150,7 +150,7 @@ A block of lines with the following properties is searched here:
 ## 3 Tables
 
 [PDFlib TET](https://www.pdflib.com/products/tet/){:target="_blank"} determines the tables contained in the **`pdf`** document and marks them accordingly in its **`xml`** output file. 
-**DCR-CORE** now uses these marks to determine the line type **`tab`** and optionally to output the tables in a separate **`JSON`** file.
+**`DCR-CORE`** now uses these marks to determine the line type **`tab`** and optionally to output the tables in a separate **`JSON`** file.
 
 ### 3.1 Parameters
 

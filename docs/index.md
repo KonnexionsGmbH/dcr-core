@@ -10,11 +10,11 @@ Based on the paper "Unfolding the Structure of a Document using Deep Learning" (
 The processing logic is as follows:
 
 - New documents are made available in the file directory **` inbox`**. If required, other language-related file directories can also be used (see section [Document Language](https://konnexionsgmbh.github.io/dcr-core?-core/running_document_language){:target="_blank"}).
-- Documents in a file format accepted by **DCR-CORE** are registered and moved to the file directory **`ìnbox_accepted`**. All other documents are registered and moved to the file directory **`ìnbox_rejected`**.
+- Documents in a file format accepted by **`DCR-CORE`** are registered and moved to the file directory **`ìnbox_accepted`**. All other documents are registered and moved to the file directory **`ìnbox_rejected`**.
 - Documents not in **`pdf`** format are converted to **`pdf`** format using [Pandoc](https://pandoc.org){:target="_blank"} and [TeX Live](https://www.tug.org/texlive){:target="_blank"}. 
 - Documents based on scanning which, therefore, do not contain text elements, are scanned and converted to **`pdf`** format using the [Tesseract OCR](https://github.com/tesseract-ocr/tesseract){:target="_blank"} software. This process applies to all image format files e.g. **`jpeg`**, **`tiff`** etc., as well as scanned images in **`pdf`** format.  
 - From all **`pdf`** documents, the text and associated metadata is extracted into a document-specific **`xml`** file using [PDFlib TET](https://www.pdflib.com/products/tet/){:target="_blank"}.
-- The document-specific **`xml`** files are then parsed and the **DCR-CORE**-relevant contents are written to the **`JSON`** files. 
+- The document-specific **`xml`** files are then parsed and the **`DCR-CORE`**-relevant contents are written to the **`JSON`** files. 
 - From the **`JSON`** file(s) [spaCy](https://spacy.io){:target="_blank"} extracts qualified tokens and stores them either in a **`JSON`** file or in the database table **`token`**.
 
 ### 1.1 Rahman & Finin Paper
@@ -22,25 +22,27 @@ The processing logic is as follows:
 ![](img/index_rahman_finin.png)
 ### 1.2 Supported File Types
 
-**DCR-CORE** can handle the following file types based on the file extension:
+**`DCR-CORE`** can handle the following file types based on the file extension:
 
-- **`bmp`** [bitmap image file](https://en.wikipedia.org/wiki/BMP_file_format){:target="_blank"}
-- **`csv`** [comma-separated values](https://en.wikipedia.org/wiki/Comma-separated_values){:target="_blank"}
-- **`docx`** [Office Open XML](https://www.ecma-international.org/publications-and-standards/standards/ecma-376/){:target="_blank"}
-- **`epub`** [e-book file format](https://www.w3.org/publishing/epub32/){:target="_blank"}
-- **`gif`** [Graphics Interchange Format](https://www.w3.org/Graphics/GIF/spec-gif89a.txt){:target="_blank"}
-- **`html`** [HyperText Markup Language](https://html.spec.whatwg.org){:target="_blank"}
-- **`jp2`** [JPEG 2000](https://en.wikipedia.org/wiki/JPEG_2000){:target="_blank"}
-- **`jpeg`** [Joint Photographic Experts Group](https://jpeg.org/jpeg/){:target="_blank"}
-- **`odt`** [Open Document Format for Office Applications](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=office){:target="_blank"}
-- **`pdf`** [Portable Document Format](https://www.iso.org/standard/75839.html){:target="_blank"}
-- **`png`** [Portable Network Graphics](https://en.wikipedia.org/wiki/Portable_Network_Graphics){:target="_blank"}
-- **`pnm`** [portable any-map format](https://en.wikipedia.org/wiki/Netpbm#File_formats){:target="_blank"}
-- **`rst`** [reStructuredText (RST](https://docutils.sourceforge.io/rst.html){:target="_blank"}
-- **`rtf`** [Rich Text Format](https://en.wikipedia.org/wiki/Rich_Text_Format){:target="_blank"}
-- **`tif`** [Tag Image File Format](https://en.wikipedia.org/wiki/TIFF){:target="_blank"}
-- **`tiff`** [Tag Image File Format](https://en.wikipedia.org/wiki/TIFF){:target="_blank"}
-- **`webp`** [Image file format with lossless and lossy compression](https://developers.google.com/speed/webp){:target="_blank"}
+| File extension | File type                                                                                                                            | Initial processing |
+|----------------|--------------------------------------------------------------------------------------------------------------------------------------|--------------------|
+| **`bmp`**      | [bitmap image file](https://en.wikipedia.org/wiki/BMP_file_format){:target="_blank"}                                                 | tesseract          |
+| **`csv`**      | [comma-separated values](https://en.wikipedia.org/wiki/Comma-separated_values){:target="_blank"}                                     | pandoc             |
+| **`docx`**     | [Office Open XML](https://www.ecma-international.org/publications-and-standards/standards/ecma-376/){:target="_blank"}               | pandoc             |
+| **`epub`**     | [e-book file format](https://www.w3.org/publishing/epub32/){:target="_blank"}                                                        | pandoc             |
+| **`gif`**      | [Graphics Interchange Format](https://www.w3.org/Graphics/GIF/spec-gif89a.txt){:target="_blank"}                                     | tesseract          |
+| **`html`**     | [HyperText Markup Language](https://html.spec.whatwg.org){:target="_blank"}                                                          | pandoc             |
+| **`jp2`**      | [JPEG 2000](https://en.wikipedia.org/wiki/JPEG_2000){:target="_blank"}                                                               | tesseract          |
+| **`jpeg`**     | [Joint Photographic Experts Group](https://jpeg.org/jpeg/){:target="_blank"}                                                         | tesseract          |
+| **`odt`**      | [Open Document Format for Office Applications](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=office){:target="_blank"} | pandoc             | 
+| **`pdf`**      | [Portable Document Format](https://www.iso.org/standard/75839.html){:target="_blank"}                                                | pdflib / pdf2image |
+| **`png`**      | [Portable Network Graphics](https://en.wikipedia.org/wiki/Portable_Network_Graphics){:target="_blank"}                               | tesseract          |
+| **`pnm`**      | [portable any-map format](https://en.wikipedia.org/wiki/Netpbm#File_formats){:target="_blank"}                                       | tesseract          |                                     
+| **`rst`**      | [reStructuredText (RST](https://docutils.sourceforge.io/rst.html){:target="_blank"}                                                  | pandoc             |
+| **`rtf`**      | [Rich Text Format](https://en.wikipedia.org/wiki/Rich_Text_Format){:target="_blank"}                                                 | pandoc             |
+| **`tif`**      | [Tag Image File Format](https://en.wikipedia.org/wiki/TIFF){:target="_blank"}                                                        | tesseract          |
+| **`tiff`**     | [Tag Image File Format](https://en.wikipedia.org/wiki/TIFF){:target="_blank"}                                                        | tesseract          |
+| **`webp`**     | [Image file format with lossless and lossy compression](https://developers.google.com/speed/webp){:target="_blank"}                  | tesseract          |
 
 ## 2. Detailed Processing Actions
 

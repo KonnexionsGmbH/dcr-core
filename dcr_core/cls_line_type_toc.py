@@ -18,11 +18,7 @@ import dcr_core.cls_nlp_core
 
 
 class LineTypeToc:
-    """Determine table of content lines.
-
-    Returns:
-        _type_: LineTypeToc instance.
-    """
+    """Determine table of content lines."""
 
     # ------------------------------------------------------------------
     # Initialise the instance.
@@ -34,9 +30,9 @@ class LineTypeToc:
         """Initialise the instance.
 
         Args:
-            file_name_curr (str, optional):
-                    File name of the PDF document to be processed - only
-                    For documentation purposes. Defaults to "".
+            file_name_curr (str, optional): File name of the PDF document to be processed -
+                                            only for documentation purposes.
+                                            Defaults to "".
         """
         try:
             dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
@@ -207,10 +203,8 @@ class LineTypeToc:
         """Add a TOC line candidate element.
 
         Args:
-            line_line (dcr_core.cls_nlp_core.NLPCore.LineLine):
-                    Document line.
-            page_no_toc (int):
-                    Page number in the table of contents.
+            line_line (dcr_core.cls_nlp_core.NLPCore.LineLine): Document line.
+            page_no_toc (int): Page number in the table of contents.
         """
         line_no = line_line[dcr_core.cls_nlp_core.NLPCore.JSON_NAME_LINE_NO]
 
@@ -225,8 +219,7 @@ class LineTypeToc:
         """Add a TOC table candidate element.
 
         Args:
-            line_line (dcr_core.cls_nlp_core.NLPCore.LineLine):
-                    Document line.
+            line_line (dcr_core.cls_nlp_core.NLPCore.LineLine): Document line.
         """
         row_no = line_line[dcr_core.cls_nlp_core.NLPCore.JSON_NAME_ROW_NO]
 
@@ -306,8 +299,7 @@ class LineTypeToc:
     def exists(self) -> bool:
         """Check the object existence.
 
-        Returns:
-            bool:   Always true
+        Returns: bool: Always true.
         """
         return self._exist
 
@@ -322,10 +314,9 @@ class LineTypeToc:
         """Process the document related data.
 
         Args:
-            file_name_curr (str, optional):
-                    File name of the file to be processed.
-            line_pages_json (dcr_core.cls_nlp_core.NLPCore.LinePages):
-                    The document pages formatted in the parser.
+            file_name_curr (str, optional): File name of the file to be processed.
+            line_pages_json (dcr_core.cls_nlp_core.NLPCore.LinePages): The document
+                pages formatted in the parser.
         """
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
         dcr_core.core_glob.logger.debug("param file_name_curr =%s", file_name_curr)

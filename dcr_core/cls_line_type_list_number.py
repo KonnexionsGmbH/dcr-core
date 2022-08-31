@@ -31,11 +31,7 @@ import dcr_core.cls_nlp_core
 
 # pylint: disable=too-many-instance-attributes
 class LineTypeListNumber:
-    """Determine list of numbered lines.
-
-    Returns:
-        _type_: LineTypeListNumber instance.
-    """
+    """Determine list of numbered lines."""
 
     Entry = dict[str, int | str]
     Entries = list[Entry]
@@ -56,9 +52,8 @@ class LineTypeListNumber:
         """Initialise the instance.
 
         Args:
-            file_name_curr (str, optional):
-                    File name of the PDF document to be processed - only
-                    For documentation purposes. Defaults to "".
+            file_name_curr (str, optional): File name of the PDF document to be processed -
+                    only for documentation purposes. Defaults to "".
         """
         try:
             dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
@@ -260,8 +255,7 @@ class LineTypeListNumber:
         """Initialise the numbered list anti-patterns.
 
         Returns:
-            list[tuple[str, re.Pattern[str]]]:
-                The valid numbered list anti-patterns.
+            list[tuple[str, re.Pattern[str]]]: The valid numbered list anti-patterns.
         """
         if dcr_core.core_glob.setup.lt_list_number_rule_file and dcr_core.core_glob.setup.lt_list_number_rule_file.lower() != "none":
             lt_list_number_rule_file_path = dcr_core.core_utils.get_os_independent_name(dcr_core.core_glob.setup.lt_list_number_rule_file)
@@ -296,8 +290,8 @@ class LineTypeListNumber:
         """Initialise the numbered list rules.
 
         Returns:
-            list[tuple[str, str, collections.abc.Callable[[str, str], bool], list[str]]]:
-                    The valid numbered list rules.
+            list[tuple[str, str, collections.abc.Callable[[str, str], bool], list[str]]]: The
+                valid numbered list rules.
         """
         if dcr_core.core_glob.setup.lt_list_number_rule_file and dcr_core.core_glob.setup.lt_list_number_rule_file.lower() != "none":
             lt_list_number_rule_file_path = dcr_core.core_utils.get_os_independent_name(dcr_core.core_glob.setup.lt_list_number_rule_file)
@@ -320,12 +314,11 @@ class LineTypeListNumber:
         """Load the valid numbered list anti-patterns from a JSON file.
 
         Args:
-            lt_list_number_rule_file (Path):
-                    JSON file.
+            lt_list_number_rule_file (Path): JSON file.
 
         Returns:
-            list[tuple[str, re.Pattern[str]]]:
-                    The valid numbered list anti-patterns from the JSON file,
+            list[tuple[str, re.Pattern[str]]]: The valid numbered list
+                anti-patterns from the JSON file,
         """
         anti_patterns = []
 
@@ -358,12 +351,11 @@ class LineTypeListNumber:
         """Load numbered list rules from a JSON file.
 
         Args:
-            lt_list_number_rule_file (Path):
-                    JSON file.
+            lt_list_number_rule_file (Path): JSON file.
 
         Returns:
-            list[tuple[str, str, collections.abc.Callable[[str, str], bool], list[str]]]:
-                The valid numbered list rules from the JSON file,
+            list[tuple[str, str, collections.abc.Callable[[str, str], bool], list[str]]]: The valid
+                numbered list rules from the JSON file,
         """
         rules: list[LineTypeListNumber.RuleExtern] = []
 
@@ -397,8 +389,7 @@ class LineTypeListNumber:
         """Process the line-related data.
 
         Args:
-            line_line (dict[str, str]):
-                    The line to be processed.
+            line_line (dict[str, str]): The line to be processed.
         """
         text = str(line_line[dcr_core.cls_nlp_core.NLPCore.JSON_NAME_TEXT])
 
@@ -542,7 +533,7 @@ class LineTypeListNumber:
         """Check the object existence.
 
         Returns:
-            bool:   Always true
+            bool: Always true.
         """
         return self._exist
 
@@ -561,18 +552,13 @@ class LineTypeListNumber:
         """Process the document related data.
 
         Args:
-            directory_name (str):
-                    Directory name of the output file.
-            document_id (int):
-                    Identification of the document.
-            environment_variant (str):
-                    Environment variant: dev, prod or test.
-            file_name_curr (str):
-                    File name of the file to be processed.
-            file_name_orig (in):
-                    File name of the document file.
-            line_pages_json (dcr_core.cls_nlp_core.NLPCore.LinePages):
-                    The document pages formatted in the parser.
+            directory_name (str): Directory name of the output file.
+            document_id (int): Identification of the document.
+            environment_variant (str): Environment variant: dev, prod or test.
+            file_name_curr (str): File name of the file to be processed.
+            file_name_orig (in): File name of the document file.
+            line_pages_json (dcr_core.cls_nlp_core.NLPCore.LinePages): The
+                document pages formatted in the parser.
         """
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
         dcr_core.core_glob.logger.debug("param directory_name     =%s", directory_name)
