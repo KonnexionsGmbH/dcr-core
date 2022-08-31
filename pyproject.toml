@@ -30,7 +30,7 @@ maintainers = [
 name = "dcr-core"
 readme = "README.md"
 requires-python = ">=3.10"
-version = "0.9.6.1.9.9.2"
+version = "0.9.6.1.9.9.7"
 
 [project.urls]
 "Bug Tracker" = "https://github.com/KonnexionsGmbH/dcr-core/issues"
@@ -89,4 +89,4 @@ testpaths = "./tests/"
 packages = ["dcr_core"]
 
 [tool.setuptools.package-data]
-dcr_core = ["*.pyi"]
+dcr_core = ["*.pyd", "*.pyi", "*.so"]

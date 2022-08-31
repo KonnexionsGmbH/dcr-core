@@ -15,7 +15,7 @@ else
 	export DELETE_DOCS=rm -f docs/api-docs/*
 	export MYPYPATH=
 	export PYTHON=python3
-	export PYTHONPATH=dcr_core
+	export PYTHONPATH=dcr_corepip freeze
 endif
 
 ##                                                                            .

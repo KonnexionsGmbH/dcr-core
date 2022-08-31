@@ -21,6 +21,8 @@ spacy = "*"
 strsimpy ="*"
 toml = "*"
 weasyprint = "*"
+dcr-core = "*"
+update = "*"
 
 [dev-packages]
 MyPy = "*"
