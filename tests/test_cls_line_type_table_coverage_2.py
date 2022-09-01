@@ -17,7 +17,6 @@ import dcr_core.cls_text_parser
 # -----------------------------------------------------------------------------
 # Test Cases Line Type Table - Coverage.
 # -----------------------------------------------------------------------------
-@pytest.mark.issue
 def test(fxtr_rmdir_opt, fxtr_setup_empty_inbox):
     """Test Cases Line Type Table - Coverage."""
     # -------------------------------------------------------------------------

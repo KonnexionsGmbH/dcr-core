@@ -157,6 +157,12 @@ class Setup:
     # pylint: disable=too-many-statements
     def __init__(self) -> None:
         """Initialise the instance."""
+        try:
+            dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+        except AttributeError:
+            dcr_core.core_glob.initialise_logger()
+            dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+
         self._get_environment_variant()
 
         self._config: dict[str, str] = {}
@@ -307,11 +313,15 @@ class Setup:
 
         self._exist = True
 
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
+
     # ------------------------------------------------------------------
     # Check the configuration parameters.
     # ------------------------------------------------------------------
     def _check_config(self) -> None:
         """Check the configuration parameters."""
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+
         self.is_create_extra_file_heading = self._determine_config_param_boolean(
             Setup._DCR_CFG_CREATE_EXTRA_FILE_HEADING, self.is_create_extra_file_heading
         )
@@ -403,6 +413,8 @@ class Setup:
         self.is_verbose_lt_table = self._determine_config_param_boolean(Setup._DCR_CFG_VERBOSE_LT_TABLE, self.is_verbose_lt_table)
         self.is_verbose_lt_toc = self._determine_config_param_boolean(Setup._DCR_CFG_VERBOSE_LT_TOC, self.is_verbose_lt_toc)
         self._check_config_verbose_parser()
+
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
 
     # -----------------------------------------------------------------------------
     # Check the configuration parameter - directory_inbox.
@@ -695,6 +707,8 @@ class Setup:
     # ------------------------------------------------------------------
     def _load_config(self) -> None:
         """Load and check the configuration parameters."""
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+
         for section in self._config_parser.sections():
             if section in (
                 Setup._DCR_CFG_SECTION_CORE,
@@ -824,6 +838,8 @@ class Setup:
                             pass
 
         self._check_config()
+
+        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
 
     # ------------------------------------------------------------------
     # Check the object existence.

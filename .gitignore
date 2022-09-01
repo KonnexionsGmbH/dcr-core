@@ -4,8 +4,8 @@
 /.idea/
 /.vscode/
 /data/inbox*/
-/dcr_core.egg-info/
-/dcr_core/dcr_core.egg-info/
 /dist/
 /setup.cfg_backup
 /site/
+/src/dcr_core.egg-info/
+/src/dcr_core/dcr_core.egg-info/
