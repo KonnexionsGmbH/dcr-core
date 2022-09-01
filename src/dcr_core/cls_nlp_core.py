@@ -739,7 +739,7 @@ class NLPCore:
                     NLPCore.JSON_NAME_LINE_TYPE_RULES: rules,
                 },
                 file_handle,
-                indent=json_indent,
+                indent=int(json_indent),
                 sort_keys=is_json_sort_keys,
             )
 
@@ -801,7 +801,7 @@ class NLPCore:
                     NLPCore.JSON_NAME_LINE_TYPE_RULES: rules,
                 },
                 file_handle,
-                indent=json_indent,
+                indent=int(json_indent),
                 sort_keys=is_json_sort_keys,
             )
 
@@ -875,7 +875,7 @@ class NLPCore:
                     NLPCore.JSON_NAME_LINE_TYPE_RULES: rules,
                 },
                 file_handle,
-                indent=json_indent,
+                indent=int(json_indent),
                 sort_keys=is_json_sort_keys,
             )
 
