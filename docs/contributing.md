@@ -1,7 +1,7 @@
 # DCR-CORE - Contributing Guide
 
-![GitHub (Pre-)Release](https://img.shields.io/github/v/release/KonnexionsGmbH/dcr-core?-core?include_prereleases)
-![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/KonnexionsGmbh/dcr-core?-core)
+![GitHub (Pre-)Release](https://img.shields.io/github/v/release/KonnexionsGmbH/dcr-core/include_prereleases)
+![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/KonnexionsGmbh/dcr-core)
 
 ## 1. License
 
@@ -20,4 +20,4 @@ In case of software changes we strongly recommend you to respect the license ter
 
 ## 3. Notes on the Software Development Process
 
-[See **`Developing DCR-CORE`** here](https://konnexionsgmbh.github.io/dcr-core?-core/development_research_notes/){:target="_blank"}
+[See **`Developing DCR-CORE`** here](https://konnexionsgmbh.github.io/dcr-core/development_research_notes/){:target="_blank"}

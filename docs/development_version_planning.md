@@ -1,7 +1,7 @@
 # DCR-CORE - Development - Version Planning
 
-![GitHub (Pre-)Release](https://img.shields.io/github/v/release/KonnexionsGmbH/dcr-core??include_prereleases)
-![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/KonnexionsGmbh/dcr-core?-core)
+![GitHub (Pre-)Release](https://img.shields.io/github/v/release/KonnexionsGmbH/dcr-core/include_prereleases)
+![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/KonnexionsGmbh/dcr-core)
 
 ## 1. Version Planning
 
@@ -23,7 +23,7 @@
 
 #### 2.1.1 High Priority
 
-- pandoc_dcr-core?: convert **`doc`** documents to **`docx`**
+- pandoc: convert **`doc`** documents to **`docx`**
 - user: reconstruct original document
 
 #### 2.1.2 Normal Priority

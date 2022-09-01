@@ -1,7 +1,7 @@
 # DCR-CORE - Document Content Recognition API - README
 
 ![Coveralls GitHub](https://img.shields.io/coveralls/github/KonnexionsGmbH/dcr-core.svg)
-![GitHub (Pre-)Release](https://img.shields.io/github/v/release/KonnexionsGmbH/dcr-core?include_prereleases)
+![GitHub (Pre-)Release](https://img.shields.io/github/v/release/KonnexionsGmbH/dcr-core/include_prereleases)
 ![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/KonnexionsGmbh/dcr-core)
 ![GitHub commits since latest release](https://img.shields.io/github/commits-since/KonnexionsGmbH/dcr-core/0.9.7)
 
@@ -40,86 +40,50 @@ Please see the **[Documentation](https://konnexionsgmbh.github.io/dcr-core)** fo
 
 ### 2.1 Requirements
 
-
+**`TODO`**
 
 ### 2.2 Installation
 
+**`TODO`**
 
 ### 2.3 Running an example file
 
+**`TODO`**
 
 ### 2.4 Resulting files
 
-
-Want to try it out but don't want to install anything ? We have set up a [Google Colab](https://colab.research.google.com/github/deezer/spleeter/blob/master/spleeter.ipynb).
-
-Ready to dig into it ? In a few lines you can install **Spleeter**  and separate the vocal and accompaniment parts from an example audio file.
-You need first to install `ffmpeg` and `libsndfile`. It can be done on most platform using [Conda](https://github.com/deezer/spleeter/wiki/1.-Installation#using-conda):
-
-```bash
-# install dependencies using conda
-conda install -c conda-forge ffmpeg libsndfile
-# install spleeter with pip
-pip install spleeter
-# download an example audio file (if you don't have wget, use another tool for downloading)
-wget https://github.com/deezer/spleeter/raw/master/audio_example.mp3
-# separate the example audio into two components
-spleeter separate -p spleeter:2stems -o output audio_example.mp3
-```
-
-> :warning: Note that we no longer recommend using `conda` for installing spleeter.
-
-> ⚠️ There are known issues with Apple M1 chips, mostly due to TensorFlow compatibility. Until these are fixed, you can use [this workaround](https://github.com/deezer/spleeter/issues/607#issuecomment-1021669444).
-
-You should get two separated audio files (`vocals.wav` and `accompaniment.wav`) in the `output/audio_example` folder.
-
-For a detailed documentation, please check the [repository wiki](https://github.com/deezer/spleeter/wiki/1.-Installation)
-
-## Development and Testing
-
-This project is managed using [Poetry](https://python-poetry.org/docs/basic-usage/), to run test suite you
-can execute the following set of commands:
-
-```bash
-# Clone spleeter repository
-git clone https://github.com/Deezer/spleeter && cd spleeter
-# Install poetry
-pip install poetry
-# Install spleeter dependencies
-poetry install
-# Run unit test suite
-poetry run pytest tests/
-```
+**`TODO`**
 
 ## 3. Directory and File Structure of this Repository
 
 ### 3.1 Directories
 
-| Directory         | Content                                                               |
-|-------------------|-----------------------------------------------------------------------|
-| .github/workflows | [GitHub Action](https://github.com/actions) workflows.                |
-| PDFlib            | Python package of [PDFlib TET](https://www.pdflib.com/products/tet/). |
-| data              | Example rule files for document line classification.                  |
-| dcr_core          | Python package.                                                       |
-| docs              | **`DCR-CORE`** documentation files.                                     |
-| tests             | Scripts and data for pytest.                                          |
+| Directory         | Content                                                                     |
+|-------------------|-----------------------------------------------------------------------------|
+| .github/workflows | [GitHub Action](https://github.com/actions) workflows.                      |
+| data              | Example rule files for document line classification.                        |
+| docs              | **`DCR-CORE`** documentation files.                                         |
+| scripts           | Ubuntu and Windows Script for running the application                       |
+| src               | Python scripts and [PDFlib TET](https://www.pdflib.com/products/tet/) files |
+| tests             | Scripts and data for pytest.                                                |
 
 ### 3.2 Files
 
-| File             | Functionality                                                                                              |
-|------------------|------------------------------------------------------------------------------------------------------------|
-| .gitignore       | Configuration of files and folders to be ignored.                                                          |
-| .pylintrc        | Configuration file for [pylint](https://github.com/PyCQA/pylint).                                          |
-| LICENSE          | Text of the licence terms.                                                                                 |
-| logging_cfg.yaml | Configuration of the Logger functionality.                                                                 |
-| Makefile         | Definition of tasks to be excuted with the `make` command.                                                 |
-| MANIFEST.in      | Source distribution commands for [PyPA](https://packaging.python.org/en/latest/guides/using-manifest-in/). |
-| mkdocs.yml       | Configuration file for [MkDocs](https://github.com/mkdocs/mkdocs/).                                        |
-| Pipfile          | Definition of the Python package requirements.                                                             |
-| Pipfile.lock     | Definition of the specific versions of the Python packages.                                                |
-| pyproject.toml   | Build system requirements according to [PEP 518](https://peps.python.org/pep-0518/).                       |
-| README.md        | This file.                                                                                                 |
-| setup.cfg        | Setup configuration file - [see here](https://setuptools.pypa.io/en/latest/setuptools.html).               |
+| File                | Functionality                                                                                              |
+|---------------------|------------------------------------------------------------------------------------------------------------|
+| .gitignore          | Configuration of files and folders to be ignored.                                                          |
+| .pylintrc           | Configuration file for [pylint](https://github.com/PyCQA/pylint).                                          |
+| LICENSE             | Text of the licence terms.                                                                                 |
+| MANIFEST.in         | Source distribution commands for [PyPA](https://packaging.python.org/en/latest/guides/using-manifest-in/). |
+| Makefile            | Definition of tasks to be excuted with the `make` command.                                                 |
+| Pipfile             | Definition of the Python package requirements.                                                             |
+| Pipfile.lock        | Definition of the specific versions of the Python packages.                                                |
+| README.md           | This file.                                                                                                 |
+| logging_cfg.yaml    | Configuration of the Logger functionality.                                                                 |
+| mkdocs.yml          | Configuration file for [MkDocs](https://github.com/mkdocs/mkdocs/).                                        |
+| pyproject.toml      | Build system requirements according to [PEP 518](https://peps.python.org/pep-0518/).                       |
+| setup.cfg           | Setup configuration file - [see here](https://setuptools.pypa.io/en/latest/setuptools.html).               |
+| setup.cfg.reference | Original setup configuration file.      |
 
 ## 4. Support
 
