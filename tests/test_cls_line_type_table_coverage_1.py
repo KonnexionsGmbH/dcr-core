@@ -21,7 +21,7 @@ def test(fxtr_rmdir_opt, fxtr_setup_empty_inbox):
     """Test Cases Line Type Table - Coverage."""
     # -------------------------------------------------------------------------
     pytest.helpers.config_params_modify(
-        dcr_core.cls_setup.Setup._DCR_CFG_SECTION_ENV_TEST,
+        dcr_core.cls_setup.Setup._DCR_CFG_SECTION_CORE_ENV_TEST,
         [
             (dcr_core.cls_setup.Setup._DCR_CFG_CREATE_EXTRA_FILE_TABLE, "false"),
             (dcr_core.cls_setup.Setup._DCR_CFG_VERBOSE_LT_TABLE, "true"),

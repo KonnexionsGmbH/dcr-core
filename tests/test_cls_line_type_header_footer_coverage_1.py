@@ -20,7 +20,7 @@ def test(fxtr_rmdir_opt, fxtr_setup_empty_inbox):
     """Test Cases Line Type Headers & Footers - Coverage."""
     # -------------------------------------------------------------------------
     pytest.helpers.config_params_modify(
-        dcr_core.cls_setup.Setup._DCR_CFG_SECTION_ENV_TEST,
+        dcr_core.cls_setup.Setup._DCR_CFG_SECTION_CORE_ENV_TEST,
         [
             (dcr_core.cls_setup.Setup._DCR_CFG_LT_FOOTER_MAX_LINES, "0"),
             (dcr_core.cls_setup.Setup._DCR_CFG_LT_HEADER_MAX_LINES, "0"),

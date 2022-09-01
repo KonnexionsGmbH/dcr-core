@@ -22,7 +22,7 @@ import dcr_core.cls_setup
 import dcr_core.cls_text_parser
 import dcr_core.core_glob
 import dcr_core.core_utils
-import dcr_core.PDFlib.TET
+import PDFlib.TET
 
 
 # pylint: disable=too-many-instance-attributes
@@ -894,7 +894,7 @@ class Process:
         dcr_core.core_glob.logger.debug("param document_opt_list=%s", document_opt_list)
         dcr_core.core_glob.logger.debug("param page_opt_list    =%s", page_opt_list)
 
-        tet = dcr_core.PDFlib.TET.TET()
+        tet = PDFlib.TET.TET()
 
         doc_opt_list = f"tetml={{filename={{{full_name_out}}}}} {document_opt_list}"
 

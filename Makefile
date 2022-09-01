@@ -7,7 +7,7 @@ ifeq ($(OS),Windows_NT)
 	export DELETE_DOCS=del /f /q docs\\api-docs\\*
 	export MYPYPATH=
 	export PYTHON=python
-	export PYTHONPATH=dcr_core
+	export PYTHONPATH=src\\dcr_core
 else
 	export CREATE_DIST=mkdir -p dist
 	export CREATE_DOCS=mkdir -p docs/api-docs
@@ -15,7 +15,7 @@ else
 	export DELETE_DOCS=rm -f docs/api-docs/*
 	export MYPYPATH=
 	export PYTHON=python3
-	export PYTHONPATH=dcr_corepip freeze
+	export PYTHONPATH=src/dcr_core
 endif
 
 ##                                                                            .

@@ -1,6 +1,6 @@
 # DCR-CORE - Application - Configuration
 
-![GitHub (Pre-)Release](https://img.shields.io/github/v/release/KonnexionsGmbH/dcr-core?include_prereleases)
+![GitHub (Pre-)Release](https://img.shields.io/github/v/release/KonnexionsGmbH/dcr-core/include_prereleases)
 ![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/KonnexionsGmbh/dcr-core)
 
 ## 1. **`logging_cfg.yaml`**
@@ -49,7 +49,9 @@ The customisable entries are:
     directory_inbox = data/inbox_prod
     json_indent = 4
     json_sort_keys = false
-    lt_footer_max_distance = 3
+    lt_export_rule_file_heading = data/lt_export_rule_heading.json
+    lt_export_rule_file_list_bullet = data/lt_export_rule_list_bullet.json
+    lt_export_rule_file_list_number = data/lt_export_rule_list_number.json    lt_footer_max_distance = 3
     lt_footer_max_lines = 3
     lt_header_max_distance = 3
     lt_header_max_lines = 3
@@ -94,6 +96,9 @@ The customisable entries are:
 | directory_inbox                  | **`data/inbox_prod`**                       | Directory for the new documents received.                                                                               |
 | json_indent                      | **`4`**                                     | Improves the readability of the **`JSON`** file.                                                                        |
 | json_sort_keys                   | **`false`**                                 | If it is set to **`true`**, the keys are set <br/>in ascending order else, they appear as <br/>in the Python object.    |
+| lt_export_rule_file_heading      | **`data/lt_export_rule_heading.json`**      | File name for the export of the heading rules.                                                                          |
+| lt_export_rule_file_list_bullet  | **`data/lt_export_rule_list_bullet.json`**  | File name for the export of the bulleted list rules.                                                                    |
+| lt_export_rule_file_list_number  | **`data/lt_export_rule_list_number.json`**  | File name for the export of the numbered list rules.                                                                    |
 | lt_footer_max_distance           | **`3`**                                     | Maximum Levenshtein distance for a footer line.                                                                         |
 | lt_footer_max_lines              | **`3`**                                     | Maximum number of footers.                                                                                              |
 | lt_header_max_distance           | **`3`**                                     | Maximum Levenshtein distance for a header line.                                                                         |

@@ -261,7 +261,7 @@ def fxtr_before_any_test():
         (dcr_core.cls_setup.Setup._DCR_CFG_VERBOSE_LT_TOC, "false"),
         (dcr_core.cls_setup.Setup._DCR_CFG_VERBOSE_PARSER, "none"),
     ):
-        CONFIG_PARSER[dcr_core.cls_setup.Setup._DCR_CFG_SECTION_ENV_TEST][config_param] = config_value
+        CONFIG_PARSER[dcr_core.cls_setup.Setup._DCR_CFG_SECTION_CORE_ENV_TEST][config_param] = config_value
 
 
 # -----------------------------------------------------------------------------
