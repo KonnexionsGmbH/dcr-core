@@ -6,6 +6,7 @@ ifeq ($(OS),Windows_NT)
 	export DELETE_DIST=del /f /q dist\\*
 	export DELETE_DOCS=del /f /q docs\\api-docs\\*
 	export MYPYPATH=
+	export PIPENV=python -m pipenv
 	export PYTHON=python
 	export PYTHONPATH=src\\dcr_core
 else
@@ -14,6 +15,7 @@ else
 	export DELETE_DIST=rm -f dist/*
 	export DELETE_DOCS=rm -f docs/api-docs/*
 	export MYPYPATH=
+	export PIPENV=python3 -m pipenv
 	export PYTHON=python3
 	export PYTHONPATH=src/dcr_core
 endif
@@ -57,9 +59,9 @@ bandit:             ## Find common security issues with Bandit.
 	@echo MYPYPATH  =${MYPYPATH}
 	@echo PYTHON    =${PYTHON}
 	@echo PYTHONPATH=${PYTHONPATH}
-	pipenv run bandit --version
+	${PIPENV} run bandit --version
 	@echo ---------------------------------------------------------------------
-	pipenv run bandit -c pyproject.toml -r ${PYTHONPATH}
+	${PIPENV} run bandit -c pyproject.toml -r ${PYTHONPATH}
 	@echo Info **********  End:   Bandit **************************************
 
 # The Uncompromising Code Formatter
@@ -70,9 +72,9 @@ black:              ## Format the code with Black.
 	@echo MYPYPATH  =${MYPYPATH}
 	@echo PYTHON    =${PYTHON}
 	@echo PYTHONPATH=${PYTHONPATH}
-	pipenv run black --version
+	${PIPENV} run black --version
 	@echo ---------------------------------------------------------------------
-	pipenv run black ${PYTHONPATH} tests
+	${PIPENV} run black ${PYTHONPATH} tests
 	@echo Info **********  End:   black ***************************************
 
 # Byte-compile Python libraries
@@ -93,9 +95,9 @@ compileall:         ## Byte-compile the Python libraries.
 # Configuration file: none
 coveralls:          ## Run all the tests and upload the coverage data to coveralls.
 	@echo Info **********  Start: coveralls ***********************************
-	pipenv run pytest --cov=${PYTHONPATH} --cov-report=xml tests
+	${PIPENV} run pytest --cov=${PYTHONPATH} --cov-report=xml tests
 	@echo ---------------------------------------------------------------------
-	pipenv run coveralls --service=github
+	${PIPENV} run coveralls --service=github
 	@echo Info **********  End:   coveralls ***********************************
 
 # Formats docstrings to follow PEP 257
@@ -106,9 +108,9 @@ docformatter:       ## Format the docstrings with docformatter.
 	@echo MYPYPATH  =${MYPYPATH}
 	@echo PYTHON    =${PYTHON}
 	@echo PYTHONPATH=${PYTHONPATH}
-	pipenv run docformatter --version
+	${PIPENV} run docformatter --version
 	@echo ---------------------------------------------------------------------
-	pipenv run docformatter --in-place -r ${PYTHONPATH} tests
+	${PIPENV} run docformatter --in-place -r ${PYTHONPATH} tests
 	@echo Info **********  End:   docformatter ********************************
 
 # Flake8: Your Tool For Style Guide Enforcement.
@@ -123,9 +125,9 @@ flake8:             ## Enforce the Python Style Guides with Flake8.
 	@echo MYPYPATH  =${MYPYPATH}
 	@echo PYTHON    =${PYTHON}
 	@echo PYTHONPATH=${PYTHONPATH}
-	pipenv run flake8 --version
+	${PIPENV} run flake8 --version
 	@echo ---------------------------------------------------------------------
-	pipenv run flake8 --exclude TET.py ${PYTHONPATH} tests
+	${PIPENV} run flake8 --exclude TET.py ${PYTHONPATH} tests
 	@echo Info **********  End:   Flake8 **************************************
 
 # isort your imports, so you don't have to.
@@ -136,9 +138,9 @@ isort:              ## Edit and sort the imports with isort.
 	@echo MYPYPATH  =${MYPYPATH}
 	@echo PYTHON    =${PYTHON}
 	@echo PYTHONPATH=${PYTHONPATH}
-	pipenv run isort --version
+	${PIPENV} run isort --version
 	@echo ---------------------------------------------------------------------
-	pipenv run isort ${PYTHONPATH} tests
+	${PIPENV} run isort ${PYTHONPATH} tests
 	@echo Info **********  End:   isort ***************************************
 
 # Project documentation with Markdown.
@@ -149,9 +151,9 @@ mkdocs:             ## Create and upload the user documentation with MkDocs.
 	@echo MYPYPATH  =${MYPYPATH}
 	@echo PYTHON    =${PYTHON}
 	@echo PYTHONPATH=${PYTHONPATH}
-	pipenv run mkdocs --version
+	${PIPENV} run mkdocs --version
 	@echo ---------------------------------------------------------------------
-	pipenv run mkdocs gh-deploy --force
+	${PIPENV} run mkdocs gh-deploy --force
 	@echo Info **********  End:   MkDocs **************************************
 
 # Mypy: Static Typing for Python
@@ -162,9 +164,9 @@ mypy:               ## Find typing issues with Mypy.
 	@echo MYPYPATH  =${MYPYPATH}
 	@echo PYTHON    =${PYTHON}
 	@echo PYTHONPATH=${PYTHONPATH}
-	pipenv run mypy --version
+	${PIPENV} run mypy --version
 	@echo ---------------------------------------------------------------------
-	pipenv run mypy --exclude TET.py ${PYTHONPATH}
+	${PIPENV} run mypy --exclude TET.py ${PYTHONPATH}
 	@echo Info **********  End:   Mypy ****************************************
 
 # pip is the package installer for Python.
@@ -181,17 +183,31 @@ pipenv-dev:         ## Install the package dependencies for development.
 	@echo ---------------------------------------------------------------------
 	${PYTHON} -m pip install --upgrade pip
 	${PYTHON} -m pip install --upgrade pipenv
-	${PYTHON} -m pipenv install --dev
-	${PYTHON} -m pipenv --rm
+	${PIPENV} install --dev
+	${PIPENV} --rm
 	exit
-	${PYTHON} -m pipenv update --dev
-	pipenv run spacy download en_core_web_trf
+	${PIPENV} update --dev
+	${PIPENV} run spacy download en_core_web_trf
 	@echo ---------------------------------------------------------------------
-	pipenv run pip freeze
+	${PIPENV} run pip freeze
 	@echo ---------------------------------------------------------------------
 	${PYTHON} --version
 	${PYTHON} -m pip --version
 	@echo Info **********  End:   Installation of Development Packages ********
+pipenv-docker:      ## Install the package dependencies for Docker.
+	@echo Info **********  Start: Installation of Production Packages *********
+	@echo MYPYPATH  =${MYPYPATH}
+	@echo PYTHON    =${PYTHON}
+	@echo PYTHONPATH=${PYTHONPATH}
+	@echo ---------------------------------------------------------------------
+	${PYTHON} -m pipenv install
+	${PYTHON} -m pipenv run spacy download en_core_web_trf
+	@echo ---------------------------------------------------------------------
+	${PYTHON} -m pipenv run pip freeze
+	@echo ---------------------------------------------------------------------
+	${PYTHON} --version
+	${PYTHON} -m pip --version
+	@echo Info **********  End:   Installation of Production Packages *********
 pipenv-prod:        ## Install the package dependencies for production.
 	@echo Info **********  Start: Installation of Production Packages *********
 	@echo MYPYPATH  =${MYPYPATH}
@@ -204,9 +220,9 @@ pipenv-prod:        ## Install the package dependencies for production.
 	${PYTHON} -m pipenv --rm
 	exit
 	${PYTHON} -m pipenv update
-	pipenv run spacy download en_core_web_trf
+	${PIPENV} run spacy download en_core_web_trf
 	@echo ---------------------------------------------------------------------
-	pipenv run pip freeze
+	${PIPENV} run pip freeze
 	@echo ---------------------------------------------------------------------
 	${PYTHON} --version
 	${PYTHON} -m pip --version
@@ -220,9 +236,9 @@ pydocstyle:         ## Check the API documentation with pydocstyle.
 	@echo MYPYPATH  =${MYPYPATH}
 	@echo PYTHON    =${PYTHON}
 	@echo PYTHONPATH=${PYTHONPATH}
-	pipenv run pydocstyle --version
+	${PIPENV} run pydocstyle --version
 	@echo ---------------------------------------------------------------------
-	pipenv run pydocstyle --count ${PYTHONPATH} tests
+	${PIPENV} run pydocstyle --count ${PYTHONPATH} tests
 	@echo Info **********  End:   pydocstyle **********************************
 
 # Pylint is a tool that checks for errors in Python code.
@@ -233,9 +249,9 @@ pylint:             ## Lint the code with Pylint.
 	@echo MYPYPATH  =${MYPYPATH}
 	@echo PYTHON    =${PYTHON}
 	@echo PYTHONPATH=${PYTHONPATH}
-	pipenv run pylint --version
+	${PIPENV} run pylint --version
 	@echo ---------------------------------------------------------------------
-	pipenv run pylint ${PYTHONPATH} tests
+	${PIPENV} run pylint ${PYTHONPATH} tests
 	@echo Info **********  End:   Pylint **************************************
 
 # pytest: helps you write better programs.
@@ -243,45 +259,45 @@ pylint:             ## Lint the code with Pylint.
 # Configuration file: pyproject.toml
 pytest:             ## Run all tests with pytest.
 	@echo Info **********  Start: pytest **************************************
-	pipenv run pytest --version
+	${PIPENV} run pytest --version
 	@echo ---------------------------------------------------------------------
-	pipenv run pytest --dead-fixtures tests
-	pipenv run pytest --cache-clear --cov=${PYTHONPATH} --cov-report term-missing:skip-covered --random-order -v tests
+	${PIPENV} run pytest --dead-fixtures tests
+	${PIPENV} run pytest --cache-clear --cov=${PYTHONPATH} --cov-report term-missing:skip-covered --random-order -v tests
 	@echo Info **********  End:   pytest **************************************
 pytest-ci:          ## Run all tests with pytest after test tool installation.
 	@echo Info **********  Start: pytest **************************************
-	pipenv install pytest
-	pipenv install pytest-cov
-	pipenv install pytest-deadfixtures
-	pipenv install pytest-helpers-namespace
-	pipenv install pytest-random-order
-	pipenv install roman
+	${PIPENV} install pytest
+	${PIPENV} install pytest-cov
+	${PIPENV} install pytest-deadfixtures
+	${PIPENV} install pytest-helpers-namespace
+	${PIPENV} install pytest-random-order
+	${PIPENV} install roman
 	@echo ---------------------------------------------------------------------
-	pipenv run pytest --version
+	${PIPENV} run pytest --version
 	@echo ---------------------------------------------------------------------
-	pipenv run pytest --dead-fixtures tests
-	pipenv run pytest --cache-clear --cov=${PYTHONPATH} --cov-report term-missing:skip-covered --random-order -v tests
+	${PIPENV} run pytest --dead-fixtures tests
+	${PIPENV} run pytest --cache-clear --cov=${PYTHONPATH} --cov-report term-missing:skip-covered --random-order -v tests
 	@echo Info **********  End:   pytest **************************************
 pytest-first-issue: ## Run all tests with pytest until the first issue occurs.
 	@echo Info **********  Start: pytest **************************************
 	@echo DCR_ENVIRONMENT_TYPE=${DCR_ENVIRONMENT_TYPE}
-	pipenv run pytest --version
+	${PIPENV} run pytest --version
 	@echo ---------------------------------------------------------------------
-	pipenv run pytest --cache-clear --cov=${PYTHONPATH} --cov-report term-missing:skip-covered --random-order -v -x tests
+	${PIPENV} run pytest --cache-clear --cov=${PYTHONPATH} --cov-report term-missing:skip-covered --random-order -v -x tests
 	@echo Info **********  End:   pytest **************************************
 pytest-issue:       ## Run only the tests with pytest which are marked with 'issue'.
 	@echo Info **********  Start: pytest **************************************
 	@echo DCR_ENVIRONMENT_TYPE=${DCR_ENVIRONMENT_TYPE}
-	pipenv run pytest --version
+	${PIPENV} run pytest --version
 	@echo ---------------------------------------------------------------------
-	pipenv run pytest --cache-clear --cov=${PYTHONPATH} --cov-report term-missing:skip-covered -m issue -s --setup-show -v -x tests
+	${PIPENV} run pytest --cache-clear --cov=${PYTHONPATH} --cov-report term-missing:skip-covered -m issue -s --setup-show -v -x tests
 	@echo Info **********  End:   pytest **************************************
 pytest-module:      ## Run tests of specific module(s) with pytest - test_all & test_cfg_cls_setup & test_db_cls.
 	@echo Info **********  Start: pytest **************************************
 	@echo DCR_ENVIRONMENT_TYPE=${DCR_ENVIRONMENT_TYPE}
-	pipenv run pytest --version
+	${PIPENV} run pytest --version
 	@echo ---------------------------------------------------------------------
-	pipenv run pytest --cache-clear --cov=${PYTHONPATH} --cov-report term-missing:skip-covered -v tests/test_db_cls_action.py
+	${PIPENV} run pytest --cache-clear --cov=${PYTHONPATH} --cov-report term-missing:skip-covered -v tests/test_db_cls_action.py
 	@echo Info **********  End:   pytest **************************************
 
 # twine: Collection of utilities for publishing packages on bPyPI.
