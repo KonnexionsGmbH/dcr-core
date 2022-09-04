@@ -11,12 +11,14 @@ import traceback
 
 import dcr_core
 
-
 # ------------------------------------------------------------------
 # Global variables.
 # ------------------------------------------------------------------
-ERROR_00_901 = "00.901 Issue: File '{full_name}' doesn't exist."
-ERROR_00_902 = "00.902 Issue: An infinite loop is encountered along the resolution path of '{full_name}'."
+ERROR_00_901 = "00.901 Issue (utils): The file '{full_name}' cannot be found - FileNotFoundError"
+ERROR_00_902 = (
+    "00.902 Issue: An infinite loop is encountered along the resolution path of '{full_name}' - "
+    + "RuntimeError - error type: '{error_type}' - error: '{error}'."
+)
 
 
 # ------------------------------------------------------------------
@@ -149,7 +151,9 @@ def get_components_from_full_name(
     except FileNotFoundError as exc:
         raise FileNotFoundError(ERROR_00_901.replace("{full_name}", full_name)) from exc
     except RuntimeError as exc:
-        raise RuntimeError(ERROR_00_902.replace("{full_name}", full_name)) from exc
+        raise RuntimeError(
+            ERROR_00_902.replace("{full_name}", full_name).replace("{error_type}", str(type(exc))).replace("{error_msg}", str(exc))
+        ) from exc
 
 
 # ------------------------------------------------------------------

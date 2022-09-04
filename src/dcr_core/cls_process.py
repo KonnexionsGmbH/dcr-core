@@ -22,7 +22,7 @@ import dcr_core.cls_setup
 import dcr_core.cls_text_parser
 import dcr_core.core_glob
 import dcr_core.core_utils
-import PDFlib.TET
+import dcr_core.PDFlib.TET
 
 
 # pylint: disable=too-many-instance-attributes
@@ -34,32 +34,33 @@ class Process:
     # ------------------------------------------------------------------
     ERROR_01_901: ClassVar[str] = "01.901 Issue (p_i): Document rejected because of unknown file extension='{extension}'."
     ERROR_01_903: ClassVar[str] = (
-        "01.903 Issue (p_i): Runtime error with fitz.open() processing of file '{file_name}' " + "- error: '{error_msg}'."
+        "01.903 Issue (p_i): Error with fitz.open() processing of file '{file_name}' "
+        + "- RuntimeError - error type: '{error_type}' - error: '{error_msg}'."
     )
 
     ERROR_21_901: ClassVar[str] = (
-        "21.901 Issue (p_2_i): Processing file '{full_name}' with pdf2image failed - " + "error type: '{error_type}' - error: '{error}'."
+        "21.901 Issue (p_2_i): Processing file '{full_name}' with pdf2image failed - PDFPageCountError - "
+        + "error type: '{error_type}' - error: '{error}'."
     )
     ERROR_31_902: ClassVar[str] = (
-        "31.902 Issue (n_2_p): The file '{full_name}' cannot be converted to an "
-        + "'PDF' document - "
+        "31.902 Issue (n_2_p): The file '{full_name}' cannot be converted to an " + "'PDF' document - FileNotFoundError"
+    )
+    ERROR_31_903: ClassVar[str] = (
+        "31.903 Issue (n_2_p): The file '{full_name}' cannot be converted to an "
+        + "'PDF' document - RuntimeError - "
         + "error type: '{error_type}' - error: '{error_msg}'."
     )
     ERROR_31_911: ClassVar[str] = "31.911 Issue (n_2_p): The number of pages of the PDF document {full_name} cannot be determined"
     ERROR_41_901: ClassVar[str] = (
         "41.901 Issue (ocr): Converting the file '{full_name}' with Tesseract OCR failed - "
-        + "error type: '{error_type}' - error: '{error}'."
+        + "RuntimeError - error type: '{error_type}' - error: '{error}'."
     )
     ERROR_41_911: ClassVar[str] = "41.911 Issue (ocr): The number of pages of the PDF document {full_name} cannot be determined"
     ERROR_51_901: ClassVar[str] = (
         "51.901 Issue (tet): Opening document '{full_name}' - " + "error no: '{error_no}' - api: '{api_name}' - error: '{error}'."
     )
-    ERROR_61_901: ClassVar[str] = (
-        "61.901 Issue (s_p_j): Parsing the file '{full_name}' failed - " + "error type: '{error_type}' - error: '{error}'."
-    )
-    ERROR_71_901: ClassVar[str] = (
-        "71.901 Issue (tkn): Tokenizing the file '{full_name}' failed - " + "error type: '{error_type}' - error: '{error}'."
-    )
+    ERROR_61_901: ClassVar[str] = "61.901 Issue (s_p_j): Parsing the file '{full_name}' failed - FileNotFoundError"
+    ERROR_71_901: ClassVar[str] = "71.901 Issue (tkn): Tokenizing the file '{full_name}' failed - FileNotFoundError"
 
     PANDOC_PDF_ENGINE_LULATEX: ClassVar[str] = "lulatex"
     PANDOC_PDF_ENGINE_XELATEX: ClassVar[str] = "xelatex"
@@ -137,7 +138,9 @@ class Process:
                     self._full_name_in_pdf2image = self._full_name_in
             except RuntimeError as exc:
                 raise RuntimeError(
-                    Process.ERROR_01_903.replace("{file_name}", self._full_name_in).replace("{error_msg}", str(exc)),
+                    Process.ERROR_01_903.replace("{file_name}", self._full_name_in)
+                    .replace("{error_type}", str(type(exc)))
+                    .replace("{error_msg}", str(exc)),
                 ) from exc
         elif self._full_name_in_extension_int in dcr_core.core_glob.FILE_TYPE_PANDOC:
             self._is_pandoc = True
@@ -636,9 +639,14 @@ class Process:
                 dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
                 return error_msg[:6], error_msg
 
-        except (FileNotFoundError, RuntimeError) as err:
+        except FileNotFoundError:
+            error_msg = Process.ERROR_31_902.replace("{full_name}", full_name_in)
+            dcr_core.core_glob.logger.debug("return               =%s", (error_msg[:6], error_msg))
+            dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
+            return error_msg[:6], error_msg
+        except RuntimeError as err:
             error_msg = (
-                Process.ERROR_31_902.replace("{full_name}", full_name_in)
+                Process.ERROR_31_903.replace("{full_name}", full_name_in)
                 .replace("{error_type}", str(type(err)))
                 .replace("{error}", str(err))
             )
@@ -726,12 +734,8 @@ class Process:
                         )
                     case dcr_core.cls_nlp_core.NLPCore.PARSE_ELEM_CREATION:
                         pass
-        except FileNotFoundError as err:
-            error_msg = (
-                Process.ERROR_61_901.replace("{full_name}", full_name_in)
-                .replace("{error_type}", str(type(err)))
-                .replace("{error}", str(err))
-            )
+        except FileNotFoundError:
+            error_msg = Process.ERROR_61_901.replace("{full_name}", full_name_in)
             dcr_core.core_glob.logger.debug("return              =%s", (error_msg[:6], error_msg))
             dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
             return error_msg[:6], error_msg
@@ -894,7 +898,7 @@ class Process:
         dcr_core.core_glob.logger.debug("param document_opt_list=%s", document_opt_list)
         dcr_core.core_glob.logger.debug("param page_opt_list    =%s", page_opt_list)
 
-        tet = PDFlib.TET.TET()
+        tet = dcr_core.PDFlib.TET.TET()
 
         doc_opt_list = f"tetml={{filename={{{full_name_out}}}}} {document_opt_list}"
 
@@ -1108,12 +1112,8 @@ class Process:
                 pipeline_name=pipeline_name,
             )
 
-        except FileNotFoundError as err:
-            error_msg = (
-                Process.ERROR_71_901.replace("{full_name}", full_name_in)
-                .replace("{error_type}", str(type(err)))
-                .replace("{error}", str(err))
-            )
+        except FileNotFoundError:
+            error_msg = Process.ERROR_71_901.replace("{full_name}", full_name_in)
             dcr_core.core_glob.logger.debug("return               =%s", (error_msg[:6], error_msg))
             dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
             return error_msg[:6], error_msg
