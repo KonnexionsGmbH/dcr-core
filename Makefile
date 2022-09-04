@@ -194,20 +194,6 @@ pipenv-dev:         ## Install the package dependencies for development.
 	${PYTHON} --version
 	${PYTHON} -m pip --version
 	@echo Info **********  End:   Installation of Development Packages ********
-pipenv-docker:      ## Install the package dependencies for Docker.
-	@echo Info **********  Start: Installation of Production Packages *********
-	@echo MYPYPATH  =${MYPYPATH}
-	@echo PYTHON    =${PYTHON}
-	@echo PYTHONPATH=${PYTHONPATH}
-	@echo ---------------------------------------------------------------------
-	${PYTHON} -m pipenv install
-	${PYTHON} -m pipenv run spacy download en_core_web_trf
-	@echo ---------------------------------------------------------------------
-	${PYTHON} -m pipenv run pip freeze
-	@echo ---------------------------------------------------------------------
-	${PYTHON} --version
-	${PYTHON} -m pip --version
-	@echo Info **********  End:   Installation of Production Packages *********
 pipenv-prod:        ## Install the package dependencies for production.
 	@echo Info **********  Start: Installation of Production Packages *********
 	@echo MYPYPATH  =${MYPYPATH}
