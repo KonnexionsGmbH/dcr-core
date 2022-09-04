@@ -2,7 +2,6 @@
 """Testing Class LineTypeListBullet."""
 import pytest
 
-import dcr_core
 import dcr_core.cls_line_type_header_footer
 import dcr_core.cls_line_type_table
 import dcr_core.cls_line_type_toc

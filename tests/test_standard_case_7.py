@@ -2,7 +2,6 @@
 """Testing Standard Cases."""
 import pytest
 
-import dcr_core
 import dcr_core.cls_process
 
 # -----------------------------------------------------------------------------
