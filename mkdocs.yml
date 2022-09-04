@@ -23,7 +23,7 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Application:
-      - Requirementes: application_requirements.md
+      - Requirements: application_requirements.md
       - Installaion: application_installation.md
       - Configuration: application_configuration.md
       - Operations: application_operations.md
