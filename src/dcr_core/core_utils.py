@@ -11,6 +11,15 @@ import traceback
 
 import dcr_core
 
+# ------------------------------------------------------------------
+# Global variables.
+# ------------------------------------------------------------------
+ERROR_00_901 = "00.901 Issue (utils): The file '{full_name}' cannot be found - FileNotFoundError"
+ERROR_00_902 = (
+    "00.902 Issue: An infinite loop is encountered along the resolution path of '{full_name}' - "
+    + "RuntimeError - error type: '{error_type}' - error: '{error}'."
+)
+
 
 # ------------------------------------------------------------------
 # Check the existence of objects.
@@ -140,9 +149,11 @@ def get_components_from_full_name(
             file_name_resolved.suffix[1:] if file_name_resolved.suffix else file_name_resolved.suffix,
         )
     except FileNotFoundError as exc:
-        raise FileNotFoundError(f"File {full_name} doesn't exist") from exc
+        raise FileNotFoundError(ERROR_00_901.replace("{full_name}", full_name)) from exc
     except RuntimeError as exc:
-        raise RuntimeError(f"An infinite loop is encountered along the resolution path of {full_name}") from exc
+        raise RuntimeError(
+            ERROR_00_902.replace("{full_name}", full_name).replace("{error_type}", str(type(exc))).replace("{error_msg}", str(exc))
+        ) from exc
 
 
 # ------------------------------------------------------------------

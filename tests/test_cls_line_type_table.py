@@ -2,7 +2,6 @@
 """Testing Class LineTypeTable."""
 import pytest
 
-import dcr_core
 import dcr_core.cls_line_type_header_footer
 import dcr_core.cls_line_type_toc
 import dcr_core.cls_process
