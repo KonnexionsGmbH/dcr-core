@@ -34,30 +34,26 @@ class Process:
     # ------------------------------------------------------------------
     ERROR_01_901: ClassVar[str] = "01.901 Issue (p_i): Document rejected because of unknown file extension='{extension}'."
     ERROR_01_903: ClassVar[str] = (
-        "01.903 Issue (p_i): Error with fitz.open() processing of file '{file_name}' "
-        + "- RuntimeError - error type: '{error_type}' - error: '{error_msg}'."
+        "01.903 Issue (p_i): Error with fitz.open() processing of file '{file_name}' " + "- RuntimeError - error: '{error_msg}'."
     )
 
     ERROR_21_901: ClassVar[str] = (
         "21.901 Issue (p_2_i): Processing file '{full_name}' with pdf2image failed - PDFPageCountError - "
-        + "error type: '{error_type}' - error: '{error}'."
+        + "error type: '{error_type}' - error: '{error_msg}'."
     )
     ERROR_31_902: ClassVar[str] = (
         "31.902 Issue (n_2_p): The file '{full_name}' cannot be converted to an " + "'PDF' document - FileNotFoundError"
     )
     ERROR_31_903: ClassVar[str] = (
-        "31.903 Issue (n_2_p): The file '{full_name}' cannot be converted to an "
-        + "'PDF' document - RuntimeError - "
-        + "error type: '{error_type}' - error: '{error_msg}'."
+        "31.903 Issue (n_2_p): The file '{full_name}' cannot be converted to an " + "'PDF' document - RuntimeError - error: '{error_msg}'."
     )
     ERROR_31_911: ClassVar[str] = "31.911 Issue (n_2_p): The number of pages of the PDF document {full_name} cannot be determined"
     ERROR_41_901: ClassVar[str] = (
-        "41.901 Issue (ocr): Converting the file '{full_name}' with Tesseract OCR failed - "
-        + "RuntimeError - error type: '{error_type}' - error: '{error}'."
+        "41.901 Issue (ocr): Converting the file '{full_name}' with Tesseract OCR failed - " + "RuntimeError - error: '{error_msg}'."
     )
     ERROR_41_911: ClassVar[str] = "41.911 Issue (ocr): The number of pages of the PDF document {full_name} cannot be determined"
     ERROR_51_901: ClassVar[str] = (
-        "51.901 Issue (tet): Opening document '{full_name}' - " + "error no: '{error_no}' - api: '{api_name}' - error: '{error}'."
+        "51.901 Issue (tet): Opening document '{full_name}' - " + "error no: '{error_no}' - api: '{api_name}' - error: '{error_msg}'."
     )
     ERROR_61_901: ClassVar[str] = "61.901 Issue (s_p_j): Parsing the file '{full_name}' failed - FileNotFoundError"
     ERROR_71_901: ClassVar[str] = "71.901 Issue (tkn): Tokenizing the file '{full_name}' failed - FileNotFoundError"
@@ -138,9 +134,7 @@ class Process:
                     self._full_name_in_pdf2image = self._full_name_in
             except RuntimeError as exc:
                 raise RuntimeError(
-                    Process.ERROR_01_903.replace("{file_name}", self._full_name_in)
-                    .replace("{error_type}", str(type(exc)))
-                    .replace("{error_msg}", str(exc)),
+                    Process.ERROR_01_903.replace("{file_name}", self._full_name_in).replace("{error_msg}", str(exc)),
                 ) from exc
         elif self._full_name_in_extension_int in dcr_core.core_glob.FILE_TYPE_PANDOC:
             self._is_pandoc = True
@@ -645,11 +639,7 @@ class Process:
             dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
             return error_msg[:6], error_msg
         except RuntimeError as err:
-            error_msg = (
-                Process.ERROR_31_903.replace("{full_name}", full_name_in)
-                .replace("{error_type}", str(type(err)))
-                .replace("{error}", str(err))
-            )
+            error_msg = Process.ERROR_31_903.replace("{full_name}", full_name_in).replace("{error_msg}", str(err))
             dcr_core.core_glob.logger.debug("return               =%s", (error_msg[:6], error_msg))
             dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
             return error_msg[:6], error_msg
@@ -835,7 +825,7 @@ class Process:
             error_msg = (
                 Process.ERROR_21_901.replace("{full_name}", full_name_in)
                 .replace("{error_type}", str(type(err)))
-                .replace("{error}", str(err))
+                .replace("{error_msg}", str(err))
             )
             dcr_core.core_glob.logger.debug("return            =%s", (error_msg[:6], error_msg, []))
             dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
@@ -907,7 +897,7 @@ class Process:
                 Process.ERROR_51_901.replace("{full_name}", full_name_in)
                 .replace("{error_no}", str(tet.get_errnum()))
                 .replace("{api_name}", tet.get_apiname() + "()")
-                .replace("{error}", tet.get_errmsg())
+                .replace("{error_msg}", tet.get_errmsg())
             )
             dcr_core.core_glob.logger.debug("return                 =%s", (error_msg[:6], error_msg))
             dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
@@ -1015,11 +1005,7 @@ class Process:
                 children.append(full_name)
 
             except RuntimeError as err:
-                error_msg = (
-                    Process.ERROR_41_901.replace("{full_name}", full_name_in)
-                    .replace("{error_type}", str(type(err)))
-                    .replace("{error}", str(err))
-                )
+                error_msg = Process.ERROR_41_901.replace("{full_name}", full_name_in).replace("{error_msg}", str(err))
                 dcr_core.core_glob.logger.debug("return                  =%s", (error_msg[:6], error_msg, []))
                 dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
                 return error_msg[:6], error_msg, []
