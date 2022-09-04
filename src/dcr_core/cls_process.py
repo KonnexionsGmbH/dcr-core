@@ -263,6 +263,14 @@ class Process:
                 True,
             ),
         ):
+            if (
+                is_parsing_page
+                and not dcr_core.core_glob.setup.is_tetml_page
+                or is_parsing_word
+                and not dcr_core.core_glob.setup.is_tetml_word
+            ):
+                continue
+
             self._document_parser_tetml_type(
                 full_name_in_parser,
                 full_name_in_tokenizer,
