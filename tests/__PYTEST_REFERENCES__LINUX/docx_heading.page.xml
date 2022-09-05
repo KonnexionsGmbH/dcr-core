@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created by the PDFlib Text and Image Extraction Toolkit TET (www.pdflib.com) -->
+<TET xmlns="http://www.pdflib.com/XML/TET5/TET-5.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.pdflib.com/XML/TET5/TET-5.0
+ http://www.pdflib.com/XML/TET5/TET-5.0.xsd"
+ version="5.2">
+<Creation platform="Linux-x64" tetVersion="5.3" date="2022-09-05T13:42:24+02:00" />
+<Document filename="data/inbox_dev_accepted/docx_heading.pdf" pageCount="5" filesize="51470" linearized="true" pdfVersion="1.5" tagged="true">
+<DocInfo>
+<Author>Walter Weinmann</Author>
+<CreationDate>2022-07-02T11:35:49+02:00</CreationDate>
+<Creator>Acrobat PDFMaker 11 for Word</Creator>
+<ModDate>2022-07-02T11:35:50+02:00</ModDate>
+<Producer>Adobe PDF Library 11.0</Producer>
+<Custom key="SourceModified">D:20220702093540</Custom>
+</DocInfo>
+<Metadata>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.4-c006 80.159825, 2016/09/16-03:31:08        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""
+            xmlns:xmp="http://ns.adobe.com/xap/1.0/"
+            xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/"
+            xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:pdf="http://ns.adobe.com/pdf/1.3/"
+            xmlns:pdfx="http://ns.adobe.com/pdfx/1.3/">
+         <xmp:ModifyDate>2022-07-02T11:35:50+02:00</xmp:ModifyDate>
+         <xmp:CreateDate>2022-07-02T11:35:49+02:00</xmp:CreateDate>
+         <xmp:MetadataDate>2022-07-02T11:35:50+02:00</xmp:MetadataDate>
+         <xmp:CreatorTool>Acrobat PDFMaker 11 for Word</xmp:CreatorTool>
+         <xmpMM:DocumentID>uuid:6d8f66d0-f965-48e7-884a-d7d7ab89b9b0</xmpMM:DocumentID>
+         <xmpMM:InstanceID>uuid:6da33a7d-5437-4fbe-a689-acfe623f3fe6</xmpMM:InstanceID>
+         <xmpMM:subject>
+            <rdf:Seq>
+               <rdf:li>39</rdf:li>
+            </rdf:Seq>
+         </xmpMM:subject>
+         <dc:format>application/pdf</dc:format>
+         <dc:creator>
+            <rdf:Seq>
+               <rdf:li>Walter Weinmann</rdf:li>
+            </rdf:Seq>
+         </dc:creator>
+         <pdf:Producer>Adobe PDF Library 11.0</pdf:Producer>
+         <pdfx:SourceModified>D:20220702093540</pdfx:SourceModified>
+         <pdfx:Company/>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta>
+</Metadata>
+<Options>tetml={filename={data/inbox_dev_accepted/docx_heading.page.xml}} engines={noannotation noimage text notextcolor novector} lineseparator=U+0020</Options>
+<Pages>
+<Page number="1" width="595.32" height="841.92">
+<Options>granularity=page</Options>
+<Content granularity="page" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="70.80" lly="753.48" urx="394.80" ury="772.68">
+  <Text>Start Document ... Konnexions Public License (KX-PL)</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="702.50" urx="519.00" ury="752.29">
+  <Text>Version 2020.05, May 2020 https://github.com/KonnexionsGmbH/shared_resources/blob/master/License/KX-PL- 2020.05.pdf This license governs use of the accompanying software. If you use the software, you accept this license. If you do not accept the license, do not use the software.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="671.91" urx="151.80" ury="680.91">
+  <Text>1. Definitions.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="610.68" urx="504.60" ury="670.71">
+  <Text>1.1 Heading Level 2 #1. Sentence 2. Sentence 3. Sentence 4. (i) Heading Level 3 #1 (ii) Xxxx Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="569.88" urx="504.60" ury="609.48">
+  <Text>(iii) Yxxx Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="406.83" urx="504.60" ury="568.68">
+  <Text>(iv) Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. (v) Heading Level 3 #2 (vi) 6 (vii) 7 (viii) 8 (ix) 9 (x) 10 (xi) 11 (xii) 12 (xiii) 13 (xiv) 14 The terms &quot;reproduce&quot;, &quot;reproduction&quot;, &quot;derivative works&quot;, and &quot;distribution&quot; have the same meaning here as under U.S. copyright law.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="376.24" urx="486.60" ury="405.64">
+  <Text>(iii) Heading Level 3 #2 The terms &quot;reproduce&quot;, &quot;reproduction&quot;, &quot;derivative works&quot;, and &quot;distribution&quot; have the same meaning here as under U.S. copyright law.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="294.60" urx="497.40" ury="375.04">
+  <Text>(ii) Heading Level 3 #2 The terms &quot;reproduce&quot;, &quot;reproduction&quot;, &quot;derivative works&quot;, and &quot;distribution&quot; have the same meaning here as under U.S. copyright law. A B C D E 1.2 Heading Level 2 #2 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 1.3 Heading Level 2 #2</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="70.32" urx="504.60" ury="273.13">
+  <Text>A &quot;contributor&quot; is any person that distributes its contribution under this license. &quot;Licensed patents&quot; are a contributor&apos;s patent claims that read directly on its contribution. 1.4 Heading Level 2 #1. Sentence 2. Sentence 3. Sentence 4. i. Heading Level 3 #1 ii. Xxxx Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. iii. Yxxx Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. iv. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. v. Heading Level 3 #2 vi. 6</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="51.84" urx="108.08" ury="62.88">
+  <Text artifact="true">Page | 1</Text>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Page number="2" width="595.32" height="841.92">
+<Options>granularity=page</Options>
+<Content granularity="page" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="106.80" lly="692.30" urx="150.00" ury="772.68">
+  <Text>vii. 7 viii. 8 ix. 9 x. 10 xi. 11 xii. 12 xiii. 13 xiv. 14</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="661.71" urx="173.40" ury="670.71">
+  <Text>2. Grant of Rights.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="600.53" urx="497.40" ury="660.51">
+  <Text>(a) Copyright Grant- Subject to the terms of this license, including the license conditions and limitations in section 3, each contributor grants you a nonexclusive, worldwide, royalty-free copyright license to reproduce its contribution, prepare derivative works of its contribution, and distribute its contribution or any derivative works that you create.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="529.27" urx="481.20" ury="599.33">
+  <Text>(b) Patent Grant- Subject to the terms of this license, including the license conditions and limitations in section 3, each contributor grants you a nonexclusive, worldwide, royalty-free license under its licensed patents to make, have made, use, sell, offer for sale, import, and/or otherwise dispose of its contribution in the software or derivative works of the contribution in the software.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="478.28" urx="513.60" ury="507.67">
+  <Text>3. Conditions and Limitations. (a) No Trademark License- This license does not grant you rights to use any contributors&apos; name, logo, or trademarks.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="437.49" urx="502.80" ury="477.08">
+  <Text>(b) If you bring a patent claim against any contributor over patents that you claim is infringed by the software, your patent license from such contributor to the software ends automatically.0</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="88.80" lly="315.00" urx="524.41" ury="436.30">
+  <Text>(1) Test (i) Test Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. (ii) Test (3) Test Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="88.80" lly="294.60" urx="168.00" ury="313.80">
+  <Text>(4) Test (2) Test</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="264.13" urx="486.60" ury="293.41">
+  <Text>(c) If you distribute any portion of the software, you must retain all copyright, patent, trademark, and attribution notices that are present in the software.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="202.95" urx="508.20" ury="262.93">
+  <Text>(d) If you distribute any portion of the software in source code form, you may do so only under this license by including a complete copy of this license with your distribution. If you distribute any portion of the software in compiled or object code form, you may only do so under a license that complies with this license.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="141.76" urx="497.40" ury="201.75">
+  <Text>(e) The software is licensed &quot;as-is.&quot; You bear the risk of using it. The contributors give no express warranties, guarantees or conditions. You may have additional consumer rights under your local laws which this license cannot change. To the extent permitted under your local laws, the contributors exclude the implied warranties of merchantability, fitness for a particular purpose and non-infringement.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="90.78" urx="508.20" ury="140.57">
+  <Text>(f) Source code usage under this License is limited to review, compilation and contributions. Contributions to Konnexions software products under this License may only be made in consultation with Konnexions GmbH and through the appropriate Konnexions software repositories.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="51.84" urx="108.08" ury="62.88">
+  <Text artifact="true">Page | 2</Text>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Page number="3" width="595.32" height="841.92">
+<Options>granularity=page</Options>
+<Content granularity="page" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="70.80" lly="763.68" urx="151.80" ury="772.68">
+  <Text>4. ARTICLE XXX.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="702.48" urx="504.60" ury="762.48">
+  <Text>ARTICLE AAA: Heading Level 2 #1. Sentence 2. Sentence 3. Sentence 4. (a) Heading Level 3 #1 (b) Xxxx Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="661.68" urx="504.60" ury="701.28">
+  <Text>(a) Xxxx Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="651.48" urx="438.00" ury="660.48">
+  <Text>ARTICLE BBB: Heading Level 2 #1. Sentence 2. Sentence 3. Sentence 4.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="610.68" urx="504.60" ury="650.28">
+  <Text>(aa) Yxxx Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="569.88" urx="504.60" ury="609.48">
+  <Text>(b) Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="539.29" urx="486.60" ury="568.68">
+  <Text>(c) Heading Level 3 #2 The terms &quot;reproduce&quot;, &quot;reproduction&quot;, &quot;derivative works&quot;, and &quot;distribution&quot; have the same meaning here as under U.S. copyright law.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="498.62" urx="438.00" ury="517.81">
+  <Text>5. EXHIBIT A. ARTICLE AAA: Heading Level 2 #1. Sentence 2. Sentence 3. Sentence 4.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="457.80" urx="504.60" ury="497.42">
+  <Text>EXHIBIT A Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="417.00" urx="504.60" ury="456.60">
+  <Text>EXHIBIT B Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="376.20" urx="504.60" ury="415.80">
+  <Text>EXHIBIT A Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="366.00" urx="438.00" ury="375.00">
+  <Text>ARTICLE BBB: Heading Level 2 #1. Sentence 2. Sentence 3. Sentence 4.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="325.20" urx="504.60" ury="364.80">
+  <Text>(aa) Yxxx Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="284.40" urx="504.60" ury="324.00">
+  <Text>(b) Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="253.92" urx="486.60" ury="283.20">
+  <Text>(c) Heading Level 3 #2 The terms &quot;reproduce&quot;, &quot;reproduction&quot;, &quot;derivative works&quot;, and &quot;distribution&quot; have the same meaning here as under U.S. copyright law.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="213.13" urx="438.00" ury="232.33">
+  <Text>6. Section 999.999. ARTICLE AAA: Heading Level 2 #1. Sentence 2. Sentence 3. Sentence 4.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="172.32" urx="504.60" ury="211.94">
+  <Text>001.001 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="131.52" urx="504.60" ury="171.12">
+  <Text>001.002 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="90.72" urx="504.60" ury="130.32">
+  <Text>001.001 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="80.52" urx="144.60" ury="89.52">
+  <Text>001.503</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="51.84" urx="108.08" ury="62.88">
+  <Text artifact="true">Page | 3</Text>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Page number="4" width="595.32" height="841.92">
+<Options>granularity=page</Options>
+<Content granularity="page" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="142.80" lly="743.28" urx="504.60" ury="772.68">
+  <Text>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="702.48" urx="504.60" ury="742.08">
+  <Text>002.004 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="661.68" urx="477.60" ury="701.28">
+  <Text>003.003 The terms &quot;reproduce&quot;, &quot;reproduction&quot;, &quot;derivative works&quot;, and &quot;distribution&quot; have the same meaning here as under U.S. copyright law.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="620.89" urx="438.00" ury="640.09">
+  <Text>7. Article 999 ARTICLE AAA: Heading Level 2 #1. Sentence 2. Sentence 3. Sentence 4.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="580.08" urx="504.60" ury="619.70">
+  <Text>Article 1: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="539.28" urx="504.60" ury="578.88">
+  <Text>Article 2: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="498.60" urx="504.60" ury="538.20">
+  <Text>Article 3: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="457.80" urx="504.60" ury="497.40">
+  <Text>Article 2: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="417.00" urx="504.60" ury="456.60">
+  <Text>Article 4: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="386.40" urx="520.80" ury="415.80">
+  <Text>Article 3: The terms &quot;reproduce&quot;, &quot;reproduction&quot;, &quot;derivative works&quot;, and &quot;distribution&quot; have the same meaning here as under U.S. copyright law.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="338.16" urx="114.00" ury="347.16">
+  <Text>8. Table</Text>
+ </Box>
+</Para>
+<Table llx="74.56" lly="294.12" urx="434.48" ury="328.08">
+ <Row>
+  <Cell llx="76.56" lly="316.38" urx="98.16" ury="327.18">
+   <Para>
+    <Box llx="76.56" lly="317.28" urx="81.96" ury="326.28">
+     <Text>A</Text>
+    </Box>
+   </Para>
+  </Cell>
+  <Cell llx="189.72" lly="316.38" urx="211.32" ury="327.18">
+   <Para>
+    <Box llx="189.72" lly="317.28" urx="195.12" ury="326.28">
+     <Text>B</Text>
+    </Box>
+   </Para>
+  </Cell>
+  <Cell llx="303.00" lly="316.38" urx="324.60" ury="327.18">
+   <Para>
+    <Box llx="303.00" lly="317.28" urx="308.40" ury="326.28">
+     <Text>C</Text>
+    </Box>
+   </Para>
+  </Cell>
+  <Cell llx="416.28" lly="316.38" urx="437.88" ury="327.18">
+   <Para>
+    <Box llx="416.28" lly="317.28" urx="421.68" ury="326.28">
+     <Text>D</Text>
+    </Box>
+   </Para>
+  </Cell>
+ </Row>
+ <Row>
+  <Cell llx="76.56" lly="305.70" urx="98.16" ury="316.50">
+   <Para>
+    <Box llx="76.56" lly="306.60" urx="92.76" ury="315.60">
+     <Text>1.1</Text>
+    </Box>
+   </Para>
+  </Cell>
+  <Cell llx="189.72" lly="305.70" urx="211.32" ury="316.50">
+  </Cell>
+  <Cell llx="303.00" lly="305.70" urx="324.60" ury="316.50">
+  </Cell>
+  <Cell llx="416.28" lly="305.70" urx="437.88" ury="316.50">
+   <Para>
+    <Box llx="416.28" lly="306.60" urx="432.48" ury="315.60">
+     <Text>1.4</Text>
+    </Box>
+   </Para>
+  </Cell>
+ </Row>
+ <Row>
+  <Cell llx="76.56" lly="295.02" urx="98.16" ury="305.82">
+   <Para>
+    <Box llx="76.56" lly="295.92" urx="92.76" ury="304.92">
+     <Text>2.1</Text>
+    </Box>
+   </Para>
+  </Cell>
+  <Cell llx="189.72" lly="295.02" urx="211.32" ury="305.82">
+   <Para>
+    <Box llx="189.72" lly="295.92" urx="205.92" ury="304.92">
+     <Text>2.2</Text>
+    </Box>
+   </Para>
+  </Cell>
+  <Cell llx="303.00" lly="295.02" urx="324.60" ury="305.82">
+   <Para>
+    <Box llx="303.00" lly="295.92" urx="319.20" ury="304.92">
+     <Text>2.3</Text>
+    </Box>
+   </Para>
+  </Cell>
+  <Cell llx="416.28" lly="295.02" urx="437.88" ury="305.82">
+   <Para>
+    <Box llx="416.28" lly="295.92" urx="432.48" ury="304.92">
+     <Text>2.4</Text>
+    </Box>
+   </Para>
+  </Cell>
+ </Row>
+</Table>
+<Para>
+ <Box llx="70.80" lly="245.88" urx="438.00" ury="265.08">
+  <Text>9. (A) ARTICLE AAA: Heading Level 2 #1. Sentence 2. Sentence 3. Sentence 4.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="205.08" urx="504.60" ury="244.69">
+  <Text>(A) Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="82.68" urx="522.60" ury="203.88">
+  <Text>(B) Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. (a) Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. (i) Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. (C) Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. (C) Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="51.84" urx="108.08" ury="62.88">
+  <Text artifact="true">Page | 4</Text>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Page number="5" width="595.32" height="841.92">
+<Options>granularity=page</Options>
+<Content granularity="page" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="106.80" lly="753.48" urx="123.00" ury="762.48">
+  <Text>(B)</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="712.68" urx="123.00" ury="721.68">
+  <Text>(D)</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="106.80" lly="671.88" urx="123.00" ury="680.88">
+  <Text>(E)</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="142.80" lly="722.88" urx="504.60" ury="752.28">
+  <Text>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="142.80" lly="682.08" urx="504.60" ury="711.48">
+  <Text>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="142.80" lly="651.48" urx="520.80" ury="670.68">
+  <Text>The terms &quot;reproduce&quot;, &quot;reproduction&quot;, &quot;derivative works&quot;, and &quot;distribution&quot; have the same meaning here as under U.S. copyright law.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="284.50" urx="168.00" ury="640.08">
+  <Text>10. Format 999.999 aaaaaaaaaaaa 1.0 Start bbbbbbbbbbbbbb 1.001 3. Dez cccccccccccc 1.010 2. Dez dddddddddddd 1.100 1. Dez eeeeeeeeeeee 2.000 Ganz 11. Format 999.99 aaaaaaaaaaaa 1.00 Start bbbbbbbbbbbb 1.01 2. Dez cccccccccccc 1.10 1. Dez Ddddddddddd 2.00 Ganz eeeeeeeeeeeeeee 12. Format 999.9 aaaaaaaaaaaaaa 1.0 Start bbbbbbbbbbbbbb 1.1 1. Dez cccccccccccccc 2.0 Ganz dddddddddddddd 1.9 Not ascending dddddddddddddd 13. Table eeeeeeeeeeeeeee ... End Document 14. Table</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="51.84" urx="108.08" ury="62.88">
+  <Text artifact="true">Page | 5</Text>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Resources>
+<Fonts>
+ <Font id="F0" name="Calibri" fullname="TYKMEL+Calibri" type="TrueType" embedded="true" ascender="750.00" capheight="632.00" italicangle="0.00" descender="-250.00" weight="400.00" xheight="464.00"/>
+ <Font id="F1" name="CourierNewPSMT" type="TrueType" embedded="false" ascender="1021.00" capheight="571.00" italicangle="0.00" descender="-680.00" weight="400.00" xheight="423.00"/>
+ <Font id="F2" name="ArialMT" type="TrueType" embedded="false" ascender="1040.00" capheight="716.00" italicangle="0.00" descender="-325.00" weight="400.00" xheight="519.00"/>
+</Fonts>
+<ColorSpaces>
+ <ColorSpace id="CS0" name="ICCBased" components="1" iccprofile="ICC0"/>
+ <ColorSpace id="CS1" name="ICCBased" components="3" iccprofile="ICC1"/>
+</ColorSpaces>
+</Resources>
+<Graphics>
+<ICCProfiles>
+ <ICCProfile id="ICC0" embedded="true" iccversion="2.1" profilename="Gray Gamma 2.2" checksum="66043AD0DE86F27B977BAB702FB1A778" profilecs="GRAY" deviceclass="mntr" fromCIE="true" toCIE="true"/>
+ <ICCProfile id="ICC1" embedded="true" iccversion="2.1" profilename="sRGB IEC61966-2.1" checksum="1D3FDA2EDB4A89AB60A23C5F7C7D81DD" profilecs="RGB " deviceclass="mntr" fromCIE="true" toCIE="true"/>
+</ICCProfiles>
+</Graphics>
+</Pages>
+</Document>
+</TET>

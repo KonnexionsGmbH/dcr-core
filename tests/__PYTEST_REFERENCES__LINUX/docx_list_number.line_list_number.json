@@ -1,0 +1,541 @@
+{
+    "documentId": 13,
+    "documentFileName": "docx_list_number.pdf",
+    "noListsNumberInDocument": 11,
+    "listsNumber": [
+        {
+            "number": "a.",
+            "listNo": 1,
+            "noEntries": 8,
+            "pageNoFrom": 1,
+            "pageNoTill": 1,
+            "regexp": "[a-z]\\.",
+            "entries": [
+                {
+                    "entryNo": 1,
+                    "lineNoPageFrom": 3,
+                    "lineNoPageTill": 3,
+                    "pageNo": 1,
+                    "paragraphNo": 1,
+                    "text": "a. 1_Aaaa"
+                },
+                {
+                    "entryNo": 2,
+                    "lineNoPageFrom": 4,
+                    "lineNoPageTill": 4,
+                    "pageNo": 1,
+                    "paragraphNo": 1,
+                    "text": "b. 1_Bbbb"
+                },
+                {
+                    "entryNo": 3,
+                    "lineNoPageFrom": 5,
+                    "lineNoPageTill": 5,
+                    "pageNo": 1,
+                    "paragraphNo": 1,
+                    "text": "c. 1_Cccc"
+                },
+                {
+                    "entryNo": 4,
+                    "lineNoPageFrom": 6,
+                    "lineNoPageTill": 6,
+                    "pageNo": 1,
+                    "paragraphNo": 1,
+                    "text": "d. 1_dddd"
+                },
+                {
+                    "entryNo": 5,
+                    "lineNoPageFrom": 7,
+                    "lineNoPageTill": 7,
+                    "pageNo": 1,
+                    "paragraphNo": 1,
+                    "text": "e. 1_eeee"
+                },
+                {
+                    "entryNo": 6,
+                    "lineNoPageFrom": 8,
+                    "lineNoPageTill": 8,
+                    "pageNo": 1,
+                    "paragraphNo": 1,
+                    "text": "f. 1_ffff"
+                },
+                {
+                    "entryNo": 7,
+                    "lineNoPageFrom": 9,
+                    "lineNoPageTill": 9,
+                    "pageNo": 1,
+                    "paragraphNo": 1,
+                    "text": "g. 1_gggg"
+                },
+                {
+                    "entryNo": 8,
+                    "lineNoPageFrom": 10,
+                    "lineNoPageTill": 10,
+                    "pageNo": 1,
+                    "paragraphNo": 1,
+                    "text": "h. 1_hhhh"
+                }
+            ]
+        },
+        {
+            "number": "999.",
+            "listNo": 2,
+            "noEntries": 6,
+            "pageNoFrom": 1,
+            "pageNoTill": 1,
+            "regexp": "\\d+\\.",
+            "entries": [
+                {
+                    "entryNo": 1,
+                    "lineNoPageFrom": 16,
+                    "lineNoPageTill": 16,
+                    "pageNo": 1,
+                    "paragraphNo": 1,
+                    "text": "1. 2_Aaaa"
+                },
+                {
+                    "entryNo": 2,
+                    "lineNoPageFrom": 17,
+                    "lineNoPageTill": 17,
+                    "pageNo": 1,
+                    "paragraphNo": 1,
+                    "text": "2. 2_Bbbb"
+                },
+                {
+                    "entryNo": 3,
+                    "lineNoPageFrom": 18,
+                    "lineNoPageTill": 18,
+                    "pageNo": 1,
+                    "paragraphNo": 1,
+                    "text": "3. 2_Cccc"
+                },
+                {
+                    "entryNo": 4,
+                    "lineNoPageFrom": 19,
+                    "lineNoPageTill": 19,
+                    "pageNo": 1,
+                    "paragraphNo": 1,
+                    "text": "4. 2_Dddd"
+                },
+                {
+                    "entryNo": 5,
+                    "lineNoPageFrom": 20,
+                    "lineNoPageTill": 20,
+                    "pageNo": 1,
+                    "paragraphNo": 1,
+                    "text": "5. 2_Eeee"
+                },
+                {
+                    "entryNo": 6,
+                    "lineNoPageFrom": 21,
+                    "lineNoPageTill": 21,
+                    "pageNo": 1,
+                    "paragraphNo": 1,
+                    "text": "6. 2_Ffff"
+                }
+            ]
+        },
+        {
+            "number": "ROM.",
+            "listNo": 3,
+            "noEntries": 5,
+            "pageNoFrom": 1,
+            "pageNoTill": 2,
+            "regexp": "M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})\\.",
+            "entries": [
+                {
+                    "entryNo": 1,
+                    "lineNoPageFrom": 28,
+                    "lineNoPageTill": 28,
+                    "pageNo": 1,
+                    "paragraphNo": 1,
+                    "text": "I. 3_bbbb"
+                },
+                {
+                    "entryNo": 2,
+                    "lineNoPageFrom": 29,
+                    "lineNoPageTill": 29,
+                    "pageNo": 1,
+                    "paragraphNo": 1,
+                    "text": "II. 3_cccc"
+                },
+                {
+                    "entryNo": 3,
+                    "lineNoPageFrom": 2,
+                    "lineNoPageTill": 2,
+                    "pageNo": 2,
+                    "paragraphNo": 2,
+                    "text": "III. 3_dddd"
+                },
+                {
+                    "entryNo": 4,
+                    "lineNoPageFrom": 3,
+                    "lineNoPageTill": 3,
+                    "pageNo": 2,
+                    "paragraphNo": 3,
+                    "text": "IV. 3_eeee"
+                },
+                {
+                    "entryNo": 5,
+                    "lineNoPageFrom": 4,
+                    "lineNoPageTill": 4,
+                    "pageNo": 2,
+                    "paragraphNo": 3,
+                    "text": "V. 3_ffff"
+                }
+            ]
+        },
+        {
+            "number": "(999)",
+            "listNo": 4,
+            "noEntries": 4,
+            "pageNoFrom": 2,
+            "pageNoTill": 2,
+            "regexp": "\\(\\d+\\)$",
+            "entries": [
+                {
+                    "entryNo": 1,
+                    "lineNoPageFrom": 6,
+                    "lineNoPageTill": 6,
+                    "pageNo": 2,
+                    "paragraphNo": 5,
+                    "text": "(1) 4_1111"
+                },
+                {
+                    "entryNo": 2,
+                    "lineNoPageFrom": 7,
+                    "lineNoPageTill": 7,
+                    "pageNo": 2,
+                    "paragraphNo": 5,
+                    "text": "(2) 4_2222"
+                },
+                {
+                    "entryNo": 3,
+                    "lineNoPageFrom": 8,
+                    "lineNoPageTill": 8,
+                    "pageNo": 2,
+                    "paragraphNo": 5,
+                    "text": "(3) 4_3333"
+                },
+                {
+                    "entryNo": 4,
+                    "lineNoPageFrom": 9,
+                    "lineNoPageTill": 9,
+                    "pageNo": 2,
+                    "paragraphNo": 5,
+                    "text": "(4) 4_4444"
+                }
+            ]
+        },
+        {
+            "number": "A)",
+            "listNo": 5,
+            "noEntries": 4,
+            "pageNoFrom": 2,
+            "pageNoTill": 2,
+            "regexp": "[A-Z]\\)$",
+            "entries": [
+                {
+                    "entryNo": 1,
+                    "lineNoPageFrom": 13,
+                    "lineNoPageTill": 13,
+                    "pageNo": 2,
+                    "paragraphNo": 8,
+                    "text": "A) 5_aaaa"
+                },
+                {
+                    "entryNo": 2,
+                    "lineNoPageFrom": 14,
+                    "lineNoPageTill": 14,
+                    "pageNo": 2,
+                    "paragraphNo": 8,
+                    "text": "B) 5_bbbb"
+                },
+                {
+                    "entryNo": 3,
+                    "lineNoPageFrom": 15,
+                    "lineNoPageTill": 15,
+                    "pageNo": 2,
+                    "paragraphNo": 8,
+                    "text": "C) 5_cccc"
+                },
+                {
+                    "entryNo": 4,
+                    "lineNoPageFrom": 16,
+                    "lineNoPageTill": 16,
+                    "pageNo": 2,
+                    "paragraphNo": 8,
+                    "text": "D) 5_dddd"
+                }
+            ]
+        },
+        {
+            "number": "a.",
+            "listNo": 6,
+            "noEntries": 4,
+            "pageNoFrom": 2,
+            "pageNoTill": 2,
+            "regexp": "[a-z]\\.",
+            "entries": [
+                {
+                    "entryNo": 1,
+                    "lineNoPageFrom": 21,
+                    "lineNoPageTill": 21,
+                    "pageNo": 2,
+                    "paragraphNo": 11,
+                    "text": "a. 6_1111"
+                },
+                {
+                    "entryNo": 2,
+                    "lineNoPageFrom": 22,
+                    "lineNoPageTill": 22,
+                    "pageNo": 2,
+                    "paragraphNo": 11,
+                    "text": "b. 6_2222"
+                },
+                {
+                    "entryNo": 3,
+                    "lineNoPageFrom": 23,
+                    "lineNoPageTill": 23,
+                    "pageNo": 2,
+                    "paragraphNo": 11,
+                    "text": "c. 6_3333"
+                },
+                {
+                    "entryNo": 4,
+                    "lineNoPageFrom": 24,
+                    "lineNoPageTill": 24,
+                    "pageNo": 2,
+                    "paragraphNo": 11,
+                    "text": "d. 6_4444"
+                }
+            ]
+        },
+        {
+            "number": "rom.",
+            "listNo": 7,
+            "noEntries": 4,
+            "pageNoFrom": 3,
+            "pageNoTill": 3,
+            "regexp": "m{0,3}(cm|cd|d?c{0,3})(xc|xl|l?x{0,3})(ix|iv|v?i{0,3})\\.",
+            "entries": [
+                {
+                    "entryNo": 1,
+                    "lineNoPageFrom": 4,
+                    "lineNoPageTill": 5,
+                    "pageNo": 3,
+                    "paragraphNo": 3,
+                    "text": "i. 7_aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa"
+                },
+                {
+                    "entryNo": 2,
+                    "lineNoPageFrom": 6,
+                    "lineNoPageTill": 6,
+                    "pageNo": 3,
+                    "paragraphNo": 4,
+                    "text": "ii. 7_bbbb"
+                },
+                {
+                    "entryNo": 3,
+                    "lineNoPageFrom": 7,
+                    "lineNoPageTill": 7,
+                    "pageNo": 3,
+                    "paragraphNo": 4,
+                    "text": "iii. 7_cccc"
+                },
+                {
+                    "entryNo": 4,
+                    "lineNoPageFrom": 8,
+                    "lineNoPageTill": 8,
+                    "pageNo": 3,
+                    "paragraphNo": 4,
+                    "text": "iv. 7_dddd dddd dddd dddd dddd dddd dddd dddd dddd dddd dddd dddd dddd"
+                }
+            ]
+        },
+        {
+            "number": "a.",
+            "listNo": 8,
+            "noEntries": 7,
+            "pageNoFrom": 3,
+            "pageNoTill": 3,
+            "regexp": "[a-z]\\.",
+            "entries": [
+                {
+                    "entryNo": 1,
+                    "lineNoPageFrom": 12,
+                    "lineNoPageTill": 12,
+                    "pageNo": 3,
+                    "paragraphNo": 7,
+                    "text": "a. 8_1111"
+                },
+                {
+                    "entryNo": 2,
+                    "lineNoPageFrom": 13,
+                    "lineNoPageTill": 13,
+                    "pageNo": 3,
+                    "paragraphNo": 7,
+                    "text": "b. 8_2222"
+                },
+                {
+                    "entryNo": 3,
+                    "lineNoPageFrom": 14,
+                    "lineNoPageTill": 14,
+                    "pageNo": 3,
+                    "paragraphNo": 7,
+                    "text": "c. 8_3333"
+                },
+                {
+                    "entryNo": 4,
+                    "lineNoPageFrom": 15,
+                    "lineNoPageTill": 15,
+                    "pageNo": 3,
+                    "paragraphNo": 7,
+                    "text": "d. 8_4444"
+                },
+                {
+                    "entryNo": 5,
+                    "lineNoPageFrom": 16,
+                    "lineNoPageTill": 16,
+                    "pageNo": 3,
+                    "paragraphNo": 7,
+                    "text": "e. 8_5555"
+                },
+                {
+                    "entryNo": 6,
+                    "lineNoPageFrom": 17,
+                    "lineNoPageTill": 17,
+                    "pageNo": 3,
+                    "paragraphNo": 7,
+                    "text": "f. 8_6666"
+                },
+                {
+                    "entryNo": 7,
+                    "lineNoPageFrom": 18,
+                    "lineNoPageTill": 18,
+                    "pageNo": 3,
+                    "paragraphNo": 7,
+                    "text": "g. 8_7777"
+                }
+            ]
+        },
+        {
+            "number": "999.",
+            "listNo": 9,
+            "noEntries": 4,
+            "pageNoFrom": 4,
+            "pageNoTill": 4,
+            "regexp": "\\d+\\.",
+            "entries": [
+                {
+                    "entryNo": 1,
+                    "lineNoPageFrom": 3,
+                    "lineNoPageTill": 3,
+                    "pageNo": 4,
+                    "paragraphNo": 3,
+                    "text": "1. A_Mixed start"
+                },
+                {
+                    "entryNo": 2,
+                    "lineNoPageFrom": 4,
+                    "lineNoPageTill": 4,
+                    "pageNo": 4,
+                    "paragraphNo": 3,
+                    "text": "2. A_Aaaa"
+                },
+                {
+                    "entryNo": 3,
+                    "lineNoPageFrom": 5,
+                    "lineNoPageTill": 5,
+                    "pageNo": 4,
+                    "paragraphNo": 3,
+                    "text": "3. A_Bbbb"
+                },
+                {
+                    "entryNo": 4,
+                    "lineNoPageFrom": 6,
+                    "lineNoPageTill": 6,
+                    "pageNo": 4,
+                    "paragraphNo": 3,
+                    "text": "4. A_Cccc"
+                }
+            ]
+        },
+        {
+            "number": "999)",
+            "listNo": 10,
+            "noEntries": 3,
+            "pageNoFrom": 4,
+            "pageNoTill": 4,
+            "regexp": "\\d+\\)$",
+            "entries": [
+                {
+                    "entryNo": 1,
+                    "lineNoPageFrom": 7,
+                    "lineNoPageTill": 7,
+                    "pageNo": 4,
+                    "paragraphNo": 4,
+                    "text": "1) B_Aaaa"
+                },
+                {
+                    "entryNo": 2,
+                    "lineNoPageFrom": 8,
+                    "lineNoPageTill": 8,
+                    "pageNo": 4,
+                    "paragraphNo": 4,
+                    "text": "2) B_Bbbb"
+                },
+                {
+                    "entryNo": 3,
+                    "lineNoPageFrom": 9,
+                    "lineNoPageTill": 9,
+                    "pageNo": 4,
+                    "paragraphNo": 4,
+                    "text": "3) B_Cccc"
+                }
+            ]
+        },
+        {
+            "number": "(999)",
+            "listNo": 11,
+            "noEntries": 4,
+            "pageNoFrom": 4,
+            "pageNoTill": 4,
+            "regexp": "\\(\\d+\\)$",
+            "entries": [
+                {
+                    "entryNo": 1,
+                    "lineNoPageFrom": 10,
+                    "lineNoPageTill": 10,
+                    "pageNo": 4,
+                    "paragraphNo": 5,
+                    "text": "(1) C_Aaaa"
+                },
+                {
+                    "entryNo": 2,
+                    "lineNoPageFrom": 11,
+                    "lineNoPageTill": 11,
+                    "pageNo": 4,
+                    "paragraphNo": 5,
+                    "text": "(2) C_Bbbb"
+                },
+                {
+                    "entryNo": 3,
+                    "lineNoPageFrom": 12,
+                    "lineNoPageTill": 12,
+                    "pageNo": 4,
+                    "paragraphNo": 5,
+                    "text": "(3) C_Cccc"
+                },
+                {
+                    "entryNo": 4,
+                    "lineNoPageFrom": 13,
+                    "lineNoPageTill": 13,
+                    "pageNo": 4,
+                    "paragraphNo": 5,
+                    "text": "(4) C_Mixed end"
+                }
+            ]
+        }
+    ]
+}

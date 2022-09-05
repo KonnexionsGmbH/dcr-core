@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created by the PDFlib Text and Image Extraction Toolkit TET (www.pdflib.com) -->
+<TET xmlns="http://www.pdflib.com/XML/TET5/TET-5.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.pdflib.com/XML/TET5/TET-5.0
+ http://www.pdflib.com/XML/TET5/TET-5.0.xsd"
+ version="5.2">
+<Creation platform="Linux-x64" tetVersion="5.3" date="2022-09-05T13:42:25+02:00" />
+<Document filename="data/inbox_dev_accepted/p_4_h_4_f_4_different_last.pdf" pageCount="4" filesize="112457" linearized="false" pdfVersion="1.5" tagged="true">
+<DocInfo>
+<CreationDate>2022-05-25T11:08:33+00:00</CreationDate>
+<Creator>PDF24</Creator>
+<Producer>PDF24</Producer>
+</DocInfo>
+<Metadata>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.4-c006 80.159825, 2016/09/16-03:31:08        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""
+            xmlns:xmp="http://ns.adobe.com/xap/1.0/"
+            xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/"
+            xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:pdf="http://ns.adobe.com/pdf/1.3/"
+            xmlns:pdfx="http://ns.adobe.com/pdfx/1.3/">
+         <xmp:ModifyDate>2022-05-25T10:43:42+02:00</xmp:ModifyDate>
+         <xmp:CreateDate>2022-05-25T10:43:41+02:00</xmp:CreateDate>
+         <xmp:MetadataDate>2022-05-25T10:43:42+02:00</xmp:MetadataDate>
+         <xmp:CreatorTool>Acrobat PDFMaker 11 for Word</xmp:CreatorTool>
+         <xmpMM:DocumentID>uuid:e1a77e91-35cc-4578-819b-b5a963f4e2d8</xmpMM:DocumentID>
+         <xmpMM:InstanceID>uuid:d91264ea-a995-4fb5-8e24-b57780012d28</xmpMM:InstanceID>
+         <xmpMM:subject>
+            <rdf:Seq>
+               <rdf:li>6</rdf:li>
+            </rdf:Seq>
+         </xmpMM:subject>
+         <dc:format>application/pdf</dc:format>
+         <dc:title>
+            <rdf:Alt>
+               <rdf:li xml:lang="x-default"/>
+            </rdf:Alt>
+         </dc:title>
+         <dc:description>
+            <rdf:Alt>
+               <rdf:li xml:lang="x-default"/>
+            </rdf:Alt>
+         </dc:description>
+         <dc:creator>
+            <rdf:Seq>
+               <rdf:li>Walter Weinmann</rdf:li>
+            </rdf:Seq>
+         </dc:creator>
+         <pdf:Producer>Adobe PDF Library 11.0</pdf:Producer>
+         <pdf:Keywords/>
+         <pdfx:SourceModified>D:20220427123850</pdfx:SourceModified>
+         <pdfx:Company/>
+         <pdfx:Comments/>
+         <pdfx:InternalTags/>
+         <pdfx:ContentTypeId>0x0101006EDDDB5EE6D98C44930B742096920B300400F5B6D36B3EF94B4E9A635CDF2A18F5B8</pdfx:ContentTypeId>
+         <pdfx:FeatureTags/>
+         <pdfx:LocalizationTags/>
+         <pdfx:CampaignTags/>
+         <pdfx:ScenarioTags/>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta>
+</Metadata>
+<Options>tetml={filename={data/inbox_dev_accepted/p_4_h_4_f_4_different_last.line.xml}} engines={noannotation noimage text notextcolor novector}</Options>
+<Pages>
+<Page number="1" width="612.00" height="792.00">
+<Options>granularity=line</Options>
+<Content granularity="line" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="72.00" lly="705.25" urx="112.87" ury="756.60">
+  <Line llx="72.00" lly="745.56" urx="112.87" ury="756.60">
+   <Text artifact="true">Header 1</Text>
+  </Line>
+  <Line llx="72.00" lly="732.12" urx="112.87" ury="743.16">
+   <Text artifact="true">Header 2</Text>
+  </Line>
+  <Line llx="72.00" lly="718.69" urx="112.87" ury="729.73">
+   <Text artifact="true">Header 3</Text>
+  </Line>
+  <Line llx="72.00" lly="705.25" urx="112.87" ury="716.29">
+   <Text artifact="true">Header 4</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="651.61" urx="406.05" ury="689.52">
+  <Line llx="72.00" lly="678.48" urx="389.41" ury="689.52">
+   <Text>Seite 1 Zeile 1 This chapter uses Volto to change displaying the dates in</Text>
+  </Line>
+  <Line llx="72.00" lly="665.04" urx="406.05" ury="676.08">
+   <Text>Seite 1 Zeile 2 talkview and talklistview. To meet the same requirements in</Text>
+  </Line>
+  <Line llx="72.00" lly="651.61" urx="381.48" ury="662.65">
+   <Text>Seite 1 Zeile 3 classic Plone see the chapter Turning Talks into Events.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="69.49" urx="109.75" ury="93.97">
+  <Line llx="72.00" lly="82.93" urx="109.75" ury="93.97">
+   <Text artifact="true">Footer 1</Text>
+  </Line>
+  <Line llx="72.00" lly="69.49" urx="109.75" ury="80.53">
+   <Text artifact="true">Footer 2</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="39.00" ulx="72.00" uly="64.22" urx="243.64" ury="67.20" lrx="243.64" lry="39.00">
+  <Line llx="72.00" lly="53.16" urx="243.64" ury="67.20">
+   <Text artifact="true">Footer 3 pg. 1</Text>
+  </Line>
+  <Line llx="72.00" lly="39.00" urx="109.75" ury="50.04">
+   <Text artifact="true">Footer 4</Text>
+  </Line>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Page number="2" width="612.00" height="792.00">
+<Options>granularity=line</Options>
+<Content granularity="line" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="72.00" lly="665.04" urx="427.49" ury="756.60">
+  <Line llx="72.00" lly="745.56" urx="112.87" ury="756.60">
+   <Text artifact="true">Header 1</Text>
+  </Line>
+  <Line llx="72.00" lly="732.12" urx="112.87" ury="743.16">
+   <Text artifact="true">Header 2</Text>
+  </Line>
+  <Line llx="72.00" lly="718.69" urx="112.87" ury="729.73">
+   <Text artifact="true">Header 3</Text>
+  </Line>
+  <Line llx="72.00" lly="705.25" urx="112.87" ury="716.29">
+   <Text artifact="true">Header 4</Text>
+  </Line>
+  <Line llx="72.00" lly="691.91" urx="424.18" ury="702.95">
+   <Text>Seite 2 Zeile 1 We use a technique called component shadowing to override an</Text>
+  </Line>
+  <Line llx="72.00" lly="678.48" urx="425.83" ury="689.52">
+   <Text>Seite 2 Zeile 2 existing Volto component with our local custom version, without</Text>
+  </Line>
+  <Line llx="72.00" lly="665.04" urx="427.49" ury="676.08">
+   <Text>Seite 2 Zeile 3 having to modify Volto&apos;s source code at all. You have to place the</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="69.49" urx="109.75" ury="93.97">
+  <Line llx="72.00" lly="82.93" urx="109.75" ury="93.97">
+   <Text artifact="true">Footer 1</Text>
+  </Line>
+  <Line llx="72.00" lly="69.49" urx="109.75" ury="80.53">
+   <Text artifact="true">Footer 2</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="39.00" ulx="72.00" uly="64.22" urx="243.64" ury="67.20" lrx="243.64" lry="39.00">
+  <Line llx="72.00" lly="53.16" urx="243.64" ury="67.20">
+   <Text artifact="true">Footer 3 pg. 2</Text>
+  </Line>
+  <Line llx="72.00" lly="39.00" urx="109.75" ury="50.04">
+   <Text artifact="true">Footer 4</Text>
+  </Line>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Page number="3" width="612.00" height="792.00">
+<Options>granularity=line</Options>
+<Content granularity="line" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="72.00" lly="665.04" urx="433.98" ury="756.60">
+  <Line llx="72.00" lly="745.56" urx="112.87" ury="756.60">
+   <Text artifact="true">Header 1</Text>
+  </Line>
+  <Line llx="72.00" lly="732.12" urx="112.87" ury="743.16">
+   <Text artifact="true">Header 2</Text>
+  </Line>
+  <Line llx="72.00" lly="718.69" urx="112.87" ury="729.73">
+   <Text artifact="true">Header 3</Text>
+  </Line>
+  <Line llx="72.00" lly="705.25" urx="112.87" ury="716.29">
+   <Text artifact="true">Header 4</Text>
+  </Line>
+  <Line llx="72.00" lly="691.91" urx="420.52" ury="702.95">
+   <Text>Seite 3 Zeile 1 replacing component in the same original folder path inside the</Text>
+  </Line>
+  <Line llx="72.00" lly="678.48" urx="433.98" ury="689.52">
+   <Text>Seite 3 Zeile 2 We start with the first case and change the font to another Google</Text>
+  </Line>
+  <Line llx="72.00" lly="665.04" urx="429.92" ury="676.08">
+   <Text>Seite 3 Zeile 3 font, Lato. The overall font is defined in Volto and can be found in</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="69.49" urx="109.75" ury="93.97">
+  <Line llx="72.00" lly="82.93" urx="109.75" ury="93.97">
+   <Text artifact="true">Footer 1</Text>
+  </Line>
+  <Line llx="72.00" lly="69.49" urx="109.75" ury="80.53">
+   <Text artifact="true">Footer 2</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="39.00" ulx="72.00" uly="64.22" urx="243.64" ury="67.20" lrx="243.64" lry="39.00">
+  <Line llx="72.00" lly="53.16" urx="243.64" ury="67.20">
+   <Text artifact="true">Footer 3 pg. 3</Text>
+  </Line>
+  <Line llx="72.00" lly="39.00" urx="109.75" ury="50.04">
+   <Text artifact="true">Footer 4</Text>
+  </Line>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Page number="4" width="595.32" height="841.92">
+<Options>granularity=line</Options>
+<Content granularity="line" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="70.80" lly="682.68" urx="513.03" ury="770.40">
+  <Line llx="70.80" lly="759.84" urx="513.03" ury="770.40">
+   <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</Text>
+  </Line>
+  <Line llx="70.80" lly="744.36" urx="491.19" ury="754.92">
+   <Text>ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</Text>
+  </Line>
+  <Line llx="70.80" lly="728.88" urx="467.89" ury="739.44">
+   <Text>ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in</Text>
+  </Line>
+  <Line llx="70.80" lly="713.52" urx="504.14" ury="724.08">
+   <Text>reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint</Text>
+  </Line>
+  <Line llx="70.80" lly="698.04" urx="481.57" ury="708.60">
+   <Text>occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est</Text>
+  </Line>
+  <Line llx="70.80" lly="682.68" urx="115.49" ury="693.24">
+   <Text>laborum.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="582.00" urx="513.02" ury="669.72">
+  <Line llx="70.80" lly="659.16" urx="513.02" ury="669.72">
+   <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</Text>
+  </Line>
+  <Line llx="70.80" lly="643.80" urx="491.19" ury="654.36">
+   <Text>ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</Text>
+  </Line>
+  <Line llx="70.80" lly="628.32" urx="467.90" ury="638.88">
+   <Text>ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in</Text>
+  </Line>
+  <Line llx="70.80" lly="612.96" urx="504.14" ury="623.52">
+   <Text>reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint</Text>
+  </Line>
+  <Line llx="70.80" lly="597.48" urx="481.57" ury="608.04">
+   <Text>occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est</Text>
+  </Line>
+  <Line llx="70.80" lly="582.00" urx="115.49" ury="592.56">
+   <Text>laborum.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="481.44" urx="513.03" ury="569.16">
+  <Line llx="70.80" lly="558.60" urx="513.03" ury="569.16">
+   <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</Text>
+  </Line>
+  <Line llx="70.80" lly="543.24" urx="491.17" ury="553.80">
+   <Text>ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</Text>
+  </Line>
+  <Line llx="70.80" lly="527.76" urx="467.90" ury="538.32">
+   <Text>ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in</Text>
+  </Line>
+  <Line llx="70.80" lly="512.28" urx="504.14" ury="522.84">
+   <Text>reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint</Text>
+  </Line>
+  <Line llx="70.80" lly="496.92" urx="481.59" ury="507.48">
+   <Text>occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est</Text>
+  </Line>
+  <Line llx="70.80" lly="481.44" urx="115.49" ury="492.00">
+   <Text>laborum.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.80" lly="380.88" urx="513.03" ury="468.60">
+  <Line llx="70.80" lly="458.04" urx="513.03" ury="468.60">
+   <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</Text>
+  </Line>
+  <Line llx="70.80" lly="442.56" urx="491.19" ury="453.12">
+   <Text>ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</Text>
+  </Line>
+  <Line llx="70.80" lly="427.20" urx="467.90" ury="437.76">
+   <Text>ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in</Text>
+  </Line>
+  <Line llx="70.80" lly="411.72" urx="504.14" ury="422.28">
+   <Text>reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint</Text>
+  </Line>
+  <Line llx="70.80" lly="396.36" urx="481.57" ury="406.92">
+   <Text>occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est</Text>
+  </Line>
+  <Line llx="70.80" lly="380.88" urx="115.49" ury="391.44">
+   <Text>laborum.</Text>
+  </Line>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Resources>
+<Fonts>
+ <Font id="F0" name="Calibri" fullname="KTTKOJ+Calibri" type="TrueType" embedded="true" ascender="750.00" capheight="632.00" italicangle="0.00" descender="-250.00" weight="400.00" xheight="464.00"/>
+ <Font id="F1" name="Calibri-Light" fullname="YWULCH+Calibri-Light" type="TrueType" embedded="true" ascender="750.00" capheight="632.00" italicangle="0.00" descender="-250.00" weight="300.00" xheight="462.00"/>
+ <Font id="F2" name="OpenSans-Regular" fullname="SQNQOY+OpenSans-Regular" type="TrueType" embedded="true" ascender="765.00" capheight="714.00" italicangle="0.00" descender="-240.00" weight="400.00" xheight="535.00"/>
+ <Font id="F3" name="Calibri" fullname="NGAMWI+Calibri" type="TrueType" embedded="true" ascender="750.00" capheight="632.00" italicangle="0.00" descender="-250.00" weight="400.00" xheight="464.00"/>
+</Fonts>
+<ColorSpaces>
+ <ColorSpace id="CS0" name="ICCBased" components="1" iccprofile="ICC0"/>
+ <ColorSpace id="CS1" name="ICCBased" components="1" iccprofile="ICC0"/>
+ <ColorSpace id="CS2" name="ICCBased" components="1" iccprofile="ICC0"/>
+ <ColorSpace id="CS3" name="ICCBased" components="1" iccprofile="ICC0"/>
+</ColorSpaces>
+</Resources>
+<Graphics>
+<ICCProfiles>
+ <ICCProfile id="ICC0" embedded="true" iccversion="2.1" profilename="Gray Gamma 2.2" checksum="66043AD0DE86F27B977BAB702FB1A778" profilecs="GRAY" deviceclass="mntr" fromCIE="true" toCIE="true"/>
+</ICCProfiles>
+</Graphics>
+</Pages>
+</Document>
+</TET>

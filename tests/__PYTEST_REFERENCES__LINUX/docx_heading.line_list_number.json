@@ -1,0 +1,381 @@
+{
+    "documentId": 9,
+    "documentFileName": "docx_heading.pdf",
+    "noListsNumberInDocument": 7,
+    "listsNumber": [
+        {
+            "number": "(rom)",
+            "listNo": 1,
+            "noEntries": 14,
+            "pageNoFrom": 1,
+            "pageNoTill": 1,
+            "regexp": "\\(m{0,3}(cm|cd|d?c{0,3})(xc|xl|l?x{0,3})(ix|iv|v?i{0,3})\\)$",
+            "entries": [
+                {
+                    "entryNo": 1,
+                    "lineNoPageFrom": 10,
+                    "lineNoPageTill": 10,
+                    "pageNo": 1,
+                    "paragraphNo": 4,
+                    "text": "(i) Heading Level 3 #1"
+                },
+                {
+                    "entryNo": 2,
+                    "lineNoPageFrom": 11,
+                    "lineNoPageTill": 14,
+                    "pageNo": 1,
+                    "paragraphNo": 4,
+                    "text": "(ii) Xxxx Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat."
+                },
+                {
+                    "entryNo": 3,
+                    "lineNoPageFrom": 15,
+                    "lineNoPageTill": 18,
+                    "pageNo": 1,
+                    "paragraphNo": 5,
+                    "text": "(iii) Yxxx Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat."
+                },
+                {
+                    "entryNo": 4,
+                    "lineNoPageFrom": 19,
+                    "lineNoPageTill": 22,
+                    "pageNo": 1,
+                    "paragraphNo": 6,
+                    "text": "(iv) Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat."
+                },
+                {
+                    "entryNo": 5,
+                    "lineNoPageFrom": 23,
+                    "lineNoPageTill": 23,
+                    "pageNo": 1,
+                    "paragraphNo": 6,
+                    "text": "(v) Heading Level 3 #2"
+                },
+                {
+                    "entryNo": 6,
+                    "lineNoPageFrom": 24,
+                    "lineNoPageTill": 24,
+                    "pageNo": 1,
+                    "paragraphNo": 6,
+                    "text": "(vi) 6"
+                },
+                {
+                    "entryNo": 7,
+                    "lineNoPageFrom": 25,
+                    "lineNoPageTill": 25,
+                    "pageNo": 1,
+                    "paragraphNo": 6,
+                    "text": "(vii) 7"
+                },
+                {
+                    "entryNo": 8,
+                    "lineNoPageFrom": 26,
+                    "lineNoPageTill": 26,
+                    "pageNo": 1,
+                    "paragraphNo": 6,
+                    "text": "(viii) 8"
+                },
+                {
+                    "entryNo": 9,
+                    "lineNoPageFrom": 27,
+                    "lineNoPageTill": 27,
+                    "pageNo": 1,
+                    "paragraphNo": 6,
+                    "text": "(ix) 9"
+                },
+                {
+                    "entryNo": 10,
+                    "lineNoPageFrom": 28,
+                    "lineNoPageTill": 28,
+                    "pageNo": 1,
+                    "paragraphNo": 6,
+                    "text": "(x) 10"
+                },
+                {
+                    "entryNo": 11,
+                    "lineNoPageFrom": 29,
+                    "lineNoPageTill": 29,
+                    "pageNo": 1,
+                    "paragraphNo": 6,
+                    "text": "(xi) 11"
+                },
+                {
+                    "entryNo": 12,
+                    "lineNoPageFrom": 30,
+                    "lineNoPageTill": 30,
+                    "pageNo": 1,
+                    "paragraphNo": 6,
+                    "text": "(xii) 12"
+                },
+                {
+                    "entryNo": 13,
+                    "lineNoPageFrom": 31,
+                    "lineNoPageTill": 31,
+                    "pageNo": 1,
+                    "paragraphNo": 6,
+                    "text": "(xiii) 13"
+                },
+                {
+                    "entryNo": 14,
+                    "lineNoPageFrom": 32,
+                    "lineNoPageTill": 34,
+                    "pageNo": 1,
+                    "paragraphNo": 6,
+                    "text": "(xiv) 14 The terms \"reproduce\", \"reproduction\", \"derivative works\", and \"distribution\" have the same meaning here as under U.S. copyright law."
+                }
+            ]
+        },
+        {
+            "number": "rom.",
+            "listNo": 2,
+            "noEntries": 14,
+            "pageNoFrom": 1,
+            "pageNoTill": 2,
+            "regexp": "m{0,3}(cm|cd|d?c{0,3})(xc|xl|l?x{0,3})(ix|iv|v?i{0,3})\\.",
+            "entries": [
+                {
+                    "entryNo": 1,
+                    "lineNoPageFrom": 51,
+                    "lineNoPageTill": 51,
+                    "pageNo": 1,
+                    "paragraphNo": 9,
+                    "text": "i. Heading Level 3 #1"
+                },
+                {
+                    "entryNo": 2,
+                    "lineNoPageFrom": 52,
+                    "lineNoPageTill": 55,
+                    "pageNo": 1,
+                    "paragraphNo": 9,
+                    "text": "ii. Xxxx Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat."
+                },
+                {
+                    "entryNo": 3,
+                    "lineNoPageFrom": 56,
+                    "lineNoPageTill": 59,
+                    "pageNo": 1,
+                    "paragraphNo": 9,
+                    "text": "iii. Yxxx Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat."
+                },
+                {
+                    "entryNo": 4,
+                    "lineNoPageFrom": 60,
+                    "lineNoPageTill": 63,
+                    "pageNo": 1,
+                    "paragraphNo": 9,
+                    "text": "iv. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat."
+                },
+                {
+                    "entryNo": 5,
+                    "lineNoPageFrom": 64,
+                    "lineNoPageTill": 64,
+                    "pageNo": 1,
+                    "paragraphNo": 9,
+                    "text": "v. Heading Level 3 #2"
+                },
+                {
+                    "entryNo": 6,
+                    "lineNoPageFrom": 65,
+                    "lineNoPageTill": 65,
+                    "pageNo": 1,
+                    "paragraphNo": 9,
+                    "text": "vi. 6"
+                },
+                {
+                    "entryNo": 7,
+                    "lineNoPageFrom": 1,
+                    "lineNoPageTill": 1,
+                    "pageNo": 2,
+                    "paragraphNo": 1,
+                    "text": "vii. 7"
+                },
+                {
+                    "entryNo": 8,
+                    "lineNoPageFrom": 2,
+                    "lineNoPageTill": 2,
+                    "pageNo": 2,
+                    "paragraphNo": 1,
+                    "text": "viii. 8"
+                },
+                {
+                    "entryNo": 9,
+                    "lineNoPageFrom": 3,
+                    "lineNoPageTill": 3,
+                    "pageNo": 2,
+                    "paragraphNo": 1,
+                    "text": "ix. 9"
+                },
+                {
+                    "entryNo": 10,
+                    "lineNoPageFrom": 4,
+                    "lineNoPageTill": 4,
+                    "pageNo": 2,
+                    "paragraphNo": 1,
+                    "text": "x. 10"
+                },
+                {
+                    "entryNo": 11,
+                    "lineNoPageFrom": 5,
+                    "lineNoPageTill": 5,
+                    "pageNo": 2,
+                    "paragraphNo": 1,
+                    "text": "xi. 11"
+                },
+                {
+                    "entryNo": 12,
+                    "lineNoPageFrom": 6,
+                    "lineNoPageTill": 6,
+                    "pageNo": 2,
+                    "paragraphNo": 1,
+                    "text": "xii. 12"
+                },
+                {
+                    "entryNo": 13,
+                    "lineNoPageFrom": 7,
+                    "lineNoPageTill": 7,
+                    "pageNo": 2,
+                    "paragraphNo": 1,
+                    "text": "xiii. 13"
+                },
+                {
+                    "entryNo": 14,
+                    "lineNoPageFrom": 8,
+                    "lineNoPageTill": 8,
+                    "pageNo": 2,
+                    "paragraphNo": 1,
+                    "text": "xiv. 14"
+                }
+            ]
+        },
+        {
+            "number": "(a)",
+            "listNo": 3,
+            "noEntries": 2,
+            "pageNoFrom": 2,
+            "pageNoTill": 2,
+            "regexp": "\\([a-z]\\)$",
+            "entries": [
+                {
+                    "entryNo": 1,
+                    "lineNoPageFrom": 10,
+                    "lineNoPageTill": 15,
+                    "pageNo": 2,
+                    "paragraphNo": 3,
+                    "text": "(a) Copyright Grant- Subject to the terms of this license, including the license conditions and limitations in section 3, each contributor grants you a nonexclusive, worldwide, royalty-free copyright license to reproduce its contribution, prepare derivative works of its contribution, and distribute its contribution or any derivative works that you create."
+                },
+                {
+                    "entryNo": 2,
+                    "lineNoPageFrom": 16,
+                    "lineNoPageTill": 22,
+                    "pageNo": 2,
+                    "paragraphNo": 4,
+                    "text": "(b) Patent Grant- Subject to the terms of this license, including the license conditions and limitations in section 3, each contributor grants you a nonexclusive, worldwide, royalty-free license under its licensed patents to make, have made, use, sell, offer for sale, import, and/or otherwise dispose of its contribution in the software or derivative works of the contribution in the software."
+                }
+            ]
+        },
+        {
+            "number": "(a)",
+            "listNo": 4,
+            "noEntries": 2,
+            "pageNoFrom": 2,
+            "pageNoTill": 2,
+            "regexp": "\\([a-z]\\)$",
+            "entries": [
+                {
+                    "entryNo": 1,
+                    "lineNoPageFrom": 24,
+                    "lineNoPageTill": 25,
+                    "pageNo": 2,
+                    "paragraphNo": 5,
+                    "text": "(a) No Trademark License- This license does not grant you rights to use any contributors' name, logo, or trademarks."
+                },
+                {
+                    "entryNo": 2,
+                    "lineNoPageFrom": 26,
+                    "lineNoPageTill": 29,
+                    "pageNo": 2,
+                    "paragraphNo": 6,
+                    "text": "(b) If you bring a patent claim against any contributor over patents that you claim is infringed by the software, your patent license from such contributor to the software ends automatically.0"
+                }
+            ]
+        },
+        {
+            "number": "(rom)",
+            "listNo": 5,
+            "noEntries": 2,
+            "pageNoFrom": 2,
+            "pageNoTill": 2,
+            "regexp": "\\(m{0,3}(cm|cd|d?c{0,3})(xc|xl|l?x{0,3})(ix|iv|v?i{0,3})\\)$",
+            "entries": [
+                {
+                    "entryNo": 1,
+                    "lineNoPageFrom": 31,
+                    "lineNoPageTill": 34,
+                    "pageNo": 2,
+                    "paragraphNo": 7,
+                    "text": "(i) Test Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat."
+                },
+                {
+                    "entryNo": 2,
+                    "lineNoPageFrom": 35,
+                    "lineNoPageTill": 41,
+                    "pageNo": 2,
+                    "paragraphNo": 7,
+                    "text": "(ii) Test (3) Test Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat."
+                }
+            ]
+        },
+        {
+            "number": "(a)",
+            "listNo": 6,
+            "noEntries": 2,
+            "pageNoFrom": 3,
+            "pageNoTill": 3,
+            "regexp": "\\([a-z]\\)$",
+            "entries": [
+                {
+                    "entryNo": 1,
+                    "lineNoPageFrom": 3,
+                    "lineNoPageTill": 3,
+                    "pageNo": 3,
+                    "paragraphNo": 2,
+                    "text": "(a) Heading Level 3 #1"
+                },
+                {
+                    "entryNo": 2,
+                    "lineNoPageFrom": 4,
+                    "lineNoPageTill": 7,
+                    "pageNo": 3,
+                    "paragraphNo": 2,
+                    "text": "(b) Xxxx Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat."
+                }
+            ]
+        },
+        {
+            "number": "(A)",
+            "listNo": 7,
+            "noEntries": 2,
+            "pageNoFrom": 4,
+            "pageNoTill": 4,
+            "regexp": "\\([A-Z]\\)$",
+            "entries": [
+                {
+                    "entryNo": 1,
+                    "lineNoPageFrom": 52,
+                    "lineNoPageTill": 55,
+                    "pageNo": 4,
+                    "paragraphNo": 23,
+                    "text": "(A) Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat."
+                },
+                {
+                    "entryNo": 2,
+                    "lineNoPageFrom": 56,
+                    "lineNoPageTill": 59,
+                    "pageNo": 4,
+                    "paragraphNo": 24,
+                    "text": "(B) Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat."
+                }
+            ]
+        }
+    ]
+}

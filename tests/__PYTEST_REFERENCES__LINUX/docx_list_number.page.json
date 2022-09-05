@@ -1,0 +1,186 @@
+{
+    "documentId": 13,
+    "documentFileName": "docx_list_number.pdf",
+    "noPagesInDocument": 5,
+    "noParagraphsInDocument": 37,
+    "pages": [
+        {
+            "pageNo": 1,
+            "noParagraphsInPage": 1,
+            "paragraphs": [
+                {
+                    "paragraphNo": 1,
+                    "text": "Header Page | 1 a. 1_Aaaa b. 1_Bbbb c. 1_Cccc d. 1_dddd e. 1_eeee f. 1_ffff g. 1_gggg h. 1_hhhh h. ERROR Trennlinie i. ERROR j. ERROR Trennlinie 1. 2_Aaaa 2. 2_Bbbb 3. 2_Cccc 4. 2_Dddd 5. 2_Eeee 6. 2_Ffff 8. ERROR Trennlinie 9. ERROR 10. ERROR Trennlinie a ERROR I. 3_bbbb II. 3_cccc"
+                }
+            ]
+        },
+        {
+            "pageNo": 2,
+            "noParagraphsInPage": 13,
+            "paragraphs": [
+                {
+                    "paragraphNo": 1,
+                    "text": "Header"
+                },
+                {
+                    "paragraphNo": 2,
+                    "text": "III. 3_dddd"
+                },
+                {
+                    "paragraphNo": 3,
+                    "text": "V. 3_ffff"
+                },
+                {
+                    "paragraphNo": 4,
+                    "text": "Trennlinie"
+                },
+                {
+                    "paragraphNo": 5,
+                    "text": "(1) 4_1111 (2) 4_2222 (3) 4_3333 (4) 4_4444"
+                },
+                {
+                    "paragraphNo": 6,
+                    "text": "Trennlinie"
+                },
+                {
+                    "paragraphNo": 7,
+                    "text": "(6) ERROR"
+                },
+                {
+                    "paragraphNo": 8,
+                    "text": "A) 5_aaaa B) 5_bbbb C) 5_cccc D) 5_dddd D) ERROR"
+                },
+                {
+                    "paragraphNo": 9,
+                    "text": "Trennlinie"
+                },
+                {
+                    "paragraphNo": 10,
+                    "text": "F) ERROR"
+                },
+                {
+                    "paragraphNo": 11,
+                    "text": "a. 6_1111 b. 6_2222 c. 6_3333 d. 6_4444"
+                },
+                {
+                    "paragraphNo": 12,
+                    "text": "Trennlinie"
+                },
+                {
+                    "paragraphNo": 13,
+                    "text": "Page | 2"
+                }
+            ]
+        },
+        {
+            "pageNo": 3,
+            "noParagraphsInPage": 12,
+            "paragraphs": [
+                {
+                    "paragraphNo": 1,
+                    "text": "Header"
+                },
+                {
+                    "paragraphNo": 2,
+                    "text": "f. ERROR"
+                },
+                {
+                    "paragraphNo": 3,
+                    "text": "i. 7_aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa"
+                },
+                {
+                    "paragraphNo": 4,
+                    "text": "iv. 7_dddd dddd dddd dddd dddd dddd dddd dddd dddd dddd dddd dddd dddd"
+                },
+                {
+                    "paragraphNo": 5,
+                    "text": "Trennlinie"
+                },
+                {
+                    "paragraphNo": 6,
+                    "text": "vii. ERROR"
+                },
+                {
+                    "paragraphNo": 7,
+                    "text": "a. 8_1111 b. 8_2222 c. 8_3333 d. 8_4444 e. 8_5555 f. 8_6666 g. 8_7777"
+                },
+                {
+                    "paragraphNo": 8,
+                    "text": "Trennlinie"
+                },
+                {
+                    "paragraphNo": 9,
+                    "text": "i. ERROR"
+                },
+                {
+                    "paragraphNo": 10,
+                    "text": "j. ERROR k. ERROR l. ERROR m. ERROR"
+                },
+                {
+                    "paragraphNo": 11,
+                    "text": "Trennlinie"
+                },
+                {
+                    "paragraphNo": 12,
+                    "text": "Page | 3"
+                }
+            ]
+        },
+        {
+            "pageNo": 4,
+            "noParagraphsInPage": 8,
+            "paragraphs": [
+                {
+                    "paragraphNo": 1,
+                    "text": "Header"
+                },
+                {
+                    "paragraphNo": 2,
+                    "text": "o. ERROR"
+                },
+                {
+                    "paragraphNo": 3,
+                    "text": "1. A_Mixed start 2. A_Aaaa 3. A_Bbbb 4. A_Cccc"
+                },
+                {
+                    "paragraphNo": 4,
+                    "text": "3) B_Cccc"
+                },
+                {
+                    "paragraphNo": 5,
+                    "text": "(1) C_Aaaa (2) C_Bbbb (3) C_Cccc (4) C_Mixed end"
+                },
+                {
+                    "paragraphNo": 6,
+                    "text": "Trennlinie"
+                },
+                {
+                    "paragraphNo": 7,
+                    "text": "i. A Ein Buch, das mit der Frage \u201eWoher das Gute?\u201c im \u201eHerz der Seinsfrage\u201c endet, nachdem es \u201eGrauzonenkunde\u201c betrieben, also die Bedeutung des Vermischten, Mittleren und Kompromisshaften f\u00fcr die menschliche Selbst- und Welterkenntnis herausgearbeitet und mit Aplomb in der Kunst dingfest gemacht hat \u2013 ein solches Buch von Peter Sloterdijk darf vielleicht als Schlussstein gelten f\u00fcr ein opulentes Lebenswerk, das letztlich die Seinsfrage umkreist. Doch geantwortet wird bei Sloterdijk nie in Deduktionen, sondern mit intellektueller \u00dcberw\u00e4ltigung, untermauert von stupender Belesenheit. Wenn dieses Denken in Sph\u00e4ren und Blasen eines nicht ist, dann graue Theorie. Eher schon handelt es sich um spektralbunte Abenteuerphilosophie. Blendwerk lautet denn auch der hartn\u00e4ckige Vorwurf der Kritiker. Da ist es durchaus gewitzt, nun eine Abblendung folgen zu lassen, die ausgerechnet den Sinn f\u00fcr das Abblenden \u2013 das Denken des Grau \u2013 zum Lackmustest f\u00fcr Philosophie macht, den neben Sloterdijk selbst nur dessen Hausg\u00f6tter bestehen: Platon, Hegel, Heidegger, Nietzsche und in Ma\u00dfen auch Kant. Einige Gr\u00f6\u00dfen aus Literatur und Malerei \u2013 M\u00e4nner allesamt \u2013 kommen hinzu. ii. B C\u00e9zanne war es, der den Autor mit dem Satz \u201eSolange man nicht ein Grau gemalt hat, ist man kein Maler\u201c auf die Idee brachte, dieses Konditional auf die Philosophie auszudehnen. Durch allen rhetorischen Bombast hindurch l\u00e4sst sich bei Sloterdijk eine kulturhistorische Makroperspektive ausmachen. Bis zum neunzehnten Jahrhundert hatte demnach das strahlende Wei\u00df eine Sonderstellung, ein letztes Refugium der uralten Lichtmetaphysik. Dann habe auch im Bereich der Farben die gro\u00dfe"
+                },
+                {
+                    "paragraphNo": 8,
+                    "text": "Page | 4"
+                }
+            ]
+        },
+        {
+            "pageNo": 5,
+            "noParagraphsInPage": 3,
+            "paragraphs": [
+                {
+                    "paragraphNo": 1,
+                    "text": "Header"
+                },
+                {
+                    "paragraphNo": 2,
+                    "text": "Enthierarchisierung und S\u00e4kularisierung eingesetzt. Statt einer liturgisch-allegorisch festgelegten Farbrangfolge herrschten nun die \u201eUnited Colors of Everything\u201c, eine polychrome Idylle der totalen Toleranz. Wobei nicht der Regenbogen f\u00fcr Sloterdijk das treffende Symbol ist, sondern ein Schmutzgrau des Vermengten. iii. C Eine \u201egraue Ethik\u201c habe denn auch diese einst von der Kunst mit angef\u00fchrte Freiheitsbewegung begleitet. Dazu eine erwartbare Spitze: Angela Merkel, \u201ezugleich lau und machtbesessen\u201c, gilt Sloterdijk als vorl\u00e4ufiger Gipfelpunkt der sich um alle Entscheidungen dr\u00fcckenden Bewegung zur Mitte hin, die vermutlich in einer graugr\u00fcnen \u201e\u00f6kob\u00fcrokratischen Verordnungspolitik\u201c enden werde: \u201eDreckfarbigkeit bildet das unumg\u00e4ngliche Resultat der postmodernen Mixophilie.\u201c Das Grau w\u00e4re so \u201edie farblose Allfarbe der entfremdeten Freiheit\u201c. iv. D Aber diese wenig originelle Verfallserz\u00e4hlung, der moderne Staat als \u201eder Gro\u00dfe Graue\u201c, der \u201edie \u201aabsolute\u2018 Monarchie an Ausdehnung seiner Zust\u00e4ndigkeiten und Durchdringungstiefe seiner Ma\u00dfnahmen um ein Vielfaches \u00fcbertrifft\u201c, ist nur das eine. Sloterdijk scheint es mit Goethes Farbenlehre zu halten, in der er \u201ezweierlei Grau\u201c unterschieden sieht: neben dem \u201etr\u00fcben\u201c Farbmischgrau ein Reingrau, also durch wei\u00dfes Licht abget\u00f6ntes Schwarz. Und so wird das \u201eGrau-in-Grau\u201c der Philosophen oder das der K\u00fcnstler, \u201edas dich ber\u00fchrt\u201c, hier keineswegs diskreditiert. Im Gegenteil: Grau in Reinform gilt f\u00fcr Sloterdijk als Farbe des Denkens. In den Kapiteln, die assoziativ Motivgeschichte und Metaphorologie \u00fcberkreuzen, ist das Buch am st\u00e4rksten. v. E Sch\u00f6n liest sich, wie der Autor literarische Grau-Figurationen aufst\u00f6bert. Zu ihnen geh\u00f6rt nat\u00fcrlich das Husum-Gedicht \u201eDie Stadt\u201c von Theodor Storm (\u201eAm grauen Strand, am grauen Meer\u201c), aber fast erstaunlicherweise nicht Herbert Gr\u00f6nemeyers Coverversion als \u201eBochum\u201c-Song (\u201evor Arbeit ganz grau\u201c). Grandios sind die religionsgeschichtlichen \u00dcberlegungen zum \u00dcbergang vom Manich\u00e4ismus zum Christentum, womit der Punkt aufgesp\u00fcrt ist, an dem das Dritte zwischen Licht und Dunkel die B\u00fchne betritt, Grau in seiner welthaltigsten Manifestation. Weniger \u201ezynisch\u201c als platt wirkt indes die Engf\u00fchrung von \u201eGrau und Frau\u201c, Geraune \u00fcber Altweibergraues bei Goethe, Schnitzler und Musil, zumal das Kapitel abgebrochen wird mit der Vermutung, \u201ewenn man keine Frau ist, kann man so etwas heute nicht mehr schreiben\u201c."
+                },
+                {
+                    "paragraphNo": 3,
+                    "text": "Page | 5"
+                }
+            ]
+        }
+    ]
+}

@@ -13,6 +13,7 @@ Returns:
 import configparser
 import os
 import pathlib
+import platform
 import shutil
 
 import pytest
@@ -353,7 +354,9 @@ def get_test_files_reference_directory_name():
     Provide the file directory name where the reference files are
     located.
     """
-    return "tests/__PYTEST_REFERENCES__/"
+    suffix = platform.system().upper()
+
+    return "tests/__PYTEST_REFERENCES__" + suffix + "/"
 
 
 # -----------------------------------------------------------------------------

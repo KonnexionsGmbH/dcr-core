@@ -1,0 +1,260 @@
+{
+    "documentId": 11,
+    "documentFileName": "docx_list_bullet.pdf",
+    "noPagesInDocument": 4,
+    "noParagraphsInDocument": 57,
+    "pages": [
+        {
+            "pageNo": 1,
+            "noParagraphsInPage": 18,
+            "paragraphs": [
+                {
+                    "paragraphNo": 1,
+                    "text": "Header"
+                },
+                {
+                    "paragraphNo": 2,
+                    "text": ". Aaaa . Bbbb . Ccccc . dddd"
+                },
+                {
+                    "paragraphNo": 3,
+                    "text": "=================="
+                },
+                {
+                    "paragraphNo": 4,
+                    "text": ". ERROR"
+                },
+                {
+                    "paragraphNo": 5,
+                    "text": "=================="
+                },
+                {
+                    "paragraphNo": 6,
+                    "text": "- Aaaa - Bbbb - Ccccc - dddd"
+                },
+                {
+                    "paragraphNo": 7,
+                    "text": "=================="
+                },
+                {
+                    "paragraphNo": 8,
+                    "text": "- ERROR"
+                },
+                {
+                    "paragraphNo": 9,
+                    "text": "=================="
+                },
+                {
+                    "paragraphNo": 10,
+                    "text": "aaaa"
+                },
+                {
+                    "paragraphNo": 11,
+                    "text": "\u2022 bbbb"
+                },
+                {
+                    "paragraphNo": 12,
+                    "text": "\u2022 ccccc"
+                },
+                {
+                    "paragraphNo": 13,
+                    "text": "\u2022 dddd"
+                },
+                {
+                    "paragraphNo": 14,
+                    "text": "o"
+                },
+                {
+                    "paragraphNo": 15,
+                    "text": "ERROR"
+                },
+                {
+                    "paragraphNo": 16,
+                    "text": "=================="
+                },
+                {
+                    "paragraphNo": 17,
+                    "text": "o 1111 o 2222 o 3333 o 4444"
+                },
+                {
+                    "paragraphNo": 18,
+                    "text": "Page | 1"
+                }
+            ]
+        },
+        {
+            "pageNo": 2,
+            "noParagraphsInPage": 22,
+            "paragraphs": [
+                {
+                    "paragraphNo": 1,
+                    "text": "Header"
+                },
+                {
+                    "paragraphNo": 2,
+                    "text": "o"
+                },
+                {
+                    "paragraphNo": 3,
+                    "text": "ERROR"
+                },
+                {
+                    "paragraphNo": 4,
+                    "text": "\u2022 aaaa"
+                },
+                {
+                    "paragraphNo": 5,
+                    "text": "\u2022 bbbb"
+                },
+                {
+                    "paragraphNo": 6,
+                    "text": "\u2022 cccc"
+                },
+                {
+                    "paragraphNo": 7,
+                    "text": "\u2022 dddd"
+                },
+                {
+                    "paragraphNo": 8,
+                    "text": "=================="
+                },
+                {
+                    "paragraphNo": 9,
+                    "text": "\u2022 ERROR"
+                },
+                {
+                    "paragraphNo": 10,
+                    "text": "1111 2222 3333 4444"
+                },
+                {
+                    "paragraphNo": 11,
+                    "text": "=================="
+                },
+                {
+                    "paragraphNo": 12,
+                    "text": "ERROR"
+                },
+                {
+                    "paragraphNo": 13,
+                    "text": "\ufffd aaaa \ufffd bbbb \ufffd cccc \ufffd dddd"
+                },
+                {
+                    "paragraphNo": 14,
+                    "text": "=================="
+                },
+                {
+                    "paragraphNo": 15,
+                    "text": "\ufffd ERROR"
+                },
+                {
+                    "paragraphNo": 16,
+                    "text": "\u2023 1111"
+                },
+                {
+                    "paragraphNo": 17,
+                    "text": "\u2023 2222"
+                },
+                {
+                    "paragraphNo": 18,
+                    "text": "\u2023 3333"
+                },
+                {
+                    "paragraphNo": 19,
+                    "text": "\u2023 4444"
+                },
+                {
+                    "paragraphNo": 20,
+                    "text": "=================="
+                },
+                {
+                    "paragraphNo": 21,
+                    "text": "\u2023 ERROR"
+                },
+                {
+                    "paragraphNo": 22,
+                    "text": "Page | 2"
+                }
+            ]
+        },
+        {
+            "pageNo": 3,
+            "noParagraphsInPage": 12,
+            "paragraphs": [
+                {
+                    "paragraphNo": 1,
+                    "text": "Header"
+                },
+                {
+                    "paragraphNo": 2,
+                    "text": "\ufffd aaaa \ufffd bbbb \ufffd cccc \ufffd dddd"
+                },
+                {
+                    "paragraphNo": 3,
+                    "text": "=================="
+                },
+                {
+                    "paragraphNo": 4,
+                    "text": "\ufffd ERROR"
+                },
+                {
+                    "paragraphNo": 5,
+                    "text": "o Mixed start o Aaaa o Bbbb o Cccc"
+                },
+                {
+                    "paragraphNo": 6,
+                    "text": "\u2022 Aaaa"
+                },
+                {
+                    "paragraphNo": 7,
+                    "text": "\u2022 Bbbb"
+                },
+                {
+                    "paragraphNo": 8,
+                    "text": "\u2022 Cccc \ufffd Aaaa \ufffd Bbbb \ufffd Cccc \ufffd Mixed end"
+                },
+                {
+                    "paragraphNo": 9,
+                    "text": "=================="
+                },
+                {
+                    "paragraphNo": 10,
+                    "text": "\ufffd A Ein Buch, das mit der Frage \u201eWoher das Gute?\u201c im \u201eHerz der Seinsfrage\u201c endet, nachdem es \u201eGrauzonenkunde\u201c betrieben, also die Bedeutung des Vermischten, Mittleren und Kompromisshaften f\u00fcr die menschliche Selbst- und Welterkenntnis herausgearbeitet und mit Aplomb in der Kunst dingfest gemacht hat \u2013 ein solches Buch von Peter Sloterdijk darf vielleicht als Schlussstein gelten f\u00fcr ein opulentes Lebenswerk, das letztlich die Seinsfrage umkreist. Doch geantwortet wird bei Sloterdijk nie in Deduktionen, sondern mit intellektueller \u00dcberw\u00e4ltigung, untermauert von stupender Belesenheit. Wenn dieses Denken in Sph\u00e4ren und Blasen eines nicht ist, dann graue Theorie. Eher schon handelt es sich um spektralbunte Abenteuerphilosophie. Blendwerk lautet denn auch der hartn\u00e4ckige Vorwurf der Kritiker. Da ist es durchaus gewitzt, nun eine Abblendung folgen zu lassen, die ausgerechnet den Sinn f\u00fcr das Abblenden \u2013 das Denken des Grau \u2013 zum Lackmustest f\u00fcr Philosophie macht, den neben Sloterdijk selbst nur dessen Hausg\u00f6tter bestehen: Platon, Hegel, Heidegger, Nietzsche und in Ma\u00dfen auch Kant. Einige Gr\u00f6\u00dfen aus Literatur und Malerei \u2013 M\u00e4nner allesamt \u2013 kommen hinzu."
+                },
+                {
+                    "paragraphNo": 11,
+                    "text": "\ufffd B C\u00e9zanne war es, der den Autor mit dem Satz \u201eSolange man nicht ein Grau gemalt hat, ist man kein Maler\u201c auf die Idee brachte, dieses Konditional auf die Philosophie auszudehnen. Durch allen rhetorischen Bombast hindurch l\u00e4sst sich bei Sloterdijk eine kulturhistorische Makroperspektive ausmachen. Bis zum neunzehnten Jahrhundert hatte demnach das strahlende Wei\u00df eine Sonderstellung, ein letztes Refugium der uralten Lichtmetaphysik. Dann habe auch im Bereich der Farben die gro\u00dfe Enthierarchisierung und S\u00e4kularisierung eingesetzt. Statt einer liturgisch-allegorisch festgelegten Farbrangfolge herrschten nun die \u201eUnited Colors of Everything\u201c, eine polychrome Idylle der totalen Toleranz. Wobei nicht der Regenbogen f\u00fcr Sloterdijk das treffende Symbol ist, sondern ein Schmutzgrau des Vermengten."
+                },
+                {
+                    "paragraphNo": 12,
+                    "text": "Page | 3"
+                }
+            ]
+        },
+        {
+            "pageNo": 4,
+            "noParagraphsInPage": 5,
+            "paragraphs": [
+                {
+                    "paragraphNo": 1,
+                    "text": "Header"
+                },
+                {
+                    "paragraphNo": 2,
+                    "text": "\ufffd C Eine \u201egraue Ethik\u201c habe denn auch diese einst von der Kunst mit angef\u00fchrte Freiheitsbewegung begleitet. Dazu eine erwartbare Spitze: Angela Merkel, \u201ezugleich lau und machtbesessen\u201c, gilt Sloterdijk als vorl\u00e4ufiger Gipfelpunkt der sich um alle Entscheidungen dr\u00fcckenden Bewegung zur Mitte hin, die vermutlich in einer graugr\u00fcnen \u201e\u00f6kob\u00fcrokratischen Verordnungspolitik\u201c enden werde: \u201eDreckfarbigkeit bildet das unumg\u00e4ngliche Resultat der postmodernen Mixophilie.\u201c Das Grau w\u00e4re so \u201edie farblose Allfarbe der entfremdeten Freiheit\u201c."
+                },
+                {
+                    "paragraphNo": 3,
+                    "text": "\ufffd D Aber diese wenig originelle Verfallserz\u00e4hlung, der moderne Staat als \u201eder Gro\u00dfe Graue\u201c, der \u201edie \u201aabsolute\u2018 Monarchie an Ausdehnung seiner Zust\u00e4ndigkeiten und Durchdringungstiefe seiner Ma\u00dfnahmen um ein Vielfaches \u00fcbertrifft\u201c, ist nur das eine. Sloterdijk scheint es mit Goethes Farbenlehre zu halten, in der er \u201ezweierlei Grau\u201c unterschieden sieht: neben dem \u201etr\u00fcben\u201c Farbmischgrau ein Reingrau, also durch wei\u00dfes Licht abget\u00f6ntes Schwarz. Und so wird das \u201eGrau-in-Grau\u201c der Philosophen oder das der K\u00fcnstler, \u201edas dich ber\u00fchrt\u201c, hier keineswegs diskreditiert. Im Gegenteil: Grau in Reinform gilt f\u00fcr Sloterdijk als Farbe des Denkens. In den Kapiteln, die assoziativ Motivgeschichte und Metaphorologie \u00fcberkreuzen, ist das Buch am st\u00e4rksten."
+                },
+                {
+                    "paragraphNo": 4,
+                    "text": "\ufffd E Sch\u00f6n liest sich, wie der Autor literarische Grau-Figurationen aufst\u00f6bert. Zu ihnen geh\u00f6rt nat\u00fcrlich das Husum-Gedicht \u201eDie Stadt\u201c von Theodor Storm (\u201eAm grauen Strand, am grauen Meer\u201c), aber fast erstaunlicherweise nicht Herbert Gr\u00f6nemeyers Coverversion als \u201eBochum\u201c-Song (\u201evor Arbeit ganz grau\u201c). Grandios sind die religionsgeschichtlichen \u00dcberlegungen zum \u00dcbergang vom Manich\u00e4ismus zum Christentum, womit der Punkt aufgesp\u00fcrt ist, an dem das Dritte zwischen Licht und Dunkel die B\u00fchne betritt, Grau in seiner welthaltigsten Manifestation. Weniger \u201ezynisch\u201c als platt wirkt indes die Engf\u00fchrung von \u201eGrau und Frau\u201c, Geraune \u00fcber Altweibergraues bei Goethe, Schnitzler und Musil, zumal das Kapitel abgebrochen wird mit der Vermutung, \u201ewenn man keine Frau ist, kann man so etwas heute nicht mehr schreiben\u201c."
+                },
+                {
+                    "paragraphNo": 5,
+                    "text": "Page | 4"
+                }
+            ]
+        }
+    ]
+}

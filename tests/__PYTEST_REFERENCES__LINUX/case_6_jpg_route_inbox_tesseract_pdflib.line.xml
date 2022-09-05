@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created by the PDFlib Text and Image Extraction Toolkit TET (www.pdflib.com) -->
+<TET xmlns="http://www.pdflib.com/XML/TET5/TET-5.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.pdflib.com/XML/TET5/TET-5.0
+ http://www.pdflib.com/XML/TET5/TET-5.0.xsd"
+ version="5.2">
+<Creation platform="Linux-x64" tetVersion="5.3" date="2022-09-05T13:42:26+02:00" />
+<Document filename="data/inbox_dev_accepted/case_6_jpg_route_inbox_tesseract_pdflib.pdf" pageCount="1" filesize="381212" linearized="false" pdfVersion="1.5">
+<DocInfo>
+<Producer>PyPDF2</Producer>
+</DocInfo>
+<Options>tetml={filename={data/inbox_dev_accepted/case_6_jpg_route_inbox_tesseract_pdflib.line.xml}} engines={noannotation noimage text notextcolor novector}</Options>
+<Pages>
+<Page number="1" width="595.44" height="841.92">
+<Options>granularity=line</Options>
+<Content granularity="line" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="71.04" lly="759.64" urx="146.80" ury="768.64">
+  <Line llx="71.04" lly="759.64" urx="146.80" ury="768.64">
+   <Text>Start Document...</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="138.96" lly="692.20" urx="284.19" ury="702.20">
+  <Line llx="138.96" lly="692.20" urx="284.19" ury="702.20">
+   <Text>Konnexions Public License (KX-PL)</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="71.52" lly="647.08" urx="502.94" ury="678.88">
+  <Line llx="148.08" lly="669.88" urx="265.68" ury="678.88">
+   <Text>Version 2020.05, May 2020</Text>
+  </Line>
+  <Line llx="71.52" lly="647.08" urx="502.94" ury="657.08">
+   <Text>https://github.com/KonnexionsGmbH/shared_resources/blob/master/License/KX-PL-2020.05.pdf</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="78.24" lly="602.20" urx="448.50" ury="612.20">
+  <Line llx="78.24" lly="602.20" urx="448.50" ury="612.20">
+   <Text>This license governs use of the accompanying software. If you use the software, you</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="78.72" lly="579.64" urx="414.70" ury="588.64">
+  <Line llx="78.72" lly="579.64" urx="414.70" ury="588.64">
+   <Text>accept this license. If you do not accept the license, do not use the software.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="79.20" lly="534.76" urx="135.86" ury="543.76">
+  <Line llx="79.20" lly="534.76" urx="135.86" ury="543.76">
+   <Text>1. Definitions.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="85.68" lly="467.32" urx="429.74" ury="498.64">
+  <Line llx="85.68" lly="489.64" urx="429.74" ury="498.64">
+   <Text>The terms &quot;reproduce&quot;, &quot;reproduction&quot;, &quot;derivative works&quot;, and &quot;distribution&quot;</Text>
+  </Line>
+  <Line llx="86.40" lly="467.32" urx="338.11" ury="477.32">
+   <Text>have the same meaning here as under U.S. copyright law.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="85.92" lly="422.44" urx="417.60" ury="431.44">
+  <Line llx="85.92" lly="422.44" urx="166.08" ury="431.44">
+   <Text>A &quot;contribution&quot; is</Text>
+  </Line>
+  <Line llx="171.12" lly="422.44" urx="417.60" ury="431.44">
+   <Text>the original software, or any additions or changes to the</Text>
+  </Line>
+ </Box>
+ <Box llx="86.16" lly="399.88" urx="123.10" ury="408.88">
+  <Line llx="86.16" lly="399.88" urx="123.10" ury="408.88">
+   <Text>software.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="85.92" lly="354.52" urx="161.60" ury="363.52">
+  <Line llx="85.92" lly="354.52" urx="161.60" ury="363.52">
+   <Text>A &quot;contributor&quot; is</Text>
+  </Line>
+ </Box>
+ <Box llx="166.80" lly="354.52" urx="402.48" ury="363.52">
+  <Line llx="166.80" lly="354.52" urx="402.48" ury="363.52">
+   <Text>any person that distributes its contribution under this</Text>
+  </Line>
+ </Box>
+ <Box llx="86.40" lly="332.44" urx="114.77" ury="341.44">
+  <Line llx="86.40" lly="332.44" urx="114.77" ury="341.44">
+   <Text>license.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="86.40" lly="287.08" urx="421.50" ury="296.08">
+  <Line llx="86.40" lly="287.08" urx="191.64" ury="296.08">
+   <Text>&quot;Licensed patents&quot; are a</Text>
+  </Line>
+  <Line llx="197.28" lly="287.08" urx="421.50" ury="296.08">
+   <Text>contributor&apos;s patent claims that read directly on its</Text>
+  </Line>
+ </Box>
+ <Box llx="86.16" lly="265.00" urx="139.20" ury="274.00">
+  <Line llx="86.16" lly="265.00" urx="139.20" ury="274.00">
+   <Text>contribution.</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="78.72" lly="219.88" urx="152.06" ury="228.88">
+  <Line llx="78.72" lly="219.88" urx="152.06" ury="228.88">
+   <Text>2. Grant of Rights</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="86.40" lly="175.00" urx="94.32" ury="185.00">
+  <Line llx="86.40" lly="175.00" urx="94.32" ury="185.00">
+   <Text>(a)</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="98.64" lly="129.88" urx="426.87" ury="185.00">
+  <Line llx="103.20" lly="175.00" urx="426.87" ury="185.00">
+   <Text>Copyright Grant- Subject to the terms of this license, including the license</Text>
+  </Line>
+  <Line llx="98.64" lly="152.20" urx="423.94" ury="162.20">
+   <Text>conditions and limitations in section 3, each contributor grants you a nonexclusive,</Text>
+  </Line>
+  <Line llx="144.00" lly="129.88" urx="398.04" ury="138.88">
+   <Text>worldwide, royalty-free copyright license to reproduce its</Text>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="98.64" lly="84.76" urx="417.10" ury="116.08">
+  <Line llx="98.64" lly="107.08" urx="417.10" ury="116.08">
+   <Text>contribution, prepare derivative works of its contribution, and distribute</Text>
+  </Line>
+  <Line llx="98.88" lly="84.76" urx="346.32" ury="93.76">
+   <Text>its contribution or any derivative works that you create.</Text>
+  </Line>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Resources>
+<Fonts>
+ <Font id="F0" name="GlyphLessFont" type="TrueType (CID)" embedded="true" ascender="720.00" capheight="1000.00" italicangle="0.00" descender="0.00" weight="400.00" xheight="475.00"/>
+</Fonts>
+</Resources>
+</Pages>
+</Document>
+</TET>

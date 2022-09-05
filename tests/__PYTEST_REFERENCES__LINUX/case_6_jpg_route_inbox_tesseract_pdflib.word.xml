@@ -1,0 +1,1004 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created by the PDFlib Text and Image Extraction Toolkit TET (www.pdflib.com) -->
+<TET xmlns="http://www.pdflib.com/XML/TET5/TET-5.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.pdflib.com/XML/TET5/TET-5.0
+ http://www.pdflib.com/XML/TET5/TET-5.0.xsd"
+ version="5.2">
+<Creation platform="Linux-x64" tetVersion="5.3" date="2022-09-05T13:42:26+02:00" />
+<Document filename="data/inbox_dev_accepted/case_6_jpg_route_inbox_tesseract_pdflib.pdf" pageCount="1" filesize="381212" linearized="false" pdfVersion="1.5">
+<DocInfo>
+<Producer>PyPDF2</Producer>
+</DocInfo>
+<Options>tetml={filename={data/inbox_dev_accepted/case_6_jpg_route_inbox_tesseract_pdflib.word.xml}} engines={noannotation noimage text notextcolor novector}</Options>
+<Pages>
+<Page number="1" width="595.44" height="841.92">
+<Options>granularity=word tetml={elements={line}}</Options>
+<Content granularity="word" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="71.04" lly="759.64" urx="146.80" ury="768.64">
+  <Line llx="71.04" lly="759.64" urx="146.80" ury="768.64">
+   <Word>
+    <Text>Start</Text>
+    <Box llx="71.04" lly="759.64" urx="88.44" ury="768.64"/>
+   </Word>
+   <Word>
+    <Text>Document</Text>
+    <Box llx="95.76" lly="759.64" urx="132.88" ury="768.64"/>
+   </Word>
+   <Word>
+    <Text>...</Text>
+    <Box llx="132.88" lly="759.64" urx="146.80" ury="768.64"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="138.96" lly="692.20" urx="284.19" ury="702.20">
+  <Line llx="138.96" lly="692.20" urx="284.19" ury="702.20">
+   <Word>
+    <Text>Konnexions</Text>
+    <Box llx="138.96" lly="692.20" urx="184.78" ury="702.20"/>
+   </Word>
+   <Word>
+    <Text>Public</Text>
+    <Box llx="192.96" lly="692.20" urx="214.97" ury="702.20"/>
+   </Word>
+   <Word>
+    <Text>License</Text>
+    <Box llx="222.48" lly="692.20" urx="249.99" ury="702.20"/>
+   </Word>
+   <Word>
+    <Text>(</Text>
+    <Box llx="257.52" lly="692.20" urx="261.33" ury="702.20"/>
+   </Word>
+   <Word>
+    <Text>KX-PL</Text>
+    <Box llx="261.33" lly="692.20" urx="280.38" ury="702.20"/>
+   </Word>
+   <Word>
+    <Text>)</Text>
+    <Box llx="280.38" lly="692.20" urx="284.19" ury="702.20"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="71.52" lly="647.08" urx="502.94" ury="678.88">
+  <Line llx="148.08" lly="669.88" urx="265.68" ury="678.88">
+   <Word>
+    <Text>Version</Text>
+    <Box llx="148.08" lly="669.88" urx="177.06" ury="678.88"/>
+   </Word>
+   <Word>
+    <Text>2020.05</Text>
+    <Box llx="184.80" lly="669.88" urx="214.11" ury="678.88"/>
+   </Word>
+   <Word>
+    <Text>,</Text>
+    <Box llx="214.11" lly="669.88" urx="218.29" ury="678.88"/>
+   </Word>
+   <Word>
+    <Text>May</Text>
+    <Box llx="226.80" lly="669.88" urx="240.66" ury="678.88"/>
+   </Word>
+   <Word>
+    <Text>2020</Text>
+    <Box llx="248.40" lly="669.88" urx="265.68" ury="678.88"/>
+   </Word>
+  </Line>
+  <Line llx="71.52" lly="647.08" urx="502.94" ury="657.08">
+   <Word>
+    <Text>https</Text>
+    <Box llx="71.52" lly="647.08" urx="96.03" ury="657.08"/>
+   </Word>
+   <Word>
+    <Text>://</Text>
+    <Box llx="96.03" lly="647.08" urx="110.74" ury="657.08"/>
+   </Word>
+   <Word>
+    <Text>github</Text>
+    <Box llx="110.74" lly="647.08" urx="140.16" ury="657.08"/>
+   </Word>
+   <Word>
+    <Text>.</Text>
+    <Box llx="140.16" lly="647.08" urx="145.06" ury="657.08"/>
+   </Word>
+   <Word>
+    <Text>com</Text>
+    <Box llx="145.06" lly="647.08" urx="159.77" ury="657.08"/>
+   </Word>
+   <Word>
+    <Text>/</Text>
+    <Box llx="159.77" lly="647.08" urx="164.67" ury="657.08"/>
+   </Word>
+   <Word>
+    <Text>KonnexionsGmbH</Text>
+    <Box llx="164.67" lly="647.08" urx="233.30" ury="657.08"/>
+   </Word>
+   <Word>
+    <Text>/</Text>
+    <Box llx="233.30" lly="647.08" urx="238.21" ury="657.08"/>
+   </Word>
+   <Word>
+    <Text>shared</Text>
+    <Box llx="238.21" lly="647.08" urx="267.62" ury="657.08"/>
+   </Word>
+   <Word>
+    <Text>_</Text>
+    <Box llx="267.62" lly="647.08" urx="272.52" ury="657.08"/>
+   </Word>
+   <Word>
+    <Text>resources</Text>
+    <Box llx="272.52" lly="647.08" urx="316.64" ury="657.08"/>
+   </Word>
+   <Word>
+    <Text>/</Text>
+    <Box llx="316.64" lly="647.08" urx="321.55" ury="657.08"/>
+   </Word>
+   <Word>
+    <Text>blob</Text>
+    <Box llx="321.55" lly="647.08" urx="341.16" ury="657.08"/>
+   </Word>
+   <Word>
+    <Text>/</Text>
+    <Box llx="341.16" lly="647.08" urx="346.06" ury="657.08"/>
+   </Word>
+   <Word>
+    <Text>master</Text>
+    <Box llx="346.06" lly="647.08" urx="375.47" ury="657.08"/>
+   </Word>
+   <Word>
+    <Text>/</Text>
+    <Box llx="375.47" lly="647.08" urx="380.38" ury="657.08"/>
+   </Word>
+   <Word>
+    <Text>License</Text>
+    <Box llx="380.38" lly="647.08" urx="414.69" ury="657.08"/>
+   </Word>
+   <Word>
+    <Text>/</Text>
+    <Box llx="414.69" lly="647.08" urx="419.60" ury="657.08"/>
+   </Word>
+   <Word>
+    <Text>KX-PL-2020.05</Text>
+    <Box llx="419.60" lly="647.08" urx="483.33" ury="657.08"/>
+   </Word>
+   <Word>
+    <Text>.</Text>
+    <Box llx="483.33" lly="647.08" urx="488.23" ury="657.08"/>
+   </Word>
+   <Word>
+    <Text>pdf</Text>
+    <Box llx="488.23" lly="647.08" urx="502.94" ury="657.08"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="78.24" lly="602.20" urx="448.50" ury="612.20">
+  <Line llx="78.24" lly="602.20" urx="448.50" ury="612.20">
+   <Word>
+    <Text>This</Text>
+    <Box llx="78.24" lly="602.20" urx="92.26" ury="612.20"/>
+   </Word>
+   <Word>
+    <Text>license</Text>
+    <Box llx="99.60" lly="602.20" urx="125.43" ury="612.20"/>
+   </Word>
+   <Word>
+    <Text>governs</Text>
+    <Box llx="132.24" lly="602.20" urx="162.48" ury="612.20"/>
+   </Word>
+   <Word>
+    <Text>use</Text>
+    <Box llx="170.64" lly="602.20" urx="181.26" ury="612.20"/>
+   </Word>
+   <Word>
+    <Text>of</Text>
+    <Box llx="188.16" lly="602.20" urx="194.08" ury="612.20"/>
+   </Word>
+   <Word>
+    <Text>the</Text>
+    <Box llx="199.68" lly="602.20" urx="210.30" ury="612.20"/>
+   </Word>
+   <Word>
+    <Text>accompanying</Text>
+    <Box llx="217.44" lly="602.20" urx="276.15" ury="612.20"/>
+   </Word>
+   <Word>
+    <Text>software</Text>
+    <Box llx="284.40" lly="602.20" urx="317.04" ury="612.20"/>
+   </Word>
+   <Word>
+    <Text>.</Text>
+    <Box llx="317.04" lly="602.20" urx="321.12" ury="612.20"/>
+   </Word>
+   <Word>
+    <Text>If</Text>
+    <Box llx="329.52" lly="602.20" urx="333.20" ury="612.20"/>
+   </Word>
+   <Word>
+    <Text>you</Text>
+    <Box llx="337.44" lly="602.20" urx="349.14" ury="612.20"/>
+   </Word>
+   <Word>
+    <Text>use</Text>
+    <Box llx="357.12" lly="602.20" urx="367.92" ury="612.20"/>
+   </Word>
+   <Word>
+    <Text>the</Text>
+    <Box llx="374.64" lly="602.20" urx="385.26" ury="612.20"/>
+   </Word>
+   <Word>
+    <Text>software</Text>
+    <Box llx="392.16" lly="602.20" urx="424.99" ury="612.20"/>
+   </Word>
+   <Word>
+    <Text>,</Text>
+    <Box llx="424.99" lly="602.20" urx="429.10" ury="612.20"/>
+   </Word>
+   <Word>
+    <Text>you</Text>
+    <Box llx="436.80" lly="602.20" urx="448.50" ury="612.20"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="78.72" lly="579.64" urx="414.70" ury="588.64">
+  <Line llx="78.72" lly="579.64" urx="414.70" ury="588.64">
+   <Word>
+    <Text>accept</Text>
+    <Box llx="78.72" lly="579.64" urx="103.41" ury="588.64"/>
+   </Word>
+   <Word>
+    <Text>this</Text>
+    <Box llx="110.64" lly="579.64" urx="123.12" ury="588.64"/>
+   </Word>
+   <Word>
+    <Text>license</Text>
+    <Box llx="129.84" lly="579.64" urx="154.67" ury="588.64"/>
+   </Word>
+   <Word>
+    <Text>.</Text>
+    <Box llx="154.67" lly="579.64" urx="158.21" ury="588.64"/>
+   </Word>
+   <Word>
+    <Text>If</Text>
+    <Box llx="166.08" lly="579.64" urx="169.60" ury="588.64"/>
+   </Word>
+   <Word>
+    <Text>you</Text>
+    <Box llx="174.00" lly="579.64" urx="185.70" ury="588.64"/>
+   </Word>
+   <Word>
+    <Text>do</Text>
+    <Box llx="193.20" lly="579.64" urx="200.24" ury="588.64"/>
+   </Word>
+   <Word>
+    <Text>not</Text>
+    <Box llx="207.60" lly="579.64" urx="218.22" ury="588.64"/>
+   </Word>
+   <Word>
+    <Text>accept</Text>
+    <Box llx="225.12" lly="579.64" urx="249.60" ury="588.64"/>
+   </Word>
+   <Word>
+    <Text>the</Text>
+    <Box llx="256.80" lly="579.64" urx="267.42" ury="588.64"/>
+   </Word>
+   <Word>
+    <Text>license</Text>
+    <Box llx="274.80" lly="579.64" urx="299.63" ury="588.64"/>
+   </Word>
+   <Word>
+    <Text>,</Text>
+    <Box llx="299.63" lly="579.64" urx="303.17" ury="588.64"/>
+   </Word>
+   <Word>
+    <Text>do</Text>
+    <Box llx="310.32" lly="579.64" urx="317.36" ury="588.64"/>
+   </Word>
+   <Word>
+    <Text>not</Text>
+    <Box llx="324.72" lly="579.64" urx="335.34" ury="588.64"/>
+   </Word>
+   <Word>
+    <Text>use</Text>
+    <Box llx="342.48" lly="579.64" urx="353.28" ury="588.64"/>
+   </Word>
+   <Word>
+    <Text>the</Text>
+    <Box llx="360.00" lly="579.64" urx="370.80" ury="588.64"/>
+   </Word>
+   <Word>
+    <Text>software</Text>
+    <Box llx="377.76" lly="579.64" urx="410.59" ury="588.64"/>
+   </Word>
+   <Word>
+    <Text>.</Text>
+    <Box llx="410.59" lly="579.64" urx="414.70" ury="588.64"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="79.20" lly="534.76" urx="135.86" ury="543.76">
+  <Line llx="79.20" lly="534.76" urx="135.86" ury="543.76">
+   <Word>
+    <Text>1</Text>
+    <Box llx="79.20" lly="534.76" urx="81.44" ury="543.76"/>
+   </Word>
+   <Word>
+    <Text>.</Text>
+    <Box llx="81.44" lly="534.76" urx="83.68" ury="543.76"/>
+   </Word>
+   <Word>
+    <Text>Definitions</Text>
+    <Box llx="90.00" lly="534.76" urx="132.04" ury="543.76"/>
+   </Word>
+   <Word>
+    <Text>.</Text>
+    <Box llx="132.04" lly="534.76" urx="135.86" ury="543.76"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="85.68" lly="467.32" urx="429.74" ury="498.64">
+  <Line llx="85.68" lly="489.64" urx="429.74" ury="498.64">
+   <Word>
+    <Text>The</Text>
+    <Box llx="85.68" lly="489.64" urx="97.92" ury="498.64"/>
+   </Word>
+   <Word>
+    <Text>terms</Text>
+    <Box llx="105.12" lly="489.64" urx="126.32" ury="498.64"/>
+   </Word>
+   <Word>
+    <Text>&quot;</Text>
+    <Box llx="134.16" lly="489.64" urx="138.50" ury="498.64"/>
+   </Word>
+   <Word>
+    <Text>reproduce</Text>
+    <Box llx="138.50" lly="489.64" urx="177.54" ury="498.64"/>
+   </Word>
+   <Word>
+    <Text>&quot;,</Text>
+    <Box llx="177.54" lly="489.64" urx="186.22" ury="498.64"/>
+   </Word>
+   <Word>
+    <Text>&quot;</Text>
+    <Box llx="194.64" lly="489.64" urx="198.93" ury="498.64"/>
+   </Word>
+   <Word>
+    <Text>reproduction</Text>
+    <Box llx="198.93" lly="489.64" urx="250.41" ury="498.64"/>
+   </Word>
+   <Word>
+    <Text>&quot;,</Text>
+    <Box llx="250.41" lly="489.64" urx="258.99" ury="498.64"/>
+   </Word>
+   <Word>
+    <Text>&quot;</Text>
+    <Box llx="267.36" lly="489.64" urx="271.34" ury="498.64"/>
+   </Word>
+   <Word>
+    <Text>derivative</Text>
+    <Box llx="271.34" lly="489.64" urx="311.14" ury="498.64"/>
+   </Word>
+   <Word>
+    <Text>works</Text>
+    <Box llx="318.24" lly="489.64" urx="338.79" ury="498.64"/>
+   </Word>
+   <Word>
+    <Text>&quot;,</Text>
+    <Box llx="338.79" lly="489.64" urx="347.01" ury="498.64"/>
+   </Word>
+   <Word>
+    <Text>and</Text>
+    <Box llx="354.96" lly="489.64" urx="366.66" ury="498.64"/>
+   </Word>
+   <Word>
+    <Text>&quot;</Text>
+    <Box llx="374.64" lly="489.64" urx="378.58" ury="498.64"/>
+   </Word>
+   <Word>
+    <Text>distribution</Text>
+    <Box llx="378.58" lly="489.64" urx="425.81" ury="498.64"/>
+   </Word>
+   <Word>
+    <Text>&quot;</Text>
+    <Box llx="425.81" lly="489.64" urx="429.74" ury="498.64"/>
+   </Word>
+  </Line>
+  <Line llx="86.40" lly="467.32" urx="338.11" ury="477.32">
+   <Word>
+    <Text>have</Text>
+    <Box llx="86.40" lly="467.32" urx="102.72" ury="477.32"/>
+   </Word>
+   <Word>
+    <Text>the</Text>
+    <Box llx="109.92" lly="467.32" urx="120.72" ury="477.32"/>
+   </Word>
+   <Word>
+    <Text>same</Text>
+    <Box llx="127.68" lly="467.32" urx="145.92" ury="477.32"/>
+   </Word>
+   <Word>
+    <Text>meaning</Text>
+    <Box llx="154.08" lly="467.32" urx="187.05" ury="477.32"/>
+   </Word>
+   <Word>
+    <Text>here</Text>
+    <Box llx="195.36" lly="467.32" urx="210.91" ury="477.32"/>
+   </Word>
+   <Word>
+    <Text>as</Text>
+    <Box llx="218.40" lly="467.32" urx="224.16" ury="477.32"/>
+   </Word>
+   <Word>
+    <Text>under</Text>
+    <Box llx="230.64" lly="467.32" urx="252.04" ury="477.32"/>
+   </Word>
+   <Word>
+    <Text>U</Text>
+    <Box llx="259.92" lly="467.32" urx="263.09" ury="477.32"/>
+   </Word>
+   <Word>
+    <Text>.</Text>
+    <Box llx="263.09" lly="467.32" urx="266.26" ury="477.32"/>
+   </Word>
+   <Word>
+    <Text>S</Text>
+    <Box llx="266.26" lly="467.32" urx="269.42" ury="477.32"/>
+   </Word>
+   <Word>
+    <Text>.</Text>
+    <Box llx="269.42" lly="467.32" urx="272.59" ury="477.32"/>
+   </Word>
+   <Word>
+    <Text>copyright</Text>
+    <Box llx="279.60" lly="467.32" urx="316.75" ury="477.32"/>
+   </Word>
+   <Word>
+    <Text>law</Text>
+    <Box llx="324.48" lly="467.32" urx="334.70" ury="477.32"/>
+   </Word>
+   <Word>
+    <Text>.</Text>
+    <Box llx="334.70" lly="467.32" urx="338.11" ury="477.32"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="85.92" lly="422.44" urx="417.60" ury="431.44">
+  <Line llx="85.92" lly="422.44" urx="166.08" ury="431.44">
+   <Word>
+    <Text>A</Text>
+    <Box llx="85.92" lly="422.44" urx="88.92" ury="431.44"/>
+   </Word>
+   <Word>
+    <Text>&quot;</Text>
+    <Box llx="95.28" lly="422.44" urx="99.47" ury="431.44"/>
+   </Word>
+   <Word>
+    <Text>contribution</Text>
+    <Box llx="99.47" lly="422.44" urx="149.78" ury="431.44"/>
+   </Word>
+   <Word>
+    <Text>&quot;</Text>
+    <Box llx="149.78" lly="422.44" urx="153.97" ury="431.44"/>
+   </Word>
+   <Word>
+    <Text>is</Text>
+    <Box llx="162.24" lly="422.44" urx="166.08" ury="431.44"/>
+   </Word>
+  </Line>
+  <Line llx="171.12" lly="422.44" urx="417.60" ury="431.44">
+   <Word>
+    <Text>the</Text>
+    <Box llx="171.12" lly="422.44" urx="181.74" ury="431.44"/>
+   </Word>
+   <Word>
+    <Text>original</Text>
+    <Box llx="188.64" lly="422.44" urx="217.23" ury="431.44"/>
+   </Word>
+   <Word>
+    <Text>software</Text>
+    <Box llx="224.64" lly="422.44" urx="257.47" ury="431.44"/>
+   </Word>
+   <Word>
+    <Text>,</Text>
+    <Box llx="257.47" lly="422.44" urx="261.58" ury="431.44"/>
+   </Word>
+   <Word>
+    <Text>or</Text>
+    <Box llx="269.52" lly="422.44" urx="275.44" ury="431.44"/>
+   </Word>
+   <Word>
+    <Text>any</Text>
+    <Box llx="281.76" lly="422.44" urx="293.10" ury="431.44"/>
+   </Word>
+   <Word>
+    <Text>additions</Text>
+    <Box llx="300.24" lly="422.44" urx="336.53" ury="431.44"/>
+   </Word>
+   <Word>
+    <Text>or</Text>
+    <Box llx="343.92" lly="422.44" urx="350.00" ury="431.44"/>
+   </Word>
+   <Word>
+    <Text>changes</Text>
+    <Box llx="356.16" lly="422.44" urx="387.24" ury="431.44"/>
+   </Word>
+   <Word>
+    <Text>to</Text>
+    <Box llx="394.80" lly="422.44" urx="400.56" ury="431.44"/>
+   </Word>
+   <Word>
+    <Text>the</Text>
+    <Box llx="406.80" lly="422.44" urx="417.60" ury="431.44"/>
+   </Word>
+  </Line>
+ </Box>
+ <Box llx="86.16" lly="399.88" urx="123.10" ury="408.88">
+  <Line llx="86.16" lly="399.88" urx="123.10" ury="408.88">
+   <Word>
+    <Text>software</Text>
+    <Box llx="86.16" lly="399.88" urx="118.99" ury="408.88"/>
+   </Word>
+   <Word>
+    <Text>.</Text>
+    <Box llx="118.99" lly="399.88" urx="123.10" ury="408.88"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="85.92" lly="354.52" urx="161.60" ury="363.52">
+  <Line llx="85.92" lly="354.52" urx="161.60" ury="363.52">
+   <Word>
+    <Text>A</Text>
+    <Box llx="85.92" lly="354.52" urx="88.92" ury="363.52"/>
+   </Word>
+   <Word>
+    <Text>&quot;</Text>
+    <Box llx="95.28" lly="354.52" urx="99.46" ury="363.52"/>
+   </Word>
+   <Word>
+    <Text>contributor</Text>
+    <Box llx="99.46" lly="354.52" urx="145.47" ury="363.52"/>
+   </Word>
+   <Word>
+    <Text>&quot;</Text>
+    <Box llx="145.47" lly="354.52" urx="149.66" ury="363.52"/>
+   </Word>
+   <Word>
+    <Text>is</Text>
+    <Box llx="157.92" lly="354.52" urx="161.60" ury="363.52"/>
+   </Word>
+  </Line>
+ </Box>
+ <Box llx="166.80" lly="354.52" urx="402.48" ury="363.52">
+  <Line llx="166.80" lly="354.52" urx="402.48" ury="363.52">
+   <Word>
+    <Text>any</Text>
+    <Box llx="166.80" lly="354.52" urx="178.32" ury="363.52"/>
+   </Word>
+   <Word>
+    <Text>person</Text>
+    <Box llx="185.76" lly="354.52" urx="211.06" ury="363.52"/>
+   </Word>
+   <Word>
+    <Text>that</Text>
+    <Box llx="218.64" lly="354.52" urx="232.85" ury="363.52"/>
+   </Word>
+   <Word>
+    <Text>distributes</Text>
+    <Box llx="239.76" lly="354.52" urx="282.66" ury="363.52"/>
+   </Word>
+   <Word>
+    <Text>its</Text>
+    <Box llx="290.16" lly="354.52" urx="297.18" ury="363.52"/>
+   </Word>
+   <Word>
+    <Text>contribution</Text>
+    <Box llx="302.88" lly="354.52" urx="353.17" ury="363.52"/>
+   </Word>
+   <Word>
+    <Text>under</Text>
+    <Box llx="361.20" lly="354.52" urx="382.60" ury="363.52"/>
+   </Word>
+   <Word>
+    <Text>this</Text>
+    <Box llx="390.00" lly="354.52" urx="402.48" ury="363.52"/>
+   </Word>
+  </Line>
+ </Box>
+ <Box llx="86.40" lly="332.44" urx="114.77" ury="341.44">
+  <Line llx="86.40" lly="332.44" urx="114.77" ury="341.44">
+   <Word>
+    <Text>license</Text>
+    <Box llx="86.40" lly="332.44" urx="111.23" ury="341.44"/>
+   </Word>
+   <Word>
+    <Text>.</Text>
+    <Box llx="111.23" lly="332.44" urx="114.77" ury="341.44"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="86.16" lly="265.00" urx="421.50" ury="296.08">
+  <Line llx="86.40" lly="287.08" urx="421.50" ury="296.08">
+   <Word>
+    <Text>&quot;</Text>
+    <Box llx="86.40" lly="287.08" urx="90.58" ury="296.08"/>
+   </Word>
+   <Word>
+    <Text>Licensed</Text>
+    <Box llx="90.58" lly="287.08" urx="123.98" ury="296.08"/>
+   </Word>
+   <Word>
+    <Text>patents</Text>
+    <Box llx="132.00" lly="287.08" urx="160.56" ury="296.08"/>
+   </Word>
+   <Word>
+    <Text>&quot;</Text>
+    <Box llx="160.56" lly="287.08" urx="164.64" ury="296.08"/>
+   </Word>
+   <Word>
+    <Text>are</Text>
+    <Box llx="172.56" lly="287.08" urx="182.82" ury="296.08"/>
+   </Word>
+   <Word>
+    <Text>a</Text>
+    <Box llx="189.60" lly="287.08" urx="191.64" ury="296.08"/>
+   </Word>
+   <Word>
+    <Text>contributor</Text>
+    <Box llx="197.28" lly="287.08" urx="242.16" ury="296.08"/>
+   </Word>
+   <Word>
+    <Text>&apos;</Text>
+    <Box llx="242.16" lly="287.08" urx="246.24" ury="296.08"/>
+   </Word>
+   <Word>
+    <Text>s</Text>
+    <Box llx="246.24" lly="287.08" urx="250.32" ury="296.08"/>
+   </Word>
+   <Word>
+    <Text>patent</Text>
+    <Box llx="258.00" lly="287.08" urx="282.48" ury="296.08"/>
+   </Word>
+   <Word>
+    <Text>claims</Text>
+    <Box llx="289.92" lly="287.08" urx="313.17" ury="296.08"/>
+   </Word>
+   <Word>
+    <Text>that</Text>
+    <Box llx="320.40" lly="287.08" urx="334.61" ury="296.08"/>
+   </Word>
+   <Word>
+    <Text>read</Text>
+    <Box llx="341.76" lly="287.08" urx="356.93" ury="296.08"/>
+   </Word>
+   <Word>
+    <Text>directly</Text>
+    <Box llx="364.32" lly="287.08" urx="393.33" ury="296.08"/>
+   </Word>
+   <Word>
+    <Text>on</Text>
+    <Box llx="400.08" lly="287.08" urx="407.12" ury="296.08"/>
+   </Word>
+   <Word>
+    <Text>its</Text>
+    <Box llx="414.48" lly="287.08" urx="421.50" ury="296.08"/>
+   </Word>
+  </Line>
+  <Line llx="86.16" lly="265.00" urx="139.20" ury="274.00">
+   <Word>
+    <Text>contribution</Text>
+    <Box llx="86.16" lly="265.00" urx="135.12" ury="274.00"/>
+   </Word>
+   <Word>
+    <Text>.</Text>
+    <Box llx="135.12" lly="265.00" urx="139.20" ury="274.00"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="78.72" lly="219.88" urx="152.06" ury="228.88">
+  <Line llx="78.72" lly="219.88" urx="152.06" ury="228.88">
+   <Word>
+    <Text>2</Text>
+    <Box llx="78.72" lly="219.88" urx="81.12" ury="228.88"/>
+   </Word>
+   <Word>
+    <Text>.</Text>
+    <Box llx="81.12" lly="219.88" urx="83.52" ury="228.88"/>
+   </Word>
+   <Word>
+    <Text>Grant</Text>
+    <Box llx="89.52" lly="219.88" urx="110.12" ury="228.88"/>
+   </Word>
+   <Word>
+    <Text>of</Text>
+    <Box llx="117.60" lly="219.88" urx="123.52" ury="228.88"/>
+   </Word>
+   <Word>
+    <Text>Rights</Text>
+    <Box llx="129.84" lly="219.88" urx="152.06" ury="228.88"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="86.40" lly="129.88" urx="426.87" ury="185.00">
+  <Line llx="86.40" lly="175.00" urx="426.87" ury="185.00">
+   <Word>
+    <Text>(</Text>
+    <Box llx="86.40" lly="175.00" urx="89.04" ury="185.00"/>
+   </Word>
+   <Word>
+    <Text>a</Text>
+    <Box llx="89.04" lly="175.00" urx="91.68" ury="185.00"/>
+   </Word>
+   <Word>
+    <Text>)</Text>
+    <Box llx="91.68" lly="175.00" urx="94.32" ury="185.00"/>
+   </Word>
+   <Word>
+    <Text>Copyright</Text>
+    <Box llx="103.20" lly="175.00" urx="141.43" ury="185.00"/>
+   </Word>
+   <Word>
+    <Text>Grant-</Text>
+    <Box llx="149.04" lly="175.00" urx="173.31" ury="185.00"/>
+   </Word>
+   <Word>
+    <Text>Subject</Text>
+    <Box llx="180.24" lly="175.00" urx="208.59" ury="185.00"/>
+   </Word>
+   <Word>
+    <Text>to</Text>
+    <Box llx="215.76" lly="175.00" urx="221.52" ury="185.00"/>
+   </Word>
+   <Word>
+    <Text>the</Text>
+    <Box llx="227.76" lly="175.00" urx="238.38" ury="185.00"/>
+   </Word>
+   <Word>
+    <Text>terms</Text>
+    <Box llx="245.28" lly="175.00" urx="266.28" ury="185.00"/>
+   </Word>
+   <Word>
+    <Text>of</Text>
+    <Box llx="273.84" lly="175.00" urx="279.92" ury="185.00"/>
+   </Word>
+   <Word>
+    <Text>this</Text>
+    <Box llx="285.36" lly="175.00" urx="297.84" ury="185.00"/>
+   </Word>
+   <Word>
+    <Text>license</Text>
+    <Box llx="304.80" lly="175.00" urx="329.44" ury="185.00"/>
+   </Word>
+   <Word>
+    <Text>,</Text>
+    <Box llx="329.44" lly="175.00" urx="332.96" ury="185.00"/>
+   </Word>
+   <Word>
+    <Text>including</Text>
+    <Box llx="340.56" lly="175.00" urx="375.98" ury="185.00"/>
+   </Word>
+   <Word>
+    <Text>the</Text>
+    <Box llx="383.04" lly="175.00" urx="393.84" ury="185.00"/>
+   </Word>
+   <Word>
+    <Text>license</Text>
+    <Box llx="401.04" lly="175.00" urx="426.87" ury="185.00"/>
+   </Word>
+  </Line>
+  <Line llx="98.64" lly="152.20" urx="423.94" ury="162.20">
+   <Word>
+    <Text>conditions</Text>
+    <Box llx="98.64" lly="152.20" urx="140.31" ury="162.20"/>
+   </Word>
+   <Word>
+    <Text>and</Text>
+    <Box llx="147.84" lly="152.20" urx="159.54" ury="162.20"/>
+   </Word>
+   <Word>
+    <Text>limitations</Text>
+    <Box llx="167.28" lly="152.20" urx="209.74" ury="162.20"/>
+   </Word>
+   <Word>
+    <Text>in</Text>
+    <Box llx="217.20" lly="152.20" urx="221.84" ury="162.20"/>
+   </Word>
+   <Word>
+    <Text>section</Text>
+    <Box llx="227.76" lly="152.20" urx="254.85" ury="162.20"/>
+   </Word>
+   <Word>
+    <Text>3</Text>
+    <Box llx="262.32" lly="152.20" urx="264.72" ury="162.20"/>
+   </Word>
+   <Word>
+    <Text>,</Text>
+    <Box llx="264.72" lly="152.20" urx="267.12" ury="162.20"/>
+   </Word>
+   <Word>
+    <Text>each</Text>
+    <Box llx="273.36" lly="152.20" urx="289.30" ury="162.20"/>
+   </Word>
+   <Word>
+    <Text>contributor</Text>
+    <Box llx="296.88" lly="152.20" urx="343.08" ury="162.20"/>
+   </Word>
+   <Word>
+    <Text>grants</Text>
+    <Box llx="350.40" lly="152.20" urx="373.85" ury="162.20"/>
+   </Word>
+   <Word>
+    <Text>you</Text>
+    <Box llx="380.88" lly="152.20" urx="392.58" ury="162.20"/>
+   </Word>
+   <Word>
+    <Text>a</Text>
+    <Box llx="400.08" lly="152.20" urx="402.12" ury="162.20"/>
+   </Word>
+   <Word>
+    <Text>nonexclusive</Text>
+    <Box llx="408.00" lly="152.20" urx="423.94" ury="162.20"/>
+    <Box llx="98.64" lly="129.88" urx="133.00" ury="138.88"/>
+   </Word>
+  </Line>
+  <Line llx="133.00" lly="129.88" urx="398.04" ury="138.88">
+   <Word>
+    <Text>,</Text>
+    <Box llx="133.00" lly="129.88" urx="136.82" ury="138.88"/>
+   </Word>
+   <Word>
+    <Text>worldwide</Text>
+    <Box llx="144.00" lly="129.88" urx="184.26" ury="138.88"/>
+   </Word>
+   <Word>
+    <Text>,</Text>
+    <Box llx="184.26" lly="129.88" urx="188.73" ury="138.88"/>
+   </Word>
+   <Word>
+    <Text>royalty-free</Text>
+    <Box llx="197.28" lly="129.88" urx="244.69" ury="138.88"/>
+   </Word>
+   <Word>
+    <Text>copyright</Text>
+    <Box llx="252.00" lly="129.88" urx="289.37" ury="138.88"/>
+   </Word>
+   <Word>
+    <Text>license</Text>
+    <Box llx="297.12" lly="129.88" urx="322.74" ury="138.88"/>
+   </Word>
+   <Word>
+    <Text>to</Text>
+    <Box llx="329.76" lly="129.88" urx="335.52" ury="138.88"/>
+   </Word>
+   <Word>
+    <Text>reproduce</Text>
+    <Box llx="342.24" lly="129.88" urx="382.85" ury="138.88"/>
+   </Word>
+   <Word>
+    <Text>its</Text>
+    <Box llx="391.20" lly="129.88" urx="398.04" ury="138.88"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="98.64" lly="84.76" urx="417.10" ury="116.08">
+  <Line llx="98.64" lly="107.08" urx="417.10" ury="116.08">
+   <Word>
+    <Text>contribution</Text>
+    <Box llx="98.64" lly="107.08" urx="147.60" ury="116.08"/>
+   </Word>
+   <Word>
+    <Text>,</Text>
+    <Box llx="147.60" lly="107.08" urx="151.68" ury="116.08"/>
+   </Word>
+   <Word>
+    <Text>prepare</Text>
+    <Box llx="159.84" lly="107.08" urx="189.66" ury="116.08"/>
+   </Word>
+   <Word>
+    <Text>derivative</Text>
+    <Box llx="197.52" lly="107.08" urx="237.01" ury="116.08"/>
+   </Word>
+   <Word>
+    <Text>works</Text>
+    <Box llx="244.08" lly="107.08" urx="265.88" ury="116.08"/>
+   </Word>
+   <Word>
+    <Text>of</Text>
+    <Box llx="273.60" lly="107.08" urx="279.68" ury="116.08"/>
+   </Word>
+   <Word>
+    <Text>its</Text>
+    <Box llx="285.60" lly="107.08" urx="292.62" ury="116.08"/>
+   </Word>
+   <Word>
+    <Text>contribution</Text>
+    <Box llx="298.32" lly="107.08" urx="347.28" ury="116.08"/>
+   </Word>
+   <Word>
+    <Text>,</Text>
+    <Box llx="347.28" lly="107.08" urx="351.36" ury="116.08"/>
+   </Word>
+   <Word>
+    <Text>and</Text>
+    <Box llx="359.28" lly="107.08" urx="370.98" ury="116.08"/>
+   </Word>
+   <Word>
+    <Text>distribute</Text>
+    <Box llx="378.48" lly="107.08" urx="417.10" ury="116.08"/>
+   </Word>
+  </Line>
+  <Line llx="98.88" lly="84.76" urx="346.32" ury="93.76">
+   <Word>
+    <Text>its</Text>
+    <Box llx="98.88" lly="84.76" urx="105.90" ury="93.76"/>
+   </Word>
+   <Word>
+    <Text>contribution</Text>
+    <Box llx="111.60" lly="84.76" urx="161.89" ury="93.76"/>
+   </Word>
+   <Word>
+    <Text>or</Text>
+    <Box llx="169.68" lly="84.76" urx="175.76" ury="93.76"/>
+   </Word>
+   <Word>
+    <Text>any</Text>
+    <Box llx="181.92" lly="84.76" urx="193.44" ury="93.76"/>
+   </Word>
+   <Word>
+    <Text>derivative</Text>
+    <Box llx="200.40" lly="84.76" urx="240.11" ury="93.76"/>
+   </Word>
+   <Word>
+    <Text>works</Text>
+    <Box llx="247.20" lly="84.76" urx="268.80" ury="93.76"/>
+   </Word>
+   <Word>
+    <Text>that</Text>
+    <Box llx="276.48" lly="84.76" urx="290.69" ury="93.76"/>
+   </Word>
+   <Word>
+    <Text>you</Text>
+    <Box llx="297.36" lly="84.76" urx="309.06" ury="93.76"/>
+   </Word>
+   <Word>
+    <Text>create</Text>
+    <Box llx="316.56" lly="84.76" urx="342.07" ury="93.76"/>
+   </Word>
+   <Word>
+    <Text>.</Text>
+    <Box llx="342.07" lly="84.76" urx="346.32" ury="93.76"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Resources>
+<Fonts>
+ <Font id="F0" name="GlyphLessFont" type="TrueType (CID)" embedded="true" ascender="720.00" capheight="1000.00" italicangle="0.00" descender="0.00" weight="400.00" xheight="475.00"/>
+</Fonts>
+</Resources>
+</Pages>
+</Document>
+</TET>

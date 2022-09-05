@@ -1,0 +1,70 @@
+{
+    "documentId": 6,
+    "documentFileName": "case_6_jpg_route_inbox_tesseract_pdflib.jpg",
+    "noPagesInDocument": 1,
+    "noParagraphsInDocument": 14,
+    "pages": [
+        {
+            "pageNo": 1,
+            "noParagraphsInPage": 14,
+            "paragraphs": [
+                {
+                    "paragraphNo": 1,
+                    "text": "Start Document..."
+                },
+                {
+                    "paragraphNo": 2,
+                    "text": "Konnexions Public License (KX-PL)"
+                },
+                {
+                    "paragraphNo": 3,
+                    "text": "https://github.com/KonnexionsGmbH/shared_resources/blob/master/License/KX-PL-2020.05.pdf"
+                },
+                {
+                    "paragraphNo": 4,
+                    "text": "This license governs use of the accompanying software. If you use the software, you"
+                },
+                {
+                    "paragraphNo": 5,
+                    "text": "accept this license. If you do not accept the license, do not use the software."
+                },
+                {
+                    "paragraphNo": 6,
+                    "text": "1. Definitions."
+                },
+                {
+                    "paragraphNo": 7,
+                    "text": "have the same meaning here as under U.S. copyright law."
+                },
+                {
+                    "paragraphNo": 8,
+                    "text": "software."
+                },
+                {
+                    "paragraphNo": 9,
+                    "text": "license."
+                },
+                {
+                    "paragraphNo": 10,
+                    "text": "contribution."
+                },
+                {
+                    "paragraphNo": 11,
+                    "text": "2. Grant of Rights"
+                },
+                {
+                    "paragraphNo": 12,
+                    "text": "(a)"
+                },
+                {
+                    "paragraphNo": 13,
+                    "text": "conditions and limitations in section 3, each contributor grants you a nonexclusive, worldwide, royalty-free copyright license to reproduce its"
+                },
+                {
+                    "paragraphNo": 14,
+                    "text": "contribution, prepare derivative works of its contribution, and distribute its contribution or any derivative works that you create."
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,1691 @@
+{
+    "documentId": 15,
+    "documentFileName": "docx_table.pdf",
+    "noLinesFooter": 1,
+    "noLinesHeader": 1,
+    "noLinesInDocument": 139,
+    "noLinesToc": 0,
+    "noListsBulletInDocument": 0,
+    "noListsNumberInDocument": 0,
+    "noPagesInDocument": 5,
+    "noParagraphsInDocument": 68,
+    "noTablesInDocument": 4,
+    "noTitlesInDocument": 7,
+    "titles": [
+        "1. One Normal Table 3x4",
+        "2. Two Consecutive Tables 2x3 & 5x4",
+        "Empty Table 10x2",
+        "3. Table with Page Break 20x3",
+        "4. Special Case 1x1",
+        "5. Special Case 1x5",
+        "6. Special Case 5x1"
+    ],
+    "pages": [
+        {
+            "pageNo": 1,
+            "noLinesInPage": 51,
+            "noParagraphsInPage": 30,
+            "lines": [
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 103.57,
+                    "lineNo": 1,
+                    "lineNoPage": 1,
+                    "lineType": "h",
+                    "paragraphNo": 1,
+                    "text": "Header"
+                },
+                {
+                    "coordLLX": 88.8,
+                    "coordURX": 250.01,
+                    "lineNo": 1,
+                    "lineNoPage": 2,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "1. One Normal Table 3x4"
+                },
+                {
+                    "coordLLX": 76.56,
+                    "coordURX": 135.96,
+                    "lineNo": 1,
+                    "lineNoPage": 3,
+                    "lineType": "tab",
+                    "paragraphNo": 3,
+                    "text": "wwe Table 1",
+                    "columnNo": 1,
+                    "rowNo": 1
+                },
+                {
+                    "coordLLX": 189.72,
+                    "coordURX": 195.12,
+                    "lineNo": 1,
+                    "lineNoPage": 4,
+                    "lineType": "tab",
+                    "paragraphNo": 4,
+                    "text": "B",
+                    "columnNo": 2,
+                    "rowNo": 1
+                },
+                {
+                    "coordLLX": 303.0,
+                    "coordURX": 308.4,
+                    "lineNo": 1,
+                    "lineNoPage": 5,
+                    "lineType": "tab",
+                    "paragraphNo": 5,
+                    "text": "C",
+                    "columnNo": 3,
+                    "rowNo": 1
+                },
+                {
+                    "coordLLX": 416.28,
+                    "coordURX": 421.68,
+                    "lineNo": 1,
+                    "lineNoPage": 6,
+                    "lineType": "tab",
+                    "paragraphNo": 6,
+                    "text": "D",
+                    "columnNo": 4,
+                    "rowNo": 1
+                },
+                {
+                    "coordLLX": 76.56,
+                    "coordURX": 92.76,
+                    "lineNo": 1,
+                    "lineNoPage": 7,
+                    "lineType": "tab",
+                    "paragraphNo": 7,
+                    "text": "1.1",
+                    "columnNo": 1,
+                    "rowNo": 2
+                },
+                {
+                    "columnNo": 2,
+                    "coordLLX": 189.72,
+                    "coordURX": 211.32,
+                    "lineNo": 1,
+                    "lineNoPage": 8,
+                    "lineType": "tab",
+                    "paragraphNo": 7,
+                    "rowNo": 2,
+                    "text": ""
+                },
+                {
+                    "columnNo": 3,
+                    "coordLLX": 303.0,
+                    "coordURX": 324.6,
+                    "lineNo": 1,
+                    "lineNoPage": 8,
+                    "lineType": "tab",
+                    "paragraphNo": 7,
+                    "rowNo": 2,
+                    "text": ""
+                },
+                {
+                    "coordLLX": 416.28,
+                    "coordURX": 432.48,
+                    "lineNo": 1,
+                    "lineNoPage": 8,
+                    "lineType": "tab",
+                    "paragraphNo": 8,
+                    "text": "1.4",
+                    "columnNo": 4,
+                    "rowNo": 2
+                },
+                {
+                    "coordLLX": 76.56,
+                    "coordURX": 92.76,
+                    "lineNo": 1,
+                    "lineNoPage": 9,
+                    "lineType": "tab",
+                    "paragraphNo": 9,
+                    "text": "2.1",
+                    "columnNo": 1,
+                    "rowNo": 3
+                },
+                {
+                    "coordLLX": 189.72,
+                    "coordURX": 205.92,
+                    "lineNo": 1,
+                    "lineNoPage": 10,
+                    "lineType": "tab",
+                    "paragraphNo": 10,
+                    "text": "2.2",
+                    "columnNo": 2,
+                    "rowNo": 3
+                },
+                {
+                    "coordLLX": 303.0,
+                    "coordURX": 319.2,
+                    "lineNo": 1,
+                    "lineNoPage": 11,
+                    "lineType": "tab",
+                    "paragraphNo": 11,
+                    "text": "2.3",
+                    "columnNo": 3,
+                    "rowNo": 3
+                },
+                {
+                    "coordLLX": 416.28,
+                    "coordURX": 432.48,
+                    "lineNo": 1,
+                    "lineNoPage": 12,
+                    "lineType": "tab",
+                    "paragraphNo": 12,
+                    "text": "2.4",
+                    "columnNo": 4,
+                    "rowNo": 3
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.4,
+                    "lineNo": 1,
+                    "lineNoPage": 13,
+                    "lineType": "b",
+                    "paragraphNo": 13,
+                    "text": "Ein Buch, das mit der Frage \u201eWoher das Gute?\u201c im \u201eHerz der Seinsfrage\u201c endet, nachdem es"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.42,
+                    "lineNo": 2,
+                    "lineNoPage": 14,
+                    "lineType": "b",
+                    "paragraphNo": 13,
+                    "text": "\u201eGrauzonenkunde\u201c betrieben, also die Bedeutung des Vermischten, Mittleren und"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.51,
+                    "lineNo": 3,
+                    "lineNoPage": 15,
+                    "lineType": "b",
+                    "paragraphNo": 13,
+                    "text": "Kompromisshaften f\u00fcr die menschliche Selbst- und Welterkenntnis herausgearbeitet und mit"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.47,
+                    "lineNo": 4,
+                    "lineNoPage": 16,
+                    "lineType": "b",
+                    "paragraphNo": 13,
+                    "text": "Aplomb in der Kunst dingfest gemacht hat \u2013 ein solches Buch von Peter Sloterdijk darf"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.41,
+                    "lineNo": 5,
+                    "lineNoPage": 17,
+                    "lineType": "b",
+                    "paragraphNo": 13,
+                    "text": "vielleicht als Schlussstein gelten f\u00fcr ein opulentes Lebenswerk, das letztlich die Seinsfrage"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.34,
+                    "lineNo": 6,
+                    "lineNoPage": 18,
+                    "lineType": "b",
+                    "paragraphNo": 13,
+                    "text": "umkreist. Doch geantwortet wird bei Sloterdijk nie in Deduktionen, sondern mit intellektueller"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.51,
+                    "lineNo": 7,
+                    "lineNoPage": 19,
+                    "lineType": "b",
+                    "paragraphNo": 13,
+                    "text": "\u00dcberw\u00e4ltigung, untermauert von stupender Belesenheit. Wenn dieses Denken in Sph\u00e4ren und"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.55,
+                    "lineNo": 8,
+                    "lineNoPage": 20,
+                    "lineType": "b",
+                    "paragraphNo": 13,
+                    "text": "Blasen eines nicht ist, dann graue Theorie. Eher schon handelt es sich um spektralbunte"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.35,
+                    "lineNo": 9,
+                    "lineNoPage": 21,
+                    "lineType": "b",
+                    "paragraphNo": 13,
+                    "text": "Abenteuerphilosophie. Blendwerk lautet denn auch der hartn\u00e4ckige Vorwurf der Kritiker. Da ist"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.48,
+                    "lineNo": 10,
+                    "lineNoPage": 22,
+                    "lineType": "b",
+                    "paragraphNo": 13,
+                    "text": "es durchaus gewitzt, nun eine Abblendung folgen zu lassen, die ausgerechnet den Sinn f\u00fcr"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.61,
+                    "lineNo": 11,
+                    "lineNoPage": 23,
+                    "lineType": "b",
+                    "paragraphNo": 13,
+                    "text": "das Abblenden \u2013 das Denken des Grau \u2013 zum Lackmustest f\u00fcr Philosophie macht, den neben"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.31,
+                    "lineNo": 12,
+                    "lineNoPage": 24,
+                    "lineType": "b",
+                    "paragraphNo": 13,
+                    "text": "Sloterdijk selbst nur dessen Hausg\u00f6tter bestehen: Platon, Hegel, Heidegger, Nietzsche und in"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.52,
+                    "lineNo": 13,
+                    "lineNoPage": 25,
+                    "lineType": "b",
+                    "paragraphNo": 13,
+                    "text": "Ma\u00dfen auch Kant. Einige Gr\u00f6\u00dfen aus Literatur und Malerei \u2013 M\u00e4nner allesamt \u2013 kommen"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 100.14,
+                    "lineNo": 14,
+                    "lineNoPage": 26,
+                    "lineType": "b",
+                    "paragraphNo": 13,
+                    "text": "hinzu."
+                },
+                {
+                    "coordLLX": 88.8,
+                    "coordURX": 328.02,
+                    "lineNo": 1,
+                    "lineNoPage": 27,
+                    "lineType": "b",
+                    "paragraphNo": 14,
+                    "text": "2. Two Consecutive Tables 2x3 & 5x4"
+                },
+                {
+                    "coordLLX": 77.76,
+                    "coordURX": 137.36,
+                    "lineNo": 1,
+                    "lineNoPage": 28,
+                    "lineType": "tab",
+                    "paragraphNo": 15,
+                    "text": "wwe Table 2",
+                    "columnNo": 1,
+                    "rowNo": 1
+                },
+                {
+                    "coordLLX": 228.0,
+                    "coordURX": 234.19,
+                    "lineNo": 1,
+                    "lineNoPage": 29,
+                    "lineType": "tab",
+                    "paragraphNo": 16,
+                    "text": "B",
+                    "columnNo": 2,
+                    "rowNo": 1
+                },
+                {
+                    "coordLLX": 378.12,
+                    "coordURX": 383.96,
+                    "lineNo": 1,
+                    "lineNoPage": 30,
+                    "lineType": "tab",
+                    "paragraphNo": 17,
+                    "text": "C",
+                    "columnNo": 3,
+                    "rowNo": 1
+                },
+                {
+                    "coordLLX": 77.76,
+                    "coordURX": 91.88,
+                    "lineNo": 1,
+                    "lineNoPage": 31,
+                    "lineType": "tab",
+                    "paragraphNo": 18,
+                    "text": "1.1",
+                    "columnNo": 1,
+                    "rowNo": 2
+                },
+                {
+                    "coordLLX": 228.0,
+                    "coordURX": 242.0,
+                    "lineNo": 1,
+                    "lineNoPage": 32,
+                    "lineType": "tab",
+                    "paragraphNo": 19,
+                    "text": "1.2",
+                    "columnNo": 2,
+                    "rowNo": 2
+                },
+                {
+                    "coordLLX": 378.12,
+                    "coordURX": 392.12,
+                    "lineNo": 1,
+                    "lineNoPage": 33,
+                    "lineType": "tab",
+                    "paragraphNo": 20,
+                    "text": "1.3",
+                    "columnNo": 3,
+                    "rowNo": 2
+                },
+                {
+                    "coordLLX": 76.56,
+                    "coordURX": 136.16,
+                    "lineNo": 1,
+                    "lineNoPage": 34,
+                    "lineType": "tab",
+                    "paragraphNo": 21,
+                    "text": "wwe Table 3",
+                    "columnNo": 1,
+                    "rowNo": 1
+                },
+                {
+                    "coordLLX": 189.72,
+                    "coordURX": 195.91,
+                    "lineNo": 1,
+                    "lineNoPage": 35,
+                    "lineType": "tab",
+                    "paragraphNo": 22,
+                    "text": "B",
+                    "columnNo": 2,
+                    "rowNo": 1
+                },
+                {
+                    "coordLLX": 303.0,
+                    "coordURX": 308.84,
+                    "lineNo": 1,
+                    "lineNoPage": 36,
+                    "lineType": "tab",
+                    "paragraphNo": 23,
+                    "text": "C",
+                    "columnNo": 3,
+                    "rowNo": 1
+                },
+                {
+                    "coordLLX": 416.28,
+                    "coordURX": 423.24,
+                    "lineNo": 1,
+                    "lineNoPage": 37,
+                    "lineType": "tab",
+                    "paragraphNo": 24,
+                    "text": "D",
+                    "columnNo": 4,
+                    "rowNo": 1
+                },
+                {
+                    "coordLLX": 76.56,
+                    "coordURX": 90.68,
+                    "lineNo": 1,
+                    "lineNoPage": 38,
+                    "lineType": "tab",
+                    "paragraphNo": 25,
+                    "text": "1.1",
+                    "columnNo": 1,
+                    "rowNo": 2
+                },
+                {
+                    "columnNo": 2,
+                    "coordLLX": 189.72,
+                    "coordURX": 206.14,
+                    "lineNo": 1,
+                    "lineNoPage": 39,
+                    "lineType": "tab",
+                    "paragraphNo": 25,
+                    "rowNo": 2,
+                    "text": ""
+                },
+                {
+                    "columnNo": 3,
+                    "coordLLX": 303.0,
+                    "coordURX": 319.42,
+                    "lineNo": 1,
+                    "lineNoPage": 39,
+                    "lineType": "tab",
+                    "paragraphNo": 25,
+                    "rowNo": 2,
+                    "text": ""
+                },
+                {
+                    "columnNo": 4,
+                    "coordLLX": 416.28,
+                    "coordURX": 432.7,
+                    "lineNo": 1,
+                    "lineNoPage": 39,
+                    "lineType": "tab",
+                    "paragraphNo": 25,
+                    "rowNo": 2,
+                    "text": ""
+                },
+                {
+                    "columnNo": 1,
+                    "coordLLX": 76.56,
+                    "coordURX": 138.7,
+                    "lineNo": 1,
+                    "lineNoPage": 39,
+                    "lineType": "tab",
+                    "paragraphNo": 25,
+                    "rowNo": 3,
+                    "text": ""
+                },
+                {
+                    "coordLLX": 189.72,
+                    "coordURX": 203.72,
+                    "lineNo": 1,
+                    "lineNoPage": 39,
+                    "lineType": "tab",
+                    "paragraphNo": 26,
+                    "text": "2.2",
+                    "columnNo": 2,
+                    "rowNo": 3
+                },
+                {
+                    "columnNo": 3,
+                    "coordLLX": 303.0,
+                    "coordURX": 319.42,
+                    "lineNo": 1,
+                    "lineNoPage": 40,
+                    "lineType": "tab",
+                    "paragraphNo": 26,
+                    "rowNo": 3,
+                    "text": ""
+                },
+                {
+                    "columnNo": 4,
+                    "coordLLX": 416.28,
+                    "coordURX": 432.7,
+                    "lineNo": 1,
+                    "lineNoPage": 40,
+                    "lineType": "tab",
+                    "paragraphNo": 26,
+                    "rowNo": 3,
+                    "text": ""
+                },
+                {
+                    "columnNo": 1,
+                    "coordLLX": 76.56,
+                    "coordURX": 138.7,
+                    "lineNo": 1,
+                    "lineNoPage": 40,
+                    "lineType": "tab",
+                    "paragraphNo": 26,
+                    "rowNo": 4,
+                    "text": ""
+                },
+                {
+                    "columnNo": 2,
+                    "coordLLX": 189.72,
+                    "coordURX": 206.14,
+                    "lineNo": 1,
+                    "lineNoPage": 40,
+                    "lineType": "tab",
+                    "paragraphNo": 26,
+                    "rowNo": 4,
+                    "text": ""
+                },
+                {
+                    "coordLLX": 303.0,
+                    "coordURX": 317.0,
+                    "lineNo": 1,
+                    "lineNoPage": 40,
+                    "lineType": "tab",
+                    "paragraphNo": 27,
+                    "text": "3.3",
+                    "columnNo": 3,
+                    "rowNo": 4
+                },
+                {
+                    "columnNo": 4,
+                    "coordLLX": 416.28,
+                    "coordURX": 432.7,
+                    "lineNo": 1,
+                    "lineNoPage": 41,
+                    "lineType": "tab",
+                    "paragraphNo": 27,
+                    "rowNo": 4,
+                    "text": ""
+                },
+                {
+                    "columnNo": 1,
+                    "coordLLX": 76.56,
+                    "coordURX": 138.7,
+                    "lineNo": 1,
+                    "lineNoPage": 41,
+                    "lineType": "tab",
+                    "paragraphNo": 27,
+                    "rowNo": 5,
+                    "text": ""
+                },
+                {
+                    "columnNo": 2,
+                    "coordLLX": 189.72,
+                    "coordURX": 206.14,
+                    "lineNo": 1,
+                    "lineNoPage": 41,
+                    "lineType": "tab",
+                    "paragraphNo": 27,
+                    "rowNo": 5,
+                    "text": ""
+                },
+                {
+                    "columnNo": 3,
+                    "coordLLX": 303.0,
+                    "coordURX": 319.42,
+                    "lineNo": 1,
+                    "lineNoPage": 41,
+                    "lineType": "tab",
+                    "paragraphNo": 27,
+                    "rowNo": 5,
+                    "text": ""
+                },
+                {
+                    "coordLLX": 416.28,
+                    "coordURX": 430.28,
+                    "lineNo": 1,
+                    "lineNoPage": 41,
+                    "lineType": "tab",
+                    "paragraphNo": 28,
+                    "text": "4.4",
+                    "columnNo": 4,
+                    "rowNo": 5
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.44,
+                    "lineNo": 1,
+                    "lineNoPage": 42,
+                    "lineType": "b",
+                    "paragraphNo": 29,
+                    "text": "C\u00e9zanne war es, der den Autor mit dem Satz \u201eSolange man nicht ein Grau gemalt hat, ist man"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.38,
+                    "lineNo": 2,
+                    "lineNoPage": 43,
+                    "lineType": "b",
+                    "paragraphNo": 29,
+                    "text": "kein Maler\u201c auf die Idee brachte, dieses Konditional auf die Philosophie auszudehnen. Durch"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.59,
+                    "lineNo": 3,
+                    "lineNoPage": 44,
+                    "lineType": "b",
+                    "paragraphNo": 29,
+                    "text": "allen rhetorischen Bombast hindurch l\u00e4sst sich bei Sloterdijk eine kulturhistorische Makroperspektive"
+                },
+                {
+                    "coordLLX": 114.35,
+                    "coordURX": 524.44,
+                    "lineNo": 4,
+                    "lineNoPage": 45,
+                    "lineType": "b",
+                    "paragraphNo": 29,
+                    "text": "ausmachen. Bis zum neunzehnten Jahrhundert hatte demnach das strahlende Wei\u00df"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.46,
+                    "lineNo": 5,
+                    "lineNoPage": 46,
+                    "lineType": "b",
+                    "paragraphNo": 29,
+                    "text": "eine Sonderstellung, ein letztes Refugium der uralten Lichtmetaphysik. Dann habe auch im"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.35,
+                    "lineNo": 6,
+                    "lineNoPage": 47,
+                    "lineType": "b",
+                    "paragraphNo": 29,
+                    "text": "Bereich der Farben die gro\u00dfe Enthierarchisierung und S\u00e4kularisierung eingesetzt. Statt einer"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.44,
+                    "lineNo": 7,
+                    "lineNoPage": 48,
+                    "lineType": "b",
+                    "paragraphNo": 29,
+                    "text": "liturgisch-allegorisch festgelegten Farbrangfolge herrschten nun die \u201eUnited Colors of"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.45,
+                    "lineNo": 8,
+                    "lineNoPage": 49,
+                    "lineType": "b",
+                    "paragraphNo": 29,
+                    "text": "Everything\u201c, eine polychrome Idylle der totalen Toleranz. Wobei nicht der Regenbogen f\u00fcr"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 455.39,
+                    "lineNo": 9,
+                    "lineNoPage": 50,
+                    "lineType": "b",
+                    "paragraphNo": 29,
+                    "text": "Sloterdijk das treffende Symbol ist, sondern ein Schmutzgrau des Vermengten."
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 108.08,
+                    "lineNo": 1,
+                    "lineNoPage": 51,
+                    "lineType": "f",
+                    "paragraphNo": 30,
+                    "text": "Page | 1"
+                }
+            ]
+        },
+        {
+            "pageNo": 2,
+            "noLinesInPage": 22,
+            "noParagraphsInPage": 15,
+            "lines": [
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 103.57,
+                    "lineNo": 1,
+                    "lineNoPage": 1,
+                    "lineType": "h",
+                    "paragraphNo": 1,
+                    "text": "Header"
+                },
+                {
+                    "coordLLX": 88.8,
+                    "coordURX": 203.09,
+                    "lineNo": 1,
+                    "lineNoPage": 2,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "Empty Table 10x2"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.41,
+                    "lineNo": 1,
+                    "lineNoPage": 3,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "Eine \u201egraue Ethik\u201c habe denn auch diese einst von der Kunst mit angef\u00fchrte"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.39,
+                    "lineNo": 2,
+                    "lineNoPage": 4,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "Freiheitsbewegung begleitet. Dazu eine erwartbare Spitze: Angela Merkel, \u201ezugleich lau und"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.41,
+                    "lineNo": 3,
+                    "lineNoPage": 5,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "machtbesessen\u201c, gilt Sloterdijk als vorl\u00e4ufiger Gipfelpunkt der sich um alle Entscheidungen"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.42,
+                    "lineNo": 4,
+                    "lineNoPage": 6,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "dr\u00fcckenden Bewegung zur Mitte hin, die vermutlich in einer graugr\u00fcnen \u201e\u00f6kob\u00fcrokratischen"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.34,
+                    "lineNo": 5,
+                    "lineNoPage": 7,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "Verordnungspolitik\u201c enden werde: \u201eDreckfarbigkeit bildet das unumg\u00e4ngliche Resultat der"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.36,
+                    "lineNo": 6,
+                    "lineNoPage": 8,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "postmodernen Mixophilie.\u201c Das Grau w\u00e4re so \u201edie farblose Allfarbe der entfremdeten Freiheit\u201c."
+                },
+                {
+                    "coordLLX": 88.8,
+                    "coordURX": 283.17,
+                    "lineNo": 1,
+                    "lineNoPage": 9,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "3. Table with Page Break 20x3"
+                },
+                {
+                    "coordLLX": 76.56,
+                    "coordURX": 135.96,
+                    "lineNo": 1,
+                    "lineNoPage": 10,
+                    "lineType": "tab",
+                    "paragraphNo": 5,
+                    "text": "wwe Table 5",
+                    "columnNo": 1,
+                    "rowNo": 1
+                },
+                {
+                    "coordLLX": 227.52,
+                    "coordURX": 233.71,
+                    "lineNo": 1,
+                    "lineNoPage": 11,
+                    "lineType": "tab",
+                    "paragraphNo": 6,
+                    "text": "B",
+                    "columnNo": 2,
+                    "rowNo": 1
+                },
+                {
+                    "coordLLX": 378.6,
+                    "coordURX": 384.44,
+                    "lineNo": 1,
+                    "lineNoPage": 12,
+                    "lineType": "tab",
+                    "paragraphNo": 7,
+                    "text": "C",
+                    "columnNo": 3,
+                    "rowNo": 1
+                },
+                {
+                    "coordLLX": 76.56,
+                    "coordURX": 82.16,
+                    "lineNo": 1,
+                    "lineNoPage": 13,
+                    "lineType": "tab",
+                    "paragraphNo": 8,
+                    "text": "1",
+                    "columnNo": 1,
+                    "rowNo": 2
+                },
+                {
+                    "columnNo": 2,
+                    "coordLLX": 227.52,
+                    "coordURX": 236.14,
+                    "lineNo": 1,
+                    "lineNoPage": 14,
+                    "lineType": "tab",
+                    "paragraphNo": 8,
+                    "rowNo": 2,
+                    "text": ""
+                },
+                {
+                    "columnNo": 3,
+                    "coordLLX": 378.6,
+                    "coordURX": 386.98,
+                    "lineNo": 1,
+                    "lineNoPage": 14,
+                    "lineType": "tab",
+                    "paragraphNo": 8,
+                    "rowNo": 2,
+                    "text": ""
+                },
+                {
+                    "columnNo": 1,
+                    "coordLLX": 76.56,
+                    "coordURX": 138.46,
+                    "lineNo": 1,
+                    "lineNoPage": 14,
+                    "lineType": "tab",
+                    "paragraphNo": 8,
+                    "rowNo": 3,
+                    "text": ""
+                },
+                {
+                    "coordLLX": 227.52,
+                    "coordURX": 233.12,
+                    "lineNo": 1,
+                    "lineNoPage": 14,
+                    "lineType": "tab",
+                    "paragraphNo": 9,
+                    "text": "2",
+                    "columnNo": 2,
+                    "rowNo": 3
+                },
+                {
+                    "columnNo": 3,
+                    "coordLLX": 378.6,
+                    "coordURX": 386.98,
+                    "lineNo": 1,
+                    "lineNoPage": 15,
+                    "lineType": "tab",
+                    "paragraphNo": 9,
+                    "rowNo": 3,
+                    "text": ""
+                },
+                {
+                    "columnNo": 1,
+                    "coordLLX": 76.56,
+                    "coordURX": 138.46,
+                    "lineNo": 1,
+                    "lineNoPage": 15,
+                    "lineType": "tab",
+                    "paragraphNo": 9,
+                    "rowNo": 4,
+                    "text": ""
+                },
+                {
+                    "columnNo": 2,
+                    "coordLLX": 227.52,
+                    "coordURX": 236.14,
+                    "lineNo": 1,
+                    "lineNoPage": 15,
+                    "lineType": "tab",
+                    "paragraphNo": 9,
+                    "rowNo": 4,
+                    "text": ""
+                },
+                {
+                    "coordLLX": 378.6,
+                    "coordURX": 384.2,
+                    "lineNo": 1,
+                    "lineNoPage": 15,
+                    "lineType": "tab",
+                    "paragraphNo": 10,
+                    "text": "3",
+                    "columnNo": 3,
+                    "rowNo": 4
+                },
+                {
+                    "coordLLX": 378.6,
+                    "coordURX": 384.2,
+                    "lineNo": 2,
+                    "lineNoPage": 16,
+                    "lineType": "tab",
+                    "paragraphNo": 10,
+                    "text": "4",
+                    "columnNo": 3,
+                    "rowNo": 4
+                },
+                {
+                    "columnNo": 1,
+                    "coordLLX": 76.56,
+                    "coordURX": 138.46,
+                    "lineNo": 2,
+                    "lineNoPage": 17,
+                    "lineType": "tab",
+                    "paragraphNo": 10,
+                    "rowNo": 5,
+                    "text": ""
+                },
+                {
+                    "coordLLX": 227.52,
+                    "coordURX": 233.12,
+                    "lineNo": 1,
+                    "lineNoPage": 17,
+                    "lineType": "tab",
+                    "paragraphNo": 11,
+                    "text": "5",
+                    "columnNo": 2,
+                    "rowNo": 5
+                },
+                {
+                    "columnNo": 3,
+                    "coordLLX": 378.6,
+                    "coordURX": 386.98,
+                    "lineNo": 1,
+                    "lineNoPage": 18,
+                    "lineType": "tab",
+                    "paragraphNo": 11,
+                    "rowNo": 5,
+                    "text": ""
+                },
+                {
+                    "coordLLX": 76.56,
+                    "coordURX": 82.16,
+                    "lineNo": 1,
+                    "lineNoPage": 18,
+                    "lineType": "tab",
+                    "paragraphNo": 12,
+                    "text": "6",
+                    "columnNo": 1,
+                    "rowNo": 6
+                },
+                {
+                    "coordLLX": 76.56,
+                    "coordURX": 82.16,
+                    "lineNo": 2,
+                    "lineNoPage": 19,
+                    "lineType": "tab",
+                    "paragraphNo": 12,
+                    "text": "7",
+                    "columnNo": 1,
+                    "rowNo": 6
+                },
+                {
+                    "columnNo": 2,
+                    "coordLLX": 227.52,
+                    "coordURX": 236.14,
+                    "lineNo": 2,
+                    "lineNoPage": 20,
+                    "lineType": "tab",
+                    "paragraphNo": 12,
+                    "rowNo": 6,
+                    "text": ""
+                },
+                {
+                    "columnNo": 3,
+                    "coordLLX": 378.6,
+                    "coordURX": 386.98,
+                    "lineNo": 2,
+                    "lineNoPage": 20,
+                    "lineType": "tab",
+                    "paragraphNo": 12,
+                    "rowNo": 6,
+                    "text": ""
+                },
+                {
+                    "columnNo": 1,
+                    "coordLLX": 76.56,
+                    "coordURX": 138.46,
+                    "lineNo": 2,
+                    "lineNoPage": 20,
+                    "lineType": "tab",
+                    "paragraphNo": 12,
+                    "rowNo": 7,
+                    "text": ""
+                },
+                {
+                    "coordLLX": 227.52,
+                    "coordURX": 233.12,
+                    "lineNo": 1,
+                    "lineNoPage": 20,
+                    "lineType": "tab",
+                    "paragraphNo": 13,
+                    "text": "8",
+                    "columnNo": 2,
+                    "rowNo": 7
+                },
+                {
+                    "columnNo": 3,
+                    "coordLLX": 378.6,
+                    "coordURX": 386.98,
+                    "lineNo": 1,
+                    "lineNoPage": 21,
+                    "lineType": "tab",
+                    "paragraphNo": 13,
+                    "rowNo": 7,
+                    "text": ""
+                },
+                {
+                    "columnNo": 1,
+                    "coordLLX": 76.56,
+                    "coordURX": 138.46,
+                    "lineNo": 1,
+                    "lineNoPage": 21,
+                    "lineType": "tab",
+                    "paragraphNo": 13,
+                    "rowNo": 8,
+                    "text": ""
+                },
+                {
+                    "columnNo": 2,
+                    "coordLLX": 227.52,
+                    "coordURX": 236.14,
+                    "lineNo": 1,
+                    "lineNoPage": 21,
+                    "lineType": "tab",
+                    "paragraphNo": 13,
+                    "rowNo": 8,
+                    "text": ""
+                },
+                {
+                    "coordLLX": 378.6,
+                    "coordURX": 384.2,
+                    "lineNo": 1,
+                    "lineNoPage": 21,
+                    "lineType": "tab",
+                    "paragraphNo": 14,
+                    "text": "9",
+                    "columnNo": 3,
+                    "rowNo": 8
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 108.08,
+                    "lineNo": 1,
+                    "lineNoPage": 22,
+                    "lineType": "f",
+                    "paragraphNo": 15,
+                    "text": "Page | 2"
+                }
+            ]
+        },
+        {
+            "pageNo": 3,
+            "noLinesInPage": 21,
+            "noParagraphsInPage": 8,
+            "lines": [
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 103.57,
+                    "lineNo": 1,
+                    "lineNoPage": 1,
+                    "lineType": "h",
+                    "paragraphNo": 1,
+                    "text": "Header"
+                },
+                {
+                    "coordLLX": 378.6,
+                    "coordURX": 389.84,
+                    "lineNo": 1,
+                    "lineNoPage": 2,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "10"
+                },
+                {
+                    "coordLLX": 227.52,
+                    "coordURX": 238.76,
+                    "lineNo": 1,
+                    "lineNoPage": 3,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "11"
+                },
+                {
+                    "coordLLX": 76.56,
+                    "coordURX": 87.8,
+                    "lineNo": 1,
+                    "lineNoPage": 4,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "12"
+                },
+                {
+                    "coordLLX": 76.56,
+                    "coordURX": 87.8,
+                    "lineNo": 2,
+                    "lineNoPage": 5,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "13"
+                },
+                {
+                    "coordLLX": 227.52,
+                    "coordURX": 238.76,
+                    "lineNo": 1,
+                    "lineNoPage": 6,
+                    "lineType": "b",
+                    "paragraphNo": 5,
+                    "text": "14"
+                },
+                {
+                    "coordLLX": 378.6,
+                    "coordURX": 389.84,
+                    "lineNo": 1,
+                    "lineNoPage": 7,
+                    "lineType": "b",
+                    "paragraphNo": 6,
+                    "text": "15"
+                },
+                {
+                    "coordLLX": 227.52,
+                    "coordURX": 389.84,
+                    "lineNo": 2,
+                    "lineNoPage": 8,
+                    "lineType": "b",
+                    "paragraphNo": 6,
+                    "text": "16.2 16"
+                },
+                {
+                    "coordLLX": 227.52,
+                    "coordURX": 238.76,
+                    "lineNo": 3,
+                    "lineNoPage": 9,
+                    "lineType": "b",
+                    "paragraphNo": 6,
+                    "text": "17"
+                },
+                {
+                    "coordLLX": 76.56,
+                    "coordURX": 247.16,
+                    "lineNo": 4,
+                    "lineNoPage": 10,
+                    "lineType": "b",
+                    "paragraphNo": 6,
+                    "text": "18 18.2"
+                },
+                {
+                    "coordLLX": 76.56,
+                    "coordURX": 247.16,
+                    "lineNo": 5,
+                    "lineNoPage": 11,
+                    "lineType": "b",
+                    "paragraphNo": 6,
+                    "text": "19 19.2"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.33,
+                    "lineNo": 1,
+                    "lineNoPage": 12,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "Aber diese wenig originelle Verfallserz\u00e4hlung, der moderne Staat als \u201eder Gro\u00dfe Graue\u201c, der"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.4,
+                    "lineNo": 2,
+                    "lineNoPage": 13,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "\u201edie \u201aabsolute\u2018 Monarchie an Ausdehnung seiner Zust\u00e4ndigkeiten und Durchdringungstiefe"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.5,
+                    "lineNo": 3,
+                    "lineNoPage": 14,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "seiner Ma\u00dfnahmen um ein Vielfaches \u00fcbertrifft\u201c, ist nur das eine. Sloterdijk scheint es mit"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.33,
+                    "lineNo": 4,
+                    "lineNoPage": 15,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "Goethes Farbenlehre zu halten, in der er \u201ezweierlei Grau\u201c unterschieden sieht: neben dem"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.65,
+                    "lineNo": 5,
+                    "lineNoPage": 16,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "\u201etr\u00fcben\u201c Farbmischgrau ein Reingrau, also durch wei\u00dfes Licht abget\u00f6ntes Schwarz. Und so"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.38,
+                    "lineNo": 6,
+                    "lineNoPage": 17,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "wird das \u201eGrau-in-Grau\u201c der Philosophen oder das der K\u00fcnstler, \u201edas dich ber\u00fchrt\u201c, hier"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.53,
+                    "lineNo": 7,
+                    "lineNoPage": 18,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "keineswegs diskreditiert. Im Gegenteil: Grau in Reinform gilt f\u00fcr Sloterdijk als Farbe des"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.55,
+                    "lineNo": 8,
+                    "lineNoPage": 19,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "Denkens. In den Kapiteln, die assoziativ Motivgeschichte und Metaphorologie \u00fcberkreuzen, ist"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 185.81,
+                    "lineNo": 9,
+                    "lineNoPage": 20,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "das Buch am st\u00e4rksten."
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 108.08,
+                    "lineNo": 1,
+                    "lineNoPage": 21,
+                    "lineType": "f",
+                    "paragraphNo": 8,
+                    "text": "Page | 3"
+                }
+            ]
+        },
+        {
+            "pageNo": 4,
+            "noLinesInPage": 40,
+            "noParagraphsInPage": 12,
+            "lines": [
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 103.57,
+                    "lineNo": 1,
+                    "lineNoPage": 1,
+                    "lineType": "h",
+                    "paragraphNo": 1,
+                    "text": "Header"
+                },
+                {
+                    "coordLLX": 88.8,
+                    "coordURX": 211.99,
+                    "lineNo": 1,
+                    "lineNoPage": 2,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "4. Special Case 1x1"
+                },
+                {
+                    "coordLLX": 77.76,
+                    "coordURX": 137.16,
+                    "lineNo": 1,
+                    "lineNoPage": 3,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "wwe Table 6"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.53,
+                    "lineNo": 1,
+                    "lineNoPage": 4,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "Mit Platon blickt Sloterdijk auf die graue H\u00f6hlenwand, auf der Schatten der vor\u00fcbergetragenen"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.52,
+                    "lineNo": 2,
+                    "lineNoPage": 5,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "Gegenst\u00e4nde aufscheinen. Damit war f\u00fcr ihn jenes Grau vorgedacht, dem Platon und das"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.47,
+                    "lineNo": 3,
+                    "lineNoPage": 6,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "Christentum die Lichtwelt der Ideen oder Gottes entgegensetzten, aber das sich derweil doch"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.48,
+                    "lineNo": 4,
+                    "lineNoPage": 7,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "ausbreitete. F\u00fcr Hegel sei \u201eGrau-in-Grau\u201c die \u201eLeistungsfarbe der Philosophie\u201c und G\u00fctesiegel"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.44,
+                    "lineNo": 5,
+                    "lineNoPage": 8,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "f\u00fcr ein \u201enovembrisches\u201c, \u201egereiftes\u201c Denken, das sich etwa als Staat, Wissenschaft oder Kunst"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.53,
+                    "lineNo": 6,
+                    "lineNoPage": 9,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "objektiviere. Nietzsche stellte dann fest, dass das reine Licht (Gott) gar nicht existiere und"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.4,
+                    "lineNo": 7,
+                    "lineNoPage": 10,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "unser Licht immer Zwielicht sei. Am gr\u00fcndlichsten aber habe Heidegger die Feinabstufungen"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.57,
+                    "lineNo": 8,
+                    "lineNoPage": 11,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "der diesseitigen Graut\u00f6nung \u2013 Nebel, Langeweile, Gerede, das Man und so fort \u2013 durchdacht."
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.26,
+                    "lineNo": 9,
+                    "lineNoPage": 12,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "Das f\u00fchrt zur enormen Frage, wie \u201eeine Existenz inmitten der Ambiguit\u00e4t aller Handlungen und"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.49,
+                    "lineNo": 10,
+                    "lineNoPage": 13,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "Unterlassungen denkbar ist, die nicht mit Indifferenz gleichzusetzen w\u00e4re\u201c. Das Laue h\u00e4lt"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.39,
+                    "lineNo": 11,
+                    "lineNoPage": 14,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "Sloterdijk n\u00e4mlich nicht per se f\u00fcr verwerflich, sondern gar f\u00fcr \u201edie Betriebstemperatur des"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 320.92,
+                    "lineNo": 12,
+                    "lineNoPage": 15,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "Lebens\u201c. Eine eindeutige Antwort aber gibt er nicht."
+                },
+                {
+                    "coordLLX": 88.8,
+                    "coordURX": 211.99,
+                    "lineNo": 1,
+                    "lineNoPage": 16,
+                    "lineType": "b",
+                    "paragraphNo": 5,
+                    "text": "5. Special Case 1x5"
+                },
+                {
+                    "coordLLX": 76.56,
+                    "coordURX": 451.52,
+                    "lineNo": 1,
+                    "lineNoPage": 17,
+                    "lineType": "b",
+                    "paragraphNo": 6,
+                    "text": "wwe Table 7 H2 H3 H4 H5"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.49,
+                    "lineNo": 1,
+                    "lineNoPage": 18,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "Es folgt vielmehr eine \u201epolitische Farbenlehre\u201c, die sich dem Sieg des staatlichen"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.35,
+                    "lineNo": 2,
+                    "lineNoPage": 19,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "\u201eFunktionsgrau\u201c widmet. Sprachlich blitzend, aber argumentativ eher pauschal geht es hier"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.47,
+                    "lineNo": 3,
+                    "lineNoPage": 20,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "vom preu\u00dfischen Blau \u00fcber ein letztes Aufb\u00e4umen der widerstreitenden Partei-Farben im"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.45,
+                    "lineNo": 4,
+                    "lineNoPage": 21,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "Zeitalter des Totalitarismus hinab ins ausgegl\u00fchte Rot des Sozialismus und die \u201egraue Zone\u201c"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.44,
+                    "lineNo": 5,
+                    "lineNoPage": 22,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "der DDR. Noch nicht ganz so aschefarben, aber nicht weit entfernt ist f\u00fcr Sloterdijk die allzu"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.48,
+                    "lineNo": 6,
+                    "lineNoPage": 23,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "liberale Demokratie. Eher zum gesch\u00e4tzten Grau z\u00e4hlt f\u00fcr den Autor die distanzierte Schwarz-"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.39,
+                    "lineNo": 7,
+                    "lineNoPage": 24,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "Wei\u00df-Fotografie, allerdings wirkt das entsprechende Kapitel wie eine allzu brave kleine"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.33,
+                    "lineNo": 8,
+                    "lineNoPage": 25,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "Medienkulturgeschichte, deren zentrale Aussage darin besteht, dass das Opfer der Farbigkeit"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.53,
+                    "lineNo": 9,
+                    "lineNoPage": 26,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "in der Fr\u00fchzeit von Fotografie und Film gern erbracht wurde. Mit der Ubiquit\u00e4t farbiger"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 467.67,
+                    "lineNo": 10,
+                    "lineNoPage": 27,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "Aufnahmen sei bald ein gr\u00f6\u00dferes Opfer erbracht worden, das der Bedeutsamkeit."
+                },
+                {
+                    "coordLLX": 88.8,
+                    "coordURX": 211.99,
+                    "lineNo": 1,
+                    "lineNoPage": 28,
+                    "lineType": "b",
+                    "paragraphNo": 8,
+                    "text": "6. Special Case 5x1"
+                },
+                {
+                    "coordLLX": 76.2,
+                    "coordURX": 135.6,
+                    "lineNo": 1,
+                    "lineNoPage": 29,
+                    "lineType": "b",
+                    "paragraphNo": 9,
+                    "text": "wwe Table 8"
+                },
+                {
+                    "coordLLX": 76.2,
+                    "coordURX": 88.28,
+                    "lineNo": 1,
+                    "lineNoPage": 30,
+                    "lineType": "b",
+                    "paragraphNo": 10,
+                    "text": "V2"
+                },
+                {
+                    "coordLLX": 76.2,
+                    "coordURX": 88.28,
+                    "lineNo": 2,
+                    "lineNoPage": 31,
+                    "lineType": "b",
+                    "paragraphNo": 10,
+                    "text": "V3"
+                },
+                {
+                    "coordLLX": 76.2,
+                    "coordURX": 88.28,
+                    "lineNo": 3,
+                    "lineNoPage": 32,
+                    "lineType": "b",
+                    "paragraphNo": 10,
+                    "text": "V4"
+                },
+                {
+                    "coordLLX": 76.2,
+                    "coordURX": 88.28,
+                    "lineNo": 4,
+                    "lineNoPage": 33,
+                    "lineType": "b",
+                    "paragraphNo": 10,
+                    "text": "V5"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.4,
+                    "lineNo": 1,
+                    "lineNoPage": 34,
+                    "lineType": "b",
+                    "paragraphNo": 11,
+                    "text": "Sch\u00f6n liest sich, wie der Autor literarische Grau-Figurationen aufst\u00f6bert. Zu ihnen geh\u00f6rt"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.49,
+                    "lineNo": 2,
+                    "lineNoPage": 35,
+                    "lineType": "b",
+                    "paragraphNo": 11,
+                    "text": "nat\u00fcrlich das Husum-Gedicht \u201eDie Stadt\u201c von Theodor Storm (\u201eAm grauen Strand, am grauen"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.48,
+                    "lineNo": 3,
+                    "lineNoPage": 36,
+                    "lineType": "b",
+                    "paragraphNo": 11,
+                    "text": "Meer\u201c), aber fast erstaunlicherweise nicht Herbert Gr\u00f6nemeyers Coverversion als \u201eBochum\u201c-"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.31,
+                    "lineNo": 4,
+                    "lineNoPage": 37,
+                    "lineType": "b",
+                    "paragraphNo": 11,
+                    "text": "Song (\u201evor Arbeit ganz grau\u201c). Grandios sind die religionsgeschichtlichen \u00dcberlegungen zum"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.51,
+                    "lineNo": 5,
+                    "lineNoPage": 38,
+                    "lineType": "b",
+                    "paragraphNo": 11,
+                    "text": "\u00dcbergang vom Manich\u00e4ismus zum Christentum, womit der Punkt aufgesp\u00fcrt ist, an dem das"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.31,
+                    "lineNo": 6,
+                    "lineNoPage": 39,
+                    "lineType": "b",
+                    "paragraphNo": 11,
+                    "text": "Dritte zwischen Licht und Dunkel die B\u00fchne betritt, Grau in seiner welthaltigsten Manifestation."
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 108.08,
+                    "lineNo": 1,
+                    "lineNoPage": 40,
+                    "lineType": "f",
+                    "paragraphNo": 12,
+                    "text": "Page | 4"
+                }
+            ]
+        },
+        {
+            "pageNo": 5,
+            "noLinesInPage": 5,
+            "noParagraphsInPage": 3,
+            "lines": [
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 103.57,
+                    "lineNo": 1,
+                    "lineNoPage": 1,
+                    "lineType": "h",
+                    "paragraphNo": 1,
+                    "text": "Header"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.36,
+                    "lineNo": 1,
+                    "lineNoPage": 2,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "Weniger \u201ezynisch\u201c als platt wirkt indes die Engf\u00fchrung von \u201eGrau und Frau\u201c, Geraune \u00fcber"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 524.34,
+                    "lineNo": 2,
+                    "lineNoPage": 3,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "Altweibergraues bei Goethe, Schnitzler und Musil, zumal das Kapitel abgebrochen wird mit"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 516.59,
+                    "lineNo": 3,
+                    "lineNoPage": 4,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "der Vermutung, \u201ewenn man keine Frau ist, kann man so etwas heute nicht mehr schreiben\u201c."
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 108.08,
+                    "lineNo": 1,
+                    "lineNoPage": 5,
+                    "lineType": "f",
+                    "paragraphNo": 3,
+                    "text": "Page | 5"
+                }
+            ]
+        }
+    ]
+}
