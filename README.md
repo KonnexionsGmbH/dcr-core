@@ -104,7 +104,7 @@ Make sure to stick around to answer some questions as well!
 - **[Release Notes](https://konnexionsgmbh.github.io/dcr-core/release_notes)**
 - **[Discussions](https://github.com/KonnexionsGmbH/dcr-core/discussions)** (Third-party themes, recipes, plugins and more)
 
-## 6. Contributing to DCR
+## 6. Contributing to DCR-CORE
 
 The **`DCR-CORE`** project welcomes, and depends on, contributions from developers and users in the open source community. 
 Please see the **[Contributing Guide](https://konnexionsgmbh.github.io/dcr-core/contributing)** for

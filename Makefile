@@ -224,7 +224,7 @@ pydocstyle:         ## Check the API documentation with pydocstyle.
 	@echo PYTHONPATH=${PYTHONPATH}
 	${PIPENV} run pydocstyle --version
 	@echo ---------------------------------------------------------------------
-	${PIPENV} run pydocstyle --count ${PYTHONPATH} tests
+	${PIPENV} run pydocstyle --count --match='(?!PDFLIB\\)*\.py' ${PYTHONPATH} tests
 	@echo Info **********  End:   pydocstyle **********************************
 
 # Pylint is a tool that checks for errors in Python code.

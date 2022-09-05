@@ -309,7 +309,7 @@ class Process:
         """
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
 
-        dcr_core.core_utils.progress_msg_core(f"Start of processing for tetml type '{tetml_type}'")
+        dcr_core.core_utils.progress_msg(dcr_core.core_glob.setup.is_verbose, f"Start of processing for tetml type '{tetml_type}'")
 
         dcr_core.core_glob.setup.is_parsing_line = is_parsing_line
         dcr_core.core_glob.setup.is_parsing_page = is_parsing_page
@@ -325,7 +325,7 @@ class Process:
         if return_code != "ok":
             raise RuntimeError(error_msg)
 
-        dcr_core.core_utils.progress_msg_core(f"End   of processing for tetml type '{tetml_type}'")
+        dcr_core.core_utils.progress_msg(dcr_core.core_glob.setup.is_verbose, f"End   of processing for tetml type '{tetml_type}'")
 
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
 

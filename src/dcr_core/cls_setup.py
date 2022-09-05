@@ -171,7 +171,7 @@ class Setup:
         self._config_parser.read(Setup._DCR_CFG_FILE)
 
         # ------------------------------------------------------------------
-        # DCR configuration.
+        # DCR-CORE configuration.
         # ------------------------------------------------------------------
         self.is_create_extra_file_heading = True
         self.is_create_extra_file_list_bullet = True

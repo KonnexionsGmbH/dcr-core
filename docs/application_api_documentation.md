@@ -5,7 +5,7 @@
 
 ## Documentation for `cls_process`
 
-::: dcr_core.cls_process.Process
+::: src.dcr_core.cls_process.Process
     handler: python
     options:
       members:
