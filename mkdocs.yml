@@ -57,7 +57,7 @@ plugins:
         python:
           options:
             heading_level: 3
-            paths: [dcr_core]
+            paths: [srv/dcr_core]
             show_root_heading: false
             show_source: true
   - search
