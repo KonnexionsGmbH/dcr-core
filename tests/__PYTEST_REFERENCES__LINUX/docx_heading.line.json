@@ -1,0 +1,2866 @@
+{
+    "documentId": 9,
+    "documentFileName": "docx_heading.pdf",
+    "noLinesFooter": 1,
+    "noLinesHeader": 0,
+    "noLinesInDocument": 308,
+    "noLinesToc": 0,
+    "noListsBulletInDocument": 0,
+    "noListsNumberInDocument": 7,
+    "noPagesInDocument": 5,
+    "noParagraphsInDocument": 77,
+    "noTablesInDocument": 1,
+    "noTitlesInDocument": 0,
+    "titles": [],
+    "pages": [
+        {
+            "pageNo": 1,
+            "noLinesInPage": 66,
+            "noParagraphsInPage": 10,
+            "lines": [
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 168.0,
+                    "lineNo": 1,
+                    "lineNoPage": 1,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "Start Document ..."
+                },
+                {
+                    "coordLLX": 216.6,
+                    "coordURX": 394.8,
+                    "lineNo": 2,
+                    "lineNoPage": 2,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "Konnexions Public License (KX-PL)"
+                },
+                {
+                    "coordLLX": 238.2,
+                    "coordURX": 373.2,
+                    "lineNo": 1,
+                    "lineNoPage": 3,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "Version 2020.05, May 2020"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 486.6,
+                    "lineNo": 2,
+                    "lineNoPage": 4,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "https://github.com/KonnexionsGmbH/shared_resources/blob/master/License/KX-PL-"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 130.2,
+                    "lineNo": 3,
+                    "lineNoPage": 5,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "2020.05.pdf"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 519.0,
+                    "lineNo": 4,
+                    "lineNoPage": 6,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "This license governs use of the accompanying software. If you use the software, you"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 497.4,
+                    "lineNo": 5,
+                    "lineNoPage": 7,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "accept this license. If you do not accept the license, do not use the software."
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 151.8,
+                    "lineNo": 1,
+                    "lineNoPage": 8,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "1. Definitions."
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 389.4,
+                    "lineNo": 1,
+                    "lineNoPage": 9,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "1.1 Heading Level 2 #1. Sentence 2. Sentence 3. Sentence 4."
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 225.6,
+                    "lineNo": 2,
+                    "lineNoPage": 10,
+                    "lineType": "ln",
+                    "paragraphNo": 4,
+                    "text": "(i) Heading Level 3 #1"
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 155.4,
+                    "lineNo": 3,
+                    "lineNoPage": 11,
+                    "lineType": "ln",
+                    "paragraphNo": 4,
+                    "text": "(ii) Xxxx"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 499.2,
+                    "lineNo": 4,
+                    "lineNoPage": 12,
+                    "lineType": "ln",
+                    "paragraphNo": 4,
+                    "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 504.6,
+                    "lineNo": 5,
+                    "lineNoPage": 13,
+                    "lineType": "ln",
+                    "paragraphNo": 4,
+                    "text": "nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 191.4,
+                    "lineNo": 6,
+                    "lineNoPage": 14,
+                    "lineType": "ln",
+                    "paragraphNo": 4,
+                    "text": "volutpat."
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 160.8,
+                    "lineNo": 1,
+                    "lineNoPage": 15,
+                    "lineType": "ln",
+                    "paragraphNo": 5,
+                    "text": "(iii) Yxxx"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 499.2,
+                    "lineNo": 2,
+                    "lineNoPage": 16,
+                    "lineType": "ln",
+                    "paragraphNo": 5,
+                    "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 504.6,
+                    "lineNo": 3,
+                    "lineNoPage": 17,
+                    "lineType": "ln",
+                    "paragraphNo": 5,
+                    "text": "nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 191.4,
+                    "lineNo": 4,
+                    "lineNoPage": 18,
+                    "lineType": "ln",
+                    "paragraphNo": 5,
+                    "text": "volutpat."
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 128.4,
+                    "lineNo": 1,
+                    "lineNoPage": 19,
+                    "lineType": "ln",
+                    "paragraphNo": 6,
+                    "text": "(iv)"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 499.2,
+                    "lineNo": 2,
+                    "lineNoPage": 20,
+                    "lineType": "ln",
+                    "paragraphNo": 6,
+                    "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 504.6,
+                    "lineNo": 3,
+                    "lineNoPage": 21,
+                    "lineType": "ln",
+                    "paragraphNo": 6,
+                    "text": "nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 191.4,
+                    "lineNo": 4,
+                    "lineNoPage": 22,
+                    "lineType": "ln",
+                    "paragraphNo": 6,
+                    "text": "volutpat."
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 225.6,
+                    "lineNo": 5,
+                    "lineNoPage": 23,
+                    "lineType": "ln",
+                    "paragraphNo": 6,
+                    "text": "(v) Heading Level 3 #2"
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 139.2,
+                    "lineNo": 6,
+                    "lineNoPage": 24,
+                    "lineType": "ln",
+                    "paragraphNo": 6,
+                    "text": "(vi) 6"
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 144.6,
+                    "lineNo": 7,
+                    "lineNoPage": 25,
+                    "lineType": "ln",
+                    "paragraphNo": 6,
+                    "text": "(vii) 7"
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 150.0,
+                    "lineNo": 8,
+                    "lineNoPage": 26,
+                    "lineType": "ln",
+                    "paragraphNo": 6,
+                    "text": "(viii) 8"
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 139.2,
+                    "lineNo": 9,
+                    "lineNoPage": 27,
+                    "lineType": "ln",
+                    "paragraphNo": 6,
+                    "text": "(ix) 9"
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 139.2,
+                    "lineNo": 10,
+                    "lineNoPage": 28,
+                    "lineType": "ln",
+                    "paragraphNo": 6,
+                    "text": "(x) 10"
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 144.6,
+                    "lineNo": 11,
+                    "lineNoPage": 29,
+                    "lineType": "ln",
+                    "paragraphNo": 6,
+                    "text": "(xi) 11"
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 150.0,
+                    "lineNo": 12,
+                    "lineNoPage": 30,
+                    "lineType": "ln",
+                    "paragraphNo": 6,
+                    "text": "(xii) 12"
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 155.4,
+                    "lineNo": 13,
+                    "lineNoPage": 31,
+                    "lineType": "ln",
+                    "paragraphNo": 6,
+                    "text": "(xiii) 13"
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 150.0,
+                    "lineNo": 14,
+                    "lineNoPage": 32,
+                    "lineType": "ln",
+                    "paragraphNo": 6,
+                    "text": "(xiv) 14"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 486.6,
+                    "lineNo": 15,
+                    "lineNoPage": 33,
+                    "lineType": "ln",
+                    "paragraphNo": 6,
+                    "text": "The terms \"reproduce\", \"reproduction\", \"derivative works\", and \"distribution\""
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 367.8,
+                    "lineNo": 16,
+                    "lineNoPage": 34,
+                    "lineType": "ln",
+                    "paragraphNo": 6,
+                    "text": "have the same meaning here as under U.S. copyright law."
+                },
+                {
+                    "coordLLX": 114.0,
+                    "coordURX": 243.6,
+                    "lineNo": 1,
+                    "lineNoPage": 35,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "(iii) Heading Level 3 #2"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 486.6,
+                    "lineNo": 2,
+                    "lineNoPage": 36,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "The terms \"reproduce\", \"reproduction\", \"derivative works\", and \"distribution\""
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 367.8,
+                    "lineNo": 3,
+                    "lineNoPage": 37,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "have the same meaning here as under U.S. copyright law."
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 231.0,
+                    "lineNo": 1,
+                    "lineNoPage": 38,
+                    "lineType": "b",
+                    "paragraphNo": 8,
+                    "text": "(ii) Heading Level 3 #2"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 486.6,
+                    "lineNo": 2,
+                    "lineNoPage": 39,
+                    "lineType": "b",
+                    "paragraphNo": 8,
+                    "text": "The terms \"reproduce\", \"reproduction\", \"derivative works\", and \"distribution\""
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 367.8,
+                    "lineNo": 3,
+                    "lineNoPage": 40,
+                    "lineType": "b",
+                    "paragraphNo": 8,
+                    "text": "have the same meaning here as under U.S. copyright law."
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 119.4,
+                    "lineNo": 4,
+                    "lineNoPage": 41,
+                    "lineType": "b",
+                    "paragraphNo": 8,
+                    "text": "A B C D E"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 189.6,
+                    "lineNo": 5,
+                    "lineNoPage": 42,
+                    "lineType": "b",
+                    "paragraphNo": 8,
+                    "text": "1.2 Heading Level 2 #2"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 497.4,
+                    "lineNo": 6,
+                    "lineNoPage": 43,
+                    "lineType": "b",
+                    "paragraphNo": 8,
+                    "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 416.4,
+                    "lineNo": 7,
+                    "lineNoPage": 44,
+                    "lineType": "b",
+                    "paragraphNo": 8,
+                    "text": "euismod tincidunt ut laoreet dolore magna aliquam erat volutpat."
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 189.6,
+                    "lineNo": 8,
+                    "lineNoPage": 45,
+                    "lineType": "b",
+                    "paragraphNo": 8,
+                    "text": "1.3 Heading Level 2 #2"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 470.4,
+                    "lineNo": 1,
+                    "lineNoPage": 46,
+                    "lineType": "b",
+                    "paragraphNo": 9,
+                    "text": "A \"contributor\" is any person that distributes its contribution under this"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 114.0,
+                    "lineNo": 2,
+                    "lineNoPage": 47,
+                    "lineType": "b",
+                    "paragraphNo": 9,
+                    "text": "license."
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 492.0,
+                    "lineNo": 3,
+                    "lineNoPage": 48,
+                    "lineType": "b",
+                    "paragraphNo": 9,
+                    "text": "\"Licensed patents\" are a contributor's patent claims that read directly on its"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 141.0,
+                    "lineNo": 4,
+                    "lineNoPage": 49,
+                    "lineType": "b",
+                    "paragraphNo": 9,
+                    "text": "contribution."
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 389.4,
+                    "lineNo": 5,
+                    "lineNoPage": 50,
+                    "lineType": "b",
+                    "paragraphNo": 9,
+                    "text": "1.4 Heading Level 2 #1. Sentence 2. Sentence 3. Sentence 4."
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 220.2,
+                    "lineNo": 6,
+                    "lineNoPage": 51,
+                    "lineType": "ln",
+                    "paragraphNo": 9,
+                    "text": "i. Heading Level 3 #1"
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 150.0,
+                    "lineNo": 7,
+                    "lineNoPage": 52,
+                    "lineType": "ln",
+                    "paragraphNo": 9,
+                    "text": "ii. Xxxx"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 499.2,
+                    "lineNo": 8,
+                    "lineNoPage": 53,
+                    "lineType": "ln",
+                    "paragraphNo": 9,
+                    "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 504.6,
+                    "lineNo": 9,
+                    "lineNoPage": 54,
+                    "lineType": "ln",
+                    "paragraphNo": 9,
+                    "text": "nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 191.4,
+                    "lineNo": 10,
+                    "lineNoPage": 55,
+                    "lineType": "ln",
+                    "paragraphNo": 9,
+                    "text": "volutpat."
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 155.4,
+                    "lineNo": 11,
+                    "lineNoPage": 56,
+                    "lineType": "ln",
+                    "paragraphNo": 9,
+                    "text": "iii. Yxxx"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 499.2,
+                    "lineNo": 12,
+                    "lineNoPage": 57,
+                    "lineType": "ln",
+                    "paragraphNo": 9,
+                    "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 504.6,
+                    "lineNo": 13,
+                    "lineNoPage": 58,
+                    "lineType": "ln",
+                    "paragraphNo": 9,
+                    "text": "nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 191.4,
+                    "lineNo": 14,
+                    "lineNoPage": 59,
+                    "lineType": "ln",
+                    "paragraphNo": 9,
+                    "text": "volutpat."
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 123.0,
+                    "lineNo": 15,
+                    "lineNoPage": 60,
+                    "lineType": "ln",
+                    "paragraphNo": 9,
+                    "text": "iv."
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 499.2,
+                    "lineNo": 16,
+                    "lineNoPage": 61,
+                    "lineType": "ln",
+                    "paragraphNo": 9,
+                    "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 504.6,
+                    "lineNo": 17,
+                    "lineNoPage": 62,
+                    "lineType": "ln",
+                    "paragraphNo": 9,
+                    "text": "nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 191.4,
+                    "lineNo": 18,
+                    "lineNoPage": 63,
+                    "lineType": "ln",
+                    "paragraphNo": 9,
+                    "text": "volutpat."
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 220.2,
+                    "lineNo": 19,
+                    "lineNoPage": 64,
+                    "lineType": "ln",
+                    "paragraphNo": 9,
+                    "text": "v. Heading Level 3 #2"
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 133.8,
+                    "lineNo": 20,
+                    "lineNoPage": 65,
+                    "lineType": "ln",
+                    "paragraphNo": 9,
+                    "text": "vi. 6"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 108.08,
+                    "lineNo": 1,
+                    "lineNoPage": 66,
+                    "lineType": "f",
+                    "paragraphNo": 10,
+                    "text": "Page | 1"
+                }
+            ]
+        },
+        {
+            "pageNo": 2,
+            "noLinesInPage": 64,
+            "noParagraphsInPage": 13,
+            "lines": [
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 139.2,
+                    "lineNo": 1,
+                    "lineNoPage": 1,
+                    "lineType": "ln",
+                    "paragraphNo": 1,
+                    "text": "vii. 7"
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 144.6,
+                    "lineNo": 2,
+                    "lineNoPage": 2,
+                    "lineType": "ln",
+                    "paragraphNo": 1,
+                    "text": "viii. 8"
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 133.8,
+                    "lineNo": 3,
+                    "lineNoPage": 3,
+                    "lineType": "ln",
+                    "paragraphNo": 1,
+                    "text": "ix. 9"
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 133.8,
+                    "lineNo": 4,
+                    "lineNoPage": 4,
+                    "lineType": "ln",
+                    "paragraphNo": 1,
+                    "text": "x. 10"
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 139.2,
+                    "lineNo": 5,
+                    "lineNoPage": 5,
+                    "lineType": "ln",
+                    "paragraphNo": 1,
+                    "text": "xi. 11"
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 144.6,
+                    "lineNo": 6,
+                    "lineNoPage": 6,
+                    "lineType": "ln",
+                    "paragraphNo": 1,
+                    "text": "xii. 12"
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 150.0,
+                    "lineNo": 7,
+                    "lineNoPage": 7,
+                    "lineType": "ln",
+                    "paragraphNo": 1,
+                    "text": "xiii. 13"
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 144.6,
+                    "lineNo": 8,
+                    "lineNoPage": 8,
+                    "lineType": "ln",
+                    "paragraphNo": 1,
+                    "text": "xiv. 14"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 173.4,
+                    "lineNo": 1,
+                    "lineNoPage": 9,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "2. Grant of Rights."
+                },
+                {
+                    "coordLLX": 103.2,
+                    "coordURX": 497.4,
+                    "lineNo": 1,
+                    "lineNoPage": 10,
+                    "lineType": "ln",
+                    "paragraphNo": 3,
+                    "text": "(a) Copyright Grant- Subject to the terms of this license, including the"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 108.6,
+                    "lineNo": 2,
+                    "lineNoPage": 11,
+                    "lineType": "ln",
+                    "paragraphNo": 3,
+                    "text": "license"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 475.8,
+                    "lineNo": 3,
+                    "lineNoPage": 12,
+                    "lineType": "ln",
+                    "paragraphNo": 3,
+                    "text": "conditions and limitations in section 3, each contributor grants you a nonexclusive,"
+                },
+                {
+                    "coordLLX": 130.2,
+                    "coordURX": 443.4,
+                    "lineNo": 4,
+                    "lineNoPage": 13,
+                    "lineType": "ln",
+                    "paragraphNo": 3,
+                    "text": "worldwide, royalty-free copyright license to reproduce its"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 470.4,
+                    "lineNo": 5,
+                    "lineNoPage": 14,
+                    "lineType": "ln",
+                    "paragraphNo": 3,
+                    "text": "contribution, prepare derivative works of its contribution, and distribute"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 378.6,
+                    "lineNo": 6,
+                    "lineNoPage": 15,
+                    "lineType": "ln",
+                    "paragraphNo": 3,
+                    "text": "its contribution or any derivative works that you create."
+                },
+                {
+                    "coordLLX": 103.2,
+                    "coordURX": 481.2,
+                    "lineNo": 1,
+                    "lineNoPage": 16,
+                    "lineType": "ln",
+                    "paragraphNo": 4,
+                    "text": "(b) Patent Grant- Subject to the terms of this license, including the"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 108.6,
+                    "lineNo": 2,
+                    "lineNoPage": 17,
+                    "lineType": "ln",
+                    "paragraphNo": 4,
+                    "text": "license"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 475.8,
+                    "lineNo": 3,
+                    "lineNoPage": 18,
+                    "lineType": "ln",
+                    "paragraphNo": 4,
+                    "text": "conditions and limitations in section 3, each contributor grants you a nonexclusive,"
+                },
+                {
+                    "coordLLX": 130.2,
+                    "coordURX": 459.6,
+                    "lineNo": 4,
+                    "lineNoPage": 19,
+                    "lineType": "ln",
+                    "paragraphNo": 4,
+                    "text": "worldwide, royalty-free license under its licensed patents to"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 481.2,
+                    "lineNo": 5,
+                    "lineNoPage": 20,
+                    "lineType": "ln",
+                    "paragraphNo": 4,
+                    "text": "make, have made, use, sell, offer for sale, import, and/or otherwise dispose"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 475.8,
+                    "lineNo": 6,
+                    "lineNoPage": 21,
+                    "lineType": "ln",
+                    "paragraphNo": 4,
+                    "text": "of its contribution in the software or derivative works of the contribution"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 157.2,
+                    "lineNo": 7,
+                    "lineNoPage": 22,
+                    "lineType": "ln",
+                    "paragraphNo": 4,
+                    "text": "in the software."
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 232.8,
+                    "lineNo": 1,
+                    "lineNoPage": 23,
+                    "lineType": "b",
+                    "paragraphNo": 5,
+                    "text": "3. Conditions and Limitations."
+                },
+                {
+                    "coordLLX": 103.2,
+                    "coordURX": 513.6,
+                    "lineNo": 2,
+                    "lineNoPage": 24,
+                    "lineType": "ln",
+                    "paragraphNo": 5,
+                    "text": "(a) No Trademark License- This license does not grant you rights to use any"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 286.8,
+                    "lineNo": 3,
+                    "lineNoPage": 25,
+                    "lineType": "ln",
+                    "paragraphNo": 5,
+                    "text": "contributors' name, logo, or trademarks."
+                },
+                {
+                    "coordLLX": 103.2,
+                    "coordURX": 502.8,
+                    "lineNo": 1,
+                    "lineNoPage": 26,
+                    "lineType": "ln",
+                    "paragraphNo": 6,
+                    "text": "(b) If you bring a patent claim against any contributor over patents that"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 87.0,
+                    "lineNo": 2,
+                    "lineNoPage": 27,
+                    "lineType": "ln",
+                    "paragraphNo": 6,
+                    "text": "you"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 421.8,
+                    "lineNo": 3,
+                    "lineNoPage": 28,
+                    "lineType": "ln",
+                    "paragraphNo": 6,
+                    "text": "claim is infringed by the software, your patent license from such"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 330.0,
+                    "lineNo": 4,
+                    "lineNoPage": 29,
+                    "lineType": "ln",
+                    "paragraphNo": 6,
+                    "text": "contributor to the software ends automatically.0"
+                },
+                {
+                    "coordLLX": 88.8,
+                    "coordURX": 128.4,
+                    "lineNo": 1,
+                    "lineNoPage": 30,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "(1) Test"
+                },
+                {
+                    "coordLLX": 124.8,
+                    "coordURX": 168.0,
+                    "lineNo": 2,
+                    "lineNoPage": 31,
+                    "lineType": "ln",
+                    "paragraphNo": 7,
+                    "text": "(i) Test"
+                },
+                {
+                    "coordLLX": 124.8,
+                    "coordURX": 481.2,
+                    "lineNo": 3,
+                    "lineNoPage": 32,
+                    "lineType": "ln",
+                    "paragraphNo": 7,
+                    "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam"
+                },
+                {
+                    "coordLLX": 124.8,
+                    "coordURX": 486.6,
+                    "lineNo": 4,
+                    "lineNoPage": 33,
+                    "lineType": "ln",
+                    "paragraphNo": 7,
+                    "text": "nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat"
+                },
+                {
+                    "coordLLX": 124.8,
+                    "coordURX": 173.4,
+                    "lineNo": 5,
+                    "lineNoPage": 34,
+                    "lineType": "ln",
+                    "paragraphNo": 7,
+                    "text": "volutpat."
+                },
+                {
+                    "coordLLX": 124.8,
+                    "coordURX": 173.4,
+                    "lineNo": 6,
+                    "lineNoPage": 35,
+                    "lineType": "ln",
+                    "paragraphNo": 7,
+                    "text": "(ii) Test"
+                },
+                {
+                    "coordLLX": 358.8,
+                    "coordURX": 402.0,
+                    "lineNo": 7,
+                    "lineNoPage": 36,
+                    "lineType": "ln",
+                    "paragraphNo": 7,
+                    "text": "(3) Test"
+                },
+                {
+                    "coordLLX": 358.8,
+                    "coordURX": 524.41,
+                    "lineNo": 8,
+                    "lineNoPage": 37,
+                    "lineType": "ln",
+                    "paragraphNo": 7,
+                    "text": "Lorem ipsum dolor sit amet,"
+                },
+                {
+                    "coordLLX": 358.8,
+                    "coordURX": 524.39,
+                    "lineNo": 9,
+                    "lineNoPage": 38,
+                    "lineType": "ln",
+                    "paragraphNo": 7,
+                    "text": "consectetuer adipiscing elit,"
+                },
+                {
+                    "coordLLX": 358.8,
+                    "coordURX": 524.39,
+                    "lineNo": 10,
+                    "lineNoPage": 39,
+                    "lineType": "ln",
+                    "paragraphNo": 7,
+                    "text": "sed diam nonummy nibh euismod"
+                },
+                {
+                    "coordLLX": 358.8,
+                    "coordURX": 524.39,
+                    "lineNo": 11,
+                    "lineNoPage": 40,
+                    "lineType": "ln",
+                    "paragraphNo": 7,
+                    "text": "tincidunt ut laoreet dolore"
+                },
+                {
+                    "coordLLX": 358.8,
+                    "coordURX": 510.0,
+                    "lineNo": 12,
+                    "lineNoPage": 41,
+                    "lineType": "ln",
+                    "paragraphNo": 7,
+                    "text": "magna aliquam erat volutpat."
+                },
+                {
+                    "coordLLX": 124.8,
+                    "coordURX": 168.0,
+                    "lineNo": 1,
+                    "lineNoPage": 42,
+                    "lineType": "b",
+                    "paragraphNo": 8,
+                    "text": "(4) Test"
+                },
+                {
+                    "coordLLX": 88.8,
+                    "coordURX": 128.4,
+                    "lineNo": 2,
+                    "lineNoPage": 43,
+                    "lineType": "b",
+                    "paragraphNo": 8,
+                    "text": "(2) Test"
+                },
+                {
+                    "coordLLX": 103.2,
+                    "coordURX": 486.6,
+                    "lineNo": 1,
+                    "lineNoPage": 44,
+                    "lineType": "b",
+                    "paragraphNo": 9,
+                    "text": "(c) If you distribute any portion of the software, you must retain all"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 124.8,
+                    "lineNo": 2,
+                    "lineNoPage": 45,
+                    "lineType": "b",
+                    "paragraphNo": 9,
+                    "text": "copyright,"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 481.2,
+                    "lineNo": 3,
+                    "lineNoPage": 46,
+                    "lineType": "b",
+                    "paragraphNo": 9,
+                    "text": "patent, trademark, and attribution notices that are present in the software."
+                },
+                {
+                    "coordLLX": 103.2,
+                    "coordURX": 508.2,
+                    "lineNo": 1,
+                    "lineNoPage": 47,
+                    "lineType": "b",
+                    "paragraphNo": 10,
+                    "text": "(d) If you distribute any portion of the software in source code form, you"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 103.2,
+                    "lineNo": 2,
+                    "lineNoPage": 48,
+                    "lineType": "b",
+                    "paragraphNo": 10,
+                    "text": "may do"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 481.2,
+                    "lineNo": 3,
+                    "lineNoPage": 49,
+                    "lineType": "b",
+                    "paragraphNo": 10,
+                    "text": "so only under this license by including a complete copy of this license with"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 481.2,
+                    "lineNo": 4,
+                    "lineNoPage": 50,
+                    "lineType": "b",
+                    "paragraphNo": 10,
+                    "text": "your distribution. If you distribute any portion of the software in compiled"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 470.4,
+                    "lineNo": 5,
+                    "lineNoPage": 51,
+                    "lineType": "b",
+                    "paragraphNo": 10,
+                    "text": "or object code form, you may only do so under a license that complies with"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 141.0,
+                    "lineNo": 6,
+                    "lineNoPage": 52,
+                    "lineType": "b",
+                    "paragraphNo": 10,
+                    "text": "this license."
+                },
+                {
+                    "coordLLX": 103.2,
+                    "coordURX": 497.4,
+                    "lineNo": 1,
+                    "lineNoPage": 53,
+                    "lineType": "b",
+                    "paragraphNo": 11,
+                    "text": "(e) The software is licensed \"as-is.\" You bear the risk of using it. The"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 470.4,
+                    "lineNo": 2,
+                    "lineNoPage": 54,
+                    "lineType": "b",
+                    "paragraphNo": 11,
+                    "text": "contributors give no express warranties, guarantees or conditions. You may"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 459.6,
+                    "lineNo": 3,
+                    "lineNoPage": 55,
+                    "lineType": "b",
+                    "paragraphNo": 11,
+                    "text": "have additional consumer rights under your local laws which this license"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 421.8,
+                    "lineNo": 4,
+                    "lineNoPage": 56,
+                    "lineType": "b",
+                    "paragraphNo": 11,
+                    "text": "cannot change. To the extent permitted under your local laws, the"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 486.6,
+                    "lineNo": 5,
+                    "lineNoPage": 57,
+                    "lineType": "b",
+                    "paragraphNo": 11,
+                    "text": "contributors exclude the implied warranties of merchantability, fitness for a"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 286.8,
+                    "lineNo": 6,
+                    "lineNoPage": 58,
+                    "lineType": "b",
+                    "paragraphNo": 11,
+                    "text": "particular purpose and non-infringement."
+                },
+                {
+                    "coordLLX": 103.2,
+                    "coordURX": 508.2,
+                    "lineNo": 1,
+                    "lineNoPage": 59,
+                    "lineType": "b",
+                    "paragraphNo": 12,
+                    "text": "(f) Source code usage under this License is limited to review, compilation"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 87.0,
+                    "lineNo": 2,
+                    "lineNoPage": 60,
+                    "lineType": "b",
+                    "paragraphNo": 12,
+                    "text": "and"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 454.2,
+                    "lineNo": 3,
+                    "lineNoPage": 61,
+                    "lineType": "b",
+                    "paragraphNo": 12,
+                    "text": "contributions. Contributions to Konnexions software products under this"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 486.6,
+                    "lineNo": 4,
+                    "lineNoPage": 62,
+                    "lineType": "b",
+                    "paragraphNo": 12,
+                    "text": "License may only be made in consultation with Konnexions GmbH and through the"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 313.8,
+                    "lineNo": 5,
+                    "lineNoPage": 63,
+                    "lineType": "b",
+                    "paragraphNo": 12,
+                    "text": "appropriate Konnexions software repositories."
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 108.08,
+                    "lineNo": 1,
+                    "lineNoPage": 64,
+                    "lineType": "f",
+                    "paragraphNo": 13,
+                    "text": "Page | 2"
+                }
+            ]
+        },
+        {
+            "pageNo": 3,
+            "noLinesInPage": 65,
+            "noParagraphsInPage": 21,
+            "lines": [
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 151.8,
+                    "lineNo": 1,
+                    "lineNoPage": 1,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "4. ARTICLE XXX."
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 438.0,
+                    "lineNo": 1,
+                    "lineNoPage": 2,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "ARTICLE AAA: Heading Level 2 #1. Sentence 2. Sentence 3. Sentence 4."
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 225.6,
+                    "lineNo": 2,
+                    "lineNoPage": 3,
+                    "lineType": "ln",
+                    "paragraphNo": 2,
+                    "text": "(a) Heading Level 3 #1"
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 150.0,
+                    "lineNo": 3,
+                    "lineNoPage": 4,
+                    "lineType": "ln",
+                    "paragraphNo": 2,
+                    "text": "(b) Xxxx"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 499.2,
+                    "lineNo": 4,
+                    "lineNoPage": 5,
+                    "lineType": "ln",
+                    "paragraphNo": 2,
+                    "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 504.6,
+                    "lineNo": 5,
+                    "lineNoPage": 6,
+                    "lineType": "ln",
+                    "paragraphNo": 2,
+                    "text": "nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 191.4,
+                    "lineNo": 6,
+                    "lineNoPage": 7,
+                    "lineType": "ln",
+                    "paragraphNo": 2,
+                    "text": "volutpat."
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 150.0,
+                    "lineNo": 1,
+                    "lineNoPage": 8,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "(a) Xxxx"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 499.2,
+                    "lineNo": 2,
+                    "lineNoPage": 9,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 504.6,
+                    "lineNo": 3,
+                    "lineNoPage": 10,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 191.4,
+                    "lineNo": 4,
+                    "lineNoPage": 11,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "volutpat."
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 438.0,
+                    "lineNo": 1,
+                    "lineNoPage": 12,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "ARTICLE BBB: Heading Level 2 #1. Sentence 2. Sentence 3. Sentence 4."
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 155.4,
+                    "lineNo": 1,
+                    "lineNoPage": 13,
+                    "lineType": "b",
+                    "paragraphNo": 5,
+                    "text": "(aa) Yxxx"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 499.2,
+                    "lineNo": 2,
+                    "lineNoPage": 14,
+                    "lineType": "b",
+                    "paragraphNo": 5,
+                    "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 504.6,
+                    "lineNo": 3,
+                    "lineNoPage": 15,
+                    "lineType": "b",
+                    "paragraphNo": 5,
+                    "text": "nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 191.4,
+                    "lineNo": 4,
+                    "lineNoPage": 16,
+                    "lineType": "b",
+                    "paragraphNo": 5,
+                    "text": "volutpat."
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 123.0,
+                    "lineNo": 1,
+                    "lineNoPage": 17,
+                    "lineType": "b",
+                    "paragraphNo": 6,
+                    "text": "(b)"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 499.2,
+                    "lineNo": 2,
+                    "lineNoPage": 18,
+                    "lineType": "b",
+                    "paragraphNo": 6,
+                    "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 504.6,
+                    "lineNo": 3,
+                    "lineNoPage": 19,
+                    "lineType": "b",
+                    "paragraphNo": 6,
+                    "text": "nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 191.4,
+                    "lineNo": 4,
+                    "lineNoPage": 20,
+                    "lineType": "b",
+                    "paragraphNo": 6,
+                    "text": "volutpat."
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 225.6,
+                    "lineNo": 1,
+                    "lineNoPage": 21,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "(c) Heading Level 3 #2"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 486.6,
+                    "lineNo": 2,
+                    "lineNoPage": 22,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "The terms \"reproduce\", \"reproduction\", \"derivative works\", and \"distribution\""
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 367.8,
+                    "lineNo": 3,
+                    "lineNoPage": 23,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "have the same meaning here as under U.S. copyright law."
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 141.0,
+                    "lineNo": 1,
+                    "lineNoPage": 24,
+                    "lineType": "b",
+                    "paragraphNo": 8,
+                    "text": "5. EXHIBIT A."
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 438.0,
+                    "lineNo": 2,
+                    "lineNoPage": 25,
+                    "lineType": "b",
+                    "paragraphNo": 8,
+                    "text": "ARTICLE AAA: Heading Level 2 #1. Sentence 2. Sentence 3. Sentence 4."
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 155.4,
+                    "lineNo": 1,
+                    "lineNoPage": 26,
+                    "lineType": "b",
+                    "paragraphNo": 9,
+                    "text": "EXHIBIT A"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 499.2,
+                    "lineNo": 2,
+                    "lineNoPage": 27,
+                    "lineType": "b",
+                    "paragraphNo": 9,
+                    "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 504.6,
+                    "lineNo": 3,
+                    "lineNoPage": 28,
+                    "lineType": "b",
+                    "paragraphNo": 9,
+                    "text": "nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 191.4,
+                    "lineNo": 4,
+                    "lineNoPage": 29,
+                    "lineType": "b",
+                    "paragraphNo": 9,
+                    "text": "volutpat."
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 155.4,
+                    "lineNo": 1,
+                    "lineNoPage": 30,
+                    "lineType": "b",
+                    "paragraphNo": 10,
+                    "text": "EXHIBIT B"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 499.2,
+                    "lineNo": 2,
+                    "lineNoPage": 31,
+                    "lineType": "b",
+                    "paragraphNo": 10,
+                    "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 504.6,
+                    "lineNo": 3,
+                    "lineNoPage": 32,
+                    "lineType": "b",
+                    "paragraphNo": 10,
+                    "text": "nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 191.4,
+                    "lineNo": 4,
+                    "lineNoPage": 33,
+                    "lineType": "b",
+                    "paragraphNo": 10,
+                    "text": "volutpat."
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 155.4,
+                    "lineNo": 1,
+                    "lineNoPage": 34,
+                    "lineType": "b",
+                    "paragraphNo": 11,
+                    "text": "EXHIBIT A"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 499.2,
+                    "lineNo": 2,
+                    "lineNoPage": 35,
+                    "lineType": "b",
+                    "paragraphNo": 11,
+                    "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 504.6,
+                    "lineNo": 3,
+                    "lineNoPage": 36,
+                    "lineType": "b",
+                    "paragraphNo": 11,
+                    "text": "nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 191.4,
+                    "lineNo": 4,
+                    "lineNoPage": 37,
+                    "lineType": "b",
+                    "paragraphNo": 11,
+                    "text": "volutpat."
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 438.0,
+                    "lineNo": 1,
+                    "lineNoPage": 38,
+                    "lineType": "b",
+                    "paragraphNo": 12,
+                    "text": "ARTICLE BBB: Heading Level 2 #1. Sentence 2. Sentence 3. Sentence 4."
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 155.4,
+                    "lineNo": 1,
+                    "lineNoPage": 39,
+                    "lineType": "b",
+                    "paragraphNo": 13,
+                    "text": "(aa) Yxxx"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 499.2,
+                    "lineNo": 2,
+                    "lineNoPage": 40,
+                    "lineType": "b",
+                    "paragraphNo": 13,
+                    "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 504.6,
+                    "lineNo": 3,
+                    "lineNoPage": 41,
+                    "lineType": "b",
+                    "paragraphNo": 13,
+                    "text": "nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 191.4,
+                    "lineNo": 4,
+                    "lineNoPage": 42,
+                    "lineType": "b",
+                    "paragraphNo": 13,
+                    "text": "volutpat."
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 123.0,
+                    "lineNo": 1,
+                    "lineNoPage": 43,
+                    "lineType": "b",
+                    "paragraphNo": 14,
+                    "text": "(b)"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 499.2,
+                    "lineNo": 2,
+                    "lineNoPage": 44,
+                    "lineType": "b",
+                    "paragraphNo": 14,
+                    "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 504.6,
+                    "lineNo": 3,
+                    "lineNoPage": 45,
+                    "lineType": "b",
+                    "paragraphNo": 14,
+                    "text": "nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 191.4,
+                    "lineNo": 4,
+                    "lineNoPage": 46,
+                    "lineType": "b",
+                    "paragraphNo": 14,
+                    "text": "volutpat."
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 225.6,
+                    "lineNo": 1,
+                    "lineNoPage": 47,
+                    "lineType": "b",
+                    "paragraphNo": 15,
+                    "text": "(c) Heading Level 3 #2"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 486.6,
+                    "lineNo": 2,
+                    "lineNoPage": 48,
+                    "lineType": "b",
+                    "paragraphNo": 15,
+                    "text": "The terms \"reproduce\", \"reproduction\", \"derivative works\", and \"distribution\""
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 367.8,
+                    "lineNo": 3,
+                    "lineNoPage": 49,
+                    "lineType": "b",
+                    "paragraphNo": 15,
+                    "text": "have the same meaning here as under U.S. copyright law."
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 173.4,
+                    "lineNo": 1,
+                    "lineNoPage": 50,
+                    "lineType": "b",
+                    "paragraphNo": 16,
+                    "text": "6. Section 999.999."
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 438.0,
+                    "lineNo": 2,
+                    "lineNoPage": 51,
+                    "lineType": "b",
+                    "paragraphNo": 16,
+                    "text": "ARTICLE AAA: Heading Level 2 #1. Sentence 2. Sentence 3. Sentence 4."
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 144.6,
+                    "lineNo": 1,
+                    "lineNoPage": 52,
+                    "lineType": "b",
+                    "paragraphNo": 17,
+                    "text": "001.001"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 499.2,
+                    "lineNo": 2,
+                    "lineNoPage": 53,
+                    "lineType": "b",
+                    "paragraphNo": 17,
+                    "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 504.6,
+                    "lineNo": 3,
+                    "lineNoPage": 54,
+                    "lineType": "b",
+                    "paragraphNo": 17,
+                    "text": "nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 191.4,
+                    "lineNo": 4,
+                    "lineNoPage": 55,
+                    "lineType": "b",
+                    "paragraphNo": 17,
+                    "text": "volutpat."
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 144.6,
+                    "lineNo": 1,
+                    "lineNoPage": 56,
+                    "lineType": "b",
+                    "paragraphNo": 18,
+                    "text": "001.002"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 499.2,
+                    "lineNo": 2,
+                    "lineNoPage": 57,
+                    "lineType": "b",
+                    "paragraphNo": 18,
+                    "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 504.6,
+                    "lineNo": 3,
+                    "lineNoPage": 58,
+                    "lineType": "b",
+                    "paragraphNo": 18,
+                    "text": "nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 191.4,
+                    "lineNo": 4,
+                    "lineNoPage": 59,
+                    "lineType": "b",
+                    "paragraphNo": 18,
+                    "text": "volutpat."
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 144.6,
+                    "lineNo": 1,
+                    "lineNoPage": 60,
+                    "lineType": "b",
+                    "paragraphNo": 19,
+                    "text": "001.001"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 499.2,
+                    "lineNo": 2,
+                    "lineNoPage": 61,
+                    "lineType": "b",
+                    "paragraphNo": 19,
+                    "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 504.6,
+                    "lineNo": 3,
+                    "lineNoPage": 62,
+                    "lineType": "b",
+                    "paragraphNo": 19,
+                    "text": "nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 191.4,
+                    "lineNo": 4,
+                    "lineNoPage": 63,
+                    "lineType": "b",
+                    "paragraphNo": 19,
+                    "text": "volutpat."
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 144.6,
+                    "lineNo": 1,
+                    "lineNoPage": 64,
+                    "lineType": "b",
+                    "paragraphNo": 20,
+                    "text": "001.503"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 108.08,
+                    "lineNo": 1,
+                    "lineNoPage": 65,
+                    "lineType": "f",
+                    "paragraphNo": 21,
+                    "text": "Page | 3"
+                }
+            ]
+        },
+        {
+            "pageNo": 4,
+            "noLinesInPage": 66,
+            "noParagraphsInPage": 25,
+            "lines": [
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 499.2,
+                    "lineNo": 1,
+                    "lineNoPage": 1,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 504.6,
+                    "lineNo": 2,
+                    "lineNoPage": 2,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 191.4,
+                    "lineNo": 3,
+                    "lineNoPage": 3,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "volutpat."
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 144.6,
+                    "lineNo": 1,
+                    "lineNoPage": 4,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "002.004"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 499.2,
+                    "lineNo": 2,
+                    "lineNoPage": 5,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 504.6,
+                    "lineNo": 3,
+                    "lineNoPage": 6,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 191.4,
+                    "lineNo": 4,
+                    "lineNoPage": 7,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "volutpat."
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 144.6,
+                    "lineNo": 1,
+                    "lineNoPage": 8,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "003.003"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 477.6,
+                    "lineNo": 2,
+                    "lineNoPage": 9,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "The terms \"reproduce\", \"reproduction\", \"derivative works\", and"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 218.4,
+                    "lineNo": 3,
+                    "lineNoPage": 10,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "\"distribution\""
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 367.8,
+                    "lineNo": 4,
+                    "lineNoPage": 11,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "have the same meaning here as under U.S. copyright law."
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 146.4,
+                    "lineNo": 1,
+                    "lineNoPage": 12,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "7. Article 999"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 438.0,
+                    "lineNo": 2,
+                    "lineNoPage": 13,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "ARTICLE AAA: Heading Level 2 #1. Sentence 2. Sentence 3. Sentence 4."
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 160.8,
+                    "lineNo": 1,
+                    "lineNoPage": 14,
+                    "lineType": "b",
+                    "paragraphNo": 5,
+                    "text": "Article 1:"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 499.2,
+                    "lineNo": 2,
+                    "lineNoPage": 15,
+                    "lineType": "b",
+                    "paragraphNo": 5,
+                    "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 504.6,
+                    "lineNo": 3,
+                    "lineNoPage": 16,
+                    "lineType": "b",
+                    "paragraphNo": 5,
+                    "text": "nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 191.4,
+                    "lineNo": 4,
+                    "lineNoPage": 17,
+                    "lineType": "b",
+                    "paragraphNo": 5,
+                    "text": "volutpat."
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 160.8,
+                    "lineNo": 1,
+                    "lineNoPage": 18,
+                    "lineType": "b",
+                    "paragraphNo": 6,
+                    "text": "Article 2:"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 499.2,
+                    "lineNo": 2,
+                    "lineNoPage": 19,
+                    "lineType": "b",
+                    "paragraphNo": 6,
+                    "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 504.6,
+                    "lineNo": 3,
+                    "lineNoPage": 20,
+                    "lineType": "b",
+                    "paragraphNo": 6,
+                    "text": "nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 191.4,
+                    "lineNo": 4,
+                    "lineNoPage": 21,
+                    "lineType": "b",
+                    "paragraphNo": 6,
+                    "text": "volutpat."
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 160.8,
+                    "lineNo": 1,
+                    "lineNoPage": 22,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "Article 3:"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 499.2,
+                    "lineNo": 2,
+                    "lineNoPage": 23,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 504.6,
+                    "lineNo": 3,
+                    "lineNoPage": 24,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 191.4,
+                    "lineNo": 4,
+                    "lineNoPage": 25,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "volutpat."
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 160.8,
+                    "lineNo": 1,
+                    "lineNoPage": 26,
+                    "lineType": "b",
+                    "paragraphNo": 8,
+                    "text": "Article 2:"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 499.2,
+                    "lineNo": 2,
+                    "lineNoPage": 27,
+                    "lineType": "b",
+                    "paragraphNo": 8,
+                    "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 504.6,
+                    "lineNo": 3,
+                    "lineNoPage": 28,
+                    "lineType": "b",
+                    "paragraphNo": 8,
+                    "text": "nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 191.4,
+                    "lineNo": 4,
+                    "lineNoPage": 29,
+                    "lineType": "b",
+                    "paragraphNo": 8,
+                    "text": "volutpat."
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 160.8,
+                    "lineNo": 1,
+                    "lineNoPage": 30,
+                    "lineType": "b",
+                    "paragraphNo": 9,
+                    "text": "Article 4:"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 499.2,
+                    "lineNo": 2,
+                    "lineNoPage": 31,
+                    "lineType": "b",
+                    "paragraphNo": 9,
+                    "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 504.6,
+                    "lineNo": 3,
+                    "lineNoPage": 32,
+                    "lineType": "b",
+                    "paragraphNo": 9,
+                    "text": "nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 191.4,
+                    "lineNo": 4,
+                    "lineNoPage": 33,
+                    "lineType": "b",
+                    "paragraphNo": 9,
+                    "text": "volutpat."
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 160.8,
+                    "lineNo": 1,
+                    "lineNoPage": 34,
+                    "lineType": "b",
+                    "paragraphNo": 10,
+                    "text": "Article 3:"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 477.6,
+                    "lineNo": 2,
+                    "lineNoPage": 35,
+                    "lineType": "b",
+                    "paragraphNo": 10,
+                    "text": "The terms \"reproduce\", \"reproduction\", \"derivative works\", and"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 520.8,
+                    "lineNo": 3,
+                    "lineNoPage": 36,
+                    "lineType": "b",
+                    "paragraphNo": 10,
+                    "text": "\"distribution\" have the same meaning here as under U.S. copyright law."
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 114.0,
+                    "lineNo": 1,
+                    "lineNoPage": 37,
+                    "lineType": "b",
+                    "paragraphNo": 11,
+                    "text": "8. Table"
+                },
+                {
+                    "coordLLX": 76.56,
+                    "coordURX": 81.96,
+                    "lineNo": 1,
+                    "lineNoPage": 38,
+                    "lineType": "tab",
+                    "paragraphNo": 12,
+                    "text": "A",
+                    "columnNo": 1,
+                    "rowNo": 1
+                },
+                {
+                    "coordLLX": 189.72,
+                    "coordURX": 195.12,
+                    "lineNo": 1,
+                    "lineNoPage": 39,
+                    "lineType": "tab",
+                    "paragraphNo": 13,
+                    "text": "B",
+                    "columnNo": 2,
+                    "rowNo": 1
+                },
+                {
+                    "coordLLX": 303.0,
+                    "coordURX": 308.4,
+                    "lineNo": 1,
+                    "lineNoPage": 40,
+                    "lineType": "tab",
+                    "paragraphNo": 14,
+                    "text": "C",
+                    "columnNo": 3,
+                    "rowNo": 1
+                },
+                {
+                    "coordLLX": 416.28,
+                    "coordURX": 421.68,
+                    "lineNo": 1,
+                    "lineNoPage": 41,
+                    "lineType": "tab",
+                    "paragraphNo": 15,
+                    "text": "D",
+                    "columnNo": 4,
+                    "rowNo": 1
+                },
+                {
+                    "coordLLX": 76.56,
+                    "coordURX": 92.76,
+                    "lineNo": 1,
+                    "lineNoPage": 42,
+                    "lineType": "tab",
+                    "paragraphNo": 16,
+                    "text": "1.1",
+                    "columnNo": 1,
+                    "rowNo": 2
+                },
+                {
+                    "columnNo": 2,
+                    "coordLLX": 189.72,
+                    "coordURX": 211.32,
+                    "lineNo": 1,
+                    "lineNoPage": 43,
+                    "lineType": "tab",
+                    "paragraphNo": 16,
+                    "rowNo": 2,
+                    "text": ""
+                },
+                {
+                    "columnNo": 3,
+                    "coordLLX": 303.0,
+                    "coordURX": 324.6,
+                    "lineNo": 1,
+                    "lineNoPage": 43,
+                    "lineType": "tab",
+                    "paragraphNo": 16,
+                    "rowNo": 2,
+                    "text": ""
+                },
+                {
+                    "coordLLX": 416.28,
+                    "coordURX": 432.48,
+                    "lineNo": 1,
+                    "lineNoPage": 43,
+                    "lineType": "tab",
+                    "paragraphNo": 17,
+                    "text": "1.4",
+                    "columnNo": 4,
+                    "rowNo": 2
+                },
+                {
+                    "coordLLX": 76.56,
+                    "coordURX": 92.76,
+                    "lineNo": 1,
+                    "lineNoPage": 44,
+                    "lineType": "tab",
+                    "paragraphNo": 18,
+                    "text": "2.1",
+                    "columnNo": 1,
+                    "rowNo": 3
+                },
+                {
+                    "coordLLX": 189.72,
+                    "coordURX": 205.92,
+                    "lineNo": 1,
+                    "lineNoPage": 45,
+                    "lineType": "tab",
+                    "paragraphNo": 19,
+                    "text": "2.2",
+                    "columnNo": 2,
+                    "rowNo": 3
+                },
+                {
+                    "coordLLX": 303.0,
+                    "coordURX": 319.2,
+                    "lineNo": 1,
+                    "lineNoPage": 46,
+                    "lineType": "tab",
+                    "paragraphNo": 20,
+                    "text": "2.3",
+                    "columnNo": 3,
+                    "rowNo": 3
+                },
+                {
+                    "coordLLX": 416.28,
+                    "coordURX": 432.48,
+                    "lineNo": 1,
+                    "lineNoPage": 47,
+                    "lineType": "tab",
+                    "paragraphNo": 21,
+                    "text": "2.4",
+                    "columnNo": 4,
+                    "rowNo": 3
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 103.2,
+                    "lineNo": 1,
+                    "lineNoPage": 48,
+                    "lineType": "b",
+                    "paragraphNo": 22,
+                    "text": "9. (A)"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 438.0,
+                    "lineNo": 2,
+                    "lineNoPage": 49,
+                    "lineType": "b",
+                    "paragraphNo": 22,
+                    "text": "ARTICLE AAA: Heading Level 2 #1. Sentence 2. Sentence 3. Sentence 4."
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 123.0,
+                    "lineNo": 1,
+                    "lineNoPage": 50,
+                    "lineType": "ln",
+                    "paragraphNo": 23,
+                    "text": "(A)"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 499.2,
+                    "lineNo": 2,
+                    "lineNoPage": 51,
+                    "lineType": "ln",
+                    "paragraphNo": 23,
+                    "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 504.6,
+                    "lineNo": 3,
+                    "lineNoPage": 52,
+                    "lineType": "ln",
+                    "paragraphNo": 23,
+                    "text": "nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 191.4,
+                    "lineNo": 4,
+                    "lineNoPage": 53,
+                    "lineType": "ln",
+                    "paragraphNo": 23,
+                    "text": "volutpat."
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 123.0,
+                    "lineNo": 1,
+                    "lineNoPage": 54,
+                    "lineType": "ln",
+                    "paragraphNo": 24,
+                    "text": "(B)"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 499.2,
+                    "lineNo": 2,
+                    "lineNoPage": 55,
+                    "lineType": "ln",
+                    "paragraphNo": 24,
+                    "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 504.6,
+                    "lineNo": 3,
+                    "lineNoPage": 56,
+                    "lineType": "ln",
+                    "paragraphNo": 24,
+                    "text": "nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 191.4,
+                    "lineNo": 4,
+                    "lineNoPage": 57,
+                    "lineType": "ln",
+                    "paragraphNo": 24,
+                    "text": "volutpat."
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 501.0,
+                    "lineNo": 5,
+                    "lineNoPage": 58,
+                    "lineType": "b",
+                    "paragraphNo": 24,
+                    "text": "(a) Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam"
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 522.6,
+                    "lineNo": 6,
+                    "lineNoPage": 59,
+                    "lineType": "b",
+                    "paragraphNo": 24,
+                    "text": "nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat."
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 501.0,
+                    "lineNo": 7,
+                    "lineNoPage": 60,
+                    "lineType": "b",
+                    "paragraphNo": 24,
+                    "text": "(i) Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam"
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 522.6,
+                    "lineNo": 8,
+                    "lineNoPage": 61,
+                    "lineType": "b",
+                    "paragraphNo": 24,
+                    "text": "nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat."
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 484.8,
+                    "lineNo": 9,
+                    "lineNoPage": 62,
+                    "lineType": "b",
+                    "paragraphNo": 24,
+                    "text": "(C) Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam"
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 522.6,
+                    "lineNo": 10,
+                    "lineNoPage": 63,
+                    "lineType": "b",
+                    "paragraphNo": 24,
+                    "text": "nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat."
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 484.8,
+                    "lineNo": 11,
+                    "lineNoPage": 64,
+                    "lineType": "b",
+                    "paragraphNo": 24,
+                    "text": "(C) Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam"
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 522.6,
+                    "lineNo": 12,
+                    "lineNoPage": 65,
+                    "lineType": "b",
+                    "paragraphNo": 24,
+                    "text": "nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat."
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 108.08,
+                    "lineNo": 1,
+                    "lineNoPage": 66,
+                    "lineType": "f",
+                    "paragraphNo": 25,
+                    "text": "Page | 4"
+                }
+            ]
+        },
+        {
+            "pageNo": 5,
+            "noLinesInPage": 47,
+            "noParagraphsInPage": 8,
+            "lines": [
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 123.0,
+                    "lineNo": 1,
+                    "lineNoPage": 1,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "(B)"
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 123.0,
+                    "lineNo": 1,
+                    "lineNoPage": 2,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "(D)"
+                },
+                {
+                    "coordLLX": 106.8,
+                    "coordURX": 123.0,
+                    "lineNo": 1,
+                    "lineNoPage": 3,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "(E)"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 499.2,
+                    "lineNo": 1,
+                    "lineNoPage": 4,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 504.6,
+                    "lineNo": 2,
+                    "lineNoPage": 5,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 191.4,
+                    "lineNo": 3,
+                    "lineNoPage": 6,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "volutpat."
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 499.2,
+                    "lineNo": 1,
+                    "lineNoPage": 7,
+                    "lineType": "b",
+                    "paragraphNo": 5,
+                    "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 504.6,
+                    "lineNo": 2,
+                    "lineNoPage": 8,
+                    "lineType": "b",
+                    "paragraphNo": 5,
+                    "text": "nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 191.4,
+                    "lineNo": 3,
+                    "lineNoPage": 9,
+                    "lineType": "b",
+                    "paragraphNo": 5,
+                    "text": "volutpat."
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 477.6,
+                    "lineNo": 1,
+                    "lineNoPage": 10,
+                    "lineType": "b",
+                    "paragraphNo": 6,
+                    "text": "The terms \"reproduce\", \"reproduction\", \"derivative works\", and"
+                },
+                {
+                    "coordLLX": 142.8,
+                    "coordURX": 520.8,
+                    "lineNo": 2,
+                    "lineNoPage": 11,
+                    "lineType": "b",
+                    "paragraphNo": 6,
+                    "text": "\"distribution\" have the same meaning here as under U.S. copyright law."
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 168.0,
+                    "lineNo": 1,
+                    "lineNoPage": 12,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "10. Format 999.999"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 135.6,
+                    "lineNo": 2,
+                    "lineNoPage": 13,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "aaaaaaaaaaaa"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 129.36,
+                    "lineNo": 3,
+                    "lineNoPage": 14,
+                    "lineType": "h_1",
+                    "paragraphNo": 7,
+                    "text": "1.0 Start"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 146.4,
+                    "lineNo": 4,
+                    "lineNoPage": 15,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "bbbbbbbbbbbbbb"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 135.6,
+                    "lineNo": 5,
+                    "lineNoPage": 16,
+                    "lineType": "h_2",
+                    "paragraphNo": 7,
+                    "text": "1.001 3. Dez"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 135.6,
+                    "lineNo": 6,
+                    "lineNoPage": 17,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "cccccccccccc"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 135.6,
+                    "lineNo": 7,
+                    "lineNoPage": 18,
+                    "lineType": "h_3",
+                    "paragraphNo": 7,
+                    "text": "1.010 2. Dez"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 135.6,
+                    "lineNo": 8,
+                    "lineNoPage": 19,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "dddddddddddd"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 135.6,
+                    "lineNo": 9,
+                    "lineNoPage": 20,
+                    "lineType": "h_4",
+                    "paragraphNo": 7,
+                    "text": "1.100 1. Dez"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 135.6,
+                    "lineNo": 10,
+                    "lineNoPage": 21,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "eeeeeeeeeeee"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 124.8,
+                    "lineNo": 11,
+                    "lineNoPage": 22,
+                    "lineType": "h_4",
+                    "paragraphNo": 7,
+                    "text": "2.000 Ganz"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 162.6,
+                    "lineNo": 12,
+                    "lineNoPage": 23,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "11. Format 999.99"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 135.6,
+                    "lineNo": 13,
+                    "lineNoPage": 24,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "aaaaaaaaaaaa"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 124.8,
+                    "lineNo": 14,
+                    "lineNoPage": 25,
+                    "lineType": "h_5",
+                    "paragraphNo": 7,
+                    "text": "1.00 Start"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 135.6,
+                    "lineNo": 15,
+                    "lineNoPage": 26,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "bbbbbbbbbbbb"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 130.2,
+                    "lineNo": 16,
+                    "lineNoPage": 27,
+                    "lineType": "h_6",
+                    "paragraphNo": 7,
+                    "text": "1.01 2. Dez"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 135.6,
+                    "lineNo": 17,
+                    "lineNoPage": 28,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "cccccccccccc"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 130.2,
+                    "lineNo": 18,
+                    "lineNoPage": 29,
+                    "lineType": "h_7",
+                    "paragraphNo": 7,
+                    "text": "1.10 1. Dez"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 130.2,
+                    "lineNo": 19,
+                    "lineNoPage": 30,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "Ddddddddddd"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 119.4,
+                    "lineNo": 20,
+                    "lineNoPage": 31,
+                    "lineType": "h_7",
+                    "paragraphNo": 7,
+                    "text": "2.00 Ganz"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 151.8,
+                    "lineNo": 21,
+                    "lineNoPage": 32,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "eeeeeeeeeeeeeee"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 157.2,
+                    "lineNo": 22,
+                    "lineNoPage": 33,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "12. Format 999.9"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 146.4,
+                    "lineNo": 23,
+                    "lineNoPage": 34,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "aaaaaaaaaaaaaa"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 119.4,
+                    "lineNo": 24,
+                    "lineNoPage": 35,
+                    "lineType": "h_8",
+                    "paragraphNo": 7,
+                    "text": "1.0 Start"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 146.4,
+                    "lineNo": 25,
+                    "lineNoPage": 36,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "bbbbbbbbbbbbbb"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 124.8,
+                    "lineNo": 26,
+                    "lineNoPage": 37,
+                    "lineType": "h_9",
+                    "paragraphNo": 7,
+                    "text": "1.1 1. Dez"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 146.4,
+                    "lineNo": 27,
+                    "lineNoPage": 38,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "cccccccccccccc"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 114.0,
+                    "lineNo": 28,
+                    "lineNoPage": 39,
+                    "lineType": "h_9",
+                    "paragraphNo": 7,
+                    "text": "2.0 Ganz"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 146.4,
+                    "lineNo": 29,
+                    "lineNoPage": 40,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "dddddddddddddd"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 162.6,
+                    "lineNo": 30,
+                    "lineNoPage": 41,
+                    "lineType": "h_10",
+                    "paragraphNo": 7,
+                    "text": "1.9 Not ascending"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 146.4,
+                    "lineNo": 31,
+                    "lineNoPage": 42,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "dddddddddddddd"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 119.4,
+                    "lineNo": 32,
+                    "lineNoPage": 43,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "13. Table"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 151.8,
+                    "lineNo": 33,
+                    "lineNoPage": 44,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "eeeeeeeeeeeeeee"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 157.2,
+                    "lineNo": 34,
+                    "lineNoPage": 45,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "... End Document"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 119.4,
+                    "lineNo": 35,
+                    "lineNoPage": 46,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "14. Table"
+                },
+                {
+                    "coordLLX": 70.8,
+                    "coordURX": 108.08,
+                    "lineNo": 1,
+                    "lineNoPage": 47,
+                    "lineType": "f",
+                    "paragraphNo": 8,
+                    "text": "Page | 5"
+                }
+            ]
+        }
+    ]
+}

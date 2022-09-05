@@ -1,0 +1,2021 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created by the PDFlib Text and Image Extraction Toolkit TET (www.pdflib.com) -->
+<TET xmlns="http://www.pdflib.com/XML/TET5/TET-5.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.pdflib.com/XML/TET5/TET-5.0
+ http://www.pdflib.com/XML/TET5/TET-5.0.xsd"
+ version="5.2">
+<Creation platform="Linux-x64" tetVersion="5.3" date="2022-09-05T13:42:26+02:00" />
+<Document filename="data/inbox_dev_accepted/pdf_toc_line_bullet_list.pdf" pageCount="7" filesize="113098" linearized="true" pdfVersion="1.5" tagged="true">
+<DocInfo>
+<Author>Walter Weinmann</Author>
+<CreationDate>2022-07-13T09:52:35+02:00</CreationDate>
+<Creator>Acrobat PDFMaker 11 for Word</Creator>
+<ModDate>2022-07-13T09:52:36+02:00</ModDate>
+<Producer>Adobe PDF Library 11.0</Producer>
+<Custom key="SourceModified">D:20220713075227</Custom>
+<Custom key="ContentTypeId">0x0101006EDDDB5EE6D98C44930B742096920B300400F5B6D36B3EF94B4E9A635CDF2A18F5B8</Custom>
+</DocInfo>
+<Metadata>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.4-c006 80.159825, 2016/09/16-03:31:08        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""
+            xmlns:xmp="http://ns.adobe.com/xap/1.0/"
+            xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/"
+            xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:pdf="http://ns.adobe.com/pdf/1.3/"
+            xmlns:pdfx="http://ns.adobe.com/pdfx/1.3/">
+         <xmp:ModifyDate>2022-07-13T09:52:36+02:00</xmp:ModifyDate>
+         <xmp:CreateDate>2022-07-13T09:52:35+02:00</xmp:CreateDate>
+         <xmp:MetadataDate>2022-07-13T09:52:36+02:00</xmp:MetadataDate>
+         <xmp:CreatorTool>Acrobat PDFMaker 11 for Word</xmp:CreatorTool>
+         <xmpMM:DocumentID>uuid:4e74eb60-d90a-4ce9-92a6-13b1407e8a3d</xmpMM:DocumentID>
+         <xmpMM:InstanceID>uuid:5c74a5df-1a6f-45da-8d32-4270a852f32d</xmpMM:InstanceID>
+         <xmpMM:subject>
+            <rdf:Seq>
+               <rdf:li>6</rdf:li>
+            </rdf:Seq>
+         </xmpMM:subject>
+         <dc:format>application/pdf</dc:format>
+         <dc:title>
+            <rdf:Alt>
+               <rdf:li xml:lang="x-default"/>
+            </rdf:Alt>
+         </dc:title>
+         <dc:description>
+            <rdf:Alt>
+               <rdf:li xml:lang="x-default"/>
+            </rdf:Alt>
+         </dc:description>
+         <dc:creator>
+            <rdf:Seq>
+               <rdf:li>Walter Weinmann</rdf:li>
+            </rdf:Seq>
+         </dc:creator>
+         <pdf:Producer>Adobe PDF Library 11.0</pdf:Producer>
+         <pdf:Keywords/>
+         <pdfx:SourceModified>D:20220713075227</pdfx:SourceModified>
+         <pdfx:Company/>
+         <pdfx:Comments/>
+         <pdfx:InternalTags/>
+         <pdfx:ContentTypeId>0x0101006EDDDB5EE6D98C44930B742096920B300400F5B6D36B3EF94B4E9A635CDF2A18F5B8</pdfx:ContentTypeId>
+         <pdfx:FeatureTags/>
+         <pdfx:LocalizationTags/>
+         <pdfx:CampaignTags/>
+         <pdfx:ScenarioTags/>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta>
+</Metadata>
+<Options>tetml={filename={data/inbox_dev_accepted/pdf_toc_line_bullet_list.word.xml}} engines={noannotation noimage text notextcolor novector}</Options>
+<Bookmarks>
+<Bookmark open="true" destination="D0">
+ <Title>Heading 1.1</Title>
+ <Action type="GoTo" trigger="activate"/>
+ <Bookmark destination="D1">
+  <Title>Heading 2.1</Title>
+  <Action type="GoTo" trigger="activate"/>
+ </Bookmark>
+ <Bookmark destination="D2">
+  <Title>Heading 2.2</Title>
+  <Action type="GoTo" trigger="activate"/>
+ </Bookmark>
+</Bookmark>
+<Bookmark open="true" destination="D3">
+ <Title>Heading 1.2</Title>
+ <Action type="GoTo" trigger="activate"/>
+ <Bookmark destination="D4">
+  <Title>Heading 2.2</Title>
+  <Action type="GoTo" trigger="activate"/>
+ </Bookmark>
+</Bookmark>
+<Bookmark open="true" destination="D5">
+ <Title>Heading 1.2</Title>
+ <Action type="GoTo" trigger="activate"/>
+ <Bookmark destination="D6">
+  <Title>Heading 2.2</Title>
+  <Action type="GoTo" trigger="activate"/>
+ </Bookmark>
+</Bookmark>
+<Bookmark open="true" destination="D7">
+ <Title>Heading 1.2</Title>
+ <Action type="GoTo" trigger="activate"/>
+ <Bookmark destination="D8">
+  <Title>Heading 2.2</Title>
+  <Action type="GoTo" trigger="activate"/>
+ </Bookmark>
+</Bookmark>
+<Bookmark destination="D9">
+ <Title>Heading 1.2</Title>
+ <Action type="GoTo" trigger="activate"/>
+</Bookmark>
+</Bookmarks>
+<Pages>
+<Page number="1" width="612.00" height="792.00">
+<Options>granularity=word tetml={elements={line}}</Options>
+<Content granularity="word" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="72.00" lly="732.12" urx="112.88" ury="756.60">
+  <Line llx="72.00" lly="745.56" urx="112.88" ury="756.60">
+   <Word>
+    <Text artifact="true">Header</Text>
+    <Box llx="72.00" lly="745.56" urx="104.78" ury="756.60"/>
+   </Word>
+   <Word>
+    <Text artifact="true">1</Text>
+    <Box llx="107.28" lly="745.56" urx="112.88" ury="756.60"/>
+   </Word>
+  </Line>
+  <Line llx="72.00" lly="732.12" urx="112.87" ury="743.16">
+   <Word>
+    <Text artifact="true">Header</Text>
+    <Box llx="72.00" lly="732.12" urx="104.77" ury="743.16"/>
+   </Word>
+   <Word>
+    <Text artifact="true">2</Text>
+    <Box llx="107.28" lly="732.12" urx="112.87" ury="743.16"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="39.73" ulx="72.00" uly="67.09" urx="243.64" ury="67.09" lrx="243.64" lry="39.72">
+  <Line llx="72.00" lly="56.05" urx="109.75" ury="67.09">
+   <Word>
+    <Text artifact="true">Footer</Text>
+    <Box llx="72.00" lly="56.05" urx="101.77" ury="67.09"/>
+   </Word>
+   <Word>
+    <Text artifact="true">1</Text>
+    <Box llx="104.16" lly="56.05" urx="109.75" ury="67.09"/>
+   </Word>
+  </Line>
+  <Line llx="72.00" lly="39.72" urx="243.64" ury="53.76">
+   <Word>
+    <Text artifact="true">Footer</Text>
+    <Box llx="72.00" lly="39.73" urx="101.77" ury="50.77"/>
+   </Word>
+   <Word>
+    <Text artifact="true">2</Text>
+    <Box llx="104.16" lly="39.73" urx="109.76" ury="50.77"/>
+   </Word>
+   <Word>
+    <Text artifact="true">pg</Text>
+    <Box llx="216.00" lly="39.72" urx="229.90" ury="53.76"/>
+   </Word>
+   <Word>
+    <Text artifact="true">.</Text>
+    <Box llx="229.91" lly="39.72" urx="233.35" ury="53.76"/>
+   </Word>
+   <Word>
+    <Text artifact="true">1</Text>
+    <Box llx="236.53" lly="39.72" urx="243.64" ury="53.76"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Page number="2" width="612.00" height="792.00">
+<Options>granularity=word tetml={elements={line}}</Options>
+<Annotations>
+<Annotation id="ANN0" type="Link" destination="D0" anchor="A0">
+ <Box llx="69.75" lly="158.24" urx="541.75" ury="176.67"/>
+ <Action type="GoTo" trigger="activate"/>
+</Annotation>
+<Annotation id="ANN1" type="Link" destination="D1" anchor="A1">
+ <Box llx="80.75" lly="139.81" urx="541.75" ury="158.24"/>
+ <Action type="GoTo" trigger="activate"/>
+</Annotation>
+<Annotation id="ANN2" type="Link" destination="D2" anchor="A2">
+ <Box llx="80.75" lly="121.38" urx="541.75" ury="139.81"/>
+ <Action type="GoTo" trigger="activate"/>
+</Annotation>
+<Annotation id="ANN3" type="Link" destination="D3" anchor="A3">
+ <Box llx="69.75" lly="102.96" urx="541.75" ury="121.38"/>
+ <Action type="GoTo" trigger="activate"/>
+</Annotation>
+<Annotation id="ANN4" type="Link" destination="D10" anchor="A4">
+ <Box llx="69.75" lly="84.53" urx="541.75" ury="102.96"/>
+ <Action type="GoTo" trigger="activate"/>
+</Annotation>
+</Annotations>
+<Content granularity="word" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="72.00" lly="732.12" urx="112.88" ury="756.60">
+  <Line llx="72.00" lly="745.56" urx="112.88" ury="756.60">
+   <Word>
+    <Text artifact="true">Header</Text>
+    <Box llx="72.00" lly="745.56" urx="104.78" ury="756.60"/>
+   </Word>
+   <Word>
+    <Text artifact="true">1</Text>
+    <Box llx="107.28" lly="745.56" urx="112.88" ury="756.60"/>
+   </Word>
+  </Line>
+  <Line llx="72.00" lly="732.12" urx="112.87" ury="743.16">
+   <Word>
+    <Text artifact="true">Header</Text>
+    <Box llx="72.00" lly="732.12" urx="104.77" ury="743.16"/>
+   </Word>
+   <Word>
+    <Text artifact="true">2</Text>
+    <Box llx="107.28" lly="732.12" urx="112.87" ury="743.16"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="182.52" urx="130.15" ury="198.48">
+  <Line llx="72.00" lly="182.52" urx="130.15" ury="198.48">
+   <Word>
+    <Text>Contents</Text>
+    <Box llx="72.00" lly="182.52" urx="130.15" ury="198.48"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <A id="A0" type="start"/>
+ <Box llx="72.00" lly="92.52" urx="539.60" ury="177.24">
+  <Line llx="72.00" lly="166.20" urx="539.60" ury="177.24">
+   <Word>
+    <Text>Heading</Text>
+    <Box llx="72.00" lly="166.20" urx="108.88" ury="177.24"/>
+   </Word>
+   <Word>
+    <Text>1.1</Text>
+    <Box llx="111.35" lly="166.20" urx="125.35" ury="177.24"/>
+   </Word>
+   <Word>
+    <Text>...................................................................................................................................................</Text>
+    <Box llx="126.96" lly="166.20" urx="532.70" ury="177.24"/>
+   </Word>
+   <Word>
+    <Text>3</Text>
+    <Box llx="534.00" lly="166.20" urx="539.60" ury="177.24"/>
+   </Word>
+  </Line>
+  <A id="A0" type="stop"/>
+  <A id="A1" type="start"/>
+  <Line llx="83.04" lly="147.84" urx="539.60" ury="158.88">
+   <Word>
+    <Text>Heading</Text>
+    <Box llx="83.04" lly="147.84" urx="119.92" ury="158.88"/>
+   </Word>
+   <Word>
+    <Text>2.1</Text>
+    <Box llx="122.39" lly="147.84" urx="136.39" ury="158.88"/>
+   </Word>
+   <Word>
+    <Text>...............................................................................................................................................</Text>
+    <Box llx="138.00" lly="147.84" urx="532.70" ury="158.88"/>
+   </Word>
+   <Word>
+    <Text>3</Text>
+    <Box llx="534.00" lly="147.84" urx="539.60" ury="158.88"/>
+   </Word>
+  </Line>
+  <A id="A1" type="stop"/>
+  <A id="A2" type="start"/>
+  <Line llx="83.04" lly="129.36" urx="539.60" ury="140.40">
+   <Word>
+    <Text>Heading</Text>
+    <Box llx="83.04" lly="129.36" urx="119.92" ury="140.40"/>
+   </Word>
+   <Word>
+    <Text>2.2</Text>
+    <Box llx="122.39" lly="129.36" urx="136.39" ury="140.40"/>
+   </Word>
+   <Word>
+    <Text>...............................................................................................................................................</Text>
+    <Box llx="138.00" lly="129.36" urx="532.70" ury="140.40"/>
+   </Word>
+   <Word>
+    <Text>4</Text>
+    <Box llx="534.00" lly="129.36" urx="539.60" ury="140.40"/>
+   </Word>
+  </Line>
+  <A id="A2" type="stop"/>
+  <A id="A3" type="start"/>
+  <Line llx="72.00" lly="111.00" urx="539.60" ury="122.04">
+   <Word>
+    <Text>Heading</Text>
+    <Box llx="72.00" lly="111.00" urx="108.88" ury="122.04"/>
+   </Word>
+   <Word>
+    <Text>1.2</Text>
+    <Box llx="111.35" lly="111.00" urx="125.35" ury="122.04"/>
+   </Word>
+   <Word>
+    <Text>...................................................................................................................................................</Text>
+    <Box llx="126.96" lly="111.00" urx="532.70" ury="122.04"/>
+   </Word>
+   <Word>
+    <Text>4</Text>
+    <Box llx="534.00" lly="111.00" urx="539.60" ury="122.04"/>
+   </Word>
+  </Line>
+  <A id="A3" type="stop"/>
+  <A id="A4" type="start"/>
+  <Line llx="72.00" lly="92.52" urx="539.60" ury="103.56">
+   <Word>
+    <Text>Heading</Text>
+    <Box llx="72.00" lly="92.52" urx="108.88" ury="103.56"/>
+   </Word>
+   <Word>
+    <Text>1.3</Text>
+    <Box llx="111.35" lly="92.52" urx="125.35" ury="103.56"/>
+   </Word>
+   <Word>
+    <Text>...................................................................................................................................................</Text>
+    <Box llx="126.96" lly="92.52" urx="532.70" ury="103.56"/>
+   </Word>
+   <Word>
+    <Text>5</Text>
+    <Box llx="534.00" lly="92.52" urx="539.60" ury="103.56"/>
+   </Word>
+  </Line>
+  <A id="A4" type="stop"/>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="39.73" ulx="72.00" uly="67.09" urx="243.64" ury="67.09" lrx="243.64" lry="39.72">
+  <Line llx="72.00" lly="56.05" urx="109.75" ury="67.09">
+   <Word>
+    <Text artifact="true">Footer</Text>
+    <Box llx="72.00" lly="56.05" urx="101.77" ury="67.09"/>
+   </Word>
+   <Word>
+    <Text artifact="true">1</Text>
+    <Box llx="104.16" lly="56.05" urx="109.75" ury="67.09"/>
+   </Word>
+  </Line>
+  <Line llx="72.00" lly="39.72" urx="243.64" ury="53.76">
+   <Word>
+    <Text artifact="true">Footer</Text>
+    <Box llx="72.00" lly="39.73" urx="101.77" ury="50.77"/>
+   </Word>
+   <Word>
+    <Text artifact="true">2</Text>
+    <Box llx="104.16" lly="39.73" urx="109.76" ury="50.77"/>
+   </Word>
+   <Word>
+    <Text artifact="true">pg</Text>
+    <Box llx="216.00" lly="39.72" urx="229.90" ury="53.76"/>
+   </Word>
+   <Word>
+    <Text artifact="true">.</Text>
+    <Box llx="229.91" lly="39.72" urx="233.35" ury="53.76"/>
+   </Word>
+   <Word>
+    <Text artifact="true">2</Text>
+    <Box llx="236.53" lly="39.72" urx="243.64" ury="53.76"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Page number="3" width="612.00" height="792.00">
+<Options>granularity=word tetml={elements={line}}</Options>
+<Annotations>
+<Annotation id="ANN0" type="Link" destination="D11" anchor="A5">
+ <Box llx="80.75" lly="701.57" urx="541.75" ury="720.00"/>
+ <Action type="GoTo" trigger="activate"/>
+</Annotation>
+<Annotation id="ANN1" type="Link" destination="D12" anchor="A6">
+ <Box llx="80.75" lly="683.14" urx="541.75" ury="701.57"/>
+ <Action type="GoTo" trigger="activate"/>
+</Annotation>
+</Annotations>
+<Content granularity="word" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="72.00" lly="732.12" urx="112.88" ury="756.60">
+  <Line llx="72.00" lly="745.56" urx="112.88" ury="756.60">
+   <Word>
+    <Text artifact="true">Header</Text>
+    <Box llx="72.00" lly="745.56" urx="104.78" ury="756.60"/>
+   </Word>
+   <Word>
+    <Text artifact="true">1</Text>
+    <Box llx="107.28" lly="745.56" urx="112.88" ury="756.60"/>
+   </Word>
+  </Line>
+  <Line llx="72.00" lly="732.12" urx="112.87" ury="743.16">
+   <Word>
+    <Text artifact="true">Header</Text>
+    <Box llx="72.00" lly="732.12" urx="104.77" ury="743.16"/>
+   </Word>
+   <Word>
+    <Text artifact="true">2</Text>
+    <Box llx="107.28" lly="732.12" urx="112.87" ury="743.16"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <A id="A5" type="start"/>
+ <Box llx="83.04" lly="691.08" urx="539.59" ury="720.60">
+  <Line llx="83.04" lly="709.56" urx="539.59" ury="720.60">
+   <Word>
+    <Text>Heading</Text>
+    <Box llx="83.04" lly="709.56" urx="119.92" ury="720.60"/>
+   </Word>
+   <Word>
+    <Text>2.3</Text>
+    <Box llx="122.39" lly="709.56" urx="136.39" ury="720.60"/>
+   </Word>
+   <Word>
+    <Text>...............................................................................................................................................</Text>
+    <Box llx="137.99" lly="709.56" urx="532.69" ury="720.60"/>
+   </Word>
+   <Word>
+    <Text>6</Text>
+    <Box llx="534.00" lly="709.56" urx="539.59" ury="720.60"/>
+   </Word>
+  </Line>
+  <A id="A5" type="stop"/>
+  <A id="A6" type="start"/>
+  <Line llx="83.04" lly="691.08" urx="539.59" ury="702.12">
+   <Word>
+    <Text>Heading</Text>
+    <Box llx="83.04" lly="691.08" urx="119.92" ury="702.12"/>
+   </Word>
+   <Word>
+    <Text>2.4</Text>
+    <Box llx="122.39" lly="691.08" urx="136.39" ury="702.12"/>
+   </Word>
+   <Word>
+    <Text>...............................................................................................................................................</Text>
+    <Box llx="137.99" lly="691.08" urx="532.69" ury="702.12"/>
+   </Word>
+   <Word>
+    <Text>7</Text>
+    <Box llx="534.00" lly="691.08" urx="539.59" ury="702.12"/>
+   </Word>
+  </Line>
+  <A id="A6" type="stop"/>
+ </Box>
+</Para>
+<Para>
+ <A id="A7" type="start"/>
+ <Box llx="72.00" lly="602.28" urx="148.73" ury="618.24">
+  <Line llx="72.00" lly="602.28" urx="148.73" ury="618.24">
+   <Word>
+    <Text>Heading</Text>
+    <Box llx="72.00" lly="602.28" urx="124.96" ury="618.24"/>
+   </Word>
+   <Word>
+    <Text>1.1</Text>
+    <Box llx="128.52" lly="602.28" urx="148.73" ury="618.24"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="574.08" urx="389.41" ury="585.12">
+  <Line llx="72.00" lly="574.08" urx="389.41" ury="585.12">
+   <Word>
+    <Text>Seite</Text>
+    <Box llx="72.00" lly="574.08" urx="94.30" ury="585.12"/>
+   </Word>
+   <Word>
+    <Text>1</Text>
+    <Box llx="96.72" lly="574.08" urx="102.32" ury="585.12"/>
+   </Word>
+   <Word>
+    <Text>Zeile</Text>
+    <Box llx="104.88" lly="574.08" urx="125.98" ury="585.12"/>
+   </Word>
+   <Word>
+    <Text>1</Text>
+    <Box llx="128.40" lly="574.08" urx="134.00" ury="585.12"/>
+   </Word>
+   <Word>
+    <Text>This</Text>
+    <Box llx="136.56" lly="574.08" urx="154.55" ury="585.12"/>
+   </Word>
+   <Word>
+    <Text>chapter</Text>
+    <Box llx="156.95" lly="574.08" urx="191.53" ury="585.12"/>
+   </Word>
+   <Word>
+    <Text>uses</Text>
+    <Box llx="193.91" lly="574.08" urx="213.83" ury="585.12"/>
+   </Word>
+   <Word>
+    <Text>Volto</Text>
+    <Box llx="216.35" lly="574.08" urx="240.41" ury="585.12"/>
+   </Word>
+   <Word>
+    <Text>to</Text>
+    <Box llx="242.87" lly="574.08" urx="252.29" ury="585.12"/>
+   </Word>
+   <Word>
+    <Text>change</Text>
+    <Box llx="254.86" lly="574.08" urx="287.00" ury="585.12"/>
+   </Word>
+   <Word>
+    <Text>displaying</Text>
+    <Box llx="289.54" lly="574.08" urx="334.10" ury="585.12"/>
+   </Word>
+   <Word>
+    <Text>the</Text>
+    <Box llx="336.58" lly="574.08" urx="351.56" ury="585.12"/>
+   </Word>
+   <Word>
+    <Text>dates</Text>
+    <Box llx="354.10" lly="574.08" urx="378.57" ury="585.12"/>
+   </Word>
+   <Word>
+    <Text>in</Text>
+    <Box llx="381.09" lly="574.08" urx="389.41" ury="585.12"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <A id="A8" type="start"/>
+ <Box llx="72.00" lly="543.24" urx="134.25" ury="556.20">
+  <Line llx="72.00" lly="543.24" urx="134.25" ury="556.20">
+   <Word>
+    <Text>Heading</Text>
+    <Box llx="72.00" lly="543.24" urx="114.92" ury="556.20"/>
+   </Word>
+   <Word>
+    <Text>2.1</Text>
+    <Box llx="117.84" lly="543.24" urx="134.25" ury="556.20"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="515.88" urx="406.06" ury="526.92">
+  <Line llx="72.00" lly="515.88" urx="406.06" ury="526.92">
+   <Word>
+    <Text>Seite</Text>
+    <Box llx="72.00" lly="515.88" urx="94.30" ury="526.92"/>
+   </Word>
+   <Word>
+    <Text>1</Text>
+    <Box llx="96.72" lly="515.88" urx="102.31" ury="526.92"/>
+   </Word>
+   <Word>
+    <Text>Zeile</Text>
+    <Box llx="104.87" lly="515.88" urx="125.96" ury="526.92"/>
+   </Word>
+   <Word>
+    <Text>2</Text>
+    <Box llx="128.39" lly="515.88" urx="133.98" ury="526.92"/>
+   </Word>
+   <Word>
+    <Text>talkview</Text>
+    <Box llx="136.54" lly="515.88" urx="173.83" ury="526.92"/>
+   </Word>
+   <Word>
+    <Text>and</Text>
+    <Box llx="176.38" lly="515.88" urx="193.21" ury="526.92"/>
+   </Word>
+   <Word>
+    <Text>talklistview</Text>
+    <Box llx="195.57" lly="515.88" urx="245.93" ury="526.92"/>
+   </Word>
+   <Word>
+    <Text>.</Text>
+    <Box llx="245.96" lly="515.88" urx="248.74" ury="526.92"/>
+   </Word>
+   <Word>
+    <Text>To</Text>
+    <Box llx="251.24" lly="515.88" urx="262.33" ury="526.92"/>
+   </Word>
+   <Word>
+    <Text>meet</Text>
+    <Box llx="264.80" lly="515.88" urx="288.29" ury="526.92"/>
+   </Word>
+   <Word>
+    <Text>the</Text>
+    <Box llx="290.72" lly="515.88" urx="305.69" ury="526.92"/>
+   </Word>
+   <Word>
+    <Text>same</Text>
+    <Box llx="308.23" lly="515.88" urx="332.09" ury="526.92"/>
+   </Word>
+   <Word>
+    <Text>requirements</Text>
+    <Box llx="334.51" lly="515.88" urx="395.35" ury="526.92"/>
+   </Word>
+   <Word>
+    <Text>in</Text>
+    <Box llx="397.75" lly="515.88" urx="406.06" ury="526.92"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="90.00" lly="488.41" urx="142.14" ury="499.45">
+  <Line llx="90.00" lly="488.41" urx="142.14" ury="499.45">
+   <Word>
+    <Text>•</Text>
+    <Box llx="90.00" lly="488.41" urx="95.07" ury="499.45"/>
+   </Word>
+   <Word>
+    <Text>Bullet</Text>
+    <Box llx="108.00" lly="488.41" urx="134.01" ury="499.45"/>
+   </Word>
+   <Word>
+    <Text>1</Text>
+    <Box llx="136.55" lly="488.41" urx="142.14" ury="499.45"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="90.01" lly="474.48" urx="142.15" ury="485.52">
+  <Line llx="90.01" lly="474.48" urx="142.15" ury="485.52">
+   <Word>
+    <Text>•</Text>
+    <Box llx="90.01" lly="474.48" urx="95.08" ury="485.52"/>
+   </Word>
+   <Word>
+    <Text>Bullet</Text>
+    <Box llx="108.01" lly="474.48" urx="134.02" ury="485.52"/>
+   </Word>
+   <Word>
+    <Text>2</Text>
+    <Box llx="136.56" lly="474.48" urx="142.15" ury="485.52"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="90.02" lly="460.44" urx="142.17" ury="471.48">
+  <Line llx="90.02" lly="460.44" urx="142.17" ury="471.48">
+   <Word>
+    <Text>•</Text>
+    <Box llx="90.02" lly="460.44" urx="95.10" ury="471.48"/>
+   </Word>
+   <Word>
+    <Text>Bullet</Text>
+    <Box llx="108.02" lly="460.44" urx="134.03" ury="471.48"/>
+   </Word>
+   <Word>
+    <Text>3</Text>
+    <Box llx="136.57" lly="460.44" urx="142.17" ury="471.48"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.02" lly="433.57" urx="381.51" ury="444.61">
+  <Line llx="72.02" lly="433.57" urx="381.51" ury="444.61">
+   <Word>
+    <Text>Seite</Text>
+    <Box llx="72.02" lly="433.57" urx="94.32" ury="444.61"/>
+   </Word>
+   <Word>
+    <Text>1</Text>
+    <Box llx="96.74" lly="433.57" urx="102.33" ury="444.61"/>
+   </Word>
+   <Word>
+    <Text>Zeile</Text>
+    <Box llx="104.89" lly="433.57" urx="125.99" ury="444.61"/>
+   </Word>
+   <Word>
+    <Text>3</Text>
+    <Box llx="128.40" lly="433.57" urx="134.00" ury="444.61"/>
+   </Word>
+   <Word>
+    <Text>classic</Text>
+    <Box llx="136.56" lly="433.57" urx="164.75" ury="444.61"/>
+   </Word>
+   <Word>
+    <Text>Plone</Text>
+    <Box llx="167.15" lly="433.57" urx="192.57" ury="444.61"/>
+   </Word>
+   <Word>
+    <Text>see</Text>
+    <Box llx="195.02" lly="433.57" urx="210.36" ury="444.61"/>
+   </Word>
+   <Word>
+    <Text>the</Text>
+    <Box llx="212.78" lly="433.57" urx="227.76" ury="444.61"/>
+   </Word>
+   <Word>
+    <Text>chapter</Text>
+    <Box llx="230.30" lly="433.57" urx="264.75" ury="444.61"/>
+   </Word>
+   <Word>
+    <Text>Turning</Text>
+    <Box llx="267.14" lly="433.57" urx="301.37" ury="444.61"/>
+   </Word>
+   <Word>
+    <Text>Talks</Text>
+    <Box llx="303.85" lly="433.57" urx="326.29" ury="444.61"/>
+   </Word>
+   <Word>
+    <Text>into</Text>
+    <Box llx="328.81" lly="433.57" urx="346.63" ury="444.61"/>
+   </Word>
+   <Word>
+    <Text>Events</Text>
+    <Box llx="349.09" lly="433.57" urx="378.72" ury="444.61"/>
+   </Word>
+   <Word>
+    <Text>.</Text>
+    <Box llx="378.73" lly="433.57" urx="381.51" ury="444.61"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="39.73" ulx="72.00" uly="67.09" urx="243.64" ury="67.09" lrx="243.64" lry="39.72">
+  <Line llx="72.00" lly="56.05" urx="109.75" ury="67.09">
+   <Word>
+    <Text artifact="true">Footer</Text>
+    <Box llx="72.00" lly="56.05" urx="101.77" ury="67.09"/>
+   </Word>
+   <Word>
+    <Text artifact="true">1</Text>
+    <Box llx="104.16" lly="56.05" urx="109.75" ury="67.09"/>
+   </Word>
+  </Line>
+  <Line llx="72.00" lly="39.72" urx="243.64" ury="53.76">
+   <Word>
+    <Text artifact="true">Footer</Text>
+    <Box llx="72.00" lly="39.73" urx="101.77" ury="50.77"/>
+   </Word>
+   <Word>
+    <Text artifact="true">2</Text>
+    <Box llx="104.16" lly="39.73" urx="109.76" ury="50.77"/>
+   </Word>
+   <Word>
+    <Text artifact="true">pg</Text>
+    <Box llx="216.00" lly="39.72" urx="229.90" ury="53.76"/>
+   </Word>
+   <Word>
+    <Text artifact="true">.</Text>
+    <Box llx="229.91" lly="39.72" urx="233.35" ury="53.76"/>
+   </Word>
+   <Word>
+    <Text artifact="true">3</Text>
+    <Box llx="236.53" lly="39.72" urx="243.64" ury="53.76"/>
+   </Word>
+  </Line>
+  <A id="A8" type="stop"/>
+  <A id="A7" type="stop"/>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Page number="4" width="612.00" height="792.00">
+<Options>granularity=word tetml={elements={line}}</Options>
+<Content granularity="word" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="72.00" lly="732.12" urx="112.88" ury="756.60">
+  <Line llx="72.00" lly="745.56" urx="112.88" ury="756.60">
+   <Word>
+    <Text artifact="true">Header</Text>
+    <Box llx="72.00" lly="745.56" urx="104.78" ury="756.60"/>
+   </Word>
+   <Word>
+    <Text artifact="true">1</Text>
+    <Box llx="107.28" lly="745.56" urx="112.88" ury="756.60"/>
+   </Word>
+  </Line>
+  <Line llx="72.00" lly="732.12" urx="112.87" ury="743.16">
+   <Word>
+    <Text artifact="true">Header</Text>
+    <Box llx="72.00" lly="732.12" urx="104.77" ury="743.16"/>
+   </Word>
+   <Word>
+    <Text artifact="true">2</Text>
+    <Box llx="107.28" lly="732.12" urx="112.87" ury="743.16"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="709.56" urx="424.18" ury="720.60">
+  <Line llx="72.00" lly="709.56" urx="424.18" ury="720.60">
+   <Word>
+    <Text>Seite</Text>
+    <Box llx="72.00" lly="709.56" urx="94.29" ury="720.60"/>
+   </Word>
+   <Word>
+    <Text>2</Text>
+    <Box llx="96.71" lly="709.56" urx="102.31" ury="720.60"/>
+   </Word>
+   <Word>
+    <Text>Zeile</Text>
+    <Box llx="104.87" lly="709.56" urx="125.96" ury="720.60"/>
+   </Word>
+   <Word>
+    <Text>1</Text>
+    <Box llx="128.38" lly="709.56" urx="133.98" ury="720.60"/>
+   </Word>
+   <Word>
+    <Text>We</Text>
+    <Box llx="136.54" lly="709.56" urx="151.76" ury="720.60"/>
+   </Word>
+   <Word>
+    <Text>use</Text>
+    <Box llx="154.30" lly="709.56" urx="169.88" ury="720.60"/>
+   </Word>
+   <Word>
+    <Text>a</Text>
+    <Box llx="172.30" lly="709.56" urx="177.58" ury="720.60"/>
+   </Word>
+   <Word>
+    <Text>technique</Text>
+    <Box llx="180.09" lly="709.56" urx="224.83" ury="720.60"/>
+   </Word>
+   <Word>
+    <Text>called</Text>
+    <Box llx="227.36" lly="709.56" urx="253.67" ury="720.60"/>
+   </Word>
+   <Word>
+    <Text>component</Text>
+    <Box llx="256.15" lly="709.56" urx="307.73" ury="720.60"/>
+   </Word>
+   <Word>
+    <Text>shadowing</Text>
+    <Box llx="310.15" lly="709.56" urx="358.43" ury="720.60"/>
+   </Word>
+   <Word>
+    <Text>to</Text>
+    <Box llx="360.91" lly="709.56" urx="370.32" ury="720.60"/>
+   </Word>
+   <Word>
+    <Text>override</Text>
+    <Box llx="372.79" lly="709.56" urx="410.56" ury="720.60"/>
+   </Word>
+   <Word>
+    <Text>an</Text>
+    <Box llx="413.11" lly="709.56" urx="424.18" ury="720.60"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <A id="A9" type="start"/>
+ <Box llx="72.00" lly="678.72" urx="134.25" ury="691.68">
+  <Line llx="72.00" lly="678.72" urx="134.25" ury="691.68">
+   <Word>
+    <Text>Heading</Text>
+    <Box llx="72.00" lly="678.72" urx="114.92" ury="691.68"/>
+   </Word>
+   <Word>
+    <Text>2.2</Text>
+    <Box llx="117.84" lly="678.72" urx="134.25" ury="691.68"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="651.36" urx="425.84" ury="662.40">
+  <Line llx="72.00" lly="651.36" urx="425.84" ury="662.40">
+   <Word>
+    <Text>Seite</Text>
+    <Box llx="72.00" lly="651.36" urx="94.30" ury="662.40"/>
+   </Word>
+   <Word>
+    <Text>2</Text>
+    <Box llx="96.72" lly="651.36" urx="102.32" ury="662.40"/>
+   </Word>
+   <Word>
+    <Text>Zeile</Text>
+    <Box llx="104.88" lly="651.36" urx="125.98" ury="662.40"/>
+   </Word>
+   <Word>
+    <Text>2</Text>
+    <Box llx="128.40" lly="651.36" urx="134.00" ury="662.40"/>
+   </Word>
+   <Word>
+    <Text>existing</Text>
+    <Box llx="136.56" lly="651.36" urx="170.80" ury="662.40"/>
+   </Word>
+   <Word>
+    <Text>Volto</Text>
+    <Box llx="173.27" lly="651.36" urx="197.21" ury="662.40"/>
+   </Word>
+   <Word>
+    <Text>component</Text>
+    <Box llx="199.80" lly="651.36" urx="251.38" ury="662.40"/>
+   </Word>
+   <Word>
+    <Text>with</Text>
+    <Box llx="253.80" lly="651.36" urx="273.75" ury="662.40"/>
+   </Word>
+   <Word>
+    <Text>our</Text>
+    <Box llx="276.11" lly="651.36" urx="291.61" ury="662.40"/>
+   </Word>
+   <Word>
+    <Text>local</Text>
+    <Box llx="294.11" lly="651.36" urx="314.76" ury="662.40"/>
+   </Word>
+   <Word>
+    <Text>custom</Text>
+    <Box llx="317.27" lly="651.36" urx="350.33" ury="662.40"/>
+   </Word>
+   <Word>
+    <Text>version</Text>
+    <Box llx="352.78" lly="651.36" urx="385.58" ury="662.40"/>
+   </Word>
+   <Word>
+    <Text>,</Text>
+    <Box llx="385.54" lly="651.36" urx="388.30" ury="662.40"/>
+   </Word>
+   <Word>
+    <Text>without</Text>
+    <Box llx="390.70" lly="651.36" urx="425.84" ury="662.40"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <A id="A10" type="start"/>
+ <Box llx="72.00" lly="607.80" urx="148.73" ury="623.76">
+  <Line llx="72.00" lly="607.80" urx="148.73" ury="623.76">
+   <Word>
+    <Text>Heading</Text>
+    <Box llx="72.00" lly="607.80" urx="124.96" ury="623.76"/>
+   </Word>
+   <Word>
+    <Text>1.2</Text>
+    <Box llx="128.52" lly="607.80" urx="148.73" ury="623.76"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="579.60" urx="427.46" ury="590.64">
+  <Line llx="72.00" lly="579.60" urx="427.46" ury="590.64">
+   <Word>
+    <Text>Seite</Text>
+    <Box llx="72.00" lly="579.60" urx="94.30" ury="590.64"/>
+   </Word>
+   <Word>
+    <Text>2</Text>
+    <Box llx="96.72" lly="579.60" urx="102.31" ury="590.64"/>
+   </Word>
+   <Word>
+    <Text>Zeile</Text>
+    <Box llx="104.87" lly="579.60" urx="125.96" ury="590.64"/>
+   </Word>
+   <Word>
+    <Text>3</Text>
+    <Box llx="128.39" lly="579.60" urx="133.98" ury="590.64"/>
+   </Word>
+   <Word>
+    <Text>having</Text>
+    <Box llx="136.54" lly="579.60" urx="166.10" ury="590.64"/>
+   </Word>
+   <Word>
+    <Text>to</Text>
+    <Box llx="168.46" lly="579.60" urx="178.00" ury="590.64"/>
+   </Word>
+   <Word>
+    <Text>modify</Text>
+    <Box llx="180.46" lly="579.60" urx="211.73" ury="590.64"/>
+   </Word>
+   <Word>
+    <Text>Volto</Text>
+    <Box llx="214.29" lly="579.60" urx="238.22" ury="590.64"/>
+   </Word>
+   <Word>
+    <Text>&apos;</Text>
+    <Box llx="238.29" lly="579.60" urx="240.73" ury="590.64"/>
+   </Word>
+   <Word>
+    <Text>s</Text>
+    <Box llx="240.69" lly="579.60" urx="245.00" ury="590.64"/>
+   </Word>
+   <Word>
+    <Text>source</Text>
+    <Box llx="247.52" lly="579.60" urx="277.38" ury="590.64"/>
+   </Word>
+   <Word>
+    <Text>code</Text>
+    <Box llx="279.80" lly="579.60" urx="301.50" ury="590.64"/>
+   </Word>
+   <Word>
+    <Text>at</Text>
+    <Box llx="304.04" lly="579.60" urx="312.90" ury="590.64"/>
+   </Word>
+   <Word>
+    <Text>all</Text>
+    <Box llx="315.44" lly="579.60" urx="325.76" ury="590.64"/>
+   </Word>
+   <Word>
+    <Text>.</Text>
+    <Box llx="325.75" lly="579.60" urx="328.53" ury="590.64"/>
+   </Word>
+   <Word>
+    <Text>You</Text>
+    <Box llx="331.03" lly="579.60" urx="347.98" ury="590.64"/>
+   </Word>
+   <Word>
+    <Text>have</Text>
+    <Box llx="350.46" lly="579.60" urx="371.92" ury="590.64"/>
+   </Word>
+   <Word>
+    <Text>to</Text>
+    <Box llx="374.46" lly="579.60" urx="383.88" ury="590.64"/>
+   </Word>
+   <Word>
+    <Text>place</Text>
+    <Box llx="386.45" lly="579.60" urx="410.07" ury="590.64"/>
+   </Word>
+   <Word>
+    <Text>the</Text>
+    <Box llx="412.61" lly="579.60" urx="427.46" ury="590.64"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="90.00" lly="525.86" urx="164.11" ury="563.77">
+  <Line llx="90.00" lly="552.73" urx="164.11" ury="563.77">
+   <Word>
+    <Text>1</Text>
+    <Box llx="90.00" lly="552.73" urx="95.59" ury="563.77"/>
+   </Word>
+   <Word>
+    <Text>.</Text>
+    <Box llx="95.64" lly="552.73" urx="98.42" ury="563.77"/>
+   </Word>
+   <Word>
+    <Text>Numbered</Text>
+    <Box llx="108.00" lly="552.73" urx="156.16" ury="563.77"/>
+   </Word>
+   <Word>
+    <Text>1</Text>
+    <Box llx="158.52" lly="552.73" urx="164.11" ury="563.77"/>
+   </Word>
+  </Line>
+  <Line llx="90.00" lly="539.30" urx="164.11" ury="550.34">
+   <Word>
+    <Text>2</Text>
+    <Box llx="90.00" lly="539.30" urx="95.59" ury="550.34"/>
+   </Word>
+   <Word>
+    <Text>.</Text>
+    <Box llx="95.64" lly="539.30" urx="98.42" ury="550.34"/>
+   </Word>
+   <Word>
+    <Text>Numbered</Text>
+    <Box llx="108.00" lly="539.30" urx="156.16" ury="550.34"/>
+   </Word>
+   <Word>
+    <Text>2</Text>
+    <Box llx="158.52" lly="539.30" urx="164.11" ury="550.34"/>
+   </Word>
+  </Line>
+  <Line llx="90.00" lly="525.86" urx="164.11" ury="536.90">
+   <Word>
+    <Text>3</Text>
+    <Box llx="90.00" lly="525.86" urx="95.59" ury="536.90"/>
+   </Word>
+   <Word>
+    <Text>.</Text>
+    <Box llx="95.64" lly="525.86" urx="98.42" ury="536.90"/>
+   </Word>
+   <Word>
+    <Text>Numbered</Text>
+    <Box llx="108.00" lly="525.86" urx="156.16" ury="536.90"/>
+   </Word>
+   <Word>
+    <Text>3</Text>
+    <Box llx="158.52" lly="525.86" urx="164.11" ury="536.90"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="39.73" ulx="72.00" uly="67.09" urx="243.64" ury="67.09" lrx="243.64" lry="39.72">
+  <Line llx="72.00" lly="56.05" urx="109.75" ury="67.09">
+   <Word>
+    <Text artifact="true">Footer</Text>
+    <Box llx="72.00" lly="56.05" urx="101.77" ury="67.09"/>
+   </Word>
+   <Word>
+    <Text artifact="true">1</Text>
+    <Box llx="104.16" lly="56.05" urx="109.75" ury="67.09"/>
+   </Word>
+  </Line>
+  <Line llx="72.00" lly="39.72" urx="243.64" ury="53.76">
+   <Word>
+    <Text artifact="true">Footer</Text>
+    <Box llx="72.00" lly="39.73" urx="101.77" ury="50.77"/>
+   </Word>
+   <Word>
+    <Text artifact="true">2</Text>
+    <Box llx="104.16" lly="39.73" urx="109.76" ury="50.77"/>
+   </Word>
+   <Word>
+    <Text artifact="true">pg</Text>
+    <Box llx="216.00" lly="39.72" urx="229.90" ury="53.76"/>
+   </Word>
+   <Word>
+    <Text artifact="true">.</Text>
+    <Box llx="229.91" lly="39.72" urx="233.35" ury="53.76"/>
+   </Word>
+   <Word>
+    <Text artifact="true">4</Text>
+    <Box llx="236.53" lly="39.72" urx="243.64" ury="53.76"/>
+   </Word>
+  </Line>
+  <A id="A10" type="stop"/>
+  <A id="A9" type="stop"/>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Page number="5" width="612.00" height="792.00">
+<Options>granularity=word tetml={elements={line}}</Options>
+<Content granularity="word" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="72.00" lly="732.12" urx="112.88" ury="756.60">
+  <Line llx="72.00" lly="745.56" urx="112.88" ury="756.60">
+   <Word>
+    <Text artifact="true">Header</Text>
+    <Box llx="72.00" lly="745.56" urx="104.78" ury="756.60"/>
+   </Word>
+   <Word>
+    <Text artifact="true">1</Text>
+    <Box llx="107.28" lly="745.56" urx="112.88" ury="756.60"/>
+   </Word>
+  </Line>
+  <Line llx="72.00" lly="732.12" urx="112.87" ury="743.16">
+   <Word>
+    <Text artifact="true">Header</Text>
+    <Box llx="72.00" lly="732.12" urx="104.77" ury="743.16"/>
+   </Word>
+   <Word>
+    <Text artifact="true">2</Text>
+    <Box llx="107.28" lly="732.12" urx="112.87" ury="743.16"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <A id="A13" type="start"/>
+ <Box llx="72.00" lly="704.76" urx="148.73" ury="720.72">
+  <Line llx="72.00" lly="704.76" urx="148.73" ury="720.72">
+   <Word>
+    <Text>Heading</Text>
+    <Box llx="72.00" lly="704.76" urx="124.96" ury="720.72"/>
+   </Word>
+   <Word>
+    <Text>1.3</Text>
+    <Box llx="128.52" lly="704.76" urx="148.73" ury="720.72"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <A id="A11" type="start"/>
+ <Box llx="72.00" lly="649.80" urx="433.98" ury="687.60">
+  <Line llx="72.00" lly="676.56" urx="420.52" ury="687.60">
+   <Word>
+    <Text>Seite</Text>
+    <Box llx="72.00" lly="676.56" urx="94.30" ury="687.60"/>
+   </Word>
+   <Word>
+    <Text>3</Text>
+    <Box llx="96.72" lly="676.56" urx="102.31" ury="687.60"/>
+   </Word>
+   <Word>
+    <Text>Zeile</Text>
+    <Box llx="104.87" lly="676.56" urx="125.96" ury="687.60"/>
+   </Word>
+   <Word>
+    <Text>1</Text>
+    <Box llx="128.39" lly="676.56" urx="133.98" ury="687.60"/>
+   </Word>
+   <Word>
+    <Text>replacing</Text>
+    <Box llx="136.54" lly="676.56" urx="177.62" ury="687.60"/>
+   </Word>
+   <Word>
+    <Text>component</Text>
+    <Box llx="179.98" lly="676.56" urx="231.56" ury="687.60"/>
+   </Word>
+   <Word>
+    <Text>in</Text>
+    <Box llx="234.10" lly="676.56" urx="242.41" ury="687.60"/>
+   </Word>
+   <Word>
+    <Text>the</Text>
+    <Box llx="244.89" lly="676.56" urx="259.87" ury="687.60"/>
+   </Word>
+   <Word>
+    <Text>same</Text>
+    <Box llx="262.29" lly="676.56" urx="286.15" ury="687.60"/>
+   </Word>
+   <Word>
+    <Text>original</Text>
+    <Box llx="288.57" lly="676.56" urx="321.93" ury="687.60"/>
+   </Word>
+   <Word>
+    <Text>folder</Text>
+    <Box llx="324.44" lly="676.56" urx="351.33" ury="687.60"/>
+   </Word>
+   <Word>
+    <Text>path</Text>
+    <Box llx="353.83" lly="676.56" urx="374.27" ury="687.60"/>
+   </Word>
+   <Word>
+    <Text>inside</Text>
+    <Box llx="376.75" lly="676.56" urx="403.13" ury="687.60"/>
+   </Word>
+   <Word>
+    <Text>the</Text>
+    <Box llx="405.67" lly="676.56" urx="420.52" ury="687.60"/>
+   </Word>
+  </Line>
+  <Line llx="72.00" lly="663.24" urx="433.98" ury="674.28">
+   <Word>
+    <Text>Seite</Text>
+    <Box llx="72.00" lly="663.24" urx="94.30" ury="674.28"/>
+   </Word>
+   <Word>
+    <Text>3</Text>
+    <Box llx="96.72" lly="663.24" urx="102.32" ury="674.28"/>
+   </Word>
+   <Word>
+    <Text>Zeile</Text>
+    <Box llx="104.88" lly="663.24" urx="125.98" ury="674.28"/>
+   </Word>
+   <Word>
+    <Text>2</Text>
+    <Box llx="128.40" lly="663.24" urx="134.00" ury="674.28"/>
+   </Word>
+   <Word>
+    <Text>We</Text>
+    <Box llx="136.56" lly="663.24" urx="151.77" ury="674.28"/>
+   </Word>
+   <Word>
+    <Text>start</Text>
+    <Box llx="154.31" lly="663.24" urx="175.05" ury="674.28"/>
+   </Word>
+   <Word>
+    <Text>with</Text>
+    <Box llx="177.47" lly="663.24" urx="197.31" ury="674.28"/>
+   </Word>
+   <Word>
+    <Text>the</Text>
+    <Box llx="199.79" lly="663.24" urx="214.76" ury="674.28"/>
+   </Word>
+   <Word>
+    <Text>first</Text>
+    <Box llx="217.30" lly="663.24" urx="235.04" ury="674.28"/>
+   </Word>
+   <Word>
+    <Text>case</Text>
+    <Box llx="237.46" lly="663.24" urx="257.24" ury="674.28"/>
+   </Word>
+   <Word>
+    <Text>and</Text>
+    <Box llx="259.66" lly="663.24" urx="276.49" ury="674.28"/>
+   </Word>
+   <Word>
+    <Text>change</Text>
+    <Box llx="278.97" lly="663.24" urx="311.11" ury="674.28"/>
+   </Word>
+   <Word>
+    <Text>the</Text>
+    <Box llx="313.53" lly="663.24" urx="328.51" ury="674.28"/>
+   </Word>
+   <Word>
+    <Text>font</Text>
+    <Box llx="331.05" lly="663.24" urx="349.63" ury="674.28"/>
+   </Word>
+   <Word>
+    <Text>to</Text>
+    <Box llx="352.17" lly="663.24" urx="361.59" ury="674.28"/>
+   </Word>
+   <Word>
+    <Text>another</Text>
+    <Box llx="364.17" lly="663.24" urx="399.82" ury="674.28"/>
+   </Word>
+   <Word>
+    <Text>Google</Text>
+    <Box llx="402.20" lly="663.24" urx="433.98" ury="674.28"/>
+   </Word>
+  </Line>
+  <Line llx="72.00" lly="649.80" urx="429.91" ury="660.84">
+   <Word>
+    <Text>Seite</Text>
+    <Box llx="72.00" lly="649.80" urx="94.30" ury="660.84"/>
+   </Word>
+   <Word>
+    <Text>3</Text>
+    <Box llx="96.72" lly="649.80" urx="102.31" ury="660.84"/>
+   </Word>
+   <Word>
+    <Text>Zeile</Text>
+    <Box llx="104.87" lly="649.80" urx="125.96" ury="660.84"/>
+   </Word>
+   <Word>
+    <Text>3</Text>
+    <Box llx="128.39" lly="649.80" urx="133.98" ury="660.84"/>
+   </Word>
+   <Word>
+    <Text>font</Text>
+    <Box llx="136.54" lly="649.80" urx="155.12" ury="660.84"/>
+   </Word>
+   <Word>
+    <Text>,</Text>
+    <Box llx="155.14" lly="649.80" urx="157.90" ury="660.84"/>
+   </Word>
+   <Word>
+    <Text>Lato</Text>
+    <Box llx="160.30" lly="649.80" urx="179.68" ury="660.84"/>
+   </Word>
+   <Word>
+    <Text>.</Text>
+    <Box llx="179.74" lly="649.80" urx="182.52" ury="660.84"/>
+   </Word>
+   <Word>
+    <Text>The</Text>
+    <Box llx="185.02" lly="649.80" urx="201.56" ury="660.84"/>
+   </Word>
+   <Word>
+    <Text>overall</Text>
+    <Box llx="204.10" lly="649.80" urx="234.58" ury="660.84"/>
+   </Word>
+   <Word>
+    <Text>font</Text>
+    <Box llx="237.09" lly="649.80" urx="255.66" ury="660.84"/>
+   </Word>
+   <Word>
+    <Text>is</Text>
+    <Box llx="258.08" lly="649.80" urx="264.92" ury="660.84"/>
+   </Word>
+   <Word>
+    <Text>defined</Text>
+    <Box llx="267.44" lly="649.80" urx="301.67" ury="660.84"/>
+   </Word>
+   <Word>
+    <Text>in</Text>
+    <Box llx="304.15" lly="649.80" urx="312.46" ury="660.84"/>
+   </Word>
+   <Word>
+    <Text>Volto</Text>
+    <Box llx="314.82" lly="649.80" urx="338.88" ury="660.84"/>
+   </Word>
+   <Word>
+    <Text>and</Text>
+    <Box llx="341.46" lly="649.80" urx="358.29" ury="660.84"/>
+   </Word>
+   <Word>
+    <Text>can</Text>
+    <Box llx="360.77" lly="649.80" urx="376.53" ury="660.84"/>
+   </Word>
+   <Word>
+    <Text>be</Text>
+    <Box llx="378.89" lly="649.80" urx="390.14" ury="660.84"/>
+   </Word>
+   <Word>
+    <Text>found</Text>
+    <Box llx="392.68" lly="649.80" urx="419.12" ury="660.84"/>
+   </Word>
+   <Word>
+    <Text>in</Text>
+    <Box llx="421.60" lly="649.80" urx="429.91" ury="660.84"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <A id="A12" type="start"/>
+ <Box llx="72.00" lly="39.73" ulx="72.00" uly="67.09" urx="243.64" ury="67.09" lrx="243.64" lry="39.72">
+  <Line llx="72.00" lly="56.05" urx="109.75" ury="67.09">
+   <Word>
+    <Text artifact="true">Footer</Text>
+    <Box llx="72.00" lly="56.05" urx="101.77" ury="67.09"/>
+   </Word>
+   <Word>
+    <Text artifact="true">1</Text>
+    <Box llx="104.16" lly="56.05" urx="109.75" ury="67.09"/>
+   </Word>
+  </Line>
+  <Line llx="72.00" lly="39.72" urx="243.64" ury="53.76">
+   <Word>
+    <Text artifact="true">Footer</Text>
+    <Box llx="72.00" lly="39.73" urx="101.77" ury="50.77"/>
+   </Word>
+   <Word>
+    <Text artifact="true">2</Text>
+    <Box llx="104.16" lly="39.73" urx="109.76" ury="50.77"/>
+   </Word>
+   <Word>
+    <Text artifact="true">pg</Text>
+    <Box llx="216.00" lly="39.72" urx="229.90" ury="53.76"/>
+   </Word>
+   <Word>
+    <Text artifact="true">.</Text>
+    <Box llx="229.91" lly="39.72" urx="233.35" ury="53.76"/>
+   </Word>
+   <Word>
+    <Text artifact="true">5</Text>
+    <Box llx="236.53" lly="39.72" urx="243.64" ury="53.76"/>
+   </Word>
+  </Line>
+  <A id="A13" type="stop"/>
+  <A id="A12" type="stop"/>
+  <A id="A11" type="stop"/>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Page number="6" width="612.00" height="792.00">
+<Options>granularity=word tetml={elements={line}}</Options>
+<Content granularity="word" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="72.00" lly="732.12" urx="112.88" ury="756.60">
+  <Line llx="72.00" lly="745.56" urx="112.88" ury="756.60">
+   <Word>
+    <Text artifact="true">Header</Text>
+    <Box llx="72.00" lly="745.56" urx="104.78" ury="756.60"/>
+   </Word>
+   <Word>
+    <Text artifact="true">1</Text>
+    <Box llx="107.28" lly="745.56" urx="112.88" ury="756.60"/>
+   </Word>
+  </Line>
+  <Line llx="72.00" lly="732.12" urx="112.87" ury="743.16">
+   <Word>
+    <Text artifact="true">Header</Text>
+    <Box llx="72.00" lly="732.12" urx="104.77" ury="743.16"/>
+   </Word>
+   <Word>
+    <Text artifact="true">2</Text>
+    <Box llx="107.28" lly="732.12" urx="112.87" ury="743.16"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <A id="A16" type="start"/>
+ <Box llx="72.00" lly="692.16" urx="134.25" ury="705.12">
+  <Line llx="72.00" lly="692.16" urx="134.25" ury="705.12">
+   <Word>
+    <Text>Heading</Text>
+    <Box llx="72.00" lly="692.16" urx="114.92" ury="705.12"/>
+   </Word>
+   <Word>
+    <Text>2.3</Text>
+    <Box llx="117.84" lly="692.16" urx="134.25" ury="705.12"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <A id="A14" type="start"/>
+ <Box llx="72.00" lly="638.04" urx="406.06" ury="675.84">
+  <Line llx="72.00" lly="664.80" urx="389.41" ury="675.84">
+   <Word>
+    <Text>Seite</Text>
+    <Box llx="72.00" lly="664.80" urx="94.30" ury="675.84"/>
+   </Word>
+   <Word>
+    <Text>1</Text>
+    <Box llx="96.72" lly="664.80" urx="102.32" ury="675.84"/>
+   </Word>
+   <Word>
+    <Text>Zeile</Text>
+    <Box llx="104.88" lly="664.80" urx="125.98" ury="675.84"/>
+   </Word>
+   <Word>
+    <Text>1</Text>
+    <Box llx="128.40" lly="664.80" urx="134.00" ury="675.84"/>
+   </Word>
+   <Word>
+    <Text>This</Text>
+    <Box llx="136.56" lly="664.80" urx="154.55" ury="675.84"/>
+   </Word>
+   <Word>
+    <Text>chapter</Text>
+    <Box llx="156.95" lly="664.80" urx="191.53" ury="675.84"/>
+   </Word>
+   <Word>
+    <Text>uses</Text>
+    <Box llx="193.91" lly="664.80" urx="213.83" ury="675.84"/>
+   </Word>
+   <Word>
+    <Text>Volto</Text>
+    <Box llx="216.35" lly="664.80" urx="240.41" ury="675.84"/>
+   </Word>
+   <Word>
+    <Text>to</Text>
+    <Box llx="242.87" lly="664.80" urx="252.29" ury="675.84"/>
+   </Word>
+   <Word>
+    <Text>change</Text>
+    <Box llx="254.86" lly="664.80" urx="287.00" ury="675.84"/>
+   </Word>
+   <Word>
+    <Text>displaying</Text>
+    <Box llx="289.54" lly="664.80" urx="334.10" ury="675.84"/>
+   </Word>
+   <Word>
+    <Text>the</Text>
+    <Box llx="336.58" lly="664.80" urx="351.56" ury="675.84"/>
+   </Word>
+   <Word>
+    <Text>dates</Text>
+    <Box llx="354.10" lly="664.80" urx="378.57" ury="675.84"/>
+   </Word>
+   <Word>
+    <Text>in</Text>
+    <Box llx="381.09" lly="664.80" urx="389.41" ury="675.84"/>
+   </Word>
+  </Line>
+  <Line llx="72.00" lly="651.37" urx="406.06" ury="662.41">
+   <Word>
+    <Text>Seite</Text>
+    <Box llx="72.00" lly="651.37" urx="94.30" ury="662.41"/>
+   </Word>
+   <Word>
+    <Text>1</Text>
+    <Box llx="96.72" lly="651.37" urx="102.31" ury="662.41"/>
+   </Word>
+   <Word>
+    <Text>Zeile</Text>
+    <Box llx="104.87" lly="651.37" urx="125.96" ury="662.41"/>
+   </Word>
+   <Word>
+    <Text>2</Text>
+    <Box llx="128.39" lly="651.37" urx="133.98" ury="662.41"/>
+   </Word>
+   <Word>
+    <Text>talkview</Text>
+    <Box llx="136.54" lly="651.37" urx="173.83" ury="662.41"/>
+   </Word>
+   <Word>
+    <Text>and</Text>
+    <Box llx="176.38" lly="651.37" urx="193.21" ury="662.41"/>
+   </Word>
+   <Word>
+    <Text>talklistview</Text>
+    <Box llx="195.57" lly="651.37" urx="245.93" ury="662.41"/>
+   </Word>
+   <Word>
+    <Text>.</Text>
+    <Box llx="245.96" lly="651.37" urx="248.74" ury="662.41"/>
+   </Word>
+   <Word>
+    <Text>To</Text>
+    <Box llx="251.24" lly="651.37" urx="262.33" ury="662.41"/>
+   </Word>
+   <Word>
+    <Text>meet</Text>
+    <Box llx="264.80" lly="651.37" urx="288.29" ury="662.41"/>
+   </Word>
+   <Word>
+    <Text>the</Text>
+    <Box llx="290.72" lly="651.37" urx="305.69" ury="662.41"/>
+   </Word>
+   <Word>
+    <Text>same</Text>
+    <Box llx="308.23" lly="651.37" urx="332.09" ury="662.41"/>
+   </Word>
+   <Word>
+    <Text>requirements</Text>
+    <Box llx="334.51" lly="651.37" urx="395.35" ury="662.41"/>
+   </Word>
+   <Word>
+    <Text>in</Text>
+    <Box llx="397.75" lly="651.37" urx="406.06" ury="662.41"/>
+   </Word>
+  </Line>
+  <Line llx="72.00" lly="638.04" urx="381.49" ury="649.08">
+   <Word>
+    <Text>Seite</Text>
+    <Box llx="72.00" lly="638.04" urx="94.30" ury="649.08"/>
+   </Word>
+   <Word>
+    <Text>1</Text>
+    <Box llx="96.72" lly="638.04" urx="102.32" ury="649.08"/>
+   </Word>
+   <Word>
+    <Text>Zeile</Text>
+    <Box llx="104.88" lly="638.04" urx="125.98" ury="649.08"/>
+   </Word>
+   <Word>
+    <Text>3</Text>
+    <Box llx="128.40" lly="638.04" urx="134.00" ury="649.08"/>
+   </Word>
+   <Word>
+    <Text>classic</Text>
+    <Box llx="136.56" lly="638.04" urx="164.74" ury="649.08"/>
+   </Word>
+   <Word>
+    <Text>Plone</Text>
+    <Box llx="167.15" lly="638.04" urx="192.57" ury="649.08"/>
+   </Word>
+   <Word>
+    <Text>see</Text>
+    <Box llx="194.99" lly="638.04" urx="210.33" ury="649.08"/>
+   </Word>
+   <Word>
+    <Text>the</Text>
+    <Box llx="212.75" lly="638.04" urx="227.73" ury="649.08"/>
+   </Word>
+   <Word>
+    <Text>chapter</Text>
+    <Box llx="230.27" lly="638.04" urx="264.72" ury="649.08"/>
+   </Word>
+   <Word>
+    <Text>Turning</Text>
+    <Box llx="267.11" lly="638.04" urx="301.35" ury="649.08"/>
+   </Word>
+   <Word>
+    <Text>Talks</Text>
+    <Box llx="303.83" lly="638.04" urx="326.27" ury="649.08"/>
+   </Word>
+   <Word>
+    <Text>into</Text>
+    <Box llx="328.79" lly="638.04" urx="346.61" ury="649.08"/>
+   </Word>
+   <Word>
+    <Text>Events</Text>
+    <Box llx="349.06" lly="638.04" urx="378.70" ury="649.08"/>
+   </Word>
+   <Word>
+    <Text>.</Text>
+    <Box llx="378.70" lly="638.04" urx="381.49" ury="649.08"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <A id="A15" type="start"/>
+ <Box llx="72.00" lly="39.73" ulx="72.00" uly="67.09" urx="243.64" ury="67.09" lrx="243.64" lry="39.72">
+  <Line llx="72.00" lly="56.05" urx="109.75" ury="67.09">
+   <Word>
+    <Text artifact="true">Footer</Text>
+    <Box llx="72.00" lly="56.05" urx="101.77" ury="67.09"/>
+   </Word>
+   <Word>
+    <Text artifact="true">1</Text>
+    <Box llx="104.16" lly="56.05" urx="109.75" ury="67.09"/>
+   </Word>
+  </Line>
+  <Line llx="72.00" lly="39.72" urx="243.64" ury="53.76">
+   <Word>
+    <Text artifact="true">Footer</Text>
+    <Box llx="72.00" lly="39.73" urx="101.77" ury="50.77"/>
+   </Word>
+   <Word>
+    <Text artifact="true">2</Text>
+    <Box llx="104.16" lly="39.73" urx="109.76" ury="50.77"/>
+   </Word>
+   <Word>
+    <Text artifact="true">pg</Text>
+    <Box llx="216.00" lly="39.72" urx="229.90" ury="53.76"/>
+   </Word>
+   <Word>
+    <Text artifact="true">.</Text>
+    <Box llx="229.91" lly="39.72" urx="233.35" ury="53.76"/>
+   </Word>
+   <Word>
+    <Text artifact="true">6</Text>
+    <Box llx="236.53" lly="39.72" urx="243.64" ury="53.76"/>
+   </Word>
+  </Line>
+  <A id="A16" type="stop"/>
+  <A id="A15" type="stop"/>
+  <A id="A14" type="stop"/>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Page number="7" width="612.00" height="792.00">
+<Options>granularity=word tetml={elements={line}}</Options>
+<Content granularity="word" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="72.00" lly="732.12" urx="112.88" ury="756.60">
+  <Line llx="72.00" lly="745.56" urx="112.88" ury="756.60">
+   <Word>
+    <Text artifact="true">Header</Text>
+    <Box llx="72.00" lly="745.56" urx="104.78" ury="756.60"/>
+   </Word>
+   <Word>
+    <Text artifact="true">1</Text>
+    <Box llx="107.28" lly="745.56" urx="112.88" ury="756.60"/>
+   </Word>
+  </Line>
+  <Line llx="72.00" lly="732.12" urx="112.87" ury="743.16">
+   <Word>
+    <Text artifact="true">Header</Text>
+    <Box llx="72.00" lly="732.12" urx="104.77" ury="743.16"/>
+   </Word>
+   <Word>
+    <Text artifact="true">2</Text>
+    <Box llx="107.28" lly="732.12" urx="112.87" ury="743.16"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <A id="A19" type="start"/>
+ <Box llx="72.00" lly="707.64" urx="134.25" ury="720.60">
+  <Line llx="72.00" lly="707.64" urx="134.25" ury="720.60">
+   <Word>
+    <Text>Heading</Text>
+    <Box llx="72.00" lly="707.64" urx="114.92" ury="720.60"/>
+   </Word>
+   <Word>
+    <Text>2.4</Text>
+    <Box llx="117.84" lly="707.64" urx="134.25" ury="720.60"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <A id="A17" type="start"/>
+ <Box llx="72.00" lly="653.41" urx="427.46" ury="691.32">
+  <Line llx="72.00" lly="680.28" urx="424.19" ury="691.32">
+   <Word>
+    <Text>Seite</Text>
+    <Box llx="72.00" lly="680.28" urx="94.30" ury="691.32"/>
+   </Word>
+   <Word>
+    <Text>2</Text>
+    <Box llx="96.72" lly="680.28" urx="102.31" ury="691.32"/>
+   </Word>
+   <Word>
+    <Text>Zeile</Text>
+    <Box llx="104.88" lly="680.28" urx="125.97" ury="691.32"/>
+   </Word>
+   <Word>
+    <Text>1</Text>
+    <Box llx="128.39" lly="680.28" urx="133.99" ury="691.32"/>
+   </Word>
+   <Word>
+    <Text>We</Text>
+    <Box llx="136.55" lly="680.28" urx="151.76" ury="691.32"/>
+   </Word>
+   <Word>
+    <Text>use</Text>
+    <Box llx="154.30" lly="680.28" urx="169.88" ury="691.32"/>
+   </Word>
+   <Word>
+    <Text>a</Text>
+    <Box llx="172.30" lly="680.28" urx="177.59" ury="691.32"/>
+   </Word>
+   <Word>
+    <Text>technique</Text>
+    <Box llx="180.10" lly="680.28" urx="224.83" ury="691.32"/>
+   </Word>
+   <Word>
+    <Text>called</Text>
+    <Box llx="227.37" lly="680.28" urx="253.68" ury="691.32"/>
+   </Word>
+   <Word>
+    <Text>component</Text>
+    <Box llx="256.16" lly="680.28" urx="307.74" ury="691.32"/>
+   </Word>
+   <Word>
+    <Text>shadowing</Text>
+    <Box llx="310.16" lly="680.28" urx="358.44" ury="691.32"/>
+   </Word>
+   <Word>
+    <Text>to</Text>
+    <Box llx="360.91" lly="680.28" urx="370.33" ury="691.32"/>
+   </Word>
+   <Word>
+    <Text>override</Text>
+    <Box llx="372.79" lly="680.28" urx="410.57" ury="691.32"/>
+   </Word>
+   <Word>
+    <Text>an</Text>
+    <Box llx="413.11" lly="680.28" urx="424.19" ury="691.32"/>
+   </Word>
+  </Line>
+  <Line llx="72.00" lly="666.85" urx="425.83" ury="677.89">
+   <Word>
+    <Text>Seite</Text>
+    <Box llx="72.00" lly="666.85" urx="94.30" ury="677.89"/>
+   </Word>
+   <Word>
+    <Text>2</Text>
+    <Box llx="96.72" lly="666.85" urx="102.32" ury="677.89"/>
+   </Word>
+   <Word>
+    <Text>Zeile</Text>
+    <Box llx="104.88" lly="666.85" urx="125.98" ury="677.89"/>
+   </Word>
+   <Word>
+    <Text>2</Text>
+    <Box llx="128.40" lly="666.85" urx="134.00" ury="677.89"/>
+   </Word>
+   <Word>
+    <Text>existing</Text>
+    <Box llx="136.56" lly="666.85" urx="170.80" ury="677.89"/>
+   </Word>
+   <Word>
+    <Text>Volto</Text>
+    <Box llx="173.27" lly="666.85" urx="197.21" ury="677.89"/>
+   </Word>
+   <Word>
+    <Text>component</Text>
+    <Box llx="199.79" lly="666.85" urx="251.37" ury="677.89"/>
+   </Word>
+   <Word>
+    <Text>with</Text>
+    <Box llx="253.79" lly="666.85" urx="273.74" ury="677.89"/>
+   </Word>
+   <Word>
+    <Text>our</Text>
+    <Box llx="276.10" lly="666.85" urx="291.60" ury="677.89"/>
+   </Word>
+   <Word>
+    <Text>local</Text>
+    <Box llx="294.10" lly="666.85" urx="314.75" ury="677.89"/>
+   </Word>
+   <Word>
+    <Text>custom</Text>
+    <Box llx="317.26" lly="666.85" urx="350.32" ury="677.89"/>
+   </Word>
+   <Word>
+    <Text>version</Text>
+    <Box llx="352.78" lly="666.85" urx="385.57" ury="677.89"/>
+   </Word>
+   <Word>
+    <Text>,</Text>
+    <Box llx="385.54" lly="666.85" urx="388.30" ury="677.89"/>
+   </Word>
+   <Word>
+    <Text>without</Text>
+    <Box llx="390.70" lly="666.85" urx="425.83" ury="677.89"/>
+   </Word>
+  </Line>
+  <Line llx="72.00" lly="653.41" urx="427.46" ury="664.45">
+   <Word>
+    <Text>Seite</Text>
+    <Box llx="72.00" lly="653.41" urx="94.30" ury="664.45"/>
+   </Word>
+   <Word>
+    <Text>2</Text>
+    <Box llx="96.72" lly="653.41" urx="102.31" ury="664.45"/>
+   </Word>
+   <Word>
+    <Text>Zeile</Text>
+    <Box llx="104.87" lly="653.41" urx="125.96" ury="664.45"/>
+   </Word>
+   <Word>
+    <Text>3</Text>
+    <Box llx="128.39" lly="653.41" urx="133.98" ury="664.45"/>
+   </Word>
+   <Word>
+    <Text>having</Text>
+    <Box llx="136.54" lly="653.41" urx="166.10" ury="664.45"/>
+   </Word>
+   <Word>
+    <Text>to</Text>
+    <Box llx="168.46" lly="653.41" urx="178.00" ury="664.45"/>
+   </Word>
+   <Word>
+    <Text>modify</Text>
+    <Box llx="180.46" lly="653.41" urx="211.73" ury="664.45"/>
+   </Word>
+   <Word>
+    <Text>Volto</Text>
+    <Box llx="214.29" lly="653.41" urx="238.22" ury="664.45"/>
+   </Word>
+   <Word>
+    <Text>&apos;</Text>
+    <Box llx="238.29" lly="653.41" urx="240.73" ury="664.45"/>
+   </Word>
+   <Word>
+    <Text>s</Text>
+    <Box llx="240.69" lly="653.41" urx="245.00" ury="664.45"/>
+   </Word>
+   <Word>
+    <Text>source</Text>
+    <Box llx="247.52" lly="653.41" urx="277.38" ury="664.45"/>
+   </Word>
+   <Word>
+    <Text>code</Text>
+    <Box llx="279.80" lly="653.41" urx="301.50" ury="664.45"/>
+   </Word>
+   <Word>
+    <Text>at</Text>
+    <Box llx="304.04" lly="653.41" urx="312.90" ury="664.45"/>
+   </Word>
+   <Word>
+    <Text>all</Text>
+    <Box llx="315.44" lly="653.41" urx="325.76" ury="664.45"/>
+   </Word>
+   <Word>
+    <Text>.</Text>
+    <Box llx="325.75" lly="653.41" urx="328.53" ury="664.45"/>
+   </Word>
+   <Word>
+    <Text>You</Text>
+    <Box llx="331.03" lly="653.41" urx="347.98" ury="664.45"/>
+   </Word>
+   <Word>
+    <Text>have</Text>
+    <Box llx="350.46" lly="653.41" urx="371.92" ury="664.45"/>
+   </Word>
+   <Word>
+    <Text>to</Text>
+    <Box llx="374.46" lly="653.41" urx="383.88" ury="664.45"/>
+   </Word>
+   <Word>
+    <Text>place</Text>
+    <Box llx="386.45" lly="653.41" urx="410.07" ury="664.45"/>
+   </Word>
+   <Word>
+    <Text>the</Text>
+    <Box llx="412.61" lly="653.41" urx="427.46" ury="664.45"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <A id="A18" type="start"/>
+ <Box llx="72.00" lly="39.73" ulx="72.00" uly="67.09" urx="243.64" ury="67.09" lrx="243.64" lry="39.72">
+  <Line llx="72.00" lly="56.05" urx="109.75" ury="67.09">
+   <Word>
+    <Text artifact="true">Footer</Text>
+    <Box llx="72.00" lly="56.05" urx="101.77" ury="67.09"/>
+   </Word>
+   <Word>
+    <Text artifact="true">1</Text>
+    <Box llx="104.16" lly="56.05" urx="109.75" ury="67.09"/>
+   </Word>
+  </Line>
+  <Line llx="72.00" lly="39.72" urx="243.64" ury="53.76">
+   <Word>
+    <Text artifact="true">Footer</Text>
+    <Box llx="72.00" lly="39.73" urx="101.77" ury="50.77"/>
+   </Word>
+   <Word>
+    <Text artifact="true">2</Text>
+    <Box llx="104.16" lly="39.73" urx="109.76" ury="50.77"/>
+   </Word>
+   <Word>
+    <Text artifact="true">pg</Text>
+    <Box llx="216.00" lly="39.72" urx="229.90" ury="53.76"/>
+   </Word>
+   <Word>
+    <Text artifact="true">.</Text>
+    <Box llx="229.91" lly="39.72" urx="233.35" ury="53.76"/>
+   </Word>
+   <Word>
+    <Text artifact="true">7</Text>
+    <Box llx="236.53" lly="39.72" urx="243.64" ury="53.76"/>
+   </Word>
+  </Line>
+  <A id="A19" type="stop"/>
+  <A id="A18" type="stop"/>
+  <A id="A17" type="stop"/>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Resources>
+<Fonts>
+ <Font id="F0" name="Calibri" fullname="HGRKXP+Calibri" type="TrueType" embedded="true" ascender="750.00" capheight="632.00" italicangle="0.00" descender="-250.00" weight="400.00" xheight="464.00"/>
+ <Font id="F1" name="Calibri-Light" fullname="VOSQLN+Calibri-Light" type="TrueType" embedded="true" ascender="750.00" capheight="632.00" italicangle="0.00" descender="-250.00" weight="300.00" xheight="462.00"/>
+ <Font id="F2" name="Calibri-Bold" fullname="OBBVRB+Calibri-Bold" type="TrueType" embedded="true" ascender="750.00" capheight="632.00" italicangle="0.00" descender="-250.00" weight="700.00" xheight="469.00"/>
+ <Font id="F3" name="SymbolMT" fullname="KVDXNJ+SymbolMT" type="TrueType (CID)" embedded="true" ascender="693.00" capheight="700.00" italicangle="0.00" descender="-216.00" weight="400.00" xheight="500.00"/>
+ <Font id="F4" name="ArialMT" type="TrueType" embedded="false" ascender="1040.00" capheight="716.00" italicangle="0.00" descender="-325.00" weight="400.00" xheight="519.00"/>
+</Fonts>
+<ColorSpaces>
+ <ColorSpace id="CS0" name="ICCBased" components="1" iccprofile="ICC0"/>
+ <ColorSpace id="CS1" name="ICCBased" components="3" iccprofile="ICC1"/>
+</ColorSpaces>
+</Resources>
+<Graphics>
+<ICCProfiles>
+ <ICCProfile id="ICC0" embedded="true" iccversion="2.1" profilename="Gray Gamma 2.2" checksum="66043AD0DE86F27B977BAB702FB1A778" profilecs="GRAY" deviceclass="mntr" fromCIE="true" toCIE="true"/>
+ <ICCProfile id="ICC1" embedded="true" iccversion="2.1" profilename="sRGB IEC61966-2.1" checksum="1D3FDA2EDB4A89AB60A23C5F7C7D81DD" profilecs="RGB " deviceclass="mntr" fromCIE="true" toCIE="true"/>
+</ICCProfiles>
+</Graphics>
+</Pages>
+<Destinations>
+ <Destination id="D0" page="3" type="XYZ" left="70.0" bottom="0.0" right="612.0" top="629.0" anchor="A7"/>
+ <Destination id="D1" page="3" type="XYZ" left="70.0" bottom="0.0" right="612.0" top="558.0" anchor="A8"/>
+ <Destination id="D2" page="4" type="XYZ" left="70.0" bottom="0.0" right="612.0" top="693.0" anchor="A9"/>
+ <Destination id="D3" page="4" type="XYZ" left="70.0" bottom="0.0" right="612.0" top="635.0" anchor="A10"/>
+ <Destination id="D4" page="5" type="XYZ" left="70.0" bottom="0.0" right="612.0" top="693.0" anchor="A11"/>
+ <Destination id="D5" page="5" type="XYZ" left="70.0" bottom="0.0" right="612.0" top="635.0" anchor="A12"/>
+ <Destination id="D6" page="6" type="XYZ" left="70.0" bottom="0.0" right="612.0" top="693.0" anchor="A14"/>
+ <Destination id="D7" page="6" type="XYZ" left="70.0" bottom="0.0" right="612.0" top="635.0" anchor="A15"/>
+ <Destination id="D8" page="7" type="XYZ" left="70.0" bottom="0.0" right="612.0" top="693.0" anchor="A17"/>
+ <Destination id="D9" page="7" type="XYZ" left="70.0" bottom="0.0" right="612.0" top="635.0" anchor="A18"/>
+ <Destination id="D10" page="5" type="XYZ" left="70.0" bottom="0.0" right="612.0" top="720.0" anchor="A13"/>
+ <Destination id="D11" page="6" type="XYZ" left="70.0" bottom="0.0" right="612.0" top="707.0" anchor="A16"/>
+ <Destination id="D12" page="7" type="XYZ" left="70.0" bottom="0.0" right="612.0" top="720.0" anchor="A19"/>
+</Destinations>
+</Document>
+</TET>

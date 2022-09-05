@@ -1,0 +1,490 @@
+{
+    "documentId": 17,
+    "documentFileName": "p_2_h_0_f_0.pdf",
+    "noLinesFooter": 0,
+    "noLinesHeader": 0,
+    "noLinesInDocument": 51,
+    "noLinesToc": 0,
+    "noListsBulletInDocument": 0,
+    "noListsNumberInDocument": 0,
+    "noPagesInDocument": 2,
+    "noParagraphsInDocument": 2,
+    "noTablesInDocument": 0,
+    "noTitlesInDocument": 0,
+    "titles": [],
+    "pages": [
+        {
+            "pageNo": 1,
+            "noLinesInPage": 48,
+            "noParagraphsInPage": 1,
+            "lines": [
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 530.69,
+                    "lineNo": 1,
+                    "lineNoPage": 1,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 508.48,
+                    "lineNo": 2,
+                    "lineNoPage": 2,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "dolore magna aliqua. Sed vulputate mi sit amet mauris commodo quis imperdiet. Ac ut consequat"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 526.41,
+                    "lineNo": 3,
+                    "lineNoPage": 3,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "semper viverra nam. Magna sit amet purus gravida quis. Malesuada bibendum arcu vitae elementum."
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 500.58,
+                    "lineNo": 4,
+                    "lineNoPage": 4,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "Proin fermentum leo vel orci porta non pulvinar neque. Dictumst quisque sagittis purus sit amet"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 527.24,
+                    "lineNo": 5,
+                    "lineNoPage": 5,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "volutpat. Massa eget egestas purus viverra accumsan in. Placerat in egestas erat imperdiet sed. Morbi"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 514.37,
+                    "lineNo": 6,
+                    "lineNoPage": 6,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "tempus iaculis urna id volutpat lacus. Etiam sit amet nisl purus in. Ornare massa eget egestas purus"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 504.91,
+                    "lineNo": 7,
+                    "lineNoPage": 7,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "viverra. Quisque id diam vel quam elementum pulvinar etiam non. Netus et malesuada fames ac."
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 504.07,
+                    "lineNo": 8,
+                    "lineNoPage": 8,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Porta lorem mollis aliquam ut"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 129.86,
+                    "lineNo": 9,
+                    "lineNoPage": 9,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "porttitor leo."
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 521.56,
+                    "lineNo": 10,
+                    "lineNoPage": 10,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "Enim neque volutpat ac tincidunt vitae semper quis lectus. Placerat vestibulum lectus mauris ultrices"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 501.59,
+                    "lineNo": 11,
+                    "lineNoPage": 11,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "eros. Pharetra massa massa ultricies mi quis. Nullam eget felis eget nunc lobortis mattis aliquam"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 539.67,
+                    "lineNo": 12,
+                    "lineNoPage": 12,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "faucibus. At lectus urna duis convallis convallis tellus id interdum. Massa sed elementum tempus egestas"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 528.35,
+                    "lineNo": 13,
+                    "lineNoPage": 13,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "sed sed risus pretium quam. Accumsan in nisl nisi scelerisque eu ultrices. Nunc lobortis mattis aliquam"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 528.3,
+                    "lineNo": 14,
+                    "lineNoPage": 14,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "faucibus purus in. Egestas quis ipsum suspendisse ultrices gravida. Nullam non nisi est sit amet facilisis"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 133.45,
+                    "lineNo": 15,
+                    "lineNoPage": 15,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "magna etiam."
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 523.05,
+                    "lineNo": 16,
+                    "lineNoPage": 16,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "Aliquam ultrices sagittis orci a scelerisque. Turpis tincidunt id aliquet risus. Quam vulputate dignissim"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 534.52,
+                    "lineNo": 17,
+                    "lineNoPage": 17,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "suspendisse in est. Enim diam vulputate ut pharetra sit amet aliquam id. Id velit ut tortor pretium. Enim"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 530.86,
+                    "lineNo": 18,
+                    "lineNoPage": 18,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "sit amet venenatis urna cursus eget nunc. Dictumst quisque sagittis purus sit amet volutpat consequat."
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 534.24,
+                    "lineNo": 19,
+                    "lineNoPage": 19,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "In vitae turpis massa sed elementum tempus egestas sed. Aliquet nec ullamcorper sit amet risus nullam"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 524.24,
+                    "lineNo": 20,
+                    "lineNoPage": 20,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "eget. Bibendum est ultricies integer quis auctor elit sed. Purus sit amet luctus venenatis lectus magna"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 528.4,
+                    "lineNo": 21,
+                    "lineNoPage": 21,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "fringilla urna porttitor. Enim facilisis gravida neque convallis. Et magnis dis parturient montes nascetur"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 514.81,
+                    "lineNo": 22,
+                    "lineNoPage": 22,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "ridiculus mus mauris vitae. Quam nulla porttitor massa id neque aliquam vestibulum morbi blandit."
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 253.92,
+                    "lineNo": 23,
+                    "lineNoPage": 23,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "Turpis egestas pretium aenean pharetra."
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 516.14,
+                    "lineNo": 24,
+                    "lineNoPage": 24,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "At risus viverra adipiscing at in. Quam adipiscing vitae proin sagittis nisl. Nullam eget felis eget nunc"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 535.81,
+                    "lineNo": 25,
+                    "lineNoPage": 25,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "lobortis. Enim lobortis scelerisque fermentum dui faucibus in. Tempus urna et pharetra pharetra massa."
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 515.94,
+                    "lineNo": 26,
+                    "lineNoPage": 26,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "Tristique senectus et netus et malesuada fames ac turpis. In fermentum posuere urna nec tincidunt"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 505.02,
+                    "lineNo": 27,
+                    "lineNoPage": 27,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "praesent semper feugiat. Pharetra et ultrices neque ornare. Quis imperdiet massa tincidunt nunc"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 537.31,
+                    "lineNo": 28,
+                    "lineNoPage": 28,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "pulvinar sapien et ligula ullamcorper. Morbi leo urna molestie at elementum eu facilisis sed odio. Cursus"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 202.33,
+                    "lineNo": 29,
+                    "lineNoPage": 29,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "turpis massa tincidunt dui ut."
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 538.47,
+                    "lineNo": 30,
+                    "lineNoPage": 30,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "Facilisis leo vel fringilla est ullamcorper eget nulla facilisi. Ut aliquam purus sit amet luctus. Vivamus arcu"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 534.6,
+                    "lineNo": 31,
+                    "lineNoPage": 31,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "felis bibendum ut tristique et egestas quis. Nisl condimentum id venenatis a condimentum vitae sapien."
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 515.97,
+                    "lineNo": 32,
+                    "lineNoPage": 32,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "Sed tempus urna et pharetra pharetra. Scelerisque fermentum dui faucibus in ornare quam viverra."
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 507.14,
+                    "lineNo": 33,
+                    "lineNoPage": 33,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "Neque convallis a cras semper auctor neque vitae tempus. Fringilla phasellus faucibus scelerisque"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 510.44,
+                    "lineNo": 34,
+                    "lineNoPage": 34,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "eleifend donec pretium vulputate. Elit ut aliquam purus sit amet luctus. Placerat vestibulum lectus"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 533.52,
+                    "lineNo": 35,
+                    "lineNoPage": 35,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "mauris ultrices eros in cursus turpis massa. Convallis posuere morbi leo urna molestie. Sed enim ut sem"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 538.9,
+                    "lineNo": 36,
+                    "lineNoPage": 36,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "viverra. Lorem sed risus ultricies tristique nulla aliquet enim. Etiam non quam lacus suspendisse faucibus"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 116.54,
+                    "lineNo": 37,
+                    "lineNoPage": 37,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "interdum."
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 509.24,
+                    "lineNo": 38,
+                    "lineNoPage": 38,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "Egestas erat imperdiet sed euismod nisi porta lorem mollis. Sit amet tellus cras adipiscing enim eu"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 513.81,
+                    "lineNo": 39,
+                    "lineNoPage": 39,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "turpis. Nunc sed augue lacus viverra vitae congue eu consequat. Arcu felis bibendum ut tristique et"
+                },
+                {
+                    "coordLLX": 71.99,
+                    "coordURX": 526.7,
+                    "lineNo": 40,
+                    "lineNoPage": 40,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "egestas quis. Tristique sollicitudin nibh sit amet commodo nulla facilisi. Nec ullamcorper sit amet risus"
+                },
+                {
+                    "coordLLX": 71.99,
+                    "coordURX": 536.04,
+                    "lineNo": 41,
+                    "lineNoPage": 41,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "nullam eget felis eget. Purus sit amet luctus venenatis lectus magna fringilla urna porttitor. Viverra vitae"
+                },
+                {
+                    "coordLLX": 71.99,
+                    "coordURX": 526.6,
+                    "lineNo": 42,
+                    "lineNoPage": 42,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "congue eu consequat ac. Consectetur adipiscing elit pellentesque habitant morbi tristique senectus et"
+                },
+                {
+                    "coordLLX": 71.99,
+                    "coordURX": 520.63,
+                    "lineNo": 43,
+                    "lineNoPage": 43,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "netus. Sodales ut eu sem integer vitae justo eget magna. Convallis a cras semper auctor neque vitae."
+                },
+                {
+                    "coordLLX": 71.99,
+                    "coordURX": 528.16,
+                    "lineNo": 44,
+                    "lineNoPage": 44,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus. Id velit ut tortor pretium"
+                },
+                {
+                    "coordLLX": 71.99,
+                    "coordURX": 533.39,
+                    "lineNo": 45,
+                    "lineNoPage": 45,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "viverra suspendisse potenti. Malesuada pellentesque elit eget gravida cum sociis natoque penatibus et."
+                },
+                {
+                    "coordLLX": 71.99,
+                    "coordURX": 305.62,
+                    "lineNo": 46,
+                    "lineNoPage": 46,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "Diam maecenas ultricies mi eget mauris pharetra et."
+                },
+                {
+                    "coordLLX": 71.99,
+                    "coordURX": 522.87,
+                    "lineNo": 47,
+                    "lineNoPage": 47,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "At in tellus integer feugiat scelerisque varius. Pulvinar sapien et ligula ullamcorper. Feugiat sed lectus"
+                },
+                {
+                    "coordLLX": 71.99,
+                    "coordURX": 507.89,
+                    "lineNo": 48,
+                    "lineNoPage": 48,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "vestibulum mattis ullamcorper velit. Consectetur libero id faucibus nisl tincidunt eget nullam non."
+                }
+            ]
+        },
+        {
+            "pageNo": 2,
+            "noLinesInPage": 3,
+            "noParagraphsInPage": 1,
+            "lines": [
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 529.54,
+                    "lineNo": 1,
+                    "lineNoPage": 1,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "Dictum at tempor commodo ullamcorper a lacus. Id cursus metus aliquam eleifend mi in. Pellentesque"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 518.23,
+                    "lineNo": 2,
+                    "lineNoPage": 2,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus. Dictumst quisque sagittis purus sit"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 157.41,
+                    "lineNo": 3,
+                    "lineNoPage": 3,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "amet. Adipiscing at"
+                }
+            ]
+        }
+    ]
+}

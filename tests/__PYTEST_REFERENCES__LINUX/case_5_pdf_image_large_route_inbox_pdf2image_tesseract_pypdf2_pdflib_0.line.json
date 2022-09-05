@@ -1,0 +1,1813 @@
+{
+    "documentId": 5,
+    "documentFileName": "case_5_pdf_image_large_route_inbox_pdf2image_tesseract_pypdf2_pdflib.pdf",
+    "noLinesFooter": 0,
+    "noLinesHeader": 1,
+    "noLinesInDocument": 198,
+    "noLinesToc": 0,
+    "noListsBulletInDocument": 2,
+    "noListsNumberInDocument": 2,
+    "noPagesInDocument": 2,
+    "noParagraphsInDocument": 64,
+    "noTablesInDocument": 0,
+    "noTitlesInDocument": 0,
+    "titles": [],
+    "pages": [
+        {
+            "pageNo": 1,
+            "noLinesInPage": 89,
+            "noParagraphsInPage": 29,
+            "lines": [
+                {
+                    "coordLLX": 145.03,
+                    "coordURX": 172.81,
+                    "lineNo": 1,
+                    "lineNoPage": 1,
+                    "lineType": "h",
+                    "paragraphNo": 1,
+                    "text": "324"
+                },
+                {
+                    "coordLLX": 674.74,
+                    "coordURX": 1646.82,
+                    "lineNo": 1,
+                    "lineNoPage": 2,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "IEEE TRANSACTIONS ON SOFTWARE ENGINEERING, VOL. SE-11, NO. 4, APRIL 1985"
+                },
+                {
+                    "coordLLX": 384.69,
+                    "coordURX": 868.94,
+                    "lineNo": 1,
+                    "lineNoPage": 3,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "Member of IBM\u2019s Santa Teresa Laboratory during"
+                },
+                {
+                    "coordLLX": 428.92,
+                    "coordURX": 869.14,
+                    "lineNo": 2,
+                    "lineNoPage": 4,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "the summers of 1982 and 1983. He has"
+                },
+                {
+                    "coordLLX": 385.71,
+                    "coordURX": 865.71,
+                    "lineNo": 3,
+                    "lineNoPage": 5,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "published papers in switching and automata"
+                },
+                {
+                    "coordLLX": 385.71,
+                    "coordURX": 866.97,
+                    "lineNo": 4,
+                    "lineNoPage": 6,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "theory, computer graphics, operating systems,"
+                },
+                {
+                    "coordLLX": 384.69,
+                    "coordURX": 868.12,
+                    "lineNo": 5,
+                    "lineNoPage": 7,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "database, and most recently, software engineering"
+                },
+                {
+                    "coordLLX": 422.74,
+                    "coordURX": 632.0,
+                    "lineNo": 6,
+                    "lineNoPage": 8,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "and software metrics."
+                },
+                {
+                    "coordLLX": 1156.11,
+                    "coordURX": 1642.14,
+                    "lineNo": 1,
+                    "lineNoPage": 9,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "Stephen M. Thebaut (S\u201979-M\u201983) received the"
+                },
+                {
+                    "coordLLX": 1157.15,
+                    "coordURX": 1642.31,
+                    "lineNo": 2,
+                    "lineNoPage": 10,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "B.A. degree in mathematics from Duke University,"
+                },
+                {
+                    "coordLLX": 1242.53,
+                    "coordURX": 1639.84,
+                    "lineNo": 3,
+                    "lineNoPage": 11,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "Durham, NC, and the M.S, and Ph. D."
+                },
+                {
+                    "coordLLX": 1156.13,
+                    "coordURX": 1642.3,
+                    "lineNo": 4,
+                    "lineNoPage": 12,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "degrees in computer science from Purdue University,"
+                },
+                {
+                    "coordLLX": 1238.43,
+                    "coordURX": 1640.54,
+                    "lineNo": 5,
+                    "lineNoPage": 13,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "West Lafayette, IN, in 1979 and 1983,"
+                },
+                {
+                    "coordLLX": 1156.15,
+                    "coordURX": 1273.88,
+                    "lineNo": 1,
+                    "lineNoPage": 14,
+                    "lineType": "b",
+                    "paragraphNo": 5,
+                    "text": "respectively."
+                },
+                {
+                    "coordLLX": 1174.67,
+                    "coordURX": 1639.1,
+                    "lineNo": 1,
+                    "lineNoPage": 15,
+                    "lineType": "b",
+                    "paragraphNo": 6,
+                    "text": "He joined the Department of Computer and"
+                },
+                {
+                    "coordLLX": 1155.13,
+                    "coordURX": 1640.21,
+                    "lineNo": 1,
+                    "lineNoPage": 16,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "Information Sciences, University of Florida,"
+                },
+                {
+                    "coordLLX": 1154.11,
+                    "coordURX": 1643.33,
+                    "lineNo": 1,
+                    "lineNoPage": 17,
+                    "lineType": "b",
+                    "paragraphNo": 8,
+                    "text": "Gainesville, FL, as an Assistant Professor in"
+                },
+                {
+                    "coordLLX": 1156.17,
+                    "coordURX": 1639.32,
+                    "lineNo": 2,
+                    "lineNoPage": 18,
+                    "lineType": "b",
+                    "paragraphNo": 8,
+                    "text": "1983, and was supported by an IBM Postdoctoral"
+                },
+                {
+                    "coordLLX": 1218.92,
+                    "coordURX": 1638.88,
+                    "lineNo": 3,
+                    "lineNoPage": 19,
+                    "lineType": "b",
+                    "paragraphNo": 8,
+                    "text": "Research Fellowship during the 1983-"
+                },
+                {
+                    "coordLLX": 909.32,
+                    "coordURX": 1638.44,
+                    "lineNo": 4,
+                    "lineNoPage": 20,
+                    "lineType": "b",
+                    "paragraphNo": 8,
+                    "text": "1984 academic year. His current research interests include software"
+                },
+                {
+                    "coordLLX": 907.27,
+                    "coordURX": 1639.6,
+                    "lineNo": 1,
+                    "lineNoPage": 21,
+                    "lineType": "b",
+                    "paragraphNo": 9,
+                    "text": "reliability, program maintenance, and the large-scale software development"
+                },
+                {
+                    "coordLLX": 993.69,
+                    "coordURX": 1064.32,
+                    "lineNo": 2,
+                    "lineNoPage": 22,
+                    "lineType": "b",
+                    "paragraphNo": 9,
+                    "text": "process."
+                },
+                {
+                    "coordLLX": 926.83,
+                    "coordURX": 1638.91,
+                    "lineNo": 1,
+                    "lineNoPage": 23,
+                    "lineType": "b",
+                    "paragraphNo": 10,
+                    "text": "Prof. Thebaut is a member of the Association for Computing Machinery,"
+                },
+                {
+                    "coordLLX": 996.78,
+                    "coordURX": 1512.48,
+                    "lineNo": 2,
+                    "lineNoPage": 24,
+                    "lineType": "b",
+                    "paragraphNo": 10,
+                    "text": "the IEEE Computer Society, and the 356 Registry."
+                },
+                {
+                    "coordLLX": 387.77,
+                    "coordURX": 871.47,
+                    "lineNo": 1,
+                    "lineNoPage": 25,
+                    "lineType": "b",
+                    "paragraphNo": 11,
+                    "text": "Tze-Jie Yu received the B.S. degree in electrical"
+                },
+                {
+                    "coordLLX": 387.78,
+                    "coordURX": 872.62,
+                    "lineNo": 2,
+                    "lineNoPage": 26,
+                    "lineType": "b",
+                    "paragraphNo": 11,
+                    "text": "engineering from National Taiwan University in"
+                },
+                {
+                    "coordLLX": 389.85,
+                    "coordURX": 869.95,
+                    "lineNo": 3,
+                    "lineNoPage": 27,
+                    "lineType": "b",
+                    "paragraphNo": 11,
+                    "text": "1979, and the M.S. degree in computer science"
+                },
+                {
+                    "coordLLX": 388.83,
+                    "coordURX": 870.83,
+                    "lineNo": 4,
+                    "lineNoPage": 28,
+                    "lineType": "b",
+                    "paragraphNo": 11,
+                    "text": "from Purdue University, West Lafayette, IN,"
+                },
+                {
+                    "coordLLX": 387.81,
+                    "coordURX": 462.27,
+                    "lineNo": 5,
+                    "lineNoPage": 29,
+                    "lineType": "b",
+                    "paragraphNo": 11,
+                    "text": "in 1983."
+                },
+                {
+                    "coordLLX": 407.36,
+                    "coordURX": 869.57,
+                    "lineNo": 1,
+                    "lineNoPage": 30,
+                    "lineType": "b",
+                    "paragraphNo": 12,
+                    "text": "From 1981 to the present, he has beena Ph. D."
+                },
+                {
+                    "coordLLX": 387.83,
+                    "coordURX": 868.7,
+                    "lineNo": 2,
+                    "lineNoPage": 31,
+                    "lineType": "b",
+                    "paragraphNo": 12,
+                    "text": "candidate and Research Assistant at Purdue"
+                },
+                {
+                    "coordLLX": 387.84,
+                    "coordURX": 868.55,
+                    "lineNo": 3,
+                    "lineNoPage": 32,
+                    "lineType": "b",
+                    "paragraphNo": 12,
+                    "text": "University. He worked for IBM\u2019s Santa Teresa"
+                },
+                {
+                    "coordLLX": 387.85,
+                    "coordURX": 870.89,
+                    "lineNo": 4,
+                    "lineNoPage": 33,
+                    "lineType": "b",
+                    "paragraphNo": 12,
+                    "text": "Laboratory as a Systems Analyst during the"
+                },
+                {
+                    "coordLLX": 387.86,
+                    "coordURX": 869.63,
+                    "lineNo": 5,
+                    "lineNoPage": 34,
+                    "lineType": "b",
+                    "paragraphNo": 12,
+                    "text": "summer of 1983. His research interests include"
+                },
+                {
+                    "coordLLX": 387.87,
+                    "coordURX": 870.8,
+                    "lineNo": 6,
+                    "lineNoPage": 35,
+                    "lineType": "b",
+                    "paragraphNo": 12,
+                    "text": "software quality assessment, software tools,"
+                },
+                {
+                    "coordLLX": 385.82,
+                    "coordURX": 663.19,
+                    "lineNo": 7,
+                    "lineNoPage": 36,
+                    "lineType": "b",
+                    "paragraphNo": 12,
+                    "text": "and software cost modeling."
+                },
+                {
+                    "coordLLX": 160.57,
+                    "coordURX": 868.12,
+                    "lineNo": 1,
+                    "lineNoPage": 37,
+                    "lineType": "b",
+                    "paragraphNo": 13,
+                    "text": "Mr. Yu is a member of the Association for Computing Machinery and"
+                },
+                {
+                    "coordLLX": 141.04,
+                    "coordURX": 872.4,
+                    "lineNo": 2,
+                    "lineNoPage": 38,
+                    "lineType": "b",
+                    "paragraphNo": 13,
+                    "text": "its Special Interest Group on Software Engineering, and a member of"
+                },
+                {
+                    "coordLLX": 140.02,
+                    "coordURX": 424.39,
+                    "lineNo": 3,
+                    "lineNoPage": 39,
+                    "lineType": "b",
+                    "paragraphNo": 13,
+                    "text": "the IEEE Computer Society."
+                },
+                {
+                    "coordLLX": 1155.09,
+                    "coordURX": 1642.29,
+                    "lineNo": 1,
+                    "lineNoPage": 40,
+                    "lineType": "b",
+                    "paragraphNo": 14,
+                    "text": "Lorri R. Paulsen received the B.S. degree in"
+                },
+                {
+                    "coordLLX": 1156.12,
+                    "coordURX": 1643.27,
+                    "lineNo": 2,
+                    "lineNoPage": 41,
+                    "lineType": "b",
+                    "paragraphNo": 14,
+                    "text": "mathematics from Wagner College, Staten Island,"
+                },
+                {
+                    "coordLLX": 1156.12,
+                    "coordURX": 1278.52,
+                    "lineNo": 1,
+                    "lineNoPage": 42,
+                    "lineType": "b",
+                    "paragraphNo": 15,
+                    "text": "NY, in 1968."
+                },
+                {
+                    "coordLLX": 1173.6,
+                    "coordURX": 1643.66,
+                    "lineNo": 1,
+                    "lineNoPage": 43,
+                    "lineType": "b",
+                    "paragraphNo": 16,
+                    "text": "She joined IBM in 1968, and is currently a"
+                },
+                {
+                    "coordLLX": 1155.09,
+                    "coordURX": 1638.77,
+                    "lineNo": 2,
+                    "lineNoPage": 44,
+                    "lineType": "b",
+                    "paragraphNo": 16,
+                    "text": "Program Development Manager for IBM General"
+                },
+                {
+                    "coordLLX": 1154.06,
+                    "coordURX": 1638.51,
+                    "lineNo": 3,
+                    "lineNoPage": 45,
+                    "lineType": "b",
+                    "paragraphNo": 16,
+                    "text": "Products Division at Santa Teresa Laboratory,"
+                },
+                {
+                    "coordLLX": 1154.06,
+                    "coordURX": 1640.58,
+                    "lineNo": 1,
+                    "lineNoPage": 46,
+                    "lineType": "b",
+                    "paragraphNo": 17,
+                    "text": "San Jose, CA. During her IBM career, she has"
+                },
+                {
+                    "coordLLX": 1153.03,
+                    "coordURX": 1640.83,
+                    "lineNo": 2,
+                    "lineNoPage": 47,
+                    "lineType": "b",
+                    "paragraphNo": 17,
+                    "text": "been associated with systems design and development,"
+                },
+                {
+                    "coordLLX": 1277.49,
+                    "coordURX": 1638.51,
+                    "lineNo": 3,
+                    "lineNoPage": 48,
+                    "lineType": "b",
+                    "paragraphNo": 17,
+                    "text": "working on the ASP Version 3 and"
+                },
+                {
+                    "coordLLX": 1154.06,
+                    "coordURX": 1638.28,
+                    "lineNo": 4,
+                    "lineNoPage": 49,
+                    "lineType": "b",
+                    "paragraphNo": 17,
+                    "text": "JES3 products. In 1979 she became involved"
+                },
+                {
+                    "coordLLX": 1153.03,
+                    "coordURX": 1638.9,
+                    "lineNo": 5,
+                    "lineNoPage": 50,
+                    "lineType": "b",
+                    "paragraphNo": 17,
+                    "text": "with the measurement of programmer\u2019s productivity,"
+                },
+                {
+                    "coordLLX": 977.14,
+                    "coordURX": 1639.54,
+                    "lineNo": 6,
+                    "lineNoPage": 51,
+                    "lineType": "b",
+                    "paragraphNo": 17,
+                    "text": "which led to her research with Software Science metrics and the"
+                },
+                {
+                    "coordLLX": 908.22,
+                    "coordURX": 1640.82,
+                    "lineNo": 7,
+                    "lineNoPage": 52,
+                    "lineType": "b",
+                    "paragraphNo": 17,
+                    "text": "prediction of error-prone modules. She is currently managing the development"
+                },
+                {
+                    "coordLLX": 1024.45,
+                    "coordURX": 1636.71,
+                    "lineNo": 8,
+                    "lineNoPage": 53,
+                    "lineType": "b",
+                    "paragraphNo": 17,
+                    "text": "of software engineering tools to assist with the design and"
+                },
+                {
+                    "coordLLX": 907.2,
+                    "coordURX": 1242.31,
+                    "lineNo": 9,
+                    "lineNoPage": 54,
+                    "lineType": "b",
+                    "paragraphNo": 17,
+                    "text": "implementation of IBM products."
+                },
+                {
+                    "coordLLX": 188.23,
+                    "coordURX": 1572.97,
+                    "lineNo": 1,
+                    "lineNoPage": 55,
+                    "lineType": "b",
+                    "paragraphNo": 18,
+                    "text": "Translating SOL Into Relational Algebra: Optimization,"
+                },
+                {
+                    "coordLLX": 314.72,
+                    "coordURX": 1447.41,
+                    "lineNo": 2,
+                    "lineNoPage": 56,
+                    "lineType": "b",
+                    "paragraphNo": 18,
+                    "text": "Semantics, and Equivalence of SOL Queries"
+                },
+                {
+                    "coordLLX": 635.66,
+                    "coordURX": 1129.87,
+                    "lineNo": 1,
+                    "lineNoPage": 57,
+                    "lineType": "b",
+                    "paragraphNo": 19,
+                    "text": "STEFANO CERI anp GEORG GOTTLOB"
+                },
+                {
+                    "coordLLX": 154.29,
+                    "coordURX": 862.42,
+                    "lineNo": 1,
+                    "lineNoPage": 58,
+                    "lineType": "b",
+                    "paragraphNo": 20,
+                    "text": "Abstract\u2014In this paper, we present a translator from a relevant subset"
+                },
+                {
+                    "coordLLX": 135.78,
+                    "coordURX": 861.73,
+                    "lineNo": 2,
+                    "lineNoPage": 59,
+                    "lineType": "b",
+                    "paragraphNo": 20,
+                    "text": "of SQL into relational algebra, The translation is syntax-directed, with"
+                },
+                {
+                    "coordLLX": 136.82,
+                    "coordURX": 861.12,
+                    "lineNo": 3,
+                    "lineNoPage": 60,
+                    "lineType": "b",
+                    "paragraphNo": 20,
+                    "text": "translation rules associated with grammar productions; each production"
+                },
+                {
+                    "coordLLX": 135.8,
+                    "coordURX": 640.19,
+                    "lineNo": 4,
+                    "lineNoPage": 61,
+                    "lineType": "b",
+                    "paragraphNo": 20,
+                    "text": "corresponds to a particular type of SQL subquery."
+                },
+                {
+                    "coordLLX": 154.32,
+                    "coordURX": 863.45,
+                    "lineNo": 1,
+                    "lineNoPage": 62,
+                    "lineType": "b",
+                    "paragraphNo": 21,
+                    "text": "The translation is performed in two steps, associated with two different"
+                },
+                {
+                    "coordLLX": 176.96,
+                    "coordURX": 860.58,
+                    "lineNo": 2,
+                    "lineNoPage": 63,
+                    "lineType": "b",
+                    "paragraphNo": 21,
+                    "text": "grammars of SQL. The first step, driven by the larger grammar,"
+                },
+                {
+                    "coordLLX": 135.82,
+                    "coordURX": 864.24,
+                    "lineNo": 3,
+                    "lineNoPage": 64,
+                    "lineType": "b",
+                    "paragraphNo": 21,
+                    "text": "transforms SQL queries into equivalent SQL queries that can be accepted"
+                },
+                {
+                    "coordLLX": 216.05,
+                    "coordURX": 859.1,
+                    "lineNo": 4,
+                    "lineNoPage": 65,
+                    "lineType": "b",
+                    "paragraphNo": 21,
+                    "text": "by a restricted grammar. The second step transforms SQL"
+                },
+                {
+                    "coordLLX": 133.78,
+                    "coordURX": 864.26,
+                    "lineNo": 5,
+                    "lineNoPage": 66,
+                    "lineType": "b",
+                    "paragraphNo": 21,
+                    "text": "queries accepted by the restricted grammar into expressions of relational"
+                },
+                {
+                    "coordLLX": 201.68,
+                    "coordURX": 859.47,
+                    "lineNo": 6,
+                    "lineNoPage": 67,
+                    "lineType": "b",
+                    "paragraphNo": 21,
+                    "text": "algebra. This approach allows performing the second step, which"
+                },
+                {
+                    "coordLLX": 133.8,
+                    "coordURX": 779.3,
+                    "lineNo": 7,
+                    "lineNoPage": 68,
+                    "lineType": "b",
+                    "paragraphNo": 21,
+                    "text": "is the most difficult one, on a restricted number of productions."
+                },
+                {
+                    "coordLLX": 152.32,
+                    "coordURX": 859.49,
+                    "lineNo": 1,
+                    "lineNoPage": 69,
+                    "lineType": "b",
+                    "paragraphNo": 22,
+                    "text": "The translator can be used in conjunction with an optimizer which"
+                },
+                {
+                    "coordLLX": 132.79,
+                    "coordURX": 865.32,
+                    "lineNo": 2,
+                    "lineNoPage": 70,
+                    "lineType": "b",
+                    "paragraphNo": 22,
+                    "text": "operates on expressions of relational algebra, thus taking advantage of a"
+                },
+                {
+                    "coordLLX": 155.31,
+                    "coordURX": 863.05,
+                    "lineNo": 1,
+                    "lineNoPage": 71,
+                    "lineType": "b",
+                    "paragraphNo": 23,
+                    "text": "Manuscript received June 13, 1984; revised September 6, 1984. This"
+                },
+                {
+                    "coordLLX": 131.65,
+                    "coordURX": 809.45,
+                    "lineNo": 2,
+                    "lineNoPage": 72,
+                    "lineType": "b",
+                    "paragraphNo": 23,
+                    "text": "work was supported in part by a grant from Data Base Informatica."
+                },
+                {
+                    "coordLLX": 154.27,
+                    "coordURX": 865.3,
+                    "lineNo": 1,
+                    "lineNoPage": 73,
+                    "lineType": "b",
+                    "paragraphNo": 24,
+                    "text": "The authors are with the Dipartimento di Elettronica, Politecnico di"
+                },
+                {
+                    "coordLLX": 135.75,
+                    "coordURX": 436.1,
+                    "lineNo": 1,
+                    "lineNoPage": 74,
+                    "lineType": "b",
+                    "paragraphNo": 25,
+                    "text": "Milano, I 20133 Milano, Italy."
+                },
+                {
+                    "coordLLX": 904.11,
+                    "coordURX": 1634.94,
+                    "lineNo": 2,
+                    "lineNoPage": 75,
+                    "lineType": "b",
+                    "paragraphNo": 25,
+                    "text": "body of knowledge on the optimization of algebraic expressions. Moreover,"
+                },
+                {
+                    "coordLLX": 965.83,
+                    "coordURX": 1635.75,
+                    "lineNo": 3,
+                    "lineNoPage": 76,
+                    "lineType": "b",
+                    "paragraphNo": 25,
+                    "text": "the proposed approach indicates a methodology for the correct"
+                },
+                {
+                    "coordLLX": 904.12,
+                    "coordURX": 1637.27,
+                    "lineNo": 4,
+                    "lineNoPage": 77,
+                    "lineType": "b",
+                    "paragraphNo": 25,
+                    "text": "specification and fast implementation of new relational query languages."
+                },
+                {
+                    "coordLLX": 998.76,
+                    "coordURX": 1637.27,
+                    "lineNo": 5,
+                    "lineNoPage": 78,
+                    "lineType": "b",
+                    "paragraphNo": 25,
+                    "text": "Finally, the translator defines the semantics of the SQL language,"
+                },
+                {
+                    "coordLLX": 977.17,
+                    "coordURX": 1634.74,
+                    "lineNo": 6,
+                    "lineNoPage": 79,
+                    "lineType": "b",
+                    "paragraphNo": 25,
+                    "text": "and can be used for the proof of equivalence of SQL queries"
+                },
+                {
+                    "coordLLX": 904.14,
+                    "coordURX": 1231.96,
+                    "lineNo": 7,
+                    "lineNoPage": 80,
+                    "lineType": "b",
+                    "paragraphNo": 25,
+                    "text": "which are syntactically different."
+                },
+                {
+                    "coordLLX": 921.6,
+                    "coordURX": 1636.45,
+                    "lineNo": 1,
+                    "lineNoPage": 81,
+                    "lineType": "b",
+                    "paragraphNo": 26,
+                    "text": "Index Terms\u2014Program translation, query equivalence, query languages,"
+                },
+                {
+                    "coordLLX": 994.64,
+                    "coordURX": 1633.12,
+                    "lineNo": 2,
+                    "lineNoPage": 82,
+                    "lineType": "b",
+                    "paragraphNo": 26,
+                    "text": "query optimization, relational algebra, relational database"
+                },
+                {
+                    "coordLLX": 903.1,
+                    "coordURX": 1021.36,
+                    "lineNo": 3,
+                    "lineNoPage": 83,
+                    "lineType": "b",
+                    "paragraphNo": 26,
+                    "text": "model, SQL."
+                },
+                {
+                    "coordLLX": 1162.29,
+                    "coordURX": 1366.1,
+                    "lineNo": 1,
+                    "lineNoPage": 84,
+                    "lineType": "b",
+                    "paragraphNo": 27,
+                    "text": "I. INTRODUCTION"
+                },
+                {
+                    "coordLLX": 960.69,
+                    "coordURX": 1629.31,
+                    "lineNo": 1,
+                    "lineNoPage": 85,
+                    "lineType": "b",
+                    "paragraphNo": 28,
+                    "text": "HE use of the relational model and languages is becoming"
+                },
+                {
+                    "coordLLX": 960.69,
+                    "coordURX": 1633.19,
+                    "lineNo": 2,
+                    "lineNoPage": 86,
+                    "lineType": "b",
+                    "paragraphNo": 28,
+                    "text": "more and more popular for the development of new database"
+                },
+                {
+                    "coordLLX": 962.74,
+                    "coordURX": 1634.4,
+                    "lineNo": 3,
+                    "lineNoPage": 87,
+                    "lineType": "b",
+                    "paragraphNo": 28,
+                    "text": "management systems. Formal languages, such as the relational"
+                },
+                {
+                    "coordLLX": 982.29,
+                    "coordURX": 1627.64,
+                    "lineNo": 4,
+                    "lineNoPage": 88,
+                    "lineType": "b",
+                    "paragraphNo": 28,
+                    "text": "calculus and algebra, have been proposed by Codd [1]"
+                },
+                {
+                    "coordLLX": 601.71,
+                    "coordURX": 1161.6,
+                    "lineNo": 1,
+                    "lineNoPage": 89,
+                    "lineType": "b",
+                    "paragraphNo": 29,
+                    "text": "0098-5589/85/0400-0324$01.00 \u00a9 1985 IEEE"
+                }
+            ]
+        },
+        {
+            "pageNo": 2,
+            "noLinesInPage": 109,
+            "noParagraphsInPage": 35,
+            "lines": [
+                {
+                    "coordLLX": 148.11,
+                    "coordURX": 940.89,
+                    "lineNo": 1,
+                    "lineNoPage": 1,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "CERI AND GOTTLOB: TRANSLATING SQL INTO RELATIONAL ALGEBRA"
+                },
+                {
+                    "coordLLX": 1553.14,
+                    "coordURX": 1580.14,
+                    "lineNo": 1,
+                    "lineNoPage": 2,
+                    "lineType": "h",
+                    "paragraphNo": 2,
+                    "text": "325"
+                },
+                {
+                    "coordLLX": 149.14,
+                    "coordURX": 838.95,
+                    "lineNo": 2,
+                    "lineNoPage": 3,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "and later developed in the literature of database management"
+                },
+                {
+                    "coordLLX": 151.19,
+                    "coordURX": 841.99,
+                    "lineNo": 3,
+                    "lineNoPage": 4,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "systems [2], [3]. In particular, relational algebra can be used"
+                },
+                {
+                    "coordLLX": 150.14,
+                    "coordURX": 842.17,
+                    "lineNo": 4,
+                    "lineNoPage": 5,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "as a model for describing many approaches to query optimization"
+                },
+                {
+                    "coordLLX": 205.67,
+                    "coordURX": 426.81,
+                    "lineNo": 5,
+                    "lineNoPage": 6,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "[3]-[6] , [16]-[19]."
+                },
+                {
+                    "coordLLX": 172.75,
+                    "coordURX": 841.24,
+                    "lineNo": 1,
+                    "lineNoPage": 7,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "Although some earlier proposals for relational manipulation"
+                },
+                {
+                    "coordLLX": 151.13,
+                    "coordURX": 844.05,
+                    "lineNo": 2,
+                    "lineNoPage": 8,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "languages have been in fact based on relational algebra [7] or"
+                },
+                {
+                    "coordLLX": 152.15,
+                    "coordURX": 843.15,
+                    "lineNo": 3,
+                    "lineNoPage": 9,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "calculus [8], the trend in the design of relational languages"
+                },
+                {
+                    "coordLLX": 151.11,
+                    "coordURX": 845.4,
+                    "lineNo": 4,
+                    "lineNoPage": 10,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "has at some point moved toward a different direction; this"
+                },
+                {
+                    "coordLLX": 151.09,
+                    "coordURX": 842.07,
+                    "lineNo": 5,
+                    "lineNoPage": 11,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "was probably due to the success of the SQL query language"
+                },
+                {
+                    "coordLLX": 155.19,
+                    "coordURX": 844.6,
+                    "lineNo": 6,
+                    "lineNoPage": 12,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "[9], developed for the System R prototype [10] , which has"
+                },
+                {
+                    "coordLLX": 151.06,
+                    "coordURX": 842.92,
+                    "lineNo": 7,
+                    "lineNoPage": 13,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "become de facto a standard used by many other systems"
+                },
+                {
+                    "coordLLX": 155.17,
+                    "coordURX": 267.39,
+                    "lineNo": 1,
+                    "lineNoPage": 14,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "{11J-[13]."
+                },
+                {
+                    "coordLLX": 173.67,
+                    "coordURX": 844.02,
+                    "lineNo": 1,
+                    "lineNoPage": 15,
+                    "lineType": "b",
+                    "paragraphNo": 5,
+                    "text": "SQL is an easy-to-use language with a number of high-level"
+                },
+                {
+                    "coordLLX": 152.06,
+                    "coordURX": 845.33,
+                    "lineNo": 2,
+                    "lineNoPage": 16,
+                    "lineType": "b",
+                    "paragraphNo": 5,
+                    "text": "constructs. In general, small SQL queries are quite easy to"
+                },
+                {
+                    "coordLLX": 152.04,
+                    "coordURX": 845.08,
+                    "lineNo": 3,
+                    "lineNoPage": 17,
+                    "lineType": "b",
+                    "paragraphNo": 5,
+                    "text": "understand; however, SQL allows writing very complex queries,"
+                },
+                {
+                    "coordLLX": 152.03,
+                    "coordURX": 846.32,
+                    "lineNo": 4,
+                    "lineNoPage": 18,
+                    "lineType": "b",
+                    "paragraphNo": 5,
+                    "text": "whose meaning is quite obscure, and whose optimization is extremely"
+                },
+                {
+                    "coordLLX": 246.65,
+                    "coordURX": 841.94,
+                    "lineNo": 5,
+                    "lineNoPage": 19,
+                    "lineType": "b",
+                    "paragraphNo": 5,
+                    "text": "hard [14]. Sometimes, two complex queries in SQL"
+                },
+                {
+                    "coordLLX": 152.0,
+                    "coordURX": 846.09,
+                    "lineNo": 1,
+                    "lineNoPage": 20,
+                    "lineType": "b",
+                    "paragraphNo": 6,
+                    "text": "happen to have the same meaning, although they are very different"
+                },
+                {
+                    "coordLLX": 231.19,
+                    "coordURX": 845.46,
+                    "lineNo": 2,
+                    "lineNoPage": 21,
+                    "lineType": "b",
+                    "paragraphNo": 6,
+                    "text": "from a syntactic point of view. In this paper, we propose"
+                },
+                {
+                    "coordLLX": 211.64,
+                    "coordURX": 847.65,
+                    "lineNo": 3,
+                    "lineNoPage": 22,
+                    "lineType": "b",
+                    "paragraphNo": 6,
+                    "text": "a method for translating SQL queries into expressions of"
+                },
+                {
+                    "coordLLX": 154.02,
+                    "coordURX": 846.26,
+                    "lineNo": 4,
+                    "lineNoPage": 23,
+                    "lineType": "b",
+                    "paragraphNo": 6,
+                    "text": "relational algebra. This method also suggests an approach to"
+                },
+                {
+                    "coordLLX": 154.01,
+                    "coordURX": 528.6,
+                    "lineNo": 5,
+                    "lineNoPage": 24,
+                    "lineType": "b",
+                    "paragraphNo": 6,
+                    "text": "the design of new query languages."
+                },
+                {
+                    "coordLLX": 173.54,
+                    "coordURX": 845.88,
+                    "lineNo": 1,
+                    "lineNoPage": 25,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "SQL has a basic structure based on the query block or"
+                },
+                {
+                    "coordLLX": 152.95,
+                    "coordURX": 250.17,
+                    "lineNo": 2,
+                    "lineNoPage": 26,
+                    "lineType": "b",
+                    "paragraphNo": 7,
+                    "text": "subquery:"
+                },
+                {
+                    "coordLLX": 164.57,
+                    "coordURX": 820.81,
+                    "lineNo": 1,
+                    "lineNoPage": 27,
+                    "lineType": "b",
+                    "paragraphNo": 8,
+                    "text": "\u201cSELECT target_list FROM relation_list WHERE predicate\u201d."
+                },
+                {
+                    "coordLLX": 150.17,
+                    "coordURX": 841.38,
+                    "lineNo": 1,
+                    "lineNoPage": 28,
+                    "lineType": "b",
+                    "paragraphNo": 9,
+                    "text": "If the predicate corresponds to a selection formula in the sense"
+                },
+                {
+                    "coordLLX": 150.17,
+                    "coordURX": 844.64,
+                    "lineNo": 2,
+                    "lineNoPage": 29,
+                    "lineType": "b",
+                    "paragraphNo": 9,
+                    "text": "of Ullman [2], then a query block is easily mapped to a relational"
+                },
+                {
+                    "coordLLX": 225.27,
+                    "coordURX": 843.65,
+                    "lineNo": 3,
+                    "lineNoPage": 30,
+                    "lineType": "b",
+                    "paragraphNo": 9,
+                    "text": "algebra expression. However, SQL allows several features"
+                },
+                {
+                    "coordLLX": 210.87,
+                    "coordURX": 548.63,
+                    "lineNo": 4,
+                    "lineNoPage": 31,
+                    "lineType": "b",
+                    "paragraphNo": 9,
+                    "text": "which are not trivially mapped:"
+                },
+                {
+                    "coordLLX": 173.85,
+                    "coordURX": 583.22,
+                    "lineNo": 5,
+                    "lineNoPage": 32,
+                    "lineType": "ln",
+                    "paragraphNo": 9,
+                    "text": "1) the nesting of several query blocks"
+                },
+                {
+                    "coordLLX": 172.82,
+                    "coordURX": 844.83,
+                    "lineNo": 6,
+                    "lineNoPage": 33,
+                    "lineType": "ln",
+                    "paragraphNo": 9,
+                    "text": "2) the use of keywords such as: EXISTS, ALL, ANY, IN in"
+                },
+                {
+                    "coordLLX": 151.22,
+                    "coordURX": 557.51,
+                    "lineNo": 7,
+                    "lineNoPage": 34,
+                    "lineType": "ln",
+                    "paragraphNo": 9,
+                    "text": "the connection between query blocks"
+                },
+                {
+                    "coordLLX": 172.83,
+                    "coordURX": 841.07,
+                    "lineNo": 8,
+                    "lineNoPage": 35,
+                    "lineType": "ln",
+                    "paragraphNo": 9,
+                    "text": "3) the use of variables and of predicates connecting query"
+                },
+                {
+                    "coordLLX": 151.23,
+                    "coordURX": 325.71,
+                    "lineNo": 9,
+                    "lineNoPage": 36,
+                    "lineType": "ln",
+                    "paragraphNo": 9,
+                    "text": "blocks indirectly"
+                },
+                {
+                    "coordLLX": 172.84,
+                    "coordURX": 841.24,
+                    "lineNo": 10,
+                    "lineNoPage": 37,
+                    "lineType": "ln",
+                    "paragraphNo": 9,
+                    "text": "4) the use of set comparison operations between two query"
+                },
+                {
+                    "coordLLX": 151.24,
+                    "coordURX": 218.74,
+                    "lineNo": 11,
+                    "lineNoPage": 38,
+                    "lineType": "ln",
+                    "paragraphNo": 9,
+                    "text": "blocks."
+                },
+                {
+                    "coordLLX": 173.88,
+                    "coordURX": 843.99,
+                    "lineNo": 12,
+                    "lineNoPage": 39,
+                    "lineType": "ln",
+                    "paragraphNo": 9,
+                    "text": "5) the grouping of tuples of a relation into subsets and the"
+                },
+                {
+                    "coordLLX": 152.28,
+                    "coordURX": 685.85,
+                    "lineNo": 13,
+                    "lineNoPage": 40,
+                    "lineType": "ln",
+                    "paragraphNo": 9,
+                    "text": "evaluation of aggregate functions on each subset."
+                },
+                {
+                    "coordLLX": 173.88,
+                    "coordURX": 839.38,
+                    "lineNo": 14,
+                    "lineNoPage": 41,
+                    "lineType": "ln",
+                    "paragraphNo": 9,
+                    "text": "In this paper, we show how all these features can be mapped"
+                },
+                {
+                    "coordLLX": 152.29,
+                    "coordURX": 535.61,
+                    "lineNo": 15,
+                    "lineNoPage": 42,
+                    "lineType": "ln",
+                    "paragraphNo": 9,
+                    "text": "to expressions of relational algebra."
+                },
+                {
+                    "coordLLX": 173.89,
+                    "coordURX": 847.27,
+                    "lineNo": 16,
+                    "lineNoPage": 43,
+                    "lineType": "ln",
+                    "paragraphNo": 9,
+                    "text": "Relational algebra has been preferred to relational calculus as"
+                },
+                {
+                    "coordLLX": 153.32,
+                    "coordURX": 688.65,
+                    "lineNo": 17,
+                    "lineNoPage": 44,
+                    "lineType": "ln",
+                    "paragraphNo": 9,
+                    "text": "target of our translator for the following reasons:"
+                },
+                {
+                    "coordLLX": 176.99,
+                    "coordURX": 844.34,
+                    "lineNo": 1,
+                    "lineNoPage": 45,
+                    "lineType": "ln",
+                    "paragraphNo": 10,
+                    "text": "1) It is more procedural, because algebraic expressions also"
+                },
+                {
+                    "coordLLX": 152.3,
+                    "coordURX": 841.89,
+                    "lineNo": 2,
+                    "lineNoPage": 46,
+                    "lineType": "ln",
+                    "paragraphNo": 10,
+                    "text": "give the order of application of operations in the computation"
+                },
+                {
+                    "coordLLX": 153.34,
+                    "coordURX": 843.18,
+                    "lineNo": 3,
+                    "lineNoPage": 47,
+                    "lineType": "lb",
+                    "paragraphNo": 10,
+                    "text": "of the query; thus, it is a more appropriate model for query"
+                },
+                {
+                    "coordLLX": 153.34,
+                    "coordURX": 605.79,
+                    "lineNo": 4,
+                    "lineNoPage": 48,
+                    "lineType": "lb",
+                    "paragraphNo": 10,
+                    "text": "optimization and system implementation."
+                },
+                {
+                    "coordLLX": 175.98,
+                    "coordURX": 844.04,
+                    "lineNo": 1,
+                    "lineNoPage": 49,
+                    "lineType": "ln",
+                    "paragraphNo": 11,
+                    "text": "2) Many existing approaches to query optimization and"
+                },
+                {
+                    "coordLLX": 155.41,
+                    "coordURX": 844.37,
+                    "lineNo": 2,
+                    "lineNoPage": 50,
+                    "lineType": "ln",
+                    "paragraphNo": 11,
+                    "text": "equivalence are (or can easily be) expressed in relational"
+                },
+                {
+                    "coordLLX": 154.38,
+                    "coordURX": 229.36,
+                    "lineNo": 3,
+                    "lineNoPage": 51,
+                    "lineType": "ln",
+                    "paragraphNo": 11,
+                    "text": "algebra."
+                },
+                {
+                    "coordLLX": 175.99,
+                    "coordURX": 845.08,
+                    "lineNo": 1,
+                    "lineNoPage": 52,
+                    "lineType": "ln",
+                    "paragraphNo": 12,
+                    "text": "3) Relational algebra uses relations (or sets) as operands,"
+                },
+                {
+                    "coordLLX": 155.42,
+                    "coordURX": 845.3,
+                    "lineNo": 2,
+                    "lineNoPage": 53,
+                    "lineType": "ln",
+                    "paragraphNo": 12,
+                    "text": "while calculus is based on tuple variables. For the optimization"
+                },
+                {
+                    "coordLLX": 212.0,
+                    "coordURX": 846.63,
+                    "lineNo": 3,
+                    "lineNoPage": 54,
+                    "lineType": "ln",
+                    "paragraphNo": 12,
+                    "text": "of queries, particularly with distributed environments or"
+                },
+                {
+                    "coordLLX": 156.46,
+                    "coordURX": 846.64,
+                    "lineNo": 4,
+                    "lineNoPage": 55,
+                    "lineType": "ln",
+                    "paragraphNo": 12,
+                    "text": "special-purpose database machines, set-oriented models are"
+                },
+                {
+                    "coordLLX": 156.46,
+                    "coordURX": 722.18,
+                    "lineNo": 5,
+                    "lineNoPage": 56,
+                    "lineType": "ln",
+                    "paragraphNo": 12,
+                    "text": "more appropriate than tuple-oriented models [19] ."
+                },
+                {
+                    "coordLLX": 177.04,
+                    "coordURX": 846.81,
+                    "lineNo": 1,
+                    "lineNoPage": 57,
+                    "lineType": "b",
+                    "paragraphNo": 13,
+                    "text": "We have used standard relational algebra, with the only addition"
+                },
+                {
+                    "coordLLX": 213.04,
+                    "coordURX": 847.34,
+                    "lineNo": 2,
+                    "lineNoPage": 58,
+                    "lineType": "b",
+                    "paragraphNo": 13,
+                    "text": "of a new operation for the evaluation of aggregate functions,"
+                },
+                {
+                    "coordLLX": 225.39,
+                    "coordURX": 832.76,
+                    "lineNo": 3,
+                    "lineNoPage": 59,
+                    "lineType": "b",
+                    "paragraphNo": 13,
+                    "text": "which was required by the last feature in the above list."
+                },
+                {
+                    "coordLLX": 1170.51,
+                    "coordURX": 1195.97,
+                    "lineNo": 1,
+                    "lineNoPage": 60,
+                    "lineType": "b",
+                    "paragraphNo": 14,
+                    "text": "SQL"
+                },
+                {
+                    "coordLLX": 1217.83,
+                    "coordURX": 1266.69,
+                    "lineNo": 1,
+                    "lineNoPage": 61,
+                    "lineType": "b",
+                    "paragraphNo": 15,
+                    "text": "Query"
+                },
+                {
+                    "coordLLX": 1108.8,
+                    "coordURX": 1349.69,
+                    "lineNo": 1,
+                    "lineNoPage": 62,
+                    "lineType": "b",
+                    "paragraphNo": 16,
+                    "text": "NAMING TRANSFORMATION"
+                },
+                {
+                    "coordLLX": 1170.51,
+                    "coordURX": 1196.75,
+                    "lineNo": 1,
+                    "lineNoPage": 63,
+                    "lineType": "b",
+                    "paragraphNo": 17,
+                    "text": "SQL"
+                },
+                {
+                    "coordLLX": 1213.71,
+                    "coordURX": 1124.46,
+                    "lineNo": 1,
+                    "lineNoPage": 64,
+                    "lineType": "b",
+                    "paragraphNo": 18,
+                    "text": "+"
+                },
+                {
+                    "coordLLX": 1218.86,
+                    "coordURX": 1267.71,
+                    "lineNo": 1,
+                    "lineNoPage": 65,
+                    "lineType": "b",
+                    "paragraphNo": 19,
+                    "text": "Query"
+                },
+                {
+                    "coordLLX": 1136.57,
+                    "coordURX": 1269.6,
+                    "lineNo": 1,
+                    "lineNoPage": 66,
+                    "lineType": "b",
+                    "paragraphNo": 20,
+                    "text": "(accepted by"
+                },
+                {
+                    "coordLLX": 1290.86,
+                    "coordURX": 1314.77,
+                    "lineNo": 1,
+                    "lineNoPage": 67,
+                    "lineType": "b",
+                    "paragraphNo": 21,
+                    "text": "EG)"
+                },
+                {
+                    "coordLLX": 1123.2,
+                    "coordURX": 1302.83,
+                    "lineNo": 1,
+                    "lineNoPage": 68,
+                    "lineType": "b",
+                    "paragraphNo": 22,
+                    "text": "PRE \u2014 PROCESSING"
+                },
+                {
+                    "coordLLX": 1171.54,
+                    "coordURX": 1197.0,
+                    "lineNo": 1,
+                    "lineNoPage": 69,
+                    "lineType": "b",
+                    "paragraphNo": 23,
+                    "text": "SQL"
+                },
+                {
+                    "coordLLX": 1216.8,
+                    "coordURX": 1166.24,
+                    "lineNo": 1,
+                    "lineNoPage": 70,
+                    "lineType": "b",
+                    "paragraphNo": 24,
+                    "text": "\u201ci"
+                },
+                {
+                    "coordLLX": 1219.89,
+                    "coordURX": 1268.74,
+                    "lineNo": 1,
+                    "lineNoPage": 71,
+                    "lineType": "b",
+                    "paragraphNo": 25,
+                    "text": "Query"
+                },
+                {
+                    "coordLLX": 1137.6,
+                    "coordURX": 1270.29,
+                    "lineNo": 1,
+                    "lineNoPage": 72,
+                    "lineType": "b",
+                    "paragraphNo": 26,
+                    "text": "(accepted by"
+                },
+                {
+                    "coordLLX": 1216.8,
+                    "coordURX": 1141.2,
+                    "lineNo": 1,
+                    "lineNoPage": 73,
+                    "lineType": "b",
+                    "paragraphNo": 27,
+                    "text": "+"
+                },
+                {
+                    "coordLLX": 1291.89,
+                    "coordURX": 1315.8,
+                    "lineNo": 1,
+                    "lineNoPage": 74,
+                    "lineType": "b",
+                    "paragraphNo": 28,
+                    "text": "RG)"
+                },
+                {
+                    "coordLLX": 1111.89,
+                    "coordURX": 1339.77,
+                    "lineNo": 1,
+                    "lineNoPage": 75,
+                    "lineType": "b",
+                    "paragraphNo": 29,
+                    "text": "algebraic expression"
+                },
+                {
+                    "coordLLX": 1213.71,
+                    "coordURX": 1155.43,
+                    "lineNo": 1,
+                    "lineNoPage": 76,
+                    "lineType": "b",
+                    "paragraphNo": 30,
+                    "text": "|r"
+                },
+                {
+                    "coordLLX": 1124.23,
+                    "coordURX": 1316.1,
+                    "lineNo": 1,
+                    "lineNoPage": 77,
+                    "lineType": "b",
+                    "paragraphNo": 31,
+                    "text": "POST - PROCESSING"
+                },
+                {
+                    "coordLLX": 1111.89,
+                    "coordURX": 1340.8,
+                    "lineNo": 2,
+                    "lineNoPage": 78,
+                    "lineType": "b",
+                    "paragraphNo": 31,
+                    "text": "algebraic expression"
+                },
+                {
+                    "coordLLX": 1021.37,
+                    "coordURX": 1452.27,
+                    "lineNo": 1,
+                    "lineNoPage": 79,
+                    "lineType": "b",
+                    "paragraphNo": 32,
+                    "text": "Fig. 1. Overall architecture of the translator."
+                },
+                {
+                    "coordLLX": 882.51,
+                    "coordURX": 1315.66,
+                    "lineNo": 1,
+                    "lineNoPage": 80,
+                    "lineType": "h_1",
+                    "paragraphNo": 33,
+                    "text": "A. Overview of the Proposed Approach"
+                },
+                {
+                    "coordLLX": 905.14,
+                    "coordURX": 1566.52,
+                    "lineNo": 2,
+                    "lineNoPage": 81,
+                    "lineType": "b",
+                    "paragraphNo": 33,
+                    "text": "The overall architecture of the translator is shown in Fig. 1."
+                },
+                {
+                    "coordLLX": 905.16,
+                    "coordURX": 1581.96,
+                    "lineNo": 3,
+                    "lineNoPage": 82,
+                    "lineType": "b",
+                    "paragraphNo": 33,
+                    "text": "The translator is based on two grammars for the SQL language:"
+                },
+                {
+                    "coordLLX": 969.97,
+                    "coordURX": 1577.6,
+                    "lineNo": 4,
+                    "lineNoPage": 83,
+                    "lineType": "b",
+                    "paragraphNo": 33,
+                    "text": "an extended grammar EG, and a restricted grammar"
+                },
+                {
+                    "coordLLX": 884.61,
+                    "coordURX": 1580.45,
+                    "lineNo": 5,
+                    "lineNoPage": 84,
+                    "lineType": "b",
+                    "paragraphNo": 33,
+                    "text": "RG. EG does not accept all the statements accepted by the"
+                },
+                {
+                    "coordLLX": 885.65,
+                    "coordURX": 1582.78,
+                    "lineNo": 6,
+                    "lineNoPage": 85,
+                    "lineType": "b",
+                    "paragraphNo": 33,
+                    "text": "SQL grammar of [9], but it has approximately the same expressive"
+                },
+                {
+                    "coordLLX": 985.43,
+                    "coordURX": 1580.47,
+                    "lineNo": 7,
+                    "lineNoPage": 86,
+                    "lineType": "b",
+                    "paragraphNo": 33,
+                    "text": "power; it also includes some elements (such as the"
+                },
+                {
+                    "coordLLX": 885.68,
+                    "coordURX": 1579.97,
+                    "lineNo": 8,
+                    "lineNoPage": 87,
+                    "lineType": "b",
+                    "paragraphNo": 33,
+                    "text": "EXISTS and ALL keywords in the predicates) which were not"
+                },
+                {
+                    "coordLLX": 885.69,
+                    "coordURX": 1578.95,
+                    "lineNo": 9,
+                    "lineNoPage": 88,
+                    "lineType": "b",
+                    "paragraphNo": 33,
+                    "text": "present in the grammar of [9]. In the sequel, we will be more"
+                },
+                {
+                    "coordLLX": 885.7,
+                    "coordURX": 1579.74,
+                    "lineNo": 10,
+                    "lineNoPage": 89,
+                    "lineType": "b",
+                    "paragraphNo": 33,
+                    "text": "specific on the SQL statements which are not accepted by EG."
+                },
+                {
+                    "coordLLX": 884.69,
+                    "coordURX": 1585.15,
+                    "lineNo": 1,
+                    "lineNoPage": 90,
+                    "lineType": "b",
+                    "paragraphNo": 34,
+                    "text": "The main difference between the grammar of [9] and EG is"
+                },
+                {
+                    "coordLLX": 884.7,
+                    "coordURX": 1582.28,
+                    "lineNo": 2,
+                    "lineNoPage": 91,
+                    "lineType": "b",
+                    "paragraphNo": 34,
+                    "text": "that EG allows a correspondence between types of SQL subqueries"
+                },
+                {
+                    "coordLLX": 981.4,
+                    "coordURX": 1584.66,
+                    "lineNo": 3,
+                    "lineNoPage": 92,
+                    "lineType": "b",
+                    "paragraphNo": 34,
+                    "text": "and productions of the grammar, thus allowing a"
+                },
+                {
+                    "coordLLX": 886.78,
+                    "coordURX": 1578.28,
+                    "lineNo": 4,
+                    "lineNoPage": 93,
+                    "lineType": "b",
+                    "paragraphNo": 34,
+                    "text": "syntax-directed translation [15]. RG has a smaller number"
+                },
+                {
+                    "coordLLX": 885.76,
+                    "coordURX": 1579.8,
+                    "lineNo": 5,
+                    "lineNoPage": 94,
+                    "lineType": "b",
+                    "paragraphNo": 34,
+                    "text": "of productions than EG, representing few types of SQL"
+                },
+                {
+                    "coordLLX": 886.81,
+                    "coordURX": 999.01,
+                    "lineNo": 6,
+                    "lineNoPage": 95,
+                    "lineType": "b",
+                    "paragraphNo": 34,
+                    "text": "subqueries."
+                },
+                {
+                    "coordLLX": 908.42,
+                    "coordURX": 1583.68,
+                    "lineNo": 1,
+                    "lineNoPage": 96,
+                    "lineType": "b",
+                    "paragraphNo": 35,
+                    "text": "The queries which are accepted by the EG but not by the"
+                },
+                {
+                    "coordLLX": 887.86,
+                    "coordURX": 1583.18,
+                    "lineNo": 2,
+                    "lineNoPage": 97,
+                    "lineType": "b",
+                    "paragraphNo": 35,
+                    "text": "RG are preprocessed and transformed into queries which are"
+                },
+                {
+                    "coordLLX": 886.85,
+                    "coordURX": 1583.64,
+                    "lineNo": 3,
+                    "lineNoPage": 98,
+                    "lineType": "b",
+                    "paragraphNo": 35,
+                    "text": "accepted by the RG; thus, the preprocessing consists in a transformation"
+                },
+                {
+                    "coordLLX": 1010.29,
+                    "coordURX": 1585.52,
+                    "lineNo": 4,
+                    "lineNoPage": 99,
+                    "lineType": "b",
+                    "paragraphNo": 35,
+                    "text": "from SQL into SQL. For the queries which are accepted"
+                },
+                {
+                    "coordLLX": 974.3,
+                    "coordURX": 1582.94,
+                    "lineNo": 5,
+                    "lineNoPage": 100,
+                    "lineType": "b",
+                    "paragraphNo": 35,
+                    "text": "by the RG, we have defined the meaning in relational"
+                },
+                {
+                    "coordLLX": 887.91,
+                    "coordURX": 1582.55,
+                    "lineNo": 6,
+                    "lineNoPage": 101,
+                    "lineType": "b",
+                    "paragraphNo": 35,
+                    "text": "algebra; thus, the meaning of a query consists in a translation"
+                },
+                {
+                    "coordLLX": 887.92,
+                    "coordURX": 1583.02,
+                    "lineNo": 7,
+                    "lineNoPage": 102,
+                    "lineType": "b",
+                    "paragraphNo": 35,
+                    "text": "from the query in SQL into an expression of relational algebra."
+                },
+                {
+                    "coordLLX": 888.96,
+                    "coordURX": 1585.06,
+                    "lineNo": 8,
+                    "lineNoPage": 103,
+                    "lineType": "b",
+                    "paragraphNo": 35,
+                    "text": "Both the definitions of the preprocessing and of meaning are"
+                },
+                {
+                    "coordLLX": 888.97,
+                    "coordURX": 1582.76,
+                    "lineNo": 9,
+                    "lineNoPage": 104,
+                    "lineType": "b",
+                    "paragraphNo": 35,
+                    "text": "syntax-directed: rules are in correspondence with the productions"
+                },
+                {
+                    "coordLLX": 952.76,
+                    "coordURX": 1584.57,
+                    "lineNo": 10,
+                    "lineNoPage": 105,
+                    "lineType": "lb",
+                    "paragraphNo": 35,
+                    "text": "of the EG and RG. The rationale for distinguishing the"
+                },
+                {
+                    "coordLLX": 889.0,
+                    "coordURX": 1582.01,
+                    "lineNo": 11,
+                    "lineNoPage": 106,
+                    "lineType": "lb",
+                    "paragraphNo": 35,
+                    "text": "preprocessing from the meaning is that the meaning of an SQL"
+                },
+                {
+                    "coordLLX": 890.04,
+                    "coordURX": 1585.37,
+                    "lineNo": 12,
+                    "lineNoPage": 107,
+                    "lineType": "lb",
+                    "paragraphNo": 35,
+                    "text": "subquery is, in general, rather difficult. Thus, we have determined"
+                },
+                {
+                    "coordLLX": 967.19,
+                    "coordURX": 1587.95,
+                    "lineNo": 13,
+                    "lineNoPage": 108,
+                    "lineType": "lb",
+                    "paragraphNo": 35,
+                    "text": "a small set of subqueries which are representative of all"
+                },
+                {
+                    "coordLLX": 890.06,
+                    "coordURX": 1593.62,
+                    "lineNo": 14,
+                    "lineNoPage": 109,
+                    "lineType": "lb",
+                    "paragraphNo": 35,
+                    "text": "other subqueries, and we have given the meaning just for them."
+                }
+            ]
+        }
+    ]
+}

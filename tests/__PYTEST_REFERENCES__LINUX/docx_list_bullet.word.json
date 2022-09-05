@@ -1,0 +1,4471 @@
+{
+    "documentId": 11,
+    "documentFileName": "docx_list_bullet.pdf",
+    "noLinesInDocument": 131,
+    "noPagesInDocument": 4,
+    "noParagraphsInDocument": 57,
+    "noWordsInDocument": 811,
+    "pages": [
+        {
+            "pageNo": 1,
+            "noLinesInPage": 28,
+            "noParagraphsInPage": 18,
+            "noWordsInPage": 47,
+            "paragraphs": [
+                {
+                    "paragraphNo": 1,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 1,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 1,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "Header"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 2,
+                    "noLinesInParagraph": 4,
+                    "noWordsInParagraph": 8,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "."
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "Aaaa"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 2,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "."
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "Bbbb"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 3,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "."
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "Ccccc"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 4,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "."
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "dddd"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 3,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 1,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 1,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "=================="
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 4,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 2,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "."
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "ERROR"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 5,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 1,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 1,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "=================="
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 6,
+                    "noLinesInParagraph": 4,
+                    "noWordsInParagraph": 8,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "-"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "Aaaa"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 2,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "-"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "Bbbb"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 3,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "-"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "Ccccc"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 4,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "-"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "dddd"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 7,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 1,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 1,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "=================="
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 8,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 2,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "-"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "ERROR"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 9,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 1,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 1,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "=================="
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 10,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 1,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 1,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "aaaa"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 11,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 2,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "\u2022"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "bbbb"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 12,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 2,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "\u2022"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "ccccc"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 13,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 2,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "\u2022"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "dddd"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 14,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 1,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 1,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "o"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 15,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 1,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 1,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "ERROR"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 16,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 1,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 1,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "=================="
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 17,
+                    "noLinesInParagraph": 4,
+                    "noWordsInParagraph": 8,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "o"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "1111"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 2,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "o"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "2222"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 3,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "o"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "3333"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 4,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "o"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "4444"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 18,
+                    "noLinesInParagraph": 2,
+                    "noWordsInParagraph": 4,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 1,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "=================="
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 2,
+                            "noWordsInLine": 3,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "Page"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "|"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "1"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "pageNo": 2,
+            "noLinesInPage": 28,
+            "noParagraphsInPage": 22,
+            "noWordsInPage": 45,
+            "paragraphs": [
+                {
+                    "paragraphNo": 1,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 1,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 1,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "Header"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 2,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 1,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 1,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "o"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 3,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 1,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 1,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "ERROR"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 4,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 2,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "\u2022"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "aaaa"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 5,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 2,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "\u2022"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "bbbb"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 6,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 2,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "\u2022"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "cccc"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 7,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 2,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "\u2022"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "dddd"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 8,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 1,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 1,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "=================="
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 9,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 2,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "\u2022"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "ERROR"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 10,
+                    "noLinesInParagraph": 4,
+                    "noWordsInParagraph": 4,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 1,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "1111"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 2,
+                            "noWordsInLine": 1,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "2222"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 3,
+                            "noWordsInLine": 1,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "3333"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 4,
+                            "noWordsInLine": 1,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "4444"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 11,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 1,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 1,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "=================="
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 12,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 1,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 1,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "ERROR"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 13,
+                    "noLinesInParagraph": 4,
+                    "noWordsInParagraph": 8,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "\ufffd"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "aaaa"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 2,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "\ufffd"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "bbbb"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 3,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "\ufffd"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "cccc"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 4,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "\ufffd"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "dddd"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 14,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 1,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 1,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "=================="
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 15,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 2,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "\ufffd"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "ERROR"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 16,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 2,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "\u2023"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "1111"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 17,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 2,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "\u2023"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "2222"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 18,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 2,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "\u2023"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "3333"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 19,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 2,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "\u2023"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "4444"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 20,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 1,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 1,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "=================="
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 21,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 2,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "\u2023"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "ERROR"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 22,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 3,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 3,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "Page"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "|"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "2"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "pageNo": 3,
+            "noLinesInPage": 45,
+            "noParagraphsInPage": 12,
+            "noWordsInPage": 360,
+            "paragraphs": [
+                {
+                    "paragraphNo": 1,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 1,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 1,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "Header"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 2,
+                    "noLinesInParagraph": 4,
+                    "noWordsInParagraph": 8,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "\ufffd"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "aaaa"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 2,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "\ufffd"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "bbbb"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 3,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "\ufffd"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "cccc"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 4,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "\ufffd"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "dddd"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 3,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 1,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 1,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "=================="
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 4,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 2,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "\ufffd"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "ERROR"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 5,
+                    "noLinesInParagraph": 4,
+                    "noWordsInParagraph": 9,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 3,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "o"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "Mixed"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "start"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 2,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "o"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "Aaaa"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 3,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "o"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "Bbbb"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 4,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "o"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "Cccc"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 6,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 2,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "\u2022"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "Aaaa"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 7,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 2,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "\u2022"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "Bbbb"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 8,
+                    "noLinesInParagraph": 5,
+                    "noWordsInParagraph": 11,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "\u2022"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "Cccc"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 2,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "\ufffd"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "Aaaa"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 3,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "\ufffd"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "Bbbb"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 4,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "\ufffd"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "Cccc"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 5,
+                            "noWordsInLine": 3,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "\ufffd"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "Mixed"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "end"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 9,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 1,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 1,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "=================="
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 10,
+                    "noLinesInParagraph": 15,
+                    "noWordsInParagraph": 197,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 22,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "\ufffd"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "A"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "Ein"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "Buch"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "das"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "mit"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "der"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "Frage"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "\u201e"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "Woher"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "das"
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": "Gute"
+                                },
+                                {
+                                    "wordNo": 14,
+                                    "text": "?\u201c"
+                                },
+                                {
+                                    "wordNo": 15,
+                                    "text": "im"
+                                },
+                                {
+                                    "wordNo": 16,
+                                    "text": "\u201e"
+                                },
+                                {
+                                    "wordNo": 17,
+                                    "text": "Herz"
+                                },
+                                {
+                                    "wordNo": 18,
+                                    "text": "der"
+                                },
+                                {
+                                    "wordNo": 19,
+                                    "text": "Seinsfrage"
+                                },
+                                {
+                                    "wordNo": 20,
+                                    "text": "\u201c"
+                                },
+                                {
+                                    "wordNo": 21,
+                                    "text": "endet"
+                                },
+                                {
+                                    "wordNo": 22,
+                                    "text": ","
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 2,
+                            "noWordsInLine": 13,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "nachdem"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "es"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "\u201e"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "Grauzonenkunde"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "\u201c"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "betrieben"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "also"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "die"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "Bedeutung"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "des"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "Vermischten"
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": ","
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 3,
+                            "noWordsInLine": 9,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "Mittleren"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "und"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "Kompromisshaften"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "f\u00fcr"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "die"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "menschliche"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "Selbst-"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "und"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "Welterkenntnis"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 4,
+                            "noWordsInLine": 14,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "herausgearbeitet"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "und"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "mit"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "Aplomb"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "in"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "der"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "Kunst"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "dingfest"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "gemacht"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "hat"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "\u2013"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "ein"
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": "solches"
+                                },
+                                {
+                                    "wordNo": 14,
+                                    "text": "Buch"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 5,
+                            "noWordsInLine": 11,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "von"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "Peter"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "Sloterdijk"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "darf"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "vielleicht"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "als"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "Schlussstein"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "gelten"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "f\u00fcr"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "ein"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "opulentes"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 6,
+                            "noWordsInLine": 13,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "Lebenswerk"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "das"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "letztlich"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "die"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "Seinsfrage"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "umkreist"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "."
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "Doch"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "geantwortet"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "wird"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "bei"
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": "Sloterdijk"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 7,
+                            "noWordsInLine": 11,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "nie"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "in"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "Deduktionen"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "sondern"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "mit"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "intellektueller"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "\u00dcberw\u00e4ltigung"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "untermauert"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "von"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 8,
+                            "noWordsInLine": 14,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "stupender"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "Belesenheit"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "."
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "Wenn"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "dieses"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "Denken"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "in"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "Sph\u00e4ren"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "und"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "Blasen"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "eines"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "nicht"
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": "ist"
+                                },
+                                {
+                                    "wordNo": 14,
+                                    "text": ","
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 9,
+                            "noWordsInLine": 11,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "dann"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "graue"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "Theorie"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "."
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "Eher"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "schon"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "handelt"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "es"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "sich"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "um"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "spektralbunte"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 10,
+                            "noWordsInLine": 10,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "Abenteuerphilosophie"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "."
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "Blendwerk"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "lautet"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "denn"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "auch"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "der"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "hartn\u00e4ckige"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "Vorwurf"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "der"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 11,
+                            "noWordsInLine": 16,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "Kritiker"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "."
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "Da"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "ist"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "es"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "durchaus"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "gewitzt"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "nun"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "eine"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "Abblendung"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "folgen"
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": "zu"
+                                },
+                                {
+                                    "wordNo": 14,
+                                    "text": "lassen"
+                                },
+                                {
+                                    "wordNo": 15,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 16,
+                                    "text": "die"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 12,
+                            "noWordsInLine": 14,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "ausgerechnet"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "den"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "Sinn"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "f\u00fcr"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "das"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "Abblenden"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "\u2013"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "das"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "Denken"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "des"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "Grau"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "\u2013"
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": "zum"
+                                },
+                                {
+                                    "wordNo": 14,
+                                    "text": "Lackmustest"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 13,
+                            "noWordsInLine": 13,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "f\u00fcr"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "Philosophie"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "macht"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "den"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "neben"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "Sloterdijk"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "selbst"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "nur"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "dessen"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "Hausg\u00f6tter"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "bestehen"
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": ":"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 14,
+                            "noWordsInLine": 16,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "Platon"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "Hegel"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "Heidegger"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "Nietzsche"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "und"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "in"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "Ma\u00dfen"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "auch"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "Kant"
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": "."
+                                },
+                                {
+                                    "wordNo": 14,
+                                    "text": "Einige"
+                                },
+                                {
+                                    "wordNo": 15,
+                                    "text": "Gr\u00f6\u00dfen"
+                                },
+                                {
+                                    "wordNo": 16,
+                                    "text": "aus"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 15,
+                            "noWordsInLine": 10,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "Literatur"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "und"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "Malerei"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "\u2013"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "M\u00e4nner"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "allesamt"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "\u2013"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "kommen"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "hinzu"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 11,
+                    "noLinesInParagraph": 10,
+                    "noWordsInParagraph": 123,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 19,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "\ufffd"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "B"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "C\u00e9zanne"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "war"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "es"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "der"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "den"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "Autor"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "mit"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "dem"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "Satz"
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": "\u201e"
+                                },
+                                {
+                                    "wordNo": 14,
+                                    "text": "Solange"
+                                },
+                                {
+                                    "wordNo": 15,
+                                    "text": "man"
+                                },
+                                {
+                                    "wordNo": 16,
+                                    "text": "nicht"
+                                },
+                                {
+                                    "wordNo": 17,
+                                    "text": "ein"
+                                },
+                                {
+                                    "wordNo": 18,
+                                    "text": "Grau"
+                                },
+                                {
+                                    "wordNo": 19,
+                                    "text": "gemalt"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 2,
+                            "noWordsInLine": 17,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "hat"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "ist"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "man"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "kein"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "Maler"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "\u201c"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "auf"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "die"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "Idee"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "brachte"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": "dieses"
+                                },
+                                {
+                                    "wordNo": 14,
+                                    "text": "Konditional"
+                                },
+                                {
+                                    "wordNo": 15,
+                                    "text": "auf"
+                                },
+                                {
+                                    "wordNo": 16,
+                                    "text": "die"
+                                },
+                                {
+                                    "wordNo": 17,
+                                    "text": "Philosophie"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 3,
+                            "noWordsInLine": 12,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "auszudehnen"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "."
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "Durch"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "allen"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "rhetorischen"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "Bombast"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "hindurch"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "l\u00e4sst"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "sich"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "bei"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "Sloterdijk"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "eine"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 4,
+                            "noWordsInLine": 9,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "kulturhistorische"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "Makroperspektive"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "ausmachen"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "."
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "Bis"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "zum"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "neunzehnten"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "Jahrhundert"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "hatte"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 5,
+                            "noWordsInLine": 12,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "demnach"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "das"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "strahlende"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "Wei\u00df"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "eine"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "Sonderstellung"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "ein"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "letztes"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "Refugium"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "der"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "uralten"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 6,
+                            "noWordsInLine": 13,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "Lichtmetaphysik"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "."
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "Dann"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "habe"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "auch"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "im"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "Bereich"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "der"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "Farben"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "die"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "gro\u00dfe"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "Enthierarchisierung"
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": "und"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 7,
+                            "noWordsInLine": 8,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "S\u00e4kularisierung"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "eingesetzt"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "."
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "Statt"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "einer"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "liturgisch-allegorisch"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "festgelegten"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "Farbrangfolge"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 8,
+                            "noWordsInLine": 16,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "herrschten"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "nun"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "die"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "\u201e"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "United"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "Colors"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "of"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "Everything"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "\u201c,"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "eine"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "polychrome"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "Idylle"
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": "der"
+                                },
+                                {
+                                    "wordNo": 14,
+                                    "text": "totalen"
+                                },
+                                {
+                                    "wordNo": 15,
+                                    "text": "Toleranz"
+                                },
+                                {
+                                    "wordNo": 16,
+                                    "text": "."
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 9,
+                            "noWordsInLine": 14,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "Wobei"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "nicht"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "der"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "Regenbogen"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "f\u00fcr"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "Sloterdijk"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "das"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "treffende"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "Symbol"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "ist"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "sondern"
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": "ein"
+                                },
+                                {
+                                    "wordNo": 14,
+                                    "text": "Schmutzgrau"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 10,
+                            "noWordsInLine": 3,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "des"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "Vermengten"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 12,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 3,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 3,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "Page"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "|"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "3"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "pageNo": 4,
+            "noLinesInPage": 30,
+            "noParagraphsInPage": 5,
+            "noWordsInPage": 359,
+            "paragraphs": [
+                {
+                    "paragraphNo": 1,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 1,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 1,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "Header"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 2,
+                    "noLinesInParagraph": 7,
+                    "noWordsInParagraph": 84,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 17,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "\ufffd"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "C"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "Eine"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "\u201e"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "graue"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "Ethik"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "\u201c"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "habe"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "denn"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "auch"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "diese"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "einst"
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": "von"
+                                },
+                                {
+                                    "wordNo": 14,
+                                    "text": "der"
+                                },
+                                {
+                                    "wordNo": 15,
+                                    "text": "Kunst"
+                                },
+                                {
+                                    "wordNo": 16,
+                                    "text": "mit"
+                                },
+                                {
+                                    "wordNo": 17,
+                                    "text": "angef\u00fchrte"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 2,
+                            "noWordsInLine": 13,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "Freiheitsbewegung"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "begleitet"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "."
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "Dazu"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "eine"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "erwartbare"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "Spitze"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": ":"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "Angela"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "Merkel"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "\u201e"
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": "zugleich"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 3,
+                            "noWordsInLine": 13,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "lau"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "und"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "machtbesessen"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "\u201c,"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "gilt"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "Sloterdijk"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "als"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "vorl\u00e4ufiger"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "Gipfelpunkt"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "der"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "sich"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "um"
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": "alle"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 4,
+                            "noWordsInLine": 11,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "Entscheidungen"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "dr\u00fcckenden"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "Bewegung"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "zur"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "Mitte"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "hin"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "die"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "vermutlich"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "in"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "einer"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 5,
+                            "noWordsInLine": 10,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "graugr\u00fcnen"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "\u201e"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "\u00f6kob\u00fcrokratischen"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "Verordnungspolitik"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "\u201c"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "enden"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "werde"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": ":"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "\u201e"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "Dreckfarbigkeit"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 6,
+                            "noWordsInLine": 12,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "bildet"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "das"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "unumg\u00e4ngliche"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "Resultat"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "der"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "postmodernen"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "Mixophilie"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": ".\u201c"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "Das"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "Grau"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "w\u00e4re"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "so"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 7,
+                            "noWordsInLine": 8,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "\u201e"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "die"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "farblose"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "Allfarbe"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "der"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "entfremdeten"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "Freiheit"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "\u201c."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 3,
+                    "noLinesInParagraph": 10,
+                    "noWordsInParagraph": 131,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 15,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "\ufffd"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "D"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "Aber"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "diese"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "wenig"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "originelle"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "Verfallserz\u00e4hlung"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "der"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "moderne"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "Staat"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "als"
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": "\u201e"
+                                },
+                                {
+                                    "wordNo": 14,
+                                    "text": "der"
+                                },
+                                {
+                                    "wordNo": 15,
+                                    "text": "Gro\u00dfe"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 2,
+                            "noWordsInLine": 14,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "Graue"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "\u201c,"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "der"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "\u201e"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "die"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "\u201a"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "absolute"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "\u2018"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "Monarchie"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "an"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "Ausdehnung"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "seiner"
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": "Zust\u00e4ndigkeiten"
+                                },
+                                {
+                                    "wordNo": 14,
+                                    "text": "und"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 3,
+                            "noWordsInLine": 13,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "Durchdringungstiefe"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "seiner"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "Ma\u00dfnahmen"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "um"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "ein"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "Vielfaches"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "\u00fcbertrifft"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "\u201c,"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "ist"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "nur"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "das"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "eine"
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": "."
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 4,
+                            "noWordsInLine": 16,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "Sloterdijk"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "scheint"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "es"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "mit"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "Goethes"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "Farbenlehre"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "zu"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "halten"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "in"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "der"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "er"
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": "\u201e"
+                                },
+                                {
+                                    "wordNo": 14,
+                                    "text": "zweierlei"
+                                },
+                                {
+                                    "wordNo": 15,
+                                    "text": "Grau"
+                                },
+                                {
+                                    "wordNo": 16,
+                                    "text": "\u201c"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 5,
+                            "noWordsInLine": 14,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "unterschieden"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "sieht"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": ":"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "neben"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "dem"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "\u201e"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "tr\u00fcben"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "\u201c"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "Farbmischgrau"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "ein"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "Reingrau"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": "also"
+                                },
+                                {
+                                    "wordNo": 14,
+                                    "text": "durch"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 6,
+                            "noWordsInLine": 14,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "wei\u00dfes"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "Licht"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "abget\u00f6ntes"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "Schwarz"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "."
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "Und"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "so"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "wird"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "das"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "\u201e"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "Grau-in-Grau"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "\u201c"
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": "der"
+                                },
+                                {
+                                    "wordNo": 14,
+                                    "text": "Philosophen"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 7,
+                            "noWordsInLine": 17,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "oder"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "das"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "der"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "K\u00fcnstler"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "\u201e"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "das"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "dich"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "ber\u00fchrt"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "\u201c,"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "hier"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "keineswegs"
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": "diskreditiert"
+                                },
+                                {
+                                    "wordNo": 14,
+                                    "text": "."
+                                },
+                                {
+                                    "wordNo": 15,
+                                    "text": "Im"
+                                },
+                                {
+                                    "wordNo": 16,
+                                    "text": "Gegenteil"
+                                },
+                                {
+                                    "wordNo": 17,
+                                    "text": ":"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 8,
+                            "noWordsInLine": 16,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "Grau"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "in"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "Reinform"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "gilt"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "f\u00fcr"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "Sloterdijk"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "als"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "Farbe"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "des"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "Denkens"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "."
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "In"
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": "den"
+                                },
+                                {
+                                    "wordNo": 14,
+                                    "text": "Kapiteln"
+                                },
+                                {
+                                    "wordNo": 15,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 16,
+                                    "text": "die"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 9,
+                            "noWordsInLine": 10,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "assoziativ"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "Motivgeschichte"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "und"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "Metaphorologie"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "\u00fcberkreuzen"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "ist"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "das"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "Buch"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "am"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 10,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "st\u00e4rksten"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 4,
+                    "noLinesInParagraph": 11,
+                    "noWordsInParagraph": 140,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 15,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "\ufffd"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "E"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "Sch\u00f6n"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "liest"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "sich"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "wie"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "der"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "Autor"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "literarische"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "Grau-Figurationen"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "aufst\u00f6bert"
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": "."
+                                },
+                                {
+                                    "wordNo": 14,
+                                    "text": "Zu"
+                                },
+                                {
+                                    "wordNo": 15,
+                                    "text": "ihnen"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 2,
+                            "noWordsInLine": 14,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "geh\u00f6rt"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "nat\u00fcrlich"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "das"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "Husum-Gedicht"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "\u201e"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "Die"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "Stadt"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "\u201c"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "von"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "Theodor"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "Storm"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "(\u201e"
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": "Am"
+                                },
+                                {
+                                    "wordNo": 14,
+                                    "text": "grauen"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 3,
+                            "noWordsInLine": 12,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "Strand"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "am"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "grauen"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "Meer"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "\u201c),"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "aber"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "fast"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "erstaunlicherweise"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "nicht"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "Herbert"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "Gr\u00f6nemeyers"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 4,
+                            "noWordsInLine": 15,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "Coverversion"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "als"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "\u201e"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "Bochum"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "\u201c"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "-Song"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "(\u201e"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "vor"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "Arbeit"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "ganz"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "grau"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "\u201c)."
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": "Grandios"
+                                },
+                                {
+                                    "wordNo": 14,
+                                    "text": "sind"
+                                },
+                                {
+                                    "wordNo": 15,
+                                    "text": "die"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 5,
+                            "noWordsInLine": 7,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "religionsgeschichtlichen"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "\u00dcberlegungen"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "zum"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "\u00dcbergang"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "vom"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "Manich\u00e4ismus"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "zum"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 6,
+                            "noWordsInLine": 15,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "Christentum"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "womit"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "der"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "Punkt"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "aufgesp\u00fcrt"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "ist"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "an"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "dem"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "das"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "Dritte"
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": "zwischen"
+                                },
+                                {
+                                    "wordNo": 14,
+                                    "text": "Licht"
+                                },
+                                {
+                                    "wordNo": 15,
+                                    "text": "und"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 7,
+                            "noWordsInLine": 15,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "Dunkel"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "die"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "B\u00fchne"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "betritt"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "Grau"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "in"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "seiner"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "welthaltigsten"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "Manifestation"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "."
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "Weniger"
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": "\u201e"
+                                },
+                                {
+                                    "wordNo": 14,
+                                    "text": "zynisch"
+                                },
+                                {
+                                    "wordNo": 15,
+                                    "text": "\u201c"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 8,
+                            "noWordsInLine": 14,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "als"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "platt"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "wirkt"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": "indes"
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "die"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "Engf\u00fchrung"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "von"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "\u201e"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "Grau"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "und"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "Frau"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "\u201c,"
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": "Geraune"
+                                },
+                                {
+                                    "wordNo": 14,
+                                    "text": "\u00fcber"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 9,
+                            "noWordsInLine": 13,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "Altweibergraues"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "bei"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "Goethe"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "Schnitzler"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "und"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "Musil"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "zumal"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "das"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": "Kapitel"
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "abgebrochen"
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": "wird"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 10,
+                            "noWordsInLine": 18,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "mit"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "der"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "Vermutung"
+                                },
+                                {
+                                    "wordNo": 4,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 5,
+                                    "text": "\u201e"
+                                },
+                                {
+                                    "wordNo": 6,
+                                    "text": "wenn"
+                                },
+                                {
+                                    "wordNo": 7,
+                                    "text": "man"
+                                },
+                                {
+                                    "wordNo": 8,
+                                    "text": "keine"
+                                },
+                                {
+                                    "wordNo": 9,
+                                    "text": "Frau"
+                                },
+                                {
+                                    "wordNo": 10,
+                                    "text": "ist"
+                                },
+                                {
+                                    "wordNo": 11,
+                                    "text": ","
+                                },
+                                {
+                                    "wordNo": 12,
+                                    "text": "kann"
+                                },
+                                {
+                                    "wordNo": 13,
+                                    "text": "man"
+                                },
+                                {
+                                    "wordNo": 14,
+                                    "text": "so"
+                                },
+                                {
+                                    "wordNo": 15,
+                                    "text": "etwas"
+                                },
+                                {
+                                    "wordNo": 16,
+                                    "text": "heute"
+                                },
+                                {
+                                    "wordNo": 17,
+                                    "text": "nicht"
+                                },
+                                {
+                                    "wordNo": 18,
+                                    "text": "mehr"
+                                }
+                            ]
+                        },
+                        {
+                            "lineNo": 11,
+                            "noWordsInLine": 2,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "schreiben"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "\u201c."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "paragraphNo": 5,
+                    "noLinesInParagraph": 1,
+                    "noWordsInParagraph": 3,
+                    "lines": [
+                        {
+                            "lineNo": 1,
+                            "noWordsInLine": 3,
+                            "words": [
+                                {
+                                    "wordNo": 1,
+                                    "text": "Page"
+                                },
+                                {
+                                    "wordNo": 2,
+                                    "text": "|"
+                                },
+                                {
+                                    "wordNo": 3,
+                                    "text": "4"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

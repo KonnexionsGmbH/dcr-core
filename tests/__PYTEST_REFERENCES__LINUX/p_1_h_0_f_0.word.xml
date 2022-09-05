@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created by the PDFlib Text and Image Extraction Toolkit TET (www.pdflib.com) -->
+<TET xmlns="http://www.pdflib.com/XML/TET5/TET-5.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.pdflib.com/XML/TET5/TET-5.0
+ http://www.pdflib.com/XML/TET5/TET-5.0.xsd"
+ version="5.2">
+<Creation platform="Linux-x64" tetVersion="5.3" date="2022-09-05T13:42:24+02:00" />
+<Document filename="data/inbox_dev_accepted/p_1_h_0_f_0.pdf" pageCount="1" filesize="63894" linearized="true" pdfVersion="1.5" tagged="true">
+<DocInfo>
+<Author>Walter Weinmann</Author>
+<CreationDate>2022-05-25T08:19:43+02:00</CreationDate>
+<Creator>Acrobat PDFMaker 11 for Word</Creator>
+<ModDate>2022-05-25T08:19:43+02:00</ModDate>
+<Producer>Adobe PDF Library 11.0</Producer>
+<Custom key="SourceModified">D:20220525061934</Custom>
+<Custom key="ContentTypeId">0x0101006EDDDB5EE6D98C44930B742096920B300400F5B6D36B3EF94B4E9A635CDF2A18F5B8</Custom>
+</DocInfo>
+<Metadata>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.4-c006 80.159825, 2016/09/16-03:31:08        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""
+            xmlns:xmp="http://ns.adobe.com/xap/1.0/"
+            xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/"
+            xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:pdf="http://ns.adobe.com/pdf/1.3/"
+            xmlns:pdfx="http://ns.adobe.com/pdfx/1.3/">
+         <xmp:ModifyDate>2022-05-25T08:19:43+02:00</xmp:ModifyDate>
+         <xmp:CreateDate>2022-05-25T08:19:43+02:00</xmp:CreateDate>
+         <xmp:MetadataDate>2022-05-25T08:19:43+02:00</xmp:MetadataDate>
+         <xmp:CreatorTool>Acrobat PDFMaker 11 for Word</xmp:CreatorTool>
+         <xmpMM:DocumentID>uuid:6a2584d1-0353-4945-af4e-bd830d605a5c</xmpMM:DocumentID>
+         <xmpMM:InstanceID>uuid:694ee3fc-6185-466e-ad3f-b822b0144cc4</xmpMM:InstanceID>
+         <xmpMM:subject>
+            <rdf:Seq>
+               <rdf:li>2</rdf:li>
+            </rdf:Seq>
+         </xmpMM:subject>
+         <dc:format>application/pdf</dc:format>
+         <dc:title>
+            <rdf:Alt>
+               <rdf:li xml:lang="x-default"/>
+            </rdf:Alt>
+         </dc:title>
+         <dc:description>
+            <rdf:Alt>
+               <rdf:li xml:lang="x-default"/>
+            </rdf:Alt>
+         </dc:description>
+         <dc:creator>
+            <rdf:Seq>
+               <rdf:li>Walter Weinmann</rdf:li>
+            </rdf:Seq>
+         </dc:creator>
+         <pdf:Producer>Adobe PDF Library 11.0</pdf:Producer>
+         <pdf:Keywords/>
+         <pdfx:SourceModified>D:20220525061934</pdfx:SourceModified>
+         <pdfx:Company/>
+         <pdfx:Comments/>
+         <pdfx:InternalTags/>
+         <pdfx:ContentTypeId>0x0101006EDDDB5EE6D98C44930B742096920B300400F5B6D36B3EF94B4E9A635CDF2A18F5B8</pdfx:ContentTypeId>
+         <pdfx:FeatureTags/>
+         <pdfx:LocalizationTags/>
+         <pdfx:CampaignTags/>
+         <pdfx:ScenarioTags/>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta>
+</Metadata>
+<Options>tetml={filename={data/inbox_dev_accepted/p_1_h_0_f_0.word.xml}} engines={noannotation noimage text notextcolor novector}</Options>
+<Pages>
+<Page number="1" width="612.00" height="792.00">
+<Options>granularity=word tetml={elements={line}}</Options>
+<Content granularity="word" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="72.00" lly="745.56" urx="112.87" ury="756.60">
+  <Line llx="72.00" lly="745.56" urx="112.87" ury="756.60">
+   <Word>
+    <Text artifact="true">Header</Text>
+    <Box llx="72.00" lly="745.56" urx="104.77" ury="756.60"/>
+   </Word>
+   <Word>
+    <Text artifact="true">1</Text>
+    <Box llx="107.28" lly="745.56" urx="112.87" ury="756.60"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="669.25" urx="406.05" ury="707.17">
+  <Line llx="72.00" lly="696.13" urx="389.40" ury="707.17">
+   <Word>
+    <Text>Seite</Text>
+    <Box llx="72.00" lly="696.13" urx="94.29" ury="707.17"/>
+   </Word>
+   <Word>
+    <Text>1</Text>
+    <Box llx="96.72" lly="696.13" urx="102.31" ury="707.17"/>
+   </Word>
+   <Word>
+    <Text>Zeile</Text>
+    <Box llx="104.87" lly="696.13" urx="125.97" ury="707.17"/>
+   </Word>
+   <Word>
+    <Text>1</Text>
+    <Box llx="128.39" lly="696.13" urx="133.99" ury="707.17"/>
+   </Word>
+   <Word>
+    <Text>This</Text>
+    <Box llx="136.55" lly="696.13" urx="154.55" ury="707.17"/>
+   </Word>
+   <Word>
+    <Text>chapter</Text>
+    <Box llx="156.95" lly="696.13" urx="191.52" ury="707.17"/>
+   </Word>
+   <Word>
+    <Text>uses</Text>
+    <Box llx="193.91" lly="696.13" urx="213.83" ury="707.17"/>
+   </Word>
+   <Word>
+    <Text>Volto</Text>
+    <Box llx="216.35" lly="696.13" urx="240.40" ury="707.17"/>
+   </Word>
+   <Word>
+    <Text>to</Text>
+    <Box llx="242.86" lly="696.13" urx="252.28" ury="707.17"/>
+   </Word>
+   <Word>
+    <Text>change</Text>
+    <Box llx="254.86" lly="696.13" urx="287.00" ury="707.17"/>
+   </Word>
+   <Word>
+    <Text>displaying</Text>
+    <Box llx="289.54" lly="696.13" urx="334.10" ury="707.17"/>
+   </Word>
+   <Word>
+    <Text>the</Text>
+    <Box llx="336.57" lly="696.13" urx="351.55" ury="707.17"/>
+   </Word>
+   <Word>
+    <Text>dates</Text>
+    <Box llx="354.09" lly="696.13" urx="378.57" ury="707.17"/>
+   </Word>
+   <Word>
+    <Text>in</Text>
+    <Box llx="381.09" lly="696.13" urx="389.40" ury="707.17"/>
+   </Word>
+  </Line>
+  <Line llx="72.00" lly="682.69" urx="406.05" ury="693.73">
+   <Word>
+    <Text>Seite</Text>
+    <Box llx="72.00" lly="682.69" urx="94.29" ury="693.73"/>
+   </Word>
+   <Word>
+    <Text>1</Text>
+    <Box llx="96.71" lly="682.69" urx="102.31" ury="693.73"/>
+   </Word>
+   <Word>
+    <Text>Zeile</Text>
+    <Box llx="104.87" lly="682.69" urx="125.96" ury="693.73"/>
+   </Word>
+   <Word>
+    <Text>2</Text>
+    <Box llx="128.38" lly="682.69" urx="133.98" ury="693.73"/>
+   </Word>
+   <Word>
+    <Text>talkview</Text>
+    <Box llx="136.54" lly="682.69" urx="173.83" ury="693.73"/>
+   </Word>
+   <Word>
+    <Text>and</Text>
+    <Box llx="176.37" lly="682.69" urx="193.21" ury="693.73"/>
+   </Word>
+   <Word>
+    <Text>talklistview</Text>
+    <Box llx="195.57" lly="682.69" urx="245.93" ury="693.73"/>
+   </Word>
+   <Word>
+    <Text>.</Text>
+    <Box llx="245.95" lly="682.69" urx="248.74" ury="693.73"/>
+   </Word>
+   <Word>
+    <Text>To</Text>
+    <Box llx="251.23" lly="682.69" urx="262.33" ury="693.73"/>
+   </Word>
+   <Word>
+    <Text>meet</Text>
+    <Box llx="264.79" lly="682.69" urx="288.29" ury="693.73"/>
+   </Word>
+   <Word>
+    <Text>the</Text>
+    <Box llx="290.71" lly="682.69" urx="305.69" ury="693.73"/>
+   </Word>
+   <Word>
+    <Text>same</Text>
+    <Box llx="308.23" lly="682.69" urx="332.08" ury="693.73"/>
+   </Word>
+   <Word>
+    <Text>requirements</Text>
+    <Box llx="334.50" lly="682.69" urx="395.34" ury="693.73"/>
+   </Word>
+   <Word>
+    <Text>in</Text>
+    <Box llx="397.74" lly="682.69" urx="406.05" ury="693.73"/>
+   </Word>
+  </Line>
+  <Line llx="72.00" lly="669.25" urx="381.48" ury="680.29">
+   <Word>
+    <Text>Seite</Text>
+    <Box llx="72.00" lly="669.25" urx="94.29" ury="680.29"/>
+   </Word>
+   <Word>
+    <Text>1</Text>
+    <Box llx="96.71" lly="669.25" urx="102.31" ury="680.29"/>
+   </Word>
+   <Word>
+    <Text>Zeile</Text>
+    <Box llx="104.87" lly="669.25" urx="125.96" ury="680.29"/>
+   </Word>
+   <Word>
+    <Text>3</Text>
+    <Box llx="128.38" lly="669.25" urx="133.97" ury="680.29"/>
+   </Word>
+   <Word>
+    <Text>classic</Text>
+    <Box llx="136.54" lly="669.25" urx="164.72" ury="680.29"/>
+   </Word>
+   <Word>
+    <Text>Plone</Text>
+    <Box llx="167.13" lly="669.25" urx="192.54" ury="680.29"/>
+   </Word>
+   <Word>
+    <Text>see</Text>
+    <Box llx="194.99" lly="669.25" urx="210.33" ury="680.29"/>
+   </Word>
+   <Word>
+    <Text>the</Text>
+    <Box llx="212.75" lly="669.25" urx="227.73" ury="680.29"/>
+   </Word>
+   <Word>
+    <Text>chapter</Text>
+    <Box llx="230.27" lly="669.25" urx="264.72" ury="680.29"/>
+   </Word>
+   <Word>
+    <Text>Turning</Text>
+    <Box llx="267.11" lly="669.25" urx="301.35" ury="680.29"/>
+   </Word>
+   <Word>
+    <Text>Talks</Text>
+    <Box llx="303.83" lly="669.25" urx="326.26" ury="680.29"/>
+   </Word>
+   <Word>
+    <Text>into</Text>
+    <Box llx="328.78" lly="669.25" urx="346.60" ury="680.29"/>
+   </Word>
+   <Word>
+    <Text>Events</Text>
+    <Box llx="349.06" lly="669.25" urx="378.70" ury="680.29"/>
+   </Word>
+   <Word>
+    <Text>.</Text>
+    <Box llx="378.70" lly="669.25" urx="381.48" ury="680.29"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="72.00" lly="39.72" ulx="72.00" uly="50.76" urx="243.64" ury="53.76" lrx="243.64" lry="39.72">
+  <Line llx="72.00" lly="39.72" urx="243.64" ury="53.76">
+   <Word>
+    <Text artifact="true">Footer</Text>
+    <Box llx="72.00" lly="39.72" urx="101.77" ury="50.76"/>
+   </Word>
+   <Word>
+    <Text artifact="true">1</Text>
+    <Box llx="104.16" lly="39.72" urx="109.76" ury="50.76"/>
+   </Word>
+   <Word>
+    <Text artifact="true">pg</Text>
+    <Box llx="216.00" lly="39.72" urx="229.90" ury="53.76"/>
+   </Word>
+   <Word>
+    <Text artifact="true">.</Text>
+    <Box llx="229.91" lly="39.72" urx="233.35" ury="53.76"/>
+   </Word>
+   <Word>
+    <Text artifact="true">1</Text>
+    <Box llx="236.53" lly="39.72" urx="243.64" ury="53.76"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Resources>
+<Fonts>
+ <Font id="F0" name="Calibri" fullname="PTRVVE+Calibri" type="TrueType" embedded="true" ascender="750.00" capheight="632.00" italicangle="0.00" descender="-250.00" weight="400.00" xheight="464.00"/>
+ <Font id="F1" name="Calibri-Light" fullname="GIBOZW+Calibri-Light" type="TrueType" embedded="true" ascender="750.00" capheight="632.00" italicangle="0.00" descender="-250.00" weight="300.00" xheight="462.00"/>
+</Fonts>
+<ColorSpaces>
+ <ColorSpace id="CS0" name="ICCBased" components="1" iccprofile="ICC0"/>
+</ColorSpaces>
+</Resources>
+<Graphics>
+<ICCProfiles>
+ <ICCProfile id="ICC0" embedded="true" iccversion="2.1" profilename="Gray Gamma 2.2" checksum="66043AD0DE86F27B977BAB702FB1A778" profilecs="GRAY" deviceclass="mntr" fromCIE="true" toCIE="true"/>
+</ICCProfiles>
+</Graphics>
+</Pages>
+</Document>
+</TET>

@@ -1,0 +1,132 @@
+{
+    "documentId": 9,
+    "documentFileName": "docx_heading.pdf",
+    "noTablesInDocument": 1,
+    "tables": [
+        {
+            "firstRowLLX": 76.56,
+            "firstRowURX": 421.68,
+            "noColumns": 10,
+            "noRows": 3,
+            "pageNoFrom": 4,
+            "pageNoTill": 4,
+            "tableNo": 1,
+            "rows": [
+                {
+                    "firstColumnLLX": 76.56,
+                    "lastColumnURX": 421.68,
+                    "noColumns": 4,
+                    "rowNo": 1,
+                    "columns": [
+                        {
+                            "columnNo": 1,
+                            "coordLLX": 76.56,
+                            "coordURX": 81.96,
+                            "lineNo": 1,
+                            "lineNoPage": 38,
+                            "paragraphNo": 12,
+                            "text": "A"
+                        },
+                        {
+                            "columnNo": 2,
+                            "coordLLX": 189.72,
+                            "coordURX": 195.12,
+                            "lineNo": 1,
+                            "lineNoPage": 39,
+                            "paragraphNo": 13,
+                            "text": "B"
+                        },
+                        {
+                            "columnNo": 3,
+                            "coordLLX": 303.0,
+                            "coordURX": 308.4,
+                            "lineNo": 1,
+                            "lineNoPage": 40,
+                            "paragraphNo": 14,
+                            "text": "C"
+                        },
+                        {
+                            "columnNo": 4,
+                            "coordLLX": 416.28,
+                            "coordURX": 421.68,
+                            "lineNo": 1,
+                            "lineNoPage": 41,
+                            "paragraphNo": 15,
+                            "text": "D"
+                        }
+                    ]
+                },
+                {
+                    "firstColumnLLX": 76.56,
+                    "lastColumnURX": 432.48,
+                    "noColumns": 2,
+                    "rowNo": 2,
+                    "columns": [
+                        {
+                            "columnNo": 1,
+                            "coordLLX": 76.56,
+                            "coordURX": 92.76,
+                            "lineNo": 1,
+                            "lineNoPage": 42,
+                            "paragraphNo": 16,
+                            "text": "1.1"
+                        },
+                        {
+                            "columnNo": 4,
+                            "coordLLX": 416.28,
+                            "coordURX": 432.48,
+                            "lineNo": 1,
+                            "lineNoPage": 43,
+                            "paragraphNo": 17,
+                            "text": "1.4"
+                        }
+                    ]
+                },
+                {
+                    "firstColumnLLX": 76.56,
+                    "lastColumnURX": 432.48,
+                    "noColumns": 4,
+                    "rowNo": 3,
+                    "columns": [
+                        {
+                            "columnNo": 1,
+                            "coordLLX": 76.56,
+                            "coordURX": 92.76,
+                            "lineNo": 1,
+                            "lineNoPage": 44,
+                            "paragraphNo": 18,
+                            "text": "2.1"
+                        },
+                        {
+                            "columnNo": 2,
+                            "coordLLX": 189.72,
+                            "coordURX": 205.92,
+                            "lineNo": 1,
+                            "lineNoPage": 45,
+                            "paragraphNo": 19,
+                            "text": "2.2"
+                        },
+                        {
+                            "columnNo": 3,
+                            "coordLLX": 303.0,
+                            "coordURX": 319.2,
+                            "lineNo": 1,
+                            "lineNoPage": 46,
+                            "paragraphNo": 20,
+                            "text": "2.3"
+                        },
+                        {
+                            "columnNo": 4,
+                            "coordLLX": 416.28,
+                            "coordURX": 432.48,
+                            "lineNo": 1,
+                            "lineNoPage": 47,
+                            "paragraphNo": 21,
+                            "text": "2.4"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

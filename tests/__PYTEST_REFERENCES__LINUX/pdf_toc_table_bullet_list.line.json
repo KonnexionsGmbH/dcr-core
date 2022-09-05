@@ -1,0 +1,744 @@
+{
+    "documentId": 45,
+    "documentFileName": "pdf_toc_table_bullet_list.pdf",
+    "noLinesFooter": 2,
+    "noLinesHeader": 2,
+    "noLinesInDocument": 71,
+    "noLinesToc": 8,
+    "noListsBulletInDocument": 1,
+    "noListsNumberInDocument": 1,
+    "noPagesInDocument": 7,
+    "noParagraphsInDocument": 49,
+    "noTablesInDocument": 0,
+    "noTitlesInDocument": 7,
+    "titles": [
+        "Heading 1.1",
+        "Heading 2.1",
+        "Heading 2.2",
+        "Heading 1.2",
+        "Heading 1.3",
+        "Heading 2.3",
+        "Heading 2.4"
+    ],
+    "pages": [
+        {
+            "pageNo": 1,
+            "noLinesInPage": 13,
+            "noParagraphsInPage": 11,
+            "lines": [
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 112.87,
+                    "lineNo": 1,
+                    "lineNoPage": 1,
+                    "lineType": "h",
+                    "paragraphNo": 1,
+                    "text": "Header 1"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 112.87,
+                    "lineNo": 2,
+                    "lineNoPage": 2,
+                    "lineType": "h",
+                    "paragraphNo": 1,
+                    "text": "Header 2"
+                },
+                {
+                    "coordLLX": 77.64,
+                    "coordURX": 118.08,
+                    "lineNo": 1,
+                    "lineNoPage": 3,
+                    "lineType": "toc",
+                    "paragraphNo": 2,
+                    "text": "Contents",
+                    "columnNo": 1,
+                    "rowNo": 1,
+                    "columnSpan": 2
+                },
+                {
+                    "coordLLX": 77.64,
+                    "coordURX": 130.99,
+                    "lineNo": 1,
+                    "lineNoPage": 4,
+                    "lineType": "toc",
+                    "paragraphNo": 3,
+                    "text": "Heading 1.1",
+                    "columnNo": 1,
+                    "rowNo": 2
+                },
+                {
+                    "coordLLX": 311.4,
+                    "coordURX": 317.0,
+                    "lineNo": 1,
+                    "lineNoPage": 5,
+                    "lineType": "toc",
+                    "paragraphNo": 4,
+                    "text": "2",
+                    "columnNo": 2,
+                    "rowNo": 2
+                },
+                {
+                    "coordLLX": 77.64,
+                    "coordURX": 130.99,
+                    "lineNo": 1,
+                    "lineNoPage": 6,
+                    "lineType": "toc",
+                    "paragraphNo": 5,
+                    "text": "Heading 2.1",
+                    "columnNo": 1,
+                    "rowNo": 3
+                },
+                {
+                    "coordLLX": 311.4,
+                    "coordURX": 317.0,
+                    "lineNo": 1,
+                    "lineNoPage": 7,
+                    "lineType": "toc",
+                    "paragraphNo": 6,
+                    "text": "2",
+                    "columnNo": 2,
+                    "rowNo": 3
+                },
+                {
+                    "coordLLX": 77.64,
+                    "coordURX": 130.99,
+                    "lineNo": 1,
+                    "lineNoPage": 8,
+                    "lineType": "toc",
+                    "paragraphNo": 7,
+                    "text": "Heading 2.2",
+                    "columnNo": 1,
+                    "rowNo": 4
+                },
+                {
+                    "coordLLX": 311.4,
+                    "coordURX": 317.0,
+                    "lineNo": 1,
+                    "lineNoPage": 9,
+                    "lineType": "toc",
+                    "paragraphNo": 8,
+                    "text": "3",
+                    "columnNo": 2,
+                    "rowNo": 4
+                },
+                {
+                    "coordLLX": 77.64,
+                    "coordURX": 130.99,
+                    "lineNo": 1,
+                    "lineNoPage": 10,
+                    "lineType": "toc",
+                    "paragraphNo": 9,
+                    "text": "Heading 1.2",
+                    "columnNo": 1,
+                    "rowNo": 5
+                },
+                {
+                    "coordLLX": 311.4,
+                    "coordURX": 317.0,
+                    "lineNo": 1,
+                    "lineNoPage": 11,
+                    "lineType": "toc",
+                    "paragraphNo": 10,
+                    "text": "3",
+                    "columnNo": 2,
+                    "rowNo": 5
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 109.75,
+                    "lineNo": 1,
+                    "lineNoPage": 12,
+                    "lineType": "f",
+                    "paragraphNo": 11,
+                    "text": "Footer 1"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 243.64,
+                    "lineNo": 2,
+                    "lineNoPage": 13,
+                    "lineType": "f",
+                    "paragraphNo": 11,
+                    "text": "Footer 2 pg. 1"
+                }
+            ]
+        },
+        {
+            "pageNo": 2,
+            "noLinesInPage": 10,
+            "noParagraphsInPage": 8,
+            "lines": [
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 112.87,
+                    "lineNo": 1,
+                    "lineNoPage": 1,
+                    "lineType": "h",
+                    "paragraphNo": 1,
+                    "text": "Header 1"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 112.87,
+                    "lineNo": 2,
+                    "lineNoPage": 2,
+                    "lineType": "h",
+                    "paragraphNo": 1,
+                    "text": "Header 2"
+                },
+                {
+                    "coordLLX": 77.64,
+                    "coordURX": 130.99,
+                    "lineNo": 1,
+                    "lineNoPage": 3,
+                    "lineType": "toc",
+                    "paragraphNo": 2,
+                    "text": "Heading 1.3",
+                    "columnNo": 1,
+                    "rowNo": 1
+                },
+                {
+                    "coordLLX": 311.4,
+                    "coordURX": 317.0,
+                    "lineNo": 1,
+                    "lineNoPage": 4,
+                    "lineType": "toc",
+                    "paragraphNo": 3,
+                    "text": "4",
+                    "columnNo": 2,
+                    "rowNo": 1
+                },
+                {
+                    "coordLLX": 77.64,
+                    "coordURX": 130.99,
+                    "lineNo": 1,
+                    "lineNoPage": 5,
+                    "lineType": "toc",
+                    "paragraphNo": 4,
+                    "text": "Heading 2.3",
+                    "columnNo": 1,
+                    "rowNo": 2
+                },
+                {
+                    "coordLLX": 311.4,
+                    "coordURX": 317.0,
+                    "lineNo": 1,
+                    "lineNoPage": 6,
+                    "lineType": "toc",
+                    "paragraphNo": 5,
+                    "text": "5",
+                    "columnNo": 2,
+                    "rowNo": 2
+                },
+                {
+                    "coordLLX": 77.64,
+                    "coordURX": 130.99,
+                    "lineNo": 1,
+                    "lineNoPage": 7,
+                    "lineType": "toc",
+                    "paragraphNo": 6,
+                    "text": "Heading 2.4",
+                    "columnNo": 1,
+                    "rowNo": 3
+                },
+                {
+                    "coordLLX": 311.4,
+                    "coordURX": 317.0,
+                    "lineNo": 1,
+                    "lineNoPage": 8,
+                    "lineType": "toc",
+                    "paragraphNo": 7,
+                    "text": "6",
+                    "columnNo": 2,
+                    "rowNo": 3
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 109.75,
+                    "lineNo": 1,
+                    "lineNoPage": 9,
+                    "lineType": "f",
+                    "paragraphNo": 8,
+                    "text": "Footer 1"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 243.64,
+                    "lineNo": 2,
+                    "lineNoPage": 10,
+                    "lineType": "f",
+                    "paragraphNo": 8,
+                    "text": "Footer 2 pg. 2"
+                }
+            ]
+        },
+        {
+            "pageNo": 3,
+            "noLinesInPage": 12,
+            "noParagraphsInPage": 10,
+            "lines": [
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 112.87,
+                    "lineNo": 1,
+                    "lineNoPage": 1,
+                    "lineType": "h",
+                    "paragraphNo": 1,
+                    "text": "Header 1"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 112.87,
+                    "lineNo": 2,
+                    "lineNoPage": 2,
+                    "lineType": "h",
+                    "paragraphNo": 1,
+                    "text": "Header 2"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 148.73,
+                    "lineNo": 1,
+                    "lineNoPage": 3,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "Heading 1.1"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 389.41,
+                    "lineNo": 1,
+                    "lineNoPage": 4,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "Seite 1 Zeile 1 This chapter uses Volto to change displaying the dates in"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 134.25,
+                    "lineNo": 1,
+                    "lineNoPage": 5,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "Heading 2.1"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 406.06,
+                    "lineNo": 1,
+                    "lineNoPage": 6,
+                    "lineType": "b",
+                    "paragraphNo": 5,
+                    "text": "Seite 1 Zeile 2 talkview and talklistview. To meet the same requirements in"
+                },
+                {
+                    "coordLLX": 90.0,
+                    "coordURX": 142.14,
+                    "lineNo": 1,
+                    "lineNoPage": 7,
+                    "lineType": "lb",
+                    "paragraphNo": 6,
+                    "text": "\u2022 Bullet 1"
+                },
+                {
+                    "coordLLX": 90.01,
+                    "coordURX": 142.15,
+                    "lineNo": 1,
+                    "lineNoPage": 8,
+                    "lineType": "lb",
+                    "paragraphNo": 7,
+                    "text": "\u2022 Bullet 2"
+                },
+                {
+                    "coordLLX": 90.02,
+                    "coordURX": 142.17,
+                    "lineNo": 1,
+                    "lineNoPage": 9,
+                    "lineType": "lb",
+                    "paragraphNo": 8,
+                    "text": "\u2022 Bullet 3"
+                },
+                {
+                    "coordLLX": 72.02,
+                    "coordURX": 381.51,
+                    "lineNo": 1,
+                    "lineNoPage": 10,
+                    "lineType": "b",
+                    "paragraphNo": 9,
+                    "text": "Seite 1 Zeile 3 classic Plone see the chapter Turning Talks into Events."
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 109.75,
+                    "lineNo": 1,
+                    "lineNoPage": 11,
+                    "lineType": "f",
+                    "paragraphNo": 10,
+                    "text": "Footer 1"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 243.64,
+                    "lineNo": 2,
+                    "lineNoPage": 12,
+                    "lineType": "f",
+                    "paragraphNo": 10,
+                    "text": "Footer 2 pg. 3"
+                }
+            ]
+        },
+        {
+            "pageNo": 4,
+            "noLinesInPage": 12,
+            "noParagraphsInPage": 8,
+            "lines": [
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 112.87,
+                    "lineNo": 1,
+                    "lineNoPage": 1,
+                    "lineType": "h",
+                    "paragraphNo": 1,
+                    "text": "Header 1"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 112.87,
+                    "lineNo": 2,
+                    "lineNoPage": 2,
+                    "lineType": "h",
+                    "paragraphNo": 1,
+                    "text": "Header 2"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 424.23,
+                    "lineNo": 1,
+                    "lineNoPage": 3,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "Seite 2 Zeile 1 We use a technique called component shadowing to override an"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 134.25,
+                    "lineNo": 1,
+                    "lineNoPage": 4,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "Heading 2.2"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 425.83,
+                    "lineNo": 1,
+                    "lineNoPage": 5,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "Seite 2 Zeile 2 existing Volto component with our local custom version, without"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 148.73,
+                    "lineNo": 1,
+                    "lineNoPage": 6,
+                    "lineType": "b",
+                    "paragraphNo": 5,
+                    "text": "Heading 1.2"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 427.46,
+                    "lineNo": 1,
+                    "lineNoPage": 7,
+                    "lineType": "b",
+                    "paragraphNo": 6,
+                    "text": "Seite 2 Zeile 3 having to modify Volto's source code at all. You have to place the"
+                },
+                {
+                    "coordLLX": 90.0,
+                    "coordURX": 164.11,
+                    "lineNo": 1,
+                    "lineNoPage": 8,
+                    "lineType": "ln",
+                    "paragraphNo": 7,
+                    "text": "1. Numbered 1"
+                },
+                {
+                    "coordLLX": 90.0,
+                    "coordURX": 164.11,
+                    "lineNo": 2,
+                    "lineNoPage": 9,
+                    "lineType": "ln",
+                    "paragraphNo": 7,
+                    "text": "2. Numbered 2"
+                },
+                {
+                    "coordLLX": 90.0,
+                    "coordURX": 164.11,
+                    "lineNo": 3,
+                    "lineNoPage": 10,
+                    "lineType": "ln",
+                    "paragraphNo": 7,
+                    "text": "3. Numbered 3"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 109.75,
+                    "lineNo": 1,
+                    "lineNoPage": 11,
+                    "lineType": "f",
+                    "paragraphNo": 8,
+                    "text": "Footer 1"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 243.64,
+                    "lineNo": 2,
+                    "lineNoPage": 12,
+                    "lineType": "f",
+                    "paragraphNo": 8,
+                    "text": "Footer 2 pg. 4"
+                }
+            ]
+        },
+        {
+            "pageNo": 5,
+            "noLinesInPage": 8,
+            "noParagraphsInPage": 4,
+            "lines": [
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 112.87,
+                    "lineNo": 1,
+                    "lineNoPage": 1,
+                    "lineType": "h",
+                    "paragraphNo": 1,
+                    "text": "Header 1"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 112.87,
+                    "lineNo": 2,
+                    "lineNoPage": 2,
+                    "lineType": "h",
+                    "paragraphNo": 1,
+                    "text": "Header 2"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 148.73,
+                    "lineNo": 1,
+                    "lineNoPage": 3,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "Heading 1.3"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 420.52,
+                    "lineNo": 1,
+                    "lineNoPage": 4,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "Seite 3 Zeile 1 replacing component in the same original folder path inside the"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 433.98,
+                    "lineNo": 2,
+                    "lineNoPage": 5,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "Seite 3 Zeile 2 We start with the first case and change the font to another Google"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 429.91,
+                    "lineNo": 3,
+                    "lineNoPage": 6,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "Seite 3 Zeile 3 font, Lato. The overall font is defined in Volto and can be found in"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 109.75,
+                    "lineNo": 1,
+                    "lineNoPage": 7,
+                    "lineType": "f",
+                    "paragraphNo": 4,
+                    "text": "Footer 1"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 243.64,
+                    "lineNo": 2,
+                    "lineNoPage": 8,
+                    "lineType": "f",
+                    "paragraphNo": 4,
+                    "text": "Footer 2 pg. 5"
+                }
+            ]
+        },
+        {
+            "pageNo": 6,
+            "noLinesInPage": 8,
+            "noParagraphsInPage": 4,
+            "lines": [
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 112.87,
+                    "lineNo": 1,
+                    "lineNoPage": 1,
+                    "lineType": "h",
+                    "paragraphNo": 1,
+                    "text": "Header 1"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 112.87,
+                    "lineNo": 2,
+                    "lineNoPage": 2,
+                    "lineType": "h",
+                    "paragraphNo": 1,
+                    "text": "Header 2"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 134.25,
+                    "lineNo": 1,
+                    "lineNoPage": 3,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "Heading 2.3"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 389.41,
+                    "lineNo": 1,
+                    "lineNoPage": 4,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "Seite 1 Zeile 1 This chapter uses Volto to change displaying the dates in"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 406.06,
+                    "lineNo": 2,
+                    "lineNoPage": 5,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "Seite 1 Zeile 2 talkview and talklistview. To meet the same requirements in"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 381.49,
+                    "lineNo": 3,
+                    "lineNoPage": 6,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "Seite 1 Zeile 3 classic Plone see the chapter Turning Talks into Events."
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 109.75,
+                    "lineNo": 1,
+                    "lineNoPage": 7,
+                    "lineType": "f",
+                    "paragraphNo": 4,
+                    "text": "Footer 1"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 243.64,
+                    "lineNo": 2,
+                    "lineNoPage": 8,
+                    "lineType": "f",
+                    "paragraphNo": 4,
+                    "text": "Footer 2 pg. 6"
+                }
+            ]
+        },
+        {
+            "pageNo": 7,
+            "noLinesInPage": 8,
+            "noParagraphsInPage": 4,
+            "lines": [
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 112.87,
+                    "lineNo": 1,
+                    "lineNoPage": 1,
+                    "lineType": "h",
+                    "paragraphNo": 1,
+                    "text": "Header 1"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 112.87,
+                    "lineNo": 2,
+                    "lineNoPage": 2,
+                    "lineType": "h",
+                    "paragraphNo": 1,
+                    "text": "Header 2"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 134.25,
+                    "lineNo": 1,
+                    "lineNoPage": 3,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "Heading 2.4"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 424.18,
+                    "lineNo": 1,
+                    "lineNoPage": 4,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "Seite 2 Zeile 1 We use a technique called component shadowing to override an"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 425.83,
+                    "lineNo": 2,
+                    "lineNoPage": 5,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "Seite 2 Zeile 2 existing Volto component with our local custom version, without"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 427.5,
+                    "lineNo": 3,
+                    "lineNoPage": 6,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "Seite 2 Zeile 3 having to modify Volto's source code at all. You have to place the"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 109.75,
+                    "lineNo": 1,
+                    "lineNoPage": 7,
+                    "lineType": "f",
+                    "paragraphNo": 4,
+                    "text": "Footer 1"
+                },
+                {
+                    "coordLLX": 72.0,
+                    "coordURX": 243.64,
+                    "lineNo": 2,
+                    "lineNoPage": 8,
+                    "lineType": "f",
+                    "paragraphNo": 4,
+                    "text": "Footer 2 pg. 7"
+                }
+            ]
+        }
+    ]
+}
