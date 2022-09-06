@@ -5,7 +5,7 @@
  xsi:schemaLocation="http://www.pdflib.com/XML/TET5/TET-5.0
  http://www.pdflib.com/XML/TET5/TET-5.0.xsd"
  version="5.2">
-<Creation platform="Linux-x64" tetVersion="5.3" date="2022-09-05T13:42:26+02:00" />
+<Creation platform="Linux-x64" tetVersion="5.3" date="2022-09-06T01:11:11+02:00" />
 <Document filename="data/inbox_dev_accepted/pdf_toc_line_bullet_list.pdf" pageCount="7" filesize="113098" linearized="true" pdfVersion="1.5" tagged="true">
 <DocInfo>
 <Author>Walter Weinmann</Author>
