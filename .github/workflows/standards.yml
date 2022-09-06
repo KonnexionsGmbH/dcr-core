@@ -86,13 +86,15 @@ jobs:
             sudo make --quiet install
             cd ${HOME}
             sudo ldconfig
-            run: echo "Current version of OpenSSL: $(openssl version -a)"
+            echo "::echo::on"
+            echo "Current version of OpenSSL: $(openssl version -a)"
       - name: Install Step 3 - Pandoc
         run: |
             wget --quiet https://github.com/jgm/pandoc/releases/download/${VERSION_PANDOC}/pandoc-${VERSION_PANDOC}-1-amd64.deb
             sudo dpkg -i pandoc-${VERSION_PANDOC}-1-amd64.deb
-            run: echo "Current version of Pandoc: $(pandoc -v)"
-            run: echo "Current version of TeX Live: $(pdflatex --version)"
+            echo "::echo::on"
+            echo "Current version of Pandoc: $(pandoc -v)"
+            echo "Current version of TeX Live: $(pdflatex --version)"
       - name: Install Step 4 - Poppler
         run: |
             wget --quiet https://poppler.freedesktop.org/poppler-${VERSION_POPPLER}.tar.xz --quiet
@@ -104,24 +106,26 @@ jobs:
             sudo make
             sudo make install
             cd ../..
-            run: echo "Current version of Poppler: $(pdftocairo -v)"
+            echo "::echo::on"
+            echo "Current version of Poppler: $(pdftocairo -v)"
       - name: Install Step 5 - Tesseract OCR
         run: |
             sudo add-apt-repository -y ppa:alex-p/tesseract-ocr-devel
             sudo apt-get update -qy
             sudo apt-get install -qy tesseract-ocr
             sudo apt-get install -qy tesseract-ocr-eng
-            run: echo "Current version of Tesseract OCR: $(tesseract --version)"
+            echo "Current version of Tesseract OCR: $(tesseract --version)"
       - name: Publish the code coverage to coveralls.io
         run: |
-            run: echo "================================================================================"
-            run: echo "Current version of OpenSSL: $(openssl version -a)"
-            run: echo "Current version of Pandoc: $(pandoc -v)"
-            run: echo "Current version of Poppler: $(pdftocairo -v)"
-            run: echo "Current version of Python3: $(python --version)"
-            run: echo "Current version of pip3: $(pip --version || true)"
-            run: echo "Current version of Tesseract OCR: $(tesseract --version)"
-            run: echo "Current version of TeX Live: $(pdflatex --version)"
-            run: echo "Current version of Ubuntu: $(lsb_release -a)"
-            run: echo "================================================================================"
+            echo "::echo::on"
+            echo "================================================================================"
+            echo "Current version of OpenSSL: $(openssl version -a)"
+            echo "Current version of Pandoc: $(pandoc -v)"
+            echo "Current version of Poppler: $(pdftocairo -v)"
+            echo "Current version of Python3: $(python --version)"
+            echo "Current version of pip3: $(pip --version || true)"
+            echo "Current version of Tesseract OCR: $(tesseract --version)"
+            echo "Current version of TeX Live: $(pdflatex --version)"
+            echo "Current version of Ubuntu: $(lsb_release -a)"
+            echo "================================================================================"
             make coveralls

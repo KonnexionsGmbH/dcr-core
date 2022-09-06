@@ -80,11 +80,13 @@ jobs:
             sudo make --quiet install
             cd ${HOME}
             sudo ldconfig
+            echo "::echo::on"
             echo "Current version of OpenSSL: $(openssl version -a)"
       - name: Install Step 3 - Pandoc
         run: |
             wget https://github.com/jgm/pandoc/releases/download/${VERSION_PANDOC}/pandoc-${VERSION_PANDOC}-1-amd64.deb
             sudo dpkg -i pandoc-${VERSION_PANDOC}-1-amd64.deb
+            echo "::echo::on"
             echo "Current version of Pandoc: $(pandoc -v)"
             echo "Current version of TeX Live: $(pdflatex --version)"
       - name: Install Step 4 - Poppler
@@ -98,6 +100,7 @@ jobs:
             sudo make
             sudo make install
             cd ../..
+            echo "::echo::on"
             echo "Current version of Poppler: $(pdftocairo -v)"
       - name: Install Step 5 - Tesseract OCR
         run: |
@@ -105,9 +108,11 @@ jobs:
             sudo apt-get update -qy
             sudo apt-get install -qy tesseract-ocr
             sudo apt-get install -qy tesseract-ocr-eng
+            echo "::echo::on"
             echo "Current version of Tesseract OCR: $(tesseract --version)"
       - name: Run pytest for writing better program
         run: |
+            echo "::echo::on"
             echo "================================================================================"
             echo "Current version of OpenSSL: $(openssl version -a)"
             echo "Current version of Pandoc: $(pandoc -v)"
