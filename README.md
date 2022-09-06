@@ -38,21 +38,55 @@ Please see the **[Documentation](https://konnexionsgmbh.github.io/dcr-core)** fo
 
 ## 2 Quick start
 
-### 2.1 Requirements
+In addition to Python, the following software packages are required to use **`DCR-CORE`**: 
 
-**`TODO`**
+- [PDFlib TET](https://www.pdflib.com/products/tet/)
+- [Pandoc](https://pandoc.org)
+- [Poppler](https://poppler.freedesktop.org)
+- [TeX Live](https://www.tug.org/texlive)
+- [Tesseract OCR](https://github.com/tesseract-ocr/tesseract)
 
-### 2.2 Installation
+Now, to avoid this installation effort, we recommend using the Docker image provided in DockerHub [see here](https://hub.docker.com/repository/docker/konnexionsgmbh/dcr-core). 
 
-**`TODO`**
+### 2.1 Deploying a Docker Container
 
-### 2.3 Running an example file
+- Creating and running a new container (Assuming the path prefix for the local data directory mapping is d:/TempMan)
 
-**`TODO`**
+    `docker run -it --name dcr-core -v d:/TempMan:/dcr-core/data/inbox_prod konnexionsgmbh/dcr-core:0.9.7`
 
-### 2.4 Resulting files
+- Restarting the container
 
-**`TODO`**
+    `docker start dcr-core`
+
+- Check the container is running
+ 
+    `docker ps`
+
+- To access a running container
+
+    `docker attach --detach-keys="ctrl-a" dcr-core` 
+
+- Stopping a running container
+
+    `docker stop dcr-core`
+
+### 2.2 Using the Docker Container
+
+- Restarting the container
+
+    `docker start dcr-core`
+
+- Check the container is running
+
+    `docker ps`
+
+- To access a running container
+
+    `docker attach --detach-keys="ctrl-a" dcr-core` 
+
+- Stopping a running container
+
+    `docker stop dcr-core`
 
 ## 3. Directory and File Structure of this Repository
 
