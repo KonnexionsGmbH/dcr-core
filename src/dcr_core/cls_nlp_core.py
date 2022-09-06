@@ -204,6 +204,7 @@ class NLPCore:
     JSON_NAME_TOKEN_TENSOR: ClassVar[str] = "tknTensor"
     JSON_NAME_TOKEN_TEXT: ClassVar[str] = "tknText"
     JSON_NAME_TOKEN_TEXT_WITH_WS: ClassVar[str] = "tknTextWithWs"
+    JSON_NAME_TOKEN_VOCAB: ClassVar[str] = "tknVocab"
     JSON_NAME_TOKEN_WHITESPACE_: ClassVar[str] = "tknWhitespace_"
 
     JSON_NAME_UPPER_RIGHT_X: ClassVar[str] = "upperRightX"

@@ -1,5 +1,5 @@
 {
-    "documentId": 4,
+    "documentId": 19,
     "documentFileName": "p_2_h_0_f_2.pdf",
     "noLinesFooter": 2,
     "noLinesHeader": 0,
@@ -59,7 +59,7 @@
                                     "tknPos_": "PROPN",
                                     "tknPrefix_": "F",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x0000015BFD803520>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 6,
                                     "tknSent": "Footer 1 pg. 1 Footer 2",
                                     "tknSentiment": 0.0,
@@ -68,6 +68,7 @@
                                     "tknTag_": "NNP",
                                     "tknText": "Footer",
                                     "tknTextWithWs": "Footer ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x000001FBE65B4670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -95,7 +96,7 @@
                                     "tknPos_": "NUM",
                                     "tknPrefix_": "1",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x0000015BFD803520>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 1,
                                     "tknSent": "Footer 1 pg. 1 Footer 2",
                                     "tknSentiment": 0.0,
@@ -104,6 +105,7 @@
                                     "tknTag_": "CD",
                                     "tknText": "1",
                                     "tknTextWithWs": "1 ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x000001FBE65B4670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -130,7 +132,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "p",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x0000015BFD803520>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 2,
                                     "tknSent": "Footer 1 pg. 1 Footer 2",
                                     "tknSentiment": 0.0,
@@ -138,7 +140,8 @@
                                     "tknSuffix_": "pg",
                                     "tknTag_": "NN",
                                     "tknText": "pg",
-                                    "tknTextWithWs": "pg"
+                                    "tknTextWithWs": "pg",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x000001FBE65B4670>"
                                 },
                                 {
                                     "tknCluster": 0,
@@ -163,7 +166,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": ".",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x0000015BFD803520>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 3,
                                     "tknSent": "Footer 1 pg. 1 Footer 2",
                                     "tknSentiment": 0.0,
@@ -172,6 +175,7 @@
                                     "tknTag_": "NN",
                                     "tknText": ".",
                                     "tknTextWithWs": ". ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x000001FBE65B4670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -199,7 +203,7 @@
                                     "tknPos_": "NUM",
                                     "tknPrefix_": "1",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x0000015BFD803520>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 4,
                                     "tknSent": "Footer 1 pg. 1 Footer 2",
                                     "tknSentiment": 0.0,
@@ -208,6 +212,7 @@
                                     "tknTag_": "CD",
                                     "tknText": "1",
                                     "tknTextWithWs": "1 ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x000001FBE65B4670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -234,7 +239,7 @@
                                     "tknPos_": "PROPN",
                                     "tknPrefix_": "F",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x0000015BFD803520>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 6,
                                     "tknSent": "Footer 1 pg. 1 Footer 2",
                                     "tknSentiment": 0.0,
@@ -243,6 +248,7 @@
                                     "tknTag_": "NNP",
                                     "tknText": "Footer",
                                     "tknTextWithWs": "Footer ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x000001FBE65B4670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -271,7 +277,7 @@
                                     "tknPos_": "NUM",
                                     "tknPrefix_": "2",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x0000015BFD803520>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 6,
                                     "tknSent": "Footer 1 pg. 1 Footer 2",
                                     "tknSentiment": 0.0,
@@ -279,7 +285,8 @@
                                     "tknSuffix_": "2",
                                     "tknTag_": "CD",
                                     "tknText": "2",
-                                    "tknTextWithWs": "2"
+                                    "tknTextWithWs": "2",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x000001FBE65B4670>"
                                 }
                             ]
                         }
@@ -333,7 +340,7 @@
                                     "tknPos_": "PROPN",
                                     "tknPrefix_": "F",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x0000015BFD803520>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 6,
                                     "tknSent": "Footer 1 pg. 2 Footer 2",
                                     "tknSentiment": 0.0,
@@ -342,6 +349,7 @@
                                     "tknTag_": "NNP",
                                     "tknText": "Footer",
                                     "tknTextWithWs": "Footer ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x000001FBE65B4670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -369,7 +377,7 @@
                                     "tknPos_": "NUM",
                                     "tknPrefix_": "1",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x0000015BFD803520>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 1,
                                     "tknSent": "Footer 1 pg. 2 Footer 2",
                                     "tknSentiment": 0.0,
@@ -378,6 +386,7 @@
                                     "tknTag_": "CD",
                                     "tknText": "1",
                                     "tknTextWithWs": "1 ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x000001FBE65B4670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -404,7 +413,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "p",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x0000015BFD803520>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 2,
                                     "tknSent": "Footer 1 pg. 2 Footer 2",
                                     "tknSentiment": 0.0,
@@ -412,7 +421,8 @@
                                     "tknSuffix_": "pg",
                                     "tknTag_": "NN",
                                     "tknText": "pg",
-                                    "tknTextWithWs": "pg"
+                                    "tknTextWithWs": "pg",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x000001FBE65B4670>"
                                 },
                                 {
                                     "tknCluster": 0,
@@ -437,7 +447,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": ".",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x0000015BFD803520>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 3,
                                     "tknSent": "Footer 1 pg. 2 Footer 2",
                                     "tknSentiment": 0.0,
@@ -446,6 +456,7 @@
                                     "tknTag_": "NN",
                                     "tknText": ".",
                                     "tknTextWithWs": ". ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x000001FBE65B4670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -473,7 +484,7 @@
                                     "tknPos_": "NUM",
                                     "tknPrefix_": "2",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x0000015BFD803520>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 4,
                                     "tknSent": "Footer 1 pg. 2 Footer 2",
                                     "tknSentiment": 0.0,
@@ -482,6 +493,7 @@
                                     "tknTag_": "CD",
                                     "tknText": "2",
                                     "tknTextWithWs": "2 ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x000001FBE65B4670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -508,7 +520,7 @@
                                     "tknPos_": "PROPN",
                                     "tknPrefix_": "F",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x0000015BFD803520>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 6,
                                     "tknSent": "Footer 1 pg. 2 Footer 2",
                                     "tknSentiment": 0.0,
@@ -517,6 +529,7 @@
                                     "tknTag_": "NNP",
                                     "tknText": "Footer",
                                     "tknTextWithWs": "Footer ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x000001FBE65B4670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -545,7 +558,7 @@
                                     "tknPos_": "NUM",
                                     "tknPrefix_": "2",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x0000015BFD803520>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 6,
                                     "tknSent": "Footer 1 pg. 2 Footer 2",
                                     "tknSentiment": 0.0,
@@ -553,7 +566,8 @@
                                     "tknSuffix_": "2",
                                     "tknTag_": "CD",
                                     "tknText": "2",
-                                    "tknTextWithWs": "2"
+                                    "tknTextWithWs": "2",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x000001FBE65B4670>"
                                 }
                             ]
                         }

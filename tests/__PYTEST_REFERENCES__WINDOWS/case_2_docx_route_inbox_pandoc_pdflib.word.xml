@@ -5,10 +5,10 @@
  xsi:schemaLocation="http://www.pdflib.com/XML/TET5/TET-5.0
  http://www.pdflib.com/XML/TET5/TET-5.0.xsd"
  version="5.2">
-<Creation platform="Win64" tetVersion="5.3" date="2022-08-26T09:12:34+02:00" />
-<Document filename="data\inbox_dev_accepted\case_2_docx_route_inbox_pandoc_pdflib.pdf" pageCount="1" filesize="4400" linearized="false" pdfVersion="1.5">
+<Creation platform="Win64" tetVersion="5.3" date="2022-09-06T16:37:31+02:00" />
+<Document filename="data\inbox_dev_accepted\case_2_docx_route_inbox_pandoc_pdflib.pdf" pageCount="1" filesize="4401" linearized="false" pdfVersion="1.5">
 <DocInfo>
-<CreationDate>2022-08-26T09:12:33+02:00</CreationDate>
+<CreationDate>2022-09-06T16:37:25+02:00</CreationDate>
 <Creator>LaTeX via pandoc</Creator>
 <Producer>xdvipdfmx (20211117)</Producer>
 </DocInfo>
@@ -237,7 +237,7 @@
 </Page>
 <Resources>
 <Fonts>
- <Font id="F0" name="LMRoman10-Regular" fullname="CXHORU+LMRoman10-Regular" type="Type 1 CFF (CID)" embedded="true" ascender="806.00" capheight="806.00" italicangle="0.00" descender="-194.00" weight="300.00" xheight="532.00"/>
+ <Font id="F0" name="LMRoman10-Regular" fullname="UODRAV+LMRoman10-Regular" type="Type 1 CFF (CID)" embedded="true" ascender="806.00" capheight="806.00" italicangle="0.00" descender="-194.00" weight="300.00" xheight="532.00"/>
 </Fonts>
 <ColorSpaces>
  <ColorSpace id="CS0" name="DeviceGray" components="1"/>

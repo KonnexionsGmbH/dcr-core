@@ -1,0 +1,34 @@
+{
+    "documentId": 42,
+    "documentFileName": "pdf_mini.pdf",
+    "noPagesInDocument": 1,
+    "noParagraphsInDocument": 5,
+    "pages": [
+        {
+            "pageNo": 1,
+            "noParagraphsInPage": 5,
+            "paragraphs": [
+                {
+                    "paragraphNo": 1,
+                    "text": "This is the header sentence"
+                },
+                {
+                    "paragraphNo": 2,
+                    "text": "This is the title sentence"
+                },
+                {
+                    "paragraphNo": 3,
+                    "text": "This is the first sentence of the first paragraph. This is the second sentence of the first paragraph."
+                },
+                {
+                    "paragraphNo": 4,
+                    "text": "This is the first sentence of the second paragraph. This is the second sentence of the second paragraph."
+                },
+                {
+                    "paragraphNo": 5,
+                    "text": "This is the footer sentence"
+                }
+            ]
+        }
+    ]
+}
