@@ -1,0 +1,258 @@
+SHARE PURCHASE AGREEMENT BY AND AMONGST CANCER GENETICS, INC. AND BIOSERVE
+BIOTECHNOLOGIES (INDIA) PRIVATE LIMITED REPROCELL U.S.A., INCORPORATED
+Effective Date: 23 rd December 2017
+1. Term
+The duration of this agreement is 10 years. The term of this agreement is ten years.
+2. Commencement
+THIS AGREEMENT (“Agreement”) shall commence on January 25, 2010. The term of this
+Agreement begins on the Effective Date and expires on December 31, 2030 (the "Term").
+3. Payment
+Supplier shall manufacture, test, label, ship, and sell Products to Purchaser in accordance with the terms
+and conditions set out in this Agreement, during the term of this Agreement.2.2 Product price will be
+negotiated and agreed upon by both parties once final component list for Product hardware is known.2.3
+Purchaser will pay additional $16,000 USD for Website development at the time of release of the
+completed Website to the Purchaser.2.4 Purchaser will pay a non-refundable down-payment of $3,000 USD
+to the Supplier upon execution of this agreement. This down-payment amount may be used by the
+Purchaser as initial payments for Products or other expenses pertaining to this agreement (e.g. Shipping
+etc).
+4. Indemnity
+Transportation charges for Product returned to Supplier shall be at Buyer's expense. Transportation for
+shipment of the replacement Product to Buyer (or its designated location) shall also be at Supplier's
+expense. Buyer shall reimburse Supplier for all costs associated with returned Product which has no defects
+due to Supplier supplied material or Supplier supplied workmanship. In the event of any dispute regarding
+whether a Product conforms to the Product Specifications, such dispute shall be submitted to a mutually
+agreed expert who shall render a final and binding decision.
+5. Confidentiality
+"Confidential Information" means any and all technical and non-technical information of or related to either
+Party, including, without limitation, proprietary information, know-how, the NCM Property and Derived
+Works, and information related to or regarding either Party's research and development, finances,
+suppliers, customers, business forecasts, and marketing plans, in whatever form disclosed or made
+available. Confidential Information does not include information which: (i) the recipient can demonstrate
+was already known to it at the time of its receipt hereunder; (ii) is or becomes generally available to the
+public other than by means of the recipient's breach of its obligations under this Agreement; (iii) is
+independently obtained from a third party whose disclosure violates no duty of confidentiality; or (iv) is
+independently developed by or on behalf of the recipient without use of or reliance on any Confidential
+Information furnished to it under this Agreement.
+Confidential Treatment Each party acknowledges that the other's Confidential Information contains
+valuable trade secret and proprietary information of that party. Each party agrees to permanently hold,
+and cause its personnel to hold, all Confidential Information of the other party in strict confidence, except
+that each party may: (i) disclose the Confidential Information of the other party that is required to be
+disclosed by governmental agencies, regulatory authorities, or pursuant to court order, but only to the
+extent such disclosure is required by law and only if such party provides prompt prior written notice to the
+other party of the disclosure, and (ii) subject to the terms and conditions of this Agreement, use the
+Confidential Information of the other party only to the extent necessary to perform its obligations under
+this Agreement. Except as specifically permitted by this Agreement, neither party shall duplicate or use, or
+permit the duplication or use of, any Confidential Information of the other party or disclose or permit the
+disclosure of such Confidential Information to any person or entity. Each party shall limit use, possession,
+and disclosure of, and shall limit access to, the Confidential Information of the other party only to those of
+its employees or representatives whose performance under this Agreement requires such use, possession,
+disclosure, or access and who have signed confidentiality and non-disclosure agreements protecting the
+confidentiality of the Confidential Information at least to the same extent as such information is protected
+under this Agreement. Any duplication, use, disclosure, or other act or omission by any person or entity
+that obtains access to or possession of Confidential Information through the receiving party that would be a
+breach of this Agreement if committed by the receiving party shall be a breach of this Agreement by the
+receiving party for which the receiving party shall be responsible.
+6. Change of Control
+Change of Control If, within one hundred eighty (180) days after a Change of Control, the Company or the
+successor entity to the Company notifies You pursuant to Section 2 of this Agreement that the Agreement
+will not be renewed, then, at the expiration of the Employment Period or Renewal Period, as applicable,
+You shall receive the Separation Benefits set forth in Section 5B above; provided, however, that Your right
+to receive the Separation Benefits shall be subject to the Separation Benefits Conditions set forth in Section
+5B above.
+"Change of Control" means (i) the sale, transfer, or other disposition of eighty percent (80%) or more of the
+Company's assets, or (ii) a sale of fifty percent (50%) or more of the then outstanding voting stock of the
+Company in a single transaction or a series of related transactions.
+7. Termination
+Upon the seventh (7th) annual anniversary of the Hotel Commencement Date with regard to that Hotel the
+term will automatically renew for a 12-month period (“Renewal Term”), subject to the right of Marriott to
+terminate without renewal upon giving written notice to OCC not less than sixty (60) days prior to the
+relevant Hotel Termination Date and the right of OCC to terminate without renewal upon giving written
+notice to Marriott not less than six (6) months prior to the relevant Hotel Termination Date. The date for
+termination specified in the notice shall be the last day of the month in which the relevant Hotel
+Termination Date falls. During a Renewal Term, Hotel may terminate the Agreement at any time upon
+giving sixty (60) days prior written notice to OCC, and OCC may terminate the Agreement at any time upon
+giving six (6) months prior written notice to Hotel.
+8. Insurance
+Supplier and Buyer Shall, at their own expense, maintain all insurance appropriate to ensure proper
+performance of their obligations hereunder. Coverage limits may be satisfied through a combination of
+primary and/or excess umbrella coverage. Supplier and Buyer shall provide to each other a certificate of
+insurance showing the types and amounts of insurance in force. Coverage shall include, at a minimum, the
+following for Supplier and Buyer: Commercial General Liability- Commercial General Liability insurance
+covering liability with limits not less than One Million U.S. Dollars ($1,000,000) per occurrence and Two
+Million Dollars ($2,000,000) General Aggregate. Each party must name the other party as Additional
+Insured, Automobile Liability- Automobile Liability insurance covering owned, non-owned and hired
+vehicles with limits not less than One Million Dollars ($1,000,000) per occurrence. Each party must name
+the other party as Additional Insured, Workers Compensation and Employer's Liability.
+9. Notice Obligation
+Buyer will notify Supplier of its requirements for quantities of Products by submitting a purchase order [via
+electronic mail] to Supplier.
+If Buyer disputes any amount invoiced by Supplier, Buyer will notify Supplier in writing within fifteen (15)
+business days of such dispute together with an explanation of the basis for such dispute.
+Supplier shall perform an inspection on all Tools upon delivery and notify Buyer of any defects or required
+maintenance or repairs and Buyer shall furnish or fund any required replacement, maintenance or repairs
+within 10 days of receipt of notice from Supplier.
+10. EVENTS OF DEFAULT
+(a) EVENTS OF DEFAULT The occurrence of any one or more of the following events (regardless of the
+reason therefor) shall constitute an "Event of Default" hereunder:
+(1) Aladdin Gaming shall fail to make any payment in respect of any payment of principal or interest under
+the Term Loan Note or payment of Interim Rent or Basic Rent under the Master Lease Agreement, as and
+when due; or Aladdin Gaming shall fail to make any other payment hereunder or under any of the other
+Operative Documents when due and payable or declared due and payable and such failure shall continue
+for five (5) days after the due date therefor.
+(2) Aladdin Gaming shall fail or neglect to perform, keep or observe any of the provisions of Sections 10(j)
+or 11 hereof.
+(3) Aladdin Gaming shall fail or neglect to perform, keep or observe any term or provision of this
+Agreement (other than any such term or provision referred to in paragraphs (1) or (2) above) or of any of
+the other Operative Documents, and the same shall remain unremedied for a period ending on the first to
+occur of thirty (30) days after Aladdin Gaming shall receive written notice of any such failure from GE
+Capital or thirty (30) days after a Responsible Officer of Aladdin Gaming shall become aware thereof.
+11. Limitation of liability
+The Company has no material liabilities or obligations which are not reflected or reserved against in the
+Company Balance Sheet, except liabilities or obligations incurred since the date of the Company Balance
+Sheet in the ordinary course of business. The Company has not agreed to incur, directly or indirectly, any
+liability for brokerage or finders' fees, agents' commissions or other similar charges in connection with this
+Agreement or any of the transactions contemplated hereby.
+12. Force Majeure
+Failure of either party to perform its obligations under this Agreement except the obligation to make
+payments) shall not subject such party to any liability to the other if such failure is caused by acts such as,
+but not limited to, acts of God, fire, explosion, flood, drought, war, riot, sabotage, embargo, strikes or other
+labour trouble, failure in whole or in part of suppliers to deliver on schedule materials, equipment or
+machinery, interruption of or delay in transportation, compliance with any order or regulation of any
+government entity acting with colour of right or by any other cause beyond the reasonable control of the
+parties.
+13. Governing Law
+This Agreement and its formation, operation and performance and the terms of all sales of Product
+hereunder, shall be governed, construed, performed and enforced in accordance within the laws of the
+State of Delaware without regard to its conflict of laws principles. Each party irrevocably agrees that the
+state and federal courts of Delaware shall have exclusive jurisdiction to hear and determine any suit action
+or proceedings which may arise out of or in connection with this Agreement and, for such purposes,
+irrevocably submits to the jurisdiction of those courts.
+14. Dispute Resolution
+if any controversies, conflicts, disputes and/or differences (“Dispute”) arises between the disputing Parties
+hereto during the subsistence of this Agreement or thereafter, the disputing Parties shall endeavour to
+settle such dispute amicably whereby the disputing Parties shall attempt to reach a resolution of the matter.
+For the purpose of this Clause, the Promoters and the Company shall be considered as one Party and in
+case of Dispute that arises between Investor and the Company; the Investor shall elect one arbitrator.
+If amicable settlement is not arrived at as above, within 90 (ninety) days of the date of Dispute, the Dispute
+shall be resolved and settled exclusively and finally by arbitration and either disputing Party may issue a
+notice of Dispute (“Notice of Dispute”) to the other disputing Parties.
+All notices, computations, returns, certificates and audit reports, which ought to have been given or made
+or submitted, have been properly and duly submitted by the Company to the tax authorities and no
+information, notices, computations or returns, etc., submitted to such authorities are the subject matter of
+any dispute.
+Neither the Promoters nor the Company is engaged, and to the best of the knowledge of the Promoters,
+nor are there any circumstances which are likely to give rise to any litigation, arbitration or alternative
+dispute resolution proceedings and there are no such proceedings pending or threatened to the best of the
+knowledge of the Promoters by or against the Company and/or the Promoters.
+15. Non-Compete
+During the employment of the Executive under this Agreement and for a period of six (6) months after
+termination of such employment, the Executive shall not at any time compete on his own behalf, or on
+behalf of any other person or entity, with the Company or any of its affiliates within all territories in which
+the Company does business with respect to the business of the Company or any of its affiliates as such
+business shall be conducted on the date hereof or during the employment of the Executive under this
+Agreement.
+16. Non-Solicitation
+Executive agrees that, during the term of his employment with Aastrom and for a period of one
+year following the termination of his employment with Aastrom for any reason, he will not,
+directly or indirectly, on his own behalf or on behalf of any other person or entity, solicit, induce
+or attempt to solicit or induce: (i) any then current employee or independent contractor of
+Aastrom to terminate or modify his, her or its employment or business relationship with
+Aastrom; (ii) any then current customer of Aastrom with which Executive had personal contact
+during the last twelve (12) months of his employment or about which Executive had access to
+Confidentia Information regarding such customer, or any current vendor, supplier, service
+provider, or other business relation of Aastrom ("Business Relation") to terminate or modify its
+use of Aastrom's services or its relationship with Aastrom, as applicable.
+17. Solicitation
+The parties therefore mutually agree that neither party shall without the other's prior written consent
+either during or within six months after the termination or expiry of the contract, either on their own behalf
+or on behalf of any other Person canvass, solicit the business of or endeavor to entice away, engage,
+employ, or otherwise solicit for employment any person who during the relevant period was an employee
+or sub-contractor of the other, and with whom such party had material contact in connection with any
+contract under these terms.
+18. Assignment
+No Assignment: You may not assign or transfer any rights to any other person without PFIPL's prior written
+consent.
+19. Consent
+The costs and expenses associated with Development activities shall include, but are not limited to, costs of
+studies on the toxicological, pharmacological, metabolical or clinical aspects of a Product, including clinical
+trials, conducted internally or by individual investigators or consultants and necessary for the purpose of
+obtaining, maintaining and/or expanding marketing approval of a Product, process development, process
+improvement and scale-up and recovery costs (including plant costs), validation costs, including
+qualification lots, the manufacture of clinical supplies of Product, including failed batches, costs for
+preparing, submitting, reviewing or developing data or information for the purpose of submission to a
+governmental authority to obtain, maintain and/or expand manufacturing and/or marketing approval of a
+Product and costs of marketing studies related to a Product.
+In determining “Development Costs” chargeable under this Agreement, each Party will use its respective
+project accounting systems, and will review and approve its project accounting systems and methodologies
+with the other Party.
+Notwithstanding anything in this Section 1.16 to the contrary, only those Development Costs that are
+contemplated by the Co-Development Plan and Budget or were otherwise approved by the JSC shall be
+chargeable by a Party as Development Costs
+20. Exclusivity
+a) Under the terms of the agreement, Pfizer will receive an exclusive worldwide license to GMI-1070 for
+Vaso-occlusive crisis associated with sickle cell disease and for other diseases for which the drug
+candidate may be developed. GlycoMimetics will remain responsible for completion of the ongoing
+Phase 2 trial under Pfizer's oversight, and Pfizer will then assume all further development and
+commercialization responsibilities. The potential value of the agreement for GlycoMimetics is
+approximately $340 million, including an upfront payment as well as development, regulatory and
+commercial milestones. GlycoMimetics is also eligible for royalties on any sales.
+b) Supplier shall manufacture and supply products exclusively to Pfizer, and Pfizer grants no license or
+other rights in or to products to supplier except to manufacture and supply same to Pfizer. While this
+Agreement is in effect and for a period of [**] years after this Agreement is terminated for any reason,
+supplier should not develop, manufacture or sell, nor shall supplier directly or indirectly assist any third
+party to develop, manufacture or sell, any products which are competitive with the products supplied to
+Pfizer by supplier under this Agreement, without the prior express written consent of Pfizer. For
+purposes of this Agreement, a product shall be considered competitive with the PRODUCTS supplied to
+Pfizer under this Agreement if such product is useful in the cellular diagnostics, cellular separation or
+cellular enrichment fields.
+21. Data Breach
+Service Provider shall immediately notify Pfizer of any instance of unauthorized access to, use or disclosure
+of any portion of Personal Information and shall cooperate with Pfizer in any action relating thereto.
+Further, upon discovery of any vulnerability to or breach of its security, Service Provider shall immediately
+take all appropriate actions necessary to mitigate any risk related to the disclosure of Personal Information.
+Service Provider shall not knowingly permit Consultant to have access to Personal Information if such
+Consultant: (a) has been convicted of a crime or has agreed to or entered into a pretrial diversion or similar
+program in connection with (i) dishonesty, breach of trust or money laundering. "Dishonesty" means
+directly or indirectly to cheat or defraud; to cheat or defraud for monetary gain or its equivalent; or
+wrongfully to take property belonging to another in violation of any criminal statute. Dishonesty includes
+acts involving want of integrity, lack of probity, or a disposition to distort, cheat, or act deceitfully or
+fraudulently, and may include crimes which by law is defined as dishonest. "Breach of trust" means a
+wrongful act, use, misappropriation or omission with respect to any property or fund that has been
+committed to a person in a fiduciary or official capacity, or the misuse of one's official or fiduciary position
+to engage in a wrongful act, use, misappropriation or omission. (a); and/or (ii) a felony; and/or (b) uses
+illegal drugs.
+22. Prohibition
+The Service Provider also agrees that the personnel employed by them will use only lawful methods to carry
+out the activities & responsibilities assigned to them and shall not resort to any unlawful actions & any
+unlawful actions done will be at the sole responsibility of Service Provider.
+The execution, delivery and performance of this Agreement and the consummation of the transactions
+contemplated hereby, shall not, with or without the giving of notice or the passage of time or both:
+The Service Provider agrees that it shall not disclose any Confidential Information received by it, without the
+prior written consent, to any third party, other than: The Service Provider, its employees, agents etc., shall
+not use the name, trademark and / or logo of HDBFS in any sales or marketing publication or advertisement
+or in any other manner without prior written consent.
+The Service Provider shall not assign any of its responsibilities contained in this agreement to any agent, sub
+- agent without prior written permission of Pfizer, which Pfizer may deny in their absolute discretion.
+The Service Provider acknowledges that any and all of the copyrights, trademarks and other intellectual
+property rights used or embodied in or in connection with this agreement shall remain the property of
+Pfizer and Service Provider shall not during or at any time after the termination of this Agreement in any
+way question or dispute the ownership.
+23. Other Obligations
+No omission or delay by Lessor at any time to enforce any right or remedy reserved to it or to require
+performance by Lessee of any of the terms, covenants or provisions of this Agreement or any Lease at the
+times designated herein or therein, shall be a waiver of any such right or remedy to which Lessor is entitled,
+nor shall it in any way affect the right of Lessor to thereafter enforce such provisions.
+24. Subletting
+Without the prior written consent of Licensor, Licensee cannot sublet, sub-let, assign, mortgage
+or pledge its rights under this Agreement, in whole or in part, to any Person other than an
+assignment of this Agreement in its entirety to an Affiliate, solely as part of an internal
+reorganization for tax or administrative purposes, and solely if (i) Licensee guarantees the
+performance of such Affiliate thereafter and (ii) the assignee is the ultimate parent entity in
+Licensee's organization or otherwise has the power to control the actions of all of Licensee's
+Affiliates receiving the benefit of this Agreement. For clarity, this Agreement shall be construed
+as an agreement for the personal services of Licensee in its current form as a non-bankrupt
+entity, and Licensee may not assume this Agreement (or assign this Agreement to any other
+Person, including an Affiliate) in bankruptcy without Licensor's prior written consent. Without
+the prior written consent of Licensor, Licensee shall not permit a tax sale, seizure, security
+interest, lien, mortgage or encumbrance or attachment to occur with respect to any Licensed
+Vacation Ownership Property.

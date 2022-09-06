@@ -1,0 +1,1515 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created by the PDFlib Text and Image Extraction Toolkit TET (www.pdflib.com) -->
+<TET xmlns="http://www.pdflib.com/XML/TET5/TET-5.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.pdflib.com/XML/TET5/TET-5.0
+  http://www.pdflib.com/XML/TET5/TET-5.0.xsd"
+     version="5.2">
+    <Creation platform="Linux-x64" tetVersion="5.3" date="2022-09-05T17:57:35+02:00"/>
+    <Document filename="/dcr-core/data/inbox-prod/all_clauses.pdf" pageCount="7" filesize="62217" linearized="false"
+              pdfVersion="1.5">
+        <DocInfo>
+            <Author>Poorva Lodha</Author>
+            <CreationDate>2022-04-16T14:01:11+02:00</CreationDate>
+            <Creator>Writer</Creator>
+            <Producer>LibreOffice 6.4</Producer>
+        </DocInfo>
+        <Options>tetml={filename={/dcr-core/data/inbox-prod/all_clauses.line.xml}} engines={noannotation noimage text
+            notextcolor novector}
+        </Options>
+        <Pages>
+            <Page number="1" width="595.30" height="841.89">
+                <Options>granularity=line</Options>
+                <Content granularity="line" dehyphenation="false" dropcap="false" font="false" geometry="false"
+                         shadow="false" sub="false" sup="false">
+                    <Para>
+                        <Box llx="56.80" lly="766.99" urx="539.19" ury="792.49">
+                            <Line llx="56.80" lly="781.49" urx="539.19" ury="792.49">
+                                <Text>SHARE PURCHASE AGREEMENT BY AND AMONGST CANCER GENETICS, INC. AND BIOSERVE</Text>
+                            </Line>
+                            <Line llx="56.80" lly="766.99" urx="416.57" ury="777.99">
+                                <Text>BIOTECHNOLOGIES (INDIA) PRIVATE LIMITED REPROCELL U.S.A., INCORPORATED</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="56.80" lly="744.49" urx="214.45" ury="755.49">
+                            <Line llx="56.80" lly="744.49" urx="214.45" ury="755.49">
+                                <Text>Effective Date: 23 rd December 2017</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="38.80" lly="688.39" urx="497.52" ury="720.49">
+                            <Line llx="38.80" lly="709.49" urx="80.16" ury="720.49">
+                                <Text>1. Term</Text>
+                            </Line>
+                            <Line llx="74.80" lly="688.39" urx="497.52" ury="698.39">
+                                <Text>The duration of this agreement is 10 years. The term of this agreement is ten
+                                    years.
+                                </Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="38.80" lly="666.39" urx="130.98" ury="677.39">
+                            <Line llx="38.80" lly="666.39" urx="130.98" ury="677.39">
+                                <Text>2. Commencement</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="56.80" lly="632.79" urx="539.09" ury="655.29">
+                            <Line llx="56.80" lly="645.29" urx="539.09" ury="655.29">
+                                <Text>THIS AGREEMENT (“Agreement”) shall commence on January 25, 2010. The term of
+                                    this
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="632.79" urx="506.78" ury="642.79">
+                                <Text>Agreement begins on the Effective Date and expires on December 31, 2030 (the
+                                    &quot;Term&quot;).
+                                </Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="38.80" lly="596.29" urx="96.33" ury="607.29">
+                            <Line llx="38.80" lly="596.29" urx="96.33" ury="607.29">
+                                <Text>3. Payment</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="56.80" lly="472.29" urx="538.95" ury="584.79">
+                            <Line llx="56.80" lly="573.79" urx="538.94" ury="584.79">
+                                <Text>Supplier shall manufacture, test, label, ship, and sell Products to Purchaser in
+                                    accordance with the terms
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="559.29" urx="538.24" ury="570.29">
+                                <Text>and conditions set out in this Agreement, during the term of this Agreement.2.2
+                                    Product price will be
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="544.79" urx="538.90" ury="555.79">
+                                <Text>negotiated and agreed upon by both parties once final component list for Product
+                                    hardware is known.2.3
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="530.29" urx="538.95" ury="541.29">
+                                <Text>Purchaser will pay additional $16,000 USD for Website development at the time of
+                                    release of the
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="515.79" urx="538.91" ury="526.79">
+                                <Text>completed Website to the Purchaser.2.4 Purchaser will pay a non-refundable
+                                    down-payment of $3,000 USD
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="501.29" urx="538.87" ury="512.29">
+                                <Text>to the Supplier upon execution of this agreement. This down-payment amount may be
+                                    used by the
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="486.79" urx="538.41" ury="497.79">
+                                <Text>Purchaser as initial payments for Products or other expenses pertaining to this
+                                    agreement (e.g. Shipping
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="472.29" urx="76.64" ury="483.29">
+                                <Text>etc).</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="38.80" lly="449.79" urx="102.20" ury="460.79">
+                            <Line llx="38.80" lly="449.79" urx="102.20" ury="460.79">
+                                <Text>4. Indemnity</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="56.80" lly="354.79" urx="539.00" ury="438.29">
+                            <Line llx="56.80" lly="427.29" urx="539.00" ury="438.29">
+                                <Text>Transportation charges for Product returned to Supplier shall be at Buyer&apos;s
+                                    expense. Transportation for
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="412.79" urx="538.15" ury="423.79">
+                                <Text>shipment of the replacement Product to Buyer (or its designated location) shall
+                                    also be at Supplier&apos;s
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="398.29" urx="538.47" ury="409.29">
+                                <Text>expense. Buyer shall reimburse Supplier for all costs associated with returned
+                                    Product which has no defects
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="383.79" urx="538.59" ury="394.79">
+                                <Text>due to Supplier supplied material or Supplier supplied workmanship. In the event
+                                    of any dispute regarding
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="369.29" urx="538.96" ury="380.29">
+                                <Text>whether a Product conforms to the Product Specifications, such dispute shall be
+                                    submitted to a mutually
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="354.79" urx="323.18" ury="365.79">
+                                <Text>agreed expert who shall render a final and binding decision.</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="38.80" lly="332.29" urx="122.08" ury="343.29">
+                            <Line llx="38.80" lly="332.29" urx="122.08" ury="343.29">
+                                <Text>5. Confidentiality</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="56.80" lly="179.29" urx="539.09" ury="320.79">
+                            <Line llx="56.80" lly="309.79" urx="538.93" ury="320.79">
+                                <Text>&quot;Confidential Information&quot; means any and all technical and non-technical
+                                    information of or related to either
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="295.29" urx="538.49" ury="306.29">
+                                <Text>Party, including, without limitation, proprietary information, know-how, the NCM
+                                    Property and Derived
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="280.79" urx="538.85" ury="291.79">
+                                <Text>Works, and information related to or regarding either Party&apos;s research and
+                                    development, finances,
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="266.29" urx="539.06" ury="277.29">
+                                <Text>suppliers, customers, business forecasts, and marketing plans, in whatever form
+                                    disclosed or made
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="251.79" urx="539.09" ury="262.79">
+                                <Text>available. Confidential Information does not include information which: (i) the
+                                    recipient can demonstrate
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="237.29" urx="538.49" ury="248.29">
+                                <Text>was already known to it at the time of its receipt hereunder; (ii) is or becomes
+                                    generally available to the
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="222.79" urx="538.37" ury="233.79">
+                                <Text>public other than by means of the recipient&apos;s breach of its obligations under
+                                    this Agreement; (iii) is
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="208.29" urx="538.75" ury="219.29">
+                                <Text>independently obtained from a third party whose disclosure violates no duty of
+                                    confidentiality; or (iv) is
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="193.79" urx="538.39" ury="204.79">
+                                <Text>independently developed by or on behalf of the recipient without use of or
+                                    reliance on any Confidential
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="179.29" urx="278.67" ury="190.29">
+                                <Text>Information furnished to it under this Agreement.</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="56.80" lly="84.29" urx="538.98" ury="167.79">
+                            <Line llx="56.80" lly="156.79" urx="538.98" ury="167.79">
+                                <Text>Confidential Treatment Each party acknowledges that the other&apos;s Confidential
+                                    Information contains
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="142.29" urx="538.40" ury="153.29">
+                                <Text>valuable trade secret and proprietary information of that party. Each party agrees
+                                    to permanently hold,
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="127.79" urx="538.67" ury="138.79">
+                                <Text>and cause its personnel to hold, all Confidential Information of the other party
+                                    in strict confidence, except
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="113.29" urx="538.38" ury="124.29">
+                                <Text>that each party may: (i) disclose the Confidential Information of the other party
+                                    that is required to be
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="98.79" urx="538.69" ury="109.79">
+                                <Text>disclosed by governmental agencies, regulatory authorities, or pursuant to court
+                                    order, but only to the
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="84.29" urx="538.27" ury="95.29">
+                                <Text>extent such disclosure is required by law and only if such party provides prompt
+                                    prior written notice to the
+                                </Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                </Content>
+            </Page>
+            <Page number="2" width="595.30" height="841.89">
+                <Options>granularity=line</Options>
+                <Content granularity="line" dehyphenation="false" dropcap="false" font="false" geometry="false"
+                         shadow="false" sub="false" sup="false">
+                    <Para>
+                        <Box llx="56.80" lly="607.49" urx="539.05" ury="792.49">
+                            <Line llx="56.80" lly="781.49" urx="538.82" ury="792.49">
+                                <Text>other party of the disclosure, and (ii) subject to the terms and conditions of
+                                    this Agreement, use the
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="766.99" urx="538.50" ury="777.99">
+                                <Text>Confidential Information of the other party only to the extent necessary to
+                                    perform its obligations under
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="752.49" urx="538.86" ury="763.49">
+                                <Text>this Agreement. Except as specifically permitted by this Agreement, neither party
+                                    shall duplicate or use, or
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="737.99" urx="538.53" ury="748.99">
+                                <Text>permit the duplication or use of, any Confidential Information of the other party
+                                    or disclose or permit the
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="723.49" urx="538.67" ury="734.49">
+                                <Text>disclosure of such Confidential Information to any person or entity. Each party
+                                    shall limit use, possession,
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="708.99" urx="538.89" ury="719.99">
+                                <Text>and disclosure of, and shall limit access to, the Confidential Information of the
+                                    other party only to those of
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="694.49" urx="538.65" ury="705.49">
+                                <Text>its employees or representatives whose performance under this Agreement requires
+                                    such use, possession,
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="679.99" urx="538.97" ury="690.99">
+                                <Text>disclosure, or access and who have signed confidentiality and non-disclosure
+                                    agreements protecting the
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="665.49" urx="538.85" ury="676.49">
+                                <Text>confidentiality of the Confidential Information at least to the same extent as
+                                    such information is protected
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="650.99" urx="538.39" ury="661.99">
+                                <Text>under this Agreement. Any duplication, use, disclosure, or other act or omission
+                                    by any person or entity
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="636.49" urx="539.05" ury="647.49">
+                                <Text>that obtains access to or possession of Confidential Information through the
+                                    receiving party that would be a
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="621.99" urx="539.01" ury="632.99">
+                                <Text>breach of this Agreement if committed by the receiving party shall be a breach of
+                                    this Agreement by the
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="607.49" urx="347.03" ury="618.49">
+                                <Text>receiving party for which the receiving party shall be responsible.</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="35.50" lly="562.49" urx="137.39" ury="573.49">
+                            <Line llx="35.50" lly="562.49" urx="137.39" ury="573.49">
+                                <Text>6. Change of Control</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="56.80" lly="467.49" urx="539.11" ury="550.99">
+                            <Line llx="56.80" lly="539.99" urx="538.91" ury="550.99">
+                                <Text>Change of Control If, within one hundred eighty (180) days after a Change of
+                                    Control, the Company or the
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="525.49" urx="538.53" ury="536.49">
+                                <Text>successor entity to the Company notifies You pursuant to Section 2 of this
+                                    Agreement that the Agreement
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="510.99" urx="539.11" ury="521.99">
+                                <Text>will not be renewed, then, at the expiration of the Employment Period or Renewal
+                                    Period, as applicable,
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="496.49" urx="538.68" ury="507.49">
+                                <Text>You shall receive the Separation Benefits set forth in Section 5B above; provided,
+                                    however, that Your right
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="481.99" urx="538.60" ury="492.99">
+                                <Text>to receive the Separation Benefits shall be subject to the Separation Benefits
+                                    Conditions set forth in Section
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="467.49" urx="100.80" ury="478.49">
+                                <Text>5B above.</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="56.80" lly="415.99" urx="538.72" ury="455.99">
+                            <Line llx="56.80" lly="444.99" urx="538.63" ury="455.99">
+                                <Text>&quot;Change of Control&quot; means (i) the sale, transfer, or other disposition
+                                    of eighty percent (80%) or more of the
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="430.49" urx="538.72" ury="441.49">
+                                <Text>Company&apos;s assets, or (ii) a sale of fifty percent (50%) or more of the then
+                                    outstanding voting stock of the
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="415.99" urx="352.78" ury="426.99">
+                                <Text>Company in a single transaction or a series of related transactions.</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="38.80" lly="393.49" urx="111.43" ury="404.49">
+                            <Line llx="38.80" lly="393.49" urx="111.43" ury="404.49">
+                                <Text>7. Termination</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="56.80" lly="254.99" urx="537.95" ury="381.99">
+                            <Line llx="56.80" lly="370.99" urx="537.15" ury="381.99">
+                                <Text>Upon the seventh (7th) annual anniversary of the Hotel Commencement Date with
+                                    regard to that Hotel the
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="356.49" urx="537.91" ury="367.49">
+                                <Text>term will automatically renew for a 12-month period (“Renewal Term”), subject to
+                                    the right of Marriott to
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="341.99" urx="537.86" ury="352.99">
+                                <Text>terminate without renewal upon giving written notice to OCC not less than sixty
+                                    (60) days prior to the
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="327.49" urx="537.95" ury="338.49">
+                                <Text>relevant Hotel Termination Date and the right of OCC to terminate without renewal
+                                    upon giving written
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="312.99" urx="537.81" ury="323.99">
+                                <Text>notice to Marriott not less than six (6) months prior to the relevant Hotel
+                                    Termination Date. The date for
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="298.49" urx="537.57" ury="309.49">
+                                <Text>termination specified in the notice shall be the last day of the month in which
+                                    the relevant Hotel
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="283.99" urx="537.38" ury="294.99">
+                                <Text>Termination Date falls. During a Renewal Term, Hotel may terminate the Agreement
+                                    at any time upon
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="269.49" urx="537.50" ury="280.49">
+                                <Text>giving sixty (60) days prior written notice to OCC, and OCC may terminate the
+                                    Agreement at any time upon
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="254.99" urx="278.98" ury="265.99">
+                                <Text>giving six (6) months prior written notice to Hotel.</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="38.80" lly="217.99" urx="100.31" ury="228.99">
+                            <Line llx="38.80" lly="217.99" urx="100.31" ury="228.99">
+                                <Text>8. Insurance</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="56.80" lly="93.99" urx="538.82" ury="206.49">
+                            <Line llx="56.80" lly="195.49" urx="500.77" ury="206.49">
+                                <Text>Supplier and Buyer Shall, at their own expense, maintain all insurance appropriate
+                                    to ensure proper
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="180.99" urx="538.82" ury="191.99">
+                                <Text>performance of their obligations hereunder. Coverage limits may be satisfied
+                                    through a combination of
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="166.49" urx="538.54" ury="177.49">
+                                <Text>primary and/or excess umbrella coverage. Supplier and Buyer shall provide to each
+                                    other a certificate of
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="151.99" urx="538.28" ury="162.99">
+                                <Text>insurance showing the types and amounts of insurance in force. Coverage shall
+                                    include, at a minimum, the
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="137.49" urx="538.71" ury="148.49">
+                                <Text>following for Supplier and Buyer: Commercial General Liability- Commercial General
+                                    Liability insurance
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="122.99" urx="538.79" ury="133.99">
+                                <Text>covering liability with limits not less than One Million U.S. Dollars ($1,000,000)
+                                    per occurrence and Two
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="108.49" urx="538.51" ury="119.49">
+                                <Text>Million Dollars ($2,000,000) General Aggregate. Each party must name the other
+                                    party as Additional
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="93.99" urx="538.78" ury="104.99">
+                                <Text>Insured, Automobile Liability- Automobile Liability insurance covering owned,
+                                    non-owned and hired
+                                </Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                </Content>
+            </Page>
+            <Page number="3" width="595.30" height="841.89">
+                <Options>granularity=line</Options>
+                <Content granularity="line" dehyphenation="false" dropcap="false" font="false" geometry="false"
+                         shadow="false" sub="false" sup="false">
+                    <Para>
+                        <Box llx="56.80" lly="766.99" urx="538.45" ury="792.49">
+                            <Line llx="56.80" lly="781.49" urx="538.45" ury="792.49">
+                                <Text>vehicles with limits not less than One Million Dollars ($1,000,000) per
+                                    occurrence. Each party must name
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="766.99" urx="444.64" ury="777.99">
+                                <Text>the other party as Additional Insured, Workers Compensation and Employer&apos;s
+                                    Liability.
+                                </Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="38.80" lly="721.99" urx="134.60" ury="732.99">
+                            <Line llx="38.80" lly="721.99" urx="134.60" ury="732.99">
+                                <Text>9. Notice Obligation</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="56.80" lly="612.49" urx="539.02" ury="710.49">
+                            <Line llx="56.80" lly="699.49" urx="538.20" ury="710.49">
+                                <Text>Buyer will notify Supplier of its requirements for quantities of Products by
+                                    submitting a purchase order [via
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="684.99" urx="179.85" ury="695.99">
+                                <Text>electronic mail] to Supplier.</Text>
+                            </Line>
+                            <Line llx="56.80" lly="670.49" urx="538.81" ury="681.49">
+                                <Text>If Buyer disputes any amount invoiced by Supplier, Buyer will notify Supplier in
+                                    writing within fifteen (15)
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="655.99" urx="450.63" ury="666.99">
+                                <Text>business days of such dispute together with an explanation of the basis for such
+                                    dispute.
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="641.49" urx="539.02" ury="652.49">
+                                <Text>Supplier shall perform an inspection on all Tools upon delivery and notify Buyer
+                                    of any defects or required
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="626.99" urx="538.72" ury="637.99">
+                                <Text>maintenance or repairs and Buyer shall furnish or fund any required replacement,
+                                    maintenance or repairs
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="612.49" urx="274.68" ury="623.49">
+                                <Text>within 10 days of receipt of notice from Supplier.</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="38.80" lly="575.49" urx="149.06" ury="586.49">
+                            <Line llx="38.80" lly="575.49" urx="149.06" ury="586.49">
+                                <Text>10. EVENTS OF DEFAULT</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="56.80" lly="538.49" urx="539.06" ury="563.99">
+                            <Line llx="56.80" lly="552.99" urx="539.06" ury="563.99">
+                                <Text>(a) EVENTS OF DEFAULT The occurrence of any one or more of the following events
+                                    (regardless of the
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="538.49" urx="350.10" ury="549.49">
+                                <Text>reason therefor) shall constitute an &quot;Event of Default&quot; hereunder:
+                                </Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="56.80" lly="457.99" urx="539.12" ury="526.99">
+                            <Line llx="56.80" lly="515.99" urx="538.58" ury="526.99">
+                                <Text>(1) Aladdin Gaming shall fail to make any payment in respect of any payment of
+                                    principal or interest under
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="501.49" urx="538.69" ury="512.49">
+                                <Text>the Term Loan Note or payment of Interim Rent or Basic Rent under the Master Lease
+                                    Agreement, as and
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="486.99" urx="538.28" ury="497.99">
+                                <Text>when due; or Aladdin Gaming shall fail to make any other payment hereunder or
+                                    under any of the other
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="472.49" urx="539.12" ury="483.49">
+                                <Text>Operative Documents when due and payable or declared due and payable and such
+                                    failure shall continue
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="457.99" urx="251.61" ury="468.99">
+                                <Text>for five (5) days after the due date therefor.</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="56.80" lly="420.99" urx="538.32" ury="446.49">
+                            <Line llx="56.80" lly="435.49" urx="538.32" ury="446.49">
+                                <Text>(2) Aladdin Gaming shall fail or neglect to perform, keep or observe any of the
+                                    provisions of Sections 10(j)
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="420.99" urx="114.88" ury="431.99">
+                                <Text>or 11 hereof.</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="56.80" lly="340.49" urx="539.02" ury="409.49">
+                            <Line llx="56.80" lly="398.49" urx="538.64" ury="409.49">
+                                <Text>(3) Aladdin Gaming shall fail or neglect to perform, keep or observe any term or
+                                    provision of this
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="383.99" urx="539.02" ury="394.99">
+                                <Text>Agreement (other than any such term or provision referred to in paragraphs (1) or
+                                    (2) above) or of any of
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="369.49" urx="539.00" ury="380.49">
+                                <Text>the other Operative Documents, and the same shall remain unremedied for a period
+                                    ending on the first to
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="354.99" urx="538.41" ury="365.99">
+                                <Text>occur of thirty (30) days after Aladdin Gaming shall receive written notice of any
+                                    such failure from GE
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="340.49" urx="504.76" ury="351.49">
+                                <Text>Capital or thirty (30) days after a Responsible Officer of Aladdin Gaming shall
+                                    become aware thereof.
+                                </Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="38.80" lly="295.49" urx="148.12" ury="306.49">
+                            <Line llx="38.80" lly="295.49" urx="148.12" ury="306.49">
+                                <Text>11. Limitation of liability</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="56.80" lly="214.99" urx="538.67" ury="283.99">
+                            <Line llx="56.80" lly="272.99" urx="538.62" ury="283.99">
+                                <Text>The Company has no material liabilities or obligations which are not reflected or
+                                    reserved against in the
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="258.49" urx="538.67" ury="269.49">
+                                <Text>Company Balance Sheet, except liabilities or obligations incurred since the date
+                                    of the Company Balance
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="243.99" urx="538.63" ury="254.99">
+                                <Text>Sheet in the ordinary course of business. The Company has not agreed to incur,
+                                    directly or indirectly, any
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="229.49" urx="538.48" ury="240.49">
+                                <Text>liability for brokerage or finders&apos; fees, agents&apos; commissions or other
+                                    similar charges in connection with this
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="214.99" urx="325.10" ury="225.99">
+                                <Text>Agreement or any of the transactions contemplated hereby.</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="38.80" lly="169.99" urx="121.79" ury="180.99">
+                            <Line llx="38.80" lly="169.99" urx="121.79" ury="180.99">
+                                <Text>12. Force Majeure</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="56.80" lly="89.49" urx="539.01" ury="158.49">
+                            <Line llx="56.80" lly="147.49" urx="538.57" ury="158.49">
+                                <Text>Failure of either party to perform its obligations under this Agreement except the
+                                    obligation to make
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="132.99" urx="538.61" ury="143.99">
+                                <Text>payments) shall not subject such party to any liability to the other if such
+                                    failure is caused by acts such as,
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="118.49" urx="538.91" ury="129.49">
+                                <Text>but not limited to, acts of God, fire, explosion, flood, drought, war, riot,
+                                    sabotage, embargo, strikes or other
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="103.99" urx="538.79" ury="114.99">
+                                <Text>labour trouble, failure in whole or in part of suppliers to deliver on schedule
+                                    materials, equipment or
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="89.49" urx="539.01" ury="100.49">
+                                <Text>machinery, interruption of or delay in transportation, compliance with any order
+                                    or regulation of any
+                                </Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                </Content>
+            </Page>
+            <Page number="4" width="595.30" height="841.89">
+                <Options>granularity=line</Options>
+                <Content granularity="line" dehyphenation="false" dropcap="false" font="false" geometry="false"
+                         shadow="false" sub="false" sup="false">
+                    <Para>
+                        <Box llx="56.80" lly="766.99" urx="538.68" ury="792.49">
+                            <Line llx="56.80" lly="781.49" urx="538.68" ury="792.49">
+                                <Text>government entity acting with colour of right or by any other cause beyond the
+                                    reasonable control of the
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="766.99" urx="90.25" ury="777.99">
+                                <Text>parties.</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="38.80" lly="721.99" urx="123.17" ury="732.99">
+                            <Line llx="38.80" lly="721.99" urx="123.17" ury="732.99">
+                                <Text>13. Governing Law</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="56.80" lly="626.99" urx="538.98" ury="710.49">
+                            <Line llx="56.80" lly="699.49" urx="538.89" ury="710.49">
+                                <Text>This Agreement and its formation, operation and performance and the terms of all
+                                    sales of Product
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="684.99" urx="538.61" ury="695.99">
+                                <Text>hereunder, shall be governed, construed, performed and enforced in accordance
+                                    within the laws of the
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="670.49" urx="538.73" ury="681.49">
+                                <Text>State of Delaware without regard to its conflict of laws principles. Each party
+                                    irrevocably agrees that the
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="655.99" urx="538.98" ury="666.99">
+                                <Text>state and federal courts of Delaware shall have exclusive jurisdiction to hear and
+                                    determine any suit action
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="641.49" urx="538.98" ury="652.49">
+                                <Text>or proceedings which may arise out of or in connection with this Agreement and,
+                                    for such purposes,
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="626.99" urx="297.64" ury="637.99">
+                                <Text>irrevocably submits to the jurisdiction of those courts.</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="38.80" lly="581.99" urx="140.97" ury="592.99">
+                            <Line llx="38.80" lly="581.99" urx="140.97" ury="592.99">
+                                <Text>14. Dispute Resolution</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="56.80" lly="501.49" urx="539.02" ury="570.49">
+                            <Line llx="56.80" lly="559.49" urx="539.02" ury="570.49">
+                                <Text>if any controversies, conflicts, disputes and/or differences (“Dispute”) arises
+                                    between the disputing Parties
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="544.99" urx="538.84" ury="555.99">
+                                <Text>hereto during the subsistence of this Agreement or thereafter, the disputing
+                                    Parties shall endeavour to
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="530.49" urx="538.85" ury="541.49">
+                                <Text>settle such dispute amicably whereby the disputing Parties shall attempt to reach
+                                    a resolution of the matter.
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="515.99" urx="538.50" ury="526.99">
+                                <Text>For the purpose of this Clause, the Promoters and the Company shall be considered
+                                    as one Party and in
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="501.49" urx="510.62" ury="512.49">
+                                <Text>case of Dispute that arises between Investor and the Company; the Investor shall
+                                    elect one arbitrator.
+                                </Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="56.80" lly="449.99" urx="539.08" ury="489.99">
+                            <Line llx="56.80" lly="478.99" urx="538.19" ury="489.99">
+                                <Text>If amicable settlement is not arrived at as above, within 90 (ninety) days of the
+                                    date of Dispute, the Dispute
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="464.49" urx="539.08" ury="475.49">
+                                <Text>shall be resolved and settled exclusively and finally by arbitration and either
+                                    disputing Party may issue a
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="449.99" urx="364.56" ury="460.99">
+                                <Text>notice of Dispute (“Notice of Dispute”) to the other disputing Parties.</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="56.80" lly="383.99" urx="539.04" ury="438.49">
+                            <Line llx="56.80" lly="427.49" urx="539.04" ury="438.49">
+                                <Text>All notices, computations, returns, certificates and audit reports, which ought to
+                                    have been given or made
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="412.99" urx="538.96" ury="423.99">
+                                <Text>or submitted, have been properly and duly submitted by the Company to the tax
+                                    authorities and no
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="398.49" urx="538.36" ury="409.49">
+                                <Text>information, notices, computations or returns, etc., submitted to such authorities
+                                    are the subject matter of
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="383.99" urx="111.28" ury="394.99">
+                                <Text>any dispute.</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="56.80" lly="317.99" urx="539.02" ury="372.49">
+                            <Line llx="56.80" lly="361.49" urx="538.97" ury="372.49">
+                                <Text>Neither the Promoters nor the Company is engaged, and to the best of the knowledge
+                                    of the Promoters,
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="346.99" urx="539.02" ury="357.99">
+                                <Text>nor are there any circumstances which are likely to give rise to any litigation,
+                                    arbitration or alternative
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="332.49" urx="538.24" ury="343.49">
+                                <Text>dispute resolution proceedings and there are no such proceedings pending or
+                                    threatened to the best of the
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="317.99" urx="408.87" ury="328.99">
+                                <Text>knowledge of the Promoters by or against the Company and/or the Promoters.</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="38.80" lly="272.99" urx="119.59" ury="283.99">
+                            <Line llx="38.80" lly="272.99" urx="119.59" ury="283.99">
+                                <Text>15. Non-Compete</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="56.80" lly="177.99" urx="538.92" ury="261.49">
+                            <Line llx="56.80" lly="250.49" urx="538.92" ury="261.49">
+                                <Text>During the employment of the Executive under this Agreement and for a period of
+                                    six (6) months after
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="235.99" urx="538.62" ury="246.99">
+                                <Text>termination of such employment, the Executive shall not at any time compete on his
+                                    own behalf, or on
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="221.49" urx="538.54" ury="232.49">
+                                <Text>behalf of any other person or entity, with the Company or any of its affiliates
+                                    within all territories in which
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="206.99" urx="538.92" ury="217.99">
+                                <Text>the Company does business with respect to the business of the Company or any of
+                                    its affiliates as such
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="192.49" urx="538.30" ury="203.49">
+                                <Text>business shall be conducted on the date hereof or during the employment of the
+                                    Executive under this
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="177.99" urx="109.50" ury="188.99">
+                                <Text>Agreement.</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="38.80" lly="142.99" urx="128.50" ury="153.99">
+                            <Line llx="38.80" lly="142.99" urx="128.50" ury="153.99">
+                                <Text>16. Non-Solicitation</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="56.80" lly="77.69" urx="539.04" ury="125.39">
+                            <Line llx="56.80" lly="115.39" urx="538.68" ury="125.39">
+                                <Text>Executive agrees that, during the term of his employment with Aastrom and for a
+                                    period of one
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="102.79" urx="539.03" ury="112.79">
+                                <Text>year following the termination of his employment with Aastrom for any reason, he
+                                    will not,
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="90.29" urx="539.01" ury="100.29">
+                                <Text>directly or indirectly, on his own behalf or on behalf of any other person or
+                                    entity, solicit, induce
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="77.69" urx="539.04" ury="87.69">
+                                <Text>or attempt to solicit or induce: (i) any then current employee or independent
+                                    contractor of
+                                </Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                </Content>
+            </Page>
+            <Page number="5" width="595.30" height="841.89">
+                <Options>granularity=line</Options>
+                <Content granularity="line" dehyphenation="false" dropcap="false" font="false" geometry="false"
+                         shadow="false" sub="false" sup="false">
+                    <Para>
+                        <Box llx="56.80" lly="720.19" urx="539.32" ury="792.89">
+                            <Line llx="56.80" lly="782.89" urx="539.30" ury="792.89">
+                                <Text>Aastrom to terminate or modify his, her or its employment or business relationship
+                                    with
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="770.39" urx="539.30" ury="780.39">
+                                <Text>Aastrom; (ii) any then current customer of Aastrom with which Executive had
+                                    personal contact
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="757.79" urx="539.32" ury="767.79">
+                                <Text>during the last twelve (12) months of his employment or about which Executive had
+                                    access to
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="745.29" urx="539.15" ury="755.29">
+                                <Text>Confidentia Information regarding such customer, or any current vendor, supplier,
+                                    service
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="732.69" urx="538.94" ury="742.69">
+                                <Text>provider, or other business relation of Aastrom (&quot;Business Relation&quot;) to
+                                    terminate or modify its
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="720.19" urx="419.88" ury="730.19">
+                                <Text>use of Aastrom&apos;s services or its relationship with Aastrom, as applicable.
+                                </Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="38.80" lly="693.69" urx="106.43" ury="704.69">
+                            <Line llx="38.80" lly="693.69" urx="106.43" ury="704.69">
+                                <Text>17. Solicitation</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="56.80" lly="598.69" urx="538.89" ury="682.19">
+                            <Line llx="56.80" lly="671.19" urx="538.53" ury="682.19">
+                                <Text>The parties therefore mutually agree that neither party shall without the other&apos;s
+                                    prior written consent
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="656.69" urx="538.36" ury="667.69">
+                                <Text>either during or within six months after the termination or expiry of the
+                                    contract, either on their own behalf
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="642.19" urx="538.87" ury="653.19">
+                                <Text>or on behalf of any other Person canvass, solicit the business of or endeavor to
+                                    entice away, engage,
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="627.69" urx="538.89" ury="638.69">
+                                <Text>employ, or otherwise solicit for employment any person who during the relevant
+                                    period was an employee
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="613.19" urx="538.42" ury="624.19">
+                                <Text>or sub-contractor of the other, and with whom such party had material contact in
+                                    connection with any
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="598.69" urx="181.55" ury="609.69">
+                                <Text>contract under these terms.</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="38.80" lly="553.69" urx="108.92" ury="564.69">
+                            <Line llx="38.80" lly="553.69" urx="108.92" ury="564.69">
+                                <Text>18. Assignment</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="56.80" lly="516.69" urx="538.94" ury="542.19">
+                            <Line llx="56.80" lly="531.19" urx="538.94" ury="542.19">
+                                <Text>No Assignment: You may not assign or transfer any rights to any other person
+                                    without PFIPL&apos;s prior written
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="516.69" urx="94.93" ury="527.69">
+                                <Text>consent.</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="38.80" lly="471.69" urx="93.43" ury="482.69">
+                            <Line llx="38.80" lly="471.69" urx="93.43" ury="482.69">
+                                <Text>19. Consent</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="56.80" lly="333.19" urx="539.01" ury="460.19">
+                            <Line llx="56.80" lly="449.19" urx="538.56" ury="460.19">
+                                <Text>The costs and expenses associated with Development activities shall include, but
+                                    are not limited to, costs of
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="434.69" urx="538.54" ury="445.69">
+                                <Text>studies on the toxicological, pharmacological, metabolical or clinical aspects of
+                                    a Product, including clinical
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="420.19" urx="538.43" ury="431.19">
+                                <Text>trials, conducted internally or by individual investigators or consultants and
+                                    necessary for the purpose of
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="405.69" urx="538.75" ury="416.69">
+                                <Text>obtaining, maintaining and/or expanding marketing approval of a Product, process
+                                    development, process
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="391.19" urx="538.69" ury="402.19">
+                                <Text>improvement and scale-up and recovery costs (including plant costs), validation
+                                    costs, including
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="376.69" urx="538.91" ury="387.69">
+                                <Text>qualification lots, the manufacture of clinical supplies of Product, including
+                                    failed batches, costs for
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="362.19" urx="538.95" ury="373.19">
+                                <Text>preparing, submitting, reviewing or developing data or information for the purpose
+                                    of submission to a
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="347.69" urx="539.01" ury="358.69">
+                                <Text>governmental authority to obtain, maintain and/or expand manufacturing and/or
+                                    marketing approval of a
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="333.19" urx="324.59" ury="344.19">
+                                <Text>Product and costs of marketing studies related to a Product.</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="56.80" lly="281.69" urx="538.67" ury="321.69">
+                            <Line llx="56.80" lly="310.69" urx="538.67" ury="321.69">
+                                <Text>In determining “Development Costs” chargeable under this Agreement, each Party
+                                    will use its respective
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="296.19" urx="538.63" ury="307.19">
+                                <Text>project accounting systems, and will review and approve its project accounting
+                                    systems and methodologies
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="281.69" urx="149.59" ury="292.69">
+                                <Text>with the other Party.</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="56.80" lly="230.19" urx="538.68" ury="270.19">
+                            <Line llx="56.80" lly="259.19" urx="538.68" ury="270.19">
+                                <Text>Notwithstanding anything in this Section 1.16 to the contrary, only those
+                                    Development Costs that are
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="244.69" urx="538.37" ury="255.69">
+                                <Text>contemplated by the Co-Development Plan and Budget or were otherwise approved by
+                                    the JSC shall be
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="230.19" urx="254.06" ury="241.19">
+                                <Text>chargeable by a Party as Development Costs</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="38.80" lly="207.69" urx="102.80" ury="218.69">
+                            <Line llx="38.80" lly="207.69" urx="102.80" ury="218.69">
+                                <Text>20. Exclusivity</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="53.00" lly="91.69" urx="539.29" ury="189.69">
+                            <Line llx="53.00" lly="178.69" urx="538.63" ury="189.69">
+                                <Text>a) Under the terms of the agreement, Pfizer will receive an exclusive worldwide
+                                    license to GMI-1070 for
+                                </Text>
+                            </Line>
+                            <Line llx="71.00" lly="164.19" urx="538.68" ury="175.19">
+                                <Text>Vaso-occlusive crisis associated with sickle cell disease and for other diseases
+                                    for which the drug
+                                </Text>
+                            </Line>
+                            <Line llx="71.00" lly="149.69" urx="538.80" ury="160.69">
+                                <Text>candidate may be developed. GlycoMimetics will remain responsible for completion
+                                    of the ongoing
+                                </Text>
+                            </Line>
+                            <Line llx="71.00" lly="135.19" urx="538.60" ury="146.19">
+                                <Text>Phase 2 trial under Pfizer&apos;s oversight, and Pfizer will then assume all
+                                    further development and
+                                </Text>
+                            </Line>
+                            <Line llx="71.00" lly="120.69" urx="539.29" ury="131.69">
+                                <Text>commercialization responsibilities. The potential value of the agreement for
+                                    GlycoMimetics is
+                                </Text>
+                            </Line>
+                            <Line llx="71.00" lly="106.19" urx="538.85" ury="117.19">
+                                <Text>approximately $340 million, including an upfront payment as well as development,
+                                    regulatory and
+                                </Text>
+                            </Line>
+                            <Line llx="71.00" lly="91.69" urx="425.45" ury="102.69">
+                                <Text>commercial milestones. GlycoMimetics is also eligible for royalties on any
+                                    sales.
+                                </Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                </Content>
+            </Page>
+            <Page number="6" width="595.30" height="841.89">
+                <Options>granularity=line</Options>
+                <Content granularity="line" dehyphenation="false" dropcap="false" font="false" geometry="false"
+                         shadow="false" sub="false" sup="false">
+                    <Para>
+                        <Box llx="53.00" lly="665.49" urx="539.02" ury="792.49">
+                            <Line llx="53.00" lly="781.49" urx="538.55" ury="792.49">
+                                <Text>b) Supplier shall manufacture and supply products exclusively to Pfizer, and
+                                    Pfizer grants no license or
+                                </Text>
+                            </Line>
+                            <Line llx="71.00" lly="766.99" urx="538.31" ury="777.99">
+                                <Text>other rights in or to products to supplier except to manufacture and supply same
+                                    to Pfizer. While this
+                                </Text>
+                            </Line>
+                            <Line llx="71.00" lly="752.49" urx="538.58" ury="763.49">
+                                <Text>Agreement is in effect and for a period of [**] years after this Agreement is
+                                    terminated for any reason,
+                                </Text>
+                            </Line>
+                            <Line llx="71.00" lly="737.99" urx="538.98" ury="748.99">
+                                <Text>supplier should not develop, manufacture or sell, nor shall supplier directly or
+                                    indirectly assist any third
+                                </Text>
+                            </Line>
+                            <Line llx="71.00" lly="723.49" urx="538.57" ury="734.49">
+                                <Text>party to develop, manufacture or sell, any products which are competitive with the
+                                    products supplied to
+                                </Text>
+                            </Line>
+                            <Line llx="71.00" lly="708.99" urx="538.77" ury="719.99">
+                                <Text>Pfizer by supplier under this Agreement, without the prior express written consent
+                                    of Pfizer. For
+                                </Text>
+                            </Line>
+                            <Line llx="71.00" lly="694.49" urx="538.80" ury="705.49">
+                                <Text>purposes of this Agreement, a product shall be considered competitive with the
+                                    PRODUCTS supplied to
+                                </Text>
+                            </Line>
+                            <Line llx="71.00" lly="679.99" urx="539.02" ury="690.99">
+                                <Text>Pfizer under this Agreement if such product is useful in the cellular diagnostics,
+                                    cellular separation or
+                                </Text>
+                            </Line>
+                            <Line llx="71.00" lly="665.49" urx="186.78" ury="676.49">
+                                <Text>cellular enrichment fields.</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="38.80" lly="636.49" urx="111.10" ury="647.49">
+                            <Line llx="38.80" lly="636.49" urx="111.10" ury="647.49">
+                                <Text>21. Data Breach</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="56.80" lly="404.49" urx="539.05" ury="618.49">
+                            <Line llx="56.80" lly="607.49" urx="538.28" ury="618.49">
+                                <Text>Service Provider shall immediately notify Pfizer of any instance of unauthorized
+                                    access to, use or disclosure
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="592.99" urx="538.56" ury="603.99">
+                                <Text>of any portion of Personal Information and shall cooperate with Pfizer in any
+                                    action relating thereto.
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="578.49" urx="539.05" ury="589.49">
+                                <Text>Further, upon discovery of any vulnerability to or breach of its security, Service
+                                    Provider shall immediately
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="563.99" urx="538.38" ury="574.99">
+                                <Text>take all appropriate actions necessary to mitigate any risk related to the
+                                    disclosure of Personal Information.
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="549.49" urx="538.48" ury="560.49">
+                                <Text>Service Provider shall not knowingly permit Consultant to have access to Personal
+                                    Information if such
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="534.99" urx="538.90" ury="545.99">
+                                <Text>Consultant: (a) has been convicted of a crime or has agreed to or entered into a
+                                    pretrial diversion or similar
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="520.49" urx="539.05" ury="531.49">
+                                <Text>program in connection with (i) dishonesty, breach of trust or money laundering.
+                                    &quot;Dishonesty&quot; means
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="505.99" urx="538.75" ury="516.99">
+                                <Text>directly or indirectly to cheat or defraud; to cheat or defraud for monetary gain
+                                    or its equivalent; or
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="491.49" urx="538.59" ury="502.49">
+                                <Text>wrongfully to take property belonging to another in violation of any criminal
+                                    statute. Dishonesty includes
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="476.99" urx="538.76" ury="487.99">
+                                <Text>acts involving want of integrity, lack of probity, or a disposition to distort,
+                                    cheat, or act deceitfully or
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="462.49" urx="538.71" ury="473.49">
+                                <Text>fraudulently, and may include crimes which by law is defined as dishonest. &quot;Breach
+                                    of trust&quot; means a
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="447.99" urx="538.62" ury="458.99">
+                                <Text>wrongful act, use, misappropriation or omission with respect to any property or
+                                    fund that has been
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="433.49" urx="538.85" ury="444.49">
+                                <Text>committed to a person in a fiduciary or official capacity, or the misuse of one&apos;s
+                                    official or fiduciary position
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="418.99" urx="538.93" ury="429.99">
+                                <Text>to engage in a wrongful act, use, misappropriation or omission. (a); and/or (ii) a
+                                    felony; and/or (b) uses
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="404.49" urx="112.78" ury="415.49">
+                                <Text>illegal drugs.</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="35.50" lly="375.49" urx="106.32" ury="386.49">
+                            <Line llx="35.50" lly="375.49" urx="106.32" ury="386.49">
+                                <Text>22. Prohibition</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="56.80" lly="143.49" urx="539.03" ury="357.49">
+                            <Line llx="56.80" lly="346.49" urx="538.31" ury="357.49">
+                                <Text>The Service Provider also agrees that the personnel employed by them will use only
+                                    lawful methods to carry
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="331.99" urx="539.03" ury="342.99">
+                                <Text>out the activities &amp; responsibilities assigned to them and shall not resort to
+                                    any unlawful actions &amp; any
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="317.49" urx="387.48" ury="328.49">
+                                <Text>unlawful actions done will be at the sole responsibility of Service Provider.
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="302.99" urx="538.98" ury="313.99">
+                                <Text>The execution, delivery and performance of this Agreement and the consummation of
+                                    the transactions
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="288.49" urx="499.29" ury="299.49">
+                                <Text>contemplated hereby, shall not, with or without the giving of notice or the
+                                    passage of time or both:
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="273.99" urx="538.79" ury="284.99">
+                                <Text>The Service Provider agrees that it shall not disclose any Confidential
+                                    Information received by it, without the
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="259.49" urx="538.74" ury="270.49">
+                                <Text>prior written consent, to any third party, other than: The Service Provider, its
+                                    employees, agents etc., shall
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="244.99" urx="538.78" ury="255.99">
+                                <Text>not use the name, trademark and / or logo of HDBFS in any sales or marketing
+                                    publication or advertisement
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="230.49" urx="297.23" ury="241.49">
+                                <Text>or in any other manner without prior written consent.</Text>
+                            </Line>
+                            <Line llx="56.80" lly="215.99" urx="538.95" ury="226.99">
+                                <Text>The Service Provider shall not assign any of its responsibilities contained in
+                                    this agreement to any agent, sub
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="201.49" urx="505.57" ury="212.49">
+                                <Text>- agent without prior written permission of Pfizer, which Pfizer may deny in their
+                                    absolute discretion.
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="186.99" urx="538.74" ury="197.99">
+                                <Text>The Service Provider acknowledges that any and all of the copyrights, trademarks
+                                    and other intellectual
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="172.49" urx="538.60" ury="183.49">
+                                <Text>property rights used or embodied in or in connection with this agreement shall
+                                    remain the property of
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="157.99" urx="538.36" ury="168.99">
+                                <Text>Pfizer and Service Provider shall not during or at any time after the termination
+                                    of this Agreement in any
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="143.49" urx="233.87" ury="154.49">
+                                <Text>way question or dispute the ownership.</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="38.80" lly="114.49" urx="135.79" ury="125.49">
+                            <Line llx="38.80" lly="114.49" urx="135.79" ury="125.49">
+                                <Text>23. Other Obligations</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="56.80" lly="77.49" urx="538.82" ury="102.99">
+                            <Line llx="56.80" lly="91.99" urx="538.82" ury="102.99">
+                                <Text>No omission or delay by Lessor at any time to enforce any right or remedy reserved
+                                    to it or to require
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="77.49" urx="538.28" ury="88.49">
+                                <Text>performance by Lessee of any of the terms, covenants or provisions of this
+                                    Agreement or any Lease at the
+                                </Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                </Content>
+            </Page>
+            <Page number="7" width="595.30" height="841.89">
+                <Options>granularity=line</Options>
+                <Content granularity="line" dehyphenation="false" dropcap="false" font="false" geometry="false"
+                         shadow="false" sub="false" sup="false">
+                    <Para>
+                        <Box llx="56.80" lly="766.99" urx="538.14" ury="792.49">
+                            <Line llx="56.80" lly="781.49" urx="538.14" ury="792.49">
+                                <Text>times designated herein or therein, shall be a waiver of any such right or remedy
+                                    to which Lessor is entitled,
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="766.99" urx="435.09" ury="777.99">
+                                <Text>nor shall it in any way affect the right of Lessor to thereafter enforce such
+                                    provisions.
+                                </Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="38.80" lly="744.49" urx="101.72" ury="755.49">
+                            <Line llx="38.80" lly="744.49" urx="101.72" ury="755.49">
+                                <Text>24. Subletting</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                    <Para>
+                        <Box llx="56.80" lly="568.29" urx="539.43" ury="728.89">
+                            <Line llx="56.80" lly="718.89" urx="539.11" ury="728.89">
+                                <Text>Without the prior written consent of Licensor, Licensee cannot sublet, sub-let,
+                                    assign, mortgage
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="706.29" urx="539.04" ury="716.29">
+                                <Text>or pledge its rights under this Agreement, in whole or in part, to any Person
+                                    other than an
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="693.79" urx="539.29" ury="703.79">
+                                <Text>assignment of this Agreement in its entirety to an Affiliate, solely as part of an
+                                    internal
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="681.19" urx="539.32" ury="691.19">
+                                <Text>reorganization for tax or administrative purposes, and solely if (i) Licensee
+                                    guarantees the
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="668.69" urx="539.35" ury="678.69">
+                                <Text>performance of such Affiliate thereafter and (ii) the assignee is the ultimate
+                                    parent entity in
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="656.09" urx="539.43" ury="666.09">
+                                <Text>Licensee&apos;s organization or otherwise has the power to control the actions of
+                                    all of Licensee&apos;s
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="643.59" urx="538.72" ury="653.59">
+                                <Text>Affiliates receiving the benefit of this Agreement. For clarity, this Agreement
+                                    shall be construed
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="630.99" urx="539.14" ury="640.99">
+                                <Text>as an agreement for the personal services of Licensee in its current form as a
+                                    non-bankrupt
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="618.49" urx="539.28" ury="628.49">
+                                <Text>entity, and Licensee may not assume this Agreement (or assign this Agreement to
+                                    any other
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="605.89" urx="539.05" ury="615.89">
+                                <Text>Person, including an Affiliate) in bankruptcy without Licensor&apos;s prior
+                                    written consent. Without
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="593.39" urx="539.20" ury="603.39">
+                                <Text>the prior written consent of Licensor, Licensee shall not permit a tax sale,
+                                    seizure, security
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="580.79" urx="538.96" ury="590.79">
+                                <Text>interest, lien, mortgage or encumbrance or attachment to occur with respect to any
+                                    Licensed
+                                </Text>
+                            </Line>
+                            <Line llx="56.80" lly="568.29" urx="205.86" ury="578.29">
+                                <Text>Vacation Ownership Property.</Text>
+                            </Line>
+                        </Box>
+                    </Para>
+                </Content>
+            </Page>
+            <Resources>
+                <Fonts>
+                    <Font id="F0" name="Carlito" fullname="BAAAAA+Carlito" type="TrueType" embedded="true"
+                          ascender="750.00" capheight="1014.00" italicangle="0.00" descender="-250.00" weight="400.00"
+                          xheight="495.00"/>
+                    <Font id="F1" name="DejaVuSans" fullname="CAAAAA+DejaVuSans" type="TrueType" embedded="true"
+                          ascender="928.00" capheight="1232.00" italicangle="0.00" descender="-235.00" weight="400.00"
+                          xheight="612.00"/>
+                </Fonts>
+                <ColorSpaces>
+                    <ColorSpace id="CS0" name="DeviceRGB" components="3"/>
+                </ColorSpaces>
+            </Resources>
+        </Pages>
+    </Document>
+</TET>
