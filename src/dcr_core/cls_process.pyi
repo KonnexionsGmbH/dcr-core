@@ -39,9 +39,11 @@ class Process:
         self._full_name_in_tokenizer_page = None
         self._full_name_in_tokenizer_word = None
         self._full_name_orig = None
+        self._is_delete_auxiliary_files = None
         self._is_pandoc = None
         self._is_pdf2image = None
         self._is_tesseract = None
+        self._is_verbose = None
         self._language_pandoc = None
         self._language_spacy = None
         self._language_tesseract = None
@@ -50,6 +52,7 @@ class Process:
         self._no_lines_toc = None
         self._no_pdf_pages = None
     def _document_check_extension(self) -> None: ...
+    def _document_delete_auxiliary_file(self, full_name: str) -> None: ...
     def _document_init(self) -> None: ...
     def _document_pandoc(self) -> None: ...
     def _document_parser(self) -> None: ...
@@ -69,8 +72,14 @@ class Process:
     def document(
         self,
         full_name_in: str,
+        document_id: int = ...,
+        full_name_orig: str = ...,
+        is_delete_auxiliary_files: bool = ...,
+        is_verbose: bool = ...,
         language_pandoc: str = ...,
+        language_spacy: str = ...,
         language_tesseract: str = ...,
+        output_directory: str = ...,
     ) -> None: ...
     @classmethod
     def pandoc(cls, full_name_in: str, full_name_out: str, language_pandoc: str) -> tuple[str, str]: ...

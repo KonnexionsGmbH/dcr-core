@@ -81,7 +81,9 @@ def compare_with_reference_files(directory_name: str, reference_files: list[str]
 
             if extension == dcr_core.core_glob.FILE_TYPE_JSON:
                 # multiple lines
-                if is_line_type('                                    "tknRank": ', tst_lines[i], ref_lines[i]):
+                if is_line_type('                                    "tknRank": ', tst_lines[i], ref_lines[i]) or is_line_type(
+                    '                                    "tknVocab": ', tst_lines[i], ref_lines[i]
+                ):
                     continue
                 # single line
                 if is_line_type('    "documentFileName": ', tst_lines[i], ref_lines[i]) or is_line_type(

@@ -1,0 +1,87 @@
+{
+    "documentId": 42,
+    "documentFileName": "pdf_mini.pdf",
+    "noLinesFooter": 0,
+    "noLinesHeader": 0,
+    "noLinesInDocument": 7,
+    "noLinesToc": 0,
+    "noListsBulletInDocument": 0,
+    "noListsNumberInDocument": 0,
+    "noPagesInDocument": 1,
+    "noParagraphsInDocument": 5,
+    "noTablesInDocument": 0,
+    "noTitlesInDocument": 0,
+    "titles": [],
+    "pages": [
+        {
+            "pageNo": 1,
+            "noLinesInPage": 7,
+            "noParagraphsInPage": 5,
+            "lines": [
+                {
+                    "coordLLX": 205.8,
+                    "coordURX": 389.45,
+                    "lineNo": 1,
+                    "lineNoPage": 1,
+                    "lineType": "b",
+                    "paragraphNo": 1,
+                    "text": "This is the header sentence"
+                },
+                {
+                    "coordLLX": 211.8,
+                    "coordURX": 383.45,
+                    "lineNo": 1,
+                    "lineNoPage": 2,
+                    "lineType": "b",
+                    "paragraphNo": 2,
+                    "text": "This is the title sentence"
+                },
+                {
+                    "coordLLX": 70.86,
+                    "coordURX": 517.19,
+                    "lineNo": 1,
+                    "lineNoPage": 3,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "This is the first sentence of the first paragraph. This is the"
+                },
+                {
+                    "coordLLX": 70.86,
+                    "coordURX": 351.61,
+                    "lineNo": 2,
+                    "lineNoPage": 4,
+                    "lineType": "b",
+                    "paragraphNo": 3,
+                    "text": "second sentence of the first paragraph."
+                },
+                {
+                    "coordLLX": 70.86,
+                    "coordURX": 495.59,
+                    "lineNo": 1,
+                    "lineNoPage": 5,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "This is the first sentence of the second paragraph. This is"
+                },
+                {
+                    "coordLLX": 70.86,
+                    "coordURX": 387.61,
+                    "lineNo": 2,
+                    "lineNoPage": 6,
+                    "lineType": "b",
+                    "paragraphNo": 4,
+                    "text": "the second sentence of the second paragraph."
+                },
+                {
+                    "coordLLX": 238.98,
+                    "coordURX": 356.22,
+                    "lineNo": 1,
+                    "lineNoPage": 7,
+                    "lineType": "b",
+                    "paragraphNo": 5,
+                    "text": "This is the footer sentence"
+                }
+            ]
+        }
+    ]
+}

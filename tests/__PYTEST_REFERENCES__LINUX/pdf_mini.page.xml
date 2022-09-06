@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created by the PDFlib Text and Image Extraction Toolkit TET (www.pdflib.com) -->
+<TET xmlns="http://www.pdflib.com/XML/TET5/TET-5.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.pdflib.com/XML/TET5/TET-5.0
+ http://www.pdflib.com/XML/TET5/TET-5.0.xsd"
+ version="5.2">
+<Creation platform="Linux-x64" tetVersion="5.3" date="2022-09-06T16:56:50+02:00" />
+<Document filename="data/inbox_dev_accepted/pdf_mini.pdf" pageCount="1" filesize="42257" linearized="true" pdfVersion="1.5">
+<DocInfo>
+<Author>walte</Author>
+<CreationDate>2022-04-04T09:46:32+02:00</CreationDate>
+<Creator>PScript5.dll Version 5.2.2</Creator>
+<ModDate>2022-04-04T09:46:32+02:00</ModDate>
+<Producer>Acrobat Distiller 11.0 (Windows)</Producer>
+<Title>Microsoft Word - docx_mini.docx</Title>
+</DocInfo>
+<Metadata>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.4-c006 80.159825, 2016/09/16-03:31:08        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""
+            xmlns:pdf="http://ns.adobe.com/pdf/1.3/"
+            xmlns:xmp="http://ns.adobe.com/xap/1.0/"
+            xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/">
+         <pdf:Producer>Acrobat Distiller 11.0 (Windows)</pdf:Producer>
+         <xmp:CreatorTool>PScript5.dll Version 5.2.2</xmp:CreatorTool>
+         <xmp:ModifyDate>2022-04-04T09:46:32+02:00</xmp:ModifyDate>
+         <xmp:CreateDate>2022-04-04T09:46:32+02:00</xmp:CreateDate>
+         <dc:format>application/pdf</dc:format>
+         <dc:title>
+            <rdf:Alt>
+               <rdf:li xml:lang="x-default">Microsoft Word - docx_mini.docx</rdf:li>
+            </rdf:Alt>
+         </dc:title>
+         <dc:creator>
+            <rdf:Seq>
+               <rdf:li>walte</rdf:li>
+            </rdf:Seq>
+         </dc:creator>
+         <xmpMM:DocumentID>uuid:f20479b8-1f9a-45c0-ad58-278ca6aa4963</xmpMM:DocumentID>
+         <xmpMM:InstanceID>uuid:d0a36da4-6554-4fc0-b8c5-cc0d50dd91ee</xmpMM:InstanceID>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta>
+</Metadata>
+<Options>tetml={filename={data/inbox_dev_accepted/pdf_mini.page.xml}} engines={noannotation noimage text notextcolor novector} lineseparator=U+0020</Options>
+<Pages>
+<Page number="1" width="595.22" height="842.00">
+<Options>granularity=page</Options>
+<Content granularity="page" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="205.80" lly="793.46" urx="389.45" ury="807.44">
+  <Text>This is the header sentence</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="211.80" lly="756.14" urx="383.45" ury="772.16">
+  <Text>This is the title sentence</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.86" lly="695.96" urx="517.19" ury="722.60">
+  <Text>This is the first sentence of the first paragraph. This is the second sentence of the first paragraph.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.86" lly="635.90" urx="495.59" ury="662.60">
+  <Text>This is the first sentence of the second paragraph. This is the second sentence of the second paragraph.</Text>
+ </Box>
+</Para>
+<Para>
+ <Box llx="238.98" lly="37.58" urx="356.22" ury="47.60">
+  <Text>This is the footer sentence</Text>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Resources>
+<Fonts>
+ <Font id="F0" name="Arial-BoldMT" fullname="FDGBGH+Arial-BoldMT" type="TrueType (CID)" embedded="true" ascender="728.00" capheight="716.00" italicangle="0.00" descender="-210.00" weight="700.00" xheight="519.00"/>
+ <Font id="F1" name="ArialMT" fullname="FDGBHI+ArialMT" type="TrueType (CID)" embedded="true" ascender="728.00" capheight="716.00" italicangle="0.00" descender="-210.00" weight="400.00" xheight="519.00"/>
+ <Font id="F2" name="CourierNewPSMT" type="TrueType" embedded="false" ascender="832.00" capheight="1000.00" italicangle="0.00" descender="-300.00" weight="400.00" xheight="1000.00"/>
+</Fonts>
+<ColorSpaces>
+ <ColorSpace id="CS0" name="DeviceGray" components="1"/>
+</ColorSpaces>
+</Resources>
+</Pages>
+</Document>
+</TET>

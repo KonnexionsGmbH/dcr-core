@@ -34,7 +34,7 @@ def test(fxtr_setup_empty_inbox):
     instance = dcr_core.cls_process.Process()
 
     with pytest.raises(RuntimeError) as e:
-        instance.document(full_name)
+        instance.document(full_name, is_delete_auxiliary_files=False)
 
     assert e.type == RuntimeError, f"Unknown file extension - file={full_name}"
     assert str(e.value)[0:6] == "01.901", f"Unknown file extension - file={full_name}"

@@ -74,27 +74,29 @@ class Process:
 
         self._document_id: int = 0
 
-        self._full_name_in: str = ""
-        self._full_name_in_directory: str = ""
-        self._full_name_in_extension: str = ""
-        self._full_name_in_extension_int: str = ""
-        self._full_name_in_next_step: str = ""
-        self._full_name_in_pandoc: str = ""
-        self._full_name_in_parser_line: str = ""
-        self._full_name_in_parser_page: str = ""
-        self._full_name_in_parser_word: str = ""
-        self._full_name_in_pdf2image: str = ""
-        self._full_name_in_pdflib: str = ""
-        self._full_name_in_stem_name: str = ""
-        self._full_name_in_tesseract: str = ""
-        self._full_name_in_tokenizer_line: str = ""
-        self._full_name_in_tokenizer_page: str = ""
-        self._full_name_in_tokenizer_word: str = ""
-        self._full_name_orig: str = ""
+        self._full_name_in = ""
+        self._full_name_in_directory = ""
+        self._full_name_in_extension = ""
+        self._full_name_in_extension_int = ""
+        self._full_name_in_next_step = ""
+        self._full_name_in_pandoc = ""
+        self._full_name_in_parser_line = ""
+        self._full_name_in_parser_page = ""
+        self._full_name_in_parser_word = ""
+        self._full_name_in_pdf2image = ""
+        self._full_name_in_pdflib = ""
+        self._full_name_in_stem_name = ""
+        self._full_name_in_tesseract = ""
+        self._full_name_in_tokenizer_line = ""
+        self._full_name_in_tokenizer_page = ""
+        self._full_name_in_tokenizer_word = ""
+        self._full_name_orig = ""
 
-        self._is_pandoc: bool = False
-        self._is_pdf2image: bool = False
-        self._is_tesseract: bool = False
+        self._is_delete_auxiliary_files = False
+        self._is_pandoc = False
+        self._is_pdf2image = False
+        self._is_tesseract = False
+        self._is_verbose = False
 
         self._language_pandoc: str = ""
         self._language_spacy: str = ""
@@ -146,6 +148,26 @@ class Process:
             raise RuntimeError(Process.ERROR_01_901.replace("{extension}", self._full_name_in_extension_int))
 
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
+
+    # -----------------------------------------------------------------------------
+    # Delete the given auxiliary file.
+    # -----------------------------------------------------------------------------
+    def _document_delete_auxiliary_file(self, full_name: str) -> None:
+        """Delete the given auxiliary file.
+
+        Args:
+            full_name (str): File name.
+        """
+        if not self._is_delete_auxiliary_files:
+            return
+
+        # Don't remove the base document !!!
+        if full_name == self._full_name_in:
+            return
+
+        if os.path.isfile(full_name):
+            os.remove(full_name)
+            dcr_core.core_utils.progress_msg(self._is_verbose, f"Auxiliary file '{full_name}' deleted")
 
     # ------------------------------------------------------------------
     # Initialize the document recognition process.
@@ -201,9 +223,7 @@ class Process:
         if self._is_pandoc:
             dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
 
-            dcr_core.core_utils.progress_msg(
-                dcr_core.core_glob.setup.is_verbose, f"Start processing Pandoc        {self._full_name_in_pandoc}"
-            )
+            dcr_core.core_utils.progress_msg(self._is_verbose, f"Start processing Pandoc        {self._full_name_in_pandoc}")
 
             self._full_name_in_pdflib = dcr_core.core_utils.get_full_name_from_components(
                 self._full_name_in_directory, self._full_name_in_stem_name, dcr_core.core_glob.FILE_TYPE_PDF
@@ -217,9 +237,9 @@ class Process:
             if return_code != "ok":
                 raise RuntimeError(error_msg)
 
-            dcr_core.core_utils.progress_msg(
-                dcr_core.core_glob.setup.is_verbose, f"End   processing Pandoc        {self._full_name_in_pdflib}"
-            )
+            self._document_delete_auxiliary_file(self._full_name_in_pandoc)
+
+            dcr_core.core_utils.progress_msg(self._is_verbose, f"End   processing Pandoc        {self._full_name_in_pdflib}")
 
             dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
 
@@ -317,9 +337,7 @@ class Process:
         """
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
 
-        dcr_core.core_utils.progress_msg(
-            dcr_core.core_glob.setup.is_verbose, f"Start processing {tetml_type}          {full_name_in_parser}"
-        )
+        dcr_core.core_utils.progress_msg(self._is_verbose, f"Start processing {tetml_type}          {full_name_in_parser}")
 
         dcr_core.core_glob.setup.is_parsing_line = is_parsing_line
         dcr_core.core_glob.setup.is_parsing_page = is_parsing_page
@@ -335,9 +353,9 @@ class Process:
         if return_code != "ok":
             raise RuntimeError(error_msg)
 
-        dcr_core.core_utils.progress_msg(
-            dcr_core.core_glob.setup.is_verbose, f"End   processing {tetml_type}          {full_name_in_tokenizer}"
-        )
+        self._document_delete_auxiliary_file(full_name_in_parser)
+
+        dcr_core.core_utils.progress_msg(self._is_verbose, f"End   processing {tetml_type}          {full_name_in_tokenizer}")
 
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
 
@@ -353,9 +371,7 @@ class Process:
         if self._is_pdf2image:
             dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
 
-            dcr_core.core_utils.progress_msg(
-                dcr_core.core_glob.setup.is_verbose, f"Start processing pdf2image     {self._full_name_in_pdf2image}"
-            )
+            dcr_core.core_utils.progress_msg(self._is_verbose, f"Start processing pdf2image     {self._full_name_in_pdf2image}")
 
             self._full_name_in_tesseract = dcr_core.core_utils.get_full_name_from_components(
                 self._full_name_in_directory,
@@ -374,9 +390,9 @@ class Process:
             if return_code != "ok":
                 raise RuntimeError(error_msg)
 
-            dcr_core.core_utils.progress_msg(
-                dcr_core.core_glob.setup.is_verbose, f"End   processing pdf2image     {self._full_name_in_tesseract}"
-            )
+            self._document_delete_auxiliary_file(self._full_name_in_pdf2image)
+
+            dcr_core.core_utils.progress_msg(self._is_verbose, f"End   processing pdf2image     {self._full_name_in_tesseract}")
 
             dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
 
@@ -391,7 +407,7 @@ class Process:
         """
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
 
-        dcr_core.core_utils.progress_msg(dcr_core.core_glob.setup.is_verbose, f"Start processing PDFlib TET    {self._full_name_in_pdflib}")
+        dcr_core.core_utils.progress_msg(self._is_verbose, f"Start processing PDFlib TET    {self._full_name_in_pdflib}")
 
         # noinspection PyUnresolvedReferences
         self._no_pdf_pages = len(PyPDF2.PdfReader(self._full_name_in_pdflib).pages)
@@ -412,9 +428,7 @@ class Process:
         if return_code != "ok":
             raise RuntimeError(error_msg)
 
-        dcr_core.core_utils.progress_msg(
-            dcr_core.core_glob.setup.is_verbose, f"End   processing PDFlib TET    {self._full_name_in_parser_line}"
-        )
+        dcr_core.core_utils.progress_msg(self._is_verbose, f"End   processing PDFlib TET    {self._full_name_in_parser_line}")
 
         if dcr_core.core_glob.setup.is_tetml_page:
             self._full_name_in_parser_page = dcr_core.core_utils.get_full_name_from_components(
@@ -429,9 +443,7 @@ class Process:
             )
             if return_code != "ok":
                 raise RuntimeError(error_msg)
-            dcr_core.core_utils.progress_msg(
-                dcr_core.core_glob.setup.is_verbose, f"End   processing PDFlib TET    {self._full_name_in_parser_page}"
-            )
+            dcr_core.core_utils.progress_msg(self._is_verbose, f"End   processing PDFlib TET    {self._full_name_in_parser_page}")
 
         if dcr_core.core_glob.setup.is_tetml_word:
             self._full_name_in_parser_word = dcr_core.core_utils.get_full_name_from_components(
@@ -446,9 +458,9 @@ class Process:
             )
             if return_code != "ok":
                 raise RuntimeError(error_msg)
-            dcr_core.core_utils.progress_msg(
-                dcr_core.core_glob.setup.is_verbose, f"End   processing PDFlib TET    {self._full_name_in_parser_word}"
-            )
+            dcr_core.core_utils.progress_msg(self._is_verbose, f"End   processing PDFlib TET    {self._full_name_in_parser_word}")
+
+        self._document_delete_auxiliary_file(self._full_name_in_pdflib)
 
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
 
@@ -467,9 +479,7 @@ class Process:
         if self._is_tesseract:
             dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
 
-            dcr_core.core_utils.progress_msg(
-                dcr_core.core_glob.setup.is_verbose, f"Start processing Tesseract OCR {self._full_name_in_tesseract}"
-            )
+            dcr_core.core_utils.progress_msg(self._is_verbose, f"Start processing Tesseract OCR {self._full_name_in_tesseract}")
 
             if self._is_pdf2image:
                 self._full_name_in_stem_name += "_0"
@@ -478,7 +488,7 @@ class Process:
                 self._full_name_in_directory, self._full_name_in_stem_name, dcr_core.core_glob.FILE_TYPE_PDF
             )
 
-            return_code, error_msg, _ = Process.tesseract(
+            return_code, error_msg, children = Process.tesseract(
                 self._full_name_in_tesseract,
                 self._full_name_in_pdflib,
                 self._language_tesseract,
@@ -491,9 +501,10 @@ class Process:
             if self._no_pdf_pages == 0:
                 raise RuntimeError(f"The number of pages of the PDF document {self._full_name_in_pdflib} cannot be determined")
 
-            dcr_core.core_utils.progress_msg(
-                dcr_core.core_glob.setup.is_verbose, f"End   processing Tesseract OCR {self._full_name_in_pdflib}"
-            )
+            for child in children:
+                self._document_delete_auxiliary_file(child)
+
+            dcr_core.core_utils.progress_msg(self._is_verbose, f"End   processing Tesseract OCR {self._full_name_in_pdflib}")
 
             dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
 
@@ -508,9 +519,7 @@ class Process:
         """
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
 
-        dcr_core.core_utils.progress_msg(
-            dcr_core.core_glob.setup.is_verbose, f"Start processing spaCy         {self._full_name_in_tokenizer_line}"
-        )
+        dcr_core.core_utils.progress_msg(self._is_verbose, f"Start processing spaCy         {self._full_name_in_tokenizer_line}")
 
         try:
             dcr_core.core_glob.tokenizer_spacy.exists()
@@ -535,9 +544,9 @@ class Process:
         if return_code != "ok":
             raise RuntimeError(error_msg)
 
-        dcr_core.core_utils.progress_msg(
-            dcr_core.core_glob.setup.is_verbose, f"End   processing spaCy         {self._full_name_in_next_step}"
-        )
+        self._document_delete_auxiliary_file(self._full_name_in_tokenizer_line)
+
+        dcr_core.core_utils.progress_msg(self._is_verbose, f"End   processing spaCy         {self._full_name_in_next_step}")
 
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
 
@@ -549,9 +558,12 @@ class Process:
         full_name_in: str,
         document_id: int = None,
         full_name_orig: str = None,
+        is_delete_auxiliary_files: bool = None,
+        is_verbose: bool = None,
         language_pandoc: str = None,
         language_spacy: str = None,
         language_tesseract: str = None,
+        output_directory: str = None,
     ) -> None:
         """Document content recognition for a specific file.
 
@@ -564,6 +576,12 @@ class Process:
             full_name_orig (str, optional):
                 Original full file name.
                 Defaults to the full file name of the document file.
+            is_delete_auxiliary_files (bool, optional):
+                Delete the auxiliary files after a successful processing step.
+                Defaults to parameter `delete_auxiliary_files` in `setup.cfg`.
+            is_verbose (bool, optional):
+                Display progress messages for processing.
+                Defaults to parameter `verbose` in `setup.cfg`.
             language_pandoc (str, optional):
                 Pandoc language code.
                 Defaults to English.
@@ -573,6 +591,9 @@ class Process:
             language_tesseract (str, optional):
                 Tesseract OCR language code.
                 Defaults to English.
+            output_directory (str, optional):
+                Directory for the flat files to be created.
+                Defaults to the directory of the document file.
 
         Raises:
             RuntimeError: Any issue from Pandoc, pdf2image, PDFlib TET, spaCy, or Tesseract OCR.
@@ -602,16 +623,23 @@ class Process:
         # Load the configuration parameters.
         dcr_core.core_glob.setup = dcr_core.cls_setup.Setup()
 
-        dcr_core.core_utils.progress_msg(dcr_core.core_glob.setup.is_verbose, f"Start processing document file {self._full_name_orig}")
-        dcr_core.core_utils.progress_msg(dcr_core.core_glob.setup.is_verbose, f"Language key Pandoc            {self._language_pandoc}")
-        dcr_core.core_utils.progress_msg(dcr_core.core_glob.setup.is_verbose, f"Language key spaCy             {self._language_spacy}")
-        dcr_core.core_utils.progress_msg(dcr_core.core_glob.setup.is_verbose, f"Language key Tessract OCR      {self._language_tesseract}")
+        self._is_delete_auxiliary_files = (
+            is_delete_auxiliary_files if is_delete_auxiliary_files is not None else dcr_core.core_glob.setup.is_delete_auxiliary_files
+        )
+        self._is_verbose = is_verbose if is_verbose is not None else dcr_core.core_glob.setup.is_verbose
+
+        dcr_core.core_utils.progress_msg(self._is_verbose, f"Start processing document file {self._full_name_orig}")
+        dcr_core.core_utils.progress_msg(self._is_verbose, f"Language key Pandoc            {self._language_pandoc}")
+        dcr_core.core_utils.progress_msg(self._is_verbose, f"Language key spaCy             {self._language_spacy}")
+        dcr_core.core_utils.progress_msg(self._is_verbose, f"Language key Tessract OCR      {self._language_tesseract}")
 
         (
-            self._full_name_in_directory,
+            full_name_in_directory,
             self._full_name_in_stem_name,
             self._full_name_in_extension,
         ) = dcr_core.core_utils.get_components_from_full_name(self._full_name_in)
+
+        self._full_name_in_directory = output_directory if output_directory is not None else full_name_in_directory
 
         self._full_name_in_extension_int = (
             self._full_name_in_extension.lower() if self._full_name_in_extension else self._full_name_in_extension
@@ -631,7 +659,7 @@ class Process:
 
         self._document_tokenizer()
 
-        dcr_core.core_utils.progress_msg(dcr_core.core_glob.setup.is_verbose, f"End   processing document file {self._full_name_orig}")
+        dcr_core.core_utils.progress_msg(self._is_verbose, f"End   processing document file {self._full_name_orig}")
 
         dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
 

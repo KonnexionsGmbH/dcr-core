@@ -159,6 +159,7 @@ class NLPCore:
     JSON_NAME_TOKEN_TENSOR: ClassVar[str]
     JSON_NAME_TOKEN_TEXT: ClassVar[str]
     JSON_NAME_TOKEN_TEXT_WITH_WS: ClassVar[str]
+    JSON_NAME_TOKEN_VOCAB: ClassVar[str]
     JSON_NAME_TOKEN_WHITESPACE_: ClassVar[str]
     JSON_NAME_UPPER_RIGHT_X: ClassVar[str]
     JSON_NAME_WORDS: ClassVar[str]

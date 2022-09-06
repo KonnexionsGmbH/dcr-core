@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created by the PDFlib Text and Image Extraction Toolkit TET (www.pdflib.com) -->
+<TET xmlns="http://www.pdflib.com/XML/TET5/TET-5.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.pdflib.com/XML/TET5/TET-5.0
+ http://www.pdflib.com/XML/TET5/TET-5.0.xsd"
+ version="5.2">
+<Creation platform="Win64" tetVersion="5.3" date="2022-09-06T16:37:30+02:00" />
+<Document filename="data\inbox_dev_accepted\pdf_mini.pdf" pageCount="1" filesize="42257" linearized="true" pdfVersion="1.5">
+<DocInfo>
+<Author>walte</Author>
+<CreationDate>2022-04-04T09:46:32+02:00</CreationDate>
+<Creator>PScript5.dll Version 5.2.2</Creator>
+<ModDate>2022-04-04T09:46:32+02:00</ModDate>
+<Producer>Acrobat Distiller 11.0 (Windows)</Producer>
+<Title>Microsoft Word - docx_mini.docx</Title>
+</DocInfo>
+<Metadata>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.4-c006 80.159825, 2016/09/16-03:31:08        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""
+            xmlns:pdf="http://ns.adobe.com/pdf/1.3/"
+            xmlns:xmp="http://ns.adobe.com/xap/1.0/"
+            xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/">
+         <pdf:Producer>Acrobat Distiller 11.0 (Windows)</pdf:Producer>
+         <xmp:CreatorTool>PScript5.dll Version 5.2.2</xmp:CreatorTool>
+         <xmp:ModifyDate>2022-04-04T09:46:32+02:00</xmp:ModifyDate>
+         <xmp:CreateDate>2022-04-04T09:46:32+02:00</xmp:CreateDate>
+         <dc:format>application/pdf</dc:format>
+         <dc:title>
+            <rdf:Alt>
+               <rdf:li xml:lang="x-default">Microsoft Word - docx_mini.docx</rdf:li>
+            </rdf:Alt>
+         </dc:title>
+         <dc:creator>
+            <rdf:Seq>
+               <rdf:li>walte</rdf:li>
+            </rdf:Seq>
+         </dc:creator>
+         <xmpMM:DocumentID>uuid:f20479b8-1f9a-45c0-ad58-278ca6aa4963</xmpMM:DocumentID>
+         <xmpMM:InstanceID>uuid:d0a36da4-6554-4fc0-b8c5-cc0d50dd91ee</xmpMM:InstanceID>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta>
+</Metadata>
+<Options>tetml={filename={data\inbox_dev_accepted\pdf_mini.word.xml}} engines={noannotation noimage text notextcolor novector}</Options>
+<Pages>
+<Page number="1" width="595.22" height="842.00">
+<Options>granularity=word tetml={elements={line}}</Options>
+<Content granularity="word" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+<Para>
+ <Box llx="205.80" lly="793.46" urx="389.45" ury="807.44">
+  <Line llx="205.80" lly="793.46" urx="389.45" ury="807.44">
+   <Word>
+    <Text>This</Text>
+    <Box llx="205.80" lly="793.46" urx="234.58" ury="807.44"/>
+   </Word>
+   <Word>
+    <Text>is</Text>
+    <Box llx="238.49" lly="793.46" urx="250.16" ury="807.44"/>
+   </Word>
+   <Word>
+    <Text>the</Text>
+    <Box llx="254.06" lly="793.46" urx="275.06" ury="807.44"/>
+   </Word>
+   <Word>
+    <Text>header</Text>
+    <Box llx="278.97" lly="793.46" urx="324.86" ury="807.44"/>
+   </Word>
+   <Word>
+    <Text>sentence</Text>
+    <Box llx="328.77" lly="793.46" urx="389.45" ury="807.44"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="211.80" lly="756.14" urx="383.45" ury="772.16">
+  <Line llx="211.80" lly="756.14" urx="383.45" ury="772.16">
+   <Word>
+    <Text>This</Text>
+    <Box llx="211.80" lly="756.14" urx="242.04" ury="772.16"/>
+   </Word>
+   <Word>
+    <Text>is</Text>
+    <Box llx="246.48" lly="756.14" urx="258.03" ury="772.16"/>
+   </Word>
+   <Word>
+    <Text>the</Text>
+    <Box llx="262.47" lly="756.14" urx="284.72" ury="772.16"/>
+   </Word>
+   <Word>
+    <Text>title</Text>
+    <Box llx="289.16" lly="756.14" urx="314.06" ury="772.16"/>
+   </Word>
+   <Word>
+    <Text>sentence</Text>
+    <Box llx="318.49" lly="756.14" urx="383.45" ury="772.16"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.86" lly="695.96" urx="517.19" ury="722.60">
+  <Line llx="70.86" lly="710.60" urx="517.19" ury="722.60">
+   <Word>
+    <Text>This</Text>
+    <Box llx="70.86" lly="710.60" urx="99.66" ury="722.60"/>
+   </Word>
+   <Word>
+    <Text>is</Text>
+    <Box llx="106.85" lly="710.60" urx="121.25" ury="722.60"/>
+   </Word>
+   <Word>
+    <Text>the</Text>
+    <Box llx="128.45" lly="710.60" urx="150.05" ury="722.60"/>
+   </Word>
+   <Word>
+    <Text>first</Text>
+    <Box llx="157.25" lly="710.60" urx="193.24" ury="722.60"/>
+   </Word>
+   <Word>
+    <Text>sentence</Text>
+    <Box llx="200.44" lly="710.60" urx="258.03" ury="722.60"/>
+   </Word>
+   <Word>
+    <Text>of</Text>
+    <Box llx="265.23" lly="710.60" urx="279.63" ury="722.60"/>
+   </Word>
+   <Word>
+    <Text>the</Text>
+    <Box llx="286.82" lly="710.60" urx="308.42" ury="722.60"/>
+   </Word>
+   <Word>
+    <Text>first</Text>
+    <Box llx="315.62" lly="710.60" urx="351.61" ury="722.60"/>
+   </Word>
+   <Word>
+    <Text>paragraph</Text>
+    <Box llx="358.81" lly="710.60" urx="423.60" ury="722.60"/>
+   </Word>
+   <Word>
+    <Text>.</Text>
+    <Box llx="423.60" lly="710.60" urx="430.80" ury="722.60"/>
+   </Word>
+   <Word>
+    <Text>This</Text>
+    <Box llx="438.00" lly="710.60" urx="466.80" ury="722.60"/>
+   </Word>
+   <Word>
+    <Text>is</Text>
+    <Box llx="473.99" lly="710.60" urx="488.39" ury="722.60"/>
+   </Word>
+   <Word>
+    <Text>the</Text>
+    <Box llx="495.59" lly="710.60" urx="517.19" ury="722.60"/>
+   </Word>
+  </Line>
+  <Line llx="70.86" lly="695.96" urx="351.61" ury="707.96">
+   <Word>
+    <Text>second</Text>
+    <Box llx="70.86" lly="695.96" urx="114.05" ury="707.96"/>
+   </Word>
+   <Word>
+    <Text>sentence</Text>
+    <Box llx="121.25" lly="695.96" urx="178.84" ury="707.96"/>
+   </Word>
+   <Word>
+    <Text>of</Text>
+    <Box llx="186.04" lly="695.96" urx="200.44" ury="707.96"/>
+   </Word>
+   <Word>
+    <Text>the</Text>
+    <Box llx="207.64" lly="695.96" urx="229.23" ury="707.96"/>
+   </Word>
+   <Word>
+    <Text>first</Text>
+    <Box llx="236.43" lly="695.96" urx="272.43" ury="707.96"/>
+   </Word>
+   <Word>
+    <Text>paragraph</Text>
+    <Box llx="279.63" lly="695.96" urx="344.42" ury="707.96"/>
+   </Word>
+   <Word>
+    <Text>.</Text>
+    <Box llx="344.41" lly="695.96" urx="351.61" ury="707.96"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="70.86" lly="635.90" urx="495.59" ury="662.60">
+  <Line llx="70.86" lly="650.60" urx="495.59" ury="662.60">
+   <Word>
+    <Text>This</Text>
+    <Box llx="70.86" lly="650.60" urx="99.66" ury="662.60"/>
+   </Word>
+   <Word>
+    <Text>is</Text>
+    <Box llx="106.85" lly="650.60" urx="121.25" ury="662.60"/>
+   </Word>
+   <Word>
+    <Text>the</Text>
+    <Box llx="128.45" lly="650.60" urx="150.05" ury="662.60"/>
+   </Word>
+   <Word>
+    <Text>first</Text>
+    <Box llx="157.25" lly="650.60" urx="193.24" ury="662.60"/>
+   </Word>
+   <Word>
+    <Text>sentence</Text>
+    <Box llx="200.44" lly="650.60" urx="258.03" ury="662.60"/>
+   </Word>
+   <Word>
+    <Text>of</Text>
+    <Box llx="265.23" lly="650.60" urx="279.63" ury="662.60"/>
+   </Word>
+   <Word>
+    <Text>the</Text>
+    <Box llx="286.82" lly="650.60" urx="308.42" ury="662.60"/>
+   </Word>
+   <Word>
+    <Text>second</Text>
+    <Box llx="315.62" lly="650.60" urx="358.81" ury="662.60"/>
+   </Word>
+   <Word>
+    <Text>paragraph</Text>
+    <Box llx="366.01" lly="650.60" urx="430.80" ury="662.60"/>
+   </Word>
+   <Word>
+    <Text>.</Text>
+    <Box llx="430.80" lly="650.60" urx="438.00" ury="662.60"/>
+   </Word>
+   <Word>
+    <Text>This</Text>
+    <Box llx="445.20" lly="650.60" urx="473.99" ury="662.60"/>
+   </Word>
+   <Word>
+    <Text>is</Text>
+    <Box llx="481.19" lly="650.60" urx="495.59" ury="662.60"/>
+   </Word>
+  </Line>
+  <Line llx="70.86" lly="635.90" urx="387.61" ury="647.90">
+   <Word>
+    <Text>the</Text>
+    <Box llx="70.86" lly="635.90" urx="92.46" ury="647.90"/>
+   </Word>
+   <Word>
+    <Text>second</Text>
+    <Box llx="99.66" lly="635.90" urx="142.85" ury="647.90"/>
+   </Word>
+   <Word>
+    <Text>sentence</Text>
+    <Box llx="150.05" lly="635.90" urx="207.64" ury="647.90"/>
+   </Word>
+   <Word>
+    <Text>of</Text>
+    <Box llx="214.84" lly="635.90" urx="229.23" ury="647.90"/>
+   </Word>
+   <Word>
+    <Text>the</Text>
+    <Box llx="236.43" lly="635.90" urx="258.03" ury="647.90"/>
+   </Word>
+   <Word>
+    <Text>second</Text>
+    <Box llx="265.23" lly="635.90" urx="308.42" ury="647.90"/>
+   </Word>
+   <Word>
+    <Text>paragraph</Text>
+    <Box llx="315.62" lly="635.90" urx="380.41" ury="647.90"/>
+   </Word>
+   <Word>
+    <Text>.</Text>
+    <Box llx="380.41" lly="635.90" urx="387.61" ury="647.90"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+<Para>
+ <Box llx="238.98" lly="37.58" urx="356.22" ury="47.60">
+  <Line llx="238.98" lly="37.58" urx="356.22" ury="47.60">
+   <Word>
+    <Text>This</Text>
+    <Box llx="238.98" lly="37.58" urx="257.85" ury="47.60"/>
+   </Word>
+   <Word>
+    <Text>is</Text>
+    <Box llx="260.65" lly="37.58" urx="267.87" ury="47.60"/>
+   </Word>
+   <Word>
+    <Text>the</Text>
+    <Box llx="270.67" lly="37.58" urx="284.56" ury="47.60"/>
+   </Word>
+   <Word>
+    <Text>footer</Text>
+    <Box llx="287.31" lly="37.58" urx="312.84" ury="47.60"/>
+   </Word>
+   <Word>
+    <Text>sentence</Text>
+    <Box llx="315.59" lly="37.58" urx="356.22" ury="47.60"/>
+   </Word>
+  </Line>
+ </Box>
+</Para>
+</Content>
+</Page>
+<Resources>
+<Fonts>
+ <Font id="F0" name="Arial-BoldMT" fullname="FDGBGH+Arial-BoldMT" type="TrueType (CID)" embedded="true" ascender="728.00" capheight="716.00" italicangle="0.00" descender="-210.00" weight="700.00" xheight="519.00"/>
+ <Font id="F1" name="ArialMT" fullname="FDGBHI+ArialMT" type="TrueType (CID)" embedded="true" ascender="728.00" capheight="716.00" italicangle="0.00" descender="-210.00" weight="400.00" xheight="519.00"/>
+ <Font id="F2" name="CourierNewPSMT" type="TrueType" embedded="false" ascender="832.00" capheight="1000.00" italicangle="0.00" descender="-300.00" weight="400.00" xheight="1000.00"/>
+</Fonts>
+<ColorSpaces>
+ <ColorSpace id="CS0" name="DeviceGray" components="1"/>
+</ColorSpaces>
+</Resources>
+</Pages>
+</Document>
+</TET>

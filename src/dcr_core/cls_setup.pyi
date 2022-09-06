@@ -12,6 +12,7 @@ class Setup:
     _DCR_CFG_CREATE_EXTRA_FILE_LIST_BULLET: ClassVar[str]
     _DCR_CFG_CREATE_EXTRA_FILE_LIST_NUMBER: ClassVar[str]
     _DCR_CFG_CREATE_EXTRA_FILE_TABLE: ClassVar[str]
+    _DCR_CFG_DELETE_AUXILIARY_FILES: ClassVar[str]
     _DCR_CFG_DIRECTORY_INBOX: ClassVar[str]
     _DCR_CFG_FILE: ClassVar[str]
     _DCR_CFG_JSON_INDENT: ClassVar[str]
@@ -141,6 +142,7 @@ class Setup:
         self.is_create_extra_file_list_bullet: bool = False
         self.is_create_extra_file_list_number: bool = False
         self.is_create_extra_file_table: bool = False
+        self.is_delete_auxiliary_files: bool
         self.is_json_sort_keys: bool = False
         self.is_lt_heading_file_incl_regexp: bool = False
         self.is_lt_list_number_file_incl_regexp: bool = False
