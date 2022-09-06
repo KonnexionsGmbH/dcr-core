@@ -48,45 +48,45 @@ In addition to Python, the following software packages are required to use **`DC
 
 Now, to avoid this installation effort, we recommend using the Docker image provided in DockerHub [see here](https://hub.docker.com/repository/docker/konnexionsgmbh/dcr-core). 
 
-### 2.1 Deploying a Docker Container
+### 2.1 Docker Container Administration
 
-- Creating and running a new container (Assuming the path prefix for the local data directory mapping is d:/TempMan)
+**Creating and running a new container (Assuming the path prefix for the local data directory mapping is d:/TempMan):**
 
     `docker run -it --name dcr-core -v d:/TempMan:/dcr-core/data/inbox_prod konnexionsgmbh/dcr-core:0.9.7`
 
-- Restarting the container
+**Restarting the container:**
 
-    `docker start dcr-core`
+    **docker start dcr-core**
 
-- Check the container is running
+**Check the container is running:**
  
-    `docker ps`
+    docker ps
 
-- To access a running container
+**To access a running container:**
 
-    `docker attach --detach-keys="ctrl-a" dcr-core` 
+    docker attach --detach-keys="ctrl-a" dcr-core 
 
-- Stopping a running container
+**Stopping a running container:**
 
-    `docker stop dcr-core`
+    docker stop dcr-core
 
-### 2.2 Using the Docker Container
+### 2.2 Docker Container Usage
 
-- Restarting the container
+**Starting Python in the Virtual Environment (inside the `dcr-core` container):**
 
-    `docker start dcr-core`
+    python3 -m pipenv run python3
 
-- Check the container is running
+**Make the `dcr_core` module available:**
 
-    `docker ps`
+    from dcr_core import cls_process
 
-- To access a running container
+**Create an instance of the `Process` class:**
 
-    `docker attach --detach-keys="ctrl-a" dcr-core` 
+    process = cls_process.Process()
 
-- Stopping a running container
+**Process document files:**
 
-    `docker stop dcr-core`
+    process.document("data/inbox_prod/<file name>")
 
 ## 3. Directory and File Structure of this Repository
 
