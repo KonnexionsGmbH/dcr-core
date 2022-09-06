@@ -535,7 +535,7 @@ class TokenizerSpacy:
 
         if dcr_core.core_glob.setup.is_spacy_tkn_attr_vocab:
             if token.vocab is not None:
-                token_attr[dcr_core.cls_nlp_core.NLPCore.JSON_NAME_TOKEN_RANK] = str(token.vocab)
+                token_attr[dcr_core.cls_nlp_core.NLPCore.JSON_NAME_TOKEN_VOCAB] = str(token.vocab)
 
         if dcr_core.core_glob.setup.is_spacy_tkn_attr_whitespace_:
             if token.whitespace_ != "":

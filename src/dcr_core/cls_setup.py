@@ -28,6 +28,7 @@ class Setup:
     _DCR_CFG_CREATE_EXTRA_FILE_LIST_BULLET: ClassVar[str] = "create_extra_file_list_bullet"
     _DCR_CFG_CREATE_EXTRA_FILE_LIST_NUMBER: ClassVar[str] = "create_extra_file_list_number"
     _DCR_CFG_CREATE_EXTRA_FILE_TABLE: ClassVar[str] = "create_extra_file_table"
+    _DCR_CFG_DELETE_AUXILIARY_FILES: ClassVar[str] = "delete_auxiliary_files"
     _DCR_CFG_DIRECTORY_INBOX: ClassVar[str] = "directory_inbox"
     _DCR_CFG_FILE: ClassVar[str] = "setup.cfg"
     _DCR_CFG_JSON_INDENT: ClassVar[str] = "json_indent"
@@ -177,6 +178,7 @@ class Setup:
         self.is_create_extra_file_list_bullet = True
         self.is_create_extra_file_list_number = True
         self.is_create_extra_file_table = True
+        self.is_delete_auxiliary_files = True
 
         self.json_indent = 4
 
@@ -333,6 +335,9 @@ class Setup:
         )
         self.is_create_extra_file_table = self._determine_config_param_boolean(
             Setup._DCR_CFG_CREATE_EXTRA_FILE_TABLE, self.is_create_extra_file_table
+        )
+        self.is_delete_auxiliary_files = self._determine_config_param_boolean(
+            Setup._DCR_CFG_DELETE_AUXILIARY_FILES, self.is_delete_auxiliary_files
         )
 
         self._check_config_directory_inbox()
@@ -725,6 +730,7 @@ class Setup:
                             | Setup._DCR_CFG_CREATE_EXTRA_FILE_LIST_BULLET
                             | Setup._DCR_CFG_CREATE_EXTRA_FILE_LIST_NUMBER
                             | Setup._DCR_CFG_CREATE_EXTRA_FILE_TABLE
+                            | Setup._DCR_CFG_DELETE_AUXILIARY_FILES
                             | Setup._DCR_CFG_DIRECTORY_INBOX
                             | Setup._DCR_CFG_JSON_INDENT
                             | Setup._DCR_CFG_JSON_SORT_KEYS
