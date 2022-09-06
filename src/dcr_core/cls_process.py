@@ -599,13 +599,13 @@ class Process:
         dcr_core.core_glob.logger.debug("param language_spacy    =%s", self._language_spacy)
         dcr_core.core_glob.logger.debug("param language_tesseract=%s", self._language_tesseract)
 
+        # Load the configuration parameters.
+        dcr_core.core_glob.setup = dcr_core.cls_setup.Setup()
+
         dcr_core.core_utils.progress_msg(dcr_core.core_glob.setup.is_verbose, f"Start processing document file {self._full_name_orig}")
         dcr_core.core_utils.progress_msg(dcr_core.core_glob.setup.is_verbose, f"Language key Pandoc            {self._language_pandoc}")
         dcr_core.core_utils.progress_msg(dcr_core.core_glob.setup.is_verbose, f"Language key spaCy             {self._language_spacy}")
         dcr_core.core_utils.progress_msg(dcr_core.core_glob.setup.is_verbose, f"Language key Tessract OCR      {self._language_tesseract}")
-
-        # Load the configuration parameters.
-        dcr_core.core_glob.setup = dcr_core.cls_setup.Setup()
 
         (
             self._full_name_in_directory,
