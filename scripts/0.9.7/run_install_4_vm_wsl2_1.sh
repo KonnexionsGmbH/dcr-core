@@ -19,7 +19,7 @@ export VERSION_HTOP=3.2.1
 export VERSION_OPENSSL=1_1_1o
 export VERSION_PANDOC=2.19.2
 export VERSION_POPPLER=22.02.0
-export VERSION_PYTHON3=3.10.6
+export VERSION_PYTHON3=3.10.7
 export VERSION_TMUX=3.3a
 
 if [ -z "$1" ]; then
