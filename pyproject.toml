@@ -78,6 +78,23 @@ warn_unreachable = false
 warn_unused_configs = true
 warn_unused_ignores = true
 
+[[tool.pydoc-markdown.loaders]]
+search_path = ["src/dcr"]
+type = "python"
+
+[tool.pydoc-markdown.renderer]
+content_directory_name = "docs"
+output_directory = "."
+type = "mkdocs"
+
+[[tool.pydoc-markdown.renderer.pages]]
+contents = ["dcr.*"]
+name = "index"
+title = "API Documentation"
+
+[tool.pydocstyle]
+match = '((?!test_).*\.py)((?!TET).*\.py)'
+
 [tool.pytest.ini_options]
 console_output_style = "count"
 markers = ["issue"]
