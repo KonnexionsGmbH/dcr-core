@@ -108,16 +108,16 @@ Now, to avoid this installation effort, we recommend using the Docker image prov
 | .gitignore          | Configuration of files and folders to be ignored.                                                          |
 | .pylintrc           | Configuration file for [pylint](https://github.com/PyCQA/pylint).                                          |
 | LICENSE             | Text of the licence terms.                                                                                 |
-| MANIFEST.in         | Source distribution commands for [PyPA](https://packaging.python.org/en/latest/guides/using-manifest-in/). |
+| logging_cfg.yaml    | Configuration of the Logger functionality.                                                                 |
 | Makefile            | Definition of tasks to be excuted with the `make` command.                                                 |
+| MANIFEST.in         | Source distribution commands for [PyPA](https://packaging.python.org/en/latest/guides/using-manifest-in/). |
+| mkdocs.yml          | Configuration file for [MkDocs](https://github.com/mkdocs/mkdocs/).                                        |
 | Pipfile             | Definition of the Python package requirements.                                                             |
 | Pipfile.lock        | Definition of the specific versions of the Python packages.                                                |
-| README.md           | This file.                                                                                                 |
-| logging_cfg.yaml    | Configuration of the Logger functionality.                                                                 |
-| mkdocs.yml          | Configuration file for [MkDocs](https://github.com/mkdocs/mkdocs/).                                        |
 | pyproject.toml      | Build system requirements according to [PEP 518](https://peps.python.org/pep-0518/).                       |
+| README.md           | This file.                                                                                                 |
 | setup.cfg           | Setup configuration file - [see here](https://setuptools.pypa.io/en/latest/setuptools.html).               |
-| setup.cfg.reference | Original setup configuration file.      |
+| setup.cfg.reference | Original setup configuration file.                                                                         |
 
 ## 4. Support
 
