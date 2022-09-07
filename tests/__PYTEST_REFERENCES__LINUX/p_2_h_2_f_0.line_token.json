@@ -59,7 +59,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "H",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 3,
                                     "tknSent": "Header 1 Header 2",
                                     "tknSentiment": 0.0,
@@ -68,6 +68,7 @@
                                     "tknTag_": "NN",
                                     "tknText": "Header",
                                     "tknTextWithWs": "Header ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -95,7 +96,7 @@
                                     "tknPos_": "NUM",
                                     "tknPrefix_": "1",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 1,
                                     "tknSent": "Header 1 Header 2",
                                     "tknSentiment": 0.0,
@@ -104,6 +105,7 @@
                                     "tknTag_": "CD",
                                     "tknText": "1",
                                     "tknTextWithWs": "1 ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -130,7 +132,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "H",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 3,
                                     "tknSent": "Header 1 Header 2",
                                     "tknSentiment": 0.0,
@@ -139,6 +141,7 @@
                                     "tknTag_": "NN",
                                     "tknText": "Header",
                                     "tknTextWithWs": "Header ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -167,7 +170,7 @@
                                     "tknPos_": "NUM",
                                     "tknPrefix_": "2",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 3,
                                     "tknSent": "Header 1 Header 2",
                                     "tknSentiment": 0.0,
@@ -175,7 +178,8 @@
                                     "tknSuffix_": "2",
                                     "tknTag_": "CD",
                                     "tknText": "2",
-                                    "tknTextWithWs": "2"
+                                    "tknTextWithWs": "2",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>"
                                 }
                             ]
                         }
@@ -229,7 +233,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "H",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 3,
                                     "tknSent": "Header 1 Header 2",
                                     "tknSentiment": 0.0,
@@ -238,6 +242,7 @@
                                     "tknTag_": "NN",
                                     "tknText": "Header",
                                     "tknTextWithWs": "Header ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -265,7 +270,7 @@
                                     "tknPos_": "NUM",
                                     "tknPrefix_": "1",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 1,
                                     "tknSent": "Header 1 Header 2",
                                     "tknSentiment": 0.0,
@@ -274,6 +279,7 @@
                                     "tknTag_": "CD",
                                     "tknText": "1",
                                     "tknTextWithWs": "1 ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -300,7 +306,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "H",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 3,
                                     "tknSent": "Header 1 Header 2",
                                     "tknSentiment": 0.0,
@@ -309,6 +315,7 @@
                                     "tknTag_": "NN",
                                     "tknText": "Header",
                                     "tknTextWithWs": "Header ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -337,7 +344,7 @@
                                     "tknPos_": "NUM",
                                     "tknPrefix_": "2",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 3,
                                     "tknSent": "Header 1 Header 2",
                                     "tknSentiment": 0.0,
@@ -345,7 +352,8 @@
                                     "tknSuffix_": "2",
                                     "tknTag_": "CD",
                                     "tknText": "2",
-                                    "tknTextWithWs": "2"
+                                    "tknTextWithWs": "2",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>"
                                 }
                             ]
                         }
