@@ -11,11 +11,13 @@ Release Date: 07.09.2022
 
 ### 1.1 New Features
 
-- TODO
+- Creation and use of reference files for pytest
 
 ### 1.2 Modified Features
 
-- TODO
+- Delimitation of the documentation to the **`DCR`** application
+- Delimitation of the tests to the **`DCR`** application
+- Updating the third party software used
 
 ### 1.3 Applied Software
 
