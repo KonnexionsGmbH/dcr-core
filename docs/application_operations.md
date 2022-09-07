@@ -3,38 +3,37 @@
 ![GitHub (Pre-)Release](https://img.shields.io/github/v/release/KonnexionsGmbH/dcr-core?include_prereleases)
 ![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/KonnexionsGmbh/dcr-core)
 
-**`DCR-CORE`** should be operated via the script **`run_dcr_prod`**. 
-The following actions are available:
+The details of the method call `document` can be found in the API documentation.
 
-| Action      | Process                                                                                                            |
-|-------------|--------------------------------------------------------------------------------------------------------------------|
-| **`all`**   | Run the complete processing of all new documents.                                                                  |
-| **`db_c`**  | Create the database.                                                                                               |
-| **`db_u`**  | Upgrade the database.                                                                                              |
-| **`m_d`**   | Run the installation of the necessary 3rd party packages <br/>for development and run the development ecosystem.   |
-| **`m_p`**   | Run the installation of the necessary 3rd party packages <br/>for production and compile all packages and modules. |
-| **`n_2_p`** | Convert non **`pdf`** documents to **`pdf`** files.                                                                |
-| **`ocr`**   | Convert image files to **`pdf`** files.                                                                            |
-| **`p_2_i`** | Convert **`pdf`** documents to image files.                                                                        |
-| **`p_i`**   | Process the inbox directory.                                                                                       |
-| **`s_p_j`** | Store the parser result in a JSON file.                                                                            |
-| **`tet`**   | Extract text from **`pdf`** documents.                                                                             |
-| **`tkn`**   | Create qualified document tokens.                                                                                  |
+## 1. Use as a library
 
-The action **`all - run the complete processing of all new documents`** includes the following processes in the order given:
+The following sample code extracts the content structure of the pdf file `1910.03678.pdf` into a JSON file:
 
-| Action      | Process                                             |
-|-------------|-----------------------------------------------------|
-| **`p_i`**   | Process the inbox directory.                        |
-| **`p_2_i`** | Convert **`pdf`** documents to image files.         |
-| **`ocr`**   | Convert image files to **`pdf`** files.             |
-| **`n_2_p`** | Convert non **`pdf`** documents to **`pdf`** files. |
-| **`tet`**   | Extract text from **`pdf`** documents.              |
-| **`s_p_j`** | Store the parser result in a JSON file.             |
-| **`tkn`**   | Create qualified document tokens.                   |
+    from dcr_core import cls_process
 
-The action **`db_c - create the database`** is only required once when installing **`DCR-CORE`**.  
+    process = cls_process.Process()
+    process.document("data/inbox_prod/1910.03678.pdf")
 
-The action **`db_u - upgrade the database`** is necessary once for each version change of **`DCR-CORE`**.  
+## 2. Use of a Docker container
 
-The actions **`m_d`** and **`m_p`** correspond to the commands **`make pipenv-dev`** and **`make pipenv-prod`** for installing or updating the necessary Python libraries. 
+The following steps extract the content structure of document `1910.03678.pdf` using Docker Container.
+
+**1. Restarting the container:**
+
+    docker start dcr-core
+
+**2. Starting Python in the Virtual Environment (inside the `dcr-core` container):**
+
+    python3 -m pipenv run python3
+
+**3. Make the `dcr_core` module available:**
+
+    from dcr_core import cls_process
+
+**4. Create an instance of the `Process` class:**
+
+    process = cls_process.Process()
+
+**5. Process document files:**
+
+    process.document("data/inbox_prod/1910.03678.pdf")
