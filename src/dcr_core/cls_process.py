@@ -34,26 +34,26 @@ class Process:
     # ------------------------------------------------------------------
     ERROR_01_901: ClassVar[str] = "01.901 Issue (p_i): Document rejected because of unknown file extension='{extension}'."
     ERROR_01_903: ClassVar[str] = (
-        "01.903 Issue (p_i): Error with fitz.open() processing of file '{file_name}' " + "- RuntimeError - error: '{error_msg}'."
+        "01.903 Issue (p_i): Error with fitz.open() processing of file '{file_name}' " + "- RuntimeError - error: '{error_msg}'"
     )
 
     ERROR_21_901: ClassVar[str] = (
         "21.901 Issue (p_2_i): Processing file '{full_name}' with pdf2image failed - PDFPageCountError - "
-        + "error type: '{error_type}' - error: '{error_msg}'."
+        + "error type: '{error_type}' - error: '{error_msg}'"
     )
     ERROR_31_902: ClassVar[str] = (
         "31.902 Issue (n_2_p): The file '{full_name}' cannot be converted to an " + "'PDF' document - FileNotFoundError"
     )
     ERROR_31_903: ClassVar[str] = (
-        "31.903 Issue (n_2_p): The file '{full_name}' cannot be converted to an " + "'PDF' document - RuntimeError - error: '{error_msg}'."
+        "31.903 Issue (n_2_p): The file '{full_name}' cannot be converted to an " + "'PDF' document - RuntimeError - error: '{error_msg}'"
     )
-    ERROR_31_911: ClassVar[str] = "31.911 Issue (n_2_p): The number of pages of the PDF document {full_name} cannot be determined"
+    ERROR_31_911: ClassVar[str] = "31.911 Issue (n_2_p): The pdf document {full_name} for PDFlib TET is an empty file"
     ERROR_41_901: ClassVar[str] = (
-        "41.901 Issue (ocr): Converting the file '{full_name}' with Tesseract OCR failed - " + "RuntimeError - error: '{error_msg}'."
+        "41.901 Issue (ocr): Converting the file '{full_name}' with Tesseract OCR failed - " + "RuntimeError - error: '{error_msg}'"
     )
-    ERROR_41_911: ClassVar[str] = "41.911 Issue (ocr): The number of pages of the PDF document {full_name} cannot be determined"
+    ERROR_41_911: ClassVar[str] = "41.911 Issue (ocr): Tesseract OCR has created an empty pdf file from the file {full_name}"
     ERROR_51_901: ClassVar[str] = (
-        "51.901 Issue (tet): Opening document '{full_name}' - " + "error no: '{error_no}' - api: '{api_name}' - error: '{error_msg}'."
+        "51.901 Issue (tet): Opening document '{full_name}' - " + "error no: '{error_no}' - api: '{api_name}' - error: '{error_msg}'"
     )
     ERROR_61_901: ClassVar[str] = "61.901 Issue (s_p_j): Parsing the file '{full_name}' failed - FileNotFoundError"
     ERROR_71_901: ClassVar[str] = "71.901 Issue (tkn): Tokenizing the file '{full_name}' failed - FileNotFoundError"
