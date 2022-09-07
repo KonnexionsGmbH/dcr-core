@@ -1,4 +1,4 @@
-name: All - Development
+name: Test - Development
 
 on:
   push:
@@ -92,7 +92,7 @@ jobs:
       - name: Install Step 4 - Poppler
         run: |
             wget --quiet https://poppler.freedesktop.org/poppler-${VERSION_POPPLER}.tar.xz
-            sudo tar -xvf poppler-${VERSION_POPPLER}.tar.xz
+            sudo tar -xf poppler-${VERSION_POPPLER}.tar.xz
             cd poppler-${VERSION_POPPLER}/
             sudo mkdir build
             cd build
