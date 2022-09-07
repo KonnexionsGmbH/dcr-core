@@ -56,7 +56,7 @@ Now, to avoid this installation effort, we recommend using the Docker image prov
 
 **Restarting the container:**
 
-    **docker start dcr-core**
+    docker start dcr-core
 
 **Check the container is running:**
  

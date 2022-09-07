@@ -567,12 +567,23 @@ class Process:
     ) -> None:
         """Document content recognition for a specific file.
 
+        This method extracts the document content structure from a
+        given document and stores it in JSON format. For this purpose,
+        all non-pdf documents and all scanned pdf documents are first
+        converted into a searchable pdf format. Depending on the file
+        format, the tools Pandoc, pdf2image or Tesseract OCR are used
+        for this purpose. PDFlib TET then extracts the text and metadata
+        from the searchable pdf file and makes them available in XML format.
+        spaCY generates qualified tokens from the document text, and these
+        token data are then made available together with the metadata in a
+        JSON format.
+
         Args:
             full_name_in (str):
                 Full file name of the document file.
             document_id (int, optional):
                 Document identification.
-                Defaults to "-1".
+                Defaults to -1 i.e. no document identification.
             full_name_orig (str, optional):
                 Original full file name.
                 Defaults to the full file name of the document file.
@@ -631,7 +642,7 @@ class Process:
         dcr_core.core_utils.progress_msg(self._is_verbose, f"Start processing document file {self._full_name_orig}")
         dcr_core.core_utils.progress_msg(self._is_verbose, f"Language key Pandoc            {self._language_pandoc}")
         dcr_core.core_utils.progress_msg(self._is_verbose, f"Language key spaCy             {self._language_spacy}")
-        dcr_core.core_utils.progress_msg(self._is_verbose, f"Language key Tessract OCR      {self._language_tesseract}")
+        dcr_core.core_utils.progress_msg(self._is_verbose, f"Language key Tesseract OCR     {self._language_tesseract}")
 
         (
             full_name_in_directory,
