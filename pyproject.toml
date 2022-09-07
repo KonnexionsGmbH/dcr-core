@@ -82,7 +82,7 @@ warn_unused_ignores = true
 console_output_style = "count"
 markers = ["issue"]
 norecursedirs = "./tests/helpers"
-pythonpath = "./src/dcr_core/"
+pythonpath = "./src/"
 testpaths = "./tests/"
 
 [tool.setuptools.package-data]

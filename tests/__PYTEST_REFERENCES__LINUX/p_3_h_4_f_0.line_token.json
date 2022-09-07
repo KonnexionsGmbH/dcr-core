@@ -59,7 +59,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "H",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 7,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4",
                                     "tknSentiment": 0.0,
@@ -68,6 +68,7 @@
                                     "tknTag_": "NN",
                                     "tknText": "Header",
                                     "tknTextWithWs": "Header ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -95,7 +96,7 @@
                                     "tknPos_": "NUM",
                                     "tknPrefix_": "1",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 1,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4",
                                     "tknSentiment": 0.0,
@@ -104,6 +105,7 @@
                                     "tknTag_": "CD",
                                     "tknText": "1",
                                     "tknTextWithWs": "1 ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -130,7 +132,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "H",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 3,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4",
                                     "tknSentiment": 0.0,
@@ -139,6 +141,7 @@
                                     "tknTag_": "NN",
                                     "tknText": "Header",
                                     "tknTextWithWs": "Header ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -166,7 +169,7 @@
                                     "tknPos_": "NUM",
                                     "tknPrefix_": "2",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 3,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4",
                                     "tknSentiment": 0.0,
@@ -175,6 +178,7 @@
                                     "tknTag_": "CD",
                                     "tknText": "2",
                                     "tknTextWithWs": "2 ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -201,7 +205,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "H",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 5,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4",
                                     "tknSentiment": 0.0,
@@ -210,6 +214,7 @@
                                     "tknTag_": "NN",
                                     "tknText": "Header",
                                     "tknTextWithWs": "Header ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -237,7 +242,7 @@
                                     "tknPos_": "NUM",
                                     "tknPrefix_": "3",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 5,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4",
                                     "tknSentiment": 0.0,
@@ -246,6 +251,7 @@
                                     "tknTag_": "CD",
                                     "tknText": "3",
                                     "tknTextWithWs": "3 ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -272,7 +278,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "H",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 7,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4",
                                     "tknSentiment": 0.0,
@@ -281,6 +287,7 @@
                                     "tknTag_": "NN",
                                     "tknText": "Header",
                                     "tknTextWithWs": "Header ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -309,7 +316,7 @@
                                     "tknPos_": "NUM",
                                     "tknPrefix_": "4",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 7,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4",
                                     "tknSentiment": 0.0,
@@ -317,7 +324,8 @@
                                     "tknSuffix_": "4",
                                     "tknTag_": "CD",
                                     "tknText": "4",
-                                    "tknTextWithWs": "4"
+                                    "tknTextWithWs": "4",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>"
                                 }
                             ]
                         }
@@ -362,7 +370,7 @@
                                     "tknPos_": "PROPN",
                                     "tknPrefix_": "S",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 3,
                                     "tknSent": "Seite 1 Zeile 1 This chapter uses Volto to change displaying the dates in Seite 1 Zeile 2 talkview and talklistview.",
                                     "tknSentiment": 0.0,
@@ -371,6 +379,7 @@
                                     "tknTag_": "NNP",
                                     "tknText": "Seite",
                                     "tknTextWithWs": "Seite ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -397,7 +406,7 @@
                                     "tknPos_": "NUM",
                                     "tknPrefix_": "1",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 1,
                                     "tknSent": "Seite 1 Zeile 1 This chapter uses Volto to change displaying the dates in Seite 1 Zeile 2 talkview and talklistview.",
                                     "tknSentiment": 0.0,
@@ -406,6 +415,7 @@
                                     "tknTag_": "CD",
                                     "tknText": "1",
                                     "tknTextWithWs": "1 ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -432,7 +442,7 @@
                                     "tknPos_": "PROPN",
                                     "tknPrefix_": "Z",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 3,
                                     "tknSent": "Seite 1 Zeile 1 This chapter uses Volto to change displaying the dates in Seite 1 Zeile 2 talkview and talklistview.",
                                     "tknSentiment": 0.0,
@@ -441,6 +451,7 @@
                                     "tknTag_": "NNP",
                                     "tknText": "Zeile",
                                     "tknTextWithWs": "Zeile ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -467,7 +478,7 @@
                                     "tknPos_": "NUM",
                                     "tknPrefix_": "1",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 3,
                                     "tknSent": "Seite 1 Zeile 1 This chapter uses Volto to change displaying the dates in Seite 1 Zeile 2 talkview and talklistview.",
                                     "tknSentiment": 0.0,
@@ -476,6 +487,7 @@
                                     "tknTag_": "CD",
                                     "tknText": "1",
                                     "tknTextWithWs": "1 ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -503,7 +515,7 @@
                                     "tknPos_": "DET",
                                     "tknPrefix_": "T",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 4,
                                     "tknSent": "Seite 1 Zeile 1 This chapter uses Volto to change displaying the dates in Seite 1 Zeile 2 talkview and talklistview.",
                                     "tknSentiment": 0.0,
@@ -512,6 +524,7 @@
                                     "tknTag_": "DT",
                                     "tknText": "This",
                                     "tknTextWithWs": "This ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -538,7 +551,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "c",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 5,
                                     "tknSent": "Seite 1 Zeile 1 This chapter uses Volto to change displaying the dates in Seite 1 Zeile 2 talkview and talklistview.",
                                     "tknSentiment": 0.0,
@@ -547,6 +560,7 @@
                                     "tknTag_": "NN",
                                     "tknText": "chapter",
                                     "tknTextWithWs": "chapter ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -573,7 +587,7 @@
                                     "tknPos_": "VERB",
                                     "tknPrefix_": "u",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 21,
                                     "tknSent": "Seite 1 Zeile 1 This chapter uses Volto to change displaying the dates in Seite 1 Zeile 2 talkview and talklistview.",
                                     "tknSentiment": 0.0,
@@ -582,6 +596,7 @@
                                     "tknTag_": "VBZ",
                                     "tknText": "uses",
                                     "tknTextWithWs": "uses ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -608,7 +623,7 @@
                                     "tknPos_": "PROPN",
                                     "tknPrefix_": "V",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 7,
                                     "tknSent": "Seite 1 Zeile 1 This chapter uses Volto to change displaying the dates in Seite 1 Zeile 2 talkview and talklistview.",
                                     "tknSentiment": 0.0,
@@ -617,6 +632,7 @@
                                     "tknTag_": "NNP",
                                     "tknText": "Volto",
                                     "tknTextWithWs": "Volto ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -644,7 +660,7 @@
                                     "tknPos_": "PART",
                                     "tknPrefix_": "t",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 8,
                                     "tknSent": "Seite 1 Zeile 1 This chapter uses Volto to change displaying the dates in Seite 1 Zeile 2 talkview and talklistview.",
                                     "tknSentiment": 0.0,
@@ -653,6 +669,7 @@
                                     "tknTag_": "TO",
                                     "tknText": "to",
                                     "tknTextWithWs": "to ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -679,7 +696,7 @@
                                     "tknPos_": "VERB",
                                     "tknPrefix_": "c",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 20,
                                     "tknSent": "Seite 1 Zeile 1 This chapter uses Volto to change displaying the dates in Seite 1 Zeile 2 talkview and talklistview.",
                                     "tknSentiment": 0.0,
@@ -688,6 +705,7 @@
                                     "tknTag_": "VB",
                                     "tknText": "change",
                                     "tknTextWithWs": "change ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -714,7 +732,7 @@
                                     "tknPos_": "VERB",
                                     "tknPrefix_": "d",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 20,
                                     "tknSent": "Seite 1 Zeile 1 This chapter uses Volto to change displaying the dates in Seite 1 Zeile 2 talkview and talklistview.",
                                     "tknSentiment": 0.0,
@@ -723,6 +741,7 @@
                                     "tknTag_": "VBG",
                                     "tknText": "displaying",
                                     "tknTextWithWs": "displaying ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -750,7 +769,7 @@
                                     "tknPos_": "DET",
                                     "tknPrefix_": "t",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 11,
                                     "tknSent": "Seite 1 Zeile 1 This chapter uses Volto to change displaying the dates in Seite 1 Zeile 2 talkview and talklistview.",
                                     "tknSentiment": 0.0,
@@ -759,6 +778,7 @@
                                     "tknTag_": "DT",
                                     "tknText": "the",
                                     "tknTextWithWs": "the ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -785,7 +805,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "d",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 12,
                                     "tknSent": "Seite 1 Zeile 1 This chapter uses Volto to change displaying the dates in Seite 1 Zeile 2 talkview and talklistview.",
                                     "tknSentiment": 0.0,
@@ -794,6 +814,7 @@
                                     "tknTag_": "NNS",
                                     "tknText": "dates",
                                     "tknTextWithWs": "dates ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -821,7 +842,7 @@
                                     "tknPos_": "ADP",
                                     "tknPrefix_": "i",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 20,
                                     "tknSent": "Seite 1 Zeile 1 This chapter uses Volto to change displaying the dates in Seite 1 Zeile 2 talkview and talklistview.",
                                     "tknSentiment": 0.0,
@@ -830,6 +851,7 @@
                                     "tknTag_": "IN",
                                     "tknText": "in",
                                     "tknTextWithWs": "in ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -856,7 +878,7 @@
                                     "tknPos_": "PROPN",
                                     "tknPrefix_": "S",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 15,
                                     "tknSent": "Seite 1 Zeile 1 This chapter uses Volto to change displaying the dates in Seite 1 Zeile 2 talkview and talklistview.",
                                     "tknSentiment": 0.0,
@@ -865,6 +887,7 @@
                                     "tknTag_": "NNP",
                                     "tknText": "Seite",
                                     "tknTextWithWs": "Seite ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -891,7 +914,7 @@
                                     "tknPos_": "NUM",
                                     "tknPrefix_": "1",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 15,
                                     "tknSent": "Seite 1 Zeile 1 This chapter uses Volto to change displaying the dates in Seite 1 Zeile 2 talkview and talklistview.",
                                     "tknSentiment": 0.0,
@@ -900,6 +923,7 @@
                                     "tknTag_": "CD",
                                     "tknText": "1",
                                     "tknTextWithWs": "1 ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -926,7 +950,7 @@
                                     "tknPos_": "PROPN",
                                     "tknPrefix_": "Z",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 20,
                                     "tknSent": "Seite 1 Zeile 1 This chapter uses Volto to change displaying the dates in Seite 1 Zeile 2 talkview and talklistview.",
                                     "tknSentiment": 0.0,
@@ -935,6 +959,7 @@
                                     "tknTag_": "NNP",
                                     "tknText": "Zeile",
                                     "tknTextWithWs": "Zeile ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -961,7 +986,7 @@
                                     "tknPos_": "NUM",
                                     "tknPrefix_": "2",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 17,
                                     "tknSent": "Seite 1 Zeile 1 This chapter uses Volto to change displaying the dates in Seite 1 Zeile 2 talkview and talklistview.",
                                     "tknSentiment": 0.0,
@@ -970,6 +995,7 @@
                                     "tknTag_": "CD",
                                     "tknText": "2",
                                     "tknTextWithWs": "2 ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -996,7 +1022,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "t",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 20,
                                     "tknSent": "Seite 1 Zeile 1 This chapter uses Volto to change displaying the dates in Seite 1 Zeile 2 talkview and talklistview.",
                                     "tknSentiment": 0.0,
@@ -1005,6 +1031,7 @@
                                     "tknTag_": "NN",
                                     "tknText": "talkview",
                                     "tknTextWithWs": "talkview ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -1032,7 +1059,7 @@
                                     "tknPos_": "CCONJ",
                                     "tknPrefix_": "a",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 19,
                                     "tknSent": "Seite 1 Zeile 1 This chapter uses Volto to change displaying the dates in Seite 1 Zeile 2 talkview and talklistview.",
                                     "tknSentiment": 0.0,
@@ -1041,6 +1068,7 @@
                                     "tknTag_": "CC",
                                     "tknText": "and",
                                     "tknTextWithWs": "and ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -1067,7 +1095,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "t",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 20,
                                     "tknSent": "Seite 1 Zeile 1 This chapter uses Volto to change displaying the dates in Seite 1 Zeile 2 talkview and talklistview.",
                                     "tknSentiment": 0.0,
@@ -1075,7 +1103,8 @@
                                     "tknSuffix_": "iew",
                                     "tknTag_": "NN",
                                     "tknText": "talklistview",
-                                    "tknTextWithWs": "talklistview"
+                                    "tknTextWithWs": "talklistview",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>"
                                 },
                                 {
                                     "tknCluster": 0,
@@ -1101,7 +1130,7 @@
                                     "tknPos_": "PUNCT",
                                     "tknPrefix_": ".",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 21,
                                     "tknSent": "Seite 1 Zeile 1 This chapter uses Volto to change displaying the dates in Seite 1 Zeile 2 talkview and talklistview.",
                                     "tknSentiment": 0.0,
@@ -1109,7 +1138,8 @@
                                     "tknSuffix_": ".",
                                     "tknTag_": ".",
                                     "tknText": ".",
-                                    "tknTextWithWs": "."
+                                    "tknTextWithWs": ".",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>"
                                 }
                             ]
                         },
@@ -1147,7 +1177,7 @@
                                     "tknPos_": "PART",
                                     "tknPrefix_": "T",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 0,
                                     "tknSent": "To meet the same requirements in Seite 1 Zeile 3 classic Plone see the chapter Turning Talks into Events.",
                                     "tknSentiment": 0.0,
@@ -1156,6 +1186,7 @@
                                     "tknTag_": "TO",
                                     "tknText": "To",
                                     "tknTextWithWs": "To ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -1182,7 +1213,7 @@
                                     "tknPos_": "VERB",
                                     "tknPrefix_": "m",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 11,
                                     "tknSent": "To meet the same requirements in Seite 1 Zeile 3 classic Plone see the chapter Turning Talks into Events.",
                                     "tknSentiment": 0.0,
@@ -1191,6 +1222,7 @@
                                     "tknTag_": "VB",
                                     "tknText": "meet",
                                     "tknTextWithWs": "meet ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -1218,7 +1250,7 @@
                                     "tknPos_": "DET",
                                     "tknPrefix_": "t",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 2,
                                     "tknSent": "To meet the same requirements in Seite 1 Zeile 3 classic Plone see the chapter Turning Talks into Events.",
                                     "tknSentiment": 0.0,
@@ -1227,6 +1259,7 @@
                                     "tknTag_": "DT",
                                     "tknText": "the",
                                     "tknTextWithWs": "the ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -1254,7 +1287,7 @@
                                     "tknPos_": "ADJ",
                                     "tknPrefix_": "s",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 3,
                                     "tknSent": "To meet the same requirements in Seite 1 Zeile 3 classic Plone see the chapter Turning Talks into Events.",
                                     "tknSentiment": 0.0,
@@ -1263,6 +1296,7 @@
                                     "tknTag_": "JJ",
                                     "tknText": "same",
                                     "tknTextWithWs": "same ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -1289,7 +1323,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "r",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 11,
                                     "tknSent": "To meet the same requirements in Seite 1 Zeile 3 classic Plone see the chapter Turning Talks into Events.",
                                     "tknSentiment": 0.0,
@@ -1298,6 +1332,7 @@
                                     "tknTag_": "NNS",
                                     "tknText": "requirements",
                                     "tknTextWithWs": "requirements ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -1325,7 +1360,7 @@
                                     "tknPos_": "ADP",
                                     "tknPrefix_": "i",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 11,
                                     "tknSent": "To meet the same requirements in Seite 1 Zeile 3 classic Plone see the chapter Turning Talks into Events.",
                                     "tknSentiment": 0.0,
@@ -1334,6 +1369,7 @@
                                     "tknTag_": "IN",
                                     "tknText": "in",
                                     "tknTextWithWs": "in ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -1361,7 +1397,7 @@
                                     "tknPos_": "PROPN",
                                     "tknPrefix_": "S",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 7,
                                     "tknSent": "To meet the same requirements in Seite 1 Zeile 3 classic Plone see the chapter Turning Talks into Events.",
                                     "tknSentiment": 0.0,
@@ -1370,6 +1406,7 @@
                                     "tknTag_": "NNP",
                                     "tknText": "Seite",
                                     "tknTextWithWs": "Seite ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -1397,7 +1434,7 @@
                                     "tknPos_": "NUM",
                                     "tknPrefix_": "1",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 7,
                                     "tknSent": "To meet the same requirements in Seite 1 Zeile 3 classic Plone see the chapter Turning Talks into Events.",
                                     "tknSentiment": 0.0,
@@ -1406,6 +1443,7 @@
                                     "tknTag_": "CD",
                                     "tknText": "1",
                                     "tknTextWithWs": "1 ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -1433,7 +1471,7 @@
                                     "tknPos_": "PROPN",
                                     "tknPrefix_": "Z",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 9,
                                     "tknSent": "To meet the same requirements in Seite 1 Zeile 3 classic Plone see the chapter Turning Talks into Events.",
                                     "tknSentiment": 0.0,
@@ -1442,6 +1480,7 @@
                                     "tknTag_": "NNP",
                                     "tknText": "Zeile",
                                     "tknTextWithWs": "Zeile ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -1468,7 +1507,7 @@
                                     "tknPos_": "NUM",
                                     "tknPrefix_": "3",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 9,
                                     "tknSent": "To meet the same requirements in Seite 1 Zeile 3 classic Plone see the chapter Turning Talks into Events.",
                                     "tknSentiment": 0.0,
@@ -1477,6 +1516,7 @@
                                     "tknTag_": "CD",
                                     "tknText": "3",
                                     "tknTextWithWs": "3 ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -1503,7 +1543,7 @@
                                     "tknPos_": "ADJ",
                                     "tknPrefix_": "c",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 10,
                                     "tknSent": "To meet the same requirements in Seite 1 Zeile 3 classic Plone see the chapter Turning Talks into Events.",
                                     "tknSentiment": 0.0,
@@ -1512,6 +1552,7 @@
                                     "tknTag_": "JJ",
                                     "tknText": "classic",
                                     "tknTextWithWs": "classic ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -1538,7 +1579,7 @@
                                     "tknPos_": "PROPN",
                                     "tknPrefix_": "P",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 11,
                                     "tknSent": "To meet the same requirements in Seite 1 Zeile 3 classic Plone see the chapter Turning Talks into Events.",
                                     "tknSentiment": 0.0,
@@ -1547,6 +1588,7 @@
                                     "tknTag_": "NNP",
                                     "tknText": "Plone",
                                     "tknTextWithWs": "Plone ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -1574,7 +1616,7 @@
                                     "tknPos_": "VERB",
                                     "tknPrefix_": "s",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 19,
                                     "tknSent": "To meet the same requirements in Seite 1 Zeile 3 classic Plone see the chapter Turning Talks into Events.",
                                     "tknSentiment": 0.0,
@@ -1583,6 +1625,7 @@
                                     "tknTag_": "VB",
                                     "tknText": "see",
                                     "tknTextWithWs": "see ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -1610,7 +1653,7 @@
                                     "tknPos_": "DET",
                                     "tknPrefix_": "t",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 13,
                                     "tknSent": "To meet the same requirements in Seite 1 Zeile 3 classic Plone see the chapter Turning Talks into Events.",
                                     "tknSentiment": 0.0,
@@ -1619,6 +1662,7 @@
                                     "tknTag_": "DT",
                                     "tknText": "the",
                                     "tknTextWithWs": "the ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -1645,7 +1689,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "c",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 18,
                                     "tknSent": "To meet the same requirements in Seite 1 Zeile 3 classic Plone see the chapter Turning Talks into Events.",
                                     "tknSentiment": 0.0,
@@ -1654,6 +1698,7 @@
                                     "tknTag_": "NN",
                                     "tknText": "chapter",
                                     "tknTextWithWs": "chapter ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -1681,7 +1726,7 @@
                                     "tknPos_": "VERB",
                                     "tknPrefix_": "T",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 18,
                                     "tknSent": "To meet the same requirements in Seite 1 Zeile 3 classic Plone see the chapter Turning Talks into Events.",
                                     "tknSentiment": 0.0,
@@ -1690,6 +1735,7 @@
                                     "tknTag_": "VBG",
                                     "tknText": "Turning",
                                     "tknTextWithWs": "Turning ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -1717,7 +1763,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "T",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 16,
                                     "tknSent": "To meet the same requirements in Seite 1 Zeile 3 classic Plone see the chapter Turning Talks into Events.",
                                     "tknSentiment": 0.0,
@@ -1726,6 +1772,7 @@
                                     "tknTag_": "NNS",
                                     "tknText": "Talks",
                                     "tknTextWithWs": "Talks ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -1754,7 +1801,7 @@
                                     "tknPos_": "ADP",
                                     "tknPrefix_": "i",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 18,
                                     "tknSent": "To meet the same requirements in Seite 1 Zeile 3 classic Plone see the chapter Turning Talks into Events.",
                                     "tknSentiment": 0.0,
@@ -1763,6 +1810,7 @@
                                     "tknTag_": "IN",
                                     "tknText": "into",
                                     "tknTextWithWs": "into ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -1790,7 +1838,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "E",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 18,
                                     "tknSent": "To meet the same requirements in Seite 1 Zeile 3 classic Plone see the chapter Turning Talks into Events.",
                                     "tknSentiment": 0.0,
@@ -1798,7 +1846,8 @@
                                     "tknSuffix_": "nts",
                                     "tknTag_": "NNS",
                                     "tknText": "Events",
-                                    "tknTextWithWs": "Events"
+                                    "tknTextWithWs": "Events",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>"
                                 },
                                 {
                                     "tknCluster": 0,
@@ -1824,7 +1873,7 @@
                                     "tknPos_": "PUNCT",
                                     "tknPrefix_": ".",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 19,
                                     "tknSent": "To meet the same requirements in Seite 1 Zeile 3 classic Plone see the chapter Turning Talks into Events.",
                                     "tknSentiment": 0.0,
@@ -1832,7 +1881,8 @@
                                     "tknSuffix_": ".",
                                     "tknTag_": ".",
                                     "tknText": ".",
-                                    "tknTextWithWs": "."
+                                    "tknTextWithWs": ".",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>"
                                 }
                             ]
                         }
@@ -1886,7 +1936,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "H",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 11,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 2 Zeile 1",
                                     "tknSentiment": 0.0,
@@ -1895,6 +1945,7 @@
                                     "tknTag_": "NN",
                                     "tknText": "Header",
                                     "tknTextWithWs": "Header ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -1922,7 +1973,7 @@
                                     "tknPos_": "NUM",
                                     "tknPrefix_": "1",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 1,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 2 Zeile 1",
                                     "tknSentiment": 0.0,
@@ -1931,6 +1982,7 @@
                                     "tknTag_": "CD",
                                     "tknText": "1",
                                     "tknTextWithWs": "1 ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -1957,7 +2009,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "H",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 3,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 2 Zeile 1",
                                     "tknSentiment": 0.0,
@@ -1966,6 +2018,7 @@
                                     "tknTag_": "NN",
                                     "tknText": "Header",
                                     "tknTextWithWs": "Header ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -1993,7 +2046,7 @@
                                     "tknPos_": "NUM",
                                     "tknPrefix_": "2",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 3,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 2 Zeile 1",
                                     "tknSentiment": 0.0,
@@ -2002,6 +2055,7 @@
                                     "tknTag_": "CD",
                                     "tknText": "2",
                                     "tknTextWithWs": "2 ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -2028,7 +2082,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "H",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 5,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 2 Zeile 1",
                                     "tknSentiment": 0.0,
@@ -2037,6 +2091,7 @@
                                     "tknTag_": "NN",
                                     "tknText": "Header",
                                     "tknTextWithWs": "Header ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -2064,7 +2119,7 @@
                                     "tknPos_": "NUM",
                                     "tknPrefix_": "3",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 5,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 2 Zeile 1",
                                     "tknSentiment": 0.0,
@@ -2073,6 +2128,7 @@
                                     "tknTag_": "CD",
                                     "tknText": "3",
                                     "tknTextWithWs": "3 ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -2099,7 +2155,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "H",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 7,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 2 Zeile 1",
                                     "tknSentiment": 0.0,
@@ -2108,6 +2164,7 @@
                                     "tknTag_": "NN",
                                     "tknText": "Header",
                                     "tknTextWithWs": "Header ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -2135,7 +2192,7 @@
                                     "tknPos_": "NUM",
                                     "tknPrefix_": "4",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 7,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 2 Zeile 1",
                                     "tknSentiment": 0.0,
@@ -2144,6 +2201,7 @@
                                     "tknTag_": "CD",
                                     "tknText": "4",
                                     "tknTextWithWs": "4 ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -2170,7 +2228,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "S",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 8,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 2 Zeile 1",
                                     "tknSentiment": 0.0,
@@ -2179,6 +2237,7 @@
                                     "tknTag_": "NN",
                                     "tknText": "Seite",
                                     "tknTextWithWs": "Seite ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -2206,7 +2265,7 @@
                                     "tknPos_": "NUM",
                                     "tknPrefix_": "2",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 9,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 2 Zeile 1",
                                     "tknSentiment": 0.0,
@@ -2215,6 +2274,7 @@
                                     "tknTag_": "CD",
                                     "tknText": "2",
                                     "tknTextWithWs": "2 ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -2241,7 +2301,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "Z",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 11,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 2 Zeile 1",
                                     "tknSentiment": 0.0,
@@ -2250,6 +2310,7 @@
                                     "tknTag_": "NN",
                                     "tknText": "Zeile",
                                     "tknTextWithWs": "Zeile ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -2278,7 +2339,7 @@
                                     "tknPos_": "NUM",
                                     "tknPrefix_": "1",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 11,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 2 Zeile 1",
                                     "tknSentiment": 0.0,
@@ -2286,7 +2347,8 @@
                                     "tknSuffix_": "1",
                                     "tknTag_": "CD",
                                     "tknText": "1",
-                                    "tknTextWithWs": "1"
+                                    "tknTextWithWs": "1",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>"
                                 }
                             ]
                         },
@@ -2324,7 +2386,7 @@
                                     "tknPos_": "PRON",
                                     "tknPrefix_": "W",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 0,
                                     "tknSent": "We use a technique called component shadowing to override an Seite 2 Zeile 2 existing Volto component with our local custom version, without Seite 2 Zeile 3 having to modify Volto's source code at all.",
                                     "tknSentiment": 0.0,
@@ -2333,6 +2395,7 @@
                                     "tknTag_": "PRP",
                                     "tknText": "We",
                                     "tknTextWithWs": "We ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -2359,7 +2422,7 @@
                                     "tknPos_": "VERB",
                                     "tknPrefix_": "u",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 37,
                                     "tknSent": "We use a technique called component shadowing to override an Seite 2 Zeile 2 existing Volto component with our local custom version, without Seite 2 Zeile 3 having to modify Volto's source code at all.",
                                     "tknSentiment": 0.0,
@@ -2368,6 +2431,7 @@
                                     "tknTag_": "VBP",
                                     "tknText": "use",
                                     "tknTextWithWs": "use ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -2395,7 +2459,7 @@
                                     "tknPos_": "DET",
                                     "tknPrefix_": "a",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 2,
                                     "tknSent": "We use a technique called component shadowing to override an Seite 2 Zeile 2 existing Volto component with our local custom version, without Seite 2 Zeile 3 having to modify Volto's source code at all.",
                                     "tknSentiment": 0.0,
@@ -2404,6 +2468,7 @@
                                     "tknTag_": "DT",
                                     "tknText": "a",
                                     "tknTextWithWs": "a ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -2430,7 +2495,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "t",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 6,
                                     "tknSent": "We use a technique called component shadowing to override an Seite 2 Zeile 2 existing Volto component with our local custom version, without Seite 2 Zeile 3 having to modify Volto's source code at all.",
                                     "tknSentiment": 0.0,
@@ -2439,6 +2504,7 @@
                                     "tknTag_": "NN",
                                     "tknText": "technique",
                                     "tknTextWithWs": "technique ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -2465,7 +2531,7 @@
                                     "tknPos_": "VERB",
                                     "tknPrefix_": "c",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 6,
                                     "tknSent": "We use a technique called component shadowing to override an Seite 2 Zeile 2 existing Volto component with our local custom version, without Seite 2 Zeile 3 having to modify Volto's source code at all.",
                                     "tknSentiment": 0.0,
@@ -2474,6 +2540,7 @@
                                     "tknTag_": "VBN",
                                     "tknText": "called",
                                     "tknTextWithWs": "called ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -2500,7 +2567,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "c",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 5,
                                     "tknSent": "We use a technique called component shadowing to override an Seite 2 Zeile 2 existing Volto component with our local custom version, without Seite 2 Zeile 3 having to modify Volto's source code at all.",
                                     "tknSentiment": 0.0,
@@ -2509,6 +2576,7 @@
                                     "tknTag_": "NN",
                                     "tknText": "component",
                                     "tknTextWithWs": "component ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -2535,7 +2603,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "s",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 6,
                                     "tknSent": "We use a technique called component shadowing to override an Seite 2 Zeile 2 existing Volto component with our local custom version, without Seite 2 Zeile 3 having to modify Volto's source code at all.",
                                     "tknSentiment": 0.0,
@@ -2544,6 +2612,7 @@
                                     "tknTag_": "NN",
                                     "tknText": "shadowing",
                                     "tknTextWithWs": "shadowing ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -2571,7 +2640,7 @@
                                     "tknPos_": "PART",
                                     "tknPrefix_": "t",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 7,
                                     "tknSent": "We use a technique called component shadowing to override an Seite 2 Zeile 2 existing Volto component with our local custom version, without Seite 2 Zeile 3 having to modify Volto's source code at all.",
                                     "tknSentiment": 0.0,
@@ -2580,6 +2649,7 @@
                                     "tknTag_": "TO",
                                     "tknText": "to",
                                     "tknTextWithWs": "to ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -2606,7 +2676,7 @@
                                     "tknPos_": "VERB",
                                     "tknPrefix_": "o",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 36,
                                     "tknSent": "We use a technique called component shadowing to override an Seite 2 Zeile 2 existing Volto component with our local custom version, without Seite 2 Zeile 3 having to modify Volto's source code at all.",
                                     "tknSentiment": 0.0,
@@ -2615,6 +2685,7 @@
                                     "tknTag_": "VB",
                                     "tknText": "override",
                                     "tknTextWithWs": "override ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -2642,7 +2713,7 @@
                                     "tknPos_": "DET",
                                     "tknPrefix_": "a",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 9,
                                     "tknSent": "We use a technique called component shadowing to override an Seite 2 Zeile 2 existing Volto component with our local custom version, without Seite 2 Zeile 3 having to modify Volto's source code at all.",
                                     "tknSentiment": 0.0,
@@ -2651,6 +2722,7 @@
                                     "tknTag_": "DT",
                                     "tknText": "an",
                                     "tknTextWithWs": "an ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -2678,7 +2750,7 @@
                                     "tknPos_": "PROPN",
                                     "tknPrefix_": "S",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 10,
                                     "tknSent": "We use a technique called component shadowing to override an Seite 2 Zeile 2 existing Volto component with our local custom version, without Seite 2 Zeile 3 having to modify Volto's source code at all.",
                                     "tknSentiment": 0.0,
@@ -2687,6 +2759,7 @@
                                     "tknTag_": "NNP",
                                     "tknText": "Seite",
                                     "tknTextWithWs": "Seite ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -2714,7 +2787,7 @@
                                     "tknPos_": "NUM",
                                     "tknPrefix_": "2",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 11,
                                     "tknSent": "We use a technique called component shadowing to override an Seite 2 Zeile 2 existing Volto component with our local custom version, without Seite 2 Zeile 3 having to modify Volto's source code at all.",
                                     "tknSentiment": 0.0,
@@ -2723,6 +2796,7 @@
                                     "tknTag_": "CD",
                                     "tknText": "2",
                                     "tknTextWithWs": "2 ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -2750,7 +2824,7 @@
                                     "tknPos_": "PROPN",
                                     "tknPrefix_": "Z",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 13,
                                     "tknSent": "We use a technique called component shadowing to override an Seite 2 Zeile 2 existing Volto component with our local custom version, without Seite 2 Zeile 3 having to modify Volto's source code at all.",
                                     "tknSentiment": 0.0,
@@ -2759,6 +2833,7 @@
                                     "tknTag_": "NNP",
                                     "tknText": "Zeile",
                                     "tknTextWithWs": "Zeile ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -2786,7 +2861,7 @@
                                     "tknPos_": "NUM",
                                     "tknPrefix_": "2",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 13,
                                     "tknSent": "We use a technique called component shadowing to override an Seite 2 Zeile 2 existing Volto component with our local custom version, without Seite 2 Zeile 3 having to modify Volto's source code at all.",
                                     "tknSentiment": 0.0,
@@ -2795,6 +2870,7 @@
                                     "tknTag_": "CD",
                                     "tknText": "2",
                                     "tknTextWithWs": "2 ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -2821,7 +2897,7 @@
                                     "tknPos_": "VERB",
                                     "tknPrefix_": "e",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 14,
                                     "tknSent": "We use a technique called component shadowing to override an Seite 2 Zeile 2 existing Volto component with our local custom version, without Seite 2 Zeile 3 having to modify Volto's source code at all.",
                                     "tknSentiment": 0.0,
@@ -2830,6 +2906,7 @@
                                     "tknTag_": "VBG",
                                     "tknText": "existing",
                                     "tknTextWithWs": "existing ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -2856,7 +2933,7 @@
                                     "tknPos_": "PROPN",
                                     "tknPrefix_": "V",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 15,
                                     "tknSent": "We use a technique called component shadowing to override an Seite 2 Zeile 2 existing Volto component with our local custom version, without Seite 2 Zeile 3 having to modify Volto's source code at all.",
                                     "tknSentiment": 0.0,
@@ -2865,6 +2942,7 @@
                                     "tknTag_": "NNP",
                                     "tknText": "Volto",
                                     "tknTextWithWs": "Volto ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -2891,7 +2969,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "c",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 16,
                                     "tknSent": "We use a technique called component shadowing to override an Seite 2 Zeile 2 existing Volto component with our local custom version, without Seite 2 Zeile 3 having to modify Volto's source code at all.",
                                     "tknSentiment": 0.0,
@@ -2900,6 +2978,7 @@
                                     "tknTag_": "NN",
                                     "tknText": "component",
                                     "tknTextWithWs": "component ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -2927,7 +3006,7 @@
                                     "tknPos_": "ADP",
                                     "tknPrefix_": "w",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 21,
                                     "tknSent": "We use a technique called component shadowing to override an Seite 2 Zeile 2 existing Volto component with our local custom version, without Seite 2 Zeile 3 having to modify Volto's source code at all.",
                                     "tknSentiment": 0.0,
@@ -2936,6 +3015,7 @@
                                     "tknTag_": "IN",
                                     "tknText": "with",
                                     "tknTextWithWs": "with ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -2963,7 +3043,7 @@
                                     "tknPos_": "PRON",
                                     "tknPrefix_": "o",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 18,
                                     "tknSent": "We use a technique called component shadowing to override an Seite 2 Zeile 2 existing Volto component with our local custom version, without Seite 2 Zeile 3 having to modify Volto's source code at all.",
                                     "tknSentiment": 0.0,
@@ -2972,6 +3052,7 @@
                                     "tknTag_": "PRP$",
                                     "tknText": "our",
                                     "tknTextWithWs": "our ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -2998,7 +3079,7 @@
                                     "tknPos_": "ADJ",
                                     "tknPrefix_": "l",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 19,
                                     "tknSent": "We use a technique called component shadowing to override an Seite 2 Zeile 2 existing Volto component with our local custom version, without Seite 2 Zeile 3 having to modify Volto's source code at all.",
                                     "tknSentiment": 0.0,
@@ -3007,6 +3088,7 @@
                                     "tknTag_": "JJ",
                                     "tknText": "local",
                                     "tknTextWithWs": "local ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -3033,7 +3115,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "c",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 20,
                                     "tknSent": "We use a technique called component shadowing to override an Seite 2 Zeile 2 existing Volto component with our local custom version, without Seite 2 Zeile 3 having to modify Volto's source code at all.",
                                     "tknSentiment": 0.0,
@@ -3042,6 +3124,7 @@
                                     "tknTag_": "NN",
                                     "tknText": "custom",
                                     "tknTextWithWs": "custom ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -3068,7 +3151,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "v",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 21,
                                     "tknSent": "We use a technique called component shadowing to override an Seite 2 Zeile 2 existing Volto component with our local custom version, without Seite 2 Zeile 3 having to modify Volto's source code at all.",
                                     "tknSentiment": 0.0,
@@ -3076,7 +3159,8 @@
                                     "tknSuffix_": "ion",
                                     "tknTag_": "NN",
                                     "tknText": "version",
-                                    "tknTextWithWs": "version"
+                                    "tknTextWithWs": "version",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>"
                                 },
                                 {
                                     "tknCluster": 0,
@@ -3101,7 +3185,7 @@
                                     "tknPos_": "PUNCT",
                                     "tknPrefix_": ",",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 22,
                                     "tknSent": "We use a technique called component shadowing to override an Seite 2 Zeile 2 existing Volto component with our local custom version, without Seite 2 Zeile 3 having to modify Volto's source code at all.",
                                     "tknSentiment": 0.0,
@@ -3110,6 +3194,7 @@
                                     "tknTag_": ",",
                                     "tknText": ",",
                                     "tknTextWithWs": ", ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -3137,7 +3222,7 @@
                                     "tknPos_": "ADP",
                                     "tknPrefix_": "w",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 36,
                                     "tknSent": "We use a technique called component shadowing to override an Seite 2 Zeile 2 existing Volto component with our local custom version, without Seite 2 Zeile 3 having to modify Volto's source code at all.",
                                     "tknSentiment": 0.0,
@@ -3146,6 +3231,7 @@
                                     "tknTag_": "IN",
                                     "tknText": "without",
                                     "tknTextWithWs": "without ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -3173,7 +3259,7 @@
                                     "tknPos_": "PROPN",
                                     "tknPrefix_": "S",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 25,
                                     "tknSent": "We use a technique called component shadowing to override an Seite 2 Zeile 2 existing Volto component with our local custom version, without Seite 2 Zeile 3 having to modify Volto's source code at all.",
                                     "tknSentiment": 0.0,
@@ -3182,6 +3268,7 @@
                                     "tknTag_": "NNP",
                                     "tknText": "Seite",
                                     "tknTextWithWs": "Seite ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -3209,7 +3296,7 @@
                                     "tknPos_": "NUM",
                                     "tknPrefix_": "2",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 25,
                                     "tknSent": "We use a technique called component shadowing to override an Seite 2 Zeile 2 existing Volto component with our local custom version, without Seite 2 Zeile 3 having to modify Volto's source code at all.",
                                     "tknSentiment": 0.0,
@@ -3218,6 +3305,7 @@
                                     "tknTag_": "CD",
                                     "tknText": "2",
                                     "tknTextWithWs": "2 ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -3245,7 +3333,7 @@
                                     "tknPos_": "PROPN",
                                     "tknPrefix_": "Z",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 27,
                                     "tknSent": "We use a technique called component shadowing to override an Seite 2 Zeile 2 existing Volto component with our local custom version, without Seite 2 Zeile 3 having to modify Volto's source code at all.",
                                     "tknSentiment": 0.0,
@@ -3254,6 +3342,7 @@
                                     "tknTag_": "NNP",
                                     "tknText": "Zeile",
                                     "tknTextWithWs": "Zeile ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -3281,7 +3370,7 @@
                                     "tknPos_": "NUM",
                                     "tknPrefix_": "3",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 27,
                                     "tknSent": "We use a technique called component shadowing to override an Seite 2 Zeile 2 existing Volto component with our local custom version, without Seite 2 Zeile 3 having to modify Volto's source code at all.",
                                     "tknSentiment": 0.0,
@@ -3290,6 +3379,7 @@
                                     "tknTag_": "CD",
                                     "tknText": "3",
                                     "tknTextWithWs": "3 ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -3316,7 +3406,7 @@
                                     "tknPos_": "VERB",
                                     "tknPrefix_": "h",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 36,
                                     "tknSent": "We use a technique called component shadowing to override an Seite 2 Zeile 2 existing Volto component with our local custom version, without Seite 2 Zeile 3 having to modify Volto's source code at all.",
                                     "tknSentiment": 0.0,
@@ -3325,6 +3415,7 @@
                                     "tknTag_": "VBG",
                                     "tknText": "having",
                                     "tknTextWithWs": "having ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -3352,7 +3443,7 @@
                                     "tknPos_": "PART",
                                     "tknPrefix_": "t",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 29,
                                     "tknSent": "We use a technique called component shadowing to override an Seite 2 Zeile 2 existing Volto component with our local custom version, without Seite 2 Zeile 3 having to modify Volto's source code at all.",
                                     "tknSentiment": 0.0,
@@ -3361,6 +3452,7 @@
                                     "tknTag_": "TO",
                                     "tknText": "to",
                                     "tknTextWithWs": "to ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -3387,7 +3479,7 @@
                                     "tknPos_": "VERB",
                                     "tknPrefix_": "m",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 36,
                                     "tknSent": "We use a technique called component shadowing to override an Seite 2 Zeile 2 existing Volto component with our local custom version, without Seite 2 Zeile 3 having to modify Volto's source code at all.",
                                     "tknSentiment": 0.0,
@@ -3396,6 +3488,7 @@
                                     "tknTag_": "VB",
                                     "tknText": "modify",
                                     "tknTextWithWs": "modify ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -3422,7 +3515,7 @@
                                     "tknPos_": "PROPN",
                                     "tknPrefix_": "V",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 32,
                                     "tknSent": "We use a technique called component shadowing to override an Seite 2 Zeile 2 existing Volto component with our local custom version, without Seite 2 Zeile 3 having to modify Volto's source code at all.",
                                     "tknSentiment": 0.0,
@@ -3430,7 +3523,8 @@
                                     "tknSuffix_": "lto",
                                     "tknTag_": "NNP",
                                     "tknText": "Volto",
-                                    "tknTextWithWs": "Volto"
+                                    "tknTextWithWs": "Volto",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>"
                                 },
                                 {
                                     "tknCluster": 0,
@@ -3456,7 +3550,7 @@
                                     "tknPos_": "PART",
                                     "tknPrefix_": "'",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 32,
                                     "tknSent": "We use a technique called component shadowing to override an Seite 2 Zeile 2 existing Volto component with our local custom version, without Seite 2 Zeile 3 having to modify Volto's source code at all.",
                                     "tknSentiment": 0.0,
@@ -3465,6 +3559,7 @@
                                     "tknTag_": "POS",
                                     "tknText": "'s",
                                     "tknTextWithWs": "'s ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -3491,7 +3586,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "s",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 33,
                                     "tknSent": "We use a technique called component shadowing to override an Seite 2 Zeile 2 existing Volto component with our local custom version, without Seite 2 Zeile 3 having to modify Volto's source code at all.",
                                     "tknSentiment": 0.0,
@@ -3500,6 +3595,7 @@
                                     "tknTag_": "NN",
                                     "tknText": "source",
                                     "tknTextWithWs": "source ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -3526,7 +3622,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "c",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 34,
                                     "tknSent": "We use a technique called component shadowing to override an Seite 2 Zeile 2 existing Volto component with our local custom version, without Seite 2 Zeile 3 having to modify Volto's source code at all.",
                                     "tknSentiment": 0.0,
@@ -3535,6 +3631,7 @@
                                     "tknTag_": "NN",
                                     "tknText": "code",
                                     "tknTextWithWs": "code ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -3562,7 +3659,7 @@
                                     "tknPos_": "ADV",
                                     "tknPrefix_": "a",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 35,
                                     "tknSent": "We use a technique called component shadowing to override an Seite 2 Zeile 2 existing Volto component with our local custom version, without Seite 2 Zeile 3 having to modify Volto's source code at all.",
                                     "tknSentiment": 0.0,
@@ -3571,6 +3668,7 @@
                                     "tknTag_": "RB",
                                     "tknText": "at",
                                     "tknTextWithWs": "at ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -3598,7 +3696,7 @@
                                     "tknPos_": "ADV",
                                     "tknPrefix_": "a",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 36,
                                     "tknSent": "We use a technique called component shadowing to override an Seite 2 Zeile 2 existing Volto component with our local custom version, without Seite 2 Zeile 3 having to modify Volto's source code at all.",
                                     "tknSentiment": 0.0,
@@ -3606,7 +3704,8 @@
                                     "tknSuffix_": "all",
                                     "tknTag_": "RB",
                                     "tknText": "all",
-                                    "tknTextWithWs": "all"
+                                    "tknTextWithWs": "all",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>"
                                 },
                                 {
                                     "tknCluster": 0,
@@ -3632,7 +3731,7 @@
                                     "tknPos_": "PUNCT",
                                     "tknPrefix_": ".",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 37,
                                     "tknSent": "We use a technique called component shadowing to override an Seite 2 Zeile 2 existing Volto component with our local custom version, without Seite 2 Zeile 3 having to modify Volto's source code at all.",
                                     "tknSentiment": 0.0,
@@ -3640,7 +3739,8 @@
                                     "tknSuffix_": ".",
                                     "tknTag_": ".",
                                     "tknText": ".",
-                                    "tknTextWithWs": "."
+                                    "tknTextWithWs": ".",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>"
                                 }
                             ]
                         },
@@ -3678,7 +3778,7 @@
                                     "tknPos_": "PRON",
                                     "tknPrefix_": "Y",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 0,
                                     "tknSent": "You have to place the",
                                     "tknSentiment": 0.0,
@@ -3687,6 +3787,7 @@
                                     "tknTag_": "PRP",
                                     "tknText": "You",
                                     "tknTextWithWs": "You ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -3714,7 +3815,7 @@
                                     "tknPos_": "VERB",
                                     "tknPrefix_": "h",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 4,
                                     "tknSent": "You have to place the",
                                     "tknSentiment": 0.0,
@@ -3723,6 +3824,7 @@
                                     "tknTag_": "VBP",
                                     "tknText": "have",
                                     "tknTextWithWs": "have ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -3750,7 +3852,7 @@
                                     "tknPos_": "PART",
                                     "tknPrefix_": "t",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 2,
                                     "tknSent": "You have to place the",
                                     "tknSentiment": 0.0,
@@ -3759,6 +3861,7 @@
                                     "tknTag_": "TO",
                                     "tknText": "to",
                                     "tknTextWithWs": "to ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -3785,7 +3888,7 @@
                                     "tknPos_": "VERB",
                                     "tknPrefix_": "p",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 4,
                                     "tknSent": "You have to place the",
                                     "tknSentiment": 0.0,
@@ -3794,6 +3897,7 @@
                                     "tknTag_": "VB",
                                     "tknText": "place",
                                     "tknTextWithWs": "place ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -3822,7 +3926,7 @@
                                     "tknPos_": "PRON",
                                     "tknPrefix_": "t",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 4,
                                     "tknSent": "You have to place the",
                                     "tknSentiment": 0.0,
@@ -3830,7 +3934,8 @@
                                     "tknSuffix_": "the",
                                     "tknTag_": "DT",
                                     "tknText": "the",
-                                    "tknTextWithWs": "the"
+                                    "tknTextWithWs": "the",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>"
                                 }
                             ]
                         }
@@ -3884,7 +3989,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "H",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 25,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato.",
                                     "tknSentiment": 0.0,
@@ -3893,6 +3998,7 @@
                                     "tknTag_": "NN",
                                     "tknText": "Header",
                                     "tknTextWithWs": "Header ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -3920,7 +4026,7 @@
                                     "tknPos_": "NUM",
                                     "tknPrefix_": "1",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 1,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato.",
                                     "tknSentiment": 0.0,
@@ -3929,6 +4035,7 @@
                                     "tknTag_": "CD",
                                     "tknText": "1",
                                     "tknTextWithWs": "1 ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -3955,7 +4062,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "H",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 5,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato.",
                                     "tknSentiment": 0.0,
@@ -3964,6 +4071,7 @@
                                     "tknTag_": "NN",
                                     "tknText": "Header",
                                     "tknTextWithWs": "Header ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -3991,7 +4099,7 @@
                                     "tknPos_": "NUM",
                                     "tknPrefix_": "2",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 3,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato.",
                                     "tknSentiment": 0.0,
@@ -4000,6 +4108,7 @@
                                     "tknTag_": "CD",
                                     "tknText": "2",
                                     "tknTextWithWs": "2 ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -4026,7 +4135,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "H",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 5,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato.",
                                     "tknSentiment": 0.0,
@@ -4035,6 +4144,7 @@
                                     "tknTag_": "NN",
                                     "tknText": "Header",
                                     "tknTextWithWs": "Header ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -4062,7 +4172,7 @@
                                     "tknPos_": "NUM",
                                     "tknPrefix_": "3",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 5,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato.",
                                     "tknSentiment": 0.0,
@@ -4071,6 +4181,7 @@
                                     "tknTag_": "CD",
                                     "tknText": "3",
                                     "tknTextWithWs": "3 ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -4097,7 +4208,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "H",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 7,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato.",
                                     "tknSentiment": 0.0,
@@ -4106,6 +4217,7 @@
                                     "tknTag_": "NN",
                                     "tknText": "Header",
                                     "tknTextWithWs": "Header ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -4133,7 +4245,7 @@
                                     "tknPos_": "NUM",
                                     "tknPrefix_": "4",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 7,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato.",
                                     "tknSentiment": 0.0,
@@ -4142,6 +4254,7 @@
                                     "tknTag_": "CD",
                                     "tknText": "4",
                                     "tknTextWithWs": "4 ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -4168,7 +4281,7 @@
                                     "tknPos_": "PROPN",
                                     "tknPrefix_": "S",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 8,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato.",
                                     "tknSentiment": 0.0,
@@ -4177,6 +4290,7 @@
                                     "tknTag_": "NNP",
                                     "tknText": "Seite",
                                     "tknTextWithWs": "Seite ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -4203,7 +4317,7 @@
                                     "tknPos_": "NUM",
                                     "tknPrefix_": "3",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 9,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato.",
                                     "tknSentiment": 0.0,
@@ -4212,6 +4326,7 @@
                                     "tknTag_": "CD",
                                     "tknText": "3",
                                     "tknTextWithWs": "3 ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -4238,7 +4353,7 @@
                                     "tknPos_": "PROPN",
                                     "tknPrefix_": "Z",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 11,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato.",
                                     "tknSentiment": 0.0,
@@ -4247,6 +4362,7 @@
                                     "tknTag_": "NNP",
                                     "tknText": "Zeile",
                                     "tknTextWithWs": "Zeile ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -4273,7 +4389,7 @@
                                     "tknPos_": "NUM",
                                     "tknPrefix_": "1",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 11,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato.",
                                     "tknSentiment": 0.0,
@@ -4282,6 +4398,7 @@
                                     "tknTag_": "CD",
                                     "tknText": "1",
                                     "tknTextWithWs": "1 ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -4308,7 +4425,7 @@
                                     "tknPos_": "VERB",
                                     "tknPrefix_": "r",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 12,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato.",
                                     "tknSentiment": 0.0,
@@ -4317,6 +4434,7 @@
                                     "tknTag_": "VBG",
                                     "tknText": "replacing",
                                     "tknTextWithWs": "replacing ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -4343,7 +4461,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "c",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 13,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato.",
                                     "tknSentiment": 0.0,
@@ -4352,6 +4470,7 @@
                                     "tknTag_": "NN",
                                     "tknText": "component",
                                     "tknTextWithWs": "component ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -4379,7 +4498,7 @@
                                     "tknPos_": "ADP",
                                     "tknPrefix_": "i",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 25,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato.",
                                     "tknSentiment": 0.0,
@@ -4388,6 +4507,7 @@
                                     "tknTag_": "IN",
                                     "tknText": "in",
                                     "tknTextWithWs": "in ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -4415,7 +4535,7 @@
                                     "tknPos_": "DET",
                                     "tknPrefix_": "t",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 15,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato.",
                                     "tknSentiment": 0.0,
@@ -4424,6 +4544,7 @@
                                     "tknTag_": "DT",
                                     "tknText": "the",
                                     "tknTextWithWs": "the ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -4451,7 +4572,7 @@
                                     "tknPos_": "ADJ",
                                     "tknPrefix_": "s",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 16,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato.",
                                     "tknSentiment": 0.0,
@@ -4460,6 +4581,7 @@
                                     "tknTag_": "JJ",
                                     "tknText": "same",
                                     "tknTextWithWs": "same ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -4486,7 +4608,7 @@
                                     "tknPos_": "ADJ",
                                     "tknPrefix_": "o",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 17,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato.",
                                     "tknSentiment": 0.0,
@@ -4495,6 +4617,7 @@
                                     "tknTag_": "JJ",
                                     "tknText": "original",
                                     "tknTextWithWs": "original ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -4521,7 +4644,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "f",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 18,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato.",
                                     "tknSentiment": 0.0,
@@ -4530,6 +4653,7 @@
                                     "tknTag_": "NN",
                                     "tknText": "folder",
                                     "tknTextWithWs": "folder ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -4556,7 +4680,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "p",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 25,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato.",
                                     "tknSentiment": 0.0,
@@ -4565,6 +4689,7 @@
                                     "tknTag_": "NN",
                                     "tknText": "path",
                                     "tknTextWithWs": "path ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -4591,7 +4716,7 @@
                                     "tknPos_": "ADP",
                                     "tknPrefix_": "i",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 25,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato.",
                                     "tknSentiment": 0.0,
@@ -4600,6 +4725,7 @@
                                     "tknTag_": "IN",
                                     "tknText": "inside",
                                     "tknTextWithWs": "inside ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -4627,7 +4753,7 @@
                                     "tknPos_": "DET",
                                     "tknPrefix_": "t",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 21,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato.",
                                     "tknSentiment": 0.0,
@@ -4636,6 +4762,7 @@
                                     "tknTag_": "DT",
                                     "tknText": "the",
                                     "tknTextWithWs": "the ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -4662,7 +4789,7 @@
                                     "tknPos_": "PROPN",
                                     "tknPrefix_": "S",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 22,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato.",
                                     "tknSentiment": 0.0,
@@ -4671,6 +4798,7 @@
                                     "tknTag_": "NNP",
                                     "tknText": "Seite",
                                     "tknTextWithWs": "Seite ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -4697,7 +4825,7 @@
                                     "tknPos_": "NUM",
                                     "tknPrefix_": "3",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 23,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato.",
                                     "tknSentiment": 0.0,
@@ -4706,6 +4834,7 @@
                                     "tknTag_": "CD",
                                     "tknText": "3",
                                     "tknTextWithWs": "3 ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -4732,7 +4861,7 @@
                                     "tknPos_": "PROPN",
                                     "tknPrefix_": "Z",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 25,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato.",
                                     "tknSentiment": 0.0,
@@ -4741,6 +4870,7 @@
                                     "tknTag_": "NNP",
                                     "tknText": "Zeile",
                                     "tknTextWithWs": "Zeile ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -4767,7 +4897,7 @@
                                     "tknPos_": "NUM",
                                     "tknPrefix_": "2",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 25,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato.",
                                     "tknSentiment": 0.0,
@@ -4776,6 +4906,7 @@
                                     "tknTag_": "CD",
                                     "tknText": "2",
                                     "tknTextWithWs": "2 ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -4803,7 +4934,7 @@
                                     "tknPos_": "PRON",
                                     "tknPrefix_": "W",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 26,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato.",
                                     "tknSentiment": 0.0,
@@ -4812,6 +4943,7 @@
                                     "tknTag_": "PRP",
                                     "tknText": "We",
                                     "tknTextWithWs": "We ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -4838,7 +4970,7 @@
                                     "tknPos_": "VERB",
                                     "tknPrefix_": "s",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 46,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato.",
                                     "tknSentiment": 0.0,
@@ -4847,6 +4979,7 @@
                                     "tknTag_": "VBP",
                                     "tknText": "start",
                                     "tknTextWithWs": "start ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -4874,7 +5007,7 @@
                                     "tknPos_": "ADP",
                                     "tknPrefix_": "w",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 31,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato.",
                                     "tknSentiment": 0.0,
@@ -4883,6 +5016,7 @@
                                     "tknTag_": "IN",
                                     "tknText": "with",
                                     "tknTextWithWs": "with ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -4910,7 +5044,7 @@
                                     "tknPos_": "DET",
                                     "tknPrefix_": "t",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 29,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato.",
                                     "tknSentiment": 0.0,
@@ -4919,6 +5053,7 @@
                                     "tknTag_": "DT",
                                     "tknText": "the",
                                     "tknTextWithWs": "the ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -4948,7 +5083,7 @@
                                     "tknPos_": "ADJ",
                                     "tknPrefix_": "f",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 30,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato.",
                                     "tknSentiment": 0.0,
@@ -4957,6 +5092,7 @@
                                     "tknTag_": "JJ",
                                     "tknText": "first",
                                     "tknTextWithWs": "first ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -4983,7 +5119,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "c",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 31,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato.",
                                     "tknSentiment": 0.0,
@@ -4992,6 +5128,7 @@
                                     "tknTag_": "NN",
                                     "tknText": "case",
                                     "tknTextWithWs": "case ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -5019,7 +5156,7 @@
                                     "tknPos_": "CCONJ",
                                     "tknPrefix_": "a",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 32,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato.",
                                     "tknSentiment": 0.0,
@@ -5028,6 +5165,7 @@
                                     "tknTag_": "CC",
                                     "tknText": "and",
                                     "tknTextWithWs": "and ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -5054,7 +5192,7 @@
                                     "tknPos_": "VERB",
                                     "tknPrefix_": "c",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 45,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato.",
                                     "tknSentiment": 0.0,
@@ -5063,6 +5201,7 @@
                                     "tknTag_": "VBP",
                                     "tknText": "change",
                                     "tknTextWithWs": "change ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -5090,7 +5229,7 @@
                                     "tknPos_": "DET",
                                     "tknPrefix_": "t",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 34,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato.",
                                     "tknSentiment": 0.0,
@@ -5099,6 +5238,7 @@
                                     "tknTag_": "DT",
                                     "tknText": "the",
                                     "tknTextWithWs": "the ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -5125,7 +5265,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "f",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 35,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato.",
                                     "tknSentiment": 0.0,
@@ -5134,6 +5274,7 @@
                                     "tknTag_": "NN",
                                     "tknText": "font",
                                     "tknTextWithWs": "font ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -5161,7 +5302,7 @@
                                     "tknPos_": "ADP",
                                     "tknPrefix_": "t",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 45,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato.",
                                     "tknSentiment": 0.0,
@@ -5170,6 +5311,7 @@
                                     "tknTag_": "IN",
                                     "tknText": "to",
                                     "tknTextWithWs": "to ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -5197,7 +5339,7 @@
                                     "tknPos_": "DET",
                                     "tknPrefix_": "a",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 37,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato.",
                                     "tknSentiment": 0.0,
@@ -5206,6 +5348,7 @@
                                     "tknTag_": "DT",
                                     "tknText": "another",
                                     "tknTextWithWs": "another ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -5233,7 +5376,7 @@
                                     "tknPos_": "PROPN",
                                     "tknPrefix_": "G",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 38,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato.",
                                     "tknSentiment": 0.0,
@@ -5242,6 +5385,7 @@
                                     "tknTag_": "NNP",
                                     "tknText": "Google",
                                     "tknTextWithWs": "Google ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -5268,7 +5412,7 @@
                                     "tknPos_": "PROPN",
                                     "tknPrefix_": "S",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 40,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato.",
                                     "tknSentiment": 0.0,
@@ -5277,6 +5421,7 @@
                                     "tknTag_": "NNP",
                                     "tknText": "Seite",
                                     "tknTextWithWs": "Seite ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -5303,7 +5448,7 @@
                                     "tknPos_": "NUM",
                                     "tknPrefix_": "3",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 40,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato.",
                                     "tknSentiment": 0.0,
@@ -5312,6 +5457,7 @@
                                     "tknTag_": "CD",
                                     "tknText": "3",
                                     "tknTextWithWs": "3 ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -5338,7 +5484,7 @@
                                     "tknPos_": "PROPN",
                                     "tknPrefix_": "Z",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 42,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato.",
                                     "tknSentiment": 0.0,
@@ -5347,6 +5493,7 @@
                                     "tknTag_": "NNP",
                                     "tknText": "Zeile",
                                     "tknTextWithWs": "Zeile ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -5373,7 +5520,7 @@
                                     "tknPos_": "NUM",
                                     "tknPrefix_": "3",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 42,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato.",
                                     "tknSentiment": 0.0,
@@ -5382,6 +5529,7 @@
                                     "tknTag_": "CD",
                                     "tknText": "3",
                                     "tknTextWithWs": "3 ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -5408,7 +5556,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "f",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 45,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato.",
                                     "tknSentiment": 0.0,
@@ -5416,7 +5564,8 @@
                                     "tknSuffix_": "ont",
                                     "tknTag_": "NN",
                                     "tknText": "font",
-                                    "tknTextWithWs": "font"
+                                    "tknTextWithWs": "font",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>"
                                 },
                                 {
                                     "tknCluster": 0,
@@ -5441,7 +5590,7 @@
                                     "tknPos_": "PUNCT",
                                     "tknPrefix_": ",",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 44,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato.",
                                     "tknSentiment": 0.0,
@@ -5450,6 +5599,7 @@
                                     "tknTag_": ",",
                                     "tknText": ",",
                                     "tknTextWithWs": ", ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -5476,7 +5626,7 @@
                                     "tknPos_": "PROPN",
                                     "tknPrefix_": "L",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 45,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato.",
                                     "tknSentiment": 0.0,
@@ -5484,7 +5634,8 @@
                                     "tknSuffix_": "ato",
                                     "tknTag_": "NNP",
                                     "tknText": "Lato",
-                                    "tknTextWithWs": "Lato"
+                                    "tknTextWithWs": "Lato",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>"
                                 },
                                 {
                                     "tknCluster": 0,
@@ -5510,7 +5661,7 @@
                                     "tknPos_": "PUNCT",
                                     "tknPrefix_": ".",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 46,
                                     "tknSent": "Header 1 Header 2 Header 3 Header 4 Seite 3 Zeile 1 replacing component in the same original folder path inside the Seite 3 Zeile 2 We start with the first case and change the font to another Google Seite 3 Zeile 3 font, Lato.",
                                     "tknSentiment": 0.0,
@@ -5518,7 +5669,8 @@
                                     "tknSuffix_": ".",
                                     "tknTag_": ".",
                                     "tknText": ".",
-                                    "tknTextWithWs": "."
+                                    "tknTextWithWs": ".",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>"
                                 }
                             ]
                         },
@@ -5556,7 +5708,7 @@
                                     "tknPos_": "DET",
                                     "tknPrefix_": "T",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 0,
                                     "tknSent": "The overall font is defined in Volto and can be found in",
                                     "tknSentiment": 0.0,
@@ -5565,6 +5717,7 @@
                                     "tknTag_": "DT",
                                     "tknText": "The",
                                     "tknTextWithWs": "The ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -5591,7 +5744,7 @@
                                     "tknPos_": "ADJ",
                                     "tknPrefix_": "o",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 1,
                                     "tknSent": "The overall font is defined in Volto and can be found in",
                                     "tknSentiment": 0.0,
@@ -5600,6 +5753,7 @@
                                     "tknTag_": "JJ",
                                     "tknText": "overall",
                                     "tknTextWithWs": "overall ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -5626,7 +5780,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "f",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 2,
                                     "tknSent": "The overall font is defined in Volto and can be found in",
                                     "tknSentiment": 0.0,
@@ -5635,6 +5789,7 @@
                                     "tknTag_": "NN",
                                     "tknText": "font",
                                     "tknTextWithWs": "font ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -5662,7 +5817,7 @@
                                     "tknPos_": "AUX",
                                     "tknPrefix_": "i",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 3,
                                     "tknSent": "The overall font is defined in Volto and can be found in",
                                     "tknSentiment": 0.0,
@@ -5671,6 +5826,7 @@
                                     "tknTag_": "VBZ",
                                     "tknText": "is",
                                     "tknTextWithWs": "is ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -5697,7 +5853,7 @@
                                     "tknPos_": "VERB",
                                     "tknPrefix_": "d",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 11,
                                     "tknSent": "The overall font is defined in Volto and can be found in",
                                     "tknSentiment": 0.0,
@@ -5706,6 +5862,7 @@
                                     "tknTag_": "VBN",
                                     "tknText": "defined",
                                     "tknTextWithWs": "defined ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -5733,7 +5890,7 @@
                                     "tknPos_": "ADP",
                                     "tknPrefix_": "i",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 6,
                                     "tknSent": "The overall font is defined in Volto and can be found in",
                                     "tknSentiment": 0.0,
@@ -5742,6 +5899,7 @@
                                     "tknTag_": "IN",
                                     "tknText": "in",
                                     "tknTextWithWs": "in ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -5768,7 +5926,7 @@
                                     "tknPos_": "PROPN",
                                     "tknPrefix_": "V",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 6,
                                     "tknSent": "The overall font is defined in Volto and can be found in",
                                     "tknSentiment": 0.0,
@@ -5777,6 +5935,7 @@
                                     "tknTag_": "NNP",
                                     "tknText": "Volto",
                                     "tknTextWithWs": "Volto ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -5804,7 +5963,7 @@
                                     "tknPos_": "CCONJ",
                                     "tknPrefix_": "a",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 7,
                                     "tknSent": "The overall font is defined in Volto and can be found in",
                                     "tknSentiment": 0.0,
@@ -5813,6 +5972,7 @@
                                     "tknTag_": "CC",
                                     "tknText": "and",
                                     "tknTextWithWs": "and ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -5840,7 +6000,7 @@
                                     "tknPos_": "AUX",
                                     "tknPrefix_": "c",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 8,
                                     "tknSent": "The overall font is defined in Volto and can be found in",
                                     "tknSentiment": 0.0,
@@ -5849,6 +6009,7 @@
                                     "tknTag_": "MD",
                                     "tknText": "can",
                                     "tknTextWithWs": "can ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -5876,7 +6037,7 @@
                                     "tknPos_": "AUX",
                                     "tknPrefix_": "b",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 9,
                                     "tknSent": "The overall font is defined in Volto and can be found in",
                                     "tknSentiment": 0.0,
@@ -5885,6 +6046,7 @@
                                     "tknTag_": "VB",
                                     "tknText": "be",
                                     "tknTextWithWs": "be ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -5911,7 +6073,7 @@
                                     "tknPos_": "VERB",
                                     "tknPrefix_": "f",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 11,
                                     "tknSent": "The overall font is defined in Volto and can be found in",
                                     "tknSentiment": 0.0,
@@ -5920,6 +6082,7 @@
                                     "tknTag_": "VBN",
                                     "tknText": "found",
                                     "tknTextWithWs": "found ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -5948,7 +6111,7 @@
                                     "tknPos_": "ADP",
                                     "tknPrefix_": "i",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 11,
                                     "tknSent": "The overall font is defined in Volto and can be found in",
                                     "tknSentiment": 0.0,
@@ -5956,7 +6119,8 @@
                                     "tknSuffix_": "in",
                                     "tknTag_": "IN",
                                     "tknText": "in",
-                                    "tknTextWithWs": "in"
+                                    "tknTextWithWs": "in",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>"
                                 }
                             ]
                         }

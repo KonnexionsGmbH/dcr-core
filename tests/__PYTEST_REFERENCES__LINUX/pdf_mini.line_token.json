@@ -60,7 +60,7 @@
                                     "tknPos_": "PRON",
                                     "tknPrefix_": "T",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 0,
                                     "tknSent": "This is the header sentence",
                                     "tknSentiment": 0.0,
@@ -69,6 +69,7 @@
                                     "tknTag_": "DT",
                                     "tknText": "This",
                                     "tknTextWithWs": "This ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -96,7 +97,7 @@
                                     "tknPos_": "AUX",
                                     "tknPrefix_": "i",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 4,
                                     "tknSent": "This is the header sentence",
                                     "tknSentiment": 0.0,
@@ -105,6 +106,7 @@
                                     "tknTag_": "VBZ",
                                     "tknText": "is",
                                     "tknTextWithWs": "is ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -132,7 +134,7 @@
                                     "tknPos_": "DET",
                                     "tknPrefix_": "t",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 2,
                                     "tknSent": "This is the header sentence",
                                     "tknSentiment": 0.0,
@@ -141,6 +143,7 @@
                                     "tknTag_": "DT",
                                     "tknText": "the",
                                     "tknTextWithWs": "the ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -167,7 +170,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "h",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 3,
                                     "tknSent": "This is the header sentence",
                                     "tknSentiment": 0.0,
@@ -176,6 +179,7 @@
                                     "tknTag_": "NN",
                                     "tknText": "header",
                                     "tknTextWithWs": "header ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -203,7 +207,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "s",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 4,
                                     "tknSent": "This is the header sentence",
                                     "tknSentiment": 0.0,
@@ -211,7 +215,8 @@
                                     "tknSuffix_": "nce",
                                     "tknTag_": "NN",
                                     "tknText": "sentence",
-                                    "tknTextWithWs": "sentence"
+                                    "tknTextWithWs": "sentence",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>"
                                 }
                             ]
                         }
@@ -257,7 +262,7 @@
                                     "tknPos_": "PRON",
                                     "tknPrefix_": "T",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 0,
                                     "tknSent": "This is the title sentence",
                                     "tknSentiment": 0.0,
@@ -266,6 +271,7 @@
                                     "tknTag_": "DT",
                                     "tknText": "This",
                                     "tknTextWithWs": "This ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -293,7 +299,7 @@
                                     "tknPos_": "AUX",
                                     "tknPrefix_": "i",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 4,
                                     "tknSent": "This is the title sentence",
                                     "tknSentiment": 0.0,
@@ -302,6 +308,7 @@
                                     "tknTag_": "VBZ",
                                     "tknText": "is",
                                     "tknTextWithWs": "is ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -329,7 +336,7 @@
                                     "tknPos_": "DET",
                                     "tknPrefix_": "t",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 2,
                                     "tknSent": "This is the title sentence",
                                     "tknSentiment": 0.0,
@@ -338,6 +345,7 @@
                                     "tknTag_": "DT",
                                     "tknText": "the",
                                     "tknTextWithWs": "the ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -364,7 +372,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "t",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 3,
                                     "tknSent": "This is the title sentence",
                                     "tknSentiment": 0.0,
@@ -373,6 +381,7 @@
                                     "tknTag_": "NN",
                                     "tknText": "title",
                                     "tknTextWithWs": "title ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -400,7 +409,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "s",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 4,
                                     "tknSent": "This is the title sentence",
                                     "tknSentiment": 0.0,
@@ -408,7 +417,8 @@
                                     "tknSuffix_": "nce",
                                     "tknTag_": "NN",
                                     "tknText": "sentence",
-                                    "tknTextWithWs": "sentence"
+                                    "tknTextWithWs": "sentence",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>"
                                 }
                             ]
                         }
@@ -454,7 +464,7 @@
                                     "tknPos_": "PRON",
                                     "tknPrefix_": "T",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 0,
                                     "tknSent": "This is the first sentence of the first paragraph.",
                                     "tknSentiment": 0.0,
@@ -463,6 +473,7 @@
                                     "tknTag_": "DT",
                                     "tknText": "This",
                                     "tknTextWithWs": "This ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -490,7 +501,7 @@
                                     "tknPos_": "AUX",
                                     "tknPrefix_": "i",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 9,
                                     "tknSent": "This is the first sentence of the first paragraph.",
                                     "tknSentiment": 0.0,
@@ -499,6 +510,7 @@
                                     "tknTag_": "VBZ",
                                     "tknText": "is",
                                     "tknTextWithWs": "is ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -526,7 +538,7 @@
                                     "tknPos_": "DET",
                                     "tknPrefix_": "t",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 2,
                                     "tknSent": "This is the first sentence of the first paragraph.",
                                     "tknSentiment": 0.0,
@@ -535,6 +547,7 @@
                                     "tknTag_": "DT",
                                     "tknText": "the",
                                     "tknTextWithWs": "the ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -564,7 +577,7 @@
                                     "tknPos_": "ADJ",
                                     "tknPrefix_": "f",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 3,
                                     "tknSent": "This is the first sentence of the first paragraph.",
                                     "tknSentiment": 0.0,
@@ -573,6 +586,7 @@
                                     "tknTag_": "JJ",
                                     "tknText": "first",
                                     "tknTextWithWs": "first ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -599,7 +613,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "s",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 8,
                                     "tknSent": "This is the first sentence of the first paragraph.",
                                     "tknSentiment": 0.0,
@@ -608,6 +622,7 @@
                                     "tknTag_": "NN",
                                     "tknText": "sentence",
                                     "tknTextWithWs": "sentence ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -635,7 +650,7 @@
                                     "tknPos_": "ADP",
                                     "tknPrefix_": "o",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 8,
                                     "tknSent": "This is the first sentence of the first paragraph.",
                                     "tknSentiment": 0.0,
@@ -644,6 +659,7 @@
                                     "tknTag_": "IN",
                                     "tknText": "of",
                                     "tknTextWithWs": "of ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -671,7 +687,7 @@
                                     "tknPos_": "DET",
                                     "tknPrefix_": "t",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 6,
                                     "tknSent": "This is the first sentence of the first paragraph.",
                                     "tknSentiment": 0.0,
@@ -680,6 +696,7 @@
                                     "tknTag_": "DT",
                                     "tknText": "the",
                                     "tknTextWithWs": "the ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -709,7 +726,7 @@
                                     "tknPos_": "ADJ",
                                     "tknPrefix_": "f",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 7,
                                     "tknSent": "This is the first sentence of the first paragraph.",
                                     "tknSentiment": 0.0,
@@ -718,6 +735,7 @@
                                     "tknTag_": "JJ",
                                     "tknText": "first",
                                     "tknTextWithWs": "first ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -744,7 +762,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "p",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 8,
                                     "tknSent": "This is the first sentence of the first paragraph.",
                                     "tknSentiment": 0.0,
@@ -752,7 +770,8 @@
                                     "tknSuffix_": "aph",
                                     "tknTag_": "NN",
                                     "tknText": "paragraph",
-                                    "tknTextWithWs": "paragraph"
+                                    "tknTextWithWs": "paragraph",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>"
                                 },
                                 {
                                     "tknCluster": 0,
@@ -778,7 +797,7 @@
                                     "tknPos_": "PUNCT",
                                     "tknPrefix_": ".",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 9,
                                     "tknSent": "This is the first sentence of the first paragraph.",
                                     "tknSentiment": 0.0,
@@ -786,7 +805,8 @@
                                     "tknSuffix_": ".",
                                     "tknTag_": ".",
                                     "tknText": ".",
-                                    "tknTextWithWs": "."
+                                    "tknTextWithWs": ".",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>"
                                 }
                             ]
                         },
@@ -824,7 +844,7 @@
                                     "tknPos_": "PRON",
                                     "tknPrefix_": "T",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 0,
                                     "tknSent": "This is the second sentence of the first paragraph.",
                                     "tknSentiment": 0.0,
@@ -833,6 +853,7 @@
                                     "tknTag_": "DT",
                                     "tknText": "This",
                                     "tknTextWithWs": "This ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -860,7 +881,7 @@
                                     "tknPos_": "AUX",
                                     "tknPrefix_": "i",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 9,
                                     "tknSent": "This is the second sentence of the first paragraph.",
                                     "tknSentiment": 0.0,
@@ -869,6 +890,7 @@
                                     "tknTag_": "VBZ",
                                     "tknText": "is",
                                     "tknTextWithWs": "is ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -896,7 +918,7 @@
                                     "tknPos_": "DET",
                                     "tknPrefix_": "t",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 2,
                                     "tknSent": "This is the second sentence of the first paragraph.",
                                     "tknSentiment": 0.0,
@@ -905,6 +927,7 @@
                                     "tknTag_": "DT",
                                     "tknText": "the",
                                     "tknTextWithWs": "the ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -933,7 +956,7 @@
                                     "tknPos_": "ADJ",
                                     "tknPrefix_": "s",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 3,
                                     "tknSent": "This is the second sentence of the first paragraph.",
                                     "tknSentiment": 0.0,
@@ -942,6 +965,7 @@
                                     "tknTag_": "JJ",
                                     "tknText": "second",
                                     "tknTextWithWs": "second ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -968,7 +992,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "s",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 8,
                                     "tknSent": "This is the second sentence of the first paragraph.",
                                     "tknSentiment": 0.0,
@@ -977,6 +1001,7 @@
                                     "tknTag_": "NN",
                                     "tknText": "sentence",
                                     "tknTextWithWs": "sentence ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -1004,7 +1029,7 @@
                                     "tknPos_": "ADP",
                                     "tknPrefix_": "o",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 8,
                                     "tknSent": "This is the second sentence of the first paragraph.",
                                     "tknSentiment": 0.0,
@@ -1013,6 +1038,7 @@
                                     "tknTag_": "IN",
                                     "tknText": "of",
                                     "tknTextWithWs": "of ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -1040,7 +1066,7 @@
                                     "tknPos_": "DET",
                                     "tknPrefix_": "t",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 6,
                                     "tknSent": "This is the second sentence of the first paragraph.",
                                     "tknSentiment": 0.0,
@@ -1049,6 +1075,7 @@
                                     "tknTag_": "DT",
                                     "tknText": "the",
                                     "tknTextWithWs": "the ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -1078,7 +1105,7 @@
                                     "tknPos_": "ADJ",
                                     "tknPrefix_": "f",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 7,
                                     "tknSent": "This is the second sentence of the first paragraph.",
                                     "tknSentiment": 0.0,
@@ -1087,6 +1114,7 @@
                                     "tknTag_": "JJ",
                                     "tknText": "first",
                                     "tknTextWithWs": "first ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -1113,7 +1141,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "p",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 8,
                                     "tknSent": "This is the second sentence of the first paragraph.",
                                     "tknSentiment": 0.0,
@@ -1121,7 +1149,8 @@
                                     "tknSuffix_": "aph",
                                     "tknTag_": "NN",
                                     "tknText": "paragraph",
-                                    "tknTextWithWs": "paragraph"
+                                    "tknTextWithWs": "paragraph",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>"
                                 },
                                 {
                                     "tknCluster": 0,
@@ -1147,7 +1176,7 @@
                                     "tknPos_": "PUNCT",
                                     "tknPrefix_": ".",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 9,
                                     "tknSent": "This is the second sentence of the first paragraph.",
                                     "tknSentiment": 0.0,
@@ -1155,7 +1184,8 @@
                                     "tknSuffix_": ".",
                                     "tknTag_": ".",
                                     "tknText": ".",
-                                    "tknTextWithWs": "."
+                                    "tknTextWithWs": ".",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>"
                                 }
                             ]
                         }
@@ -1201,7 +1231,7 @@
                                     "tknPos_": "PRON",
                                     "tknPrefix_": "T",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 0,
                                     "tknSent": "This is the first sentence of the second paragraph.",
                                     "tknSentiment": 0.0,
@@ -1210,6 +1240,7 @@
                                     "tknTag_": "DT",
                                     "tknText": "This",
                                     "tknTextWithWs": "This ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -1237,7 +1268,7 @@
                                     "tknPos_": "AUX",
                                     "tknPrefix_": "i",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 9,
                                     "tknSent": "This is the first sentence of the second paragraph.",
                                     "tknSentiment": 0.0,
@@ -1246,6 +1277,7 @@
                                     "tknTag_": "VBZ",
                                     "tknText": "is",
                                     "tknTextWithWs": "is ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -1273,7 +1305,7 @@
                                     "tknPos_": "DET",
                                     "tknPrefix_": "t",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 2,
                                     "tknSent": "This is the first sentence of the second paragraph.",
                                     "tknSentiment": 0.0,
@@ -1282,6 +1314,7 @@
                                     "tknTag_": "DT",
                                     "tknText": "the",
                                     "tknTextWithWs": "the ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -1311,7 +1344,7 @@
                                     "tknPos_": "ADJ",
                                     "tknPrefix_": "f",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 3,
                                     "tknSent": "This is the first sentence of the second paragraph.",
                                     "tknSentiment": 0.0,
@@ -1320,6 +1353,7 @@
                                     "tknTag_": "JJ",
                                     "tknText": "first",
                                     "tknTextWithWs": "first ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -1346,7 +1380,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "s",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 8,
                                     "tknSent": "This is the first sentence of the second paragraph.",
                                     "tknSentiment": 0.0,
@@ -1355,6 +1389,7 @@
                                     "tknTag_": "NN",
                                     "tknText": "sentence",
                                     "tknTextWithWs": "sentence ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -1382,7 +1417,7 @@
                                     "tknPos_": "ADP",
                                     "tknPrefix_": "o",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 8,
                                     "tknSent": "This is the first sentence of the second paragraph.",
                                     "tknSentiment": 0.0,
@@ -1391,6 +1426,7 @@
                                     "tknTag_": "IN",
                                     "tknText": "of",
                                     "tknTextWithWs": "of ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -1418,7 +1454,7 @@
                                     "tknPos_": "DET",
                                     "tknPrefix_": "t",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 6,
                                     "tknSent": "This is the first sentence of the second paragraph.",
                                     "tknSentiment": 0.0,
@@ -1427,6 +1463,7 @@
                                     "tknTag_": "DT",
                                     "tknText": "the",
                                     "tknTextWithWs": "the ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -1455,7 +1492,7 @@
                                     "tknPos_": "ADJ",
                                     "tknPrefix_": "s",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 7,
                                     "tknSent": "This is the first sentence of the second paragraph.",
                                     "tknSentiment": 0.0,
@@ -1464,6 +1501,7 @@
                                     "tknTag_": "JJ",
                                     "tknText": "second",
                                     "tknTextWithWs": "second ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -1490,7 +1528,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "p",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 8,
                                     "tknSent": "This is the first sentence of the second paragraph.",
                                     "tknSentiment": 0.0,
@@ -1498,7 +1536,8 @@
                                     "tknSuffix_": "aph",
                                     "tknTag_": "NN",
                                     "tknText": "paragraph",
-                                    "tknTextWithWs": "paragraph"
+                                    "tknTextWithWs": "paragraph",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>"
                                 },
                                 {
                                     "tknCluster": 0,
@@ -1524,7 +1563,7 @@
                                     "tknPos_": "PUNCT",
                                     "tknPrefix_": ".",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 9,
                                     "tknSent": "This is the first sentence of the second paragraph.",
                                     "tknSentiment": 0.0,
@@ -1532,7 +1571,8 @@
                                     "tknSuffix_": ".",
                                     "tknTag_": ".",
                                     "tknText": ".",
-                                    "tknTextWithWs": "."
+                                    "tknTextWithWs": ".",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>"
                                 }
                             ]
                         },
@@ -1570,7 +1610,7 @@
                                     "tknPos_": "PRON",
                                     "tknPrefix_": "T",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 0,
                                     "tknSent": "This is the second sentence of the second paragraph.",
                                     "tknSentiment": 0.0,
@@ -1579,6 +1619,7 @@
                                     "tknTag_": "DT",
                                     "tknText": "This",
                                     "tknTextWithWs": "This ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -1606,7 +1647,7 @@
                                     "tknPos_": "AUX",
                                     "tknPrefix_": "i",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 9,
                                     "tknSent": "This is the second sentence of the second paragraph.",
                                     "tknSentiment": 0.0,
@@ -1615,6 +1656,7 @@
                                     "tknTag_": "VBZ",
                                     "tknText": "is",
                                     "tknTextWithWs": "is ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -1642,7 +1684,7 @@
                                     "tknPos_": "DET",
                                     "tknPrefix_": "t",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 2,
                                     "tknSent": "This is the second sentence of the second paragraph.",
                                     "tknSentiment": 0.0,
@@ -1651,6 +1693,7 @@
                                     "tknTag_": "DT",
                                     "tknText": "the",
                                     "tknTextWithWs": "the ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -1678,7 +1721,7 @@
                                     "tknPos_": "ADJ",
                                     "tknPrefix_": "s",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 3,
                                     "tknSent": "This is the second sentence of the second paragraph.",
                                     "tknSentiment": 0.0,
@@ -1687,6 +1730,7 @@
                                     "tknTag_": "JJ",
                                     "tknText": "second",
                                     "tknTextWithWs": "second ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -1713,7 +1757,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "s",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 8,
                                     "tknSent": "This is the second sentence of the second paragraph.",
                                     "tknSentiment": 0.0,
@@ -1722,6 +1766,7 @@
                                     "tknTag_": "NN",
                                     "tknText": "sentence",
                                     "tknTextWithWs": "sentence ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -1749,7 +1794,7 @@
                                     "tknPos_": "ADP",
                                     "tknPrefix_": "o",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 8,
                                     "tknSent": "This is the second sentence of the second paragraph.",
                                     "tknSentiment": 0.0,
@@ -1758,6 +1803,7 @@
                                     "tknTag_": "IN",
                                     "tknText": "of",
                                     "tknTextWithWs": "of ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -1785,7 +1831,7 @@
                                     "tknPos_": "DET",
                                     "tknPrefix_": "t",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 6,
                                     "tknSent": "This is the second sentence of the second paragraph.",
                                     "tknSentiment": 0.0,
@@ -1794,6 +1840,7 @@
                                     "tknTag_": "DT",
                                     "tknText": "the",
                                     "tknTextWithWs": "the ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -1822,7 +1869,7 @@
                                     "tknPos_": "ADJ",
                                     "tknPrefix_": "s",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 7,
                                     "tknSent": "This is the second sentence of the second paragraph.",
                                     "tknSentiment": 0.0,
@@ -1831,6 +1878,7 @@
                                     "tknTag_": "JJ",
                                     "tknText": "second",
                                     "tknTextWithWs": "second ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -1857,7 +1905,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "p",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 8,
                                     "tknSent": "This is the second sentence of the second paragraph.",
                                     "tknSentiment": 0.0,
@@ -1865,7 +1913,8 @@
                                     "tknSuffix_": "aph",
                                     "tknTag_": "NN",
                                     "tknText": "paragraph",
-                                    "tknTextWithWs": "paragraph"
+                                    "tknTextWithWs": "paragraph",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>"
                                 },
                                 {
                                     "tknCluster": 0,
@@ -1891,7 +1940,7 @@
                                     "tknPos_": "PUNCT",
                                     "tknPrefix_": ".",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 9,
                                     "tknSent": "This is the second sentence of the second paragraph.",
                                     "tknSentiment": 0.0,
@@ -1899,7 +1948,8 @@
                                     "tknSuffix_": ".",
                                     "tknTag_": ".",
                                     "tknText": ".",
-                                    "tknTextWithWs": "."
+                                    "tknTextWithWs": ".",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>"
                                 }
                             ]
                         }
@@ -1945,7 +1995,7 @@
                                     "tknPos_": "PRON",
                                     "tknPrefix_": "T",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 0,
                                     "tknSent": "This is the footer sentence",
                                     "tknSentiment": 0.0,
@@ -1954,6 +2004,7 @@
                                     "tknTag_": "DT",
                                     "tknText": "This",
                                     "tknTextWithWs": "This ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -1981,7 +2032,7 @@
                                     "tknPos_": "AUX",
                                     "tknPrefix_": "i",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 4,
                                     "tknSent": "This is the footer sentence",
                                     "tknSentiment": 0.0,
@@ -1990,6 +2041,7 @@
                                     "tknTag_": "VBZ",
                                     "tknText": "is",
                                     "tknTextWithWs": "is ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -2017,7 +2069,7 @@
                                     "tknPos_": "DET",
                                     "tknPrefix_": "t",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 2,
                                     "tknSent": "This is the footer sentence",
                                     "tknSentiment": 0.0,
@@ -2026,6 +2078,7 @@
                                     "tknTag_": "DT",
                                     "tknText": "the",
                                     "tknTextWithWs": "the ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -2052,7 +2105,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "f",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 3,
                                     "tknSent": "This is the footer sentence",
                                     "tknSentiment": 0.0,
@@ -2061,6 +2114,7 @@
                                     "tknTag_": "NN",
                                     "tknText": "footer",
                                     "tknTextWithWs": "footer ",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>",
                                     "tknWhitespace_": " "
                                 },
                                 {
@@ -2088,7 +2142,7 @@
                                     "tknPos_": "NOUN",
                                     "tknPrefix_": "s",
                                     "tknProb": -20.0,
-                                    "tknRank": "<spacy.vocab.Vocab object at 0x7fe037e58940>",
+                                    "tknRank": 18446744073709551615,
                                     "tknRightEdge": 4,
                                     "tknSent": "This is the footer sentence",
                                     "tknSentiment": 0.0,
@@ -2096,7 +2150,8 @@
                                     "tknSuffix_": "nce",
                                     "tknTag_": "NN",
                                     "tknText": "sentence",
-                                    "tknTextWithWs": "sentence"
+                                    "tknTextWithWs": "sentence",
+                                    "tknVocab": "<spacy.vocab.Vocab object at 0x7efe86254670>"
                                 }
                             ]
                         }
