@@ -9,13 +9,14 @@
 
 | Version | Feature(s) | 
 |---------|------------|
-| 0.9.7   | TBD        |
+| 0.9.8   | TBD        |
 
 ### 1.2 Already implemented
 
-| Version | Feature(s)                             |
-|---------|----------------------------------------|
-| 0.9.6   | Extracting an API                      |
+| Version | Feature(s)                          |
+|---------|-------------------------------------|
+| 0.9.7   | Documentation and test improvements |
+| 0.9.6   | Extracting an API                   |
 
 ## 2. Next Development Steps
 
@@ -28,8 +29,6 @@
 
 #### 2.1.2 Normal Priority
 
-- API documentation: Content improvement
-- API documentation: Layout improvement
 - line type header & footer:
   - optional: ignore the first / last page
   - optional: logging of the applied method
@@ -47,4 +46,5 @@
 
 ### 2.2 Already implemented
 
-- TODO
+- API documentation: Content improvement
+- API documentation: Layout improvement

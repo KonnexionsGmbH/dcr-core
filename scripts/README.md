@@ -1,6 +1,6 @@
 # DCR-CORE - File Directory **`scripts`**
 
-The subdirectory `0.9.7` contains the following scripts:
+The subdirectory `0.9.8` contains the following scripts:
 
 `run_install_4_vm_wsl2_1.sh` and
 `run_install_4_vm_wsl2_2.sh`

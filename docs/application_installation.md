@@ -17,7 +17,7 @@ Example installation with `pip`:
 A fully functional Docker image is available [here](https://hub.docker.com/repository/docker/konnexionsgmbh/dcr-core) on DockerHub. 
 From this, a local Docker container can be created with the following command:
 
-    docker run -it --name dcr-core -v <local directory>:/dcr-core/data/inbox_prod konnexionsgmbh/dcr-core:0.9.7
+    docker run -it --name dcr-core -v <local directory>:/dcr-core/data/inbox_prod konnexionsgmbh/dcr-core:0.9.8
 
 `<local directory>` is the local directory where the files created during the processing are stored.
 In addition to the software listed under prerequisites, the Docker container also contains a complete virtual environment for running **`DCR-CORE`** in suitable versions.
