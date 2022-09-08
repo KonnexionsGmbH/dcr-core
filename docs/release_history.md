@@ -37,8 +37,6 @@ Release Date: 07.09.2022
 | [Make for Windows](http://gnuwin32.sourceforge.net/packages/make.htm){:target="_blank"} | 3.81    | base version             |        |
 | [sed for Windows](http://gnuwin32.sourceforge.net/packages/sed.htm){:target="_blank"}   | 4.2.1   | base version             |        |
 
-----
-
 ## Version 0.9.6
 
 Release Date: 07.08.2022
