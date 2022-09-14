@@ -16,44 +16,22 @@ import json
 import re
 from typing import ClassVar
 
-import dcr_core.core_utils
+from dcr_core import core_glob
+from dcr_core import core_utils
+
+# ------------------------------------------------------------------
+# Global type aliases.
+# ------------------------------------------------------------------
+FontJSON = dict[str, bool | float | int | str]
+WordJSON = dict[str, bool | float | int | str]
+LineJSON = dict[str, float | int | list[WordJSON] | str]
+ParaJSON = dict[str, int | list[LineJSON] | str]
+PageJSON = dict[str, int | list[ParaJSON]]
+DocumentJSON = dict[str, bool | int | list[PageJSON] | str]
 
 
 class NLPCore:
     """NLP utility class."""
-
-    # ------------------------------------------------------------------
-    # Global type aliases.
-    # ------------------------------------------------------------------
-    ParserLineLine = dict[str, int | str]
-    ParserLineLines = list[ParserLineLine]
-
-    ParserLinePage = dict[str, int | ParserLineLines]
-    ParserLinePages = list[ParserLinePage]
-
-    ParserLineDocument = dict[str, int | ParserLinePages | str]
-
-    ParserPagePara = dict[str, int | str]
-    ParserPageParas = list[ParserPagePara]
-
-    ParserPagePage = dict[str, int | ParserPageParas]
-    ParserPagePages = list[ParserPagePage]
-
-    ParserPageDocument = dict[str, int | ParserPagePages | str]
-
-    ParserWordWord = dict[str, int | str]
-    ParserWordWords = list[ParserWordWord]
-
-    ParserWordLine = dict[str, int | ParserWordWords]
-    ParserWordLines = list[ParserWordLine]
-
-    ParserWordPara = dict[str, int | ParserWordLines]
-    ParserWordParas = list[ParserWordPara]
-
-    ParserWordPage = dict[str, int | str | ParserWordParas]
-    ParserWordPages = list[ParserWordPage]
-
-    ParserWordDocument = dict[str, int | str | ParserWordPages]
 
     # ------------------------------------------------------------------
     # Class variables.
@@ -62,25 +40,147 @@ class NLPCore:
     ENVIRONMENT_TYPE_PROD: ClassVar[str] = "prod"
     ENVIRONMENT_TYPE_TEST: ClassVar[str] = "test"
 
+    JSON_NAME_COLUMN: ClassVar[str] = "column"
+    JSON_NAME_COLUMN_NO: ClassVar[str] = "columnNo"
+    JSON_NAME_CONTAINER_COLUMNS: ClassVar[str] = "columns"
+    JSON_NAME_CONTAINER_ENTRIES: ClassVar[str] = "entries"
+    JSON_NAME_CONTAINER_FONTS: ClassVar[str] = "fonts"
+    JSON_NAME_CONTAINER_LINES: ClassVar[str] = "lines"
+    JSON_NAME_CONTAINER_LISTS: ClassVar[str] = "lists"
+    JSON_NAME_CONTAINER_PAGES: ClassVar[str] = "pages"
+    JSON_NAME_CONTAINER_PARAS: ClassVar[str] = "paras"
+    JSON_NAME_CONTAINER_ROWS: ClassVar[str] = "rows"
+    JSON_NAME_CONTAINER_SENTENCES: ClassVar[str] = "sentences"
+    JSON_NAME_CONTAINER_TABLES: ClassVar[str] = "tables"
+    JSON_NAME_CONTAINER_TITLES: ClassVar[str] = "titles"
+    JSON_NAME_CONTAINER_WORDS: ClassVar[str] = "words"
+    JSON_NAME_CTX_LINE_1: ClassVar[str] = "ctxLine1"
+    JSON_NAME_CTX_LINE_2: ClassVar[str] = "ctxLine2"
+    JSON_NAME_CTX_LINE_3: ClassVar[str] = "ctxLine3"
+    JSON_NAME_DOCUMENT: ClassVar[str] = "document"
+    JSON_NAME_EMBEDDED: ClassVar[str] = "embedded"
+    JSON_NAME_ENTRY: ClassVar[str] = "entry"
+    JSON_NAME_ENTRY_NO: ClassVar[str] = "entryNo"
+    JSON_NAME_FILE_NAME: ClassVar[str] = "fileName"
+    JSON_NAME_FONT: ClassVar[str] = "font"
+    JSON_NAME_FONT_NO: ClassVar[str] = "fontNo"
+    JSON_NAME_FORMAT: ClassVar[str] = "format"
+    JSON_NAME_FULL_NAME: ClassVar[str] = "fullName"
+    JSON_NAME_ID: ClassVar[str] = "id"
+    JSON_NAME_ITALIC_ANGLE: ClassVar[str] = "italicAngle"
+    JSON_NAME_LEVEL: ClassVar[str] = "level"
+    JSON_NAME_LINE: ClassVar[str] = "line"
+    JSON_NAME_LINE_NO: ClassVar[str] = "lineNo"
+    JSON_NAME_LINE_NO_PAGE: ClassVar[str] = "lineNoPage"
+    JSON_NAME_LINE_NO_PAGEFIRST: ClassVar[str] = "lineNoPageFirst"
+    JSON_NAME_LINE_NO_PAGELAST: ClassVar[str] = "lineNoPageLast"
+    JSON_NAME_LINE_NO_PARA: ClassVar[str] = "lineNoPara"
+    JSON_NAME_LIST: ClassVar[str] = "list"
+    JSON_NAME_LIST_NO: ClassVar[str] = "listNo"
+    JSON_NAME_LISTS_BULLET: ClassVar[str] = "listsBullet"
+    JSON_NAME_LISTS_NUMBER: ClassVar[str] = "listsNumber"
+    JSON_NAME_LLX: ClassVar[str] = "llx"
+    JSON_NAME_LLX_FIRST_COLUMN: ClassVar[str] = "llxFirstColumn"
+    JSON_NAME_LLX_FIRST_ROW: ClassVar[str] = "llxFirstRow"
+    JSON_NAME_NAME: ClassVar[str] = "name"
+    JSON_NAME_NO_COLUMNS: ClassVar[str] = "noColumns"
+    JSON_NAME_NO_ENTRIES: ClassVar[str] = "noEntries"
+    JSON_NAME_NO_FONTS: ClassVar[str] = "noFonts"
+    JSON_NAME_NO_LINES: ClassVar[str] = "noLines"
+    JSON_NAME_NO_LINES_FOOTER: ClassVar[str] = "noLinesFooter"
+    JSON_NAME_NO_LINES_HEADER: ClassVar[str] = "noLinesHeader"
+    JSON_NAME_NO_LINES_TOC: ClassVar[str] = "noLinesToc"
+    JSON_NAME_NO_LISTS_BULLET: ClassVar[str] = "noListsBullet"
+    JSON_NAME_NO_LISTS_NUMBER: ClassVar[str] = "noListsNumber"
+    JSON_NAME_NO_PAGES: ClassVar[str] = "noPages"
+    JSON_NAME_NO_PARAS: ClassVar[str] = "noParas"
+    JSON_NAME_NO_ROWS: ClassVar[str] = "noRows"
+    JSON_NAME_NO_SENTENCES: ClassVar[str] = "noSentences"
+    JSON_NAME_NO_TABLES: ClassVar[str] = "noTables"
+    JSON_NAME_NO_TITLES: ClassVar[str] = "noTitles"
+    JSON_NAME_NO_WORDS: ClassVar[str] = "noWords"
+    JSON_NAME_PAGE: ClassVar[str] = "page"
+    JSON_NAME_PAGE_NO: ClassVar[str] = "pageNo"
+    JSON_NAME_PAGE_NO_FIRST: ClassVar[str] = "pageNoFirst"
+    JSON_NAME_PAGE_NO_LAST: ClassVar[str] = "pageNoLast"
+    JSON_NAME_PARA: ClassVar[str] = "para"
+    JSON_NAME_PARA_NO: ClassVar[str] = "paraNo"
+    JSON_NAME_PARA_NO_PAGE: ClassVar[str] = "paraNoPage"
+    JSON_NAME_REGEXP: ClassVar[str] = "regexp"
+    JSON_NAME_ROW: ClassVar[str] = "row"
+    JSON_NAME_ROW_NO: ClassVar[str] = "rowNo"
+    JSON_NAME_SENTENCES: ClassVar[str] = "sentences"
+    JSON_NAME_SIZE: ClassVar[str] = "size"
+    JSON_NAME_TABLE: ClassVar[str] = "table"
+    JSON_NAME_TABLE_NO: ClassVar[str] = "tableNo"
+    JSON_NAME_TABLES: ClassVar[str] = "tables"
+    JSON_NAME_TEXT: ClassVar[str] = "text"
+    JSON_NAME_TOKEN_CLUSTER: ClassVar[str] = "tknCluster"
+    JSON_NAME_TOKEN_DEP_: ClassVar[str] = "tknDep_"
+    JSON_NAME_TOKEN_DOC: ClassVar[str] = "tknDoc"
+    JSON_NAME_TOKEN_ENT_IOB_: ClassVar[str] = "tknEntIob_"
+    JSON_NAME_TOKEN_HEAD: ClassVar[str] = "tknHead"
+    JSON_NAME_TOKEN_I: ClassVar[str] = "tknI"
+    JSON_NAME_TOKEN__IDX: ClassVar[str] = "tknIdx"
+    JSON_NAME_TOKEN_IS_ALPHA: ClassVar[str] = "tknIsAlpha"
+    JSON_NAME_TOKEN_IS_ASCII: ClassVar[str] = "tknIsAscii"
+    JSON_NAME_TOKEN_IS_OOV: ClassVar[str] = "tknIsOov"
+    JSON_NAME_TOKEN_IS_SENT_START: ClassVar[str] = "tknIsSentStart"
+    JSON_NAME_TOKEN_IS_TITLE: ClassVar[str] = "tknIsTitle"
+    JSON_NAME_TOKEN_LANG_: ClassVar[str] = "tknLang_"
+    JSON_NAME_TOKEN_LEFT_EDGE: ClassVar[str] = "tknLeftEdge"
+    JSON_NAME_TOKEN_LEMMA_: ClassVar[str] = "tknLemma_"
+    JSON_NAME_TOKEN_LEX: ClassVar[str] = "tknLex"
+    JSON_NAME_TOKEN_LEX_ID: ClassVar[str] = "tknLexId"
+    JSON_NAME_TOKEN_LOWER_: ClassVar[str] = "tknLower_"
+    JSON_NAME_TOKEN_MORPH: ClassVar[str] = "tknMorph"
+    JSON_NAME_TOKEN__NORM_: ClassVar[str] = "tknNorm_"
+    JSON_NAME_TOKEN_ORTH_: ClassVar[str] = "tknOrth_"
+    JSON_NAME_TOKEN_POS_: ClassVar[str] = "tknPos_"
+    JSON_NAME_TOKEN_PREFIX_: ClassVar[str] = "tknPrefix_"
+    JSON_NAME_TOKEN_PROB: ClassVar[str] = "tknProb"
+    JSON_NAME_TOKEN_RANK: ClassVar[str] = "tknRank"
+    JSON_NAME_TOKEN_RIGHTEDGE: ClassVar[str] = "tknRightEdge"
+    JSON_NAME_TOKEN_SENT: ClassVar[str] = "tknSent"
+    JSON_NAME_TOKEN_SENTIMENT: ClassVar[str] = "tknSentiment"
+    JSON_NAME_TOKEN_SHAPE_: ClassVar[str] = "tknShape_"
+    JSON_NAME_TOKEN_SUFFIX_: ClassVar[str] = "tknSuffix_"
+    JSON_NAME_TOKEN_TAG_: ClassVar[str] = "tknTag_"
+    JSON_NAME_TOKEN_TEXT: ClassVar[str] = "tknText"
+    JSON_NAME_TOKEN_TEXTWITHWS: ClassVar[str] = "tknTextWithWs"
+    JSON_NAME_TOKEN_VOCAB: ClassVar[str] = "tknVocab"
+    JSON_NAME_TOKEN_WHITESPACE_: ClassVar[str] = "tknWhitespace_"
+    JSON_NAME_TOC: ClassVar[str] = "toc"
+    JSON_NAME_TYPE: ClassVar[str] = "type"
+    JSON_NAME_URX: ClassVar[str] = "urx"
+    JSON_NAME_URX_FIRST_COLUMN: ClassVar[str] = "urxFirstColumn"
+    JSON_NAME_URX_FIRST_ROW: ClassVar[str] = "urxFirstRow"
+    JSON_NAME_WEIGHT: ClassVar[str] = "weight"
+    JSON_NAME_WORD: ClassVar[str] = "word"
+    JSON_NAME_WORD_NO: ClassVar[str] = "wordNo"
+    JSON_NAME_WORD_NO_LINE: ClassVar[str] = "wordNoLine"
+    JSON_NAME_WORD_NO_PAGE: ClassVar[str] = "wordNoPage"
+    JSON_NAME_WORD_NO_PARA: ClassVar[str] = "wordNoPara"
+
     JSON_NAME_BULLET: ClassVar[str] = "bullet"
 
     JSON_NAME_COLUMNS: ClassVar[str] = "columns"
-    JSON_NAME_COLUMN_NO: ClassVar[str] = "columnNo"
     JSON_NAME_COLUMN_SPAN: ClassVar[str] = "columnSpan"
     JSON_NAME_COORD_LLX: ClassVar[str] = "coordLLX"
     JSON_NAME_COORD_URX: ClassVar[str] = "coordURX"
     JSON_NAME_DOC_FILE_NAME: ClassVar[str] = "documentFileName"
-
     JSON_NAME_DOC_ID: ClassVar[str] = "documentId"
 
     JSON_NAME_ENTRIES: ClassVar[str] = "entries"
-    JSON_NAME_ENTRY_NO: ClassVar[str] = "entryNo"
 
     JSON_NAME_FIRST_COLUMN_LLX: ClassVar[str] = "firstColumnLLX"
     JSON_NAME_FIRST_ENTRY_LLX: ClassVar[str] = "firstEntryLLX"
     JSON_NAME_FIRST_ROW_LLX: ClassVar[str] = "firstRowLLX"
     JSON_NAME_FIRST_ROW_URX: ClassVar[str] = "firstRowURX"
     JSON_NAME_FUNCTION_IS_ASC: ClassVar[str] = "functionIsAsc"
+
+    JSON_NAME_GLYPH_FONT: ClassVar[str] = "font"
+    JSON_NAME_GLYPH_FONT_SIZE: ClassVar[str] = "fontSize"
 
     JSON_NAME_HEADING_CTX_LINE: ClassVar[str] = "headingCtxLine"
     JSON_NAME_HEADING_LEVEL: ClassVar[str] = "headingLevel"
@@ -90,32 +190,20 @@ class NLPCore:
 
     JSON_NAME_LAST_COLUMN_URX: ClassVar[str] = "lastColumnURX"
     JSON_NAME_LINES: ClassVar[str] = "lines"
-    JSON_NAME_LINE_NO: ClassVar[str] = "lineNo"
-    JSON_NAME_LINE_NO_PAGE: ClassVar[str] = "lineNoPage"
     JSON_NAME_LINE_NO_PAGE_FROM: ClassVar[str] = "lineNoPageFrom"
     JSON_NAME_LINE_NO_PAGE_TILL: ClassVar[str] = "lineNoPageTill"
     JSON_NAME_LINE_TYPE: ClassVar[str] = "lineType"
     JSON_NAME_LINE_TYPE_ANTI_PATTERNS: ClassVar[str] = "lineTypeAntiPatterns"
     JSON_NAME_LINE_TYPE_RULES: ClassVar[str] = "lineTypeRules"
-    JSON_NAME_LIST_NO: ClassVar[str] = "listNo"
-    JSON_NAME_LISTS_BULLET: ClassVar[str] = "listsBullet"
-    JSON_NAME_LISTS_NUMBER: ClassVar[str] = "listsNumber"
 
-    JSON_NAME_NAME: ClassVar[str] = "name"
-    JSON_NAME_NO_COLUMNS: ClassVar[str] = "noColumns"
-    JSON_NAME_NO_ENTRIES: ClassVar[str] = "noEntries"
-    JSON_NAME_NO_LINES_FOOTER: ClassVar[str] = "noLinesFooter"
-    JSON_NAME_NO_LINES_HEADER: ClassVar[str] = "noLinesHeader"
     JSON_NAME_NO_LINES_IN_DOC: ClassVar[str] = "noLinesInDocument"
     JSON_NAME_NO_LINES_IN_PAGE: ClassVar[str] = "noLinesInPage"
     JSON_NAME_NO_LINES_IN_PARA: ClassVar[str] = "noLinesInParagraph"
-    JSON_NAME_NO_LINES_TOC: ClassVar[str] = "noLinesToc"
     JSON_NAME_NO_LISTS_BULLET_IN_DOC: ClassVar[str] = "noListsBulletInDocument"
     JSON_NAME_NO_LISTS_NUMBER_IN_DOC: ClassVar[str] = "noListsNumberInDocument"
     JSON_NAME_NO_PAGES_IN_DOC: ClassVar[str] = "noPagesInDocument"
     JSON_NAME_NO_PARAS_IN_DOC: ClassVar[str] = "noParagraphsInDocument"
     JSON_NAME_NO_PARAS_IN_PAGE: ClassVar[str] = "noParagraphsInPage"
-    JSON_NAME_NO_ROWS: ClassVar[str] = "noRows"
     JSON_NAME_NO_SENTS_IN_DOC: ClassVar[str] = "noSentencesInDocument"
     JSON_NAME_NO_SENTS_IN_PAGE: ClassVar[str] = "noSentencesInPage"
     JSON_NAME_NO_SENTS_IN_PARA: ClassVar[str] = "noSentencesInParagraph"
@@ -132,93 +220,49 @@ class NLPCore:
     JSON_NAME_NUMBER: ClassVar[str] = "number"
 
     JSON_NAME_PAGES: ClassVar[str] = "pages"
-    JSON_NAME_PAGE_NO: ClassVar[str] = "pageNo"
     JSON_NAME_PAGE_NO_FROM: ClassVar[str] = "pageNoFrom"
     JSON_NAME_PAGE_NO_TILL: ClassVar[str] = "pageNoTill"
     JSON_NAME_PARAS: ClassVar[str] = "paragraphs"
-    JSON_NAME_PARA_NO: ClassVar[str] = "paragraphNo"
 
-    JSON_NAME_REGEXP: ClassVar[str] = "regexp"
     JSON_NAME_ROWS: ClassVar[str] = "rows"
-    JSON_NAME_ROW_NO: ClassVar[str] = "rowNo"
 
     JSON_NAME_SENTS: ClassVar[str] = "sentences"
     JSON_NAME_SENT_NO: ClassVar[str] = "sentenceNo"
     JSON_NAME_START_VALUES: ClassVar[str] = "startValues"
 
-    JSON_NAME_TABLES: ClassVar[str] = "tables"
-    JSON_NAME_TABLE_NO: ClassVar[str] = "tableNo"
-    JSON_NAME_TEXT: ClassVar[str] = "text"
-    JSON_NAME_TOC: ClassVar[str] = "toc"
     JSON_NAME_TITLES: ClassVar[str] = "titles"
     JSON_NAME_TOKENS: ClassVar[str] = "tokens"
 
-    JSON_NAME_TOKEN_CLUSTER: ClassVar[str] = "tknCluster"
-    JSON_NAME_TOKEN_DEP_: ClassVar[str] = "tknDep_"
-    JSON_NAME_TOKEN_DOC: ClassVar[str] = "tknDoc"
-    JSON_NAME_TOKEN_ENT_IOB_: ClassVar[str] = "tknEntIob_"
     JSON_NAME_TOKEN_ENT_KB_ID_: ClassVar[str] = "tknEntKbId_"
     JSON_NAME_TOKEN_ENT_TYPE_: ClassVar[str] = "tknEntType_"
-    JSON_NAME_TOKEN_HEAD: ClassVar[str] = "tknHead"
-    JSON_NAME_TOKEN_I: ClassVar[str] = "tknI"
     JSON_NAME_TOKEN_IDX: ClassVar[str] = "tknIdx"
-    JSON_NAME_TOKEN_IS_ALPHA: ClassVar[str] = "tknIsAlpha"
-    JSON_NAME_TOKEN_IS_ASCII: ClassVar[str] = "tknIsAscii"
     JSON_NAME_TOKEN_IS_BRACKET: ClassVar[str] = "tknIsBracket"
     JSON_NAME_TOKEN_IS_CURRENCY: ClassVar[str] = "tknIsCurrency"
     JSON_NAME_TOKEN_IS_DIGIT: ClassVar[str] = "tknIsDigit"
     JSON_NAME_TOKEN_IS_LEFT_PUNCT: ClassVar[str] = "tknIsLeftPunct"
     JSON_NAME_TOKEN_IS_LOWER: ClassVar[str] = "tknIsLower"
-    JSON_NAME_TOKEN_IS_OOV: ClassVar[str] = "tknIsOov"
     JSON_NAME_TOKEN_IS_PUNCT: ClassVar[str] = "tknIsPunct"
     JSON_NAME_TOKEN_IS_QUOTE: ClassVar[str] = "tknIsQuote"
     JSON_NAME_TOKEN_IS_RIGHT_PUNCT: ClassVar[str] = "tknIsRightPunct"
     JSON_NAME_TOKEN_IS_SENT_END: ClassVar[str] = "tknIsSentEnd"
-    JSON_NAME_TOKEN_IS_SENT_START: ClassVar[str] = "tknIsSentStart"
     JSON_NAME_TOKEN_IS_SPACE: ClassVar[str] = "tknIsSpace"
     JSON_NAME_TOKEN_IS_STOP: ClassVar[str] = "tknIsStop"
-    JSON_NAME_TOKEN_IS_TITLE: ClassVar[str] = "tknIsTitle"
     JSON_NAME_TOKEN_IS_UPPER: ClassVar[str] = "tknIsUpper"
-    JSON_NAME_TOKEN_LANG_: ClassVar[str] = "tknLang_"
-    JSON_NAME_TOKEN_LEFT_EDGE: ClassVar[str] = "tknLeftEdge"
-    JSON_NAME_TOKEN_LEMMA_: ClassVar[str] = "tknLemma_"
-    JSON_NAME_TOKEN_LEX: ClassVar[str] = "tknLex"
-    JSON_NAME_TOKEN_LEX_ID: ClassVar[str] = "tknLexId"
     JSON_NAME_TOKEN_LIKE_EMAIL: ClassVar[str] = "tknLikeEmail"
     JSON_NAME_TOKEN_LIKE_NUM: ClassVar[str] = "tknLikeNum"
     JSON_NAME_TOKEN_LIKE_URL: ClassVar[str] = "tknLikeUrl"
-    JSON_NAME_TOKEN_LOWER_: ClassVar[str] = "tknLower_"
-    JSON_NAME_TOKEN_MORPH: ClassVar[str] = "tknMorph"
     JSON_NAME_TOKEN_NORM_: ClassVar[str] = "tknNorm_"
-    JSON_NAME_TOKEN_ORTH_: ClassVar[str] = "tknOrth_"
-    JSON_NAME_TOKEN_POS_: ClassVar[str] = "tknPos_"
-    JSON_NAME_TOKEN_PREFIX_: ClassVar[str] = "tknPrefix_"
-    JSON_NAME_TOKEN_PROB: ClassVar[str] = "tknProb"
-    JSON_NAME_TOKEN_RANK: ClassVar[str] = "tknRank"
     JSON_NAME_TOKEN_RIGHT_EDGE: ClassVar[str] = "tknRightEdge"
-    JSON_NAME_TOKEN_SENT: ClassVar[str] = "tknSent"
-    JSON_NAME_TOKEN_SENTIMENT: ClassVar[str] = "tknSentiment"
-    JSON_NAME_TOKEN_SHAPE_: ClassVar[str] = "tknShape_"
-    JSON_NAME_TOKEN_SUFFIX_: ClassVar[str] = "tknSuffix_"
-    JSON_NAME_TOKEN_TAG_: ClassVar[str] = "tknTag_"
     JSON_NAME_TOKEN_TENSOR: ClassVar[str] = "tknTensor"
-    JSON_NAME_TOKEN_TEXT: ClassVar[str] = "tknText"
     JSON_NAME_TOKEN_TEXT_WITH_WS: ClassVar[str] = "tknTextWithWs"
-    JSON_NAME_TOKEN_VOCAB: ClassVar[str] = "tknVocab"
-    JSON_NAME_TOKEN_WHITESPACE_: ClassVar[str] = "tknWhitespace_"
 
     JSON_NAME_UPPER_RIGHT_X: ClassVar[str] = "upperRightX"
 
     JSON_NAME_WORDS: ClassVar[str] = "words"
-    JSON_NAME_WORD_NO: ClassVar[str] = "wordNo"
 
     LANGUAGE_PANDOC_DEFAULT: ClassVar[str] = "en"
     LANGUAGE_SPACY_DEFAULT: ClassVar[str] = "en_core_web_trf"
     LANGUAGE_TESSERACT_DEFAULT: ClassVar[str] = "eng"
-
-    LINE_TET_DOCUMENT_OPT_LIST: ClassVar[str] = "engines={noannotation noimage text notextcolor novector}"
-    LINE_TET_PAGE_OPT_LIST: ClassVar[str] = "granularity=line"
-    LINE_XML_VARIATION: ClassVar[str] = "line."
 
     LINE_TYPE_BODY: ClassVar[str] = "b"
     LINE_TYPE_FOOTER: ClassVar[str] = "f"
@@ -231,16 +275,22 @@ class NLPCore:
 
     LOGGER_PROGRESS_UPDATE: ClassVar[str] = "Progress update "
 
-    PAGE_TET_DOCUMENT_OPT_LIST: ClassVar[str] = "engines={noannotation noimage text notextcolor novector} " + "lineseparator=U+0020"
-    PAGE_TET_PAGE_OPT_LIST: ClassVar[str] = "granularity=page"
-    PAGE_XML_VARIATION: ClassVar[str] = "page."
-
     PARSE_NAME_SPACE: ClassVar[str] = "{http://www.pdflib.com/XML/TET5/TET-5.0}"
 
     PARSE_ATTR_COL_SPAN: ClassVar[str] = "colSpan"
+    PARSE_ATTR_EMBEDDED: ClassVar[str] = "embedded"
+    PARSE_ATTR_FULL_NAME: ClassVar[str] = "fullname"
+    PARSE_ATTR_ID: ClassVar[str] = "id"
+    PARSE_ATTR_ITALIC_ANGLE: ClassVar[str] = "italicangle"
+    PARSE_ATTR_NAME: ClassVar[str] = "name"
+    PARSE_ATTR_TYPE: ClassVar[str] = "type"
+    PARSE_ATTR_WEIGHT: ClassVar[str] = "weight"
+    PARSE_ATTR_GLYPH_FONT: ClassVar[str] = "font"
+    PARSE_ATTR_GLYPH_SIZE: ClassVar[str] = "size"
     PARSE_ATTR_LLX: ClassVar[str] = "llx"
     PARSE_ATTR_URX: ClassVar[str] = "urx"
 
+    PARSE_ELEM_A: ClassVar[str] = "A"
     PARSE_ELEM_ACTION: ClassVar[str] = "Action"
     PARSE_ELEM_ANNOTATIONS: ClassVar[str] = "Annotations"
     PARSE_ELEM_ATTACHMENTS: ClassVar[str] = "Attachments"
@@ -249,20 +299,31 @@ class NLPCore:
     PARSE_ELEM_BOOKMARKS: ClassVar[str] = "Bookmarks"
     PARSE_ELEM_BOX: ClassVar[str] = "Box"
     PARSE_ELEM_CELL: ClassVar[str] = "Cell"
+    PARSE_ELEM_COLOR_SPACES: ClassVar[str] = "ColorSpaces"
     PARSE_ELEM_CONTENT: ClassVar[str] = "Content"
     PARSE_ELEM_CREATION: ClassVar[str] = "Creation"
     PARSE_ELEM_CREATION_DATE: ClassVar[str] = "CreationDate"
     PARSE_ELEM_CREATOR: ClassVar[str] = "Creator"
     PARSE_ELEM_CUSTOM: ClassVar[str] = "Custom"
+    PARSE_ELEM_CUSTOM_BINARY: ClassVar[str] = "CustomBinary"
     PARSE_ELEM_DESTINATIONS: ClassVar[str] = "Destinations"
     PARSE_ELEM_DOCUMENT: ClassVar[str] = "Document"
-    PARSE_ELEM_DOCUMENT_INFO: ClassVar[str] = "DocInfo"
+    PARSE_ELEM_DOC_INFO: ClassVar[str] = "DocInfo"
     PARSE_ELEM_ENCRYPTION: ClassVar[str] = "Encryption"
     PARSE_ELEM_EXCEPTION: ClassVar[str] = "Exception"
     PARSE_ELEM_FIELDS: ClassVar[str] = "Fields"
+    PARSE_ELEM_FONT: ClassVar[str] = "Font"
+    PARSE_ELEM_FONTS: ClassVar[str] = "Fonts"
     PARSE_ELEM_FROM: ClassVar[int] = len(PARSE_NAME_SPACE)
+    PARSE_ELEM_GLYPH: ClassVar[str] = "Glyph"
     PARSE_ELEM_GRAPHICS: ClassVar[str] = "Graphics"
+    PARSE_ELEM_GTS_PDFX_CONFORMANCE: ClassVar[str] = "GTS_PDFXConformance"
+    PARSE_ELEM_GTS_PDFX_VERSION: ClassVar[str] = "GTS_PDFXVersion"
+    PARSE_ELEM_GTS_PPMLVDX_CONFORMANCE: ClassVar[str] = "GTS_PPMLVDXConformance"
+    PARSE_ELEM_GTS_PPMLVDX_VERSION: ClassVar[str] = "GTS_PPMLVDXVersion"
+    PARSE_ELEM_ISO_PDFE_VERSION: ClassVar[str] = "ISO_PDFEVersion"
     PARSE_ELEM_JAVA_SCRIPTS: ClassVar[str] = "JavaScripts"
+    PARSE_ELEM_KEYWORDS: ClassVar[str] = "Keywords"
     PARSE_ELEM_LINE: ClassVar[str] = "Line"
     PARSE_ELEM_METADATA: ClassVar[str] = "Metadata"
     PARSE_ELEM_MOD_DATE: ClassVar[str] = "ModDate"
@@ -276,22 +337,19 @@ class NLPCore:
     PARSE_ELEM_RESOURCES: ClassVar[str] = "Resources"
     PARSE_ELEM_ROW: ClassVar[str] = "Row"
     PARSE_ELEM_SIGNATURE_FIELDS: ClassVar[str] = "SignatureFields"
+    PARSE_ELEM_SUBJECT: ClassVar[str] = "Subject"
     PARSE_ELEM_TABLE: ClassVar[str] = "Table"
     PARSE_ELEM_TEXT: ClassVar[str] = "Text"
     PARSE_ELEM_TITLE: ClassVar[str] = "Title"
+    PARSE_ELEM_TRAPPED: ClassVar[str] = "Trapped"
     PARSE_ELEM_WORD: ClassVar[str] = "Word"
     PARSE_ELEM_XFA: ClassVar[str] = "XFA"
 
     SEARCH_STRATEGY_LINES: ClassVar[str] = "lines"
     SEARCH_STRATEGY_TABLE: ClassVar[str] = "table"
 
-    TETML_TYPE_LINE: ClassVar[str] = "line"
-    TETML_TYPE_PAGE: ClassVar[str] = "page"
-    TETML_TYPE_WORD: ClassVar[str] = "word"
-
-    WORD_TET_DOCUMENT_OPT_LIST: ClassVar[str] = "engines={noannotation noimage text notextcolor novector}"
-    WORD_TET_PAGE_OPT_LIST: ClassVar[str] = "granularity=word tetml={elements={line}}"
-    WORD_XML_VARIATION: ClassVar[str] = "word."
+    TET_DOCUMENT_OPT_LIST: ClassVar[str] = "engines={noannotation noimage text novector}"
+    TET_PAGE_OPT_LIST: ClassVar[str] = "granularity=word tetml={glyphdetails={all} elements={line}}"
 
     # ------------------------------------------------------------------
     # Initialise the instance.
@@ -299,14 +357,16 @@ class NLPCore:
     def __init__(self) -> None:
         """Initialise the instance."""
         try:
-            dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+            core_glob.logger.debug(core_glob.LOGGER_START)
         except AttributeError:
-            dcr_core.core_glob.initialise_logger()
-            dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+            core_glob.initialise_logger()
+            core_glob.logger.debug(core_glob.LOGGER_START)
 
         self._exist = True
 
-        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
+        self.document_json: dict[str, bool | int | list[PageJSON] | str] = {}
+
+        core_glob.logger.debug(core_glob.LOGGER_END)
 
     # ------------------------------------------------------------------
     # Convert a roman numeral to integer.
@@ -720,20 +780,6 @@ class NLPCore:
             )
 
         with open(file_name, "w", encoding=file_encoding) as file_handle:
-            # {
-            #     "lineTypeListAntiPatterns": [
-            #       (name, regexp),
-            #     ]
-            #     "lineTypeRules": [
-            #       {
-            #          "name": "xxx",
-            #          "isFirstToken": bool,
-            #          "regexp": "xxx",
-            #          "functionIsAsc": "xxx",
-            #          "startValues": ["xxx"]
-            #       },
-            #     ]
-            # }
             json.dump(
                 {
                     NLPCore.JSON_NAME_LINE_TYPE_ANTI_PATTERNS: anti_patterns,
@@ -745,9 +791,9 @@ class NLPCore:
             )
 
         if len(anti_patterns) > 0:
-            dcr_core.core_utils.progress_msg(is_verbose, f"{len(anti_patterns):3d} heading       line type anti-pattern(s) exported")
+            core_utils.progress_msg(is_verbose, f"{len(anti_patterns):3d} heading       line type anti-pattern(s) exported")
         if len(rules) > 0:
-            dcr_core.core_utils.progress_msg(is_verbose, f"{len(rules):3d} heading       line type rule(s)         exported")
+            core_utils.progress_msg(is_verbose, f"{len(rules):3d} heading       line type rule(s)         exported")
 
     # ------------------------------------------------------------------
     # Export the default bulleted list line type rules.
@@ -788,14 +834,6 @@ class NLPCore:
             rules.append(rule)
 
         with open(file_name, "w", encoding=file_encoding) as file_handle:
-            #     "lineTypeListAntiPatterns": [
-            #       (name, regexp),
-            #     ]
-            # {
-            #     "lineTypeListRules": [
-            #       regexp,
-            #     ]
-            # }
             json.dump(
                 {
                     NLPCore.JSON_NAME_LINE_TYPE_ANTI_PATTERNS: anti_patterns,
@@ -807,9 +845,9 @@ class NLPCore:
             )
 
         if len(anti_patterns) > 0:
-            dcr_core.core_utils.progress_msg(is_verbose, f"{len(anti_patterns):3d} bulleted list line type anti-pattern(s) exported")
+            core_utils.progress_msg(is_verbose, f"{len(anti_patterns):3d} bulleted list line type anti-pattern(s) exported")
         if len(rules) > 0:
-            dcr_core.core_utils.progress_msg(is_verbose, f"{len(rules):3d} bulleted list line type rule(s)         exported")
+            core_utils.progress_msg(is_verbose, f"{len(rules):3d} bulleted list line type rule(s)         exported")
 
     # ------------------------------------------------------------------
     # Export the default numbered list line type rules.
@@ -857,19 +895,6 @@ class NLPCore:
             )
 
         with open(file_name, "w", encoding=file_encoding) as file_handle:
-            # {
-            #     "lineTypeListAntiPatterns": [
-            #       (name, regexp),
-            #     ]
-            #     "lineTypeListRules": [
-            #       {
-            #          "name": "xxx",
-            #          "regexp": "xxx",
-            #          "functionIsAsc": "xxx",
-            #          "startValues": ["xxx"]
-            #       },
-            #     ]
-            # }
             json.dump(
                 {
                     NLPCore.JSON_NAME_LINE_TYPE_ANTI_PATTERNS: anti_patterns,
@@ -881,9 +906,9 @@ class NLPCore:
             )
 
         if len(anti_patterns) > 0:
-            dcr_core.core_utils.progress_msg(is_verbose, f"{len(anti_patterns):3d} numbered list line type anti-pattern(s) exported")
+            core_utils.progress_msg(is_verbose, f"{len(anti_patterns):3d} numbered list line type anti-pattern(s) exported")
         if len(rules) > 0:
-            dcr_core.core_utils.progress_msg(is_verbose, f"{len(rules):3d} numbered list line type rule(s)         exported")
+            core_utils.progress_msg(is_verbose, f"{len(rules):3d} numbered list line type rule(s)         exported")
 
     # ------------------------------------------------------------------
     # Get the default heading line type anti-patterns.

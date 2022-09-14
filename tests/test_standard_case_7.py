@@ -2,7 +2,9 @@
 """Testing Standard Cases."""
 import pytest
 
-import dcr_core.cls_process
+import dcr_core.cls_process as process
+from dcr_core import core_glob
+from dcr_core import core_utils
 
 # -----------------------------------------------------------------------------
 # Constants & Globals.
@@ -16,11 +18,11 @@ import dcr_core.cls_process
 def test(fxtr_setup_empty_inbox):
     """Test Case 7."""
     # -------------------------------------------------------------------------
-    directory_name = dcr_core.core_glob.setup.directory_inbox
+    directory_name = core_glob.setup.directory_inbox
     stem_name = "case_7_cfg_wrong_extension"
     file_extension = "cfg"
 
-    full_name = dcr_core.core_utils.get_full_name_from_components(directory_name, stem_name, file_extension)
+    full_name = core_utils.get_full_name_from_components(directory_name, stem_name, file_extension)
 
     # -------------------------------------------------------------------------
     pytest.helpers.copy_files_4_pytest_2_dir(
@@ -31,7 +33,7 @@ def test(fxtr_setup_empty_inbox):
     )
 
     # -------------------------------------------------------------------------
-    instance = dcr_core.cls_process.Process()
+    instance = process.Process()
 
     with pytest.raises(RuntimeError) as e:
         instance.document(full_name, is_delete_auxiliary_files=False)

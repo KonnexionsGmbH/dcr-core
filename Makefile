@@ -8,7 +8,7 @@ ifeq ($(OS),Windows_NT)
 	export MYPYPATH=
 	export PIPENV=python -m pipenv
 	export PYTHON=python
-	export PYTHONPATH=src\\dcr_core
+	export PYTHONPATH=src
 else
 	export CREATE_DIST=mkdir -p dist
 	export CREATE_DOCS=mkdir -p docs/api-docs
@@ -17,7 +17,7 @@ else
 	export MYPYPATH=
 	export PIPENV=python3 -m pipenv
 	export PYTHON=python3
-	export PYTHONPATH=src/dcr_core
+	export PYTHONPATH=src
 endif
 
 ##                                                                            .

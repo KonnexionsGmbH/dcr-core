@@ -38,7 +38,7 @@ The following parameter controls both the classification of the headers and the 
 
 - **`verbose_lt_header_footer`**
 
-Default value: **`false`** - the verbose mode is an option that provides additional details as to what the processing algorithm is doing.
+The verbose mode is an option that provides additional details as to what the processing algorithm is doing.
 
 ### 1.1 Footers
 
@@ -48,15 +48,19 @@ The following parameters control the classification of the footers:
 
 - **`lt_footer_max_distance`**
 
-Default value: **`3`** - The degree of similarity of rows is determined by means of the [Levenshtein distance](https://en.wikipedia.org/wiki/Levenshtein_distance){:target="_blank"}. 
+The degree of similarity of rows is determined by means of the [Levenshtein distance](https://en.wikipedia.org/wiki/Levenshtein_distance){:target="_blank"}. 
 The value zero stands for identical lines. 
 The larger the Levenshtein distance, the more different the rows are. 
 If the header lines do not contain a page numbers, then the parameter should be set to `0`.
 
 - **`lt_footer_max_lines`**
 
-Default value: **`3`** - the number of lines from the bottom of the page to be analyzed as possible candidates for footers.
+The number of lines from the bottom of the page to be analyzed as possible candidates for footers.
 With the value zero the classification of footers is prevented.
+
+- **`lt_footer_required`**
+
+If it is set to **`true`**, the determination of the footer lines is performed, else the classification of footers is prevented.
 
 - **`spacy_ignore_line_type_footer`**
 
@@ -92,6 +96,10 @@ If the footer lines contain a page number, then depending on the number of pages
 Default value: **`3`** - the number of lines from the top of the page to be analyzed as possible candidates for headers.
 A value of zero prevents the classification of headers.
 
+- **`lt_header_required`**
+
+If it is set to **`true`**, the determination of the header lines is performed, else the classification of headers is prevented.
+
 - **`spacy_ignore_line_type_header`**
 
 Default value: **`true`** -  determines whether the lines of this type are ignored (**true**) or not (**false**) during tokenization.
@@ -121,6 +129,10 @@ A value of zero prevents the search for a table of contents.
 - **`lt_toc_min_entries`**
 
 Default value: **`3`** - defines the minimum number of entries that a table of contents must contain.
+
+- **`lt_toc_required`**
+
+If it is set to **`true`**, the determination of the table of contents is performed, else the classification of table of contents is prevented.
 
 - **`spacy_ignore_line_type_toc`**
 
@@ -164,6 +176,10 @@ Default value: **`true`** - if true, a **`JSON`** file named `<document_name>_ta
 
 Default value: **`true`** - if true, the empty columns are included in the **`JSON`** file `<document_name>_table.json`.
 
+- **`lt_table_required`**
+
+If it is set to **`true`**, the determination of the tables is performed, else the classification of tables is prevented.
+
 - **`spacy_ignore_line_type_table`**
 
 Default value: **`false`** -  determines whether the lines of this type are ignored (**true**) or not (**false**) during tokenization.
@@ -188,6 +204,10 @@ Default value: **`true`** - if true, a **`JSON`** file named `<document_name>_li
 - **`lt_list_bullet_min_entries`**
 
 Default value: **`2`** - the minimum number of entries in a bulleted list.
+
+- **`lt_list_bullet_required`**
+
+If it is set to **`true`**, the determination of the bulleted lists is performed, else the classification of bulleted lists is prevented.
 
 - **`lt_list_bullet_rule_file`**
 
@@ -237,7 +257,7 @@ An example file can be found in the file directory **`data`** with the file name
 
 ## 5 Numbered Lists
 
-TBD
+TODO
 
 ## 6 Headings
 
@@ -264,6 +284,10 @@ Default value: **`3`** - the maximum number of hierarchical heading levels.
 - **`lt_heading_min_pages`**
 
 Default value: **`2`** - the minimum number of document pages for determining headings.
+
+- **`lt_heading_required`**
+
+If it is set to **`true`**, the determination of the headings is performed, else the classification of headings is prevented.
 
 - **`lt_heading_rule_file`**
 

@@ -55,28 +55,33 @@ The customisable entries are:
     lt_export_rule_file_list_number = data/lt_export_rule_list_number.json
     lt_footer_max_distance = 3
     lt_footer_max_lines = 3
+    lt_footer_required = true
     lt_header_max_distance = 3
     lt_header_max_lines = 3
+    lt_header_required = true
     lt_heading_file_incl_no_ctx = 1
     lt_heading_file_incl_regexp = false
     lt_heading_max_level = 3
     lt_heading_min_pages = 2
+    lt_heading_required = true
     lt_heading_rule_file = none
     lt_heading_tolerance_llx = 10
     lt_list_bullet_min_entries = 2
+    lt_list_bullet_required = true
     lt_list_bullet_rule_file = none
     lt_list_bullet_tolerance_llx = 10
     lt_list_number_file_incl_regexp = false
     lt_list_number_min_entries = 2
+    lt_list_number_required = true
     lt_list_number_rule_file = none
     lt_list_number_tolerance_llx = 10
     lt_table_file_incl_empty_columns = true
+    lt_table_required = true
     lt_toc_last_page = 5
     lt_toc_min_entries = 5
+    lt_toc_required = true
     pdf2image_type = jpeg
     tesseract_timeout = 30
-    tetml_page = false
-    tetml_word = false
     tokenize_2_database = true
     tokenize_2_jsonfile = true
     verbose = true
@@ -88,53 +93,58 @@ The customisable entries are:
     verbose_lt_toc = false
     verbose_parser = none
 
-| Parameter                        | Description                                                                                                             |
-|----------------------------------|-------------------------------------------------------------------------------------------------------------------------|
-| create_extra_file_heading        | Create a separate **`JSON`** file with the table of contents.                                                           |
-| create_extra_file_list_bullet    | Create a separate **`JSON`** file with the bulleted lists.                                                              |
-| create_extra_file_list_number    | Create a separate **`JSON`** file with the numbered lists.                                                              |
-| create_extra_file_table          | Create a separate **`JSON`** file with the tables.                                                                      |
-| delete_auxiliary_files           | Delete the auxiliary files after a successful <br>processing step.                                                      |
-| directory_inbox                  | Directory for the new documents received.                                                                               |
-| json_indent                      | Improves the readability of the **`JSON`** file.                                                                        |
-| json_sort_keys                   | If it is set to **`true`**, the keys are set <br/>in ascending order else, they appear as <br/>in the Python object.    |
-| lt_export_rule_file_heading      | File name for the export of the heading rules.                                                                          |
-| lt_export_rule_file_list_bullet  | File name for the export of the bulleted list rules.                                                                    |
-| lt_export_rule_file_list_number  | File name for the export of the numbered list rules.                                                                    |
-| lt_footer_max_distance           | Maximum Levenshtein distance for a footer line.                                                                         |
-| lt_footer_max_lines              | Maximum number of footers.                                                                                              |
-| lt_header_max_distance           | Maximum Levenshtein distance for a header line.                                                                         |
-| lt_header_max_lines              | Maximum number of headers.                                                                                              |
-| lt_heading_file_incl_no_ctx      | The number of lines following the heading to be included as context into the **`JSON`** file.                           |
-| lt_heading_file_incl_regexp      | If it is set to **`true`**, the regular expression for the heading is included in the **`JSON`** file.                  |
-| lt_heading_max_level             | Maximum level of the heading structure.                                                                                 |
-| lt_heading_min_pages             | Minimum number of pages to determine the headings.                                                                      |
-| lt_heading_rule_file             | File with rules to determine the headings.                                                                              |
-| lt_heading_tolerance_llx         | Tolerance of vertical indentation in percent.                                                                           |
-| lt_list_bullet_min_entries       | Minimum number of entries to determine a bulleted list.                                                                 |
-| lt_list_bullet_rule_file         | File with rules to determine the bulleted lists.                                                                        |
-| lt_list_bullet_tolerance_llx     | Tolerance of vertical indentation in percent.                                                                           |
-| lt_list_number_file_incl_regexp  | If it is set to **`true`**, the regular expression for the numbered list is included in the **`JSON`** file.            |
-| lt_list_number_min_entries       | Minimum number of entries to determine a numbered list.                                                                 |
-| lt_list_number_rule_file         | File with rules to determine the numbered lists.                                                                        |
-| lt_list_number_tolerance_llx     | Tolerance of vertical indentation in percent.                                                                           |
-| lt_table_file_incl_empty_columns | If it is set to **`true`**, the the empty <br/>cells are included in the separate <br/>**`JSON`** file with the tables. |
-| lt_toc_last_page                 | Maximum number of pages for the search of the TOC (from the beginning).                                                 |
-| lt_toc_min_entries               | Minimum number of TOC entries.                                                                                          |
-| pdfimage_type                    | Format of the image files for the scanned <br/>`pdf` document: **`jpeg`** or **`pdf`**.                                 |
-| tesseract_timeout                | Terminate the tesseract job after a <br>period of time (seconds).                                                       |
-| tetml_page                       | PDFlib TET granularity 'page'.                                                                                          |
-| tetml_word                       | PDFlib TET granularity 'word'.                                                                                          |
-| tokenize_2_database              | Store the tokens in the database table **`token`**.                                                                     |
-| tokenize_2_jsonfile              | Store the tokens in a **`JSON`** flat file.                                                                             |
-| verbose                          | Display progress messages for processing.                                                                               |
-| verbose_lt_headers_footers       | Display progress messages for headers & footers line type determination.                                                |
-| verbose_lt_heading               | Display progress messages for heading line type determination.                                                          |
-| verbose_lt_list_bullet           | Display progress messages for line type determination of a bulleted list.                                               |
-| verbose_lt_list_number           | Display progress messages for line type determination of a numbered list.                                               |
-| verbose_lt_table                 | Display progress messages for table line type determination.                                                            |
-| verbose_lt_toc                   | Display progress messages for table of content line type determination.                                                 |
-| verbose_parser                   | Display progress messages for parsing **`xml`** (TETML) : <br>**`all`**, **`none`** or **`text`**.                      |
+| Parameter                        | Description                                                                                                          |
+|----------------------------------|----------------------------------------------------------------------------------------------------------------------|
+| create_extra_file_heading        | Create a separate **`JSON`** file with the table of contents.                                                        |
+| create_extra_file_list_bullet    | Create a separate **`JSON`** file with the bulleted lists.                                                           |
+| create_extra_file_list_number    | Create a separate **`JSON`** file with the numbered lists.                                                           |
+| create_extra_file_table          | Create a separate **`JSON`** file with the tables.                                                                   |
+| delete_auxiliary_files           | Delete the auxiliary files after a successful <br>processing step.                                                   |
+| directory_inbox                  | Directory for the new documents received.                                                                            |
+| json_indent                      | Improves the readability of the **`JSON`** file.                                                                     |
+| json_sort_keys                   | If it is set to **`true`**, the keys are set <br/>in ascending order else, they appear as <br/>in the Python object. |
+| lt_export_rule_file_heading      | File name for the export of the heading rules.                                                                       |
+| lt_export_rule_file_list_bullet  | File name for the export of the bulleted list rules.                                                                 |
+| lt_export_rule_file_list_number  | File name for the export of the numbered list rules.                                                                 |
+| lt_footer_max_distance           | Maximum Levenshtein distance for a footer line.                                                                      |
+| lt_footer_max_lines              | Maximum number of footers.                                                                                           |
+| lt_footer_required               | If it is set to **`true`**, the determination of the footer lines is performed.                                      |
+| lt_header_max_distance           | Maximum Levenshtein distance for a header line.                                                                      |
+| lt_header_max_lines              | Maximum number of headers.                                                                                           |
+| lt_header_required               | If it is set to **`true`**, the determination of the header lines is performed.                                      |
+| lt_heading_file_incl_no_ctx      | The number of lines following the heading to be included as context into the **`JSON`** file.                        |
+| lt_heading_file_incl_regexp      | If it is set to **`true`**, the regular expression for the heading is included in the **`JSON`** file.               |
+| lt_heading_max_level             | Maximum level of the heading structure.                                                                              |
+| lt_heading_min_pages             | Minimum number of pages to determine the headings.                                                                   |
+| lt_heading_required              | If it is set to **`true`**, the determination of the heading lines is performed.                                     |
+| lt_heading_rule_file             | File with rules to determine the headings.                                                                           |
+| lt_heading_tolerance_llx         | Tolerance of vertical indentation in percent.                                                                        |
+| lt_list_bullet_min_entries       | Minimum number of entries to determine a bulleted list.                                                              |
+| lt_list_bullet_required          | If it is set to **`true`**, the determination of the bulleted lists lines is performed.                               |
+| lt_list_bullet_rule_file         | File with rules to determine the bulleted lists.                                                                     |
+| lt_list_bullet_tolerance_llx     | Tolerance of vertical indentation in percent.                                                                        |
+| lt_list_number_file_incl_regexp  | If it is set to **`true`**, the regular expression for the numbered list is included in the **`JSON`** file.         |
+| lt_list_number_min_entries       | Minimum number of entries to determine a numbered list.                                                              |
+| lt_list_number_required          | If it is set to **`true`**, the determination of the numbered lists lines is performed.                               |
+| lt_list_number_rule_file         | File with rules to determine the numbered lists.                                                                     |
+| lt_list_number_tolerance_llx     | Tolerance of vertical indentation in percent.                                                                        |
+| lt_table_file_incl_empty_columns | If it is set to **`true`**, the empty <br/>cells are included in the separate <br/>**`JSON`** file with the tables.  |
+| lt_table_required                | If it is set to **`true`**, the determination of the table lines is performed.                                       |
+| lt_toc_last_page                 | Maximum number of pages for the search of the TOC (from the beginning).                                              |
+| lt_toc_min_entries               | Minimum number of TOC entries.                                                                                       |
+| lt_toc_required                  | If it is set to **`true`**, the determination of the TOC lines is performed.                                         |
+| pdfimage_type                    | Format of the image files for the scanned <br/>`pdf` document: **`jpeg`** or **`pdf`**.                              |
+| tesseract_timeout                | Terminate the tesseract job after a <br>period of time (seconds).                                                    |
+| tokenize_2_database              | Store the tokens in the database table **`token`**.                                                                  |
+| tokenize_2_jsonfile              | Store the tokens in a **`JSON`** flat file.                                                                          |
+| verbose                          | Display progress messages for processing.                                                                            |
+| verbose_lt_headers_footers       | Display progress messages for headers & footers line type determination.                                             |
+| verbose_lt_heading               | Display progress messages for heading line type determination.                                                       |
+| verbose_lt_list_bullet           | Display progress messages for line type determination of a bulleted list.                                            |
+| verbose_lt_list_number           | Display progress messages for line type determination of a numbered list.                                            |
+| verbose_lt_table                 | Display progress messages for table line type determination.                                                         |
+| verbose_lt_toc                   | Display progress messages for table of content line type determination.                                              |
+| verbose_parser                   | Display progress messages for parsing **`xml`** (TETML) : <br>**`all`**, **`none`** or **`text`**.                   |
 
 The configuration parameters can be set differently for the individual environments (`dev`, `prod` and `test`).
 
@@ -152,8 +162,6 @@ The configuration parameters can be set differently for the individual environme
     lt_list_number_file_incl_regexp = true
     lt_list_number_tolerance_llx = 5
     lt_table_file_incl_empty_columns = false
-    tetml_page = true
-    tetml_word = true
     ...
     
 ## 4. **`setup.cfg`** - [spaCy](https://spacy.io){:target="_blank"} Token Attributes

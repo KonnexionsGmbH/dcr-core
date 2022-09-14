@@ -3,7 +3,7 @@
 # Version 2020.05, that can be found in the LICENSE file.
 
 """Module stub file."""
-import dcr_core.cls_nlp_core
+import dcr_core.cls_nlp_core as nlp_core
 
 class LineTypeTable:
     Column = dict[str, float | int | object | str]
@@ -20,26 +20,26 @@ class LineTypeTable:
         self._column_no: int = 0
         self._column_no_prev: int = 0
         self._columns: LineTypeTable.Columns = []
-        self._exist: bool = False
-        self._file_name_curr: str = ""
         self._first_column_llx: float = 0.0
         self._first_row_llx: float = 0.0
         self._first_row_urx: float = 0.0
         self._is_table_open: int = 0
         self._last_column_urx: int = 0
+        self._lines_json: list[nlp_core.LineJSON] = []
+        self._max_line_no = 0
         self._no_columns_table: int = 0
         self._page_idx: int = 0
         self._page_no_from: int = 0
         self._page_no_till: int = 0
-        self._parser_line_lines_json: dcr_core.cls_nlp_core.NLPCore.ParserLineLines = []
         self._row_no: int = 0
         self._row_no_prev: int = 0
         self._rows: LineTypeTable.Rows = []
         self._tables: LineTypeTable.Tables = []
         self.no_tables: int = 0
+        self._exist: bool = False
     def _finish_row(self) -> None: ...
     def _finish_table(self) -> None: ...
-    def _process_line(self, line_line: dict[str, int | str]) -> str: ...
+    def _process_line(self, line_json: nlp_core.LineJSON) -> str: ...
     def _process_page(self) -> None: ...
     def _reset_document(self) -> None: ...
     def _reset_row(self) -> None: ...
@@ -51,5 +51,4 @@ class LineTypeTable:
         document_id: int,
         file_name_curr: str,
         file_name_orig: str,
-        line_pages_json: dcr_core.cls_nlp_core.NLPCore.ParserLinePages,
     ) -> None: ...

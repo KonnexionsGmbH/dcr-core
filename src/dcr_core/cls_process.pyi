@@ -16,6 +16,8 @@ class Process:
     ERROR_41_911: ClassVar[str]
     ERROR_51_901: ClassVar[str]
     ERROR_61_901: ClassVar[str]
+    ERROR_61_902: ClassVar[str]
+    ERROR_61_903: ClassVar[str]
     ERROR_71_901: ClassVar[str]
     PANDOC_PDF_ENGINE_LULATEX: ClassVar[str]
     PANDOC_PDF_ENGINE_XELATEX: ClassVar[str]
@@ -28,18 +30,21 @@ class Process:
         self._full_name_in_extension_int = None
         self._full_name_in_next_step = None
         self._full_name_in_pandoc = None
-        self._full_name_in_parser_line = None
-        self._full_name_in_parser_page = None
-        self._full_name_in_parser_word = None
+        self._full_name_in_parser = None
         self._full_name_in_pdf2image = None
         self._full_name_in_pdflib = None
         self._full_name_in_stem_name = None
         self._full_name_in_tesseract = None
-        self._full_name_in_tokenizer_line = None
-        self._full_name_in_tokenizer_page = None
-        self._full_name_in_tokenizer_word = None
+        self._full_name_in_tokenizer = None
         self._full_name_orig = None
         self._is_delete_auxiliary_files = None
+        self._is_lt_footer_required = None
+        self._is_lt_header_required = None
+        self._is_lt_heading_required = None
+        self._is_lt_list_bullet_required = None
+        self._is_lt_list_number_required = None
+        self._is_lt_table_required = None
+        self._is_lt_toc_required = None
         self._is_pandoc = None
         self._is_pdf2image = None
         self._is_tesseract = None
@@ -75,6 +80,13 @@ class Process:
         document_id: int = ...,
         full_name_orig: str = ...,
         is_delete_auxiliary_files: bool = ...,
+        is_lt_footer_required: bool = ...,
+        is_lt_header_required: bool = ...,
+        is_lt_heading_required: bool = ...,
+        is_lt_list_bullet_required: bool = ...,
+        is_lt_list_number_required: bool = ...,
+        is_lt_table_required: bool = ...,
+        is_lt_toc_required: bool = ...,
         is_verbose: bool = ...,
         language_pandoc: str = ...,
         language_spacy: str = ...,
@@ -85,7 +97,19 @@ class Process:
     def pandoc(cls, full_name_in: str, full_name_out: str, language_pandoc: str) -> tuple[str, str]: ...
     @classmethod
     def parser(
-        cls, full_name_in: str, full_name_out: str, no_pdf_pages: int, document_id: int = ..., file_name_orig: str = ...
+        cls,
+        full_name_in: str,
+        full_name_out: str,
+        no_pdf_pages: int,
+        document_id: int = ...,
+        full_name_orig: str = ...,
+        is_lt_footer_required: bool = ...,
+        is_lt_header_required: bool = ...,
+        is_lt_heading_required: bool = ...,
+        is_lt_list_bullet_required: bool = ...,
+        is_lt_list_number_required: bool = ...,
+        is_lt_table_required: bool = ...,
+        is_lt_toc_required: bool = ...,
     ) -> tuple[str, str]: ...
     @classmethod
     def pdf2image(cls, full_name_in: str) -> tuple[str, str, list[tuple[str, str]]]: ...

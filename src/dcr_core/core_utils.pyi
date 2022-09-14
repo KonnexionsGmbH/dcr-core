@@ -11,6 +11,7 @@ def check_exists_object(
     is_line_type_list_number: bool = False,
     is_line_type_table: bool = False,
     is_line_type_toc: bool = False,
+    is_nlp_core: bool = False,
     is_setup: bool = False,
     is_text_parser: bool = False,
 ) -> None: ...

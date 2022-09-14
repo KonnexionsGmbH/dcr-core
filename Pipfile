@@ -21,6 +21,12 @@ spacy = "*"
 strsimpy ="*"
 toml = "*"
 weasyprint = "*"
+isort = "*"
+docformatter = "*"
+bandit = "*"
+flake8 = "*"
+pylint = "*"
+mypy = "*"
 
 [dev-packages]
 MyPy = "*"

@@ -2,9 +2,9 @@
 """Testing Class LineTypeHeaderFooter."""
 import pytest
 
-import dcr_core.cls_line_type_header_footer
-import dcr_core.cls_process
-import dcr_core.cls_text_parser
+import dcr_core.cls_line_type_header_footer as lt_hf
+import dcr_core.cls_text_parser as parser
+from dcr_core import core_glob
 
 # -----------------------------------------------------------------------------
 # Constants & Globals.
@@ -19,19 +19,19 @@ def test(fxtr_rmdir_opt, fxtr_setup_empty_inbox):
     """Test Cases Line Type Headers & Footers - Coverage."""
     # -------------------------------------------------------------------------
     try:
-        del dcr_core.core_glob.text_parser
+        del core_glob.text_parser
     except (AttributeError, NameError):
         pass
 
     with pytest.raises(SystemExit) as expt:
-        dcr_core.cls_line_type_header_footer.LineTypeHeaderFooter()
+        lt_hf.LineTypeHeaderFooter()
 
     assert expt.type == SystemExit, "Instance of TextParser is missing"
     assert expt.value.code == 1, "Instance of TextParser is missing"
 
-    dcr_core.core_glob.text_parser = dcr_core.cls_text_parser.TextParser()
+    core_glob.text_parser = parser.TextParser()
 
     # -------------------------------------------------------------------------
-    instance = dcr_core.cls_line_type_header_footer.LineTypeHeaderFooter()
+    instance = lt_hf.LineTypeHeaderFooter()
 
     instance.exists()

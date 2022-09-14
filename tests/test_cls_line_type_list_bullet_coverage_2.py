@@ -2,11 +2,12 @@
 """Testing Class LineTypeListBullet."""
 import pytest
 
-import dcr_core.cls_line_type_header_footer
-import dcr_core.cls_line_type_table
-import dcr_core.cls_line_type_toc
-import dcr_core.cls_process
-import dcr_core.cls_text_parser
+import dcr_core.cls_line_type_header_footer as lt_hf
+import dcr_core.cls_line_type_list_bullet as lt_lb
+import dcr_core.cls_line_type_table as lt_tab
+import dcr_core.cls_line_type_toc as lt_toc
+import dcr_core.cls_text_parser as parser
+from dcr_core import core_glob
 
 # -----------------------------------------------------------------------------
 # Constants & Globals.
@@ -21,61 +22,61 @@ def test(fxtr_rmdir_opt, fxtr_setup_empty_inbox):
     """Test Cases Line Type ListBullet - Coverage."""
     # -------------------------------------------------------------------------
     try:
-        del dcr_core.core_glob.text_parser
+        del core_glob.text_parser
     except (AttributeError, NameError):
         pass
 
     with pytest.raises(SystemExit) as expt:
-        dcr_core.cls_line_type_list_bullet.LineTypeListBullet()
+        lt_lb.LineTypeListBullet()
 
     assert expt.type == SystemExit, "Instance of TextParser is missing"
     assert expt.value.code == 1, "Instance of TextParser is missing"
 
-    dcr_core.core_glob.text_parser = dcr_core.cls_text_parser.TextParser()
+    core_glob.text_parser = parser.TextParser()
 
     # -------------------------------------------------------------------------
     try:
-        del dcr_core.core_glob.line_type_header_footer
+        del core_glob.line_type_header_footer
     except (AttributeError, NameError):
         pass
 
     with pytest.raises(SystemExit) as expt:
-        dcr_core.cls_line_type_list_bullet.LineTypeListBullet()
+        lt_lb.LineTypeListBullet()
 
     assert expt.type == SystemExit, "Instance of LineTypeHeaderFooter is missing"
     assert expt.value.code == 1, "Instance of LineTypeHeaderFooter is missing"
 
-    dcr_core.core_glob.line_type_header_footer = dcr_core.cls_line_type_header_footer.LineTypeHeaderFooter()
+    core_glob.line_type_header_footer = lt_hf.LineTypeHeaderFooter()
 
     # -------------------------------------------------------------------------
     try:
-        del dcr_core.core_glob.line_type_toc
+        del core_glob.line_type_toc
     except (AttributeError, NameError):
         pass
 
     with pytest.raises(SystemExit) as expt:
-        dcr_core.cls_line_type_list_bullet.LineTypeListBullet()
+        lt_lb.LineTypeListBullet()
 
     assert expt.type == SystemExit, "Instance of LineTypeToc is missing"
     assert expt.value.code == 1, "Instance of LineTypeToc is missing"
 
-    dcr_core.core_glob.line_type_toc = dcr_core.cls_line_type_toc.LineTypeToc()
+    core_glob.line_type_toc = lt_toc.LineTypeToc()
 
     # -------------------------------------------------------------------------
     try:
-        del dcr_core.core_glob.line_type_table
+        del core_glob.line_type_table
     except (AttributeError, NameError):
         pass
 
     with pytest.raises(SystemExit) as expt:
-        dcr_core.cls_line_type_list_bullet.LineTypeListBullet()
+        lt_lb.LineTypeListBullet()
 
     assert expt.type == SystemExit, "Instance of LineTypeTable is missing"
     assert expt.value.code == 1, "Instance of LineTypeTable is missing"
 
-    dcr_core.core_glob.line_type_table = dcr_core.cls_line_type_table.LineTypeTable()
+    core_glob.line_type_table = lt_tab.LineTypeTable()
 
     # -------------------------------------------------------------------------
-    instance = dcr_core.cls_line_type_list_bullet.LineTypeListBullet()
+    instance = lt_lb.LineTypeListBullet()
 
     instance.exists()

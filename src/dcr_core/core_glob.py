@@ -8,15 +8,17 @@ import logging.config
 
 import yaml
 
-import dcr_core.cls_line_type_header_footer
-import dcr_core.cls_line_type_heading
-import dcr_core.cls_line_type_list_bullet
-import dcr_core.cls_line_type_list_number
-import dcr_core.cls_line_type_table
-import dcr_core.cls_line_type_toc
-import dcr_core.cls_setup
-import dcr_core.cls_text_parser
-import dcr_core.cls_tokenizer_spacy
+import dcr_core.cls_line_type_header_footer as lt_hf
+import dcr_core.cls_line_type_heading as lt_h
+import dcr_core.cls_line_type_list_bullet as lt_lb
+import dcr_core.cls_line_type_list_number as lt_ln
+import dcr_core.cls_line_type_table as lt_tab
+import dcr_core.cls_line_type_toc as lt_toc
+import dcr_core.cls_nlp_core as cls_nlp_core
+import dcr_core.cls_setup as core_setup
+import dcr_core.cls_text_parser as parser
+import dcr_core.cls_tokenizer_spacy as tokenizer
+from dcr_core import core_utils
 
 # ------------------------------------------------------------------
 # Global Constants.
@@ -59,6 +61,7 @@ LOGGER_CFG_FILE = "logging_cfg.yaml"
 LOGGER_END = "End"
 LOGGER_FATAL_HEAD = "FATAL ERROR: program abort =====> "
 LOGGER_FATAL_TAIL = " <===== FATAL ERROR"
+LOGGER_NAME = "dcr_core"
 LOGGER_PROGRESS_UPDATE = "Progress update "
 LOGGER_START = "Start"
 
@@ -67,32 +70,33 @@ RETURN_OK = ("ok", "")
 # ------------------------------------------------------------------
 # Global Variables.
 # ------------------------------------------------------------------
-line_type_header_footer: dcr_core.cls_line_type_header_footer.LineTypeHeaderFooter
-line_type_heading: dcr_core.cls_line_type_heading.LineTypeHeading
-line_type_list_bullet: dcr_core.cls_line_type_list_bullet.LineTypeListBullet
-line_type_list_number: dcr_core.cls_line_type_list_number.LineTypeListNumber
-line_type_table: dcr_core.cls_line_type_table.LineTypeTable
-line_type_toc: dcr_core.cls_line_type_toc.LineTypeToc
+line_type_header_footer: lt_hf.LineTypeHeaderFooter
+line_type_heading: lt_h.LineTypeHeading
+line_type_list_bullet: lt_lb.LineTypeListBullet
+line_type_list_number: lt_ln.LineTypeListNumber
+line_type_table: lt_tab.LineTypeTable
+line_type_toc: lt_toc.LineTypeToc
 
-logger: logging.Logger
+logger: logging.Logger = logging.getLogger(LOGGER_NAME)
 
-setup: dcr_core.cls_setup.Setup
+nlp_core: cls_nlp_core.NLPCore
 
-text_parser: dcr_core.cls_text_parser.TextParser
+setup: core_setup.Setup
 
-tokenizer_spacy: dcr_core.cls_tokenizer_spacy.TokenizerSpacy
+text_parser: parser.TextParser
+
+tokenizer_spacy: tokenizer.TokenizerSpacy
 
 
 # -----------------------------------------------------------------------------
 # Initialising the logging functionality.
 # -----------------------------------------------------------------------------
-def initialise_logger(logger_name="dcr_core") -> None:
+def initialise_logger() -> None:
     """Initialise the root logging functionality."""
-    with open(dcr_core.core_glob.LOGGER_CFG_FILE, "r", encoding=dcr_core.core_glob.FILE_ENCODING_DEFAULT) as file_handle:
+    with open(LOGGER_CFG_FILE, "r", encoding=FILE_ENCODING_DEFAULT) as file_handle:
         log_config = yaml.safe_load(file_handle.read())
 
     logging.config.dictConfig(log_config)
-    dcr_core.core_glob.logger = logging.getLogger(logger_name)
-    dcr_core.core_glob.logger.setLevel(logging.DEBUG)
+    logger.setLevel(logging.DEBUG)
 
-    dcr_core.core_utils.progress_msg_core("The logger is configured and ready")
+    core_utils.progress_msg_core("The logger is configured and ready")

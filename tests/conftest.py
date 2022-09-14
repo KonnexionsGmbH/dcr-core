@@ -18,9 +18,9 @@ import shutil
 
 import pytest
 
-import dcr_core.cls_setup
-import dcr_core.core_glob
-import dcr_core.core_utils
+import dcr_core.cls_setup as setup
+import dcr_core.core_glob as glob
+import dcr_core.core_utils as utils
 
 # -----------------------------------------------------------------------------
 # Constants & Globals.
@@ -47,23 +47,21 @@ def compare_with_reference_files(directory_name: str, reference_files: list[str]
     reference_directory = get_test_files_reference_directory_name()
 
     for reference_file in reference_files:
-        extension = pathlib.Path(reference_file).suffix.lower()[1:]
-
-        if extension not in (dcr_core.core_glob.FILE_TYPE_JSON, dcr_core.core_glob.FILE_TYPE_XML):
+        if (extension := pathlib.Path(reference_file).suffix.lower()[1:]) not in (glob.FILE_TYPE_JSON, glob.FILE_TYPE_XML):
             continue
 
         with open(
-            dcr_core.core_utils.get_full_name_from_components(directory_name, reference_file),
+            utils.get_full_name_from_components(directory_name, reference_file),
             "r",
-            encoding=dcr_core.core_glob.FILE_ENCODING_DEFAULT,
+            encoding=glob.FILE_ENCODING_DEFAULT,
         ) as tst_file:
             tst_lines = tst_file.readlines()
             tst_len = len(tst_lines)
 
         with open(
-            dcr_core.core_utils.get_full_name_from_components(reference_directory, reference_file),
+            utils.get_full_name_from_components(reference_directory, reference_file),
             "r",
-            encoding=dcr_core.core_glob.FILE_ENCODING_DEFAULT,
+            encoding=glob.FILE_ENCODING_DEFAULT,
         ) as ref_file:
             ref_lines = ref_file.readlines()
             ref_len = len(ref_lines)
@@ -79,7 +77,7 @@ def compare_with_reference_files(directory_name: str, reference_files: list[str]
             if tst_lines[i] == ref_lines[i]:
                 continue
 
-            if extension == dcr_core.core_glob.FILE_TYPE_JSON:
+            if extension == glob.FILE_TYPE_JSON:
                 # multiple lines
                 if is_line_type('                                    "tknRank": ', tst_lines[i], ref_lines[i]) or is_line_type(
                     '                                    "tknVocab": ', tst_lines[i], ref_lines[i]
@@ -91,7 +89,7 @@ def compare_with_reference_files(directory_name: str, reference_files: list[str]
                 ):
                     continue
 
-            if extension == dcr_core.core_glob.FILE_TYPE_XML:
+            if extension == glob.FILE_TYPE_XML:
                 # multiple lines
                 # single line
                 if (
@@ -126,11 +124,11 @@ def config_param_delete(config_section: str, config_param: str) -> None:
         config_section (str): Configuration section.
         config_param (str): Configuration parameter.
     """
-    CONFIG_PARSER.read(dcr_core.cls_setup.Setup._DCR_CFG_FILE)
+    CONFIG_PARSER.read(setup.Setup._DCR_CFG_FILE)
 
     del CONFIG_PARSER[config_section][config_param]
 
-    with open(dcr_core.cls_setup.Setup._DCR_CFG_FILE, "w", encoding=dcr_core.core_glob.FILE_ENCODING_DEFAULT) as configfile:
+    with open(setup.Setup._DCR_CFG_FILE, "w", encoding=glob.FILE_ENCODING_DEFAULT) as configfile:
         CONFIG_PARSER.write(configfile)
 
 
@@ -149,12 +147,12 @@ def config_params_modify(
         config_section (str): Configuration section.
         config_params (list[tuple[str, str]]): Configuration parameter modifications.
     """
-    CONFIG_PARSER.read(dcr_core.cls_setup.Setup._DCR_CFG_FILE)
+    CONFIG_PARSER.read(setup.Setup._DCR_CFG_FILE)
 
     for (config_param, config_value) in config_params:
         CONFIG_PARSER[config_section][config_param] = config_value
 
-    with open(dcr_core.cls_setup.Setup._DCR_CFG_FILE, "w", encoding=dcr_core.core_glob.FILE_ENCODING_DEFAULT) as configfile:
+    with open(setup.Setup._DCR_CFG_FILE, "w", encoding=glob.FILE_ENCODING_DEFAULT) as configfile:
         CONFIG_PARSER.write(configfile)
 
 
@@ -173,18 +171,18 @@ def copy_files_4_pytest(file_list: list[tuple[tuple[str, str | None], tuple[path
             ]
         ]): list of files to be copied.
     """
-    assert os.path.isdir(dcr_core.core_utils.get_os_independent_name(get_test_files_source_directory_name())), (
+    assert os.path.isdir(utils.get_os_independent_name(get_test_files_source_directory_name())), (
         "source directory '" + get_test_files_source_directory_name() + "' missing"
     )
 
     for ((source_stem, source_ext), (target_dir, target_file_comp, target_ext)) in file_list:
         source_file_name = source_stem if source_ext is None else source_stem + "." + source_ext
-        source_file = dcr_core.core_utils.get_full_name_from_components(get_test_files_source_directory_name(), source_file_name)
+        source_file = utils.get_full_name_from_components(get_test_files_source_directory_name(), source_file_name)
         assert os.path.isfile(source_file), "source file '" + str(source_file) + "' missing"
 
-        assert os.path.isdir(dcr_core.core_utils.get_os_independent_name(target_dir)), "target directory '" + target_dir + "' missing"
+        assert os.path.isdir(utils.get_os_independent_name(target_dir)), "target directory '" + target_dir + "' missing"
         target_file_name = "_".join(target_file_comp) if target_ext is None else "_".join(target_file_comp) + "." + target_ext
-        target_file = dcr_core.core_utils.get_full_name_from_components(target_dir, target_file_name)
+        target_file = utils.get_full_name_from_components(target_dir, target_file_name)
         assert os.path.isfile(target_file) is False, "target file '" + str(target_file) + "' already existing"
 
         shutil.copy(source_file, target_file)
@@ -216,55 +214,53 @@ def copy_files_4_pytest_2_dir(
 @pytest.fixture(scope="session", autouse=True)
 def fxtr_before_any_test():
     """Fixture Factory: Before any test."""
-    CONFIG_PARSER.read(dcr_core.cls_setup.Setup._DCR_CFG_FILE)
+    CONFIG_PARSER.read(setup.Setup._DCR_CFG_FILE)
 
     # -----------------------------------------------------------------------------
     # Configuration: dcr_core.
     # -----------------------------------------------------------------------------
     for (config_param, config_value) in (
-        (dcr_core.cls_setup.Setup._DCR_CFG_CREATE_EXTRA_FILE_HEADING, "true"),
-        (dcr_core.cls_setup.Setup._DCR_CFG_CREATE_EXTRA_FILE_LIST_BULLET, "true"),
-        (dcr_core.cls_setup.Setup._DCR_CFG_CREATE_EXTRA_FILE_LIST_NUMBER, "true"),
-        (dcr_core.cls_setup.Setup._DCR_CFG_CREATE_EXTRA_FILE_TABLE, "true"),
-        (dcr_core.cls_setup.Setup._DCR_CFG_DIRECTORY_INBOX, "data/inbox_test"),
-        (dcr_core.cls_setup.Setup._DCR_CFG_JSON_INDENT, "4"),
-        (dcr_core.cls_setup.Setup._DCR_CFG_JSON_SORT_KEYS, "false"),
-        (dcr_core.cls_setup.Setup._DCR_CFG_LT_FOOTER_MAX_DISTANCE, "3"),
-        (dcr_core.cls_setup.Setup._DCR_CFG_LT_FOOTER_MAX_LINES, "3"),
-        (dcr_core.cls_setup.Setup._DCR_CFG_LT_HEADER_MAX_DISTANCE, "3"),
-        (dcr_core.cls_setup.Setup._DCR_CFG_LT_HEADER_MAX_LINES, "3"),
-        (dcr_core.cls_setup.Setup._DCR_CFG_LT_HEADING_FILE_INCL_NO_CTX, "3"),
-        (dcr_core.cls_setup.Setup._DCR_CFG_LT_HEADING_FILE_INCL_REGEXP, "true"),
-        (dcr_core.cls_setup.Setup._DCR_CFG_LT_HEADING_MAX_LEVEL, "3"),
-        (dcr_core.cls_setup.Setup._DCR_CFG_LT_HEADING_MIN_PAGES, "2"),
-        (dcr_core.cls_setup.Setup._DCR_CFG_LT_HEADING_RULE_FILE, "data/lt_export_rule_heading_test.json"),
-        (dcr_core.cls_setup.Setup._DCR_CFG_LT_HEADING_TOLERANCE_LLX, "5"),
-        (dcr_core.cls_setup.Setup._DCR_CFG_LT_LIST_BULLET_MIN_ENTRIES, "2"),
-        (dcr_core.cls_setup.Setup._DCR_CFG_LT_LIST_BULLET_RULE_FILE, "data/lt_export_rule_list_bullet_test.json"),
-        (dcr_core.cls_setup.Setup._DCR_CFG_LT_LIST_BULLET_TOLERANCE_LLX, "5"),
-        (dcr_core.cls_setup.Setup._DCR_CFG_LT_LIST_NUMBER_FILE_INCL_REGEXP, "true"),
-        (dcr_core.cls_setup.Setup._DCR_CFG_LT_LIST_NUMBER_MIN_ENTRIES, "2"),
-        (dcr_core.cls_setup.Setup._DCR_CFG_LT_LIST_NUMBER_RULE_FILE, "data/lt_export_rule_list_number_test.json"),
-        (dcr_core.cls_setup.Setup._DCR_CFG_LT_LIST_NUMBER_TOLERANCE_LLX, "5"),
-        (dcr_core.cls_setup.Setup._DCR_CFG_LT_TABLE_FILE_INCL_EMPTY_COLUMNS, "false"),
-        (dcr_core.cls_setup.Setup._DCR_CFG_LT_TOC_LAST_PAGE, "5"),
-        (dcr_core.cls_setup.Setup._DCR_CFG_LT_TOC_MIN_ENTRIES, "5"),
-        (dcr_core.cls_setup.Setup._DCR_CFG_PDF2IMAGE_TYPE, dcr_core.cls_setup.Setup.PDF2IMAGE_TYPE_JPEG),
-        (dcr_core.cls_setup.Setup._DCR_CFG_TESSERACT_TIMEOUT, "30"),
-        (dcr_core.cls_setup.Setup._DCR_CFG_TETML_PAGE, "true"),
-        (dcr_core.cls_setup.Setup._DCR_CFG_TETML_WORD, "true"),
-        (dcr_core.cls_setup.Setup._DCR_CFG_TOKENIZE_2_DATABASE, "true"),
-        (dcr_core.cls_setup.Setup._DCR_CFG_TOKENIZE_2_JSONFILE, "true"),
-        (dcr_core.cls_setup.Setup._DCR_CFG_VERBOSE, "true"),
-        (dcr_core.cls_setup.Setup._DCR_CFG_VERBOSE_LT_HEADER_FOOTER, "false"),
-        (dcr_core.cls_setup.Setup._DCR_CFG_VERBOSE_LT_HEADING, "false"),
-        (dcr_core.cls_setup.Setup._DCR_CFG_VERBOSE_LT_LIST_BULLET, "false"),
-        (dcr_core.cls_setup.Setup._DCR_CFG_VERBOSE_LT_LIST_NUMBER, "false"),
-        (dcr_core.cls_setup.Setup._DCR_CFG_VERBOSE_LT_TABLE, "false"),
-        (dcr_core.cls_setup.Setup._DCR_CFG_VERBOSE_LT_TOC, "false"),
-        (dcr_core.cls_setup.Setup._DCR_CFG_VERBOSE_PARSER, "none"),
+        (setup.Setup._DCR_CFG_CREATE_EXTRA_FILE_HEADING, "true"),
+        (setup.Setup._DCR_CFG_CREATE_EXTRA_FILE_LIST_BULLET, "true"),
+        (setup.Setup._DCR_CFG_CREATE_EXTRA_FILE_LIST_NUMBER, "true"),
+        (setup.Setup._DCR_CFG_CREATE_EXTRA_FILE_TABLE, "true"),
+        (setup.Setup._DCR_CFG_DIRECTORY_INBOX, "data/inbox_test"),
+        (setup.Setup._DCR_CFG_JSON_INDENT, "4"),
+        (setup.Setup._DCR_CFG_JSON_SORT_KEYS, "false"),
+        (setup.Setup._DCR_CFG_LT_FOOTER_MAX_DISTANCE, "3"),
+        (setup.Setup._DCR_CFG_LT_FOOTER_MAX_LINES, "3"),
+        (setup.Setup._DCR_CFG_LT_HEADER_MAX_DISTANCE, "3"),
+        (setup.Setup._DCR_CFG_LT_HEADER_MAX_LINES, "3"),
+        (setup.Setup._DCR_CFG_LT_HEADING_FILE_INCL_NO_CTX, "3"),
+        (setup.Setup._DCR_CFG_LT_HEADING_FILE_INCL_REGEXP, "true"),
+        (setup.Setup._DCR_CFG_LT_HEADING_MAX_LEVEL, "3"),
+        (setup.Setup._DCR_CFG_LT_HEADING_MIN_PAGES, "2"),
+        (setup.Setup._DCR_CFG_LT_HEADING_RULE_FILE, "data/lt_export_rule_heading_test.json"),
+        (setup.Setup._DCR_CFG_LT_HEADING_TOLERANCE_LLX, "5"),
+        (setup.Setup._DCR_CFG_LT_LIST_BULLET_MIN_ENTRIES, "2"),
+        (setup.Setup._DCR_CFG_LT_LIST_BULLET_RULE_FILE, "data/lt_export_rule_list_bullet_test.json"),
+        (setup.Setup._DCR_CFG_LT_LIST_BULLET_TOLERANCE_LLX, "5"),
+        (setup.Setup._DCR_CFG_LT_LIST_NUMBER_FILE_INCL_REGEXP, "true"),
+        (setup.Setup._DCR_CFG_LT_LIST_NUMBER_MIN_ENTRIES, "2"),
+        (setup.Setup._DCR_CFG_LT_LIST_NUMBER_RULE_FILE, "data/lt_export_rule_list_number_test.json"),
+        (setup.Setup._DCR_CFG_LT_LIST_NUMBER_TOLERANCE_LLX, "5"),
+        (setup.Setup._DCR_CFG_LT_TABLE_FILE_INCL_EMPTY_COLUMNS, "false"),
+        (setup.Setup._DCR_CFG_LT_TOC_LAST_PAGE, "5"),
+        (setup.Setup._DCR_CFG_LT_TOC_MIN_ENTRIES, "5"),
+        (setup.Setup._DCR_CFG_PDF2IMAGE_TYPE, setup.Setup.PDF2IMAGE_TYPE_JPEG),
+        (setup.Setup._DCR_CFG_TESSERACT_TIMEOUT, "30"),
+        (setup.Setup._DCR_CFG_TOKENIZE_2_DATABASE, "true"),
+        (setup.Setup._DCR_CFG_TOKENIZE_2_JSONFILE, "true"),
+        (setup.Setup._DCR_CFG_VERBOSE, "true"),
+        (setup.Setup._DCR_CFG_VERBOSE_LT_HEADER_FOOTER, "false"),
+        (setup.Setup._DCR_CFG_VERBOSE_LT_HEADING, "false"),
+        (setup.Setup._DCR_CFG_VERBOSE_LT_LIST_BULLET, "false"),
+        (setup.Setup._DCR_CFG_VERBOSE_LT_LIST_NUMBER, "false"),
+        (setup.Setup._DCR_CFG_VERBOSE_LT_TABLE, "false"),
+        (setup.Setup._DCR_CFG_VERBOSE_LT_TOC, "false"),
+        (setup.Setup._DCR_CFG_VERBOSE_PARSER, "none"),
     ):
-        CONFIG_PARSER[dcr_core.cls_setup.Setup._DCR_CFG_SECTION_CORE_ENV_TEST][config_param] = config_value
+        CONFIG_PARSER[setup.Setup._DCR_CFG_SECTION_CORE_ENV_TEST][config_param] = config_value
 
 
 # -----------------------------------------------------------------------------
@@ -333,13 +329,13 @@ def fxtr_setup_empty_inbox(
     fxtr_mkdir,
     fxtr_rmdir_opt,
 ):
-    """Fixture: Setup an empty directory."""
+    """Fixture: Set up an empty directory."""
     setup_cfg_backup()
 
-    dcr_core.core_glob.setup = dcr_core.cls_setup.Setup()
+    glob.setup = setup.Setup()
 
-    fxtr_rmdir_opt(dcr_core.core_glob.setup.directory_inbox)
-    fxtr_mkdir(dcr_core.core_glob.setup.directory_inbox)
+    fxtr_rmdir_opt(glob.setup.directory_inbox)
+    fxtr_mkdir(glob.setup.directory_inbox)
 
     yield
 
@@ -446,7 +442,7 @@ def verify_content_of_directory(
 
     # check directory content against expectations
     for elem in directory_content:
-        elem_path = dcr_core.core_utils.get_full_name_from_components(directory_name, elem)
+        elem_path = utils.get_full_name_from_components(directory_name, elem)
         if os.path.isdir(elem_path):
             assert elem in expected_directories, f"directory {elem} was not expected"
         else:
@@ -455,13 +451,13 @@ def verify_content_of_directory(
     # check expected directories against directory content
     for elem in expected_directories:
         assert elem in directory_content, f"expected directory {elem} is missing"
-        elem_path = dcr_core.core_utils.get_full_name_from_components(directory_name, elem)
-        assert os.path.isdir(dcr_core.core_utils.get_os_independent_name(elem_path)), f"expected directory {elem} is a file"
+        elem_path = utils.get_full_name_from_components(directory_name, elem)
+        assert os.path.isdir(utils.get_os_independent_name(elem_path)), f"expected directory {elem} is a file"
 
     # check expected files against directory content
     for elem in expected_files:
         assert elem in directory_content, f"expected file {elem} is missing"
-        elem_path = dcr_core.core_utils.get_full_name_from_components(directory_name, elem)
+        elem_path = utils.get_full_name_from_components(directory_name, elem)
         assert os.path.isfile(elem_path), f"expected file {elem} is a directory"
 
 

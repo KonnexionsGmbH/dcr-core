@@ -12,7 +12,8 @@ import configparser
 import os
 from typing import ClassVar
 
-import dcr_core.core_utils
+from dcr_core import core_glob
+from dcr_core import core_utils
 
 
 # pylint: disable=too-many-instance-attributes
@@ -22,7 +23,7 @@ class Setup:
     # ------------------------------------------------------------------
     # Class variables.
     # ------------------------------------------------------------------
-    _CONFIG_PARAM_NO: ClassVar[int] = 110
+    _CONFIG_PARAM_NO: ClassVar[int] = 117
 
     _DCR_CFG_CREATE_EXTRA_FILE_HEADING: ClassVar[str] = "create_extra_file_heading"
     _DCR_CFG_CREATE_EXTRA_FILE_LIST_BULLET: ClassVar[str] = "create_extra_file_list_bullet"
@@ -35,24 +36,31 @@ class Setup:
     _DCR_CFG_JSON_SORT_KEYS: ClassVar[str] = "json_sort_keys"
     _DCR_CFG_LT_FOOTER_MAX_DISTANCE: ClassVar[str] = "lt_footer_max_distance"
     _DCR_CFG_LT_FOOTER_MAX_LINES: ClassVar[str] = "lt_footer_max_lines"
+    _DCR_CFG_LT_FOOTER_REQUIRED: ClassVar[str] = "lt_footer_required"
     _DCR_CFG_LT_HEADER_MAX_DISTANCE: ClassVar[str] = "lt_header_max_distance"
     _DCR_CFG_LT_HEADER_MAX_LINES: ClassVar[str] = "lt_header_max_lines"
+    _DCR_CFG_LT_HEADER_REQUIRED: ClassVar[str] = "lt_header_required"
     _DCR_CFG_LT_HEADING_FILE_INCL_NO_CTX: ClassVar[str] = "lt_heading_file_incl_no_ctx"
     _DCR_CFG_LT_HEADING_FILE_INCL_REGEXP: ClassVar[str] = "lt_heading_file_incl_regexp"
     _DCR_CFG_LT_HEADING_MAX_LEVEL: ClassVar[str] = "lt_heading_max_level"
     _DCR_CFG_LT_HEADING_MIN_PAGES: ClassVar[str] = "lt_heading_min_pages"
+    _DCR_CFG_LT_HEADING_REQUIRED: ClassVar[str] = "lt_heading_required"
     _DCR_CFG_LT_HEADING_RULE_FILE: ClassVar[str] = "lt_heading_rule_file"
     _DCR_CFG_LT_HEADING_TOLERANCE_LLX: ClassVar[str] = "lt_heading_tolerance_llx"
     _DCR_CFG_LT_LIST_BULLET_MIN_ENTRIES: ClassVar[str] = "lt_list_bullet_min_entries"
+    _DCR_CFG_LT_LIST_BULLET_REQUIRED: ClassVar[str] = "lt_list_bullet_required"
     _DCR_CFG_LT_LIST_BULLET_RULE_FILE: ClassVar[str] = "lt_list_bullet_rule_file"
     _DCR_CFG_LT_LIST_BULLET_TOLERANCE_LLX: ClassVar[str] = "lt_list_bullet_tolerance_llx"
     _DCR_CFG_LT_LIST_NUMBER_FILE_INCL_REGEXP: ClassVar[str] = "lt_list_number_file_incl_regexp"
     _DCR_CFG_LT_LIST_NUMBER_MIN_ENTRIES: ClassVar[str] = "lt_list_number_min_entries"
+    _DCR_CFG_LT_LIST_NUMBER_REQUIRED: ClassVar[str] = "lt_list_number_required"
     _DCR_CFG_LT_LIST_NUMBER_RULE_FILE: ClassVar[str] = "lt_list_number_rule_file"
     _DCR_CFG_LT_LIST_NUMBER_TOLERANCE_LLX: ClassVar[str] = "lt_list_number_tolerance_llx"
     _DCR_CFG_LT_TABLE_FILE_INCL_EMPTY_COLUMNS: ClassVar[str] = "lt_table_file_incl_empty_columns"
+    _DCR_CFG_LT_TABLE_REQUIRED: ClassVar[str] = "lt_table_required"
     _DCR_CFG_LT_TOC_LAST_PAGE: ClassVar[str] = "lt_toc_last_page"
     _DCR_CFG_LT_TOC_MIN_ENTRIES: ClassVar[str] = "lt_toc_min_entries"
+    _DCR_CFG_LT_TOC_REQUIRED: ClassVar[str] = "lt_toc_required"
     _DCR_CFG_PDF2IMAGE_TYPE: ClassVar[str] = "pdf2image_type"
     _DCR_CFG_SECTION_CORE: ClassVar[str] = "dcr_core"
     _DCR_CFG_SECTION_CORE_ENV_TEST: ClassVar[str] = "dcr_core.env.test"
@@ -128,8 +136,6 @@ class Setup:
     _DCR_CFG_SPACY_TKN_ATTR_WHITESPACE_: ClassVar[str] = "spacy_tkn_attr_whitespace_"
 
     _DCR_CFG_TESSERACT_TIMEOUT: ClassVar[str] = "tesseract_timeout"
-    _DCR_CFG_TETML_PAGE: ClassVar[str] = "tetml_page"
-    _DCR_CFG_TETML_WORD: ClassVar[str] = "tetml_word"
     _DCR_CFG_TOKENIZE_2_DATABASE: ClassVar[str] = "tokenize_2_database"
     _DCR_CFG_TOKENIZE_2_JSONFILE: ClassVar[str] = "tokenize_2_jsonfile"
     _DCR_CFG_VERBOSE: ClassVar[str] = "verbose"
@@ -141,7 +147,7 @@ class Setup:
     _DCR_CFG_VERBOSE_LT_TOC: ClassVar[str] = "verbose_lt_toc"
     _DCR_CFG_VERBOSE_PARSER: ClassVar[str] = "verbose_parser"
 
-    _DCR_ENVIRONMENT_TYPE: ClassVar[str] = "DCR_ENVIRONMENT_TYPE"
+    _DCR_CORE_ENVIRONMENT_TYPE: ClassVar[str] = "DCR_CORE_ENVIRONMENT_TYPE"
 
     DCR_VERSION: ClassVar[str] = "0.9.8"
 
@@ -159,10 +165,10 @@ class Setup:
     def __init__(self) -> None:
         """Initialise the instance."""
         try:
-            dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+            core_glob.logger.debug(core_glob.LOGGER_START)
         except AttributeError:
-            dcr_core.core_glob.initialise_logger()
-            dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+            core_glob.initialise_logger()
+            core_glob.logger.debug(core_glob.LOGGER_START)
 
         self._get_environment_variant()
 
@@ -186,8 +192,14 @@ class Setup:
 
         self.lt_footer_max_distance = 3
         self.lt_footer_max_lines = 3
+
+        self.is_lt_footer_required = False
+
         self.lt_header_max_distance = 3
         self.lt_header_max_lines = 3
+
+        self.is_lt_header_required = False
+
         self.lt_heading_file_incl_no_ctx = 1
 
         self.is_lt_heading_file_incl_regexp = False
@@ -195,31 +207,37 @@ class Setup:
         self.lt_heading_max_level = 3
         self.lt_heading_min_pages = 2
         self.lt_heading_rule_file = "none"
+
+        self.is_lt_heading_required = False
+
         self.lt_heading_tolerance_llx = 5
         self.lt_list_bullet_min_entries = 2
+
+        self.is_lt_list_bullet_required = False
+
         self.lt_list_bullet_rule_file = "none"
         self.lt_list_bullet_tolerance_llx = 5
 
         self.is_lt_list_number_file_incl_regexp = False
 
         self.lt_list_number_min_entries = 2
+
+        self.is_lt_list_number_required = False
+
         self.lt_list_number_rule_file = "none"
         self.lt_list_number_tolerance_llx = 5
 
         self.is_lt_table_file_incl_empty_columns = True
 
+        self.is_lt_table_required = False
+
         self.lt_toc_last_page = 5
         self.lt_toc_min_entries = 5
 
-        self.is_parsing_line: bool = False
-        self.is_parsing_page: bool = False
-        self.is_parsing_word: bool = False
+        self.is_lt_toc_required = False
 
         self.pdf2image_type = Setup.PDF2IMAGE_TYPE_JPEG
         self.tesseract_timeout = 10
-
-        self.is_tetml_page = False
-        self.is_tetml_word = False
 
         self.is_tokenize_2_database = True
         self.is_tokenize_2_jsonfile = True
@@ -311,18 +329,18 @@ class Setup:
 
         self._load_config()
 
-        dcr_core.core_utils.progress_msg_core("The configuration parameters (dcr_core) are checked and loaded")
+        core_utils.progress_msg_core("The configuration parameters (dcr_core) are checked and loaded")
 
         self._exist = True
 
-        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
+        core_glob.logger.debug(core_glob.LOGGER_END)
 
     # ------------------------------------------------------------------
     # Check the configuration parameters.
     # ------------------------------------------------------------------
     def _check_config(self) -> None:
         """Check the configuration parameters."""
-        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+        core_glob.logger.debug(core_glob.LOGGER_START)
 
         self.is_create_extra_file_heading = self._determine_config_param_boolean(
             Setup._DCR_CFG_CREATE_EXTRA_FILE_HEADING, self.is_create_extra_file_heading
@@ -350,10 +368,12 @@ class Setup:
             Setup._DCR_CFG_LT_FOOTER_MAX_DISTANCE, self.lt_footer_max_distance
         )
         self.lt_footer_max_lines = self._determine_config_param_integer(Setup._DCR_CFG_LT_FOOTER_MAX_LINES, self.lt_footer_max_lines)
+        self.is_lt_footer_required = self._determine_config_param_boolean(Setup._DCR_CFG_LT_FOOTER_REQUIRED, self.is_lt_footer_required)
         self.lt_header_max_distance = self._determine_config_param_integer(
             Setup._DCR_CFG_LT_HEADER_MAX_DISTANCE, self.lt_header_max_distance
         )
         self.lt_header_max_lines = self._determine_config_param_integer(Setup._DCR_CFG_LT_HEADER_MAX_LINES, self.lt_header_max_lines)
+        self.is_lt_header_required = self._determine_config_param_boolean(Setup._DCR_CFG_LT_HEADER_REQUIRED, self.is_lt_header_required)
         self.lt_heading_file_incl_no_ctx = self._determine_config_param_integer(
             Setup._DCR_CFG_LT_HEADING_FILE_INCL_NO_CTX, self.lt_heading_file_incl_no_ctx
         )
@@ -362,11 +382,15 @@ class Setup:
         )
         self.lt_heading_max_level = self._determine_config_param_integer(Setup._DCR_CFG_LT_HEADING_MAX_LEVEL, self.lt_heading_max_level)
         self.lt_heading_min_pages = self._determine_config_param_integer(Setup._DCR_CFG_LT_HEADING_MIN_PAGES, self.lt_heading_min_pages)
+        self.is_lt_heading_required = self._determine_config_param_boolean(Setup._DCR_CFG_LT_HEADING_REQUIRED, self.is_lt_heading_required)
         self.lt_heading_tolerance_llx = self._determine_config_param_integer(
             Setup._DCR_CFG_LT_HEADING_TOLERANCE_LLX, self.lt_heading_tolerance_llx
         )
         self.lt_list_bullet_min_entries = self._determine_config_param_integer(
             Setup._DCR_CFG_LT_LIST_BULLET_MIN_ENTRIES, self.lt_list_bullet_min_entries
+        )
+        self.is_lt_list_bullet_required = self._determine_config_param_boolean(
+            Setup._DCR_CFG_LT_LIST_BULLET_REQUIRED, self.is_lt_list_bullet_required
         )
         self.lt_list_bullet_tolerance_llx = self._determine_config_param_integer(
             Setup._DCR_CFG_LT_LIST_BULLET_TOLERANCE_LLX, self.lt_list_bullet_tolerance_llx
@@ -377,14 +401,19 @@ class Setup:
         self.lt_list_number_min_entries = self._determine_config_param_integer(
             Setup._DCR_CFG_LT_LIST_NUMBER_MIN_ENTRIES, self.lt_list_number_min_entries
         )
+        self.is_lt_list_number_required = self._determine_config_param_boolean(
+            Setup._DCR_CFG_LT_LIST_NUMBER_REQUIRED, self.is_lt_list_number_required
+        )
         self.lt_list_number_tolerance_llx = self._determine_config_param_integer(
             Setup._DCR_CFG_LT_LIST_NUMBER_TOLERANCE_LLX, self.lt_list_number_tolerance_llx
         )
         self.is_lt_table_file_incl_empty_columns = self._determine_config_param_boolean(
             Setup._DCR_CFG_LT_TABLE_FILE_INCL_EMPTY_COLUMNS, self.is_lt_table_file_incl_empty_columns
         )
+        self.is_lt_table_required = self._determine_config_param_boolean(Setup._DCR_CFG_LT_TABLE_REQUIRED, self.is_lt_table_required)
         self.lt_toc_last_page = self._determine_config_param_integer(Setup._DCR_CFG_LT_TOC_LAST_PAGE, self.lt_toc_last_page)
         self.lt_toc_min_entries = self._determine_config_param_integer(Setup._DCR_CFG_LT_TOC_MIN_ENTRIES, self.lt_toc_min_entries)
+        self.is_lt_toc_required = self._determine_config_param_boolean(Setup._DCR_CFG_LT_TOC_REQUIRED, self.is_lt_toc_required)
 
         self._check_config_pdf2image_type()
 
@@ -393,14 +422,11 @@ class Setup:
 
         self.tesseract_timeout = self._determine_config_param_integer(Setup._DCR_CFG_TESSERACT_TIMEOUT, self.tesseract_timeout)
 
-        self.is_tetml_page = self._determine_config_param_boolean(Setup._DCR_CFG_TETML_PAGE, self.is_tetml_page)
-        self.is_tetml_word = self._determine_config_param_boolean(Setup._DCR_CFG_TETML_WORD, self.is_tetml_word)
-
         self.is_tokenize_2_database = self._determine_config_param_boolean(Setup._DCR_CFG_TOKENIZE_2_DATABASE, self.is_tokenize_2_database)
         self.is_tokenize_2_jsonfile = self._determine_config_param_boolean(Setup._DCR_CFG_TOKENIZE_2_JSONFILE, self.is_tokenize_2_jsonfile)
         if not self.is_tokenize_2_database:
             if not self.is_tokenize_2_jsonfile:
-                dcr_core.core_utils.terminate_fatal(
+                core_utils.terminate_fatal(
                     "At least one of the configuration parameters 'tokenize_2_database' or " + "'tokenize_2_jsonfile' must be 'true'"
                 )
 
@@ -419,7 +445,7 @@ class Setup:
         self.is_verbose_lt_toc = self._determine_config_param_boolean(Setup._DCR_CFG_VERBOSE_LT_TOC, self.is_verbose_lt_toc)
         self._check_config_verbose_parser()
 
-        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
+        core_glob.logger.debug(core_glob.LOGGER_END)
 
     # -----------------------------------------------------------------------------
     # Check the configuration parameter - directory_inbox.
@@ -429,9 +455,9 @@ class Setup:
         if Setup._DCR_CFG_DIRECTORY_INBOX in self._config:
             self._config[Setup._DCR_CFG_DIRECTORY_INBOX] = str(self._config[Setup._DCR_CFG_DIRECTORY_INBOX])
 
-            self.directory_inbox = dcr_core.core_utils.get_os_independent_name(str(self._config[Setup._DCR_CFG_DIRECTORY_INBOX]))
+            self.directory_inbox = core_utils.get_os_independent_name(str(self._config[Setup._DCR_CFG_DIRECTORY_INBOX]))
         else:
-            dcr_core.core_utils.terminate_fatal(f"Missing configuration parameter '{Setup._DCR_CFG_DIRECTORY_INBOX}'")
+            core_utils.terminate_fatal(f"Missing configuration parameter '{Setup._DCR_CFG_DIRECTORY_INBOX}'")
 
     # ------------------------------------------------------------------
     # Check the configuration parameter - pdf2image_type.
@@ -444,7 +470,7 @@ class Setup:
                 Setup.PDF2IMAGE_TYPE_JPEG,
                 Setup.PDF2IMAGE_TYPE_PNG,
             ]:
-                dcr_core.core_utils.terminate_fatal(
+                core_utils.terminate_fatal(
                     f"Invalid configuration parameter value for parameter " f"'pdf2image_type': '{self.pdf2image_type}'"
                 )
 
@@ -694,17 +720,17 @@ class Setup:
         self.environment_variant = Setup.ENVIRONMENT_TYPE_PROD
 
         try:
-            self.environment_variant = os.environ[Setup._DCR_ENVIRONMENT_TYPE]
+            self.environment_variant = os.environ[Setup._DCR_CORE_ENVIRONMENT_TYPE]
         except KeyError:
-            dcr_core.core_utils.terminate_fatal(f"The environment variable '{Setup._DCR_ENVIRONMENT_TYPE}' is missing")
+            core_utils.terminate_fatal(f"The environment variable '{Setup._DCR_CORE_ENVIRONMENT_TYPE}' is missing")
 
         if self.environment_variant not in [
             Setup.ENVIRONMENT_TYPE_DEV,
             Setup.ENVIRONMENT_TYPE_PROD,
             Setup.ENVIRONMENT_TYPE_TEST,
         ]:
-            dcr_core.core_utils.terminate_fatal(
-                f"The environment variable '{Setup._DCR_ENVIRONMENT_TYPE}' " f"has the invalid content '{self.environment_variant}'"
+            core_utils.terminate_fatal(
+                f"The environment variable '{Setup._DCR_CORE_ENVIRONMENT_TYPE}' " f"has the invalid content '{self.environment_variant}'"
             )
 
     # ------------------------------------------------------------------
@@ -712,7 +738,7 @@ class Setup:
     # ------------------------------------------------------------------
     def _load_config(self) -> None:
         """Load and check the configuration parameters."""
-        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_START)
+        core_glob.logger.debug(core_glob.LOGGER_START)
 
         for section in self._config_parser.sections():
             if section in (
@@ -736,21 +762,28 @@ class Setup:
                             | Setup._DCR_CFG_JSON_SORT_KEYS
                             | Setup._DCR_CFG_LT_FOOTER_MAX_DISTANCE
                             | Setup._DCR_CFG_LT_FOOTER_MAX_LINES
+                            | Setup._DCR_CFG_LT_FOOTER_REQUIRED
                             | Setup._DCR_CFG_LT_HEADER_MAX_DISTANCE
                             | Setup._DCR_CFG_LT_HEADER_MAX_LINES
+                            | Setup._DCR_CFG_LT_HEADER_REQUIRED
                             | Setup._DCR_CFG_LT_HEADING_FILE_INCL_NO_CTX
                             | Setup._DCR_CFG_LT_HEADING_FILE_INCL_REGEXP
                             | Setup._DCR_CFG_LT_HEADING_MAX_LEVEL
                             | Setup._DCR_CFG_LT_HEADING_MIN_PAGES
+                            | Setup._DCR_CFG_LT_HEADING_REQUIRED
                             | Setup._DCR_CFG_LT_HEADING_TOLERANCE_LLX
                             | Setup._DCR_CFG_LT_LIST_BULLET_MIN_ENTRIES
+                            | Setup._DCR_CFG_LT_LIST_BULLET_REQUIRED
                             | Setup._DCR_CFG_LT_LIST_BULLET_TOLERANCE_LLX
                             | Setup._DCR_CFG_LT_LIST_NUMBER_FILE_INCL_REGEXP
                             | Setup._DCR_CFG_LT_LIST_NUMBER_MIN_ENTRIES
+                            | Setup._DCR_CFG_LT_LIST_NUMBER_REQUIRED
                             | Setup._DCR_CFG_LT_LIST_NUMBER_TOLERANCE_LLX
                             | Setup._DCR_CFG_LT_TABLE_FILE_INCL_EMPTY_COLUMNS
+                            | Setup._DCR_CFG_LT_TABLE_REQUIRED
                             | Setup._DCR_CFG_LT_TOC_LAST_PAGE
                             | Setup._DCR_CFG_LT_TOC_MIN_ENTRIES
+                            | Setup._DCR_CFG_LT_TOC_REQUIRED
                             | Setup._DCR_CFG_PDF2IMAGE_TYPE
                             | Setup._DCR_CFG_SPACY_IGNORE_BRACKET
                             | Setup._DCR_CFG_SPACY_IGNORE_LEFT_PUNCT
@@ -820,8 +853,6 @@ class Setup:
                             | Setup._DCR_CFG_SPACY_TKN_ATTR_VOCAB
                             | Setup._DCR_CFG_SPACY_TKN_ATTR_WHITESPACE_
                             | Setup._DCR_CFG_TESSERACT_TIMEOUT
-                            | Setup._DCR_CFG_TETML_PAGE
-                            | Setup._DCR_CFG_TETML_WORD
                             | Setup._DCR_CFG_TOKENIZE_2_DATABASE
                             | Setup._DCR_CFG_TOKENIZE_2_JSONFILE
                             | Setup._DCR_CFG_VERBOSE
@@ -835,17 +866,17 @@ class Setup:
                         ):
                             continue
                         case Setup._DCR_CFG_LT_HEADING_RULE_FILE:
-                            self.lt_heading_rule_file = dcr_core.core_utils.get_os_independent_name(item)
+                            self.lt_heading_rule_file = core_utils.get_os_independent_name(item)
                         case Setup._DCR_CFG_LT_LIST_BULLET_RULE_FILE:
-                            self.lt_list_bullet_rule_file = dcr_core.core_utils.get_os_independent_name(item)
+                            self.lt_list_bullet_rule_file = core_utils.get_os_independent_name(item)
                         case Setup._DCR_CFG_LT_LIST_NUMBER_RULE_FILE:
-                            self.lt_list_number_rule_file = dcr_core.core_utils.get_os_independent_name(item)
+                            self.lt_list_number_rule_file = core_utils.get_os_independent_name(item)
                         case _:
                             pass
 
         self._check_config()
 
-        dcr_core.core_glob.logger.debug(dcr_core.core_glob.LOGGER_END)
+        core_glob.logger.debug(core_glob.LOGGER_END)
 
     # ------------------------------------------------------------------
     # Check the object existence.

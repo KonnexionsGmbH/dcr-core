@@ -19,24 +19,31 @@ class Setup:
     _DCR_CFG_JSON_SORT_KEYS: ClassVar[str]
     _DCR_CFG_LT_FOOTER_MAX_DISTANCE: ClassVar[str]
     _DCR_CFG_LT_FOOTER_MAX_LINES: ClassVar[str]
+    _DCR_CFG_LT_FOOTER_REQUIRED: ClassVar[str]
     _DCR_CFG_LT_HEADER_MAX_DISTANCE: ClassVar[str]
     _DCR_CFG_LT_HEADER_MAX_LINES: ClassVar[str]
+    _DCR_CFG_LT_HEADER_REQUIRED: ClassVar[str]
     _DCR_CFG_LT_HEADING_FILE_INCL_NO_CTX: ClassVar[str]
     _DCR_CFG_LT_HEADING_FILE_INCL_REGEXP: ClassVar[str]
     _DCR_CFG_LT_HEADING_MAX_LEVEL: ClassVar[str]
     _DCR_CFG_LT_HEADING_MIN_PAGES: ClassVar[str]
+    _DCR_CFG_LT_HEADING_REQUIRED: ClassVar[str]
     _DCR_CFG_LT_HEADING_RULE_FILE: ClassVar[str]
     _DCR_CFG_LT_HEADING_TOLERANCE_LLX: ClassVar[str]
     _DCR_CFG_LT_LIST_BULLET_MIN_ENTRIES: ClassVar[str]
+    _DCR_CFG_LT_LIST_BULLET_REQUIRED: ClassVar[str]
     _DCR_CFG_LT_LIST_BULLET_RULE_FILE: ClassVar[str]
     _DCR_CFG_LT_LIST_BULLET_TOLERANCE_LLX: ClassVar[str]
     _DCR_CFG_LT_LIST_NUMBER_FILE_INCL_REGEXP: ClassVar[str]
     _DCR_CFG_LT_LIST_NUMBER_MIN_ENTRIES: ClassVar[str]
+    _DCR_CFG_LT_LIST_NUMBER_REQUIRED: ClassVar[str]
     _DCR_CFG_LT_LIST_NUMBER_RULE_FILE: ClassVar[str]
     _DCR_CFG_LT_LIST_NUMBER_TOLERANCE_LLX: ClassVar[str]
     _DCR_CFG_LT_TABLE_FILE_INCL_EMPTY_COLUMNS: ClassVar[str]
+    _DCR_CFG_LT_TABLE_REQUIRED: ClassVar[str]
     _DCR_CFG_LT_TOC_LAST_PAGE: ClassVar[str]
     _DCR_CFG_LT_TOC_MIN_ENTRIES: ClassVar[str]
+    _DCR_CFG_LT_TOC_REQUIRED: ClassVar[str]
     _DCR_CFG_PDF2IMAGE_TYPE: ClassVar[str]
     _DCR_CFG_SECTION_CORE: ClassVar[str]
     _DCR_CFG_SECTION_CORE_ENV_TEST: ClassVar[str]
@@ -121,7 +128,7 @@ class Setup:
     _DCR_CFG_VERBOSE_LT_TABLE: ClassVar[str]
     _DCR_CFG_VERBOSE_LT_TOC: ClassVar[str]
     _DCR_CFG_VERBOSE_PARSER: ClassVar[str]
-    _DCR_ENVIRONMENT_TYPE: ClassVar[str]
+    _DCR_CORE_ENVIRONMENT_TYPE: ClassVar[str]
 
     DCR_VERSION: ClassVar[str]
     ENVIRONMENT_TYPE_DEV: ClassVar[str]
@@ -142,11 +149,18 @@ class Setup:
         self.is_create_extra_file_list_bullet: bool = False
         self.is_create_extra_file_list_number: bool = False
         self.is_create_extra_file_table: bool = False
-        self.is_delete_auxiliary_files: bool
+        self.is_delete_auxiliary_files: bool = False
         self.is_json_sort_keys: bool = False
+        self.is_lt_footer_required: bool = False
+        self.is_lt_header_required: bool = False
         self.is_lt_heading_file_incl_regexp: bool = False
+        self.is_lt_heading_required: bool = False
+        self.is_lt_list_bullet_required: bool = False
         self.is_lt_list_number_file_incl_regexp: bool = False
+        self.is_lt_list_number_required: bool = False
         self.is_lt_table_file_incl_empty_columns: bool = False
+        self.is_lt_table_required: bool = False
+        self.is_lt_toc_required: bool = False
         self.is_parsing_line: bool = False
         self.is_parsing_page: bool = False
         self.is_parsing_word: bool = False
@@ -217,8 +231,6 @@ class Setup:
         self.is_spacy_tkn_attr_text_with_ws: bool = False
         self.is_spacy_tkn_attr_vocab: bool = False
         self.is_spacy_tkn_attr_whitespace_: bool = False
-        self.is_tetml_page: bool = False
-        self.is_tetml_word: bool = False
         self.is_tokenize_2_database: bool = False
         self.is_tokenize_2_jsonfile: bool = False
         self.is_verbose: bool = False

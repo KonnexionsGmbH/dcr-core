@@ -9,7 +9,7 @@ import pathlib
 import sys
 import traceback
 
-import dcr_core
+from dcr_core import core_glob
 
 # ------------------------------------------------------------------
 # Global variables.
@@ -29,29 +29,33 @@ def check_exists_object(  # noqa: C901
     is_line_type_list_number: bool = False,
     is_line_type_table: bool = False,
     is_line_type_toc: bool = False,
+    is_nlp_core: bool = False,
     is_setup: bool = False,
     is_text_parser: bool = False,
 ) -> None:
     """Check the existence of objects.
 
     Args:
-        is_line_type_header_footer (bool, optional): Check an object
-            of class LineTypeHeadersFooters.
+        is_line_type_header_footer (bool, optional):
+            Check an object of class LineTypeHeadersFooters.
             Defaults to False.
-        is_line_type_list_bullet (bool, optional): Check an object
-            of class LineTypeListBullet.
+        is_line_type_list_bullet (bool, optional):
+            Check an object of class LineTypeListBullet.
             Defaults to False.
-        is_line_type_list_number (bool, optional): Check an object
-            of class LineTypeListNumber.
+        is_line_type_list_number (bool, optional):
+            Check an object of class LineTypeListNumber.
             Defaults to False.
-        is_line_type_table (bool, optional): Check an object
-            of class LineTypeTable.
+        is_line_type_table (bool, optional):
+            Check an object of class LineTypeTable.
             Defaults to False.
-        is_line_type_toc (bool, optional): Check an object
-            of class LineTypeToc.
+        is_line_type_toc (bool, optional):
+            Check an object of class LineTypeToc.
             Defaults to False.
-        is_setup (bool, optional): Check an object
-            of class Setup.
+        is_nlp_core (bool, optional):
+            Check an object of class NLPCore.
+            Defaults to False.
+        is_setup (bool, optional):
+            Check an object of class Setup.
             Defaults to False.
         is_text_parser (bool, optional): Check an object
             of class TextParser.
@@ -59,7 +63,7 @@ def check_exists_object(  # noqa: C901
     """
     if is_line_type_header_footer:
         try:
-            dcr_core.core_glob.line_type_header_footer.exists()  # type: ignore
+            core_glob.line_type_header_footer.exists()  # type: ignore
         except AttributeError:
             terminate_fatal(
                 "The required instance of the class 'LineTypeHeadersFooters' does not yet exist.",
@@ -67,7 +71,7 @@ def check_exists_object(  # noqa: C901
 
     if is_line_type_list_bullet:
         try:
-            dcr_core.core_glob.line_type_list_bullet.exists()  # type: ignore
+            core_glob.line_type_list_bullet.exists()  # type: ignore
         except AttributeError:
             terminate_fatal(
                 "The required instance of the class 'LineTypeListBullet' does not yet exist.",
@@ -75,7 +79,7 @@ def check_exists_object(  # noqa: C901
 
     if is_line_type_list_number:
         try:
-            dcr_core.core_glob.line_type_list_number.exists()  # type: ignore
+            core_glob.line_type_list_number.exists()  # type: ignore
         except AttributeError:
             terminate_fatal(
                 "The required instance of the class 'LineTypeListNumber' does not yet exist.",
@@ -83,7 +87,7 @@ def check_exists_object(  # noqa: C901
 
     if is_line_type_table:
         try:
-            dcr_core.core_glob.line_type_table.exists()  # type: ignore
+            core_glob.line_type_table.exists()  # type: ignore
         except AttributeError:
             terminate_fatal(
                 "The required instance of the class 'LineTypeTable' does not yet exist.",
@@ -91,7 +95,7 @@ def check_exists_object(  # noqa: C901
 
     if is_line_type_toc:
         try:
-            dcr_core.core_glob.line_type_toc.exists()  # type: ignore
+            core_glob.line_type_toc.exists()  # type: ignore
         except AttributeError:
             terminate_fatal(
                 "The required instance of the class 'LineTypeToc' does not yet exist.",
@@ -99,15 +103,23 @@ def check_exists_object(  # noqa: C901
 
     if is_setup:
         try:
-            dcr_core.core_glob.setup.exists()  # type: ignore
+            core_glob.setup.exists()  # type: ignore
         except AttributeError:
             terminate_fatal(
                 "The required instance of the class 'Setup' does not yet exist.",
             )
 
+    if is_nlp_core:
+        try:
+            core_glob.nlp_core.exists()  # type: ignore
+        except AttributeError:
+            terminate_fatal(
+                "The required instance of the class 'NLPCore' does not yet exist.",
+            )
+
     if is_text_parser:
         try:
-            dcr_core.core_glob.text_parser.exists()
+            core_glob.text_parser.exists()
         except AttributeError:
             terminate_fatal(
                 "The required instance of the class 'TextParser' does not yet exist.",
@@ -256,7 +268,7 @@ def progress_msg_core(msg: str) -> None:
     Args:
         msg (str): Progress message.
     """
-    final_msg = dcr_core.core_glob.LOGGER_PROGRESS_UPDATE + str(datetime.datetime.now()) + " : " + msg + "."
+    final_msg = core_glob.LOGGER_PROGRESS_UPDATE + str(datetime.datetime.now()) + " : " + msg + "."
 
     print(final_msg)
 
@@ -271,9 +283,9 @@ def terminate_fatal(error_msg: str) -> None:
         error_msg (str): Error message.
     """
     print("")
-    print(dcr_core.core_glob.LOGGER_FATAL_HEAD)
-    print(dcr_core.core_glob.LOGGER_FATAL_HEAD, error_msg, dcr_core.core_glob.LOGGER_FATAL_TAIL, sep="")
-    print(dcr_core.core_glob.LOGGER_FATAL_HEAD)
+    print(core_glob.LOGGER_FATAL_HEAD)
+    print(core_glob.LOGGER_FATAL_HEAD, error_msg, core_glob.LOGGER_FATAL_TAIL, sep="")
+    print(core_glob.LOGGER_FATAL_HEAD)
 
     traceback.print_exc(chain=True)
 

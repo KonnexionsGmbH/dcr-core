@@ -5,6 +5,8 @@
 """Module stub file."""
 import spacy.tokens
 
+import dcr_core.cls_nlp_core as nlp_core
+
 class TokenizerSpacy:
     TokenToken = dict[str, bool | float | int | str]
     TokenTokens = list[TokenToken]
@@ -22,6 +24,7 @@ class TokenizerSpacy:
         self._coord_llx: float = 0.0
         self._coord_urx: float = 0.0
         self._document_id: int = 0
+        self._document_json: nlp_core.DocumentJSON = {}
         self._exist: bool = False
         self._file_name_next: str = ""
         self._file_name_orig: str = ""
@@ -52,6 +55,9 @@ class TokenizerSpacy:
         self._row_no: int = 0
         self._sent_no: int = 0
         self._sentence: str = ""
+        self._text_parser_line: dict[str, str] = {}
+        self._text_parser_page: dict[str, str] = {}
+        self._text_parser_para: dict[str, str] = {}
         self._token_paras: TokenizerSpacy.TokenParas = []
         self._token_sents: TokenizerSpacy.TokenSents = []
         self._token_tokens: TokenizerSpacy.TokenTokens = []
@@ -74,6 +80,7 @@ class TokenizerSpacy:
     def process_document(
         self,
         document_id: int,
+        document_json: nlp_core.DocumentJSON,
         file_name_next: str,
         file_name_orig: str,
         no_lines_footer: int,

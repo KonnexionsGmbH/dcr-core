@@ -5,15 +5,16 @@
 """Module stub file."""
 import logging
 
-import dcr_core.cls_line_type_header_footer
-import dcr_core.cls_line_type_heading
-import dcr_core.cls_line_type_list_bullet
-import dcr_core.cls_line_type_list_number
-import dcr_core.cls_line_type_table
-import dcr_core.cls_line_type_toc
-import dcr_core.cls_setup
-import dcr_core.cls_text_parser
-import dcr_core.cls_tokenizer_spacy
+import dcr_core.cls_line_type_header_footer as lt_hf
+import dcr_core.cls_line_type_heading as lt_h
+import dcr_core.cls_line_type_list_bullet as lt_lb
+import dcr_core.cls_line_type_list_number as lt_ln
+import dcr_core.cls_line_type_table as lt_tab
+import dcr_core.cls_line_type_toc as lt_toc
+import dcr_core.cls_nlp_core as cls_nlp_core
+import dcr_core.cls_setup as core_setup
+import dcr_core.cls_text_parser as parser
+import dcr_core.cls_tokenizer_spacy as tokenizer
 
 FILE_ENCODING_DEFAULT: str
 FILE_TYPE_JPEG: str
@@ -35,15 +36,16 @@ LOGGER_PROGRESS_UPDATE: str
 LOGGER_START: str
 RETURN_OK: tuple[str, str]
 
-line_type_header_footer: dcr_core.cls_line_type_header_footer.LineTypeHeaderFooter
-line_type_heading: dcr_core.cls_line_type_heading.LineTypeHeading
-line_type_list_bullet: dcr_core.cls_line_type_list_bullet.LineTypeListBullet
-line_type_list_number: dcr_core.cls_line_type_list_number.LineTypeListNumber
-line_type_table: dcr_core.cls_line_type_table.LineTypeTable
-line_type_toc: dcr_core.cls_line_type_toc.LineTypeToc
+line_type_header_footer: lt_hf.LineTypeHeaderFooter
+line_type_heading: lt_h.LineTypeHeading
+line_type_list_bullet: lt_lb.LineTypeListBullet
+line_type_list_number: lt_ln.LineTypeListNumber
+line_type_table: lt_tab.LineTypeTable
+line_type_toc: lt_toc.LineTypeToc
 logger: logging.Logger
-setup: dcr_core.cls_setup.Setup
-text_parser: dcr_core.cls_text_parser.TextParser
-tokenizer_spacy: dcr_core.cls_tokenizer_spacy.TokenizerSpacy
+nlp_core: cls_nlp_core.NLPCore
+setup: core_setup.Setup
+text_parser: parser.TextParser
+tokenizer_spacy: tokenizer.TokenizerSpacy
 
 def initialise_logger(logger_name: str = ...) -> None: ...
