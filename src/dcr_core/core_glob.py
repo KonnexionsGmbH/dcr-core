@@ -14,8 +14,8 @@ import dcr_core.cls_line_type_list_bullet as lt_lb
 import dcr_core.cls_line_type_list_number as lt_ln
 import dcr_core.cls_line_type_table as lt_tab
 import dcr_core.cls_line_type_toc as lt_toc
-import dcr_core.cls_nlp_core as cls_nlp_core
-import dcr_core.cls_setup as core_setup
+import dcr_core.cls_nlp_core as nlp_core
+import dcr_core.cls_setup as setup
 import dcr_core.cls_text_parser as parser
 import dcr_core.cls_tokenizer_spacy as tokenizer
 from dcr_core import core_utils
@@ -70,22 +70,18 @@ RETURN_OK = ("ok", "")
 # ------------------------------------------------------------------
 # Global Variables.
 # ------------------------------------------------------------------
-line_type_header_footer: lt_hf.LineTypeHeaderFooter
-line_type_heading: lt_h.LineTypeHeading
-line_type_list_bullet: lt_lb.LineTypeListBullet
-line_type_list_number: lt_ln.LineTypeListNumber
-line_type_table: lt_tab.LineTypeTable
-line_type_toc: lt_toc.LineTypeToc
+inst_lt_h: lt_h.LineTypeHeading
+inst_lt_hf: lt_hf.LineTypeHeaderFooter
+inst_lt_lb: lt_lb.LineTypeListBullet
+inst_lt_ln: lt_ln.LineTypeListNumber
+inst_lt_tab: lt_tab.LineTypeTable
+inst_lt_toc: lt_toc.LineTypeToc
+inst_nlp_core: nlp_core.NLPCore
+inst_parser: parser.TextParser
+inst_setup: setup.Setup
+inst_tokenizer: tokenizer.TokenizerSpacy
 
 logger: logging.Logger = logging.getLogger(LOGGER_NAME)
-
-nlp_core: cls_nlp_core.NLPCore
-
-setup: core_setup.Setup
-
-text_parser: parser.TextParser
-
-tokenizer_spacy: tokenizer.TokenizerSpacy
 
 
 # -----------------------------------------------------------------------------

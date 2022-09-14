@@ -38,7 +38,7 @@ def test(fxtr_rmdir_opt, fxtr_setup_empty_inbox):  # noqa: C901
 
     # -------------------------------------------------------------------------
     try:
-        del core_glob.line_type_header_footer
+        del core_glob.inst_lt_hf
     except (AttributeError, NameError):
         pass
 
@@ -48,11 +48,11 @@ def test(fxtr_rmdir_opt, fxtr_setup_empty_inbox):  # noqa: C901
     assert expt.type == SystemExit, "Instance of LineTypeHeaderFooter is missing"
     assert expt.value.code == 1, "Instance of LineTypeHeaderFooter is missing"
 
-    core_glob.line_type_header_footer = lt_hf.LineTypeHeaderFooter()
+    core_glob.inst_lt_hf = lt_hf.LineTypeHeaderFooter()
 
     # -------------------------------------------------------------------------
     try:
-        del core_glob.line_type_toc
+        del core_glob.inst_lt_toc
     except (AttributeError, NameError):
         pass
 
@@ -62,7 +62,7 @@ def test(fxtr_rmdir_opt, fxtr_setup_empty_inbox):  # noqa: C901
     assert expt.type == SystemExit, "Instance of LineTypeToc is missing"
     assert expt.value.code == 1, "Instance of LineTypeToc is missing"
 
-    core_glob.line_type_toc = lt_toc.LineTypeToc()
+    core_glob.inst_lt_toc = lt_toc.LineTypeToc()
 
     # -------------------------------------------------------------------------
     try:

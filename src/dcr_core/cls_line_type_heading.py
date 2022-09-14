@@ -684,7 +684,7 @@ class LineTypeHeading:
             f"LineTypeHeading: Start document                       ={self.file_name_curr}",
         )
 
-        self._max_page = core_glob.text_parser.parse_result_no_pages_in_doc
+        self._max_page = core_glob.inst_parser.parse_result_no_pages_in_doc
 
         for page_idx, page_json in enumerate(core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_PAGES]):
             self._page_idx = page_idx

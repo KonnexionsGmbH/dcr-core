@@ -279,11 +279,11 @@ class Process:
         self._document_delete_auxiliary_file(self._full_name_in_parser)
 
         if self._is_lt_footer_required or self._is_lt_header_required:
-            self._no_lines_footer = core_glob.line_type_header_footer.no_lines_footer
-            self._no_lines_header = core_glob.line_type_header_footer.no_lines_header
+            self._no_lines_footer = core_glob.inst_lt_hf.no_lines_footer
+            self._no_lines_header = core_glob.inst_lt_hf.no_lines_header
 
         if self._is_lt_toc_required:
-            self._no_lines_toc = core_glob.line_type_toc.no_lines_toc
+            self._no_lines_toc = core_glob.inst_lt_toc.no_lines_toc
 
         core_glob.logger.debug(core_glob.LOGGER_END)
 

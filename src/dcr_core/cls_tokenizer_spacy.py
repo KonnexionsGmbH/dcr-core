@@ -738,7 +738,7 @@ class TokenizerSpacy:
 
         self._init_document()
 
-        for self._text_parser_page in core_glob.cls_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_PAGES]:
+        for self._text_parser_page in core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_PAGES]:
             self._page_no = self._text_parser_page[nlp_core.NLPCore.JSON_NAME_PAGE_NO]
 
             self._init_page()

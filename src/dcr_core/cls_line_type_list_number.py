@@ -472,7 +472,7 @@ class LineTypeListNumber:
     # ------------------------------------------------------------------
     def _reset_document(self) -> None:
         """Reset the document memory."""
-        self._max_page = core_glob.text_parser.parse_result_no_pages_in_doc
+        self._max_page = core_glob.inst_parser.parse_result_no_pages_in_doc
 
         self._lists = []
 

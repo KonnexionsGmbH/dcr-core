@@ -63,7 +63,7 @@ def check_exists_object(  # noqa: C901
     """
     if is_line_type_header_footer:
         try:
-            core_glob.line_type_header_footer.exists()  # type: ignore
+            core_glob.inst_lt_hf.exists()  # type: ignore
         except AttributeError:
             terminate_fatal(
                 "The required instance of the class 'LineTypeHeadersFooters' does not yet exist.",
@@ -95,7 +95,7 @@ def check_exists_object(  # noqa: C901
 
     if is_line_type_toc:
         try:
-            core_glob.line_type_toc.exists()  # type: ignore
+            core_glob.inst_lt_toc.exists()  # type: ignore
         except AttributeError:
             terminate_fatal(
                 "The required instance of the class 'LineTypeToc' does not yet exist.",
