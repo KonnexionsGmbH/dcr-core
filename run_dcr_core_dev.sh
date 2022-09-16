@@ -4,19 +4,19 @@ set -e
 
 # ----------------------------------------------------------------------------------
 #
-# run_dcr_core_dev.sh: Process a given document.
+# run_dcr_core_dev.sh: Process one or more given documents.
 #
 # ----------------------------------------------------------------------------------
 
-export DCR_CORE_FULL_NAME_IN_DEFAULT=data/inbox_dev/Font_Variations.pdf
 export DCR_CORE_ENVIRONMENT_TYPE=dev
+export DCR_CORE_INPUT_SOURCE_DEFAULT=data/inbox_dev
 export PYTHONPATH=src/dcr_core
 
 if [ -z "$1" ]; then
-    read -rp "Enter the full name of the document file [default: ${DCR_CORE_FULL_NAME_IN_DEFAULT}] " DCR_CORE_FULL_NAME_IN
-    export DCR_CORE_FULL_NAME_IN=${DCR_CORE_FULL_NAME_IN:-$DCR_CORE_FULL_NAME_IN_DEFAULT}
+    read -rp "Enter the full name of a document file or a file directory containing the document files to process [default: ${DCR_CORE_INPUT_SOURCE_DEFAULT}] " DCR_CORE_INPUT_SOURCE
+    export DCR_CORE_INPUT_SOURCE=${DCR_CORE_INPUT_SOURCE:-$DCR_CORE_INPUT_SOURCE_DEFAULT}
 else
-    export DCR_CORE_FULL_NAME_IN=$1
+    export DCR_CORE_INPUT_SOURCE=$1
 fi
 
 echo ""
@@ -36,16 +36,16 @@ sleep .1
 echo "=============================================================================="
 echo "Start $0"
 echo "------------------------------------------------------------------------------"
-echo "DCR-CORE - Process a given document."
+echo "DCR-CORE - Process one or more given documents."
 echo "------------------------------------------------------------------------------"
-echo "FULL_NAME_IN     : ${DCR_CORE_FULL_NAME_IN}"
 echo "ENVIRONMENT_TYPE : ${DCR_CORE_ENVIRONMENT_TYPE}"
+echo "INPUT_SOURCE     : ${DCR_CORE_INPUT_SOURCE}"
 echo "PYTHONPATH       : ${PYTHONPATH}"
 echo "------------------------------------------------------------------------------"
 date +"DATE TIME : %d.%m.%Y %H:%M:%S"
 echo "=============================================================================="
 
-pipenv run python src/launcher.py "${DCR_CORE_FULL_NAME_IN}"
+pipenv run python src/launcher.py "${DCR_CORE_INPUT_SOURCE}"
 
 echo ""
 echo "------------------------------------------------------------------------------"

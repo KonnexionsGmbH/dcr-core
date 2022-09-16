@@ -7,8 +7,7 @@
 # Global variables.
 # -----------------------------------------------------------------------------
 ARG_DOCUMENT_ID = None
-ARG_FULL_NAME_IN = None
-ARG_FULL_NAME_ORIG = None
+ARG_INPUT_SOURCE = None
 ARG_IS_DELETE_AUXILIARY_FILES = None
 ARG_IS_VERBOSE = None
 ARG_LANGUAGE_PANDOC = None

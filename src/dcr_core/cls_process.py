@@ -564,10 +564,12 @@ class Process:
         core_glob.logger.debug("param language_spacy            =%s", self._language_spacy)
         core_glob.logger.debug("param language_tesseract        =%s", self._language_tesseract)
 
+        core_utils.progress_msg(self._is_verbose, "-" * 80)
         core_utils.progress_msg(self._is_verbose, f"Start processing document file {self._full_name_orig}")
         core_utils.progress_msg(self._is_verbose, f"Language key Pandoc            {self._language_pandoc}")
         core_utils.progress_msg(self._is_verbose, f"Language key spaCy             {self._language_spacy}")
         core_utils.progress_msg(self._is_verbose, f"Language key Tesseract OCR     {self._language_tesseract}")
+        core_utils.progress_msg(self._is_verbose, "-" * 80)
 
         (
             full_name_in_directory,
@@ -595,7 +597,9 @@ class Process:
 
         self._document_tokenizer()
 
+        core_utils.progress_msg(self._is_verbose, "-" * 80)
         core_utils.progress_msg(self._is_verbose, f"End   processing document file {self._full_name_orig}")
+        core_utils.progress_msg(self._is_verbose, "=" * 80)
 
         core_glob.logger.debug(core_glob.LOGGER_END)
 
