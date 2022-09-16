@@ -16,6 +16,7 @@ Typical usage example:
                                  file_name_orig = my_file_name_orig,
                                  line_pages_json = my_line_pages_json)
 """
+from __future__ import annotations
 
 import json
 
@@ -68,9 +69,9 @@ class LineTypeTable:
 
         self._file_name_curr = file_name_curr
 
-        core_utils.progress_msg(core_glob.setup.is_verbose_lt_table, "LineTypeTable")
+        core_utils.progress_msg(core_glob.inst_setup.is_verbose_lt_table, "LineTypeTable")
         core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_table,
+            core_glob.inst_setup.is_verbose_lt_table,
             f"LineTypeTable: Start create instance                ={self._file_name_curr}",
         )
 
@@ -85,9 +86,8 @@ class LineTypeTable:
         self._is_table_open = False
 
         self._last_column_urx = 0.0
-        self._lines_json: list[nlp_core.LineJSON] = []
-
-        self._max_line_no = 0
+        self._line_no_max = 0
+        self._lines_json: list[nlp_core.NLPCore.LineJSON] = []
 
         self._no_columns_table = 0
         self._no_rows = 0
@@ -107,7 +107,7 @@ class LineTypeTable:
         self._exist = True
 
         core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_table,
+            core_glob.inst_setup.is_verbose_lt_table,
             f"LineTypeTable: End   create instance                ={self._file_name_curr}",
         )
 
@@ -137,7 +137,7 @@ class LineTypeTable:
         self._reset_row()
 
         core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_table,
+            core_glob.inst_setup.is_verbose_lt_table,
             f"LineTypeTable: End   row                            ={row_no}",
         )
 
@@ -170,18 +170,18 @@ class LineTypeTable:
         self._reset_table()
 
         core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_table,
+            core_glob.inst_setup.is_verbose_lt_table,
             f"LineTypeTable: End   table                   on page={self._page_idx+1}",
         )
 
     # ------------------------------------------------------------------
     # Process the line-related data.
     # ------------------------------------------------------------------
-    def _process_line(self, line_json: nlp_core.LineJSON) -> str:  # noqa: C901
+    def _process_line(self, line_json: nlp_core.NLPCore.LineJSON) -> str:  # noqa: C901
         """Process the line-related data.
 
         Args:
-            line_json (nlp_core.LineJSON): The line to be processed.
+            line_json (nlp_core.NLPCore.LineJSON): The line to be processed.
 
         Returns:
             str: The new or the old line type.
@@ -201,7 +201,7 @@ class LineTypeTable:
 
         text = line_json[nlp_core.NLPCore.JSON_NAME_TEXT]
 
-        if text == "" and not core_glob.setup.is_lt_table_file_incl_empty_columns:
+        if text == "" and not core_glob.inst_setup.is_lt_table_file_incl_empty_columns:
             return nlp_core.NLPCore.LINE_TYPE_TABLE
 
         coord_llx = float(line_json[nlp_core.NLPCore.JSON_NAME_COORD_LLX])
@@ -255,6 +255,10 @@ class LineTypeTable:
             else:
                 self._finish_table()
 
+        core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_PAGES][self._page_idx][
+            nlp_core.NLPCore.JSON_NAME_LINES
+        ] = self._lines_json
+
     # ------------------------------------------------------------------
     # Reset the document memory.
     # ------------------------------------------------------------------
@@ -266,7 +270,7 @@ class LineTypeTable:
 
         self.table_no = 0
 
-        core_utils.progress_msg(core_glob.setup.is_verbose_lt_table, "LineTypeTable: Reset the document memory")
+        core_utils.progress_msg(core_glob.inst_setup.is_verbose_lt_table, "LineTypeTable: Reset the document memory")
 
         self._reset_table()
 
@@ -281,7 +285,7 @@ class LineTypeTable:
         self._first_column_llx = 0.0
         self._last_column_urx = 0.0
 
-        core_utils.progress_msg(core_glob.setup.is_verbose_lt_table, "LineTypeTable: Reset the row memory")
+        core_utils.progress_msg(core_glob.inst_setup.is_verbose_lt_table, "LineTypeTable: Reset the row memory")
 
     # ------------------------------------------------------------------
     # Reset the table memory.
@@ -303,7 +307,7 @@ class LineTypeTable:
 
         self.table_no = 0
 
-        core_utils.progress_msg(core_glob.setup.is_verbose_lt_table, "LineTypeTable: Reset the table memory")
+        core_utils.progress_msg(core_glob.inst_setup.is_verbose_lt_table, "LineTypeTable: Reset the table memory")
 
         self._reset_row()
 
@@ -351,9 +355,9 @@ class LineTypeTable:
 
         self._file_name_curr = file_name_curr
 
-        core_utils.progress_msg(core_glob.setup.is_verbose_lt_table, "LineTypeTable")
+        core_utils.progress_msg(core_glob.inst_setup.is_verbose_lt_table, "LineTypeTable")
         core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_table,
+            core_glob.inst_setup.is_verbose_lt_table,
             f"LineTypeTable: Start document                       ={self._file_name_curr}",
         )
 
@@ -361,11 +365,11 @@ class LineTypeTable:
 
         for page_idx, page_json in enumerate(core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_PAGES]):
             self._page_idx = page_idx
-            self._max_line_no = page_json[nlp_core.NLPCore.JSON_NAME_LINE_NO]
+            self._line_no_max = page_json[nlp_core.NLPCore.JSON_NAME_LINE_NO]
             self._lines_json = page_json[nlp_core.NLPCore.JSON_NAME_LINES]
             self._process_page()
 
-        if core_glob.setup.is_create_extra_file_table and self._tables:
+        if core_glob.inst_setup.is_create_extra_file_table and self._tables:
             full_name = core_utils.get_full_name_from_components(
                 directory_name,
                 core_utils.get_stem_name(str(file_name_curr)) + ".table." + core_glob.FILE_TYPE_JSON,
@@ -373,24 +377,24 @@ class LineTypeTable:
             with open(full_name, "w", encoding=core_glob.FILE_ENCODING_DEFAULT) as file_handle:
                 json.dump(
                     {
-                        nlp_core.NLPCore.JSON_NAME_DOC_ID: document_id,
-                        nlp_core.NLPCore.JSON_NAME_DOC_FILE_NAME: file_name_orig,
+                        nlp_core.NLPCore.JSON_NAME_DOCUMENT_ID: document_id,
+                        nlp_core.NLPCore.JSON_NAME_FILE_NAME_ORIG: file_name_orig,
                         nlp_core.NLPCore.JSON_NAME_NO_TABLES_IN_DOC: self.no_tables,
                         nlp_core.NLPCore.JSON_NAME_TABLES: self._tables,
                     },
                     file_handle,
-                    indent=core_glob.setup.json_indent,
-                    sort_keys=core_glob.setup.is_json_sort_keys,
+                    indent=core_glob.inst_setup.json_indent,
+                    sort_keys=core_glob.inst_setup.is_json_sort_keys,
                 )
 
         if self.no_tables > 0:
             core_utils.progress_msg(
-                core_glob.setup.is_verbose_lt_table,
+                core_glob.inst_setup.is_verbose_lt_table,
                 f"LineTypeTable:                         number tables={self.no_tables}",
             )
 
         core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_table,
+            core_glob.inst_setup.is_verbose_lt_table,
             f"LineTypeTable: End   document                       ={self._file_name_curr}",
         )
 

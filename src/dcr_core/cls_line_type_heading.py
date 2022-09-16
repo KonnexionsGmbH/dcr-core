@@ -17,6 +17,8 @@ Typical usage example:
                                  file_name_orig = my_file_name_orig,
                                  line_pages_json = my_line_pages_json)
 """
+from __future__ import annotations
+
 import collections
 import decimal
 import json
@@ -70,12 +72,12 @@ class LineTypeHeading:
             is_text_parser=True,
         )
 
-        self.file_name_curr = file_name_curr
+        self._file_name_curr = file_name_curr
 
-        core_utils.progress_msg(core_glob.setup.is_verbose_lt_heading, "LineTypeHeading")
+        core_utils.progress_msg(core_glob.inst_setup.is_verbose_lt_heading, "LineTypeHeading")
         core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_heading,
-            f"LineTypeHeading: Start create instance                ={self.file_name_curr}",
+            core_glob.inst_setup.is_verbose_lt_heading,
+            f"LineTypeHeading: Start create instance                ={self._file_name_curr}",
         )
 
         self._RULE_NAME_SIZE: int = 20
@@ -89,16 +91,15 @@ class LineTypeHeading:
         # ------------------------------------------------------------------
         self._anti_patterns: list[tuple[str, re.Pattern[str]]] = self._init_anti_patterns()
 
-        core_glob.setup.lt_heading_max_level_curr = 0
+        core_glob.inst_setup.lt_heading_max_level_curr = 0
 
         self._level_prev = 0
-        self._line_lines_idx = 0
-        self._lines_json: list[nlp_core.LineJSON] = []
-
-        self._max_line_line = 0
-        self._max_page = 0
+        self._line_idx = 0
+        self._line_no_max = 0
+        self._lines_json: list[nlp_core.NLPCore.LineJSON] = []
 
         self._page_idx = 0
+        self._page_no_max = 0
 
         self._rules: list[tuple[str, bool, str, collections.abc.Callable[[str, str], bool], list[str]]] = self._init_rules()
 
@@ -182,8 +183,8 @@ class LineTypeHeading:
         self._exist = True
 
         core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_heading,
-            f"LineTypeHeading: End   create instance                ={self.file_name_curr}",
+            core_glob.inst_setup.is_verbose_lt_heading,
+            f"LineTypeHeading: End   create instance                ={self._file_name_curr}",
         )
 
         core_glob.logger.debug(core_glob.LOGGER_END)
@@ -254,7 +255,7 @@ class LineTypeHeading:
             level (int): Heading level.
             text: Heading text.
         """
-        if not core_glob.setup.is_create_extra_file_heading:
+        if not core_glob.inst_setup.is_create_extra_file_heading:
             return
 
         toc_entry = {
@@ -263,24 +264,24 @@ class LineTypeHeading:
             nlp_core.NLPCore.JSON_NAME_PAGE_NO: self._page_idx + 1,
         }
 
-        if core_glob.setup.lt_heading_file_incl_no_ctx > 0:
+        if core_glob.inst_setup.lt_heading_file_incl_no_ctx > 0:
             page_idx = self._page_idx
-            line_lines: list[nlp_core.LineJSON] = core_glob.text_parser.parse_result_line_lines
-            line_lines_idx = self._line_lines_idx + 1
+            line_lines: list[nlp_core.NLPCore.LineJSON] = core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_PAGES][page_idx][
+                nlp_core.NLPCore.JSON_NAME_LINES
+            ]
+            line_idx = self._line_idx + 1
 
-            for idx in range(core_glob.setup.lt_heading_file_incl_no_ctx):
-                (line_json, new_page_idx, new_line_lines, new_line_lines_idx) = self._get_next_body_line(
-                    page_idx, line_lines, line_lines_idx
-                )
+            for idx in range(core_glob.inst_setup.lt_heading_file_incl_no_ctx):
+                (line_json, new_page_idx, new_line_lines, new_line_idx) = self._get_next_body_line(page_idx, line_lines, line_idx)
 
                 toc_entry[nlp_core.NLPCore.JSON_NAME_HEADING_CTX_LINE + str(idx + 1)] = line_json
 
                 line_lines = new_line_lines
-                line_lines_idx = new_line_lines_idx
+                line_idx = new_line_idx
 
                 page_idx = new_page_idx
 
-        if core_glob.setup.is_lt_heading_file_incl_regexp:
+        if core_glob.inst_setup.is_lt_heading_file_incl_regexp:
             toc_entry[nlp_core.NLPCore.JSON_NAME_REGEXP] = self._rules_hierarchy[level - 1][8]
 
         self._toc.append(toc_entry)
@@ -289,47 +290,46 @@ class LineTypeHeading:
     # Get the next body line.
     # ------------------------------------------------------------------
     def _get_next_body_line(
-        self, page_idx: int, line_lines: list[nlp_core.LineJSON], line_lines_idx: int
-    ) -> tuple[str, int, list[nlp_core.LineJSON], int]:
+        self, page_idx: int, lines_json: list[nlp_core.NLPCore.LineJSON], line_idx: int
+    ) -> tuple[str, int, list[nlp_core.NLPCore.LineJSON], int]:
         """Get the next body line.
 
         Args:
             page_idx (int): Start with this page number.
-            line_lines (LineLines): The lines of the start page.
-            line_lines_idx (int): Start with this line number.
+            lines_json (LineLines): The lines of the start page.
+            line_idx (int): Start with this line number.
 
         Returns:
             tuple[str, int, LineLines, int]: Found line or empty,
                 last page searched, lines of this page, last checked line.
         """
-        for idx in range(line_lines_idx + 1, len(line_lines)):
-            line_json: nlp_core.LineJSON = line_lines[idx]
+        for idx in range(line_idx + 1, len(lines_json)):
+            line_json: nlp_core.NLPCore.LineJSON = lines_json[idx]
 
             if line_json[nlp_core.NLPCore.JSON_NAME_LINE_TYPE] != nlp_core.NLPCore.LINE_TYPE_BODY:
                 continue
 
-            return line_json[nlp_core.NLPCore.JSON_NAME_TEXT], page_idx, line_lines, idx
+            return line_json[nlp_core.NLPCore.JSON_NAME_TEXT], page_idx, lines_json, idx
 
-        if (page_idx + 1) < self._max_page:
+        if (page_idx + 1) < self._page_no_max:
             page_idx_local = page_idx + 1
+            lines_json_local: list[nlp_core.NLPCore.LineJSON] = core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_PAGES][
+                page_idx_local
+            ][nlp_core.NLPCore.JSON_NAME_LINES]
 
-            line_lines_local: list[nlp_core.LineJSON] = core_glob.text_parser.parse_result_line_pages[page_idx_local][
-                nlp_core.NLPCore.JSON_NAME_LINES
-            ]
-
-            for idx, line_json in enumerate(line_lines_local):
+            for idx, line_json in enumerate(lines_json_local):
                 if line_json[nlp_core.NLPCore.JSON_NAME_LINE_TYPE] != nlp_core.NLPCore.LINE_TYPE_BODY:
                     continue
 
                 return (
                     line_json[nlp_core.NLPCore.JSON_NAME_TEXT],
                     page_idx_local,
-                    line_lines_local,
+                    lines_json_local,
                     idx + 1,
                 )
 
         # not testable
-        return "", page_idx, line_lines, line_lines_idx
+        return "", page_idx, lines_json, line_idx
 
     # ------------------------------------------------------------------
     # Initialise the heading anti-patterns.
@@ -343,13 +343,13 @@ class LineTypeHeading:
         Returns:
             list[tuple[str, re.Pattern[str]]]: The valid heading anti-patterns.
         """
-        if core_glob.setup.lt_heading_rule_file and core_glob.setup.lt_heading_rule_file.lower() != "none":
-            lt_heading_rule_file_path = core_utils.get_os_independent_name(core_glob.setup.lt_heading_rule_file)
+        if core_glob.inst_setup.lt_heading_rule_file and core_glob.inst_setup.lt_heading_rule_file.lower() != "none":
+            lt_heading_rule_file_path = core_utils.get_os_independent_name(core_glob.inst_setup.lt_heading_rule_file)
             if os.path.isfile(lt_heading_rule_file_path):
                 return self._load_anti_patterns_from_json(pathlib.Path(lt_heading_rule_file_path))
 
             core_utils.terminate_fatal(
-                f"File with heading anti-patterns is missing - " f"file name '{core_glob.setup.lt_heading_rule_file}'"
+                f"File with heading anti-patterns is missing - " f"file name '{core_glob.inst_setup.lt_heading_rule_file}'"
             )
 
         anti_patterns = []
@@ -380,12 +380,12 @@ class LineTypeHeading:
             list[tuple[str, bool, str, collections.abc.Callable[[str, str], bool], list[str]]]: The
                 valid heading rules.
         """
-        if core_glob.setup.lt_heading_rule_file and core_glob.setup.lt_heading_rule_file.lower() != "none":
-            lt_heading_rule_file_path = core_utils.get_os_independent_name(core_glob.setup.lt_heading_rule_file)
+        if core_glob.inst_setup.lt_heading_rule_file and core_glob.inst_setup.lt_heading_rule_file.lower() != "none":
+            lt_heading_rule_file_path = core_utils.get_os_independent_name(core_glob.inst_setup.lt_heading_rule_file)
             if os.path.isfile(lt_heading_rule_file_path):
                 return self._load_rules_from_json(pathlib.Path(lt_heading_rule_file_path))
 
-            core_utils.terminate_fatal(f"File with heading rules is missing - " f"file name '{core_glob.setup.lt_heading_rule_file}'")
+            core_utils.terminate_fatal(f"File with heading rules is missing - " f"file name '{core_glob.inst_setup.lt_heading_rule_file}'")
 
         return nlp_core.NLPCore.get_lt_rules_default_heading()
 
@@ -418,8 +418,8 @@ class LineTypeHeading:
                 )
 
         core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_heading,
-            "The heading anti-patterns were successfully loaded from the " + f"file {core_glob.setup.lt_heading_rule_file}",
+            core_glob.inst_setup.is_verbose_lt_heading,
+            "The heading anti-patterns were successfully loaded from the " + f"file {core_glob.inst_setup.lt_heading_rule_file}",
         )
 
         return anti_patterns
@@ -460,8 +460,8 @@ class LineTypeHeading:
                 )
 
         core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_heading,
-            f"The heading rules were successfully loaded from the file {core_glob.setup.lt_heading_rule_file}",
+            core_glob.inst_setup.is_verbose_lt_heading,
+            f"The heading rules were successfully loaded from the file {core_glob.inst_setup.lt_heading_rule_file}",
         )
 
         return rules
@@ -469,11 +469,11 @@ class LineTypeHeading:
     # ------------------------------------------------------------------
     # Process the line-related data.
     # ------------------------------------------------------------------
-    def _process_line(self, line_json: nlp_core.LineJSON, text: str, first_token: str) -> int:  # noqa: C901
+    def _process_line(self, line_json: nlp_core.NLPCore.LineJSON, text: str, first_token: str) -> int:  # noqa: C901
         """Process the line-related data.
 
         Args:
-            line_json (nlp_core.LineJSON): The line to be processed.
+            line_json (nlp_core.NLPCore.LineJSON): The line to be processed.
             text (str): The text of the line.
             first_token (str): The first token of the text.
 
@@ -483,7 +483,7 @@ class LineTypeHeading:
         for (rule_name, pattern) in self._anti_patterns:
             if pattern.match(text):
                 core_utils.progress_msg(
-                    core_glob.setup.is_verbose_lt_heading,
+                    core_glob.inst_setup.is_verbose_lt_heading,
                     f"LineTypeHeading: Anti pattern                         ={rule_name} - text={text}",
                 )
                 return 0
@@ -515,8 +515,8 @@ class LineTypeHeading:
                 coord_llx_float = float(coord_llx)
 
                 if (
-                    coord_llx_curr_float < coord_llx_float * (100 - core_glob.setup.lt_heading_tolerance_llx) / 100
-                    or coord_llx_curr_float > coord_llx_float * (100 + core_glob.setup.lt_heading_tolerance_llx) / 100
+                    coord_llx_curr_float < coord_llx_float * (100 - core_glob.inst_setup.lt_heading_tolerance_llx) / 100
+                    or coord_llx_curr_float > coord_llx_float * (100 + core_glob.inst_setup.lt_heading_tolerance_llx) / 100
                 ):
                     return 0
 
@@ -537,7 +537,7 @@ class LineTypeHeading:
                 self._create_toc_entry(level, text)
 
                 core_utils.progress_msg(
-                    core_glob.setup.is_verbose_lt_heading,
+                    core_glob.inst_setup.is_verbose_lt_heading,
                     f"LineTypeHeading: Match                                ={rule_name} " + f"- level={level} - heading={text}",
                 )
 
@@ -582,7 +582,7 @@ class LineTypeHeading:
                 self._create_toc_entry(level, text)
 
                 core_utils.progress_msg(
-                    core_glob.setup.is_verbose_lt_heading,
+                    core_glob.inst_setup.is_verbose_lt_heading,
                     f"LineTypeHeading: Match new level                      ={rule_name} " + f"- level={level} - heading={text}",
                 )
 
@@ -595,16 +595,17 @@ class LineTypeHeading:
     # ------------------------------------------------------------------
     def _process_page(self) -> None:
         """Process the page-related data."""
-        core_utils.progress_msg(core_glob.setup.is_verbose_lt_heading, "LineTypeHeading")
+        core_utils.progress_msg(core_glob.inst_setup.is_verbose_lt_heading, "LineTypeHeading")
         core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_heading,
+            core_glob.inst_setup.is_verbose_lt_heading,
             f"LineTypeHeading: Start page (lines)                   ={self._page_idx+1}",
         )
 
-        self._max_line_line = len(core_glob.text_parser.parse_result_line_lines)
+        self._line_no_max = len(self._lines_json)
 
-        for line_idx, line_json in enumerate(core_glob.text_parser.parse_result_line_lines):
-            self._line_lines_idx = line_idx
+        for line_idx, line_json in enumerate(self._lines_json):
+            self._line_idx = line_idx
+
             if line_json[nlp_core.NLPCore.JSON_NAME_LINE_TYPE] != nlp_core.NLPCore.LINE_TYPE_BODY:
                 continue
 
@@ -617,10 +618,14 @@ class LineTypeHeading:
 
             if (level := self._process_line(line_json, text, first_token)) > 0:
                 line_json[nlp_core.NLPCore.JSON_NAME_LINE_TYPE] = nlp_core.NLPCore.LINE_TYPE_HEADER + "_" + str(level)
-                core_glob.text_parser.parse_result_line_lines[self._line_lines_idx] = line_json
+                self._lines_json[self._line_idx] = line_json
+
+        core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_PAGES][self._page_idx][
+            nlp_core.NLPCore.JSON_NAME_LINES
+        ] = self._lines_json
 
         core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_heading,
+            core_glob.inst_setup.is_verbose_lt_heading,
             f"LineTypeHeading: End   page (lines)                   ={self._page_idx+1}",
         )
 
@@ -671,27 +676,27 @@ class LineTypeHeading:
         )
 
         if (
-            core_glob.setup.lt_heading_max_level == 0
-            or len(core_glob.text_parser.parse_result_line_pages) < core_glob.setup.lt_heading_min_pages
+            core_glob.inst_setup.lt_heading_max_level == 0
+            or core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_PAGES] < core_glob.inst_setup.lt_heading_min_pages
         ):
             return
 
-        self.file_name_curr = file_name_curr
+        self._file_name_curr = file_name_curr
 
-        core_utils.progress_msg(core_glob.setup.is_verbose_lt_heading, "LineTypeHeading")
+        core_utils.progress_msg(core_glob.inst_setup.is_verbose_lt_heading, "LineTypeHeading")
         core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_heading,
-            f"LineTypeHeading: Start document                       ={self.file_name_curr}",
+            core_glob.inst_setup.is_verbose_lt_heading,
+            f"LineTypeHeading: Start document                       ={self._file_name_curr}",
         )
 
-        self._max_page = core_glob.inst_parser.parse_result_no_pages_in_doc
+        self._page_no_max = core_glob.inst_parser.parse_result_no_pages_in_doc
 
         for page_idx, page_json in enumerate(core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_PAGES]):
             self._page_idx = page_idx
             self._lines_json = page_json[nlp_core.NLPCore.JSON_NAME_LINES]
             self._process_page()
 
-        if core_glob.setup.is_create_extra_file_heading and self._toc:
+        if core_glob.inst_setup.is_create_extra_file_heading and self._toc:
             full_name = core_utils.get_full_name_from_components(
                 directory_name,
                 core_utils.get_stem_name(str(file_name_curr)) + ".heading." + core_glob.FILE_TYPE_JSON,
@@ -705,18 +710,18 @@ class LineTypeHeading:
                 # }
                 json.dump(
                     {
-                        nlp_core.NLPCore.JSON_NAME_DOC_ID: document_id,
-                        nlp_core.NLPCore.JSON_NAME_DOC_FILE_NAME: file_name_orig,
+                        nlp_core.NLPCore.JSON_NAME_DOCUMENT_ID: document_id,
+                        nlp_core.NLPCore.JSON_NAME_FILE_NAME_ORIG: file_name_orig,
                         nlp_core.NLPCore.JSON_NAME_TOC: self._toc,
                     },
                     file_handle,
-                    indent=core_glob.setup.json_indent,
-                    sort_keys=core_glob.setup.is_json_sort_keys,
+                    indent=core_glob.inst_setup.json_indent,
+                    sort_keys=core_glob.inst_setup.is_json_sort_keys,
                 )
 
         core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_heading,
-            f"LineTypeHeading: End   document                       ={self.file_name_curr}",
+            core_glob.inst_setup.is_verbose_lt_heading,
+            f"LineTypeHeading: End   document                       ={self._file_name_curr}",
         )
 
         core_glob.logger.debug(core_glob.LOGGER_END)

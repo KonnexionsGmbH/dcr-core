@@ -4,6 +4,8 @@
 
 """Main processing."""
 
+from __future__ import annotations
+
 import glob
 import os.path
 from typing import ClassVar
@@ -35,34 +37,6 @@ class Process:
     # ------------------------------------------------------------------
     # Class variables.
     # ------------------------------------------------------------------
-    ERROR_01_901: ClassVar[str] = "01.901 Issue (p_i): Document rejected because of unknown file extension='{extension}'."
-    ERROR_01_903: ClassVar[str] = (
-        "01.903 Issue (p_i): Error with fitz.open() processing of file '{file_name}' " + "- RuntimeError - error: '{error_msg}'"
-    )
-
-    ERROR_21_901: ClassVar[str] = (
-        "21.901 Issue (p_2_i): Processing file '{full_name}' with pdf2image failed - PDFPageCountError - "
-        + "error type: '{error_type}' - error: '{error_msg}'"
-    )
-    ERROR_31_902: ClassVar[str] = (
-        "31.902 Issue (n_2_p): The file '{full_name}' cannot be converted to an " + "'PDF' document - FileNotFoundError"
-    )
-    ERROR_31_903: ClassVar[str] = (
-        "31.903 Issue (n_2_p): The file '{full_name}' cannot be converted to an " + "'PDF' document - RuntimeError - error: '{error_msg}'"
-    )
-    ERROR_31_911: ClassVar[str] = "31.911 Issue (n_2_p): The pdf document {full_name} for PDFlib TET is an empty file"
-    ERROR_41_901: ClassVar[str] = (
-        "41.901 Issue (ocr): Converting the file '{full_name}' with Tesseract OCR failed - " + "RuntimeError - error: '{error_msg}'"
-    )
-    ERROR_41_911: ClassVar[str] = "41.911 Issue (ocr): Tesseract OCR has created an empty pdf file from the file {full_name}"
-    ERROR_51_901: ClassVar[str] = (
-        "51.901 Issue (tet): Opening document '{full_name}' - " + "error no: '{error_no}' - api: '{api_name}' - error: '{error_msg}'"
-    )
-    ERROR_61_901: ClassVar[str] = "61.901 Issue (s_p_j): Parsing the file '{full_name}' failed - FileNotFoundError"
-    ERROR_61_902: ClassVar[str] = "61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'"
-    ERROR_61_903: ClassVar[str] = "61.903 Issue (s_p_j): The number of unknown XML nodes is {no_errors} - details can be found in the log"
-    ERROR_71_901: ClassVar[str] = "71.901 Issue (tkn): Tokenizing the file '{full_name}' failed - FileNotFoundError"
-
     PANDOC_PDF_ENGINE_LULATEX: ClassVar[str] = "lulatex"
     PANDOC_PDF_ENGINE_XELATEX: ClassVar[str] = "xelatex"
 
@@ -144,7 +118,7 @@ class Process:
                     self._full_name_in_pdf2image = self._full_name_in
             except RuntimeError as exc:
                 raise RuntimeError(
-                    Process.ERROR_01_903.replace("{file_name}", self._full_name_in).replace("{error_msg}", str(exc)),
+                    core_utils.ERROR_01_903.replace("{file_name}", self._full_name_in).replace("{error_msg}", str(exc)),
                 ) from exc
         elif self._full_name_in_extension_int in core_glob.FILE_TYPE_PANDOC:
             self._is_pandoc = True
@@ -153,7 +127,7 @@ class Process:
             self._is_tesseract = True
             self._full_name_in_tesseract = self._full_name_in
         else:
-            raise RuntimeError(Process.ERROR_01_901.replace("{extension}", self._full_name_in_extension_int))
+            raise RuntimeError(core_utils.ERROR_01_901.replace("{extension}", self._full_name_in_extension_int))
 
         core_glob.logger.debug(core_glob.LOGGER_END)
 
@@ -307,7 +281,7 @@ class Process:
                 + "_[0-9]*."
                 + (
                     core_glob.FILE_TYPE_PNG
-                    if core_glob.setup.pdf2image_type == setup.Setup.PDF2IMAGE_TYPE_PNG
+                    if core_glob.inst_setup.pdf2image_type == setup.Setup.PDF2IMAGE_TYPE_PNG
                     else core_glob.FILE_TYPE_JPEG
                 ),
             )
@@ -420,9 +394,9 @@ class Process:
         core_utils.progress_msg(self._is_verbose, f"Start processing spaCy         {self._full_name_in_tokenizer}")
 
         try:
-            core_glob.tokenizer_spacy.exists()
+            core_glob.inst_tokenizer.exists()
         except AttributeError:
-            core_glob.tokenizer_spacy = tokenizer.TokenizerSpacy()
+            core_glob.inst_tokenizer = tokenizer.TokenizerSpacy()
 
         self._full_name_in_next_step = core_utils.get_full_name_from_components(
             self._full_name_in_directory,
@@ -551,25 +525,29 @@ class Process:
         self._full_name_orig = full_name_orig if full_name_orig else full_name_in
 
         # Load the configuration parameters.
-        core_glob.setup = setup.Setup()
+        core_glob.inst_setup = setup.Setup()
 
         self._is_delete_auxiliary_files = (
-            is_delete_auxiliary_files if is_delete_auxiliary_files is not None else core_glob.setup.is_delete_auxiliary_files
+            is_delete_auxiliary_files if is_delete_auxiliary_files is not None else core_glob.inst_setup.is_delete_auxiliary_files
         )
-        self._is_lt_footer_required = is_lt_footer_required if is_lt_footer_required is not None else core_glob.setup.is_lt_footer_required
-        self._is_lt_header_required = is_lt_header_required if is_lt_header_required is not None else core_glob.setup.is_lt_header_required
+        self._is_lt_footer_required = (
+            is_lt_footer_required if is_lt_footer_required is not None else core_glob.inst_setup.is_lt_footer_required
+        )
+        self._is_lt_header_required = (
+            is_lt_header_required if is_lt_header_required is not None else core_glob.inst_setup.is_lt_header_required
+        )
         self._is_lt_heading_required = (
-            is_lt_heading_required if is_lt_heading_required is not None else core_glob.setup.is_lt_heading_required
+            is_lt_heading_required if is_lt_heading_required is not None else core_glob.inst_setup.is_lt_heading_required
         )
         self._is_lt_list_bullet_required = (
-            is_lt_list_bullet_required if is_lt_list_bullet_required is not None else core_glob.setup.is_lt_list_bullet_required
+            is_lt_list_bullet_required if is_lt_list_bullet_required is not None else core_glob.inst_setup.is_lt_list_bullet_required
         )
         self._is_lt_list_number_required = (
-            is_lt_list_number_required if is_lt_list_number_required is not None else core_glob.setup.is_lt_list_number_required
+            is_lt_list_number_required if is_lt_list_number_required is not None else core_glob.inst_setup.is_lt_list_number_required
         )
-        self._is_lt_table_required = is_lt_table_required if is_lt_table_required is not None else core_glob.setup.is_lt_table_required
-        self._is_lt_toc_required = is_lt_toc_required if is_lt_toc_required is not None else core_glob.setup.is_lt_toc_required
-        self._is_verbose = is_verbose if is_verbose is not None else core_glob.setup.is_verbose
+        self._is_lt_table_required = is_lt_table_required if is_lt_table_required is not None else core_glob.inst_setup.is_lt_table_required
+        self._is_lt_toc_required = is_lt_toc_required if is_lt_toc_required is not None else core_glob.inst_setup.is_lt_toc_required
+        self._is_verbose = is_verbose if is_verbose is not None else core_glob.inst_setup.is_verbose
         self._language_pandoc = language_pandoc if language_pandoc else nlp_core.NLPCore.LANGUAGE_PANDOC_DEFAULT
         self._language_spacy = language_spacy if language_spacy else nlp_core.NLPCore.LANGUAGE_SPACY_DEFAULT
         self._language_tesseract = language_tesseract if language_tesseract else nlp_core.NLPCore.LANGUAGE_TESSERACT_DEFAULT
@@ -683,18 +661,18 @@ class Process:
             )
 
             if len(PyPDF2.PdfReader(full_name_out).pages) == 0:
-                error_msg = Process.ERROR_31_911.replace("{full_name}", full_name_out)
+                error_msg = core_utils.ERROR_31_911.replace("{full_name}", full_name_out)
                 core_glob.logger.debug("return               =%s", (error_msg[:6], error_msg))
                 core_glob.logger.debug(core_glob.LOGGER_END)
                 return error_msg[:6], error_msg
 
         except FileNotFoundError:
-            error_msg = Process.ERROR_31_902.replace("{full_name}", full_name_in)
+            error_msg = core_utils.ERROR_31_902.replace("{full_name}", full_name_in)
             core_glob.logger.debug("return               =%s", (error_msg[:6], error_msg))
             core_glob.logger.debug(core_glob.LOGGER_END)
             return error_msg[:6], error_msg
         except RuntimeError as err:
-            error_msg = Process.ERROR_31_903.replace("{full_name}", full_name_in).replace("{error_msg}", str(err))
+            error_msg = core_utils.ERROR_31_903.replace("{full_name}", full_name_in).replace("{error_msg}", str(err))
             core_glob.logger.debug("return               =%s", (error_msg[:6], error_msg))
             core_glob.logger.debug(core_glob.LOGGER_END)
             return error_msg[:6], error_msg
@@ -797,18 +775,18 @@ class Process:
             # Get the root Element
             root = tree.getroot()
 
-            core_glob.text_parser = parser.TextParser()
+            core_glob.inst_parser = parser.TextParser()
 
-            core_glob.text_parser.no_errors = 0
+            core_glob.inst_parser.no_errors = 0
 
             for child in root:
                 child_tag = child.tag[nlp_core.NLPCore.PARSE_ELEM_FROM :]
                 match child_tag:
                     case nlp_core.NLPCore.PARSE_ELEM_DOCUMENT:
-                        core_glob.text_parser.parse_tag_document(
+                        core_glob.inst_parser.parse_tag_document(
                             directory_name=os.path.dirname(full_name_in),
                             document_id=document_id,
-                            environment_variant=core_glob.setup.environment_variant,
+                            environment_variant=core_glob.inst_setup.environment_variant,
                             file_name_curr=os.path.basename(full_name_in),
                             file_name_next=full_name_out,
                             file_name_orig=full_name_orig,
@@ -826,17 +804,19 @@ class Process:
                     case nlp_core.NLPCore.PARSE_ELEM_CREATION:
                         pass
                     case other:
-                        core_utils.progress_msg_core(Process.ERROR_61_902.replace("{parent_tag}", "XML root").replace("{child_tag", other))
-                        core_glob.text_parser.no_errors += 1
+                        core_utils.progress_msg_core(
+                            core_utils.ERROR_61_902.replace("{parent_tag}", "XML root").replace("{child_tag", other)
+                        )
+                        core_glob.inst_parser.no_errors += 1
 
-            if core_glob.text_parser.no_errors != 0:
-                error_msg = Process.ERROR_61_903.replace("{no_errors}", str(core_glob.text_parser.no_errors))
+            if core_glob.inst_parser.no_errors != 0:
+                error_msg = core_utils.ERROR_61_903.replace("{no_errors}", str(core_glob.inst_parser.no_errors))
                 core_glob.logger.debug("return              =%s", (error_msg[:6], error_msg))
                 core_glob.logger.debug(core_glob.LOGGER_END)
                 return error_msg[:6], error_msg
 
         except FileNotFoundError:
-            error_msg = Process.ERROR_61_901.replace("{full_name}", full_name_in)
+            error_msg = core_utils.ERROR_61_901.replace("{full_name}", full_name_in)
             core_glob.logger.debug("return              =%s", (error_msg[:6], error_msg))
             core_glob.logger.debug(core_glob.LOGGER_END)
             return error_msg[:6], error_msg
@@ -897,7 +877,7 @@ class Process:
                         + "_*."
                         + (
                             core_glob.FILE_TYPE_PNG
-                            if core_glob.setup.pdf2image_type == setup.Setup.PDF2IMAGE_TYPE_PNG
+                            if core_glob.inst_setup.pdf2image_type == setup.Setup.PDF2IMAGE_TYPE_PNG
                             else core_glob.FILE_TYPE_JPEG
                         ),
                     )
@@ -916,7 +896,7 @@ class Process:
                     + "."
                     + (
                         core_glob.FILE_TYPE_PNG
-                        if core_glob.setup.pdf2image_type == setup.Setup.PDF2IMAGE_TYPE_PNG
+                        if core_glob.inst_setup.pdf2image_type == setup.Setup.PDF2IMAGE_TYPE_PNG
                         else core_glob.FILE_TYPE_JPEG
                     )
                 )
@@ -928,13 +908,13 @@ class Process:
 
                 img.save(
                     full_name_next,
-                    core_glob.setup.pdf2image_type,
+                    core_glob.inst_setup.pdf2image_type,
                 )
 
                 children.append((file_name_next, full_name_next))
         except PDFPageCountError as err:
             error_msg = (
-                Process.ERROR_21_901.replace("{full_name}", full_name_in)
+                core_utils.ERROR_21_901.replace("{full_name}", full_name_in)
                 .replace("{error_type}", str(type(err)))
                 .replace("{error_msg}", str(err))
             )
@@ -1000,7 +980,7 @@ class Process:
 
         if (file_curr := tet.open_document(full_name_in, doc_opt_list)) == -1:
             error_msg = (
-                Process.ERROR_51_901.replace("{full_name}", full_name_in)
+                core_utils.ERROR_51_901.replace("{full_name}", full_name_in)
                 .replace("{error_no}", str(tet.get_errnum()))
                 .replace("{api_name}", tet.get_apiname() + "()")
                 .replace("{error_msg}", tet.get_errmsg())
@@ -1089,7 +1069,7 @@ class Process:
                     extension="pdf",
                     image=full_name,
                     lang=language_tesseract,
-                    timeout=core_glob.setup.tesseract_timeout,
+                    timeout=core_glob.inst_setup.tesseract_timeout,
                 )
 
                 with open(full_name_out, "w+b") as file_handle:
@@ -1097,7 +1077,7 @@ class Process:
                     file_handle.write(pdf)
 
                 if len(PyPDF2.PdfReader(full_name_out).pages) == 0:
-                    error_msg = Process.ERROR_41_911.replace("{full_name_out}", full_name_out)
+                    error_msg = core_utils.ERROR_41_911.replace("{full_name_out}", full_name_out)
                     core_glob.logger.debug("return                  =%s", (error_msg[:6], error_msg, []))
                     core_glob.logger.debug(core_glob.LOGGER_END)
                     return error_msg[:6], error_msg, []
@@ -1111,7 +1091,7 @@ class Process:
                 children.append(full_name)
 
             except RuntimeError as err:
-                error_msg = Process.ERROR_41_901.replace("{full_name}", full_name_in).replace("{error_msg}", str(err))
+                error_msg = core_utils.ERROR_41_901.replace("{full_name}", full_name_in).replace("{error_msg}", str(err))
                 core_glob.logger.debug("return                  =%s", (error_msg[:6], error_msg, []))
                 core_glob.logger.debug(core_glob.LOGGER_END)
                 return error_msg[:6], error_msg, []
@@ -1188,7 +1168,7 @@ class Process:
         core_glob.logger.debug("param pipeline_name  =%s", pipeline_name)
 
         try:
-            core_glob.tokenizer_spacy.process_document(
+            core_glob.inst_tokenizer.process_document(
                 document_id=document_id,
                 file_name_next=full_name_out,
                 file_name_orig=full_name_orig,
@@ -1199,7 +1179,7 @@ class Process:
             )
 
         except FileNotFoundError:
-            error_msg = Process.ERROR_71_901.replace("{full_name}", full_name_in)
+            error_msg = core_utils.ERROR_71_901.replace("{full_name}", full_name_in)
             core_glob.logger.debug("return               =%s", (error_msg[:6], error_msg))
             core_glob.logger.debug(core_glob.LOGGER_END)
             return error_msg[:6], error_msg

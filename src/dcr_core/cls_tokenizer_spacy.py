@@ -8,6 +8,8 @@ Typical usage example:
 
     my_instance = TokenizerSpacy()
 """
+from __future__ import annotations
+
 import json
 
 import spacy
@@ -118,37 +120,37 @@ class TokenizerSpacy:
         )
 
         json_data = {
-            nlp_core.NLPCore.JSON_NAME_DOC_ID: self._document_id,
-            nlp_core.NLPCore.JSON_NAME_DOC_FILE_NAME: self._file_name_orig,
+            nlp_core.NLPCore.JSON_NAME_DOCUMENT_ID: self._document_id,
+            nlp_core.NLPCore.JSON_NAME_FILE_NAME_ORIG: self._file_name_orig,
             nlp_core.NLPCore.JSON_NAME_NO_LINES_FOOTER: self._no_lines_footer,
             nlp_core.NLPCore.JSON_NAME_NO_LINES_HEADER: self._no_lines_header,
             nlp_core.NLPCore.JSON_NAME_NO_LINES_IN_DOC: self._no_lines_in_doc,
             nlp_core.NLPCore.JSON_NAME_NO_LINES_TOC: self._no_lines_toc,
             # wwe
-            # nlp_core.NLPCore.JSON_NAME_NO_LISTS_BULLET_IN_DOC: core_glob.text_parser.parse_result_line_document[
+            # nlp_core.NLPCore.JSON_NAME_NO_LISTS_BULLET_IN_DOC: core_glob.inst_parser.parse_result_line_document[
             #     nlp_core.NLPCore.JSON_NAME_NO_LISTS_BULLET_IN_DOC
             # ],
-            # nlp_core.NLPCore.JSON_NAME_NO_LISTS_NUMBER_IN_DOC: core_glob.text_parser.parse_result_line_document[
+            # nlp_core.NLPCore.JSON_NAME_NO_LISTS_NUMBER_IN_DOC: core_glob.inst_parser.parse_result_line_document[
             #     nlp_core.NLPCore.JSON_NAME_NO_LISTS_NUMBER_IN_DOC
             # ],
             nlp_core.NLPCore.JSON_NAME_NO_PAGES_IN_DOC: self._no_pages_in_doc,
             nlp_core.NLPCore.JSON_NAME_NO_PARAS_IN_DOC: self._no_paras_in_doc,
             nlp_core.NLPCore.JSON_NAME_NO_SENTS_IN_DOC: self._no_sents_in_doc,
             # wwe
-            # nlp_core.NLPCore.JSON_NAME_NO_TABLES_IN_DOC: core_glob.text_parser.parse_result_line_document[
+            # nlp_core.NLPCore.JSON_NAME_NO_TABLES_IN_DOC: core_glob.inst_parser.parse_result_line_document[
             #     nlp_core.NLPCore.JSON_NAME_NO_TABLES_IN_DOC
             # ],
             nlp_core.NLPCore.JSON_NAME_NO_TOKENS_IN_DOC: self._no_tokens_in_doc,
             nlp_core.NLPCore.JSON_NAME_PAGES: self.token_pages,
         }
 
-        if core_glob.setup.is_tokenize_2_jsonfile:
+        if core_glob.inst_setup.is_tokenize_2_jsonfile:
             with open(self._file_name_next, "w", encoding=core_glob.FILE_ENCODING_DEFAULT) as file_handle:
                 json.dump(
                     json_data,
                     file_handle,
-                    indent=core_glob.setup.json_indent,
-                    sort_keys=core_glob.setup.is_json_sort_keys,
+                    indent=core_glob.inst_setup.json_indent,
+                    sort_keys=core_glob.inst_setup.is_json_sort_keys,
                 )
 
     # ------------------------------------------------------------------
@@ -268,236 +270,236 @@ class TokenizerSpacy:
 
         if (
             token.is_bracket  # pylint: disable=too-many-boolean-expressions
-            and core_glob.setup.is_spacy_ignore_bracket
+            and core_glob.inst_setup.is_spacy_ignore_bracket
             or token.is_left_punct
-            and core_glob.setup.is_spacy_ignore_left_punct
+            and core_glob.inst_setup.is_spacy_ignore_left_punct
             or token.is_punct
-            and core_glob.setup.is_spacy_ignore_punct
+            and core_glob.inst_setup.is_spacy_ignore_punct
             or token.is_quote
-            and core_glob.setup.is_spacy_ignore_quote
+            and core_glob.inst_setup.is_spacy_ignore_quote
             or token.is_right_punct
-            and core_glob.setup.is_spacy_ignore_right_punct
+            and core_glob.inst_setup.is_spacy_ignore_right_punct
             or token.is_space
-            and core_glob.setup.is_spacy_ignore_space
+            and core_glob.inst_setup.is_spacy_ignore_space
             or token.is_stop
-            and core_glob.setup.is_spacy_ignore_stop
+            and core_glob.inst_setup.is_spacy_ignore_stop
         ):
             return token_attr
 
-        if core_glob.setup.is_spacy_tkn_attr_cluster:
+        if core_glob.inst_setup.is_spacy_tkn_attr_cluster:
             if token.cluster != "":
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_CLUSTER] = token.cluster
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_CLUSTER] = token.cluster
 
-        if core_glob.setup.is_spacy_tkn_attr_dep_:
+        if core_glob.inst_setup.is_spacy_tkn_attr_dep_:
             if token.dep_ != "":
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_DEP_] = token.dep_
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_DEP_] = token.dep_
 
-        if core_glob.setup.is_spacy_tkn_attr_doc:
+        if core_glob.inst_setup.is_spacy_tkn_attr_doc:
             if token.doc is not None:
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_DOC] = token.doc.text
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_DOC] = token.doc.text
 
-        if core_glob.setup.is_spacy_tkn_attr_ent_iob_:
+        if core_glob.inst_setup.is_spacy_tkn_attr_ent_iob_:
             if token.ent_iob_ != "":
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_ENT_IOB_] = token.ent_iob_
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_ENT_IOB_] = token.ent_iob_
 
-        if core_glob.setup.is_spacy_tkn_attr_ent_kb_id_:
+        if core_glob.inst_setup.is_spacy_tkn_attr_ent_kb_id_:
             # not testable
             if token.ent_kb_id_ != "":
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_ENT_KB_ID_] = token.ent_kb_id_
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_ENT_KB_ID_] = token.ent_kb_id_
 
-        if core_glob.setup.is_spacy_tkn_attr_ent_type_:
+        if core_glob.inst_setup.is_spacy_tkn_attr_ent_type_:
             if token.ent_type_ != "":
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_ENT_TYPE_] = token.ent_type_
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_ENT_TYPE_] = token.ent_type_
 
-        if core_glob.setup.is_spacy_tkn_attr_head:
+        if core_glob.inst_setup.is_spacy_tkn_attr_head:
             if token.head is not None:
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_HEAD] = token.head.i
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_HEAD] = token.head.i
 
-        if core_glob.setup.is_spacy_tkn_attr_i:
-            token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_I] = token.i
+        if core_glob.inst_setup.is_spacy_tkn_attr_i:
+            token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_I] = token.i
 
-        if core_glob.setup.is_spacy_tkn_attr_idx:
+        if core_glob.inst_setup.is_spacy_tkn_attr_idx:
             if token.idx != "":
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_IDX] = token.idx
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IDX] = token.idx
 
-        if core_glob.setup.is_spacy_tkn_attr_is_alpha:
+        if core_glob.inst_setup.is_spacy_tkn_attr_is_alpha:
             if token.is_alpha:
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_IS_ALPHA] = token.is_alpha
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_ALPHA] = token.is_alpha
 
-        if core_glob.setup.is_spacy_tkn_attr_is_ascii:
+        if core_glob.inst_setup.is_spacy_tkn_attr_is_ascii:
             if token.is_ascii:
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_IS_ASCII] = token.is_ascii
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_ASCII] = token.is_ascii
 
-        if core_glob.setup.is_spacy_tkn_attr_is_bracket:
+        if core_glob.inst_setup.is_spacy_tkn_attr_is_bracket:
             if token.is_bracket:
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_IS_BRACKET] = token.is_bracket
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_BRACKET] = token.is_bracket
 
-        if core_glob.setup.is_spacy_tkn_attr_is_currency:
+        if core_glob.inst_setup.is_spacy_tkn_attr_is_currency:
             if token.is_currency:
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_IS_CURRENCY] = token.is_currency
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_CURRENCY] = token.is_currency
 
-        if core_glob.setup.is_spacy_tkn_attr_is_digit:
+        if core_glob.inst_setup.is_spacy_tkn_attr_is_digit:
             if token.is_digit:
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_IS_DIGIT] = token.is_digit
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_DIGIT] = token.is_digit
 
-        if core_glob.setup.is_spacy_tkn_attr_is_left_punct:
+        if core_glob.inst_setup.is_spacy_tkn_attr_is_left_punct:
             if token.is_left_punct:
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_IS_LEFT_PUNCT] = token.is_left_punct
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_LEFT_PUNCT] = token.is_left_punct
 
-        if core_glob.setup.is_spacy_tkn_attr_is_lower:
+        if core_glob.inst_setup.is_spacy_tkn_attr_is_lower:
             if token.is_lower:
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_IS_LOWER] = token.is_lower
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_LOWER] = token.is_lower
 
-        if core_glob.setup.is_spacy_tkn_attr_is_oov:
+        if core_glob.inst_setup.is_spacy_tkn_attr_is_oov:
             if token.is_oov:
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_IS_OOV] = token.is_oov
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_OOV] = token.is_oov
 
-        if core_glob.setup.is_spacy_tkn_attr_is_punct:
+        if core_glob.inst_setup.is_spacy_tkn_attr_is_punct:
             if token.is_punct:
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_IS_PUNCT] = token.is_punct
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_PUNCT] = token.is_punct
 
-        if core_glob.setup.is_spacy_tkn_attr_is_quote:
+        if core_glob.inst_setup.is_spacy_tkn_attr_is_quote:
             if token.is_quote:
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_IS_QUOTE] = token.is_quote
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_QUOTE] = token.is_quote
 
-        if core_glob.setup.is_spacy_tkn_attr_is_right_punct:
+        if core_glob.inst_setup.is_spacy_tkn_attr_is_right_punct:
             if token.is_right_punct:
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_IS_RIGHT_PUNCT] = token.is_right_punct
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_RIGHT_PUNCT] = token.is_right_punct
 
-        if core_glob.setup.is_spacy_tkn_attr_is_sent_end:
+        if core_glob.inst_setup.is_spacy_tkn_attr_is_sent_end:
             if token.is_sent_end:
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_IS_SENT_END] = token.is_sent_end
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_SENT_END] = token.is_sent_end
 
-        if core_glob.setup.is_spacy_tkn_attr_is_sent_start:
+        if core_glob.inst_setup.is_spacy_tkn_attr_is_sent_start:
             if token.is_sent_start:
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_IS_SENT_START] = token.is_sent_start
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_SENT_START] = token.is_sent_start
 
-        if core_glob.setup.is_spacy_tkn_attr_is_space:
+        if core_glob.inst_setup.is_spacy_tkn_attr_is_space:
             if token.is_space:
                 # not testable
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_IS_SPACE] = token.is_space
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_SPACE] = token.is_space
 
-        if core_glob.setup.is_spacy_tkn_attr_is_stop:
+        if core_glob.inst_setup.is_spacy_tkn_attr_is_stop:
             if token.is_stop:
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_IS_STOP] = token.is_stop
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_STOP] = token.is_stop
 
-        if core_glob.setup.is_spacy_tkn_attr_is_title:
+        if core_glob.inst_setup.is_spacy_tkn_attr_is_title:
             if token.is_title:
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_IS_TITLE] = token.is_title
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_TITLE] = token.is_title
 
-        if core_glob.setup.is_spacy_tkn_attr_is_upper:
+        if core_glob.inst_setup.is_spacy_tkn_attr_is_upper:
             if token.is_upper:
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_IS_UPPER] = token.is_upper
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_UPPER] = token.is_upper
 
-        if core_glob.setup.is_spacy_tkn_attr_lang_:
+        if core_glob.inst_setup.is_spacy_tkn_attr_lang_:
             if token.lang_ != "":
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_LANG_] = token.lang_
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_LANG_] = token.lang_
 
-        if core_glob.setup.is_spacy_tkn_attr_left_edge:
+        if core_glob.inst_setup.is_spacy_tkn_attr_left_edge:
             if token.left_edge.text is not None:
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_LEFT_EDGE] = token.left_edge.i
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_LEFT_EDGE] = token.left_edge.i
 
-        if core_glob.setup.is_spacy_tkn_attr_lemma_:
+        if core_glob.inst_setup.is_spacy_tkn_attr_lemma_:
             if token.lemma_ != "":
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_LEMMA_] = token.lemma_
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_LEMMA_] = token.lemma_
 
-        if core_glob.setup.is_spacy_tkn_attr_lex:
+        if core_glob.inst_setup.is_spacy_tkn_attr_lex:
             if token.lex is not None:
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_LEX] = token.lex.text
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_LEX] = token.lex.text
 
-        if core_glob.setup.is_spacy_tkn_attr_lex_id:
+        if core_glob.inst_setup.is_spacy_tkn_attr_lex_id:
             if token.lex_id != "":
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_LEX_ID] = token.lex_id
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_LEX_ID] = token.lex_id
 
-        if core_glob.setup.is_spacy_tkn_attr_like_email:
+        if core_glob.inst_setup.is_spacy_tkn_attr_like_email:
             if token.like_email:
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_LIKE_EMAIL] = token.like_email
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_LIKE_EMAIL] = token.like_email
 
-        if core_glob.setup.is_spacy_tkn_attr_like_num:
+        if core_glob.inst_setup.is_spacy_tkn_attr_like_num:
             if token.like_num:
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_LIKE_NUM] = token.like_num
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_LIKE_NUM] = token.like_num
 
-        if core_glob.setup.is_spacy_tkn_attr_like_url:
+        if core_glob.inst_setup.is_spacy_tkn_attr_like_url:
             if token.like_url:
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_LIKE_URL] = token.like_url
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_LIKE_URL] = token.like_url
 
-        if core_glob.setup.is_spacy_tkn_attr_lower_:
+        if core_glob.inst_setup.is_spacy_tkn_attr_lower_:
             if token.lower_ != "":
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_LOWER_] = token.lower_
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_LOWER_] = token.lower_
 
-        if core_glob.setup.is_spacy_tkn_attr_morph:
+        if core_glob.inst_setup.is_spacy_tkn_attr_morph:
             if token.morph is not None:
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_MORPH] = str(token.morph)
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_MORPH] = str(token.morph)
 
-        if core_glob.setup.is_spacy_tkn_attr_norm_:
+        if core_glob.inst_setup.is_spacy_tkn_attr_norm_:
             if token.norm_ != "":
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_NORM_] = token.norm_
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_NORM_] = token.norm_
 
-        if core_glob.setup.is_spacy_tkn_attr_orth_:
+        if core_glob.inst_setup.is_spacy_tkn_attr_orth_:
             if token.orth_ != "":
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_ORTH_] = token.orth_
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_ORTH_] = token.orth_
 
-        if core_glob.setup.is_spacy_tkn_attr_pos_:
+        if core_glob.inst_setup.is_spacy_tkn_attr_pos_:
             if token.pos_ != "":
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_POS_] = token.pos_
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_POS_] = token.pos_
 
-        if core_glob.setup.is_spacy_tkn_attr_prefix_:
+        if core_glob.inst_setup.is_spacy_tkn_attr_prefix_:
             if token.prefix_ != "":
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_PREFIX_] = token.prefix_
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_PREFIX_] = token.prefix_
 
-        if core_glob.setup.is_spacy_tkn_attr_prob:
+        if core_glob.inst_setup.is_spacy_tkn_attr_prob:
             if token.prob != "":
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_PROB] = token.prob
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_PROB] = token.prob
 
-        if core_glob.setup.is_spacy_tkn_attr_rank:
+        if core_glob.inst_setup.is_spacy_tkn_attr_rank:
             if token.rank != "":
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_RANK] = token.rank
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_RANK] = token.rank
 
-        if core_glob.setup.is_spacy_tkn_attr_right_edge:
+        if core_glob.inst_setup.is_spacy_tkn_attr_right_edge:
             if token.right_edge is not None:
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_RIGHT_EDGE] = token.right_edge.i
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_RIGHT_EDGE] = token.right_edge.i
 
-        if core_glob.setup.is_spacy_tkn_attr_sent:
+        if core_glob.inst_setup.is_spacy_tkn_attr_sent:
             if token.sent is not None:
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_SENT] = token.sent.text
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_SENT] = token.sent.text
 
-        if core_glob.setup.is_spacy_tkn_attr_sentiment:
+        if core_glob.inst_setup.is_spacy_tkn_attr_sentiment:
             if token.sentiment != "":
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_SENTIMENT] = token.sentiment
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_SENTIMENT] = token.sentiment
 
-        if core_glob.setup.is_spacy_tkn_attr_shape_:
+        if core_glob.inst_setup.is_spacy_tkn_attr_shape_:
             if token.shape_ != "":
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_SHAPE_] = token.shape_
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_SHAPE_] = token.shape_
 
-        if core_glob.setup.is_spacy_tkn_attr_suffix_:
+        if core_glob.inst_setup.is_spacy_tkn_attr_suffix_:
             if token.suffix_ != "":
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_SUFFIX_] = token.suffix_
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_SUFFIX_] = token.suffix_
 
-        if core_glob.setup.is_spacy_tkn_attr_tag_:
+        if core_glob.inst_setup.is_spacy_tkn_attr_tag_:
             if token.tag_ != "":
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_TAG_] = token.tag_
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_TAG_] = token.tag_
 
-        if core_glob.setup.is_spacy_tkn_attr_tensor:
+        if core_glob.inst_setup.is_spacy_tkn_attr_tensor:
             try:
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_TENSOR] = str(token.tensor)
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_TENSOR] = str(token.tensor)
             except IndexError:
                 pass
 
-        if core_glob.setup.is_spacy_tkn_attr_text:
+        if core_glob.inst_setup.is_spacy_tkn_attr_text:
             if token.text != "":
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_TEXT] = token.text
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_TEXT] = token.text
 
-        if core_glob.setup.is_spacy_tkn_attr_text_with_ws:
+        if core_glob.inst_setup.is_spacy_tkn_attr_text_with_ws:
             if token.text_with_ws != "":
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_TEXT_WITH_WS] = token.text_with_ws
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_TEXT_WITH_WS] = token.text_with_ws
 
-        if core_glob.setup.is_spacy_tkn_attr_vocab:
+        if core_glob.inst_setup.is_spacy_tkn_attr_vocab:
             if token.vocab is not None:
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_VOCAB] = str(token.vocab)
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_VOCAB] = str(token.vocab)
 
-        if core_glob.setup.is_spacy_tkn_attr_whitespace_:
+        if core_glob.inst_setup.is_spacy_tkn_attr_whitespace_:
             if token.whitespace_ != "":
-                token_attr[nlp_core.NLPCore.JSON_NAME_TOKEN_WHITESPACE_] = token.whitespace_
+                token_attr[nlp_core.NLPCore.JSON_NAME_SPACY_TKN_WHITESPACE_] = token.whitespace_
 
         return token_attr
 
@@ -585,19 +587,19 @@ class TokenizerSpacy:
 
                 if (
                     line_type == nlp_core.NLPCore.LINE_TYPE_FOOTER  # pylint: disable=too-many-boolean-expressions
-                    and core_glob.setup.is_spacy_ignore_line_type_footer
+                    and core_glob.inst_setup.is_spacy_ignore_line_type_footer
                     or line_type == nlp_core.NLPCore.LINE_TYPE_HEADER
-                    and core_glob.setup.is_spacy_ignore_line_type_header
+                    and core_glob.inst_setup.is_spacy_ignore_line_type_header
                     or line_type == nlp_core.NLPCore.LINE_TYPE_HEADING
-                    and core_glob.setup.is_spacy_ignore_line_type_heading
+                    and core_glob.inst_setup.is_spacy_ignore_line_type_heading
                     or line_type == nlp_core.NLPCore.LINE_TYPE_LIST_BULLET
-                    and core_glob.setup.is_spacy_ignore_line_type_list_bullet
+                    and core_glob.inst_setup.is_spacy_ignore_line_type_list_bullet
                     or line_type == nlp_core.NLPCore.LINE_TYPE_LIST_NUMBER
-                    and core_glob.setup.is_spacy_ignore_line_type_list_number
+                    and core_glob.inst_setup.is_spacy_ignore_line_type_list_number
                     or line_type == nlp_core.NLPCore.LINE_TYPE_TABLE
-                    and core_glob.setup.is_spacy_ignore_line_type_table
+                    and core_glob.inst_setup.is_spacy_ignore_line_type_table
                     or line_type == nlp_core.NLPCore.LINE_TYPE_TOC
-                    and core_glob.setup.is_spacy_ignore_line_type_toc
+                    and core_glob.inst_setup.is_spacy_ignore_line_type_toc
                 ):
                     continue
 

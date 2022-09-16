@@ -8,6 +8,8 @@ Typical usage example:
 
     my_instance = Setup()
 """
+from __future__ import annotations
+
 import configparser
 import os
 from typing import ClassVar

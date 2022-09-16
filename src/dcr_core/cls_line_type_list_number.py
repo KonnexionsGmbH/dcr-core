@@ -83,9 +83,9 @@ class LineTypeListNumber:
             is_text_parser=True,
         )
 
-        core_utils.progress_msg(core_glob.setup.is_verbose_lt_list_number, "LineTypeListNumber")
+        core_utils.progress_msg(core_glob.inst_setup.is_verbose_lt_list_number, "LineTypeListNumber")
         core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_list_number,
+            core_glob.inst_setup.is_verbose_lt_list_number,
             f"LineTypeListNumber: Start create instance                ={self._file_name_curr}",
         )
 
@@ -93,16 +93,15 @@ class LineTypeListNumber:
 
         self._anti_patterns: list[tuple[str, re.Pattern[str]]] = self._init_anti_patterns()
 
-        # page_idx, para_no, line_lines_idx_from, line_lines_idx_till, target_value
+        # page_idx, para_no, line_idx_from, line_idx_till, target_value
         self._entries: list[list[int | str]] = []
 
         self._line_idx = -1
-        self._lines_json: list[nlp_core.LineJSON] = []
+        self._line_no_max = 0
+        self._lines_json: list[nlp_core.NLPCore.LineJSON] = []
         self._lists: LineTypeListNumber.Lists = []
         self._llx_lower_limit = 0.0
         self._llx_upper_limit = 0.0
-
-        self._max_line_no = 0
 
         self._no_entries = 0
 
@@ -145,7 +144,7 @@ class LineTypeListNumber:
         self._exist = True
 
         core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_list_number,
+            core_glob.inst_setup.is_verbose_lt_list_number,
             f"LineTypeListNumber: End   create instance                ={self._file_name_curr}",
         )
 
@@ -159,9 +158,9 @@ class LineTypeListNumber:
         if self._no_entries == 0:
             return
 
-        if self._no_entries < core_glob.setup.lt_list_number_min_entries:
+        if self._no_entries < core_glob.inst_setup.lt_list_number_min_entries:
             core_utils.progress_msg(
-                core_glob.setup.is_verbose_lt_list_number,
+                core_glob.inst_setup.is_verbose_lt_list_number,
                 f"LineTypeListNumber: Not enough list entries    found only={self._no_entries} - "
                 + f"number='{self._rule[0]}' - entries={self._entries}",
             )
@@ -169,7 +168,7 @@ class LineTypeListNumber:
             return
 
         core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_list_number,
+            core_glob.inst_setup.is_verbose_lt_list_number,
             f"LineTypeListNumber: List entries                    found={self._no_entries} - "
             + f"number='{self._rule[0]}' - entries={self._entries}",
         )
@@ -178,34 +177,34 @@ class LineTypeListNumber:
 
         entries: LineTypeListNumber.Entries = []
 
-        for [page_idx, para_no, line_lines_idx_from, line_lines_idx_till, _] in self._entries:
-            line_lines: nlp_core.NLPCore.ParserLineLines = core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_PAGES][page_idx][
+        for [page_idx, para_no, line_idx_from, line_idx_till, _] in self._entries:
+            lines_json: list[nlp_core.NLPCore.LineJSON] = core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_PAGES][page_idx][
                 nlp_core.NLPCore.JSON_NAME_LINES
             ]
 
             text = []
 
-            for idx in range(int(line_lines_idx_from), int(line_lines_idx_till) + 1):
-                line_lines[idx][nlp_core.NLPCore.JSON_NAME_LINE_TYPE] = nlp_core.NLPCore.LINE_TYPE_LIST_NUMBER
+            for idx in range(int(line_idx_from), int(line_idx_till) + 1):
+                lines_json[idx][nlp_core.NLPCore.JSON_NAME_LINE_TYPE] = nlp_core.NLPCore.LINE_TYPE_LIST_NUMBER
 
-                if core_glob.setup.is_create_extra_file_list_number:
-                    text.append(line_lines[idx][nlp_core.NLPCore.JSON_NAME_TEXT])
+                if core_glob.inst_setup.is_create_extra_file_list_number:
+                    text.append(lines_json[idx][nlp_core.NLPCore.JSON_NAME_TEXT])
 
-            if core_glob.setup.is_create_extra_file_list_number:
+            if core_glob.inst_setup.is_create_extra_file_list_number:
                 entries.append(
                     {
                         nlp_core.NLPCore.JSON_NAME_ENTRY_NO: len(entries) + 1,
-                        nlp_core.NLPCore.JSON_NAME_LINE_NO_PAGE_FROM: int(line_lines_idx_from) + 1,
-                        nlp_core.NLPCore.JSON_NAME_LINE_NO_PAGE_TILL: int(line_lines_idx_till) + 1,
+                        nlp_core.NLPCore.JSON_NAME_LINE_NO_PAGE_FROM: int(line_idx_from) + 1,
+                        nlp_core.NLPCore.JSON_NAME_LINE_NO_PAGE_TILL: int(line_idx_till) + 1,
                         nlp_core.NLPCore.JSON_NAME_PAGE_NO: int(page_idx) + 1,
                         nlp_core.NLPCore.JSON_NAME_PARA_NO: para_no,
                         nlp_core.NLPCore.JSON_NAME_TEXT: " ".join(text),
                     }
                 )
 
-            core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_PAGES][page_idx][nlp_core.NLPCore.JSON_NAME_LINES] = line_lines
+            core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_PAGES][page_idx][nlp_core.NLPCore.JSON_NAME_LINES] = lines_json
 
-        if core_glob.setup.is_create_extra_file_list_number:
+        if core_glob.inst_setup.is_create_extra_file_list_number:
             entry = {
                 nlp_core.NLPCore.JSON_NAME_NUMBER: self._rule[0].rstrip(),
                 nlp_core.NLPCore.JSON_NAME_LIST_NO: self.no_lists,
@@ -214,7 +213,7 @@ class LineTypeListNumber:
                 nlp_core.NLPCore.JSON_NAME_PAGE_NO_TILL: int(self._entries[-1][0]) + 1,
             }
 
-            if core_glob.setup.is_lt_list_number_file_incl_regexp:
+            if core_glob.inst_setup.is_lt_list_number_file_incl_regexp:
                 entry[nlp_core.NLPCore.JSON_NAME_REGEXP] = self._rule[-1]
 
             entry[nlp_core.NLPCore.JSON_NAME_ENTRIES] = entries
@@ -224,7 +223,7 @@ class LineTypeListNumber:
         self._reset_list()
 
         core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_list_number,
+            core_glob.inst_setup.is_verbose_lt_list_number,
             f"LineTypeListNumber: End   list                    on page={self._page_idx+1}",
         )
 
@@ -240,13 +239,13 @@ class LineTypeListNumber:
         Returns:
             list[tuple[str, re.Pattern[str]]]: The valid numbered list anti-patterns.
         """
-        if core_glob.setup.lt_list_number_rule_file and core_glob.setup.lt_list_number_rule_file.lower() != "none":
-            lt_list_number_rule_file_path = core_utils.get_os_independent_name(core_glob.setup.lt_list_number_rule_file)
+        if core_glob.inst_setup.lt_list_number_rule_file and core_glob.inst_setup.lt_list_number_rule_file.lower() != "none":
+            lt_list_number_rule_file_path = core_utils.get_os_independent_name(core_glob.inst_setup.lt_list_number_rule_file)
             if os.path.isfile(lt_list_number_rule_file_path):
                 return self._load_anti_patterns_from_json(pathlib.Path(lt_list_number_rule_file_path))
 
             core_utils.terminate_fatal(
-                f"File with numbered list anti-patterns is missing - " f"file name '{core_glob.setup.lt_list_number_rule_file}'"
+                f"File with numbered list anti-patterns is missing - " f"file name '{core_glob.inst_setup.lt_list_number_rule_file}'"
             )
 
         anti_patterns = []
@@ -271,16 +270,15 @@ class LineTypeListNumber:
         """Initialise the numbered list rules.
 
         Returns:
-            list[tuple[str, str, collections.abc.Callable[[str, str], bool], list[str]]]: The
-                valid numbered list rules.
+            list[LineTypeListNumber.RuleExtern]: The valid numbered list rules.
         """
-        if core_glob.setup.lt_list_number_rule_file and core_glob.setup.lt_list_number_rule_file.lower() != "none":
-            lt_list_number_rule_file_path = core_utils.get_os_independent_name(core_glob.setup.lt_list_number_rule_file)
+        if core_glob.inst_setup.lt_list_number_rule_file and core_glob.inst_setup.lt_list_number_rule_file.lower() != "none":
+            lt_list_number_rule_file_path = core_utils.get_os_independent_name(core_glob.inst_setup.lt_list_number_rule_file)
             if os.path.isfile(lt_list_number_rule_file_path):
                 return self._load_rules_from_json(pathlib.Path(lt_list_number_rule_file_path))
 
             core_utils.terminate_fatal(
-                f"File with numbered list rules is missing - " f"file name '{core_glob.setup.lt_list_number_rule_file}'"
+                f"File with numbered list rules is missing - " f"file name '{core_glob.inst_setup.lt_list_number_rule_file}'"
             )
 
         return nlp_core.NLPCore.get_lt_rules_default_list_number()
@@ -315,8 +313,8 @@ class LineTypeListNumber:
                 )
 
         core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_list_number,
-            "The numbered list anti-patterns were successfully loaded " + f"from the file {core_glob.setup.lt_list_number_rule_file}",
+            core_glob.inst_setup.is_verbose_lt_list_number,
+            "The numbered list anti-patterns were successfully loaded " + f"from the file {core_glob.inst_setup.lt_list_number_rule_file}",
         )
 
         return anti_patterns
@@ -356,8 +354,8 @@ class LineTypeListNumber:
                 )
 
         core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_list_number,
-            "The list_number rules were successfully loaded from the " + f"file {core_glob.setup.lt_list_number_rule_file}",
+            core_glob.inst_setup.is_verbose_lt_list_number,
+            "The list_number rules were successfully loaded from the " + f"file {core_glob.inst_setup.lt_list_number_rule_file}",
         )
 
         return rules
@@ -365,11 +363,11 @@ class LineTypeListNumber:
     # ------------------------------------------------------------------
     # Process the line-related data.
     # ------------------------------------------------------------------
-    def _process_line(self, line_json: nlp_core.LineJSON) -> None:  # noqa: C901
+    def _process_line(self, line_json: nlp_core.NLPCore.LineJSON) -> None:  # noqa: C901
         """Process the line-related data.
 
         Args:
-            line_json (nlp_core.LineJSON):
+            line_json (nlp_core.NLPCore.LineJSON):
                 The line to be processed.
         """
         text = str(line_json[nlp_core.NLPCore.JSON_NAME_TEXT])
@@ -377,7 +375,7 @@ class LineTypeListNumber:
         for (rule_name, pattern) in self._anti_patterns:
             if pattern.match(text):
                 core_utils.progress_msg(
-                    core_glob.setup.is_verbose_lt_list_number,
+                    core_glob.inst_setup.is_verbose_lt_list_number,
                     f"LineTypeListNumber: Anti pattern                         ={rule_name} - text={text}",
                 )
                 return
@@ -429,15 +427,15 @@ class LineTypeListNumber:
 
         if not self._entries:
             # New numbered paragraph.
-            self._line_lines_idx_from = self._line_idx
-            self._line_lines_idx_till = self._line_idx
+            self._line_idx_from = self._line_idx
+            self._line_idx_till = self._line_idx
             self._llx_lower_limit = round(
                 (coord_llx := float(line_json[nlp_core.NLPCore.JSON_NAME_COORD_LLX]))
-                * (100 - core_glob.setup.lt_list_number_tolerance_llx)
+                * (100 - core_glob.inst_setup.lt_list_number_tolerance_llx)
                 / 100,
                 2,
             )
-            self._llx_upper_limit = round(coord_llx * (100 + core_glob.setup.lt_list_number_tolerance_llx) / 100, 2)
+            self._llx_upper_limit = round(coord_llx * (100 + core_glob.inst_setup.lt_list_number_tolerance_llx) / 100, 2)
 
         self._entries.append([self._page_idx, para_no, self._line_idx, self._line_idx, target_value])
 
@@ -451,7 +449,7 @@ class LineTypeListNumber:
     def _process_page(self) -> None:
         """Process the page-related data."""
         core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_list_number,
+            core_glob.inst_setup.is_verbose_lt_list_number,
             f"LineTypeListNumber: Start page                           ={self._page_idx + 1}",
         )
 
@@ -463,7 +461,7 @@ class LineTypeListNumber:
                 self._page_idx_prev = self._page_idx
 
         core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_list_number,
+            core_glob.inst_setup.is_verbose_lt_list_number,
             f"LineTypeListNumber: End   page                           ={self._page_idx + 1}",
         )
 
@@ -472,11 +470,12 @@ class LineTypeListNumber:
     # ------------------------------------------------------------------
     def _reset_document(self) -> None:
         """Reset the document memory."""
-        self._max_page = core_glob.inst_parser.parse_result_no_pages_in_doc
+        self.no_lists = 0
 
-        self._lists = []
+        if core_glob.inst_setup.is_create_extra_file_list_number:
+            self._lists = []
 
-        core_utils.progress_msg(core_glob.setup.is_verbose_lt_list_number, "LineTypeListNumber: Reset the document memory")
+        core_utils.progress_msg(core_glob.inst_setup.is_verbose_lt_list_number, "LineTypeListNumber: Reset the document memory")
 
         self._reset_list()
 
@@ -501,7 +500,7 @@ class LineTypeListNumber:
 
         self._rule = ()  # type: ignore
 
-        core_utils.progress_msg(core_glob.setup.is_verbose_lt_list_number, "LineTypeListNumber: Reset the list memory")
+        core_utils.progress_msg(core_glob.inst_setup.is_verbose_lt_list_number, "LineTypeListNumber: Reset the list memory")
 
     # ------------------------------------------------------------------
     # Check the object existence.
@@ -559,9 +558,9 @@ class LineTypeListNumber:
         self._file_name_curr = file_name_curr
         self._environment_variant = environment_variant
 
-        core_utils.progress_msg(core_glob.setup.is_verbose_lt_list_number, "LineTypeListNumber")
+        core_utils.progress_msg(core_glob.inst_setup.is_verbose_lt_list_number, "LineTypeListNumber")
         core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_list_number,
+            core_glob.inst_setup.is_verbose_lt_list_number,
             f"LineTypeListNumber: Start document                       ={self._file_name_curr}",
         )
 
@@ -569,13 +568,13 @@ class LineTypeListNumber:
 
         for page_idx, page_json in enumerate(core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_PAGES]):
             self._page_idx = page_idx
-            self._max_line_no = page_json[nlp_core.NLPCore.JSON_NAME_LINE_NO]
+            self._line_no_max = page_json[nlp_core.NLPCore.JSON_NAME_LINE_NO]
             self._lines_json = page_json[nlp_core.NLPCore.JSON_NAME_LINES]
             self._process_page()
 
         self._finish_list()
 
-        if core_glob.setup.is_create_extra_file_list_number and self._lists:
+        if core_glob.inst_setup.is_create_extra_file_list_number and self._lists:
             full_name = core_utils.get_full_name_from_components(
                 directory_name,
                 core_utils.get_stem_name(str(file_name_curr)) + ".list_number." + core_glob.FILE_TYPE_JSON,
@@ -583,24 +582,24 @@ class LineTypeListNumber:
             with open(full_name, "w", encoding=core_glob.FILE_ENCODING_DEFAULT) as file_handle:
                 json.dump(
                     {
-                        nlp_core.NLPCore.JSON_NAME_DOC_ID: document_id,
-                        nlp_core.NLPCore.JSON_NAME_DOC_FILE_NAME: file_name_orig,
+                        nlp_core.NLPCore.JSON_NAME_DOCUMENT_ID: document_id,
+                        nlp_core.NLPCore.JSON_NAME_FILE_NAME_ORIG: file_name_orig,
                         nlp_core.NLPCore.JSON_NAME_NO_LISTS_NUMBER_IN_DOC: self.no_lists,
                         nlp_core.NLPCore.JSON_NAME_LISTS_NUMBER: self._lists,
                     },
                     file_handle,
-                    indent=core_glob.setup.json_indent,
-                    sort_keys=core_glob.setup.is_json_sort_keys,
+                    indent=core_glob.inst_setup.json_indent,
+                    sort_keys=core_glob.inst_setup.is_json_sort_keys,
                 )
 
         if self.no_lists > 0:
             core_utils.progress_msg(
-                core_glob.setup.is_verbose_lt_list_number,
+                core_glob.inst_setup.is_verbose_lt_list_number,
                 f"LineTypeListNumber:                 number numbered lists={self.no_lists}",
             )
 
         core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_list_number,
+            core_glob.inst_setup.is_verbose_lt_list_number,
             f"LineTypeListNumber: End   document                       ={self._file_name_curr}",
         )
 

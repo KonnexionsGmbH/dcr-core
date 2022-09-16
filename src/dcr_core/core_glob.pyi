@@ -3,6 +3,8 @@
 # Version 2020.05, that can be found in the LICENSE file.
 
 """Module stub file."""
+from __future__ import annotations
+
 import logging
 
 import dcr_core.cls_line_type_header_footer as lt_hf
@@ -27,7 +29,9 @@ FILE_TYPE_TESSERACT: list[str]
 FILE_TYPE_TIF: str
 FILE_TYPE_TIFF: str
 FILE_TYPE_XML: str
+
 INFORMATION_NOT_YET_AVAILABLE: str
+
 LOGGER_CFG_FILE: str
 LOGGER_END: str
 LOGGER_FATAL_HEAD: str
@@ -46,6 +50,7 @@ inst_nlp_core: nlp_core.NLPCore
 inst_parser: parser.TextParser
 inst_setup: setup.Setup
 inst_tokenizer: tokenizer.TokenizerSpacy
+
 logger: logging.Logger
 
 def initialise_logger() -> None: ...

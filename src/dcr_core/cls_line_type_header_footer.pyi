@@ -3,6 +3,8 @@
 # Version 2020.05, that can be found in the LICENSE file.
 
 """Module stub file."""
+from __future__ import annotations
+
 import dcr_core.cls_nlp_core as nlp_core
 
 class LineTypeHeaderFooter:
@@ -32,7 +34,7 @@ class LineTypeHeaderFooter:
         self._is_irregular_header = False
         self._line_data: LineTypeHeaderFooter.LineData = []
         self._line_no_max = 0
-        self._lines_json: list[nlp_core.LineJSON] = []
+        self._lines_json: list[nlp_core.NLPCore.LineJSON] = []
         self._lsd_data: LineTypeHeaderFooter.LSDData = []
         self._no_irregular_footer = 0
         self._no_irregular_header = 0

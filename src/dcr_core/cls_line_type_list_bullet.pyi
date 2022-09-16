@@ -3,6 +3,8 @@
 # Version 2020.05, that can be found in the LICENSE file.
 
 """Module stub file."""
+from __future__ import annotations
+
 import pathlib
 import re
 
@@ -24,11 +26,11 @@ class LineTypeListBullet:
         self._bullet = ""
         self._entries: list[list[int]] = []
         self._line_idx = 0
-        self._lines_json: list[nlp_core.LineJSON] = []
+        self._line_no_max = 0
+        self._lines_json: list[nlp_core.NLPCore.LineJSON] = []
         self._lists: LineTypeListBullet.Lists = []
         self._llx_lower_limit = 0.0
         self._llx_upper_limit = 0.0
-        self._max_line_no = 0
         self._no_entries = 0
         self._page_idx = 0
         self._page_idx_prev = 0
@@ -47,7 +49,7 @@ class LineTypeListBullet:
     def _load_rules_from_json(
         lt_list_bullet_rule_file: pathlib.Path,
     ) -> dict[str, int]: ...
-    def _process_line(self, line_json: nlp_core.LineJSON) -> None: ...
+    def _process_line(self, line_json: nlp_core.NLPCore.LineJSON) -> None: ...
     def _process_page(self) -> None: ...
     def _reset_document(self) -> None: ...
     def _reset_list(self) -> None: ...

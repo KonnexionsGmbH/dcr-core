@@ -3,6 +3,8 @@
 # Version 2020.05, that can be found in the LICENSE file.
 
 """Module stub file."""
+from __future__ import annotations
+
 import collections
 import pathlib
 import re
@@ -27,11 +29,11 @@ class LineTypeListNumber:
         self._anti_patterns: list[tuple[str, re.Pattern[str]]] = []
         self._entries: list[list[int | str]] = []
         self._line_idx = 0
-        self._lines_json: list[nlp_core.LineJSON] = []
+        self._line_no_max = 0
+        self._lines_json: list[nlp_core.NLPCore.LineJSON] = []
         self._lists: LineTypeListNumber.Lists = []
         self._llx_lower_limit = 0.0
         self._llx_upper_limit = 0.0
-        self._max_line_no = 0
         self._no_entries = 0
         self._page_idx = 0
         self._page_idx_prev = 0
@@ -52,7 +54,7 @@ class LineTypeListNumber:
     def _load_rules_from_json(
         lt_list_number_rule_file: pathlib.Path,
     ) -> list[LineTypeListNumber.RuleExtern]: ...
-    def _process_line(self, line_json: nlp_core.LineJSON) -> None: ...
+    def _process_line(self, line_json: nlp_core.NLPCore.LineJSON) -> None: ...
     def _process_page(self) -> None: ...
     def _reset_document(self) -> None: ...
     def _reset_list(self) -> None: ...

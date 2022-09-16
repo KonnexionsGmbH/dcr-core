@@ -5,8 +5,25 @@
 """Module stub file."""
 import pathlib
 
+ERROR_00_901 = ""
+ERROR_00_902 = ""
+ERROR_01_901 = ""
+ERROR_01_903 = ""
+ERROR_21_901 = ""
+ERROR_31_902 = ""
+ERROR_31_903 = ""
+ERROR_31_911 = ""
+ERROR_41_901 = ""
+ERROR_41_911 = ""
+ERROR_51_901 = ""
+ERROR_61_901 = ""
+ERROR_61_902 = ""
+ERROR_61_903 = ""
+ERROR_71_901 = ""
+
 def check_exists_object(
     is_line_type_header_footer: bool = False,
+    is_line_type_heading: bool = False,
     is_line_type_list_bullet: bool = False,
     is_line_type_list_number: bool = False,
     is_line_type_table: bool = False,

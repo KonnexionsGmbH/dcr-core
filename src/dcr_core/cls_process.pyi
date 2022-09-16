@@ -6,56 +6,44 @@
 from typing import ClassVar
 
 class Process:
-    ERROR_01_901: ClassVar[str]
-    ERROR_01_903: ClassVar[str]
-    ERROR_21_901: ClassVar[str]
-    ERROR_31_902: ClassVar[str]
-    ERROR_31_903: ClassVar[str]
-    ERROR_31_911: ClassVar[str]
-    ERROR_41_901: ClassVar[str]
-    ERROR_41_911: ClassVar[str]
-    ERROR_51_901: ClassVar[str]
-    ERROR_61_901: ClassVar[str]
-    ERROR_61_902: ClassVar[str]
-    ERROR_61_903: ClassVar[str]
-    ERROR_71_901: ClassVar[str]
     PANDOC_PDF_ENGINE_LULATEX: ClassVar[str]
     PANDOC_PDF_ENGINE_XELATEX: ClassVar[str]
 
     def __init__(self) -> None:
-        self._document_id = None
-        self._full_name_in = None
-        self._full_name_in_directory = None
-        self._full_name_in_extension = None
-        self._full_name_in_extension_int = None
-        self._full_name_in_next_step = None
-        self._full_name_in_pandoc = None
-        self._full_name_in_parser = None
-        self._full_name_in_pdf2image = None
-        self._full_name_in_pdflib = None
-        self._full_name_in_stem_name = None
-        self._full_name_in_tesseract = None
-        self._full_name_in_tokenizer = None
-        self._full_name_orig = None
-        self._is_delete_auxiliary_files = None
-        self._is_lt_footer_required = None
-        self._is_lt_header_required = None
-        self._is_lt_heading_required = None
-        self._is_lt_list_bullet_required = None
-        self._is_lt_list_number_required = None
-        self._is_lt_table_required = None
-        self._is_lt_toc_required = None
-        self._is_pandoc = None
-        self._is_pdf2image = None
-        self._is_tesseract = None
-        self._is_verbose = None
-        self._language_pandoc = None
-        self._language_spacy = None
-        self._language_tesseract = None
-        self._no_lines_footer = None
-        self._no_lines_header = None
-        self._no_lines_toc = None
-        self._no_pdf_pages = None
+        self._document_id = 0
+        self._full_name_in = ""
+        self._full_name_in_directory = ""
+        self._full_name_in_extension = ""
+        self._full_name_in_extension_int = ""
+        self._full_name_in_next_step = ""
+        self._full_name_in_pandoc = ""
+        self._full_name_in_parser = ""
+        self._full_name_in_pdf2image = ""
+        self._full_name_in_pdflib = ""
+        self._full_name_in_stem_name = ""
+        self._full_name_in_tesseract = ""
+        self._full_name_in_tokenizer = ""
+        self._full_name_orig = ""
+        self._is_delete_auxiliary_files = False
+        self._is_lt_footer_required = False
+        self._is_lt_header_required = False
+        self._is_lt_heading_required = False
+        self._is_lt_list_bullet_required = False
+        self._is_lt_list_number_required = False
+        self._is_lt_table_required = False
+        self._is_lt_toc_required = False
+        self._is_pandoc = False
+        self._is_pdf2image = False
+        self._is_tesseract = False
+        self._is_verbose = False
+        self._language_pandoc = ""
+        self._language_spacy = ""
+        self._language_tesseract = ""
+        self._no_lines_footer = 0
+        self._no_lines_header = 0
+        self._no_lines_toc = 0
+        self._no_pdf_pages = 0
+        self._exist = False
     def _document_check_extension(self) -> None: ...
     def _document_delete_auxiliary_file(self, full_name: str) -> None: ...
     def _document_init(self) -> None: ...

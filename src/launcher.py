@@ -6,6 +6,8 @@
 
 This is the entry point to the application DCR.
 """
+from __future__ import annotations
+
 import argparse
 import locale
 import os
@@ -169,7 +171,7 @@ def main(argv: list[str]) -> None:
     process.Process().document(
         full_name_in=args[ARG_FULL_NAME_IN],
         is_delete_auxiliary_files=bool(args[ARG_IS_DELETE_AUXILIARY_FILES]),
-        is_lt_footer_required=True,
+        is_lt_footer_required=False,
         is_lt_header_required=False,
         is_lt_heading_required=False,
         is_lt_list_bullet_required=False,

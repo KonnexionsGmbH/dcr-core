@@ -11,12 +11,12 @@ import dcr_core.cls_nlp_core as nlp_core
 
 class TextParser:
     def __init__(self) -> None:
-        self._directory_name: str = ""
-        self._document_id: int = 0
-        self._environment_variant: str = ""
-        self._file_name_curr: str = ""
-        self._file_name_orig: str = ""
-        self._full_name: str = ""
+        self._directory_name = ""
+        self._document_id = 0
+        self._environment_variant = ""
+        self._file_name_curr = ""
+        self._file_name_orig = ""
+        self._full_name = ""
         self._is_lt_footer_required = False
         self._is_lt_header_required = False
         self._is_lt_heading_required = False
@@ -24,47 +24,61 @@ class TextParser:
         self._is_lt_list_number_required = False
         self._is_lt_table_required = False
         self._is_lt_toc_required = False
-        self._no_pdf_pages: int = 0
-        self._parse_result_container_fonts: list[nlp_core.FontJSON] = []
-        self._parse_result_container_lines: list[nlp_core.LineJSON] = []
-        self._parse_result_container_pages: list[nlp_core.PageJSON] = []
-        self._parse_result_container_paras: list[nlp_core.ParaJSON] = []
-        self._parse_result_container_words: list[nlp_core.WordJSON] = []
+        self._no_pdf_pages = 0
+        self._parse_result_container_fonts: list[nlp_core.NLPCore.FontJSON] = []
+        self._parse_result_container_lines: list[nlp_core.NLPCore.LineJSON] = []
+        self._parse_result_container_pages: list[nlp_core.NLPCore.PageJSON] = []
+        self._parse_result_container_paras: list[nlp_core.NLPCore.ParaJSON] = []
+        self._parse_result_container_words: list[nlp_core.NLPCore.WordJSON] = []
+        self._parse_result_line_word_no_first = 0
+        self._parse_result_line_word_no_last = 0
+        self._parse_result_no_fonts = 0
+        self._parse_result_no_lines = 0
+        self._parse_result_no_lines_page = 0
+        self._parse_result_no_lines_para = 0
+        self._parse_result_no_pages = 0
+        self._parse_result_no_paras = 0
+        self._parse_result_no_paras_page = 0
+        self._parse_result_no_words = 0
+        self._parse_result_no_words_line = 0
+        self._parse_result_no_words_para = 0
+        self._parse_result_no_words_page = 0
+        self._parse_result_page_line_no_first = 0
+        self._parse_result_page_line_no_last = 0
+        self._parse_result_page_para_no_first = 0
+        self._parse_result_page_para_no_last = 0
+        self._parse_result_page_word_no_first = 0
+        self._parse_result_page_word_no_last = 0
+        self._parse_result_para_line_no_first = 0
+        self._parse_result_para_line_no_last = 0
+        self._parse_result_para_word_no_first = 0
+        self._parse_result_para_word_no_last = 0
         self._parse_result_container_words_line: list[str] = []
         self._parse_result_container_words_para: list[str] = []
         self._parse_result_font = ""
-        self._parse_result_glyph_is_empty: bool = False
-        self._parse_result_index_page: int = 0
+        self._parse_result_glyph_is_empty = False
+        self._parse_result_index_page = 0
         self._parse_result_llx: float = 0.0
-        self._parse_result_no_fonts: int = 0
-        self._parse_result_no_lines: int = 0
-        self._parse_result_no_lines_in_page: int = 0
-        self._parse_result_no_lines_in_para: int = 0
-        self._parse_result_no_paras: int = 0
-        self._parse_result_no_paras_in_page: int = 0
-        self._parse_result_no_titles: int = 0
-        self._parse_result_no_words: int = 0
-        self._parse_result_no_words_in_line: int = 0
-        self._parse_result_no_words_in_page: int = 0
-        self._parse_result_no_words_in_para: int = 0
+        self._parse_result_no_titles = 0
         self._parse_result_size = 0.00
-        self._parse_result_table: bool = False
-        self._parse_result_table_cell: int = 0
-        self._parse_result_table_cell_is_empty: bool = False
-        self._parse_result_table_col_span: int = 0
-        self._parse_result_table_col_span_prev: int = 0
-        self._parse_result_table_row: int = 0
-        self._parse_result_text: str = ""
-        self._parse_result_urx: float = 0.0
-        self.no_errors: int = 0
+        self._parse_result_table = False
+        self._parse_result_table_cell = 0
+        self._parse_result_table_cell_is_empty = False
+        self._parse_result_table_col_span = 0
+        self._parse_result_table_col_span_prev = 0
+        self._parse_result_table_row = 0
+        self._parse_result_text = ""
+        self._parse_result_urx = 0.0
+        self.no_errors = 0
         self.parse_result_no_pages = 0
         self.parse_result_titles: list[str] = []
-        self._exist = True
+        self._exist = False
+    @staticmethod
+    def _create_config() -> nlp_core.NLPCore.ConfigJSON: ...
+    def _create_params(self) -> nlp_core.NLPCore.ParamsJSON: ...
     @staticmethod
     def _debug_xml_element_all(event: str, parent_tag: str, attrib: dict[str, str], text: collections.abc.Iterable[str | None]) -> None: ...
-    def _debug_xml_element_text_line(self) -> None: ...
-    def _debug_xml_element_text_page(self) -> None: ...
-    def _debug_xml_element_text_word(self) -> None: ...
+    def _debug_xml_element_text(self) -> None: ...
     def _parse_tag_bookmark(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None: ...
     def _parse_tag_bookmarks(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None: ...
     def _parse_tag_box(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None: ...

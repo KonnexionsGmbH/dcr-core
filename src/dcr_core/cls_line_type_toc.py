@@ -13,6 +13,7 @@ Typical usage example:
     my_instance.process_document(file_name_curr = my_file_name_curr,
                                  line_pages_json = my_line_pages_json)
 """
+from __future__ import annotations
 
 import dcr_core.cls_nlp_core as nlp_core
 from dcr_core import core_glob
@@ -53,15 +54,15 @@ class LineTypeToc:
 
         self._file_name_curr = file_name_curr
 
-        core_utils.progress_msg(core_glob.setup.is_verbose_lt_toc, "LineTypeToc")
+        core_utils.progress_msg(core_glob.inst_setup.is_verbose_lt_toc, "LineTypeToc")
         core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_toc,
+            core_glob.inst_setup.is_verbose_lt_toc,
             f"LineTypeToc: Start create instance                ={self._file_name_curr}",
         )
 
         self._is_toc_existing = False
 
-        self._lines_json: list[nlp_core.LineJSON] = []
+        self._lines_json: list[nlp_core.NLPCore.LineJSON] = []
 
         self._page_no = 0
 
@@ -75,7 +76,7 @@ class LineTypeToc:
         self._exist = True
 
         core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_toc,
+            core_glob.inst_setup.is_verbose_lt_toc,
             f"LineTypeToc: End   create instance                ={self._file_name_curr}",
         )
 
@@ -89,7 +90,7 @@ class LineTypeToc:
             return
 
         core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_toc,
+            core_glob.inst_setup.is_verbose_lt_toc,
             f"LineTypeToc: Start check TOC candidate            ={len(self._toc_candidates)}",
         )
 
@@ -104,7 +105,7 @@ class LineTypeToc:
                 if row_no != 1:
                     self._init_toc_candidate()
                     core_utils.progress_msg(
-                        core_glob.setup.is_verbose_lt_toc,
+                        core_glob.inst_setup.is_verbose_lt_toc,
                         "LineTypeToc: End   check TOC candidate (!=)       " + f"={self._is_toc_existing}: {page_no_toc}",
                     )
                     return
@@ -114,7 +115,7 @@ class LineTypeToc:
             if page_no_toc < page_no_toc_last or page_no_toc > page_no_max:
                 self._init_toc_candidate()
                 core_utils.progress_msg(
-                    core_glob.setup.is_verbose_lt_toc,
+                    core_glob.inst_setup.is_verbose_lt_toc,
                     "LineTypeToc: End   check TOC candidate (<>)       " + f"={self._is_toc_existing}: {page_no_toc}",
                 )
                 return
@@ -124,7 +125,7 @@ class LineTypeToc:
         self._is_toc_existing = True
 
         core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_toc,
+            core_glob.inst_setup.is_verbose_lt_toc,
             "LineTypeToc: End   check TOC candidate            " + f"={self._is_toc_existing}",
         )
 
@@ -139,14 +140,14 @@ class LineTypeToc:
     # ------------------------------------------------------------------
     def _process_page_lines(self) -> None:
         """Process the page-related data - line version."""
-        if self._is_toc_existing or self._page_no >= core_glob.setup.lt_toc_last_page:
+        if self._is_toc_existing or self._page_no >= core_glob.inst_setup.lt_toc_last_page:
             return
 
         self._page_no += 1
 
-        core_utils.progress_msg(core_glob.setup.is_verbose_lt_toc, "LineTypeToc")
+        core_utils.progress_msg(core_glob.inst_setup.is_verbose_lt_toc, "LineTypeToc")
         core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_toc,
+            core_glob.inst_setup.is_verbose_lt_toc,
             f"LineTypeToc: Start page (lines)                   ={self._page_no}",
         )
 
@@ -162,7 +163,7 @@ class LineTypeToc:
                             break
 
         core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_toc,
+            core_glob.inst_setup.is_verbose_lt_toc,
             f"LineTypeToc: End   page (lines)                   ={self._page_no}",
         )
 
@@ -171,14 +172,14 @@ class LineTypeToc:
     # ------------------------------------------------------------------
     def _process_page_table(self) -> None:
         """Process the page-related data - table version."""
-        if self._is_toc_existing or self._page_no >= core_glob.setup.lt_toc_last_page:
+        if self._is_toc_existing or self._page_no >= core_glob.inst_setup.lt_toc_last_page:
             return
 
         self._page_no += 1
 
-        core_utils.progress_msg(core_glob.setup.is_verbose_lt_toc, "LineTypeToc")
+        core_utils.progress_msg(core_glob.inst_setup.is_verbose_lt_toc, "LineTypeToc")
         core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_toc,
+            core_glob.inst_setup.is_verbose_lt_toc,
             f"LineTypeToc: Start page (table)                   ={self._page_no}",
         )
 
@@ -192,14 +193,14 @@ class LineTypeToc:
                         break
 
         core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_toc,
+            core_glob.inst_setup.is_verbose_lt_toc,
             f"LineTypeToc: End   page (table)                   ={self._page_no}",
         )
 
     # ------------------------------------------------------------------
     # Add a TOC line candidate element.
     # ------------------------------------------------------------------
-    def _process_toc_candidate_line_line(self, line_json: nlp_core.LineJSON, page_no_toc: int) -> None:
+    def _process_toc_candidate_line_line(self, line_json: nlp_core.NLPCore.LineJSON, page_no_toc: int) -> None:
         """Add a TOC line candidate element.
 
         Args:
@@ -215,11 +216,11 @@ class LineTypeToc:
     # ------------------------------------------------------------------
     # Add a TOC table candidate element.
     # ------------------------------------------------------------------
-    def _process_toc_candidate_table_line(self, line_json: nlp_core.LineJSON) -> None:
+    def _process_toc_candidate_table_line(self, line_json: nlp_core.NLPCore.LineJSON) -> None:
         """Add a TOC table candidate element.
 
         Args:
-            line_json (nlp_core.LineJSON): Document line.
+            line_json (nlp_core.NLPCore.LineJSON): Document line.
         """
         row_no = line_json[nlp_core.NLPCore.JSON_NAME_ROW_NO]
 
@@ -242,13 +243,13 @@ class LineTypeToc:
         self.no_lines_toc = len(self._toc_candidates)
 
         core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_toc,
+            core_glob.inst_setup.is_verbose_lt_toc,
             f"LineTypeToc: Start store result                   ={self.no_lines_toc}",
         )
 
-        if len(self._toc_candidates) < core_glob.setup.lt_toc_min_entries:
+        if len(self._toc_candidates) < core_glob.inst_setup.lt_toc_min_entries:
             core_utils.progress_msg(
-                core_glob.setup.is_verbose_lt_toc,
+                core_glob.inst_setup.is_verbose_lt_toc,
                 f"LineTypeToc: End   store result (min. entries)    ={self.no_lines_toc}",
             )
             self.no_lines_toc = 0
@@ -259,15 +260,15 @@ class LineTypeToc:
         para_no_from = self._toc_candidates[0][2]
         para_no_till = self._toc_candidates[-1][2]
 
-        for page in core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_PAGES]:
-            page_no = page[nlp_core.NLPCore.JSON_NAME_PAGE_NO]
+        for page_idx, page_json in core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_PAGES]:
+            page_no = page_json[nlp_core.NLPCore.JSON_NAME_PAGE_NO]
 
             if page_no < page_no_from:
                 continue
             if page_no > page_no_till:
                 break
 
-            for line_json in page[nlp_core.NLPCore.JSON_NAME_LINES]:
+            for line_json in page_json[nlp_core.NLPCore.JSON_NAME_LINES]:
                 para_no = line_json[nlp_core.NLPCore.JSON_NAME_PARA_NO]
 
                 if page_no == page_no_from and para_no < para_no_from:
@@ -288,8 +289,12 @@ class LineTypeToc:
                         if line_json[nlp_core.NLPCore.JSON_NAME_LINE_TYPE] == nlp_core.NLPCore.LINE_TYPE_BODY:
                             line_json[nlp_core.NLPCore.JSON_NAME_LINE_TYPE] = nlp_core.NLPCore.LINE_TYPE_TOC
 
+                core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_PAGES][page_idx][
+                    nlp_core.NLPCore.JSON_NAME_LINES
+                ] = self._lines_json
+
         core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_toc,
+            core_glob.inst_setup.is_verbose_lt_toc,
             f"LineTypeToc: End   store result                   ={self.no_lines_toc}",
         )
 
@@ -326,18 +331,18 @@ class LineTypeToc:
         )
 
         core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_toc,
-            f"LineTypeToc: lt_toc_last_page={core_glob.setup.lt_toc_last_page}",
+            core_glob.inst_setup.is_verbose_lt_toc,
+            f"LineTypeToc: lt_toc_last_page={core_glob.inst_setup.lt_toc_last_page}",
         )
 
-        if core_glob.setup.lt_toc_last_page == 0:
+        if core_glob.inst_setup.lt_toc_last_page == 0:
             return
 
         self._file_name_curr = file_name_curr
 
-        core_utils.progress_msg(core_glob.setup.is_verbose_lt_toc, "LineTypeToc")
+        core_utils.progress_msg(core_glob.inst_setup.is_verbose_lt_toc, "LineTypeToc")
         core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_toc,
+            core_glob.inst_setup.is_verbose_lt_toc,
             f"LineTypeToc: Start document                       ={self._file_name_curr}",
         )
 
@@ -374,7 +379,7 @@ class LineTypeToc:
             self._store_results()
 
         core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_toc,
+            core_glob.inst_setup.is_verbose_lt_toc,
             f"LineTypeToc: End   document                       ={self._file_name_curr}",
         )
 

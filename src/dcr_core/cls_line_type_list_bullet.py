@@ -17,6 +17,8 @@ Typical usage example:
                                  file_name_orig = my_file_name_orig,
                                  line_pages_json = my_line_pages_json)
 """
+from __future__ import annotations
+
 import json
 import os
 import pathlib
@@ -71,9 +73,9 @@ class LineTypeListBullet:
 
         self._environment_variant = ""
 
-        core_utils.progress_msg(core_glob.setup.is_verbose_lt_list_bullet, "LineTypeListBullet")
+        core_utils.progress_msg(core_glob.inst_setup.is_verbose_lt_list_bullet, "LineTypeListBullet")
         core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_list_bullet,
+            core_glob.inst_setup.is_verbose_lt_list_bullet,
             f"LineTypeListBullet: Start create instance                ={self._file_name_curr}",
         )
 
@@ -81,16 +83,15 @@ class LineTypeListBullet:
 
         self._bullet = ""
 
-        # page_idx, para_no, line_lines_idx_from, line_lines_idx_till
+        # page_idx, para_no, line_idx_from, line_idx_till
         self._entries: list[list[int]] = []
 
         self._line_idx = -1
-        self._lines_json: list[nlp_core.LineJSON] = []
+        self._line_no_max = 0
+        self._lines_json: list[nlp_core.NLPCore.LineJSON] = []
         self._lists: LineTypeListBullet.Lists = []
         self._llx_lower_limit = 0.0
         self._llx_upper_limit = 0.0
-
-        self._max_line_no = 0
 
         self._no_entries = 0
 
@@ -108,7 +109,7 @@ class LineTypeListBullet:
         self._exist = True
 
         core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_list_bullet,
+            core_glob.inst_setup.is_verbose_lt_list_bullet,
             f"LineTypeListBullet: End   create instance                ={self._file_name_curr}",
         )
 
@@ -122,9 +123,9 @@ class LineTypeListBullet:
         if self._no_entries == 0:
             return
 
-        if self._no_entries < core_glob.setup.lt_list_bullet_min_entries:
+        if self._no_entries < core_glob.inst_setup.lt_list_bullet_min_entries:
             core_utils.progress_msg(
-                core_glob.setup.is_verbose_lt_list_bullet,
+                core_glob.inst_setup.is_verbose_lt_list_bullet,
                 f"LineTypeListBullet: Not enough list entries    found only={self._no_entries} - "
                 + f"bullet='{self._bullet}' - entries={self._entries}",
             )
@@ -132,7 +133,7 @@ class LineTypeListBullet:
             return
 
         core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_list_bullet,
+            core_glob.inst_setup.is_verbose_lt_list_bullet,
             f"LineTypeListBullet: List entries                    found={self._no_entries} - "
             + f"bullet='{self._bullet}' - entries={self._entries}",
         )
@@ -141,32 +142,34 @@ class LineTypeListBullet:
 
         entries: LineTypeListBullet.Entries = []
 
-        for [page_idx, para_no, line_lines_idx_from, line_lines_idx_till] in self._entries:
-            lines_json: list[nlp_core.LineJSON] = core_glob.text_parser.parse_result_line_pages[page_idx][nlp_core.NLPCore.JSON_NAME_LINES]
+        for [page_idx, para_no, line_idx_from, line_idx_till] in self._entries:
+            lines_json: list[nlp_core.NLPCore.LineJSON] = core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_PAGES][page_idx][
+                nlp_core.NLPCore.JSON_NAME_LINES
+            ]
 
             text = []
 
-            for idx in range(line_lines_idx_from, line_lines_idx_till + 1):
+            for idx in range(line_idx_from, line_idx_till + 1):
                 lines_json[idx][nlp_core.NLPCore.JSON_NAME_LINE_TYPE] = nlp_core.NLPCore.LINE_TYPE_LIST_BULLET
 
-                if core_glob.setup.is_create_extra_file_list_bullet:
+                if core_glob.inst_setup.is_create_extra_file_list_bullet:
                     text.append(lines_json[idx][nlp_core.NLPCore.JSON_NAME_TEXT])
 
-            if core_glob.setup.is_create_extra_file_list_bullet:
+            if core_glob.inst_setup.is_create_extra_file_list_bullet:
                 entries.append(
                     {
                         nlp_core.NLPCore.JSON_NAME_ENTRY_NO: len(entries) + 1,
-                        nlp_core.NLPCore.JSON_NAME_LINE_NO_PAGE_FROM: line_lines_idx_from + 1,
-                        nlp_core.NLPCore.JSON_NAME_LINE_NO_PAGE_TILL: line_lines_idx_till + 1,
+                        nlp_core.NLPCore.JSON_NAME_LINE_NO_PAGE_FROM: line_idx_from + 1,
+                        nlp_core.NLPCore.JSON_NAME_LINE_NO_PAGE_TILL: line_idx_till + 1,
                         nlp_core.NLPCore.JSON_NAME_PAGE_NO: page_idx + 1,
                         nlp_core.NLPCore.JSON_NAME_PARA_NO: para_no,
                         nlp_core.NLPCore.JSON_NAME_TEXT: " ".join(text),
                     }
                 )
 
-            core_glob.text_parser.parse_result_line_pages[page_idx][nlp_core.NLPCore.JSON_NAME_LINES] = lines_json
+            core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_PAGES][page_idx][nlp_core.NLPCore.JSON_NAME_LINES] = lines_json
 
-        if core_glob.setup.is_create_extra_file_list_bullet:
+        if core_glob.inst_setup.is_create_extra_file_list_bullet:
             self._lists.append(
                 {
                     nlp_core.NLPCore.JSON_NAME_BULLET: self._bullet.rstrip(),
@@ -181,7 +184,7 @@ class LineTypeListBullet:
         self._reset_list()
 
         core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_list_bullet,
+            core_glob.inst_setup.is_verbose_lt_list_bullet,
             f"LineTypeListBullet: End   list                    on page={self._page_idx+1}",
         )
 
@@ -197,13 +200,13 @@ class LineTypeListBullet:
         Returns:
             list[tuple[str, re.Pattern[str]]]: The valid bulleted list anti-patterns.
         """
-        if core_glob.setup.lt_list_bullet_rule_file and core_glob.setup.lt_list_bullet_rule_file.lower() != "none":
-            lt_list_bullet_rule_file_path = core_utils.get_os_independent_name(core_glob.setup.lt_list_bullet_rule_file)
+        if core_glob.inst_setup.lt_list_bullet_rule_file and core_glob.inst_setup.lt_list_bullet_rule_file.lower() != "none":
+            lt_list_bullet_rule_file_path = core_utils.get_os_independent_name(core_glob.inst_setup.lt_list_bullet_rule_file)
             if os.path.isfile(lt_list_bullet_rule_file_path):
                 return self._load_anti_patterns_from_json(pathlib.Path(lt_list_bullet_rule_file_path))
 
             core_utils.terminate_fatal(
-                f"File with bulleted list anti-patterns is missing - " f"file name '{core_glob.setup.lt_list_bullet_rule_file}'"
+                f"File with bulleted list anti-patterns is missing - " f"file name '{core_glob.inst_setup.lt_list_bullet_rule_file}'"
             )
 
         anti_patterns = []
@@ -218,19 +221,21 @@ class LineTypeListBullet:
     # ------------------------------------------------------------------
     # 1: bullet character(s)
     # ------------------------------------------------------------------
-    def _init_rules(self) -> dict[str, int]:
-        """Initialise the valid bullets.
+    def _init_rules(self) -> list[LineTypeListBullet.RuleExtern]:
+        """Initialise the bulleted list rules.
 
         Returns:
-            dict[str, int]: All valid bullets.
+            list[LineTypeListBullet.RuleExtern]: The valid bulleted list rules.
         """
-        if core_glob.setup.lt_list_bullet_rule_file and core_glob.setup.lt_list_bullet_rule_file.lower() != "none":
-            lt_list_bullet_rule_file_path = core_utils.get_os_independent_name(core_glob.setup.lt_list_bullet_rule_file)
+        if core_glob.inst_setup.lt_list_bullet_rule_file and core_glob.inst_setup.lt_list_bullet_rule_file.lower() != "none":
+            lt_list_bullet_rule_file_path = core_utils.get_os_independent_name(core_glob.inst_setup.lt_list_bullet_rule_file)
 
             if os.path.isfile(lt_list_bullet_rule_file_path):
                 return self._load_rules_from_json(pathlib.Path(lt_list_bullet_rule_file_path))
 
-            core_utils.terminate_fatal(f"File with valid bullets is missing - " f"file name '{core_glob.setup.lt_list_bullet_rule_file}'")
+            core_utils.terminate_fatal(
+                f"File with valid bullets is missing - " f"file name '{core_glob.inst_setup.lt_list_bullet_rule_file}'"
+            )
 
         return nlp_core.NLPCore.get_lt_rules_default_list_bullet()
 
@@ -264,8 +269,8 @@ class LineTypeListBullet:
                 )
 
         core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_list_bullet,
-            "The bulleted list anti-patterns were successfully loaded " + f"from the file {core_glob.setup.lt_list_bullet_rule_file}",
+            core_glob.inst_setup.is_verbose_lt_list_bullet,
+            "The bulleted list anti-patterns were successfully loaded " + f"from the file {core_glob.inst_setup.lt_list_bullet_rule_file}",
         )
 
         return anti_patterns
@@ -294,8 +299,8 @@ class LineTypeListBullet:
                 list_bullet_rules[bullet] = 0
 
         core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_list_bullet,
-            "The list_bullet rules were successfully loaded from the " + f"file {core_glob.setup.lt_list_bullet_rule_file}",
+            core_glob.inst_setup.is_verbose_lt_list_bullet,
+            "The list_bullet rules were successfully loaded from the " + f"file {core_glob.inst_setup.lt_list_bullet_rule_file}",
         )
 
         return list_bullet_rules
@@ -303,11 +308,11 @@ class LineTypeListBullet:
     # ------------------------------------------------------------------
     # Process the line-related data.
     # ------------------------------------------------------------------
-    def _process_line(self, line_json: nlp_core.LineJSON) -> None:  # noqa: C901
+    def _process_line(self, line_json: nlp_core.NLPCore.LineJSON) -> None:  # noqa: C901
         """Process the line-related data.
 
         Args:
-            line_json (nlp_core.LineJSON):
+            line_json (nlp_core.NLPCore.LineJSON):
                 The line to be processed.
         """
         text = str(line_json[nlp_core.NLPCore.JSON_NAME_TEXT])
@@ -315,7 +320,7 @@ class LineTypeListBullet:
         for (rule_name, pattern) in self._anti_patterns:
             if pattern.match(text):
                 core_utils.progress_msg(
-                    core_glob.setup.is_verbose_lt_list_bullet,
+                    core_glob.inst_setup.is_verbose_lt_list_bullet,
                     f"LineTypeListBullet: Anti pattern                         ={rule_name} - text={text}",
                 )
                 return
@@ -348,15 +353,15 @@ class LineTypeListBullet:
 
         if not self._entries:
             # New bulleted paragraph.
-            self._line_lines_idx_from = self._line_idx
-            self._line_lines_idx_till = self._line_idx
+            self._line_idx_from = self._line_idx
+            self._line_idx_till = self._line_idx
             self._llx_lower_limit = round(
                 (coord_llx := float(line_json[nlp_core.NLPCore.JSON_NAME_COORD_LLX]))
-                * (100 - core_glob.setup.lt_list_bullet_tolerance_llx)
+                * (100 - core_glob.inst_setup.lt_list_bullet_tolerance_llx)
                 / 100,
                 2,
             )
-            self._llx_upper_limit = round(coord_llx * (100 + core_glob.setup.lt_list_bullet_tolerance_llx) / 100, 2)
+            self._llx_upper_limit = round(coord_llx * (100 + core_glob.inst_setup.lt_list_bullet_tolerance_llx) / 100, 2)
 
         self._entries.append([self._page_idx, para_no, self._line_idx, self._line_idx])
 
@@ -370,7 +375,7 @@ class LineTypeListBullet:
     def _process_page(self) -> None:
         """Process the page-related data."""
         core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_list_bullet,
+            core_glob.inst_setup.is_verbose_lt_list_bullet,
             f"LineTypeListBullet: Start page                           ={self._page_idx + 1}",
         )
 
@@ -382,7 +387,7 @@ class LineTypeListBullet:
                 self._page_idx_prev = self._page_idx
 
         core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_list_bullet,
+            core_glob.inst_setup.is_verbose_lt_list_bullet,
             f"LineTypeListBullet: End   page                           ={self._page_idx + 1}",
         )
 
@@ -391,12 +396,12 @@ class LineTypeListBullet:
     # ------------------------------------------------------------------
     def _reset_document(self) -> None:
         """Reset the document memory."""
-        core_utils.progress_msg(core_glob.setup.is_verbose_lt_list_bullet, "LineTypeListBullet: Reset the document memory")
-
         self.no_lists = 0
 
-        if core_glob.setup.is_create_extra_file_list_bullet:
+        if core_glob.inst_setup.is_create_extra_file_list_bullet:
             self._lists = []
+
+        core_utils.progress_msg(core_glob.inst_setup.is_verbose_lt_list_bullet, "LineTypeListBullet: Reset the document memory")
 
         self._reset_list()
 
@@ -417,7 +422,7 @@ class LineTypeListBullet:
         self._page_idx_prev = -1
         self._para_no_prev = 0
 
-        core_utils.progress_msg(core_glob.setup.is_verbose_lt_list_bullet, "LineTypeListBullet: Reset the list memory")
+        core_utils.progress_msg(core_glob.inst_setup.is_verbose_lt_list_bullet, "LineTypeListBullet: Reset the list memory")
 
     # ------------------------------------------------------------------
     # Check the object existence.
@@ -469,9 +474,9 @@ class LineTypeListBullet:
         self._file_name_curr = file_name_curr
         self._environment_variant = environment_variant
 
-        core_utils.progress_msg(core_glob.setup.is_verbose_lt_list_bullet, "LineTypeListBullet")
+        core_utils.progress_msg(core_glob.inst_setup.is_verbose_lt_list_bullet, "LineTypeListBullet")
         core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_list_bullet,
+            core_glob.inst_setup.is_verbose_lt_list_bullet,
             f"LineTypeListBullet: Start document                       ={self._file_name_curr}",
         )
 
@@ -479,13 +484,13 @@ class LineTypeListBullet:
 
         for page_idx, page_json in enumerate(core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_PAGES]):
             self._page_idx = page_idx
-            self._max_line_no = page_json[nlp_core.NLPCore.JSON_NAME_LINE_NO]
+            self._line_no_max = page_json[nlp_core.NLPCore.JSON_NAME_LINE_NO]
             self._lines_json = page_json[nlp_core.NLPCore.JSON_NAME_LINES]
             self._process_page()
 
         self._finish_list()
 
-        if core_glob.setup.is_create_extra_file_list_bullet and self._lists:
+        if core_glob.inst_setup.is_create_extra_file_list_bullet and self._lists:
             full_name = core_utils.get_full_name_from_components(
                 directory_name,
                 core_utils.get_stem_name(str(file_name_curr)) + ".list_bullet." + core_glob.FILE_TYPE_JSON,
@@ -493,24 +498,24 @@ class LineTypeListBullet:
             with open(full_name, "w", encoding=core_glob.FILE_ENCODING_DEFAULT) as file_handle:
                 json.dump(
                     {
-                        nlp_core.NLPCore.JSON_NAME_DOC_ID: document_id,
-                        nlp_core.NLPCore.JSON_NAME_DOC_FILE_NAME: file_name_orig,
+                        nlp_core.NLPCore.JSON_NAME_DOCUMENT_ID: document_id,
+                        nlp_core.NLPCore.JSON_NAME_FILE_NAME_ORIG: file_name_orig,
                         nlp_core.NLPCore.JSON_NAME_NO_LISTS_BULLET_IN_DOC: self.no_lists,
                         nlp_core.NLPCore.JSON_NAME_LISTS_BULLET: self._lists,
                     },
                     file_handle,
-                    indent=core_glob.setup.json_indent,
-                    sort_keys=core_glob.setup.is_json_sort_keys,
+                    indent=core_glob.inst_setup.json_indent,
+                    sort_keys=core_glob.inst_setup.is_json_sort_keys,
                 )
 
         if self.no_lists > 0:
             core_utils.progress_msg(
-                core_glob.setup.is_verbose_lt_list_bullet,
+                core_glob.inst_setup.is_verbose_lt_list_bullet,
                 f"LineTypeListBullet:                 number bulleted lists={self.no_lists}",
             )
 
         core_utils.progress_msg(
-            core_glob.setup.is_verbose_lt_list_bullet,
+            core_glob.inst_setup.is_verbose_lt_list_bullet,
             f"LineTypeListBullet: End   document                       ={self._file_name_curr}",
         )
 

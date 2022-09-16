@@ -3,6 +3,8 @@
 # Version 2020.05, that can be found in the LICENSE file.
 
 """Miscellaneous helper functions."""
+from __future__ import annotations
+
 import datetime
 import os
 import pathlib
@@ -18,6 +20,25 @@ ERROR_00_901 = "00.901 Issue (utils): The file '{full_name}' cannot be found - F
 ERROR_00_902 = (
     "00.902 Issue: An infinite loop is encountered along the resolution path of '{full_name}' - " + "RuntimeError - error: '{error_msg}'."
 )
+ERROR_01_901 = "01.901 Issue (p_i): Document rejected because of unknown file extension='{extension}'."
+ERROR_01_903 = "01.903 Issue (p_i): Error with fitz.open() processing of file '{file_name}' " + "- RuntimeError - error: '{error_msg}'"
+
+ERROR_21_901 = (
+    "21.901 Issue (p_2_i): Processing file '{full_name}' with pdf2image failed - PDFPageCountError - "
+    + "error type: '{error_type}' - error: '{error_msg}'"
+)
+ERROR_31_902 = "31.902 Issue (n_2_p): The file '{full_name}' cannot be converted to an " + "'PDF' document - FileNotFoundError"
+ERROR_31_903 = (
+    "31.903 Issue (n_2_p): The file '{full_name}' cannot be converted to an " + "'PDF' document - RuntimeError - error: '{error_msg}'"
+)
+ERROR_31_911 = "31.911 Issue (n_2_p): The pdf document {full_name} for PDFlib TET is an empty file"
+ERROR_41_901 = "41.901 Issue (ocr): Converting the file '{full_name}' with Tesseract OCR failed - " + "RuntimeError - error: '{error_msg}'"
+ERROR_41_911 = "41.911 Issue (ocr): Tesseract OCR has created an empty pdf file from the file {full_name}"
+ERROR_51_901 = "51.901 Issue (tet): Opening document '{full_name}' - " + "error no: '{error_no}' - api: '{api_name}' - error: '{error_msg}'"
+ERROR_61_901 = "61.901 Issue (s_p_j): Parsing the file '{full_name}' failed - FileNotFoundError"
+ERROR_61_902 = "61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'"
+ERROR_61_903 = "61.903 Issue (s_p_j): The number of unknown XML nodes is {no_errors} - details can be found in the log"
+ERROR_71_901 = "71.901 Issue (tkn): Tokenizing the file '{full_name}' failed - FileNotFoundError"
 
 
 # ------------------------------------------------------------------
@@ -25,6 +46,7 @@ ERROR_00_902 = (
 # ------------------------------------------------------------------
 def check_exists_object(  # noqa: C901
     is_line_type_header_footer: bool = False,
+    is_line_type_heading: bool = False,
     is_line_type_list_bullet: bool = False,
     is_line_type_list_number: bool = False,
     is_line_type_table: bool = False,
@@ -37,7 +59,10 @@ def check_exists_object(  # noqa: C901
 
     Args:
         is_line_type_header_footer (bool, optional):
-            Check an object of class LineTypeHeadersFooters.
+            Check an object of class LineTypeHeaderFooter.
+            Defaults to False.
+        is_line_type_heading (bool, optional):
+            Check an object of class LineTypeHeading.
             Defaults to False.
         is_line_type_list_bullet (bool, optional):
             Check an object of class LineTypeListBullet.
@@ -66,12 +91,20 @@ def check_exists_object(  # noqa: C901
             core_glob.inst_lt_hf.exists()  # type: ignore
         except AttributeError:
             terminate_fatal(
-                "The required instance of the class 'LineTypeHeadersFooters' does not yet exist.",
+                "The required instance of the class 'LineTypeHeaderFooter' does not yet exist.",
+            )
+
+    if is_line_type_heading:
+        try:
+            core_glob.inst_lt_h.exists()  # type: ignore
+        except AttributeError:
+            terminate_fatal(
+                "The required instance of the class 'LineTypeHeading' does not yet exist.",
             )
 
     if is_line_type_list_bullet:
         try:
-            core_glob.line_type_list_bullet.exists()  # type: ignore
+            core_glob.inst_lt_lb.exists()  # type: ignore
         except AttributeError:
             terminate_fatal(
                 "The required instance of the class 'LineTypeListBullet' does not yet exist.",
@@ -79,7 +112,7 @@ def check_exists_object(  # noqa: C901
 
     if is_line_type_list_number:
         try:
-            core_glob.line_type_list_number.exists()  # type: ignore
+            core_glob.inst_lt_ln.exists()  # type: ignore
         except AttributeError:
             terminate_fatal(
                 "The required instance of the class 'LineTypeListNumber' does not yet exist.",
@@ -87,7 +120,7 @@ def check_exists_object(  # noqa: C901
 
     if is_line_type_table:
         try:
-            core_glob.line_type_table.exists()  # type: ignore
+            core_glob.inst_lt_tab.exists()  # type: ignore
         except AttributeError:
             terminate_fatal(
                 "The required instance of the class 'LineTypeTable' does not yet exist.",
@@ -103,7 +136,7 @@ def check_exists_object(  # noqa: C901
 
     if is_setup:
         try:
-            core_glob.setup.exists()  # type: ignore
+            core_glob.inst_setup.exists()  # type: ignore
         except AttributeError:
             terminate_fatal(
                 "The required instance of the class 'Setup' does not yet exist.",
@@ -111,7 +144,7 @@ def check_exists_object(  # noqa: C901
 
     if is_nlp_core:
         try:
-            core_glob.nlp_core.exists()  # type: ignore
+            core_glob.inst_nlp_core.exists()  # type: ignore
         except AttributeError:
             terminate_fatal(
                 "The required instance of the class 'NLPCore' does not yet exist.",
@@ -119,7 +152,7 @@ def check_exists_object(  # noqa: C901
 
     if is_text_parser:
         try:
-            core_glob.text_parser.exists()
+            core_glob.inst_parser.exists()
         except AttributeError:
             terminate_fatal(
                 "The required instance of the class 'TextParser' does not yet exist.",
