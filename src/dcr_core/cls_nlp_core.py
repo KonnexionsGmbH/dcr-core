@@ -68,6 +68,13 @@ class NLPCore:
     JSON_NAME_ID: ClassVar[str] = "id"
     JSON_NAME_ITALIC_ANGLE: ClassVar[str] = "italicAngle"
 
+    JSON_NAME_JSON_INCL_CONFIG: ClassVar[str] = "jsonIncl"
+    JSON_NAME_JSON_INCL_FONTS: ClassVar[str] = "jsonInclFonts"
+    JSON_NAME_JSON_INCL_HEADING: ClassVar[str] = "jsonInclHeading"
+    JSON_NAME_JSON_INCL_LIST_BULLET: ClassVar[str] = "jsonInclListBullet"
+    JSON_NAME_JSON_INCL_LIST_NUMBER: ClassVar[str] = "jsonInclListNumber"
+    JSON_NAME_JSON_INCL_PARAMS: ClassVar[str] = "jsonInclParams"
+    JSON_NAME_JSON_INCL_TABLE: ClassVar[str] = "jsonInclTable"
     JSON_NAME_JSON_INDENT: ClassVar[str] = "jsonIndent"
     JSON_NAME_JSON_SORT_KEYS: ClassVar[str] = "jsonSortKeys"
 

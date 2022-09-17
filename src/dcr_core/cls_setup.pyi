@@ -8,13 +8,16 @@ from typing import ClassVar
 
 class Setup:
     _CONFIG_PARAM_NO: ClassVar[int]
-    _DCR_CFG_CREATE_EXTRA_FILE_HEADING: ClassVar[str]
-    _DCR_CFG_CREATE_EXTRA_FILE_LIST_BULLET: ClassVar[str]
-    _DCR_CFG_CREATE_EXTRA_FILE_LIST_NUMBER: ClassVar[str]
-    _DCR_CFG_CREATE_EXTRA_FILE_TABLE: ClassVar[str]
     _DCR_CFG_DELETE_AUXILIARY_FILES: ClassVar[str]
     _DCR_CFG_DIRECTORY_INBOX: ClassVar[str]
     _DCR_CFG_FILE: ClassVar[str]
+    _DCR_CFG_JSON_INCL_CONFIG: ClassVar[str]
+    _DCR_CFG_JSON_INCL_FONTS: ClassVar[str]
+    _DCR_CFG_JSON_INCL_PARAMS: ClassVar[str]
+    _DCR_CFG_JSON_INCL_HEADING: ClassVar[str]
+    _DCR_CFG_JSON_INCL_LIST_BULLET: ClassVar[str]
+    _DCR_CFG_JSON_INCL_LIST_NUMBER: ClassVar[str]
+    _DCR_CFG_JSON_INCL_TABLE: ClassVar[str]
     _DCR_CFG_JSON_INDENT: ClassVar[str]
     _DCR_CFG_JSON_SORT_KEYS: ClassVar[str]
     _DCR_CFG_LT_FOOTER_MAX_DISTANCE: ClassVar[str]
@@ -142,11 +145,14 @@ class Setup:
         self.directory_inbox_accepted = ""
         self.directory_inbox_rejected = ""
         self.environment_variant = ""
-        self.is_create_extra_file_heading = False
-        self.is_create_extra_file_list_bullet = False
-        self.is_create_extra_file_list_number = False
-        self.is_create_extra_file_table = False
         self.is_delete_auxiliary_files = False
+        self.is_json_incl_config = False
+        self.is_json_incl_fonts = False
+        self.is_json_incl_heading = False
+        self.is_json_incl_list_bullet = False
+        self.is_json_incl_list_number = False
+        self.is_json_incl_params = False
+        self.is_json_incl_table = False
         self.is_json_sort_keys = False
         self.is_lt_footer_required = False
         self.is_lt_header_required = False
@@ -158,9 +164,6 @@ class Setup:
         self.is_lt_table_file_incl_empty_columns = False
         self.is_lt_table_required = False
         self.is_lt_toc_required = False
-        self.is_parsing_line = False
-        self.is_parsing_page = False
-        self.is_parsing_word = False
         self.is_spacy_ignore_bracket = False
         self.is_spacy_ignore_left_punct = False
         self.is_spacy_ignore_line_type_footer = False

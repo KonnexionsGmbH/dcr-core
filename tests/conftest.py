@@ -220,13 +220,16 @@ def fxtr_before_any_test():
     # Configuration: dcr_core.
     # -----------------------------------------------------------------------------
     for (config_param, config_value) in (
-        (setup.Setup._DCR_CFG_CREATE_EXTRA_FILE_HEADING, "true"),
-        (setup.Setup._DCR_CFG_CREATE_EXTRA_FILE_LIST_BULLET, "true"),
-        (setup.Setup._DCR_CFG_CREATE_EXTRA_FILE_LIST_NUMBER, "true"),
-        (setup.Setup._DCR_CFG_CREATE_EXTRA_FILE_TABLE, "true"),
         (setup.Setup._DCR_CFG_DIRECTORY_INBOX, "data/inbox_test"),
+        (setup.Setup._DCR_CFG_JSON_INCL_CONFIG, "true"),
+        (setup.Setup._DCR_CFG_JSON_INCL_FONTS, "true"),
+        (setup.Setup._DCR_CFG_JSON_INCL_HEADING, "true"),
+        (setup.Setup._DCR_CFG_JSON_INCL_LIST_BULLET, "true"),
+        (setup.Setup._DCR_CFG_JSON_INCL_LIST_NUMBER, "true"),
+        (setup.Setup._DCR_CFG_JSON_INCL_PARAMS, "true"),
+        (setup.Setup._DCR_CFG_JSON_INCL_TABLE, "true"),
         (setup.Setup._DCR_CFG_JSON_INDENT, "4"),
-        (setup.Setup._DCR_CFG_JSON_SORT_KEYS, "false"),
+        (setup.Setup._DCR_CFG_JSON_SORT_KEYS, "true"),
         (setup.Setup._DCR_CFG_LT_FOOTER_MAX_DISTANCE, "3"),
         (setup.Setup._DCR_CFG_LT_FOOTER_MAX_LINES, "3"),
         (setup.Setup._DCR_CFG_LT_HEADER_MAX_DISTANCE, "3"),

@@ -173,6 +173,13 @@ def create_config() -> nlp_core.NLPCore.ConfigJSON:
             Container 'configuration'.
     """
     config = {
+        nlp_core.NLPCore.JSON_NAME_JSON_INCL_CONFIG: core_glob.inst_setup.is_json_incl_config,
+        nlp_core.NLPCore.JSON_NAME_JSON_INCL_FONTS: core_glob.inst_setup.is_json_incl_fonts,
+        nlp_core.NLPCore.JSON_NAME_JSON_INCL_HEADING: core_glob.inst_setup.is_json_incl_heading,
+        nlp_core.NLPCore.JSON_NAME_JSON_INCL_LIST_BULLET: core_glob.inst_setup.is_json_incl_list_bullet,
+        nlp_core.NLPCore.JSON_NAME_JSON_INCL_LIST_NUMBER: core_glob.inst_setup.is_json_incl_list_number,
+        nlp_core.NLPCore.JSON_NAME_JSON_INCL_PARAMS: core_glob.inst_setup.is_json_incl_params,
+        nlp_core.NLPCore.JSON_NAME_JSON_INCL_TABLE: core_glob.inst_setup.is_json_incl_table,
         nlp_core.NLPCore.JSON_NAME_JSON_INDENT: core_glob.inst_setup.json_indent,
         nlp_core.NLPCore.JSON_NAME_JSON_SORT_KEYS: core_glob.inst_setup.is_json_sort_keys,
         nlp_core.NLPCore.JSON_NAME_LT_FOOTER_MAX_DISTANCE: core_glob.inst_setup.lt_footer_max_distance,
@@ -211,8 +218,8 @@ def create_config() -> nlp_core.NLPCore.ConfigJSON:
         nlp_core.NLPCore.JSON_NAME_SPACY_TKN_CLUSTER: core_glob.inst_setup.is_spacy_tkn_attr_cluster,
         nlp_core.NLPCore.JSON_NAME_SPACY_TKN_DEP_: core_glob.inst_setup.is_spacy_tkn_attr_dep_,
         nlp_core.NLPCore.JSON_NAME_SPACY_TKN_DOC: core_glob.inst_setup.is_spacy_tkn_attr_doc,
-        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_ENT_KB_ID_: core_glob.inst_setup.is_spacy_tkn_attr_ent_kb_id_,
         nlp_core.NLPCore.JSON_NAME_SPACY_TKN_ENT_IOB_: core_glob.inst_setup.is_spacy_tkn_attr_ent_iob_,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_ENT_KB_ID_: core_glob.inst_setup.is_spacy_tkn_attr_ent_kb_id_,
         nlp_core.NLPCore.JSON_NAME_SPACY_TKN_ENT_TYPE_: core_glob.inst_setup.is_spacy_tkn_attr_ent_type_,
         nlp_core.NLPCore.JSON_NAME_SPACY_TKN_HEAD: core_glob.inst_setup.is_spacy_tkn_attr_head,
         nlp_core.NLPCore.JSON_NAME_SPACY_TKN_I: core_glob.inst_setup.is_spacy_tkn_attr_i,

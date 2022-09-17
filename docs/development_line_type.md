@@ -168,10 +168,6 @@ A block of lines with the following properties is searched here:
 
 The following parameters control the classification of the tables:
 
-- **`create_extra_file_table`**
-
-Default value: **`true`** - if true, a **`JSON`** file named `<document_name>_table.json` is created in the file directory `data_accepted` with the identified tables.
-
 - **`lt_table_file_incl_empty_columns`**
 
 Default value: **`true`** - if true, the empty columns are included in the **`JSON`** file `<document_name>_table.json`.
@@ -196,10 +192,6 @@ All elements of a bulleted list must begin with one or more of the same characte
 ### 4.1 Parameters
 
 The following parameters control the classification of a bulleted list:
-
-- **`create_extra_file_list_bullet`**
-
-Default value: **`true`** - if true, a **`JSON`** file named `<document_name>_list_bullet.json` is created in the file directory `data_accepted` with the identified bulleted lists.
 
 - **`lt_list_bullet_min_entries`**
 
@@ -264,10 +256,6 @@ TODO
 ### 6.1 Parameters
 
 The following parameters control the classification of the headings:
-
-- **`create_extra_file_heading`**
-
-Default value: **`true`** - if true, a **`JSON`** file named `<document_name>_heading.json` is created in the file directory `data_accepted` with the identified headings.
 
 - **`lt_heading_file_incl_no_ctx`**
 

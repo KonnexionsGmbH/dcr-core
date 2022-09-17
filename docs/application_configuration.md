@@ -42,14 +42,17 @@ This file controls the behaviour of the **`DCR-CORE`** application.
 The customisable entries are:
 
     [dcr_core]
-    create_extra_file_heading = true
-    create_extra_file_list_bullet = true
-    create_extra_file_list_number = true
-    create_extra_file_table = true
     delete_auxiliary_files = true
     directory_inbox = data/inbox_prod
+    json_incl_config = false
+    json_incl_fonts = false
+    json_incl_heading = false
+    json_incl_list_bullet = false
+    json_incl_list_number = false
+    json_incl_params = false
+    json_incl_table = false
     json_indent = 4
-    json_sort_keys = false
+    json_sort_keys = true
     lt_export_rule_file_heading = data/lt_export_rule_heading.json
     lt_export_rule_file_list_bullet = data/lt_export_rule_list_bullet.json
     lt_export_rule_file_list_number = data/lt_export_rule_list_number.json
@@ -95,12 +98,15 @@ The customisable entries are:
 
 | Parameter                        | Description                                                                                                          |
 |----------------------------------|----------------------------------------------------------------------------------------------------------------------|
-| create_extra_file_heading        | Create a separate **`JSON`** file with the table of contents.                                                        |
-| create_extra_file_list_bullet    | Create a separate **`JSON`** file with the bulleted lists.                                                           |
-| create_extra_file_list_number    | Create a separate **`JSON`** file with the numbered lists.                                                           |
-| create_extra_file_table          | Create a separate **`JSON`** file with the tables.                                                                   |
 | delete_auxiliary_files           | Delete the auxiliary files after a successful <br>processing step.                                                   |
 | directory_inbox                  | Directory for the new documents received.                                                                            |
+| json_incl_config                 | Include the configuration data in the **`JSON`** file.                                                               |
+| json_incl_fonts                  | Include the font data in the **`JSON`** file.                                                                        |
+| json_incl_heading                | Include the heading data in the **`JSON`** file.                                                                     |
+| json_incl_list_bullet            | Include the bulleted list data in the **`JSON`** file.                                                               |
+| json_incl_list_number            | Include the numbered list data in the **`JSON`** file.                                                               |
+| json_incl_params                 | Include the parameters in the **`JSON`** file.                                                                       |
+| json_incl_table                  | Include the table data in the **`JSON`** file.                                                                       |
 | json_indent                      | Improves the readability of the **`JSON`** file.                                                                     |
 | json_sort_keys                   | If it is set to **`true`**, the keys are set <br/>in ascending order else, they appear as <br/>in the Python object. |
 | lt_export_rule_file_heading      | File name for the export of the heading rules.                                                                       |
@@ -120,12 +126,12 @@ The customisable entries are:
 | lt_heading_rule_file             | File with rules to determine the headings.                                                                           |
 | lt_heading_tolerance_llx         | Tolerance of vertical indentation in percent.                                                                        |
 | lt_list_bullet_min_entries       | Minimum number of entries to determine a bulleted list.                                                              |
-| lt_list_bullet_required          | If it is set to **`true`**, the determination of the bulleted lists lines is performed.                               |
+| lt_list_bullet_required          | If it is set to **`true`**, the determination of the bulleted lists lines is performed.                              |
 | lt_list_bullet_rule_file         | File with rules to determine the bulleted lists.                                                                     |
 | lt_list_bullet_tolerance_llx     | Tolerance of vertical indentation in percent.                                                                        |
 | lt_list_number_file_incl_regexp  | If it is set to **`true`**, the regular expression for the numbered list is included in the **`JSON`** file.         |
 | lt_list_number_min_entries       | Minimum number of entries to determine a numbered list.                                                              |
-| lt_list_number_required          | If it is set to **`true`**, the determination of the numbered lists lines is performed.                               |
+| lt_list_number_required          | If it is set to **`true`**, the determination of the numbered lists lines is performed.                              |
 | lt_list_number_rule_file         | File with rules to determine the numbered lists.                                                                     |
 | lt_list_number_tolerance_llx     | Tolerance of vertical indentation in percent.                                                                        |
 | lt_table_file_incl_empty_columns | If it is set to **`true`**, the empty <br/>cells are included in the separate <br/>**`JSON`** file with the tables.  |

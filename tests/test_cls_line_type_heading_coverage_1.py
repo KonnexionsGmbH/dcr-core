@@ -22,7 +22,6 @@ def test(fxtr_rmdir_opt, fxtr_setup_empty_inbox):
     pytest.helpers.config_params_modify(
         setup.Setup._DCR_CFG_SECTION_CORE_ENV_TEST,
         [
-            (setup.Setup._DCR_CFG_CREATE_EXTRA_FILE_HEADING, "false"),
             (setup.Setup._DCR_CFG_LT_HEADING_FILE_INCL_REGEXP, "false"),
             (setup.Setup._DCR_CFG_VERBOSE_LT_HEADING, "true"),
         ],
