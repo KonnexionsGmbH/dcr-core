@@ -53,6 +53,7 @@ class TextParser:
         self._file_name_curr = ""
         self._file_name_orig = ""
         self._full_name = ""
+        self._is_line_processing = False
         self._is_lt_footer_required = False
         self._is_lt_header_required = False
         self._is_lt_heading_required = False
@@ -60,6 +61,7 @@ class TextParser:
         self._is_lt_list_number_required = False
         self._is_lt_table_required = False
         self._is_lt_toc_required = False
+        self._is_word_processing = False
         self._no_pdf_pages = 0
 
         self._parse_result_container_fonts: list[nlp_core.NLPCore.FontJSON] = []
@@ -67,18 +69,26 @@ class TextParser:
         self._parse_result_container_pages: list[nlp_core.NLPCore.PageJSON] = []
         self._parse_result_container_paras: list[nlp_core.NLPCore.ParaJSON] = []
         self._parse_result_container_words: list[nlp_core.NLPCore.WordJSON] = []
+        self._parse_result_font = ""
+        self._parse_result_glyph_is_empty = False
+        self._parse_result_index_page = 0
+        self._parse_result_line_idx = 0
         self._parse_result_line_word_no_first = 0
         self._parse_result_line_word_no_last = 0
+        self._parse_result_llx: float = 0.0
         self._parse_result_no_fonts = 0
-        self._parse_result_no_lines = 0
+        self._parse_result_no_lines_line = 0
         self._parse_result_no_lines_page = 0
         self._parse_result_no_lines_para = 0
+        self._parse_result_no_lines_word = 0
         self._parse_result_no_paras = 0
         self._parse_result_no_paras_page = 0
+        self._parse_result_no_titles = 0
         self._parse_result_no_words = 0
         self._parse_result_no_words_line = 0
-        self._parse_result_no_words_para = 0
         self._parse_result_no_words_page = 0
+        self._parse_result_no_words_para = 0
+        self._parse_result_page_idx = 0
         self._parse_result_page_line_no_first = 0
         self._parse_result_page_line_no_last = 0
         self._parse_result_page_para_no_first = 0
@@ -89,13 +99,6 @@ class TextParser:
         self._parse_result_para_line_no_last = 0
         self._parse_result_para_word_no_first = 0
         self._parse_result_para_word_no_last = 0
-        self._parse_result_container_words_line: list[str] = []
-        self._parse_result_container_words_para: list[str] = []
-        self._parse_result_font = ""
-        self._parse_result_glyph_is_empty = False
-        self._parse_result_index_page = 0
-        self._parse_result_llx: float = 0.0
-        self._parse_result_no_titles = 0
         self._parse_result_size = 0.00
         self._parse_result_table = False
         self._parse_result_table_cell = 0
@@ -114,110 +117,6 @@ class TextParser:
         self._exist = True
 
         core_glob.logger.debug(core_glob.LOGGER_END)
-
-    # ------------------------------------------------------------------
-    # Create the container 'config'.
-    # ------------------------------------------------------------------
-    @staticmethod
-    def _create_config() -> nlp_core.ConfigJSON:
-        """Create the container 'config'.
-
-        Returns:
-            nlp_core.ConfigJSON:
-                Container 'configuration'.
-        """
-        config = {
-            nlp_core.NLPCore.JSON_NAME_JSON_INDENT: core_glob.inst_setup.json_indent,
-            nlp_core.NLPCore.JSON_NAME_JSON_SORT_KEYS: core_glob.inst_setup.is_json_sort_keys,
-            nlp_core.NLPCore.JSON_NAME_LT_FOOTER_MAX_DISTANCE: core_glob.inst_setup.lt_footer_max_distance,
-            nlp_core.NLPCore.JSON_NAME_LT_FOOTER_MAX_LINES: core_glob.inst_setup.lt_footer_max_lines,
-            nlp_core.NLPCore.JSON_NAME_LT_HEADER_MAX_DISTANCE: core_glob.inst_setup.lt_header_max_distance,
-            nlp_core.NLPCore.JSON_NAME_LT_HEADER_MAX_LINES: core_glob.inst_setup.lt_header_max_lines,
-            nlp_core.NLPCore.JSON_NAME_LT_HEADING_FILE_INCL_NO_CTX: core_glob.inst_setup.lt_heading_file_incl_no_ctx,
-            nlp_core.NLPCore.JSON_NAME_LT_HEADING_FILE_INCL_REGEXP: core_glob.inst_setup.is_lt_heading_file_incl_regexp,
-            nlp_core.NLPCore.JSON_NAME_LT_HEADING_MAX_LEVEL: core_glob.inst_setup.lt_heading_max_level,
-            nlp_core.NLPCore.JSON_NAME_LT_HEADING_MIN_PAGES: core_glob.inst_setup.lt_heading_min_pages,
-            nlp_core.NLPCore.JSON_NAME_LT_HEADING_RULE_FILE: core_glob.inst_setup.lt_heading_rule_file,
-            nlp_core.NLPCore.JSON_NAME_LT_HEADING_TOLERANCE_LLX: core_glob.inst_setup.lt_heading_tolerance_llx,
-            nlp_core.NLPCore.JSON_NAME_LT_LIST_BULLET_MIN_ENTRIES: core_glob.inst_setup.lt_list_bullet_min_entries,
-            nlp_core.NLPCore.JSON_NAME_LT_LIST_BULLET_RULE_FILE: core_glob.inst_setup.lt_list_bullet_rule_file,
-            nlp_core.NLPCore.JSON_NAME_LT_LIST_BULLET_TOLERANCE_LLX: core_glob.inst_setup.lt_list_bullet_tolerance_llx,
-            nlp_core.NLPCore.JSON_NAME_LT_LIST_NUMBER_MIN_ENTRIES: core_glob.inst_setup.lt_list_number_min_entries,
-            nlp_core.NLPCore.JSON_NAME_LT_LIST_NUMBER_RULE_FILE: core_glob.inst_setup.lt_list_number_rule_file,
-            nlp_core.NLPCore.JSON_NAME_LT_LIST_NUMBER_TOLERANCE_LLX: core_glob.inst_setup.lt_list_number_tolerance_llx,
-            nlp_core.NLPCore.JSON_NAME_LT_TABLE_FILE_INCL_EMPTY_COLUMNS: core_glob.inst_setup.is_lt_table_file_incl_empty_columns,
-            nlp_core.NLPCore.JSON_NAME_LT_TOC_LAST_PAGE: core_glob.inst_setup.lt_toc_last_page,
-            nlp_core.NLPCore.JSON_NAME_LT_TOC_MIN_ENTRIES: core_glob.inst_setup.lt_toc_min_entries,
-            nlp_core.NLPCore.JSON_NAME_SPACY_IGNORE_BRACKET: core_glob.inst_setup.is_spacy_ignore_bracket,
-            nlp_core.NLPCore.JSON_NAME_SPACY_IGNORE_LEFT_PUNCT: core_glob.inst_setup.is_spacy_ignore_left_punct,
-            nlp_core.NLPCore.JSON_NAME_SPACY_IGNORE_LINE_TYPE_FOOTER: core_glob.inst_setup.is_spacy_ignore_line_type_footer,
-            nlp_core.NLPCore.JSON_NAME_SPACY_IGNORE_LINE_TYPE_HEADER: core_glob.inst_setup.is_spacy_ignore_line_type_header,
-            nlp_core.NLPCore.JSON_NAME_SPACY_IGNORE_LINE_TYPE_HEADING: core_glob.inst_setup.is_spacy_ignore_line_type_heading,
-            nlp_core.NLPCore.JSON_NAME_SPACY_IGNORE_LINE_TYPE_LIST_BULLET: core_glob.inst_setup.is_spacy_ignore_line_type_list_bullet,
-            nlp_core.NLPCore.JSON_NAME_SPACY_IGNORE_LINE_TYPE_LIST_NUMBER: core_glob.inst_setup.is_spacy_ignore_line_type_list_number,
-            nlp_core.NLPCore.JSON_NAME_SPACY_IGNORE_LINE_TYPE_TABLE: core_glob.inst_setup.is_spacy_ignore_line_type_table,
-            nlp_core.NLPCore.JSON_NAME_SPACY_IGNORE_LINE_TYPE_TOC: core_glob.inst_setup.is_spacy_ignore_line_type_toc,
-            nlp_core.NLPCore.JSON_NAME_SPACY_IGNORE_PUNCT: core_glob.inst_setup.is_spacy_ignore_punct,
-            nlp_core.NLPCore.JSON_NAME_SPACY_IGNORE_QUOTE: core_glob.inst_setup.is_spacy_ignore_quote,
-            nlp_core.NLPCore.JSON_NAME_SPACY_IGNORE_RIGHT_PUNCT: core_glob.inst_setup.is_spacy_ignore_right_punct,
-            nlp_core.NLPCore.JSON_NAME_SPACY_IGNORE_SPACE: core_glob.inst_setup.is_spacy_ignore_space,
-            nlp_core.NLPCore.JSON_NAME_SPACY_IGNORE_STOP: core_glob.inst_setup.is_spacy_ignore_stop,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_CLUSTER: core_glob.inst_setup.is_spacy_tkn_attr_cluster,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_DEP_: core_glob.inst_setup.is_spacy_tkn_attr_dep_,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_DOC: core_glob.inst_setup.is_spacy_tkn_attr_doc,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_ENT_KB_ID_: core_glob.inst_setup.is_spacy_tkn_attr_ent_kb_id_,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_ENT_IOB_: core_glob.inst_setup.is_spacy_tkn_attr_ent_iob_,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_ENT_TYPE_: core_glob.inst_setup.is_spacy_tkn_attr_ent_type_,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_HEAD: core_glob.inst_setup.is_spacy_tkn_attr_head,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_I: core_glob.inst_setup.is_spacy_tkn_attr_i,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IDX: core_glob.inst_setup.is_spacy_tkn_attr_idx,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_ALPHA: core_glob.inst_setup.is_spacy_tkn_attr_is_alpha,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_ASCII: core_glob.inst_setup.is_spacy_tkn_attr_is_ascii,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_BRACKET: core_glob.inst_setup.is_spacy_tkn_attr_is_bracket,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_CURRENCY: core_glob.inst_setup.is_spacy_tkn_attr_is_currency,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_DIGIT: core_glob.inst_setup.is_spacy_tkn_attr_is_digit,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_LEFT_PUNCT: core_glob.inst_setup.is_spacy_tkn_attr_is_left_punct,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_LOWER: core_glob.inst_setup.is_spacy_tkn_attr_is_lower,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_OOV: core_glob.inst_setup.is_spacy_tkn_attr_is_oov,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_PUNCT: core_glob.inst_setup.is_spacy_tkn_attr_is_punct,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_QUOTE: core_glob.inst_setup.is_spacy_tkn_attr_is_quote,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_RIGHT_PUNCT: core_glob.inst_setup.is_spacy_tkn_attr_is_right_punct,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_SENT_END: core_glob.inst_setup.is_spacy_tkn_attr_is_sent_end,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_SENT_START: core_glob.inst_setup.is_spacy_tkn_attr_is_sent_start,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_SPACE: core_glob.inst_setup.is_spacy_tkn_attr_is_space,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_STOP: core_glob.inst_setup.is_spacy_tkn_attr_is_stop,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_TITLE: core_glob.inst_setup.is_spacy_tkn_attr_is_title,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_UPPER: core_glob.inst_setup.is_spacy_tkn_attr_is_upper,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_LANG_: core_glob.inst_setup.is_spacy_tkn_attr_lang_,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_LEFT_EDGE: core_glob.inst_setup.is_spacy_tkn_attr_left_edge,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_LEMMA_: core_glob.inst_setup.is_spacy_tkn_attr_lemma_,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_LEX: core_glob.inst_setup.is_spacy_tkn_attr_lex,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_LEX_ID: core_glob.inst_setup.is_spacy_tkn_attr_lex_id,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_LIKE_EMAIL: core_glob.inst_setup.is_spacy_tkn_attr_like_email,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_LIKE_NUM: core_glob.inst_setup.is_spacy_tkn_attr_like_num,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_LIKE_URL: core_glob.inst_setup.is_spacy_tkn_attr_like_url,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_LOWER_: core_glob.inst_setup.is_spacy_tkn_attr_lower_,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_MORPH: core_glob.inst_setup.is_spacy_tkn_attr_morph,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_NORM_: core_glob.inst_setup.is_spacy_tkn_attr_norm_,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_ORTH_: core_glob.inst_setup.is_spacy_tkn_attr_orth_,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_POS_: core_glob.inst_setup.is_spacy_tkn_attr_pos_,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_PREFIX_: core_glob.inst_setup.is_spacy_tkn_attr_prefix_,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_PROB: core_glob.inst_setup.is_spacy_tkn_attr_prob,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_RANK: core_glob.inst_setup.is_spacy_tkn_attr_rank,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_RIGHT_EDGE: core_glob.inst_setup.is_spacy_tkn_attr_right_edge,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_SENT: core_glob.inst_setup.is_spacy_tkn_attr_sent,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_SENTIMENT: core_glob.inst_setup.is_spacy_tkn_attr_sentiment,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_SHAPE_: core_glob.inst_setup.is_spacy_tkn_attr_shape_,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_SUFFIX_: core_glob.inst_setup.is_spacy_tkn_attr_suffix_,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_TAG_: core_glob.inst_setup.is_spacy_tkn_attr_tag_,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_TENSOR: core_glob.inst_setup.is_spacy_tkn_attr_tensor,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_TEXT: core_glob.inst_setup.is_spacy_tkn_attr_text,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_TEXT_WITH_WS: core_glob.inst_setup.is_spacy_tkn_attr_text_with_ws,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_VOCAB: core_glob.inst_setup.is_spacy_tkn_attr_vocab,
-            nlp_core.NLPCore.JSON_NAME_SPACY_TKN_WHITESPACE_: core_glob.inst_setup.is_spacy_tkn_attr_whitespace_,
-        }
-
-        return config
 
     # ------------------------------------------------------------------
     # Create the container 'params'.
@@ -281,7 +180,7 @@ class TextParser:
             print(
                 f"document: pages={self.parse_result_no_pages:2d} "
                 f"paras={self._parse_result_no_paras:2d} "
-                f"lines={self._parse_result_no_lines:2d} "
+                f"lines={self._parse_result_no_lines_word:2d} "
                 f"words={self._parse_result_no_words:2d} "
                 f"page: paras={self._parse_result_no_paras_page:2d} "
                 f"lines={self._parse_result_no_lines_page:2d} "
@@ -290,6 +189,99 @@ class TextParser:
                 f"words={self._parse_result_no_words_para:2d} "
                 f"line: words={self._parse_result_no_words_line:2d} "
                 f"text='{self._parse_result_text}'"
+            )
+
+    # ------------------------------------------------------------------
+    # Determine the line types.
+    # ------------------------------------------------------------------
+    def _determine_line_types(self) -> None:
+        """Determine the line types."""
+        # ------------------------------------------------------------------
+        # Line types footer and header.
+        # ------------------------------------------------------------------
+        if self._is_lt_footer_required or self._is_lt_header_required:
+            core_glob.inst_lt_hf = lt_hf.LineTypeHeaderFooter(
+                file_name_curr=self._file_name_curr,
+            )
+            core_glob.inst_lt_hf.process_document(
+                file_name_curr=self._file_name_curr,
+            )
+            if self._is_lt_footer_required:
+                core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LINES_FOOTER] = core_glob.inst_lt_hf.no_lines_footer
+            if self._is_lt_header_required:
+                core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LINES_HEADER] = core_glob.inst_lt_hf.no_lines_header
+
+        # ------------------------------------------------------------------
+        # Line type toc.
+        # ------------------------------------------------------------------
+        if self._is_lt_toc_required:
+            core_glob.inst_lt_toc = lt_toc.LineTypeToc(
+                file_name_curr=self._file_name_curr,
+            )
+            core_glob.inst_lt_toc.process_document(
+                file_name_curr=self._file_name_curr,
+            )
+            core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LINES_TOC] = core_glob.inst_lt_toc.no_lines_toc
+
+        # ------------------------------------------------------------------
+        # Line type table.
+        # ------------------------------------------------------------------
+        if self._is_lt_table_required:
+            core_glob.inst_lt_tab = lt_tab.LineTypeTable(
+                file_name_curr=self._file_name_curr,
+            )
+            core_glob.inst_lt_tab.process_document(
+                file_name_curr=self._file_name_curr,
+                directory_name=self._directory_name,
+                document_id=self._document_id,
+                file_name_orig=self._file_name_orig,
+            )
+            core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_TABLES] = core_glob.inst_lt_tab.no_tables
+
+        # ------------------------------------------------------------------
+        # Line type bulleted list.
+        # ------------------------------------------------------------------
+        if self._is_lt_list_bullet_required:
+            core_glob.inst_lt_lb = lt_lb.LineTypeListBullet(
+                file_name_curr=self._file_name_curr,
+            )
+            core_glob.inst_lt_lb.process_document(
+                directory_name=self._directory_name,
+                document_id=self._document_id,
+                environment_variant=self._environment_variant,
+                file_name_curr=self._file_name_curr,
+                file_name_orig=self._file_name_orig,
+            )
+            core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LISTS_BULLET] = core_glob.inst_lt_lb.no_lists
+
+        # ------------------------------------------------------------------
+        # Line type numbered list.
+        # ------------------------------------------------------------------
+        if self._is_lt_list_number_required:
+            core_glob.inst_lt_ln = lt_ln.LineTypeListNumber(
+                file_name_curr=self._file_name_curr,
+            )
+            core_glob.inst_lt_ln.process_document(
+                directory_name=self._directory_name,
+                document_id=self._document_id,
+                environment_variant=self._environment_variant,
+                file_name_curr=self._file_name_curr,
+                file_name_orig=self._file_name_orig,
+            )
+            core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LISTS_NUMBER] = core_glob.inst_lt_ln.no_lists
+
+        # ------------------------------------------------------------------
+        # Line type heading.
+        # ------------------------------------------------------------------
+        if self._is_lt_heading_required:
+            core_glob.inst_lt_h = lt_h.LineTypeHeading(
+                file_name_curr=self._file_name_curr,
+            )
+            core_glob.inst_lt_h.process_document(
+                directory_name=self._directory_name,
+                document_id=self._document_id,
+                file_name_curr=self._file_name_curr,
+                file_name_orig=self._file_name_orig,
             )
 
     # ------------------------------------------------------------------
@@ -311,9 +303,6 @@ class TextParser:
                     pass
                 case nlp_core.NLPCore.PARSE_ELEM_BOOKMARK:
                     self._parse_tag_bookmark(child_tag, child)
-                # wwe
-                # case nlp_core.NLPCore.PARSE_ELEM_TITLE:
-                #     self._parse_tag_title(child_tag, child)
                 case other:
                     core_utils.progress_msg_core(
                         core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_BOOKMARK).replace("{child_tag", other)
@@ -339,9 +328,6 @@ class TextParser:
             match child_tag:
                 case nlp_core.NLPCore.PARSE_ELEM_BOOKMARK:
                     self._parse_tag_bookmark(child_tag, child)
-                # wwe
-                # case nlp_core.NLPCore.PARSE_ELEM_TEXT:
-                #     self._parse_tag_text(child_tag, child)
                 case other:
                     core_utils.progress_msg_core(
                         core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_BOOKMARKS).replace("{child_tag", other)
@@ -351,10 +337,45 @@ class TextParser:
         self._debug_xml_element_all("End  ", parent_tag, parent.attrib, parent.text)
 
     # ------------------------------------------------------------------
-    # Processing tag Box.
+    # Processing tag Box with granularity 'line'.
     # ------------------------------------------------------------------
-    def _parse_tag_box(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
-        """Process tag 'Box'.
+    def _parse_tag_box_line(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
+        """Process tag 'Box' with granularity 'line'.
+
+        Args:
+            parent_tag (str): Parent tag.
+            parent (collections.abc.Iterable[str]): Parent data structure.
+        """
+        self._debug_xml_element_all("Start", parent_tag, parent.attrib, parent.text)
+
+        for child in parent:
+            child_tag = child.tag[nlp_core.NLPCore.PARSE_ELEM_FROM :]
+            match child_tag:
+                case (
+                    nlp_core.NLPCore.PARSE_ELEM_GLYPH
+                    | nlp_core.NLPCore.PARSE_ELEM_PLACED_IMAGE
+                    | nlp_core.NLPCore.PARSE_ELEM_TABLE
+                    | nlp_core.NLPCore.PARSE_ELEM_TEXT
+                    | nlp_core.NLPCore.PARSE_ELEM_WORD
+                ):
+                    self._parse_tag_glyph(child_tag, child)
+                case nlp_core.NLPCore.PARSE_ELEM_LINE:
+                    self._parse_tag_line_line(child_tag, child)
+                case nlp_core.NLPCore.PARSE_ELEM_PARA:
+                    self._parse_tag_para_line(child_tag, child)
+                case other:
+                    core_utils.progress_msg_core(
+                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_BOX).replace("{child_tag", other)
+                    )
+                    self.no_errors += 1
+
+        self._debug_xml_element_all("End  ", parent_tag, parent.attrib, parent.text)
+
+    # ------------------------------------------------------------------
+    # Processing tag Box with granularity 'word'.
+    # ------------------------------------------------------------------
+    def _parse_tag_box_word(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
+        """Process tag 'Box' with granularity 'word'.
 
         Args:
             parent_tag (str): Parent tag.
@@ -368,9 +389,9 @@ class TextParser:
                 case nlp_core.NLPCore.PARSE_ELEM_GLYPH:
                     self._parse_tag_glyph(child_tag, child)
                 case nlp_core.NLPCore.PARSE_ELEM_LINE:
-                    self._parse_tag_line(child_tag, child)
+                    self._parse_tag_line_word(child_tag, child)
                 case nlp_core.NLPCore.PARSE_ELEM_PARA:
-                    self._parse_tag_para(child_tag, child)
+                    self._parse_tag_para_word(child_tag, child)
                 case nlp_core.NLPCore.PARSE_ELEM_PLACED_IMAGE:
                     pass
                 case nlp_core.NLPCore.PARSE_ELEM_TABLE:
@@ -458,7 +479,10 @@ class TextParser:
             child_tag = child.tag[nlp_core.NLPCore.PARSE_ELEM_FROM :]
             match child_tag:
                 case nlp_core.NLPCore.PARSE_ELEM_PARA:
-                    self._parse_tag_para(child_tag, child)
+                    if self._is_word_processing:
+                        self._parse_tag_para_word(child_tag, child)
+                    else:
+                        self._parse_tag_para_line(child_tag, child)
                 case other:
                     core_utils.progress_msg_core(
                         core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_CONTENT).replace("{child_tag", other)
@@ -564,9 +588,6 @@ class TextParser:
             match child_tag:
                 case nlp_core.NLPCore.PARSE_ELEM_FONT:
                     self._parse_tag_font(child_tag, child)
-                # wwe
-                # case nlp_core.NLPCore.PARSE_ELEM_TEXT:
-                #     self._parse_tag_text(child_tag, child)
                 case other:
                     core_utils.progress_msg_core(
                         core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_FONTS).replace("{child_tag", other)
@@ -604,10 +625,46 @@ class TextParser:
         self._debug_xml_element_all("End  ", parent_tag, parent.attrib, parent.text)
 
     # ------------------------------------------------------------------
-    # Processing tag Line.
+    # Processing tag Line with granularity 'line'.
     # ------------------------------------------------------------------
-    def _parse_tag_line(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
-        """Process tag 'Line'.
+    def _parse_tag_line_line(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
+        """Process tag 'Line' with granularity 'line'.
+
+        Args:
+            parent_tag (str): Parent tag.
+            parent (collections.abc.Iterable[str]): Parent data structure.
+        """
+        self._debug_xml_element_all("Start", parent_tag, parent.attrib, parent.text)
+
+        for child in parent:
+            child_tag = child.tag[nlp_core.NLPCore.PARSE_ELEM_FROM :]
+            match child_tag:
+                case nlp_core.NLPCore.PARSE_ELEM_TEXT:
+                    self._parse_tag_text(child_tag, child)
+                case other:
+                    core_utils.progress_msg_core(
+                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_LINE).replace("{child_tag", other)
+                    )
+                    self.no_errors += 1
+
+        if self._parse_result_line_idx == self._parse_result_no_lines_word:
+            core_utils.progress_msg_core(core_utils.ERROR_61_905.replace("{word", str(self._parse_result_no_lines_word)))
+            self.no_errors += 1
+
+        core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_PAGES][self._parse_result_page_idx][nlp_core.NLPCore.JSON_NAME_LINES][
+            self._parse_result_line_idx
+        ][nlp_core.NLPCore.JSON_NAME_TEXT] = self._parse_result_text
+
+        self._parse_result_no_lines_line += 1
+        self._parse_result_line_idx += 1
+
+        self._debug_xml_element_all("End  ", parent_tag, parent.attrib, parent.text)
+
+    # ------------------------------------------------------------------
+    # Processing tag Line with granularity 'word'.
+    # ------------------------------------------------------------------
+    def _parse_tag_line_word(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
+        """Process tag 'Line' with granularity 'word'.
 
         Args:
             parent_tag (str): Parent tag.
@@ -620,26 +677,21 @@ class TextParser:
         self._parse_result_line_word_no_first = 0
         self._parse_result_line_word_no_last = 0
 
-        self._parse_result_no_lines += 1
+        self._parse_result_no_lines_word += 1
         self._parse_result_no_lines_page += 1
         self._parse_result_no_lines_para += 1
 
         if self._parse_result_para_line_no_first == 0:
-            self._parse_result_para_line_no_first = self._parse_result_no_lines
-        self._parse_result_para_line_no_last = self._parse_result_no_lines
+            self._parse_result_para_line_no_first = self._parse_result_no_lines_word
+        self._parse_result_para_line_no_last = self._parse_result_no_lines_word
 
         if self._parse_result_page_line_no_first == 0:
-            self._parse_result_page_line_no_first = self._parse_result_no_lines
-        self._parse_result_page_line_no_last = self._parse_result_no_lines
-
-        self._parse_result_container_words_line = []
+            self._parse_result_page_line_no_first = self._parse_result_no_lines_word
+        self._parse_result_page_line_no_last = self._parse_result_no_lines_word
 
         for child in parent:
             child_tag = child.tag[nlp_core.NLPCore.PARSE_ELEM_FROM :]
             match child_tag:
-                # wwe
-                # case nlp_core.NLPCore.PARSE_ELEM_TEXT:
-                #     self._parse_tag_text(child_tag, child)
                 case nlp_core.NLPCore.PARSE_ELEM_WORD:
                     self._parse_tag_word(child_tag, child)
                 case other:
@@ -650,12 +702,11 @@ class TextParser:
 
         self._parse_result_container_lines.append(
             {
-                nlp_core.NLPCore.JSON_NAME_LINE_NO: self._parse_result_no_lines,
+                nlp_core.NLPCore.JSON_NAME_LINE_NO: self._parse_result_no_lines_word,
                 nlp_core.NLPCore.JSON_NAME_LINE_NO_PAGE: self._parse_result_page_line_no_first,
                 nlp_core.NLPCore.JSON_NAME_LINE_NO_PARA: self._parse_result_para_line_no_first,
                 nlp_core.NLPCore.JSON_NAME_LLX: float(parent.attrib.get(nlp_core.NLPCore.PARSE_ATTR_LLX)),
                 nlp_core.NLPCore.JSON_NAME_PAGE_NO: self.parse_result_no_pages,
-                nlp_core.NLPCore.JSON_NAME_TEXT: " ".join(self._parse_result_container_words_line),
                 nlp_core.NLPCore.JSON_NAME_TYPE: nlp_core.NLPCore.LINE_TYPE_BODY,
                 nlp_core.NLPCore.JSON_NAME_URX: float(parent.attrib.get(nlp_core.NLPCore.PARSE_ATTR_URX)),
                 nlp_core.NLPCore.JSON_NAME_WORD_NO_FIRST: self._parse_result_line_word_no_first,
@@ -667,11 +718,51 @@ class TextParser:
         self._debug_xml_element_all("End  ", parent_tag, parent.attrib, parent.text)
 
     # ------------------------------------------------------------------
-    # Processing tag 'Page'.
+    # Processing tag 'Page' with granularity 'line'.
     # ------------------------------------------------------------------
     # noinspection PyArgumentList
-    def _parse_tag_page(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
-        """Process tag 'Page'.
+    def _parse_tag_page_line(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
+        """Process tag 'Page' with granularity 'line'.
+
+        Args:
+            parent_tag (str): Parent tag.
+            parent (collections.abc.Iterable[str]): Parent data structure.
+        """
+        self._debug_xml_element_all("Start", parent_tag, parent.attrib, parent.text)
+
+        self._parse_result_line_idx = 0
+
+        # Process the page related tags.
+        for child in parent:
+            child_tag = child.tag[nlp_core.NLPCore.PARSE_ELEM_FROM :]
+            match child_tag:
+                case (
+                    nlp_core.NLPCore.PARSE_ELEM_ACTION
+                    | nlp_core.NLPCore.PARSE_ELEM_ANNOTATIONS
+                    | nlp_core.NLPCore.PARSE_ELEM_EXCEPTION
+                    | nlp_core.NLPCore.PARSE_ELEM_FIELDS
+                    | nlp_core.NLPCore.PARSE_ELEM_OPTIONS
+                    | nlp_core.NLPCore.PARSE_ELEM_OUTPUT_INTENTS
+                ):
+                    pass
+                case nlp_core.NLPCore.PARSE_ELEM_CONTENT:
+                    self._parse_tag_content(child_tag, child)
+                case other:
+                    core_utils.progress_msg_core(
+                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_PAGE).replace("{child_tag", other)
+                    )
+                    self.no_errors += 1
+
+        self._parse_result_page_idx += 1
+
+        self._debug_xml_element_all("End  ", parent_tag, parent.attrib, parent.text)
+
+    # ------------------------------------------------------------------
+    # Processing tag 'Page' with granularity 'word'.
+    # ------------------------------------------------------------------
+    # noinspection PyArgumentList
+    def _parse_tag_page_word(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
+        """Process tag 'Page' with granularity 'word'.
 
         Args:
             parent_tag (str): Parent tag.
@@ -733,11 +824,11 @@ class TextParser:
         self._debug_xml_element_all("End  ", parent_tag, parent.attrib, parent.text)
 
     # ------------------------------------------------------------------
-    # Processing tag 'Pages'.
+    # Processing tag 'Pages' with granularity 'line'.
     # ------------------------------------------------------------------
     # noinspection PyArgumentList
-    def _parse_tag_pages(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:  # noqa: C901
-        """Process tag 'Pages'.
+    def _parse_tag_pages_line(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:  # noqa: C901
+        """Process tag 'Pages' with granularity 'line'.
 
         Args:
             parent_tag (str): Parent tag.
@@ -745,142 +836,32 @@ class TextParser:
         """
         self._debug_xml_element_all("Start", parent_tag, parent.attrib, parent.text)
 
-        core_glob.nlp_core.document_json = {
-            nlp_core.NLPCore.JSON_NAME_CONFIG: TextParser._create_config(),
-            nlp_core.NLPCore.JSON_NAME_CREATED_AT: datetime.now().strftime("%d.%m.%Y %H:%M:%S"),
-            nlp_core.NLPCore.JSON_NAME_CREATED_BY: __name__,
-        }
-
-        self._parse_result_container_fonts = []
-        self._parse_result_container_pages = []
-
-        self._parse_result_no_fonts = 0
-        self._parse_result_no_lines = 0
-        self.parse_result_no_pages = 0
-        self._parse_result_no_paras = 0
-        self._parse_result_no_words = 0
-
-        if self._is_lt_footer_required or self._is_lt_header_required:
-            core_glob.inst_lt_hf = lt_hf.LineTypeHeaderFooter(
-                file_name_curr=self._file_name_curr,
-            )
-
-        if self._is_lt_toc_required:
-            core_glob.inst_lt_toc = lt_toc.LineTypeToc(
-                file_name_curr=self._file_name_curr,
-            )
-
-        if self._is_lt_table_required:
-            core_glob.inst_lt_tab = lt_tab.LineTypeTable(
-                file_name_curr=self._file_name_curr,
-            )
-
-        if self._is_lt_list_bullet_required:
-            core_glob.inst_lt_lb = lt_lb.LineTypeListBullet(
-                file_name_curr=self._file_name_curr,
-            )
-
-        if self._is_lt_list_number_required:
-            core_glob.inst_lt_ln = lt_ln.LineTypeListNumber(
-                file_name_curr=self._file_name_curr,
-            )
-
-        if self._is_lt_heading_required:
-            core_glob.inst_lt_h = lt_h.LineTypeHeading(
-                file_name_curr=self._file_name_curr,
-            )
+        self._parse_result_no_lines_line = 0
+        self._parse_result_page_idx = 0
 
         # Process the tags of all document pages.
         for child in parent:
             child_tag = child.tag[nlp_core.NLPCore.PARSE_ELEM_FROM :]
             match child_tag:
-                case nlp_core.NLPCore.PARSE_ELEM_GRAPHICS:
+                case nlp_core.NLPCore.PARSE_ELEM_GRAPHICS | nlp_core.NLPCore.PARSE_ELEM_RESOURCES:
                     pass
                 case nlp_core.NLPCore.PARSE_ELEM_PAGE:
-                    self._parse_tag_page(child_tag, child)
-                case nlp_core.NLPCore.PARSE_ELEM_RESOURCES:
-                    self._parse_tag_resources(child_tag, child)
+                    self._parse_tag_page_line(child_tag, child)
                 case other:
                     core_utils.progress_msg_core(
                         core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_PAGES).replace("{child_tag", other)
                     )
                     self.no_errors += 1
 
-        core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_FONTS] = self._parse_result_container_fonts
-
-        core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_FONTS] = self._parse_result_no_fonts
-        core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LINES] = self._parse_result_no_lines
-
-        if self._is_lt_footer_required:
-            core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LINES_FOOTER] = core_glob.inst_lt_hf.no_lines_footer
-
-        if self._is_lt_header_required:
-            core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LINES_HEADER] = core_glob.inst_lt_hf.no_lines_header
-
-        if self._is_lt_toc_required:
-            core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LINES_TOC] = core_glob.inst_lt_toc.no_lines_toc
-
-        if self._is_lt_list_bullet_required:
-            core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LISTS_BULLET] = core_glob.inst_lt_lb.no_lists
-
-        if self._is_lt_list_number_required:
-            core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LISTS_NUMBER] = core_glob.inst_lt_ln.no_lists
-
-        core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_PAGES] = self.parse_result_no_pages
-        core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_PARAS] = self._parse_result_no_paras
-
-        if self._is_lt_table_required:
-            core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_TABLES] = core_glob.inst_lt_tab.no_tables
-
-        core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_WORDS] = self._parse_result_no_words
-
-        core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES] = self._parse_result_container_pages
-
-        core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_PARAMS] = self._create_params()
-
-        if self._is_lt_footer_required or self._is_lt_header_required:
-            core_glob.inst_lt_hf.process_document(
-                file_name_curr=self._file_name_curr,
+        if self._parse_result_no_lines_line != self._parse_result_no_lines_word:
+            core_utils.progress_msg_core(
+                core_utils.ERROR_61_904.replace("{line}", str(self._parse_result_no_lines_line)).replace(
+                    "{word", str(self._parse_result_no_lines_word)
+                )
             )
+            self.no_errors += 1
 
-        if self._is_lt_toc_required:
-            core_glob.inst_lt_toc.process_document(
-                file_name_curr=self._file_name_curr,
-            )
-
-        if self._is_lt_table_required:
-            core_glob.inst_lt_tab.process_document(
-                file_name_curr=self._file_name_curr,
-                directory_name=self._directory_name,
-                document_id=self._document_id,
-                file_name_orig=self._file_name_orig,
-            )
-
-        if self._is_lt_list_bullet_required:
-            core_glob.inst_lt_lb.process_document(
-                directory_name=self._directory_name,
-                document_id=self._document_id,
-                environment_variant=self._environment_variant,
-                file_name_curr=self._file_name_curr,
-                file_name_orig=self._file_name_orig,
-            )
-
-        if self._is_lt_list_number_required:
-            core_glob.inst_lt_ln.process_document(
-                directory_name=self._directory_name,
-                document_id=self._document_id,
-                environment_variant=self._environment_variant,
-                file_name_curr=self._file_name_curr,
-                file_name_orig=self._file_name_orig,
-            )
-
-        if self._is_lt_heading_required:
-            core_glob.inst_lt_h.process_document(
-                directory_name=self._directory_name,
-                document_id=self._document_id,
-                file_name_curr=self._file_name_curr,
-                file_name_orig=self._file_name_orig,
-            )
+        self._determine_line_types()
 
         with open(self._full_name, "w", encoding=core_glob.FILE_ENCODING_DEFAULT) as file_handle:
             json.dump(
@@ -893,10 +874,102 @@ class TextParser:
         self._debug_xml_element_all("End  ", parent_tag, parent.attrib, parent.text)
 
     # ------------------------------------------------------------------
-    # Processing tag Para.
+    # Processing tag 'Pages' with granularity 'word'.
     # ------------------------------------------------------------------
-    def _parse_tag_para(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
-        """Process tag 'Para'.
+    # noinspection PyArgumentList
+    def _parse_tag_pages_word(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:  # noqa: C901
+        """Process tag 'Pages' with granularity 'word'.
+
+        Args:
+            parent_tag (str): Parent tag.
+            parent (collections.abc.Iterable[str]): Parent data structure.
+        """
+        self._debug_xml_element_all("Start", parent_tag, parent.attrib, parent.text)
+
+        core_glob.nlp_core.document_json = {
+            nlp_core.NLPCore.JSON_NAME_CONFIG: {nlp_core.NLPCore.JSON_NAME_PARSER: core_utils.create_config()},
+            nlp_core.NLPCore.JSON_NAME_CREATED_AT: datetime.now().strftime("%d.%m.%Y %H:%M:%S"),
+            nlp_core.NLPCore.JSON_NAME_CREATED_BY: __name__,
+        }
+
+        self._parse_result_container_fonts = []
+        self._parse_result_container_pages = []
+
+        self._parse_result_no_fonts = 0
+        self._parse_result_no_lines_word = 0
+        self.parse_result_no_pages = 0
+        self._parse_result_no_paras = 0
+        self._parse_result_no_words = 0
+
+        # Process the tags of all document pages.
+        for child in parent:
+            child_tag = child.tag[nlp_core.NLPCore.PARSE_ELEM_FROM :]
+            match child_tag:
+                case nlp_core.NLPCore.PARSE_ELEM_GRAPHICS:
+                    pass
+                case nlp_core.NLPCore.PARSE_ELEM_PAGE:
+                    self._parse_tag_page_word(child_tag, child)
+                case nlp_core.NLPCore.PARSE_ELEM_RESOURCES:
+                    self._parse_tag_resources(child_tag, child)
+                case other:
+                    core_utils.progress_msg_core(
+                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_PAGES).replace("{child_tag", other)
+                    )
+                    self.no_errors += 1
+
+        core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_FONTS] = self._parse_result_container_fonts
+        core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_FONTS] = self._parse_result_no_fonts
+        core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LINES] = self._parse_result_no_lines_word
+        core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_PAGES] = self.parse_result_no_pages
+        core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_PARAS] = self._parse_result_no_paras
+        core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_WORDS] = self._parse_result_no_words
+        core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES] = self._parse_result_container_pages
+        core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_PARAMS] = {nlp_core.NLPCore.JSON_NAME_PARSER: self._create_params()}
+
+        with open(self._full_name, "w", encoding=core_glob.FILE_ENCODING_DEFAULT) as file_handle:
+            json.dump(
+                core_glob.nlp_core.document_json,
+                file_handle,
+                indent=core_glob.inst_setup.json_indent,
+                sort_keys=core_glob.inst_setup.is_json_sort_keys,
+            )
+
+        self._debug_xml_element_all("End  ", parent_tag, parent.attrib, parent.text)
+
+    # ------------------------------------------------------------------
+    # Processing tag Para with granularity 'line'.
+    # ------------------------------------------------------------------
+    def _parse_tag_para_line(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
+        """Process tag 'Para' with granularity 'line'.
+
+        Args:
+            parent_tag (str): Parent tag.
+            parent (collections.abc.Iterable[str]): Parent data structure.
+        """
+        self._debug_xml_element_all("Start", parent_tag, parent.attrib, parent.text)
+
+        for child in parent:
+            child_tag = child.tag[nlp_core.NLPCore.PARSE_ELEM_FROM :]
+            match child_tag:
+                case nlp_core.NLPCore.PARSE_ELEM_A:
+                    pass
+                case nlp_core.NLPCore.PARSE_ELEM_BOX:
+                    self._parse_tag_box_line(child_tag, child)
+                case nlp_core.NLPCore.PARSE_ELEM_PARA:
+                    self._parse_tag_para_line(child_tag, child)
+                case other:
+                    core_utils.progress_msg_core(
+                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_PARA).replace("{child_tag", other)
+                    )
+                    self.no_errors += 1
+
+        self._debug_xml_element_all("End  ", parent_tag, parent.attrib, parent.text)
+
+    # ------------------------------------------------------------------
+    # Processing tag Para with granularity 'word'.
+    # ------------------------------------------------------------------
+    def _parse_tag_para_word(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
+        """Process tag 'Para' with granularity 'word'.
 
         Args:
             parent_tag (str): Parent tag.
@@ -921,17 +994,15 @@ class TextParser:
             self._parse_result_page_para_no_first = self._parse_result_no_paras
         self._parse_result_page_para_no_last = self._parse_result_no_paras
 
-        self._parse_result_container_words_para = []
-
         for child in parent:
             child_tag = child.tag[nlp_core.NLPCore.PARSE_ELEM_FROM :]
             match child_tag:
                 case nlp_core.NLPCore.PARSE_ELEM_A:
                     pass
                 case nlp_core.NLPCore.PARSE_ELEM_BOX:
-                    self._parse_tag_box(child_tag, child)
+                    self._parse_tag_box_word(child_tag, child)
                 case nlp_core.NLPCore.PARSE_ELEM_PARA:
-                    self._parse_tag_para(child_tag, child)
+                    self._parse_tag_para_word(child_tag, child)
                 case other:
                     core_utils.progress_msg_core(
                         core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_PARA).replace("{child_tag", other)
@@ -945,7 +1016,6 @@ class TextParser:
                 nlp_core.NLPCore.JSON_NAME_PAGE_NO: self.parse_result_no_pages,
                 nlp_core.NLPCore.JSON_NAME_PARA_NO: self._parse_result_no_paras,
                 nlp_core.NLPCore.JSON_NAME_PARA_NO_PAGE: self._parse_result_page_para_no_first,
-                nlp_core.NLPCore.JSON_NAME_TEXT: " ".join(self._parse_result_container_words_para),
                 nlp_core.NLPCore.JSON_NAME_WORD_NO_FIRST: self._parse_result_para_word_no_first,
                 nlp_core.NLPCore.JSON_NAME_WORD_NO_LAST: self._parse_result_para_word_no_last,
                 nlp_core.NLPCore.JSON_NAME_CONTAINER_WORDS: self._parse_result_container_words,
@@ -971,9 +1041,6 @@ class TextParser:
             match child_tag:
                 case nlp_core.NLPCore.PARSE_ELEM_FONTS:
                     self._parse_tag_fonts(child_tag, child)
-                # wwe
-                # case nlp_core.NLPCore.PARSE_ELEM_TEXT:
-                #     self._parse_tag_text(child_tag, child)
                 case nlp_core.NLPCore.PARSE_ELEM_COLOR_SPACES:
                     pass
                 case other:
@@ -1058,9 +1125,6 @@ class TextParser:
         for child in parent:
             child_tag = child.tag[nlp_core.NLPCore.PARSE_ELEM_FROM :]
             match child_tag:
-                # wwe
-                # case nlp_core.NLPCore.PARSE_ELEM_BOX:
-                #     self._parse_tag_box(child_tag, child)
                 case other:
                     core_utils.progress_msg_core(
                         core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_WORD).replace("{child_tag", other)
@@ -1070,32 +1134,6 @@ class TextParser:
         self._parse_result_text = parent.text
 
         self._debug_xml_element_all("End  ", parent_tag, parent.attrib, parent.text)
-
-    # wwe
-    # # ------------------------------------------------------------------
-    # # Processing tag Title.
-    # # ------------------------------------------------------------------
-    # def _parse_tag_title(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
-    #     """Process tag 'Title'.
-    #
-    #     Args:
-    #         parent_tag (str): Parent tag.
-    #         parent (collections.abc.Iterable[str]): Parent data structure.
-    #     """
-    #     self._debug_xml_element_all("Start", parent_tag, parent.attrib, parent.text)
-    #
-    #     for child in parent:
-    #         child_tag = child.tag[nlp_core.NLPCore.PARSE_ELEM_FROM :]
-    #         match child_tag:
-    #             case other:
-    #                 core_utils.progress_msg_core(
-    #                     core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_TITLE).replace("{child_tag", other)
-    #                 )
-    #                 self.no_errors += 1
-    #
-    #     self.parse_result_titles.append(parent.text)
-    #
-    #     self._debug_xml_element_all("End  ", parent_tag, parent.attrib, parent.text)
 
     # ------------------------------------------------------------------
     # Processing tag Word.
@@ -1135,7 +1173,7 @@ class TextParser:
             child_tag = child.tag[nlp_core.NLPCore.PARSE_ELEM_FROM :]
             match child_tag:
                 case nlp_core.NLPCore.PARSE_ELEM_BOX:
-                    self._parse_tag_box(child_tag, child)
+                    self._parse_tag_box_word(child_tag, child)
                 case nlp_core.NLPCore.PARSE_ELEM_TEXT:
                     self._parse_tag_text(child_tag, child)
                 case other:
@@ -1147,7 +1185,7 @@ class TextParser:
         self._parse_result_container_words.append(
             {
                 nlp_core.NLPCore.JSON_NAME_FONT: self._parse_result_font,
-                nlp_core.NLPCore.JSON_NAME_LINE_NO: self._parse_result_no_lines,
+                nlp_core.NLPCore.JSON_NAME_LINE_NO: self._parse_result_no_lines_word,
                 nlp_core.NLPCore.JSON_NAME_PAGE_NO: self.parse_result_no_pages,
                 nlp_core.NLPCore.JSON_NAME_PARA_NO: self._parse_result_no_paras,
                 nlp_core.NLPCore.JSON_NAME_SIZE: self._parse_result_size,
@@ -1159,9 +1197,6 @@ class TextParser:
                 nlp_core.NLPCore.JSON_NAME_WORD_NO_PARA: self._parse_result_para_word_no_first,
             }
         )
-
-        self._parse_result_container_words_line.append(self._parse_result_text)
-        self._parse_result_container_words_para.append(self._parse_result_text)
 
         self._debug_xml_element_text()
 
@@ -1210,9 +1245,65 @@ class TextParser:
         core_glob.logger.debug(core_glob.LOGGER_END)
 
     # ------------------------------------------------------------------
-    # Processing tag 'Document'.
+    # Processing tag 'Document' with granularity 'line'.
     # ------------------------------------------------------------------
-    def parse_tag_document(  # pylint: disable=too-many-arguments
+    def parse_tag_document_line(
+        self,
+        parent: collections.abc.Iterable[str],
+        parent_tag: str,
+    ) -> None:
+        """Process tag 'Document' with granularity 'line'.
+
+        Args:
+            parent (collections.abc.Iterable[str]):
+                Parent data structure.
+            parent_tag (str):
+                Parent tag.
+        """
+        core_glob.logger.debug(core_glob.LOGGER_START)
+        core_glob.logger.debug("param parent                    =%s", parent)
+        core_glob.logger.debug("param parent_tag                =%s", parent_tag)
+
+        self._debug_xml_element_all("Start", parent_tag, parent.attrib, parent.text)
+
+        self._is_line_processing = True
+        self._is_word_processing = False
+
+        for child in parent:
+            child_tag = child.tag[nlp_core.NLPCore.PARSE_ELEM_FROM :]
+            match child_tag:
+                case (
+                    nlp_core.NLPCore.PARSE_ELEM_ACTION
+                    | nlp_core.NLPCore.PARSE_ELEM_ATTACHMENTS
+                    | nlp_core.NLPCore.PARSE_ELEM_DESTINATIONS
+                    | nlp_core.NLPCore.PARSE_ELEM_DOC_INFO
+                    | nlp_core.NLPCore.PARSE_ELEM_BOOKMARKS
+                    | nlp_core.NLPCore.PARSE_ELEM_ENCRYPTION
+                    | nlp_core.NLPCore.PARSE_ELEM_EXCEPTION
+                    | nlp_core.NLPCore.PARSE_ELEM_JAVA_SCRIPTS
+                    | nlp_core.NLPCore.PARSE_ELEM_METADATA
+                    | nlp_core.NLPCore.PARSE_ELEM_OPTIONS
+                    | nlp_core.NLPCore.PARSE_ELEM_OUTPUT_INTENTS
+                    | nlp_core.NLPCore.PARSE_ELEM_SIGNATURE_FIELDS
+                    | nlp_core.NLPCore.PARSE_ELEM_XFA
+                ):
+                    pass
+                case nlp_core.NLPCore.PARSE_ELEM_PAGES:
+                    self._parse_tag_pages_line(child_tag, child)
+                case other:
+                    core_utils.progress_msg_core(
+                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_DOCUMENT).replace("{child_tag", other)
+                    )
+                    self.no_errors += 1
+
+            self._debug_xml_element_all("End  ", parent_tag, parent.attrib, parent.text)
+
+        core_glob.logger.debug(core_glob.LOGGER_END)
+
+    # ------------------------------------------------------------------
+    # Processing tag 'Document' with granularity 'word'.
+    # ------------------------------------------------------------------
+    def parse_tag_document_word(  # pylint: disable=too-many-arguments
         self,
         directory_name: str,
         document_id: int,
@@ -1231,7 +1322,7 @@ class TextParser:
         parent: collections.abc.Iterable[str],
         parent_tag: str,
     ) -> None:
-        """Process tag 'Document'.
+        """Process tag 'Document' with granularity 'word'.
 
         Args:
             directory_name (str):
@@ -1310,6 +1401,9 @@ class TextParser:
 
         self.no_errors = 0
 
+        self._is_line_processing = False
+        self._is_word_processing = True
+
         for child in parent:
             child_tag = child.tag[nlp_core.NLPCore.PARSE_ELEM_FROM :]
             match child_tag:
@@ -1332,7 +1426,7 @@ class TextParser:
                 case nlp_core.NLPCore.PARSE_ELEM_DOC_INFO:
                     self._parse_tag_doc_info(child_tag, child)
                 case nlp_core.NLPCore.PARSE_ELEM_PAGES:
-                    self._parse_tag_pages(child_tag, child)
+                    self._parse_tag_pages_word(child_tag, child)
                 case other:
                     core_utils.progress_msg_core(
                         core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_DOCUMENT).replace("{child_tag", other)

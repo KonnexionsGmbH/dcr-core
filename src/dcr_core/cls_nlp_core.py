@@ -124,6 +124,7 @@ class NLPCore:
     JSON_NAME_PARA_NO_FIRST: ClassVar[str] = "paraNoFirst"
     JSON_NAME_PARA_NO_LAST: ClassVar[str] = "paraNoLast"
     JSON_NAME_PARA_NO_PAGE: ClassVar[str] = "paraNoPage"
+    JSON_NAME_PARSER: ClassVar[str] = "parser"
 
     JSON_NAME_SIZE: ClassVar[str] = "size"
 
@@ -197,6 +198,7 @@ class NLPCore:
     JSON_NAME_SPACY_TKN_WHITESPACE_: ClassVar[str] = "spacyTknWhitespace_"
 
     JSON_NAME_TEXT: ClassVar[str] = "text"
+    JSON_NAME_TOKENIZER: ClassVar[str] = "tokenizer"
     JSON_NAME_TYPE: ClassVar[str] = "type"
 
     JSON_NAME_URX: ClassVar[str] = "urx"
@@ -394,6 +396,10 @@ class NLPCore:
     LANGUAGE_SPACY_DEFAULT: ClassVar[str] = "en_core_web_trf"
     LANGUAGE_TESSERACT_DEFAULT: ClassVar[str] = "eng"
 
+    LINE_TET_DOCUMENT_OPT_LIST: ClassVar[str] = "engines={noannotation noimage text notextcolor novector}"
+    LINE_TET_PAGE_OPT_LIST: ClassVar[str] = "granularity=line"
+    LINE_XML_VARIATION: ClassVar[str] = "line."
+
     LINE_TYPE_BODY: ClassVar[str] = "b"
     LINE_TYPE_FOOTER: ClassVar[str] = "f"
     LINE_TYPE_HEADER: ClassVar[str] = "h"
@@ -478,8 +484,13 @@ class NLPCore:
     SEARCH_STRATEGY_LINES: ClassVar[str] = "lines"
     SEARCH_STRATEGY_TABLE: ClassVar[str] = "table"
 
-    TET_DOCUMENT_OPT_LIST: ClassVar[str] = "engines={noannotation noimage text novector}"
-    TET_PAGE_OPT_LIST: ClassVar[str] = "granularity=word tetml={glyphdetails={all} elements={line}}"
+    TETML_TYPE_LINE: ClassVar[str] = "line"
+    TETML_TYPE_PAGE: ClassVar[str] = "page"
+    TETML_TYPE_WORD: ClassVar[str] = "word"
+
+    WORD_TET_DOCUMENT_OPT_LIST: ClassVar[str] = "engines={noannotation noimage text notextcolor novector}"
+    WORD_TET_PAGE_OPT_LIST: ClassVar[str] = "granularity=word tetml={glyphdetails={all} elements={line}}"
+    WORD_XML_VARIATION: ClassVar[str] = "word."
 
     # ------------------------------------------------------------------
     # Initialise the instance.

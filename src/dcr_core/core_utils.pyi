@@ -5,6 +5,8 @@
 """Module stub file."""
 import pathlib
 
+import dcr_core.cls_nlp_core as nlp_core
+
 ERROR_00_901 = ""
 ERROR_00_902 = ""
 ERROR_01_901 = ""
@@ -19,6 +21,8 @@ ERROR_51_901 = ""
 ERROR_61_901 = ""
 ERROR_61_902 = ""
 ERROR_61_903 = ""
+ERROR_61_904 = ""
+ERROR_61_905 = ""
 ERROR_71_901 = ""
 
 def check_exists_object(
@@ -32,6 +36,7 @@ def check_exists_object(
     is_setup: bool = False,
     is_text_parser: bool = False,
 ) -> None: ...
+def create_config() -> nlp_core.NLPCore.ConfigJSON: ...
 def get_components_from_full_name(
     full_name: str,
 ) -> tuple[str, str, str]: ...

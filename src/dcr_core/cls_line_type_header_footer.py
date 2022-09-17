@@ -153,6 +153,10 @@ class LineTypeHeaderFooter:
     # Try to determine an ascending page number in the footers.
     # ------------------------------------------------------------------
     def _check_irregular_footer(self, line_ind: int, text: str) -> None:
+        core_glob.logger.debug(core_glob.LOGGER_START)
+        core_glob.logger.debug("param line_ind=%d", line_ind)
+        core_glob.logger.debug("param text    =%s", text)
+
         try:
             if text == "":
                 return
@@ -176,10 +180,16 @@ class LineTypeHeaderFooter:
         except ValueError:
             return
 
+        core_glob.logger.debug(core_glob.LOGGER_END)
+
     # ------------------------------------------------------------------
     # Try to determine an ascending page number in the headers.
     # ------------------------------------------------------------------
     def _check_irregular_header(self, line_ind: int, text: str) -> None:
+        core_glob.logger.debug(core_glob.LOGGER_START)
+        core_glob.logger.debug("param line_ind=%d", line_ind)
+        core_glob.logger.debug("param text    =%s", text)
+
         try:
             if text == "":
                 return
@@ -204,10 +214,16 @@ class LineTypeHeaderFooter:
         except ValueError:
             return
 
+        core_glob.logger.debug(core_glob.LOGGER_END)
+
     # ------------------------------------------------------------------
     # Determine the candidates.
     # ------------------------------------------------------------------
     def _determine_candidate(self, distance_max: int, line_ind: int) -> bool:
+        core_glob.logger.debug(core_glob.LOGGER_START)
+        core_glob.logger.debug("param distance_max=%d", distance_max)
+        core_glob.logger.debug("param line_ind    =%d", line_ind)
+
         is_empty_line = True
         is_special_line = True
 
@@ -238,12 +254,16 @@ class LineTypeHeaderFooter:
         if is_empty_line:
             return False
 
+        core_glob.logger.debug(core_glob.LOGGER_END)
+
         return is_special_line
 
     # ------------------------------------------------------------------
     # Process the page-related data.
     # ------------------------------------------------------------------
     def _process_page(self) -> None:  # noqa: C901
+        core_glob.logger.debug(core_glob.LOGGER_START)
+
         self._page_idx += 1
 
         core_utils.progress_msg(core_glob.inst_setup.is_verbose_lt_header_footer, "LineTypeHeaderFooter")
@@ -292,10 +312,14 @@ class LineTypeHeaderFooter:
             f"LineTypeHeaderFooter: End   page                           ={self._page_idx + 1}",
         )
 
+        core_glob.logger.debug(core_glob.LOGGER_END)
+
     # ------------------------------------------------------------------
     # Store the irregular footers and headers.
     # ------------------------------------------------------------------
     def _store_irregulars(self) -> None:
+        core_glob.logger.debug(core_glob.LOGGER_START)
+
         if self._is_irregular_footer:
             self._no_irregular_footer = 1
             core_utils.progress_msg(
@@ -342,10 +366,14 @@ class LineTypeHeaderFooter:
             if is_changed:
                 core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_PAGES][page_idx] = page_json
 
+        core_glob.logger.debug(core_glob.LOGGER_END)
+
     # ------------------------------------------------------------------
     # Store the footers of the current page.
     # ------------------------------------------------------------------
     def _store_line_data_footer(self) -> None:
+        core_glob.logger.debug(core_glob.LOGGER_START)
+
         core_utils.progress_msg(core_glob.inst_setup.is_verbose_lt_header_footer, "LineTypeHeaderFooter")
         core_utils.progress_msg(core_glob.inst_setup.is_verbose_lt_header_footer, "LineTypeHeaderFooter: Start store footers")
         core_utils.progress_msg(
@@ -387,10 +415,14 @@ class LineTypeHeaderFooter:
         )
         core_utils.progress_msg(core_glob.inst_setup.is_verbose_lt_header_footer, "LineTypeHeaderFooter: End   store footers")
 
+        core_glob.logger.debug(core_glob.LOGGER_END)
+
     # ------------------------------------------------------------------
     # Store the headers of the current page.
     # ------------------------------------------------------------------
     def _store_line_data_header(self) -> None:
+        core_glob.logger.debug(core_glob.LOGGER_START)
+
         core_utils.progress_msg(core_glob.inst_setup.is_verbose_lt_header_footer, "LineTypeHeaderFooter")
         core_utils.progress_msg(core_glob.inst_setup.is_verbose_lt_header_footer, "LineTypeHeaderFooter: Start store headers")
         core_utils.progress_msg(
@@ -428,17 +460,21 @@ class LineTypeHeaderFooter:
         )
         core_utils.progress_msg(core_glob.inst_setup.is_verbose_lt_header_footer, "LineTypeHeaderFooter: End   store headers")
 
+        core_glob.logger.debug(core_glob.LOGGER_END)
+
     # ------------------------------------------------------------------
     # Store the found line types in parser result.
     # ------------------------------------------------------------------
     def _store_results(self) -> None:
+        core_glob.logger.debug(core_glob.LOGGER_START)
+
         core_utils.progress_msg(core_glob.inst_setup.is_verbose_lt_header_footer, "LineTypeHeaderFooter: Start store result")
 
         self.no_lines_footer = 0
         self.no_lines_header = 0
 
-        for page_json in core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_PAGES]:
-            page_no = page_json[nlp_core.NLPCore.JSON_NAME_PAGE_NO]
+        for page_idx, page_json in enumerate(core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_PAGES]):
+            page_no = page_idx + 1
 
             for line_json in page_json[nlp_core.NLPCore.JSON_NAME_LINES]:
                 line_index_page = int(line_json[nlp_core.NLPCore.JSON_NAME_LINE_NO_PAGE]) - 1
@@ -450,7 +486,7 @@ class LineTypeHeaderFooter:
                         elif self._result_data[(page_no, line_index_page)] == nlp_core.NLPCore.LINE_TYPE_HEADER:
                             self.no_lines_header += 1
 
-            core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_PAGES][page_no] = page_json
+            core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_PAGES][page_idx] = page_json
 
         if self.no_lines_header > 0:
             core_utils.progress_msg(
@@ -464,6 +500,8 @@ class LineTypeHeaderFooter:
             )
 
         core_utils.progress_msg(core_glob.inst_setup.is_verbose_lt_header_footer, "LineTypeHeaderFooter: End   store result")
+
+        core_glob.logger.debug(core_glob.LOGGER_END)
 
     # ------------------------------------------------------------------
     # Swap the current and previous data.

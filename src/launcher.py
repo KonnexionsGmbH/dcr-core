@@ -12,8 +12,9 @@ import argparse
 import locale
 import os
 import sys
+import traceback
+from pathlib import Path
 
-import core_utils
 import dcr_core.cls_process as process
 import dcr_core.core_glob as glob
 import dcr_core.core_utils as utils
@@ -146,7 +147,7 @@ def main(argv: list[str]) -> None:
         document_files.append(args[ARG_INPUT_SOURCE])
     else:
         for file in os.listdir(args[ARG_INPUT_SOURCE]):
-            document_files.append(os.path.join(args[ARG_INPUT_SOURCE],file))
+            document_files.append(os.path.join(args[ARG_INPUT_SOURCE], file))
         if not document_files:
             utils.terminate_fatal(
                 f"The document file directory specified doesn't contain any files: {args[ARG_INPUT_SOURCE]}",
@@ -154,11 +155,13 @@ def main(argv: list[str]) -> None:
 
     for document in document_files:
         try:
+            for file in Path(args[ARG_OUTPUT_DIRECTORY]).glob(Path(document).stem + "*"):
+                os.remove(file)
             process.Process().document(
                 full_name_in=document,
                 is_delete_auxiliary_files=bool(args[ARG_IS_DELETE_AUXILIARY_FILES]),
-                is_lt_footer_required=False,
-                is_lt_header_required=False,
+                is_lt_footer_required=True,
+                is_lt_header_required=True,
                 is_lt_heading_required=False,
                 is_lt_list_bullet_required=False,
                 is_lt_list_number_required=False,
@@ -167,16 +170,27 @@ def main(argv: list[str]) -> None:
                 is_verbose=bool(args[ARG_IS_VERBOSE]),
                 output_directory=args[ARG_OUTPUT_DIRECTORY],
             )
+        except AttributeError as exc:
+            utils.progress_msg(bool(args[ARG_IS_VERBOSE]), "-" * 80)
+            utils.progress_msg(bool(args[ARG_IS_VERBOSE]), f"Abort processing document file {document}")
+            utils.progress_msg(bool(args[ARG_IS_VERBOSE]), f"AttributeError: {str(exc)}")
+            utils.progress_msg(bool(args[ARG_IS_VERBOSE]), "-" * 80)
+            traceback.print_exc()
+            utils.progress_msg(bool(args[ARG_IS_VERBOSE]), "=" * 80)
         except KeyError as exc:
-            core_utils.progress_msg(bool(args[ARG_IS_VERBOSE]), "-" * 80)
-            core_utils.progress_msg(bool(args[ARG_IS_VERBOSE]), f"Abort processing document file {document}")
-            core_utils.progress_msg(bool(args[ARG_IS_VERBOSE]), f"KeyError: {exc.__str__()}")
-            core_utils.progress_msg(bool(args[ARG_IS_VERBOSE]), "=" * 80)
+            utils.progress_msg(bool(args[ARG_IS_VERBOSE]), "-" * 80)
+            utils.progress_msg(bool(args[ARG_IS_VERBOSE]), f"Abort processing document file {document}")
+            utils.progress_msg(bool(args[ARG_IS_VERBOSE]), f"KeyError: {str(exc)}")
+            utils.progress_msg(bool(args[ARG_IS_VERBOSE]), "-" * 80)
+            traceback.print_exc()
+            utils.progress_msg(bool(args[ARG_IS_VERBOSE]), "=" * 80)
         except RuntimeError as exc:
-            core_utils.progress_msg(bool(args[ARG_IS_VERBOSE]), "-" * 80)
-            core_utils.progress_msg(bool(args[ARG_IS_VERBOSE]), f"Abort processing document file {document}")
-            core_utils.progress_msg(bool(args[ARG_IS_VERBOSE]), f"RuntimeError: {exc.__str__()}")
-            core_utils.progress_msg(bool(args[ARG_IS_VERBOSE]), "=" * 80)
+            utils.progress_msg(bool(args[ARG_IS_VERBOSE]), "-" * 80)
+            utils.progress_msg(bool(args[ARG_IS_VERBOSE]), f"Abort processing document file {document}")
+            utils.progress_msg(bool(args[ARG_IS_VERBOSE]), f"RuntimeError: {str(exc)}")
+            utils.progress_msg(bool(args[ARG_IS_VERBOSE]), "-" * 80)
+            traceback.print_exc()
+            utils.progress_msg(bool(args[ARG_IS_VERBOSE]), "=" * 80)
 
     print("End   launcher.py")
 

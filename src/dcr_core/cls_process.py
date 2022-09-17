@@ -59,16 +59,18 @@ class Process:
         self._full_name_in_extension_int = ""
         self._full_name_in_next_step = ""
         self._full_name_in_pandoc = ""
-        self._full_name_in_parser = ""
+        self._full_name_in_parser_line = ""
+        self._full_name_in_parser_word = ""
         self._full_name_in_pdf2image = ""
         self._full_name_in_pdflib = ""
         self._full_name_in_stem_name = ""
         self._full_name_in_tesseract = ""
-        self._full_name_in_tokenizer = ""
+        self._full_name_in_tokenizer_line = ""
+        self._full_name_in_tokenizer_word = ""
         self._full_name_orig = ""
 
         self._is_delete_auxiliary_files = False
-        self._is_lt_footer_required = False
+        self._is_lt_footer_required = True
         self._is_lt_header_required = False
         self._is_lt_heading_required = False
         self._is_lt_list_bullet_required = False
@@ -166,7 +168,8 @@ class Process:
         self._full_name_in_extension_int: str = ""
         self._full_name_in_next_step: str = ""
         self._full_name_in_pandoc: str = ""
-        self._full_name_in_parser: str = ""
+        self._full_name_in_parser_line: str = ""
+        self._full_name_in_parser_word: str = ""
         self._full_name_in_pdf2image: str = ""
         self._full_name_in_pdflib: str = ""
         self._full_name_in_stem_name: str = ""
@@ -201,10 +204,11 @@ class Process:
         if self._is_pandoc:
             core_glob.logger.debug(core_glob.LOGGER_START)
 
+            core_utils.progress_msg(self._is_verbose, "")
             core_utils.progress_msg(self._is_verbose, f"Start processing Pandoc        {self._full_name_in_pandoc}")
 
             self._full_name_in_pdflib = core_utils.get_full_name_from_components(
-                self._full_name_in_directory, self._full_name_in_stem_name, core_glob.FILE_TYPE_PDF
+                self._full_name_in_directory, self._full_name_in_stem_name + ".pandoc", core_glob.FILE_TYPE_PDF
             )
 
             return_code, error_msg = Process.pandoc(
@@ -228,14 +232,17 @@ class Process:
         """Extract the text for all granularities from the PDF document."""
         core_glob.logger.debug(core_glob.LOGGER_START)
 
+        core_utils.progress_msg(self._is_verbose, "")
+        core_utils.progress_msg(self._is_verbose, "Start processing Parser")
+
         self._full_name_in_tokenizer = core_utils.get_full_name_from_components(
             self._full_name_in_directory,
-            self._full_name_in_stem_name + "." + core_glob.FILE_TYPE_JSON,
+            self._full_name_in_stem_name + ".parser." + core_glob.FILE_TYPE_JSON,
         )
 
         return_code, error_msg = Process.parser(
             document_id=self._document_id,
-            full_name_in=self._full_name_in_parser,
+            full_name_in=self._full_name_in_parser_word,
             full_name_orig=self._full_name_orig,
             full_name_out=self._full_name_in_tokenizer,
             is_lt_footer_required=self._is_lt_footer_required,
@@ -250,7 +257,8 @@ class Process:
         if return_code != "ok":
             raise RuntimeError(error_msg)
 
-        self._document_delete_auxiliary_file(self._full_name_in_parser)
+        self._document_delete_auxiliary_file(self._full_name_in_parser_line)
+        self._document_delete_auxiliary_file(self._full_name_in_parser_word)
 
         if self._is_lt_footer_required or self._is_lt_header_required:
             self._no_lines_footer = core_glob.inst_lt_hf.no_lines_footer
@@ -258,6 +266,8 @@ class Process:
 
         if self._is_lt_toc_required:
             self._no_lines_toc = core_glob.inst_lt_toc.no_lines_toc
+
+        core_utils.progress_msg(self._is_verbose, f"End   processing Parser        {self._full_name_in_tokenizer}")
 
         core_glob.logger.debug(core_glob.LOGGER_END)
 
@@ -273,11 +283,13 @@ class Process:
         if self._is_pdf2image:
             core_glob.logger.debug(core_glob.LOGGER_START)
 
+            core_utils.progress_msg(self._is_verbose, "")
             core_utils.progress_msg(self._is_verbose, f"Start processing pdf2image     {self._full_name_in_pdf2image}")
 
             self._full_name_in_tesseract = core_utils.get_full_name_from_components(
                 self._full_name_in_directory,
                 self._full_name_in_stem_name
+                + ".pdf2image"
                 + "_[0-9]*."
                 + (
                     core_glob.FILE_TYPE_PNG
@@ -309,6 +321,7 @@ class Process:
         """
         core_glob.logger.debug(core_glob.LOGGER_START)
 
+        core_utils.progress_msg(self._is_verbose, "")
         core_utils.progress_msg(self._is_verbose, f"Start processing PDFlib TET    {self._full_name_in_pdflib}")
 
         # noinspection PyUnresolvedReferences
@@ -316,21 +329,47 @@ class Process:
         if self._no_pdf_pages == 0:
             raise RuntimeError(f"The number of pages of the PDF document {self._full_name_in_pdflib} cannot be determined")
 
-        self._full_name_in_parser = core_utils.get_full_name_from_components(
+        # ------------------------------------------------------------------
+        # Granularity 'line'.
+        # ------------------------------------------------------------------
+
+        self._full_name_in_parser_line = core_utils.get_full_name_from_components(
             self._full_name_in_directory,
-            self._full_name_in_stem_name + "." + core_glob.FILE_TYPE_XML,
+            self._full_name_in_stem_name + ".pdflib." + nlp_core.NLPCore.LINE_XML_VARIATION + core_glob.FILE_TYPE_XML,
         )
 
         return_code, error_msg = Process.pdflib(
             full_name_in=self._full_name_in_pdflib,
-            full_name_out=self._full_name_in_parser,
-            document_opt_list=nlp_core.NLPCore.TET_DOCUMENT_OPT_LIST,
-            page_opt_list=nlp_core.NLPCore.TET_PAGE_OPT_LIST,
+            full_name_out=self._full_name_in_parser_line,
+            document_opt_list=nlp_core.NLPCore.LINE_TET_DOCUMENT_OPT_LIST,
+            page_opt_list=nlp_core.NLPCore.LINE_TET_PAGE_OPT_LIST,
         )
         if return_code != "ok":
             raise RuntimeError(error_msg)
 
-        core_utils.progress_msg(self._is_verbose, f"End   processing PDFlib TET    {self._full_name_in_parser}")
+        core_utils.progress_msg(self._is_verbose, f"TETML line granularity created {self._full_name_in_parser_line}")
+
+        # ------------------------------------------------------------------
+        # Granularity 'word'.
+        # ------------------------------------------------------------------
+
+        self._full_name_in_parser_word = core_utils.get_full_name_from_components(
+            self._full_name_in_directory,
+            self._full_name_in_stem_name + ".pdflib." + nlp_core.NLPCore.WORD_XML_VARIATION + core_glob.FILE_TYPE_XML,
+        )
+
+        return_code, error_msg = Process.pdflib(
+            full_name_in=self._full_name_in_pdflib,
+            full_name_out=self._full_name_in_parser_word,
+            document_opt_list=nlp_core.NLPCore.WORD_TET_DOCUMENT_OPT_LIST,
+            page_opt_list=nlp_core.NLPCore.WORD_TET_PAGE_OPT_LIST,
+        )
+        if return_code != "ok":
+            raise RuntimeError(error_msg)
+
+        core_utils.progress_msg(self._is_verbose, f"TETML word granularity created {self._full_name_in_parser_word}")
+
+        core_utils.progress_msg(self._is_verbose, "End   processing PDFlib TET")
 
         self._document_delete_auxiliary_file(self._full_name_in_pdflib)
 
@@ -351,13 +390,14 @@ class Process:
         if self._is_tesseract:
             core_glob.logger.debug(core_glob.LOGGER_START)
 
+            core_utils.progress_msg(self._is_verbose, "")
             core_utils.progress_msg(self._is_verbose, f"Start processing Tesseract OCR {self._full_name_in_tesseract}")
 
             if self._is_pdf2image:
                 self._full_name_in_stem_name += "_0"
 
             self._full_name_in_pdflib = core_utils.get_full_name_from_components(
-                self._full_name_in_directory, self._full_name_in_stem_name, core_glob.FILE_TYPE_PDF
+                self._full_name_in_directory, self._full_name_in_stem_name + ".tesseract", core_glob.FILE_TYPE_PDF
             )
 
             return_code, error_msg, children = Process.tesseract(
@@ -391,6 +431,7 @@ class Process:
         """
         core_glob.logger.debug(core_glob.LOGGER_START)
 
+        core_utils.progress_msg(self._is_verbose, "")
         core_utils.progress_msg(self._is_verbose, f"Start processing spaCy         {self._full_name_in_tokenizer}")
 
         try:
@@ -400,7 +441,7 @@ class Process:
 
         self._full_name_in_next_step = core_utils.get_full_name_from_components(
             self._full_name_in_directory,
-            self._full_name_in_stem_name + ".token." + core_glob.FILE_TYPE_JSON,
+            self._full_name_in_stem_name + ".tokenizer." + core_glob.FILE_TYPE_JSON,
         )
 
         return_code, error_msg = Process.tokenizer(
@@ -690,7 +731,7 @@ class Process:
     # Extracting the text from the PDF document.
     # ------------------------------------------------------------------
     @classmethod
-    def parser(  # pylint: disable=too-many-arguments
+    def parser(  # noqa: C901 pylint: disable=too-many-arguments
         cls,
         full_name_in: str,
         full_name_out: str,
@@ -773,6 +814,9 @@ class Process:
         core_glob.logger.debug("param no_pdf_pages              =%i", no_pdf_pages)
 
         try:
+            # ------------------------------------------------------------------
+            # Granularity 'word'.
+            # ------------------------------------------------------------------
             # Create the Element tree object
             tree = defusedxml.ElementTree.parse(full_name_in)
 
@@ -787,7 +831,7 @@ class Process:
                 child_tag = child.tag[nlp_core.NLPCore.PARSE_ELEM_FROM :]
                 match child_tag:
                     case nlp_core.NLPCore.PARSE_ELEM_DOCUMENT:
-                        core_glob.inst_parser.parse_tag_document(
+                        core_glob.inst_parser.parse_tag_document_word(
                             directory_name=os.path.dirname(full_name_in),
                             document_id=document_id,
                             environment_variant=core_glob.inst_setup.environment_variant,
@@ -813,11 +857,40 @@ class Process:
                         )
                         core_glob.inst_parser.no_errors += 1
 
+            core_utils.progress_msg(core_glob.inst_setup.is_verbose, f"TETML word granularity parsed  {full_name_in}")
+
+            # ------------------------------------------------------------------
+            # Granularity 'line'.
+            # ------------------------------------------------------------------
+            # Create the Element tree object
+            tree = defusedxml.ElementTree.parse(full_name_in.replace("word.xml", "line.xml"))
+
+            # Get the root Element
+            root = tree.getroot()
+
+            for child in root:
+                child_tag = child.tag[nlp_core.NLPCore.PARSE_ELEM_FROM :]
+                match child_tag:
+                    case nlp_core.NLPCore.PARSE_ELEM_DOCUMENT:
+                        core_glob.inst_parser.parse_tag_document_line(
+                            parent=child,
+                            parent_tag=child_tag,
+                        )
+                    case nlp_core.NLPCore.PARSE_ELEM_CREATION:
+                        pass
+                    case other:
+                        core_utils.progress_msg_core(
+                            core_utils.ERROR_61_902.replace("{parent_tag}", "XML root").replace("{child_tag", other)
+                        )
+                        core_glob.inst_parser.no_errors += 1
+
             if core_glob.inst_parser.no_errors != 0:
                 error_msg = core_utils.ERROR_61_903.replace("{no_errors}", str(core_glob.inst_parser.no_errors))
                 core_glob.logger.debug("return              =%s", (error_msg[:6], error_msg))
                 core_glob.logger.debug(core_glob.LOGGER_END)
                 return error_msg[:6], error_msg
+
+            core_utils.progress_msg(core_glob.inst_setup.is_verbose, f"TETML line granularity parsed  {full_name_in}")
 
         except FileNotFoundError:
             error_msg = core_utils.ERROR_61_901.replace("{full_name}", full_name_in)
@@ -955,12 +1028,9 @@ class Process:
             full_name_out (str):
                 Directory name and file name of the output file.
             document_opt_list (str):
-                Document level options:
-                    word: engines={noannotation noimage text notextcolor novector}
-                    line: engines={noannotation noimage text notextcolor novector}
-                    page: engines={noannotation noimage text notextcolor novector} lineseparator=U+0020
+                Document level options.
             page_opt_list (str):
-                Page level options.
+                    Page level options.
 
         Returns:
             tuple[str, str]:

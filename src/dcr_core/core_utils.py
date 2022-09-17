@@ -11,6 +11,7 @@ import pathlib
 import sys
 import traceback
 
+import dcr_core.cls_nlp_core as nlp_core
 from dcr_core import core_glob
 
 # ------------------------------------------------------------------
@@ -37,7 +38,9 @@ ERROR_41_911 = "41.911 Issue (ocr): Tesseract OCR has created an empty pdf file 
 ERROR_51_901 = "51.901 Issue (tet): Opening document '{full_name}' - " + "error no: '{error_no}' - api: '{api_name}' - error: '{error_msg}'"
 ERROR_61_901 = "61.901 Issue (s_p_j): Parsing the file '{full_name}' failed - FileNotFoundError"
 ERROR_61_902 = "61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'"
-ERROR_61_903 = "61.903 Issue (s_p_j): The number of unknown XML nodes is {no_errors} - details can be found in the log"
+ERROR_61_903 = "61.903 Issue (s_p_j): The number of parsing issues is {no_errors} - details can be found above"
+ERROR_61_904 = "61.904 Issue (s_p_j): Too few lines at granularity 'line' - {line} instead of {word}"
+ERROR_61_905 = "61.905 Issue (s_p_j): Too many lines at granularity 'line' - expected {word}"
 ERROR_71_901 = "71.901 Issue (tkn): Tokenizing the file '{full_name}' failed - FileNotFoundError"
 
 
@@ -157,6 +160,110 @@ def check_exists_object(  # noqa: C901
             terminate_fatal(
                 "The required instance of the class 'TextParser' does not yet exist.",
             )
+
+
+# ------------------------------------------------------------------
+# Create the container 'config'.
+# ------------------------------------------------------------------
+def create_config() -> nlp_core.NLPCore.ConfigJSON:
+    """Create the container 'config'.
+
+    Returns:
+        nlp_core.NLPCore.ConfigJSON:
+            Container 'configuration'.
+    """
+    config = {
+        nlp_core.NLPCore.JSON_NAME_JSON_INDENT: core_glob.inst_setup.json_indent,
+        nlp_core.NLPCore.JSON_NAME_JSON_SORT_KEYS: core_glob.inst_setup.is_json_sort_keys,
+        nlp_core.NLPCore.JSON_NAME_LT_FOOTER_MAX_DISTANCE: core_glob.inst_setup.lt_footer_max_distance,
+        nlp_core.NLPCore.JSON_NAME_LT_FOOTER_MAX_LINES: core_glob.inst_setup.lt_footer_max_lines,
+        nlp_core.NLPCore.JSON_NAME_LT_HEADER_MAX_DISTANCE: core_glob.inst_setup.lt_header_max_distance,
+        nlp_core.NLPCore.JSON_NAME_LT_HEADER_MAX_LINES: core_glob.inst_setup.lt_header_max_lines,
+        nlp_core.NLPCore.JSON_NAME_LT_HEADING_FILE_INCL_NO_CTX: core_glob.inst_setup.lt_heading_file_incl_no_ctx,
+        nlp_core.NLPCore.JSON_NAME_LT_HEADING_FILE_INCL_REGEXP: core_glob.inst_setup.is_lt_heading_file_incl_regexp,
+        nlp_core.NLPCore.JSON_NAME_LT_HEADING_MAX_LEVEL: core_glob.inst_setup.lt_heading_max_level,
+        nlp_core.NLPCore.JSON_NAME_LT_HEADING_MIN_PAGES: core_glob.inst_setup.lt_heading_min_pages,
+        nlp_core.NLPCore.JSON_NAME_LT_HEADING_RULE_FILE: core_glob.inst_setup.lt_heading_rule_file,
+        nlp_core.NLPCore.JSON_NAME_LT_HEADING_TOLERANCE_LLX: core_glob.inst_setup.lt_heading_tolerance_llx,
+        nlp_core.NLPCore.JSON_NAME_LT_LIST_BULLET_MIN_ENTRIES: core_glob.inst_setup.lt_list_bullet_min_entries,
+        nlp_core.NLPCore.JSON_NAME_LT_LIST_BULLET_RULE_FILE: core_glob.inst_setup.lt_list_bullet_rule_file,
+        nlp_core.NLPCore.JSON_NAME_LT_LIST_BULLET_TOLERANCE_LLX: core_glob.inst_setup.lt_list_bullet_tolerance_llx,
+        nlp_core.NLPCore.JSON_NAME_LT_LIST_NUMBER_MIN_ENTRIES: core_glob.inst_setup.lt_list_number_min_entries,
+        nlp_core.NLPCore.JSON_NAME_LT_LIST_NUMBER_RULE_FILE: core_glob.inst_setup.lt_list_number_rule_file,
+        nlp_core.NLPCore.JSON_NAME_LT_LIST_NUMBER_TOLERANCE_LLX: core_glob.inst_setup.lt_list_number_tolerance_llx,
+        nlp_core.NLPCore.JSON_NAME_LT_TABLE_FILE_INCL_EMPTY_COLUMNS: core_glob.inst_setup.is_lt_table_file_incl_empty_columns,
+        nlp_core.NLPCore.JSON_NAME_LT_TOC_LAST_PAGE: core_glob.inst_setup.lt_toc_last_page,
+        nlp_core.NLPCore.JSON_NAME_LT_TOC_MIN_ENTRIES: core_glob.inst_setup.lt_toc_min_entries,
+        nlp_core.NLPCore.JSON_NAME_SPACY_IGNORE_BRACKET: core_glob.inst_setup.is_spacy_ignore_bracket,
+        nlp_core.NLPCore.JSON_NAME_SPACY_IGNORE_LEFT_PUNCT: core_glob.inst_setup.is_spacy_ignore_left_punct,
+        nlp_core.NLPCore.JSON_NAME_SPACY_IGNORE_LINE_TYPE_FOOTER: core_glob.inst_setup.is_spacy_ignore_line_type_footer,
+        nlp_core.NLPCore.JSON_NAME_SPACY_IGNORE_LINE_TYPE_HEADER: core_glob.inst_setup.is_spacy_ignore_line_type_header,
+        nlp_core.NLPCore.JSON_NAME_SPACY_IGNORE_LINE_TYPE_HEADING: core_glob.inst_setup.is_spacy_ignore_line_type_heading,
+        nlp_core.NLPCore.JSON_NAME_SPACY_IGNORE_LINE_TYPE_LIST_BULLET: core_glob.inst_setup.is_spacy_ignore_line_type_list_bullet,
+        nlp_core.NLPCore.JSON_NAME_SPACY_IGNORE_LINE_TYPE_LIST_NUMBER: core_glob.inst_setup.is_spacy_ignore_line_type_list_number,
+        nlp_core.NLPCore.JSON_NAME_SPACY_IGNORE_LINE_TYPE_TABLE: core_glob.inst_setup.is_spacy_ignore_line_type_table,
+        nlp_core.NLPCore.JSON_NAME_SPACY_IGNORE_LINE_TYPE_TOC: core_glob.inst_setup.is_spacy_ignore_line_type_toc,
+        nlp_core.NLPCore.JSON_NAME_SPACY_IGNORE_PUNCT: core_glob.inst_setup.is_spacy_ignore_punct,
+        nlp_core.NLPCore.JSON_NAME_SPACY_IGNORE_QUOTE: core_glob.inst_setup.is_spacy_ignore_quote,
+        nlp_core.NLPCore.JSON_NAME_SPACY_IGNORE_RIGHT_PUNCT: core_glob.inst_setup.is_spacy_ignore_right_punct,
+        nlp_core.NLPCore.JSON_NAME_SPACY_IGNORE_SPACE: core_glob.inst_setup.is_spacy_ignore_space,
+        nlp_core.NLPCore.JSON_NAME_SPACY_IGNORE_STOP: core_glob.inst_setup.is_spacy_ignore_stop,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_CLUSTER: core_glob.inst_setup.is_spacy_tkn_attr_cluster,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_DEP_: core_glob.inst_setup.is_spacy_tkn_attr_dep_,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_DOC: core_glob.inst_setup.is_spacy_tkn_attr_doc,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_ENT_KB_ID_: core_glob.inst_setup.is_spacy_tkn_attr_ent_kb_id_,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_ENT_IOB_: core_glob.inst_setup.is_spacy_tkn_attr_ent_iob_,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_ENT_TYPE_: core_glob.inst_setup.is_spacy_tkn_attr_ent_type_,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_HEAD: core_glob.inst_setup.is_spacy_tkn_attr_head,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_I: core_glob.inst_setup.is_spacy_tkn_attr_i,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IDX: core_glob.inst_setup.is_spacy_tkn_attr_idx,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_ALPHA: core_glob.inst_setup.is_spacy_tkn_attr_is_alpha,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_ASCII: core_glob.inst_setup.is_spacy_tkn_attr_is_ascii,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_BRACKET: core_glob.inst_setup.is_spacy_tkn_attr_is_bracket,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_CURRENCY: core_glob.inst_setup.is_spacy_tkn_attr_is_currency,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_DIGIT: core_glob.inst_setup.is_spacy_tkn_attr_is_digit,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_LEFT_PUNCT: core_glob.inst_setup.is_spacy_tkn_attr_is_left_punct,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_LOWER: core_glob.inst_setup.is_spacy_tkn_attr_is_lower,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_OOV: core_glob.inst_setup.is_spacy_tkn_attr_is_oov,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_PUNCT: core_glob.inst_setup.is_spacy_tkn_attr_is_punct,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_QUOTE: core_glob.inst_setup.is_spacy_tkn_attr_is_quote,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_RIGHT_PUNCT: core_glob.inst_setup.is_spacy_tkn_attr_is_right_punct,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_SENT_END: core_glob.inst_setup.is_spacy_tkn_attr_is_sent_end,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_SENT_START: core_glob.inst_setup.is_spacy_tkn_attr_is_sent_start,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_SPACE: core_glob.inst_setup.is_spacy_tkn_attr_is_space,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_STOP: core_glob.inst_setup.is_spacy_tkn_attr_is_stop,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_TITLE: core_glob.inst_setup.is_spacy_tkn_attr_is_title,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_IS_UPPER: core_glob.inst_setup.is_spacy_tkn_attr_is_upper,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_LANG_: core_glob.inst_setup.is_spacy_tkn_attr_lang_,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_LEFT_EDGE: core_glob.inst_setup.is_spacy_tkn_attr_left_edge,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_LEMMA_: core_glob.inst_setup.is_spacy_tkn_attr_lemma_,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_LEX: core_glob.inst_setup.is_spacy_tkn_attr_lex,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_LEX_ID: core_glob.inst_setup.is_spacy_tkn_attr_lex_id,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_LIKE_EMAIL: core_glob.inst_setup.is_spacy_tkn_attr_like_email,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_LIKE_NUM: core_glob.inst_setup.is_spacy_tkn_attr_like_num,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_LIKE_URL: core_glob.inst_setup.is_spacy_tkn_attr_like_url,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_LOWER_: core_glob.inst_setup.is_spacy_tkn_attr_lower_,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_MORPH: core_glob.inst_setup.is_spacy_tkn_attr_morph,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_NORM_: core_glob.inst_setup.is_spacy_tkn_attr_norm_,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_ORTH_: core_glob.inst_setup.is_spacy_tkn_attr_orth_,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_POS_: core_glob.inst_setup.is_spacy_tkn_attr_pos_,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_PREFIX_: core_glob.inst_setup.is_spacy_tkn_attr_prefix_,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_PROB: core_glob.inst_setup.is_spacy_tkn_attr_prob,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_RANK: core_glob.inst_setup.is_spacy_tkn_attr_rank,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_RIGHT_EDGE: core_glob.inst_setup.is_spacy_tkn_attr_right_edge,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_SENT: core_glob.inst_setup.is_spacy_tkn_attr_sent,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_SENTIMENT: core_glob.inst_setup.is_spacy_tkn_attr_sentiment,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_SHAPE_: core_glob.inst_setup.is_spacy_tkn_attr_shape_,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_SUFFIX_: core_glob.inst_setup.is_spacy_tkn_attr_suffix_,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_TAG_: core_glob.inst_setup.is_spacy_tkn_attr_tag_,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_TENSOR: core_glob.inst_setup.is_spacy_tkn_attr_tensor,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_TEXT: core_glob.inst_setup.is_spacy_tkn_attr_text,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_TEXT_WITH_WS: core_glob.inst_setup.is_spacy_tkn_attr_text_with_ws,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_VOCAB: core_glob.inst_setup.is_spacy_tkn_attr_vocab,
+        nlp_core.NLPCore.JSON_NAME_SPACY_TKN_WHITESPACE_: core_glob.inst_setup.is_spacy_tkn_attr_whitespace_,
+    }
+
+    return config
 
 
 # ------------------------------------------------------------------
@@ -301,7 +408,10 @@ def progress_msg_core(msg: str) -> None:
     Args:
         msg (str): Progress message.
     """
-    final_msg = core_glob.LOGGER_PROGRESS_UPDATE + str(datetime.datetime.now()) + " : " + msg + "."
+    final_msg = core_glob.LOGGER_PROGRESS_UPDATE + str(datetime.datetime.now()) + " : " + msg
+
+    if msg not in ("", "-" * 80, "=" * 80):
+        final_msg = final_msg + "."
 
     print(final_msg)
 

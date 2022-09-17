@@ -101,6 +101,7 @@ class NLPCore:
     JSON_NAME_PARA_NO_FIRST: ClassVar[str]
     JSON_NAME_PARA_NO_LAST: ClassVar[str]
     JSON_NAME_PARA_NO_PAGE: ClassVar[str]
+    JSON_NAME_PARSER: ClassVar[str]
 
     JSON_NAME_SIZE: ClassVar[str]
 
@@ -174,6 +175,7 @@ class NLPCore:
     JSON_NAME_SPACY_TKN_WHITESPACE_: ClassVar[str]
 
     JSON_NAME_TEXT: ClassVar[str]
+    JSON_NAME_TOKENIZER: ClassVar[str]
     JSON_NAME_TYPE: ClassVar[str]
 
     JSON_NAME_URX: ClassVar[str]
@@ -273,6 +275,9 @@ class NLPCore:
     LANGUAGE_PANDOC_DEFAULT: ClassVar[str]
     LANGUAGE_SPACY_DEFAULT: ClassVar[str]
     LANGUAGE_TESSERACT_DEFAULT: ClassVar[str]
+    LINE_TET_DOCUMENT_OPT_LIST: ClassVar[str]
+    LINE_TET_PAGE_OPT_LIST: ClassVar[str]
+    LINE_XML_VARIATION: ClassVar[str]
     LINE_TYPE_BODY: ClassVar[str]
     LINE_TYPE_FOOTER: ClassVar[str]
     LINE_TYPE_HEADER: ClassVar[str]
@@ -282,7 +287,6 @@ class NLPCore:
     LINE_TYPE_TABLE: ClassVar[str]
     LINE_TYPE_TOC: ClassVar[str]
     LOGGER_PROGRESS_UPDATE: ClassVar[str]
-
     PARSE_NAME_SPACE: ClassVar[str]
     PARSE_ELEM_A: ClassVar[str]
     PARSE_ELEM_ACTION: ClassVar[str]
@@ -340,8 +344,12 @@ class NLPCore:
     PARSE_ELEM_XFA: ClassVar[str]
     SEARCH_STRATEGY_LINES: ClassVar[str]
     SEARCH_STRATEGY_TABLE: ClassVar[str]
-    TET_DOCUMENT_OPT_LIST: ClassVar[str]
-    TET_PAGE_OPT_LIST: ClassVar[str]
+    TETML_TYPE_LINE: ClassVar[str]
+    TETML_TYPE_PAGE: ClassVar[str]
+    TETML_TYPE_WORD: ClassVar[str]
+    WORD_TET_DOCUMENT_OPT_LIST: ClassVar[str]
+    WORD_TET_PAGE_OPT_LIST: ClassVar[str]
+    WORD_XML_VARIATION: ClassVar[str]
 
     def __init__(self) -> None:
         self.document_json: dict[str, bool | int | list[NLPCore.PageJSON] | str] = {}
