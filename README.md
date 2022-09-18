@@ -52,7 +52,7 @@ Now, to avoid this installation effort, we recommend using the Docker image prov
 
 **Creating and running a new container (Assuming the path prefix for the local data directory mapping is d:/TempMan):**
 
-    `docker run -it --name dcr-core -v d:/TempMan:/dcr-core/data/inbox_prod konnexionsgmbh/dcr-core:0.9.8`
+    docker run -it --name dcr-core -v d:/TempMan:/dcr-core/data/inbox_prod konnexionsgmbh/dcr-core:0.9.8
 
 **Restarting the container:**
 
@@ -97,6 +97,7 @@ Now, to avoid this installation effort, we recommend using the Docker image prov
 | .github/workflows | [GitHub Action](https://github.com/actions) workflows.                      |
 | data              | Example rule files for document line classification.                        |
 | docs              | **`DCR-CORE`** documentation files.                                         |
+| resources         | Selected manuals, various research papers, output file specification, etc.  |
 | scripts           | Ubuntu and Windows Script for running the application                       |
 | src               | Python scripts and [PDFlib TET](https://www.pdflib.com/products/tet/) files |
 | tests             | Scripts and data for pytest.                                                |
@@ -117,6 +118,7 @@ Now, to avoid this installation effort, we recommend using the Docker image prov
 | pyproject.toml      | 1. Build system requirements according to [PEP 518](https://peps.python.org/pep-0518/).                                                                                                                                                                                                                                                                                         |
 |                     | 2. Configuration file for [bandit](https://github.com/PyCQA/bandit), [black](https://github.com/psf/black), [isort](https://github.com/PyCQA/isort), [mypy](https://github.com/python/mypy),<br/> [pydoc-markdown](https://github.com/NiklasRosenstein/pydoc-markdown), [pydocstyle](https://github.com/PyCQA/pydocstyle), and [pytest](https://github.com/pytest-dev/pytest/). |
 | README.md           | This file.                                                                                                                                                                                                                                                                                                                                                                      |
+| run_dcr_dev         | Running the DCR-CORE functionality for development purposes.                                                                                                                                                                                                                                                                                                                    |
 | setup.cfg           | 1. Configuration file for [coverage](https://github.com/nedbat/coveragepy/blob/6.3.2/doc/index.rst), **DCR**, [flake8](https://github.com/pycqa/flake8), and [radon](https://github.com/rubik/radon).                                                                                                                                                                           |
 |                     | 2. Setup configuration file - [see here](https://setuptools.pypa.io/en/latest/setuptools.html).                                                                                                                                                                                                                                                                                 |
 | setup.cfg.reference | Original setup configuration file.                                                                                                                                                                                                                                                                                                                                              |

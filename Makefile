@@ -8,7 +8,8 @@ ifeq ($(OS),Windows_NT)
 	export MYPYPATH=
 	export PIPENV=python -m pipenv
 	export PYTHON=python
-	export PYTHONPATH=src
+	export PYTHONPATH=src\\dcr_core
+	export PYTHONPATH_DEV=src
 else
 	export CREATE_DIST=mkdir -p dist
 	export CREATE_DOCS=mkdir -p docs/api-docs
@@ -17,7 +18,8 @@ else
 	export MYPYPATH=
 	export PIPENV=python3 -m pipenv
 	export PYTHON=python3
-	export PYTHONPATH=src
+	export PYTHONPATH=src/dcr_core
+	export PYTHONPATH_DEV=src
 endif
 
 ##                                                                            .
@@ -56,12 +58,13 @@ export DCR_ENVIRONMENT_TYPE=test
 # Configuration file: none
 bandit:             ## Find common security issues with Bandit.
 	@echo Info **********  Start: Bandit **************************************
-	@echo MYPYPATH  =${MYPYPATH}
-	@echo PYTHON    =${PYTHON}
-	@echo PYTHONPATH=${PYTHONPATH}
+	@echo MYPYPATH      =${MYPYPATH}
+	@echo PYTHON        =${PYTHON}
+	@echo PYTHONPATH     =${PYTHONPATH}
+	@echo PYTHONPATH_DEV=${PYTHONPATH_DEV}
 	${PIPENV} run bandit --version
 	@echo ---------------------------------------------------------------------
-	${PIPENV} run bandit -c pyproject.toml -r ${PYTHONPATH}
+	${PIPENV} run bandit -c pyproject.toml -r ${PYTHONPATH_DEV}
 	@echo Info **********  End:   Bandit **************************************
 
 # The Uncompromising Code Formatter
@@ -69,26 +72,14 @@ bandit:             ## Find common security issues with Bandit.
 # Configuration file: pyproject.toml
 black:              ## Format the code with Black.
 	@echo Info **********  Start: black ***************************************
-	@echo MYPYPATH  =${MYPYPATH}
-	@echo PYTHON    =${PYTHON}
-	@echo PYTHONPATH=${PYTHONPATH}
+	@echo MYPYPATH      =${MYPYPATH}
+	@echo PYTHON        =${PYTHON}
+	@echo PYTHONPATH     =${PYTHONPATH}
+	@echo PYTHONPATH_DEV=${PYTHONPATH_DEV}
 	${PIPENV} run black --version
 	@echo ---------------------------------------------------------------------
-	${PIPENV} run black ${PYTHONPATH} tests
+	${PIPENV} run black ${PYTHONPATH_DEV} tests
 	@echo Info **********  End:   black ***************************************
-
-# Byte-compile Python libraries
-# https://docs.python.org/3/library/compileall.html
-# Configuration file: none
-compileall:         ## Byte-compile the Python libraries.
-	@echo Info **********  Start: Compile All Python Scripts ******************
-	@echo MYPYPATH  =${MYPYPATH}
-	@echo PYTHON    =${PYTHON}
-	@echo PYTHONPATH=${PYTHONPATH}
-	${PYTHON} --version
-	@echo ---------------------------------------------------------------------
-	${PYTHON} -m compileall
-	@echo Info **********  End:   Compile All Python Scripts ******************
 
 # Python interface to coveralls.io API
 # https://github.com/TheKevJames/coveralls-python
@@ -105,29 +96,27 @@ coveralls:          ## Run all the tests and upload the coverage data to coveral
 # Configuration file: none
 docformatter:       ## Format the docstrings with docformatter.
 	@echo Info **********  Start: docformatter ********************************
-	@echo MYPYPATH  =${MYPYPATH}
-	@echo PYTHON    =${PYTHON}
-	@echo PYTHONPATH=${PYTHONPATH}
+	@echo MYPYPATH      =${MYPYPATH}
+	@echo PYTHON        =${PYTHON}
+	@echo PYTHONPATH     =${PYTHONPATH}
+	@echo PYTHONPATH_DEV=${PYTHONPATH_DEV}
 	${PIPENV} run docformatter --version
 	@echo ---------------------------------------------------------------------
-	${PIPENV} run docformatter --in-place -r ${PYTHONPATH} tests
+	${PIPENV} run docformatter --in-place -r ${PYTHONPATH_DEV} tests
 	@echo Info **********  End:   docformatter ********************************
 
 # Flake8: Your Tool For Style Guide Enforcement.
-# includes McCabe:      https://github.com/PyCQA/mccabe
-# includes pycodestyle: https://github.com/PyCQA/pycodestyle
-# includes Pyflakes:    https://github.com/PyCQA/pyflakes
-# includes Radon:       https://github.com/rubik/radon
 # https://github.com/pycqa/flake8
 # Configuration file: cfg.cfg
 flake8:             ## Enforce the Python Style Guides with Flake8.
 	@echo Info **********  Start: Flake8 **************************************
-	@echo MYPYPATH  =${MYPYPATH}
-	@echo PYTHON    =${PYTHON}
-	@echo PYTHONPATH=${PYTHONPATH}
+	@echo MYPYPATH      =${MYPYPATH}
+	@echo PYTHON        =${PYTHON}
+	@echo PYTHONPATH     =${PYTHONPATH}
+	@echo PYTHONPATH_DEV=${PYTHONPATH_DEV}
 	${PIPENV} run flake8 --version
 	@echo ---------------------------------------------------------------------
-	${PIPENV} run flake8 --exclude TET.py ${PYTHONPATH} tests
+	${PIPENV} run flake8 --exclude TET.py ${PYTHONPATH_DEV} tests
 	@echo Info **********  End:   Flake8 **************************************
 
 # isort your imports, so you don't have to.
@@ -135,12 +124,13 @@ flake8:             ## Enforce the Python Style Guides with Flake8.
 # Configuration file: pyproject.toml
 isort:              ## Edit and sort the imports with isort.
 	@echo Info **********  Start: isort ***************************************
-	@echo MYPYPATH  =${MYPYPATH}
-	@echo PYTHON    =${PYTHON}
-	@echo PYTHONPATH=${PYTHONPATH}
+	@echo MYPYPATH      =${MYPYPATH}
+	@echo PYTHON        =${PYTHON}
+	@echo PYTHONPATH     =${PYTHONPATH}
+	@echo PYTHONPATH_DEV=${PYTHONPATH_DEV}
 	${PIPENV} run isort --version
 	@echo ---------------------------------------------------------------------
-	${PIPENV} run isort ${PYTHONPATH} tests
+	${PIPENV} run isort ${PYTHONPATH_DEV} tests
 	@echo Info **********  End:   isort ***************************************
 
 # Project documentation with Markdown.
@@ -161,12 +151,13 @@ mkdocs:             ## Create and upload the user documentation with MkDocs.
 # Configuration file: pyproject.toml
 mypy:               ## Find typing issues with Mypy.
 	@echo Info **********  Start: Mypy ****************************************
-	@echo MYPYPATH  =${MYPYPATH}
-	@echo PYTHON    =${PYTHON}
-	@echo PYTHONPATH=${PYTHONPATH}
+	@echo MYPYPATH      =${MYPYPATH}
+	@echo PYTHON        =${PYTHON}
+	@echo PYTHONPATH     =${PYTHONPATH}
+	@echo PYTHONPATH_DEV=${PYTHONPATH_DEV}
 	${PIPENV} run mypy --version
 	@echo ---------------------------------------------------------------------
-	${PIPENV} run mypy --exclude TET.py ${PYTHONPATH}
+	${PIPENV} run mypy --exclude TET.py ${PYTHONPATH_DEV}
 	@echo Info **********  End:   Mypy ****************************************
 
 # pip is the package installer for Python.
@@ -219,12 +210,13 @@ pipenv-prod:        ## Install the package dependencies for production.
 # Configuration file: pyproject.toml
 pydocstyle:         ## Check the API documentation with pydocstyle.
 	@echo Info **********  Start: pydocstyle **********************************
-	@echo MYPYPATH  =${MYPYPATH}
-	@echo PYTHON    =${PYTHON}
-	@echo PYTHONPATH=${PYTHONPATH}
+	@echo MYPYPATH      =${MYPYPATH}
+	@echo PYTHON        =${PYTHON}
+	@echo PYTHONPATH     =${PYTHONPATH}
+	@echo PYTHONPATH_DEV=${PYTHONPATH_DEV}
 	${PIPENV} run pydocstyle --version
 	@echo ---------------------------------------------------------------------
-	${PIPENV} run pydocstyle --count --match='(?!PDFLIB\\)*\.py' ${PYTHONPATH} tests
+	${PIPENV} run pydocstyle --count --match='(?!PDFLIB\\)*\.py' ${PYTHONPATH_DEV} tests
 	@echo Info **********  End:   pydocstyle **********************************
 
 # Pylint is a tool that checks for errors in Python code.
@@ -232,12 +224,13 @@ pydocstyle:         ## Check the API documentation with pydocstyle.
 # Configuration file: .pylintrc
 pylint:             ## Lint the code with Pylint.
 	@echo Info **********  Start: Pylint **************************************
-	@echo MYPYPATH  =${MYPYPATH}
-	@echo PYTHON    =${PYTHON}
-	@echo PYTHONPATH=${PYTHONPATH}
+	@echo MYPYPATH      =${MYPYPATH}
+	@echo PYTHON        =${PYTHON}
+	@echo PYTHONPATH     =${PYTHONPATH}
+	@echo PYTHONPATH_DEV=${PYTHONPATH_DEV}
 	${PIPENV} run pylint --version
 	@echo ---------------------------------------------------------------------
-	${PIPENV} run pylint ${PYTHONPATH} tests
+	${PIPENV} run pylint ${PYTHONPATH_DEV} tests
 	@echo Info **********  End:   Pylint **************************************
 
 # pytest: helps you write better programs.
@@ -325,11 +318,13 @@ upload-test:        ## Upload the distribution archive to Test PyPi.
 
 version:            ## Show the installed software versions.
 	@echo Info **********  Start: pip *****************************************
-	@echo MYPYPATH  =${MYPYPATH}
-	@echo PYTHON    =${PYTHON}
-	@echo PYTHONPATH=${PYTHONPATH}
-	${PYTHON} -m pip --version
+	@echo MYPYPATH      =${MYPYPATH}
+	@echo PYTHON        =${PYTHON}
+	@echo PYTHONPATH     =${PYTHONPATH}
+	@echo PYTHONPATH_DEV=${PYTHONPATH_DEV}
 	${PYTHON} -m build --version
+	${PYTHON} -m pip --version
+	${PYTHON} -m pipenv --version
 	${PYTHON} -m twine --version
 	${PYTHON} -m wheel version
 	@echo Info **********  End:   pip *****************************************

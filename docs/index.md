@@ -9,13 +9,11 @@ Based on the paper "Unfolding the Structure of a Document using Deep Learning" (
 
 The processing logic is as follows:
 
-- New documents are made available in the file directory **` inbox`**. If required, other language-related file directories can also be used (see section [Document Language](https://konnexionsgmbh.github.io/dcr-core/running_document_language){:target="_blank"}).
-- Documents in a file format accepted by **`DCR-CORE`** are registered and moved to the file directory **`ìnbox_accepted`**. All other documents are registered and moved to the file directory **`ìnbox_rejected`**.
-- Documents not in **`pdf`** format are converted to **`pdf`** format using [Pandoc](https://pandoc.org){:target="_blank"} and [TeX Live](https://www.tug.org/texlive){:target="_blank"}. 
-- Documents based on scanning which, therefore, do not contain text elements, are scanned and converted to **`pdf`** format using the [Tesseract OCR](https://github.com/tesseract-ocr/tesseract){:target="_blank"} software. This process applies to all image format files e.g. **`jpeg`**, **`tiff`** etc., as well as scanned images in **`pdf`** format.  
-- From all **`pdf`** documents, the text and associated metadata is extracted into a document-specific **`xml`** file using [PDFlib TET](https://www.pdflib.com/products/tet/){:target="_blank"}.
-- The document-specific **`xml`** files are then parsed and the **`DCR-CORE`**-relevant contents are written to the **`JSON`** files. 
-- From the **`JSON`** file(s) [spaCy](https://spacy.io){:target="_blank"} extracts qualified tokens and stores them either in a **`JSON`** file or in the database table **`token`**.
+- A document not in **`pdf`** format is converted to **`pdf`** format using [Pandoc](https://pandoc.org){:target="_blank"} and [TeX Live](https://www.tug.org/texlive){:target="_blank"}. 
+- A document based on scanning which, therefore, does not contain text elements, is scanned and converted to **`pdf`** format using the [Tesseract OCR](https://github.com/tesseract-ocr/tesseract){:target="_blank"} software. This process applies to all image format files e.g. **`jpeg`**, **`tiff`** etc., as well as scanned images in **`pdf`** format.  
+- From a **`pdf`** document, the text and associated metadata is extracted into document-specific **`xml`** files using [PDFlib TET](https://www.pdflib.com/products/tet/){:target="_blank"}.
+- The document-specific **`xml`** files are then parsed and the **`DCR-CORE`**-relevant contents are written to a **`JSON`** file. 
+- From the **`JSON`** file [spaCy](https://spacy.io){:target="_blank"} extracts qualified tokens and stores them either in a **`JSON`** file and / or a **`xml`** file.
 
 ### 1.1 Rahman & Finin Paper
 
@@ -48,9 +46,7 @@ The processing logic is as follows:
 
 The documents to be processed are divided into individual steps, so-called actions. 
 Each action has the task of changing the state of a document by transforming an input file format into a different output file format.
-The database tables **`run`**, **`document`**, and **`action`** document the current state of a document, as well as the actions performed so far.
-If an error occurs during the processing of the document, this is recorded in the database tables **`document`** and **`action`**.
-During the next run with the same action, the faulty documents are also processed again.
+If an error occurs during the processing of the document, the actual processing is terminated with an exception.
 
 ### 2.1 Preprocessor
 
@@ -58,7 +54,7 @@ During the next run with the same action, the faulty documents are also processe
 
 ![](img/architecture_preprocessor.png)
 
-#### 2.1.2 Process the inbox directory (action: **`p_i`**)
+#### 2.1.2 Process the input document
 
 In the first action, the file directory **`inbox`** is checked for new document files. 
 An entry is created in the **`document`** database table for each new document, showing the current processing status of the document. 
