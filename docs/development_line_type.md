@@ -13,10 +13,10 @@ The possible line types are :
 | f         | footer line                                       |
 | h         | header line                                       |
 | h_9       | level 9 heading line                              |
-| lb        | line of a bulleted list                           |
-| ln        | line of a numbered list                           |
-| tab       | line of a table                                   |
-| toc       | line of a table of content                        |
+| lb        | bulleted list                                     |
+| ln        | numbered list                                     |
+| tab       | table                                             |
+| toc       | table of content                                  |
 
 The following three rule-based algorithms are used to determine the line type in the order given:
 

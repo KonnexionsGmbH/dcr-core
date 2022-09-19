@@ -46,7 +46,6 @@ class LineTypeToc:
         core_glob.logger.debug("param file_name_curr=%s", file_name_curr)
 
         core_utils.check_exists_object(
-            is_line_type_header_footer=True,
             is_nlp_core=True,
             is_setup=True,
             is_text_parser=True,
@@ -324,7 +323,6 @@ class LineTypeToc:
         core_glob.logger.debug("param file_name_curr =%s", file_name_curr)
 
         core_utils.check_exists_object(
-            is_line_type_header_footer=True,
             is_nlp_core=True,
             is_setup=True,
             is_text_parser=True,

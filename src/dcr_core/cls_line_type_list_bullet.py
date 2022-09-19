@@ -61,9 +61,6 @@ class LineTypeListBullet:
         core_glob.logger.debug("param file_name_curr=%s", file_name_curr)
 
         core_utils.check_exists_object(
-            is_line_type_header_footer=True,
-            is_line_type_table=True,
-            is_line_type_toc=True,
             is_nlp_core=True,
             is_setup=True,
             is_text_parser=True,
@@ -463,9 +460,6 @@ class LineTypeListBullet:
         core_glob.logger.debug("param file_name_orig     =%s", file_name_orig)
 
         core_utils.check_exists_object(
-            is_line_type_header_footer=True,
-            is_line_type_table=True,
-            is_line_type_toc=True,
             is_setup=True,
             is_nlp_core=True,
             is_text_parser=True,
