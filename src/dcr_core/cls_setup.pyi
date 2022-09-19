@@ -13,11 +13,10 @@ class Setup:
     _DCR_CFG_FILE: ClassVar[str]
     _DCR_CFG_JSON_INCL_CONFIG: ClassVar[str]
     _DCR_CFG_JSON_INCL_FONTS: ClassVar[str]
-    _DCR_CFG_JSON_INCL_PARAMS: ClassVar[str]
     _DCR_CFG_JSON_INCL_HEADING: ClassVar[str]
     _DCR_CFG_JSON_INCL_LIST_BULLET: ClassVar[str]
     _DCR_CFG_JSON_INCL_LIST_NUMBER: ClassVar[str]
-    _DCR_CFG_JSON_INCL_TABLE: ClassVar[str]
+    _DCR_CFG_JSON_INCL_PARAMS: ClassVar[str]
     _DCR_CFG_JSON_INDENT: ClassVar[str]
     _DCR_CFG_JSON_SORT_KEYS: ClassVar[str]
     _DCR_CFG_LT_FOOTER_MAX_DISTANCE: ClassVar[str]
@@ -117,8 +116,8 @@ class Setup:
     _DCR_CFG_SPACY_TKN_ATTR_VOCAB: ClassVar[str]
     _DCR_CFG_SPACY_TKN_ATTR_WHITESPACE_: ClassVar[str]
     _DCR_CFG_TESSERACT_TIMEOUT: ClassVar[str]
-    _DCR_CFG_TOKENIZE_2_DATABASE: ClassVar[str]
     _DCR_CFG_TOKENIZE_2_JSONFILE: ClassVar[str]
+    _DCR_CFG_TOKENIZE_2_XMLFILE: ClassVar[str]
     _DCR_CFG_VERBOSE: ClassVar[str]
     _DCR_CFG_VERBOSE_LT_HEADER_FOOTER: ClassVar[str]
     _DCR_CFG_VERBOSE_LT_HEADING: ClassVar[str]
@@ -139,9 +138,6 @@ class Setup:
         self._config: dict[str, str] = {}
         self._config_parser: configparser.ConfigParser = configparser.ConfigParser()
         self.directory_inbox = ""
-        self.directory_inbox_accepted = ""
-        self.directory_inbox_rejected = ""
-        self.environment_variant = ""
         self.is_delete_auxiliary_files = False
         self.is_json_incl_config = False
         self.is_json_incl_fonts = False
@@ -149,7 +145,6 @@ class Setup:
         self.is_json_incl_list_bullet = False
         self.is_json_incl_list_number = False
         self.is_json_incl_params = False
-        self.is_json_incl_table = False
         self.is_json_sort_keys = False
         self.is_lt_footer_required = False
         self.is_lt_header_required = False
@@ -226,8 +221,8 @@ class Setup:
         self.is_spacy_tkn_attr_text_with_ws = False
         self.is_spacy_tkn_attr_vocab = False
         self.is_spacy_tkn_attr_whitespace_ = False
-        self.is_tokenize_2_database = False
         self.is_tokenize_2_jsonfile = False
+        self.is_tokenize_2_xmlfile = False
         self.is_verbose = False
         self.is_verbose_lt_header_footer = False
         self.is_verbose_lt_heading = False

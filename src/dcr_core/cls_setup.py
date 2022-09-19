@@ -36,7 +36,6 @@ class Setup:
     _DCR_CFG_JSON_INCL_LIST_BULLET: ClassVar[str] = "json_incl_list_bullet"
     _DCR_CFG_JSON_INCL_LIST_NUMBER: ClassVar[str] = "json_incl_list_number"
     _DCR_CFG_JSON_INCL_PARAMS: ClassVar[str] = "json_incl_params"
-    _DCR_CFG_JSON_INCL_TABLE: ClassVar[str] = "json_incl_table"
     _DCR_CFG_JSON_INDENT: ClassVar[str] = "json_indent"
     _DCR_CFG_JSON_SORT_KEYS: ClassVar[str] = "json_sort_keys"
     _DCR_CFG_LT_FOOTER_MAX_DISTANCE: ClassVar[str] = "lt_footer_max_distance"
@@ -139,8 +138,8 @@ class Setup:
     _DCR_CFG_SPACY_TKN_ATTR_WHITESPACE_: ClassVar[str] = "spacy_tkn_attr_whitespace_"
 
     _DCR_CFG_TESSERACT_TIMEOUT: ClassVar[str] = "tesseract_timeout"
-    _DCR_CFG_TOKENIZE_2_DATABASE: ClassVar[str] = "tokenize_2_database"
     _DCR_CFG_TOKENIZE_2_JSONFILE: ClassVar[str] = "tokenize_2_jsonfile"
+    _DCR_CFG_TOKENIZE_2_XMLFILE: ClassVar[str] = "tokenize_2_xmlfile"
     _DCR_CFG_VERBOSE: ClassVar[str] = "verbose"
     _DCR_CFG_VERBOSE_LT_HEADER_FOOTER: ClassVar[str] = "verbose_lt_header_footer"
     _DCR_CFG_VERBOSE_LT_HEADING: ClassVar[str] = "verbose_lt_heading"
@@ -182,25 +181,31 @@ class Setup:
         # ------------------------------------------------------------------
         # DCR-CORE configuration.
         # ------------------------------------------------------------------
+        self.directory_inbox = "data/inbox_prod"
+
+        self.lt_export_rule_file_heading = "data/lt_export_rule_heading.json"
+        self.lt_export_rule_file_list_bullet = "data/lt_export_rule_list_bullet.json"
+        self.lt_export_rule_file_list_number = "data/lt_export_rule_list_number.json"
+
         self.is_delete_auxiliary_files = False
 
-        self.is_json_incl_config = False
-        self.is_json_incl_fonts = False
-        self.is_json_incl_heading = False
-        self.is_json_incl_list_bullet = False
-        self.is_json_incl_list_number = False
-        self.is_json_incl_params = False
-        self.is_json_incl_table = False
-        self.is_json_sort_keys = False
+        self.is_json_incl_config = True
+        self.is_json_incl_fonts = True
+        self.is_json_incl_heading = True
+        self.is_json_incl_list_bullet = True
+        self.is_json_incl_list_number = True
+        self.is_json_incl_params = True
 
-        self.is_lt_footer_required = False
-        self.is_lt_header_required = False
-        self.is_lt_heading_file_incl_regexp = False
-        self.is_lt_heading_required = False
-        self.is_lt_list_bullet_required = False
-        self.is_lt_list_number_file_incl_regexp = False
-        self.is_lt_list_number_required = False
-        self.is_lt_toc_required = False
+        self.is_json_sort_keys = True
+
+        self.is_lt_footer_required = True
+        self.is_lt_header_required = True
+        self.is_lt_heading_file_incl_regexp = True
+        self.is_lt_heading_required = True
+        self.is_lt_list_bullet_required = True
+        self.is_lt_list_number_file_incl_regexp = True
+        self.is_lt_list_number_required = True
+        self.is_lt_toc_required = True
 
         # ------------------------------------------------------------------
         # Spacy ignore tokens.
@@ -223,92 +228,93 @@ class Setup:
         # ------------------------------------------------------------------
         # spaCy token attributes.
         # ------------------------------------------------------------------
-        self.is_spacy_tkn_attr_cluster = False
-        self.is_spacy_tkn_attr_dep_ = False
-        self.is_spacy_tkn_attr_doc = False
-        self.is_spacy_tkn_attr_ent_iob_ = False
-        self.is_spacy_tkn_attr_ent_kb_id_ = False
-        self.is_spacy_tkn_attr_ent_type_ = False
-        self.is_spacy_tkn_attr_head = False
-        self.is_spacy_tkn_attr_i = False
-        self.is_spacy_tkn_attr_idx = False
-        self.is_spacy_tkn_attr_is_alpha = False
-        self.is_spacy_tkn_attr_is_ascii = False
-        self.is_spacy_tkn_attr_is_bracket = False
-        self.is_spacy_tkn_attr_is_currency = False
-        self.is_spacy_tkn_attr_is_digit = False
-        self.is_spacy_tkn_attr_is_left_punct = False
-        self.is_spacy_tkn_attr_is_lower = False
-        self.is_spacy_tkn_attr_is_oov = False
-        self.is_spacy_tkn_attr_is_punct = False
-        self.is_spacy_tkn_attr_is_quote = False
-        self.is_spacy_tkn_attr_is_right_punct = False
-        self.is_spacy_tkn_attr_is_sent_end = False
-        self.is_spacy_tkn_attr_is_sent_start = False
-        self.is_spacy_tkn_attr_is_space = False
-        self.is_spacy_tkn_attr_is_stop = False
-        self.is_spacy_tkn_attr_is_title = False
-        self.is_spacy_tkn_attr_is_upper = False
-        self.is_spacy_tkn_attr_lang_ = False
-        self.is_spacy_tkn_attr_left_edge = False
-        self.is_spacy_tkn_attr_lemma_ = False
-        self.is_spacy_tkn_attr_lex = False
-        self.is_spacy_tkn_attr_lex_id = False
-        self.is_spacy_tkn_attr_like_email = False
-        self.is_spacy_tkn_attr_like_num = False
-        self.is_spacy_tkn_attr_like_url = False
-        self.is_spacy_tkn_attr_lower_ = False
-        self.is_spacy_tkn_attr_morph = False
-        self.is_spacy_tkn_attr_norm_ = False
-        self.is_spacy_tkn_attr_orth_ = False
-        self.is_spacy_tkn_attr_pos_ = False
-        self.is_spacy_tkn_attr_prefix_ = False
-        self.is_spacy_tkn_attr_prob = False
-        self.is_spacy_tkn_attr_rank = False
-        self.is_spacy_tkn_attr_right_edge = False
-        self.is_spacy_tkn_attr_sent = False
-        self.is_spacy_tkn_attr_sentiment = False
-        self.is_spacy_tkn_attr_shape_ = False
-        self.is_spacy_tkn_attr_suffix_ = False
-        self.is_spacy_tkn_attr_tag_ = False
-        self.is_spacy_tkn_attr_tensor = False
-        self.is_spacy_tkn_attr_text = False
-        self.is_spacy_tkn_attr_text_with_ws = False
-        self.is_spacy_tkn_attr_vocab = False
-        self.is_spacy_tkn_attr_whitespace_ = False
-        self.is_tokenize_2_database = False
-        self.is_tokenize_2_jsonfile = False
-        self.is_verbose = False
+        self.is_spacy_tkn_attr_cluster = True
+        self.is_spacy_tkn_attr_dep_ = True
+        self.is_spacy_tkn_attr_doc = True
+        self.is_spacy_tkn_attr_ent_iob_ = True
+        self.is_spacy_tkn_attr_ent_kb_id_ = True
+        self.is_spacy_tkn_attr_ent_type_ = True
+        self.is_spacy_tkn_attr_head = True
+        self.is_spacy_tkn_attr_i = True
+        self.is_spacy_tkn_attr_idx = True
+        self.is_spacy_tkn_attr_is_alpha = True
+        self.is_spacy_tkn_attr_is_ascii = True
+        self.is_spacy_tkn_attr_is_bracket = True
+        self.is_spacy_tkn_attr_is_currency = True
+        self.is_spacy_tkn_attr_is_digit = True
+        self.is_spacy_tkn_attr_is_left_punct = True
+        self.is_spacy_tkn_attr_is_lower = True
+        self.is_spacy_tkn_attr_is_oov = True
+        self.is_spacy_tkn_attr_is_punct = True
+        self.is_spacy_tkn_attr_is_quote = True
+        self.is_spacy_tkn_attr_is_right_punct = True
+        self.is_spacy_tkn_attr_is_sent_end = True
+        self.is_spacy_tkn_attr_is_sent_start = True
+        self.is_spacy_tkn_attr_is_space = True
+        self.is_spacy_tkn_attr_is_stop = True
+        self.is_spacy_tkn_attr_is_title = True
+        self.is_spacy_tkn_attr_is_upper = True
+        self.is_spacy_tkn_attr_lang_ = True
+        self.is_spacy_tkn_attr_left_edge = True
+        self.is_spacy_tkn_attr_lemma_ = True
+        self.is_spacy_tkn_attr_lex = True
+        self.is_spacy_tkn_attr_lex_id = True
+        self.is_spacy_tkn_attr_like_email = True
+        self.is_spacy_tkn_attr_like_num = True
+        self.is_spacy_tkn_attr_like_url = True
+        self.is_spacy_tkn_attr_lower_ = True
+        self.is_spacy_tkn_attr_morph = True
+        self.is_spacy_tkn_attr_norm_ = True
+        self.is_spacy_tkn_attr_orth_ = True
+        self.is_spacy_tkn_attr_pos_ = True
+        self.is_spacy_tkn_attr_prefix_ = True
+        self.is_spacy_tkn_attr_prob = True
+        self.is_spacy_tkn_attr_rank = True
+        self.is_spacy_tkn_attr_right_edge = True
+        self.is_spacy_tkn_attr_sent = True
+        self.is_spacy_tkn_attr_sentiment = True
+        self.is_spacy_tkn_attr_shape_ = True
+        self.is_spacy_tkn_attr_suffix_ = True
+        self.is_spacy_tkn_attr_tag_ = True
+        self.is_spacy_tkn_attr_tensor = True
+        self.is_spacy_tkn_attr_text = True
+        self.is_spacy_tkn_attr_text_with_ws = True
+        self.is_spacy_tkn_attr_vocab = True
+        self.is_spacy_tkn_attr_whitespace_ = True
+
+        self.is_tokenize_2_jsonfile = True
+        self.is_tokenize_2_xmlfile = True
+
+        self.is_verbose = True
         self.is_verbose_lt_header_footer = False
         self.is_verbose_lt_heading = False
         self.is_verbose_lt_list_bullet = False
         self.is_verbose_lt_list_number = False
         self.is_verbose_lt_toc = False
 
-        self.json_indent = 0
+        self.json_indent = 4
 
-        self.lt_footer_max_distance = 0
-        self.lt_footer_max_lines = 0
-        self.lt_header_max_distance = 0
-        self.lt_header_max_lines = 0
-        self.lt_heading_file_incl_no_ctx = 0
-        self.lt_heading_max_level = 0
-        self.lt_heading_min_pages = 0
+        self.lt_footer_max_distance = 3
+        self.lt_footer_max_lines = 3
+        self.lt_header_max_distance = 3
+        self.lt_header_max_lines = 3
+        self.lt_heading_file_incl_no_ctx = 1
+        self.lt_heading_max_level = 3
+        self.lt_heading_min_pages = 2
         self.lt_heading_rule_file = "none"
-        self.lt_heading_tolerance_llx = 0
-        self.lt_list_bullet_min_entries = 0
+        self.lt_heading_tolerance_llx = 10
+        self.lt_list_bullet_min_entries = 2
         self.lt_list_bullet_rule_file = "none"
-        self.lt_list_bullet_tolerance_llx = 0
-        self.lt_list_number_min_entries = 0
+        self.lt_list_bullet_tolerance_llx = 10
+        self.lt_list_number_min_entries = 2
         self.lt_list_number_rule_file = "none"
-        self.lt_list_number_tolerance_llx = 0
-        self.lt_toc_last_page = 0
-        self.lt_toc_min_entries = 0
+        self.lt_list_number_tolerance_llx = 10
+        self.lt_toc_last_page = 5
+        self.lt_toc_min_entries = 5
 
-        self.pdf2image_type = ""
+        self.pdf2image_type = "jpeg"
 
-        self.tesseract_timeout = 0
-
+        self.tesseract_timeout = 30
         self.verbose_parser = "none"
 
         self._load_config()
@@ -342,7 +348,6 @@ class Setup:
             Setup._DCR_CFG_JSON_INCL_LIST_NUMBER, self.is_json_incl_list_number
         )
         self.is_json_incl_params = self._determine_config_param_boolean(Setup._DCR_CFG_JSON_INCL_PARAMS, self.is_json_incl_params)
-        self.is_json_incl_table = self._determine_config_param_boolean(Setup._DCR_CFG_JSON_INCL_TABLE, self.is_json_incl_table)
 
         self.json_indent = self._determine_config_param_integer(Setup._DCR_CFG_JSON_INDENT, self.json_indent)
 
@@ -402,13 +407,8 @@ class Setup:
 
         self.tesseract_timeout = self._determine_config_param_integer(Setup._DCR_CFG_TESSERACT_TIMEOUT, self.tesseract_timeout)
 
-        self.is_tokenize_2_database = self._determine_config_param_boolean(Setup._DCR_CFG_TOKENIZE_2_DATABASE, self.is_tokenize_2_database)
         self.is_tokenize_2_jsonfile = self._determine_config_param_boolean(Setup._DCR_CFG_TOKENIZE_2_JSONFILE, self.is_tokenize_2_jsonfile)
-        if not self.is_tokenize_2_database:
-            if not self.is_tokenize_2_jsonfile:
-                core_utils.terminate_fatal(
-                    "At least one of the configuration parameters 'tokenize_2_database' or " + "'tokenize_2_jsonfile' must be 'true'"
-                )
+        self.is_tokenize_2_xmlfile = self._determine_config_param_boolean(Setup._DCR_CFG_TOKENIZE_2_XMLFILE, self.is_tokenize_2_xmlfile)
 
         self.is_verbose = self._determine_config_param_boolean(Setup._DCR_CFG_VERBOSE, self.is_verbose)
         self.is_verbose_lt_header_footer = self._determine_config_param_boolean(
@@ -739,7 +739,6 @@ class Setup:
                             | Setup._DCR_CFG_JSON_INCL_LIST_BULLET
                             | Setup._DCR_CFG_JSON_INCL_LIST_NUMBER
                             | Setup._DCR_CFG_JSON_INCL_PARAMS
-                            | Setup._DCR_CFG_JSON_INCL_TABLE
                             | Setup._DCR_CFG_JSON_INDENT
                             | Setup._DCR_CFG_JSON_SORT_KEYS
                             | Setup._DCR_CFG_LT_FOOTER_MAX_DISTANCE
@@ -833,8 +832,8 @@ class Setup:
                             | Setup._DCR_CFG_SPACY_TKN_ATTR_VOCAB
                             | Setup._DCR_CFG_SPACY_TKN_ATTR_WHITESPACE_
                             | Setup._DCR_CFG_TESSERACT_TIMEOUT
-                            | Setup._DCR_CFG_TOKENIZE_2_DATABASE
                             | Setup._DCR_CFG_TOKENIZE_2_JSONFILE
+                            | Setup._DCR_CFG_TOKENIZE_2_XMLFILE
                             | Setup._DCR_CFG_VERBOSE
                             | Setup._DCR_CFG_VERBOSE_LT_HEADER_FOOTER
                             | Setup._DCR_CFG_VERBOSE_LT_HEADING

@@ -179,7 +179,6 @@ def create_config() -> nlp_core.NLPCore.ConfigJSON:
         nlp_core.NLPCore.JSON_NAME_JSON_INCL_LIST_BULLET: core_glob.inst_setup.is_json_incl_list_bullet,
         nlp_core.NLPCore.JSON_NAME_JSON_INCL_LIST_NUMBER: core_glob.inst_setup.is_json_incl_list_number,
         nlp_core.NLPCore.JSON_NAME_JSON_INCL_PARAMS: core_glob.inst_setup.is_json_incl_params,
-        nlp_core.NLPCore.JSON_NAME_JSON_INCL_TABLE: core_glob.inst_setup.is_json_incl_table,
         nlp_core.NLPCore.JSON_NAME_JSON_INDENT: core_glob.inst_setup.json_indent,
         nlp_core.NLPCore.JSON_NAME_JSON_SORT_KEYS: core_glob.inst_setup.is_json_sort_keys,
         nlp_core.NLPCore.JSON_NAME_LT_FOOTER_MAX_DISTANCE: core_glob.inst_setup.lt_footer_max_distance,
