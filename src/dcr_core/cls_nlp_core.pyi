@@ -84,7 +84,6 @@ class NLPCore:
     JSON_NAME_LT_LIST_NUMBER_MIN_ENTRIES: ClassVar[str]
     JSON_NAME_LT_LIST_NUMBER_RULE_FILE: ClassVar[str]
     JSON_NAME_LT_LIST_NUMBER_TOLERANCE_LLX: ClassVar[str]
-    JSON_NAME_LT_TABLE_FILE_INCL_EMPTY_COLUMNS: ClassVar[str]
     JSON_NAME_LT_TOC_LAST_PAGE: ClassVar[str]
     JSON_NAME_LT_TOC_MIN_ENTRIES: ClassVar[str]
 
@@ -181,6 +180,10 @@ class NLPCore:
     JSON_NAME_SPACY_TKN_VOCAB: ClassVar[str]
     JSON_NAME_SPACY_TKN_WHITESPACE_: ClassVar[str]
 
+    JSON_NAME_TABLE_CELL_SPAN: ClassVar[str]
+    JSON_NAME_TABLE_NO: ClassVar[str]
+    JSON_NAME_TABLE_NO_CELL: ClassVar[str]
+    JSON_NAME_TABLE_NO_ROW: ClassVar[str]
     JSON_NAME_TEXT: ClassVar[str]
     JSON_NAME_TOKENIZER: ClassVar[str]
     JSON_NAME_TYPE: ClassVar[str]
@@ -234,10 +237,8 @@ class NLPCore:
     JSON_NAME_PARA: ClassVar[str]
     JSON_NAME_REGEXP: ClassVar[str]
     JSON_NAME_ROW: ClassVar[str]
-    JSON_NAME_ROW_NO: ClassVar[str]
     JSON_NAME_SENTENCES: ClassVar[str]
     JSON_NAME_TABLE: ClassVar[str]
-    JSON_NAME_TABLE_NO: ClassVar[str]
     JSON_NAME_TABLES: ClassVar[str]
     # wwe
     # JSON_NAME_TOKEN_CLUSTER: ClassVar[str]

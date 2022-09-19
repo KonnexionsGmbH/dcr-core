@@ -247,7 +247,6 @@ def fxtr_before_any_test():
         (setup.Setup._DCR_CFG_LT_LIST_NUMBER_MIN_ENTRIES, "2"),
         (setup.Setup._DCR_CFG_LT_LIST_NUMBER_RULE_FILE, "data/lt_export_rule_list_number_test.json"),
         (setup.Setup._DCR_CFG_LT_LIST_NUMBER_TOLERANCE_LLX, "5"),
-        (setup.Setup._DCR_CFG_LT_TABLE_FILE_INCL_EMPTY_COLUMNS, "false"),
         (setup.Setup._DCR_CFG_LT_TOC_LAST_PAGE, "5"),
         (setup.Setup._DCR_CFG_LT_TOC_MIN_ENTRIES, "5"),
         (setup.Setup._DCR_CFG_PDF2IMAGE_TYPE, setup.Setup.PDF2IMAGE_TYPE_JPEG),
@@ -259,7 +258,6 @@ def fxtr_before_any_test():
         (setup.Setup._DCR_CFG_VERBOSE_LT_HEADING, "false"),
         (setup.Setup._DCR_CFG_VERBOSE_LT_LIST_BULLET, "false"),
         (setup.Setup._DCR_CFG_VERBOSE_LT_LIST_NUMBER, "false"),
-        (setup.Setup._DCR_CFG_VERBOSE_LT_TABLE, "false"),
         (setup.Setup._DCR_CFG_VERBOSE_LT_TOC, "false"),
         (setup.Setup._DCR_CFG_VERBOSE_PARSER, "none"),
     ):

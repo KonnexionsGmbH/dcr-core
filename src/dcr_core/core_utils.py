@@ -198,7 +198,6 @@ def create_config() -> nlp_core.NLPCore.ConfigJSON:
         nlp_core.NLPCore.JSON_NAME_LT_LIST_NUMBER_MIN_ENTRIES: core_glob.inst_setup.lt_list_number_min_entries,
         nlp_core.NLPCore.JSON_NAME_LT_LIST_NUMBER_RULE_FILE: core_glob.inst_setup.lt_list_number_rule_file,
         nlp_core.NLPCore.JSON_NAME_LT_LIST_NUMBER_TOLERANCE_LLX: core_glob.inst_setup.lt_list_number_tolerance_llx,
-        nlp_core.NLPCore.JSON_NAME_LT_TABLE_FILE_INCL_EMPTY_COLUMNS: core_glob.inst_setup.is_lt_table_file_incl_empty_columns,
         nlp_core.NLPCore.JSON_NAME_LT_TOC_LAST_PAGE: core_glob.inst_setup.lt_toc_last_page,
         nlp_core.NLPCore.JSON_NAME_LT_TOC_MIN_ENTRIES: core_glob.inst_setup.lt_toc_min_entries,
         nlp_core.NLPCore.JSON_NAME_SPACY_IGNORE_BRACKET: core_glob.inst_setup.is_spacy_ignore_bracket,
@@ -433,10 +432,10 @@ def terminate_fatal(error_msg: str) -> None:
         error_msg (str): Error message.
     """
     print("")
+    traceback.print_stack()
+    print("")
     print(core_glob.LOGGER_FATAL_HEAD)
     print(core_glob.LOGGER_FATAL_HEAD, error_msg, core_glob.LOGGER_FATAL_TAIL, sep="")
     print(core_glob.LOGGER_FATAL_HEAD)
-
-    traceback.print_exc(chain=True)
 
     sys.exit(1)

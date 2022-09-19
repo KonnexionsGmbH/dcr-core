@@ -75,7 +75,6 @@ class Process:
         self._is_lt_heading_required = False
         self._is_lt_list_bullet_required = False
         self._is_lt_list_number_required = False
-        self._is_lt_table_required = False
         self._is_lt_toc_required = False
         self._is_pandoc = False
         self._is_pdf2image = False
@@ -250,7 +249,6 @@ class Process:
             is_lt_heading_required=self._is_lt_heading_required,
             is_lt_list_bullet_required=self._is_lt_list_bullet_required,
             is_lt_list_number_required=self._is_lt_list_number_required,
-            is_lt_table_required=self._is_lt_table_required,
             is_lt_toc_required=self._is_lt_toc_required,
             no_pdf_pages=self._no_pdf_pages,
         )
@@ -477,7 +475,6 @@ class Process:
         is_lt_heading_required: bool = None,
         is_lt_list_bullet_required: bool = None,
         is_lt_list_number_required: bool = None,
-        is_lt_table_required: bool = None,
         is_lt_toc_required: bool = None,
         is_verbose: bool = None,
         language_pandoc: str = None,
@@ -525,9 +522,6 @@ class Process:
             is_lt_list_number_required (bool, optional):
                 If it is set to **`true`**, the determination of the numbered lists is performed.
                 Defaults to parameter `lt_list_number_required` in `setup.cfg`.
-            is_lt_table_required (bool, optional):
-                If it is set to **`true`**, the determination of the table lines is performed.
-                Defaults to parameter `lt_table_required` in `setup.cfg`.
             is_lt_toc_required (bool, optional):
                 If it is set to **`true`**, the determination of the TOC lines is performed.
                 Defaults to parameter `lt_toc_required` in `setup.cfg`.
@@ -586,7 +580,6 @@ class Process:
         self._is_lt_list_number_required = (
             is_lt_list_number_required if is_lt_list_number_required is not None else core_glob.inst_setup.is_lt_list_number_required
         )
-        self._is_lt_table_required = is_lt_table_required if is_lt_table_required is not None else core_glob.inst_setup.is_lt_table_required
         self._is_lt_toc_required = is_lt_toc_required if is_lt_toc_required is not None else core_glob.inst_setup.is_lt_toc_required
         self._is_verbose = is_verbose if is_verbose is not None else core_glob.inst_setup.is_verbose
         self._language_pandoc = language_pandoc if language_pandoc else nlp_core.NLPCore.LANGUAGE_PANDOC_DEFAULT
@@ -598,7 +591,6 @@ class Process:
         core_glob.logger.debug("param is_lt_heading_required    =%s", self._is_lt_heading_required)
         core_glob.logger.debug("param is_lt_list_bullet_required=%s", self._is_lt_list_bullet_required)
         core_glob.logger.debug("param is_lt_list_number_required=%s", self._is_lt_list_number_required)
-        core_glob.logger.debug("param is_lt_table_required      =%s", self._is_lt_table_required)
         core_glob.logger.debug("param is_lt_toc_required        =%s", self._is_lt_toc_required)
         core_glob.logger.debug("param full_name_orig            =%s", self._full_name_orig)
         core_glob.logger.debug("param language_pandoc           =%s", self._language_pandoc)
@@ -743,7 +735,6 @@ class Process:
         is_lt_heading_required: bool = False,
         is_lt_list_bullet_required: bool = False,
         is_lt_list_number_required: bool = False,
-        is_lt_table_required: bool = False,
         is_lt_toc_required: bool = False,
     ) -> tuple[str, str]:
         """Extract the text from the PDF document.
@@ -780,9 +771,6 @@ class Process:
             is_lt_list_number_required (bool, optional):
                 If it is set to **`true`**, the determination of the numbered lists is performed.
                 Defaults to False.
-            is_lt_table_required (bool, optional):
-                If it is set to **`true`**, the determination of the table lines is performed.
-                Defaults to False.
             is_lt_toc_required (bool, optional):
                 If it is set to **`true`**, the determination of the TOC lines is performed.
                 Defaults to False.
@@ -809,7 +797,6 @@ class Process:
         core_glob.logger.debug("param is_lt_heading_required    =%s", is_lt_heading_required)
         core_glob.logger.debug("param is_lt_list_bullet_required=%s", is_lt_list_bullet_required)
         core_glob.logger.debug("param is_lt_list_number_required=%s", is_lt_list_number_required)
-        core_glob.logger.debug("param is_lt_table_required      =%s", is_lt_table_required)
         core_glob.logger.debug("param is_lt_toc_required        =%s", is_lt_toc_required)
         core_glob.logger.debug("param no_pdf_pages              =%i", no_pdf_pages)
 
@@ -843,7 +830,6 @@ class Process:
                             is_lt_heading_required=is_lt_heading_required,
                             is_lt_list_bullet_required=is_lt_list_bullet_required,
                             is_lt_list_number_required=is_lt_list_number_required,
-                            is_lt_table_required=is_lt_table_required,
                             is_lt_toc_required=is_lt_toc_required,
                             no_pdf_pages=no_pdf_pages,
                             parent=child,

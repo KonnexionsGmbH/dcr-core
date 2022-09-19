@@ -31,6 +31,13 @@ ARG_LANGUAGE_SPACY = "language_spacy"
 ARG_LANGUAGE_TESSERACT = "language_tesseract"
 ARG_OUTPUT_DIRECTORY = "output_directory"
 
+DEFAULT_LT_FOOTER_REQUIRED = False
+DEFAULT_LT_HEADER_REQUIRED = False
+DEFAULT_LT_HEADING_REQUIRED = False
+DEFAULT_LT_LIST_BULLET_REQUIRED = False
+DEFAULT_LT_LIST_NUMBER_REQUIRED = False
+DEFAULT_LT_TOC_REQUIRED = False
+
 LOCALE = "en_US.UTF-8"
 
 
@@ -147,7 +154,9 @@ def main(argv: list[str]) -> None:
         document_files.append(args[ARG_INPUT_SOURCE])
     else:
         for file in os.listdir(args[ARG_INPUT_SOURCE]):
-            document_files.append(os.path.join(args[ARG_INPUT_SOURCE], file))
+            path = os.path.join(args[ARG_INPUT_SOURCE], file)
+            if os.path.isfile(path):
+                document_files.append(path)
         if not document_files:
             utils.terminate_fatal(
                 f"The document file directory specified doesn't contain any files: {args[ARG_INPUT_SOURCE]}",
@@ -160,36 +169,21 @@ def main(argv: list[str]) -> None:
             process.Process().document(
                 full_name_in=document,
                 is_delete_auxiliary_files=bool(args[ARG_IS_DELETE_AUXILIARY_FILES]),
-                is_lt_footer_required=True,
-                is_lt_header_required=False,
-                is_lt_heading_required=False,
-                is_lt_list_bullet_required=False,
-                is_lt_list_number_required=False,
-                is_lt_table_required=False,
-                is_lt_toc_required=False,
+                is_lt_footer_required=DEFAULT_LT_FOOTER_REQUIRED,
+                is_lt_header_required=DEFAULT_LT_HEADER_REQUIRED,
+                is_lt_heading_required=DEFAULT_LT_HEADING_REQUIRED,
+                is_lt_list_bullet_required=DEFAULT_LT_LIST_BULLET_REQUIRED,
+                is_lt_list_number_required=DEFAULT_LT_LIST_NUMBER_REQUIRED,
+                is_lt_toc_required=DEFAULT_LT_TOC_REQUIRED,
                 is_verbose=bool(args[ARG_IS_VERBOSE]),
                 output_directory=args[ARG_OUTPUT_DIRECTORY],
             )
-        except AttributeError as exc:
-            utils.progress_msg(bool(args[ARG_IS_VERBOSE]), "-" * 80)
-            utils.progress_msg(bool(args[ARG_IS_VERBOSE]), f"Abort processing document file {document}")
-            utils.progress_msg(bool(args[ARG_IS_VERBOSE]), f"AttributeError: {str(exc)}")
-            utils.progress_msg(bool(args[ARG_IS_VERBOSE]), "-" * 80)
-            traceback.print_exc()
-            utils.progress_msg(bool(args[ARG_IS_VERBOSE]), "=" * 80)
-        except KeyError as exc:
-            utils.progress_msg(bool(args[ARG_IS_VERBOSE]), "-" * 80)
-            utils.progress_msg(bool(args[ARG_IS_VERBOSE]), f"Abort processing document file {document}")
-            utils.progress_msg(bool(args[ARG_IS_VERBOSE]), f"KeyError: {str(exc)}")
-            utils.progress_msg(bool(args[ARG_IS_VERBOSE]), "-" * 80)
-            traceback.print_exc()
-            utils.progress_msg(bool(args[ARG_IS_VERBOSE]), "=" * 80)
         except RuntimeError as exc:
             utils.progress_msg(bool(args[ARG_IS_VERBOSE]), "-" * 80)
             utils.progress_msg(bool(args[ARG_IS_VERBOSE]), f"Abort processing document file {document}")
             utils.progress_msg(bool(args[ARG_IS_VERBOSE]), f"RuntimeError: {str(exc)}")
             utils.progress_msg(bool(args[ARG_IS_VERBOSE]), "-" * 80)
-            traceback.print_exc()
+            traceback.print_stack()
             utils.progress_msg(bool(args[ARG_IS_VERBOSE]), "=" * 80)
 
     print("End   launcher.py")

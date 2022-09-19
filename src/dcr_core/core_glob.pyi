@@ -11,7 +11,6 @@ import dcr_core.cls_line_type_header_footer as lt_hf
 import dcr_core.cls_line_type_heading as lt_h
 import dcr_core.cls_line_type_list_bullet as lt_lb
 import dcr_core.cls_line_type_list_number as lt_ln
-import dcr_core.cls_line_type_table as lt_tab
 import dcr_core.cls_line_type_toc as lt_toc
 import dcr_core.cls_nlp_core as nlp_core
 import dcr_core.cls_setup as setup
@@ -44,7 +43,6 @@ inst_lt_h: lt_h.LineTypeHeading
 inst_lt_hf: lt_hf.LineTypeHeaderFooter
 inst_lt_lb: lt_lb.LineTypeListBullet
 inst_lt_ln: lt_ln.LineTypeListNumber
-inst_lt_tab: lt_tab.LineTypeTable
 inst_lt_toc: lt_toc.LineTypeToc
 inst_nlp_core: nlp_core.NLPCore
 inst_parser: parser.TextParser

@@ -107,7 +107,6 @@ class NLPCore:
     JSON_NAME_LT_LIST_NUMBER_MIN_ENTRIES: ClassVar[str] = "ltListNumberMinEntries"
     JSON_NAME_LT_LIST_NUMBER_RULE_FILE: ClassVar[str] = "ltListNumberRuleFile"
     JSON_NAME_LT_LIST_NUMBER_TOLERANCE_LLX: ClassVar[str] = "ltListNumberToleranceLlx"
-    JSON_NAME_LT_TABLE_FILE_INCL_EMPTY_COLUMNS: ClassVar[str] = "ltTableFileInclEmptyColumns"
     JSON_NAME_LT_TOC_LAST_PAGE: ClassVar[str] = "ltTocLastPage"
     JSON_NAME_LT_TOC_MIN_ENTRIES: ClassVar[str] = "ltTocMinEntries"
 
@@ -204,6 +203,10 @@ class NLPCore:
     JSON_NAME_SPACY_TKN_VOCAB: ClassVar[str] = "spacyTknVocab"
     JSON_NAME_SPACY_TKN_WHITESPACE_: ClassVar[str] = "spacyTknWhitespace_"
 
+    JSON_NAME_TABLE_CELL_SPAN: ClassVar[str] = "tableCellSpan"
+    JSON_NAME_TABLE_NO: ClassVar[str] = "tableNo"
+    JSON_NAME_TABLE_NO_CELL: ClassVar[str] = "tableCellNo"
+    JSON_NAME_TABLE_NO_ROW: ClassVar[str] = "tableRowNo"
     JSON_NAME_TEXT: ClassVar[str] = "text"
     JSON_NAME_TOKENIZER: ClassVar[str] = "tokenizer"
     JSON_NAME_TYPE: ClassVar[str] = "type"
@@ -257,10 +260,8 @@ class NLPCore:
     JSON_NAME_PARA: ClassVar[str] = "para"
     JSON_NAME_REGEXP: ClassVar[str] = "regexp"
     JSON_NAME_ROW: ClassVar[str] = "row"
-    JSON_NAME_ROW_NO: ClassVar[str] = "rowNo"
     JSON_NAME_SENTENCES: ClassVar[str] = "sentences"
     JSON_NAME_TABLE: ClassVar[str] = "table"
-    JSON_NAME_TABLE_NO: ClassVar[str] = "tableNo"
     JSON_NAME_TABLES: ClassVar[str] = "tables"
     # wwe
     # JSON_NAME_TOKEN_CLUSTER: ClassVar[str] = "tknCluster"

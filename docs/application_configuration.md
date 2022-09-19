@@ -134,8 +134,6 @@ The customisable entries are:
 | lt_list_number_required          | If it is set to **`true`**, the determination of the numbered lists lines is performed.                              |
 | lt_list_number_rule_file         | File with rules to determine the numbered lists.                                                                     |
 | lt_list_number_tolerance_llx     | Tolerance of vertical indentation in percent.                                                                        |
-| lt_table_file_incl_empty_columns | If it is set to **`true`**, the empty <br/>cells are included in the separate <br/>**`JSON`** file with the tables.  |
-| lt_table_required                | If it is set to **`true`**, the determination of the table lines is performed.                                       |
 | lt_toc_last_page                 | Maximum number of pages for the search of the TOC (from the beginning).                                              |
 | lt_toc_min_entries               | Minimum number of TOC entries.                                                                                       |
 | lt_toc_required                  | If it is set to **`true`**, the determination of the TOC lines is performed.                                         |
@@ -148,7 +146,6 @@ The customisable entries are:
 | verbose_lt_heading               | Display progress messages for heading line type determination.                                                       |
 | verbose_lt_list_bullet           | Display progress messages for line type determination of a bulleted list.                                            |
 | verbose_lt_list_number           | Display progress messages for line type determination of a numbered list.                                            |
-| verbose_lt_table                 | Display progress messages for table line type determination.                                                         |
 | verbose_lt_toc                   | Display progress messages for table of content line type determination.                                              |
 | verbose_parser                   | Display progress messages for parsing **`xml`** (TETML) : <br>**`all`**, **`none`** or **`text`**.                   |
 

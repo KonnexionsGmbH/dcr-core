@@ -61,8 +61,6 @@ class Setup:
     _DCR_CFG_LT_LIST_NUMBER_REQUIRED: ClassVar[str] = "lt_list_number_required"
     _DCR_CFG_LT_LIST_NUMBER_RULE_FILE: ClassVar[str] = "lt_list_number_rule_file"
     _DCR_CFG_LT_LIST_NUMBER_TOLERANCE_LLX: ClassVar[str] = "lt_list_number_tolerance_llx"
-    _DCR_CFG_LT_TABLE_FILE_INCL_EMPTY_COLUMNS: ClassVar[str] = "lt_table_file_incl_empty_columns"
-    _DCR_CFG_LT_TABLE_REQUIRED: ClassVar[str] = "lt_table_required"
     _DCR_CFG_LT_TOC_LAST_PAGE: ClassVar[str] = "lt_toc_last_page"
     _DCR_CFG_LT_TOC_MIN_ENTRIES: ClassVar[str] = "lt_toc_min_entries"
     _DCR_CFG_LT_TOC_REQUIRED: ClassVar[str] = "lt_toc_required"
@@ -148,7 +146,6 @@ class Setup:
     _DCR_CFG_VERBOSE_LT_HEADING: ClassVar[str] = "verbose_lt_heading"
     _DCR_CFG_VERBOSE_LT_LIST_BULLET: ClassVar[str] = "verbose_lt_list_bullet"
     _DCR_CFG_VERBOSE_LT_LIST_NUMBER: ClassVar[str] = "verbose_lt_list_number"
-    _DCR_CFG_VERBOSE_LT_TABLE: ClassVar[str] = "verbose_lt_table"
     _DCR_CFG_VERBOSE_LT_TOC: ClassVar[str] = "verbose_lt_toc"
     _DCR_CFG_VERBOSE_PARSER: ClassVar[str] = "verbose_parser"
 
@@ -203,8 +200,6 @@ class Setup:
         self.is_lt_list_bullet_required = False
         self.is_lt_list_number_file_incl_regexp = False
         self.is_lt_list_number_required = False
-        self.is_lt_table_file_incl_empty_columns = False
-        self.is_lt_table_required = False
         self.is_lt_toc_required = False
 
         # ------------------------------------------------------------------
@@ -288,7 +283,6 @@ class Setup:
         self.is_verbose_lt_heading = False
         self.is_verbose_lt_list_bullet = False
         self.is_verbose_lt_list_number = False
-        self.is_verbose_lt_table = False
         self.is_verbose_lt_toc = False
 
         self.json_indent = 0
@@ -397,10 +391,6 @@ class Setup:
         self.lt_list_number_tolerance_llx = self._determine_config_param_integer(
             Setup._DCR_CFG_LT_LIST_NUMBER_TOLERANCE_LLX, self.lt_list_number_tolerance_llx
         )
-        self.is_lt_table_file_incl_empty_columns = self._determine_config_param_boolean(
-            Setup._DCR_CFG_LT_TABLE_FILE_INCL_EMPTY_COLUMNS, self.is_lt_table_file_incl_empty_columns
-        )
-        self.is_lt_table_required = self._determine_config_param_boolean(Setup._DCR_CFG_LT_TABLE_REQUIRED, self.is_lt_table_required)
         self.lt_toc_last_page = self._determine_config_param_integer(Setup._DCR_CFG_LT_TOC_LAST_PAGE, self.lt_toc_last_page)
         self.lt_toc_min_entries = self._determine_config_param_integer(Setup._DCR_CFG_LT_TOC_MIN_ENTRIES, self.lt_toc_min_entries)
         self.is_lt_toc_required = self._determine_config_param_boolean(Setup._DCR_CFG_LT_TOC_REQUIRED, self.is_lt_toc_required)
@@ -431,7 +421,6 @@ class Setup:
         self.is_verbose_lt_list_number = self._determine_config_param_boolean(
             Setup._DCR_CFG_VERBOSE_LT_LIST_NUMBER, self.is_verbose_lt_list_number
         )
-        self.is_verbose_lt_table = self._determine_config_param_boolean(Setup._DCR_CFG_VERBOSE_LT_TABLE, self.is_verbose_lt_table)
         self.is_verbose_lt_toc = self._determine_config_param_boolean(Setup._DCR_CFG_VERBOSE_LT_TOC, self.is_verbose_lt_toc)
         self._check_config_verbose_parser()
 
@@ -772,8 +761,6 @@ class Setup:
                             | Setup._DCR_CFG_LT_LIST_NUMBER_MIN_ENTRIES
                             | Setup._DCR_CFG_LT_LIST_NUMBER_REQUIRED
                             | Setup._DCR_CFG_LT_LIST_NUMBER_TOLERANCE_LLX
-                            | Setup._DCR_CFG_LT_TABLE_FILE_INCL_EMPTY_COLUMNS
-                            | Setup._DCR_CFG_LT_TABLE_REQUIRED
                             | Setup._DCR_CFG_LT_TOC_LAST_PAGE
                             | Setup._DCR_CFG_LT_TOC_MIN_ENTRIES
                             | Setup._DCR_CFG_LT_TOC_REQUIRED
@@ -853,7 +840,6 @@ class Setup:
                             | Setup._DCR_CFG_VERBOSE_LT_HEADING
                             | Setup._DCR_CFG_VERBOSE_LT_LIST_BULLET
                             | Setup._DCR_CFG_VERBOSE_LT_LIST_NUMBER
-                            | Setup._DCR_CFG_VERBOSE_LT_TABLE
                             | Setup._DCR_CFG_VERBOSE_LT_TOC
                             | Setup._DCR_CFG_VERBOSE_PARSER
                         ):

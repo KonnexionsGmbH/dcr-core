@@ -21,7 +21,6 @@ import dcr_core.cls_line_type_header_footer as lt_hf
 import dcr_core.cls_line_type_heading as lt_h
 import dcr_core.cls_line_type_list_bullet as lt_lb
 import dcr_core.cls_line_type_list_number as lt_ln
-import dcr_core.cls_line_type_table as lt_tab
 import dcr_core.cls_line_type_toc as lt_toc
 import dcr_core.cls_nlp_core as nlp_core
 from dcr_core import core_glob
@@ -59,7 +58,6 @@ class TextParser:
         self._is_lt_heading_required = False
         self._is_lt_list_bullet_required = False
         self._is_lt_list_number_required = False
-        self._is_lt_table_required = False
         self._is_lt_toc_required = False
         self._is_word_processing = False
         self._no_pdf_pages = 0
@@ -76,13 +74,16 @@ class TextParser:
         self._parse_result_line_word_no_first = 0
         self._parse_result_line_word_no_last = 0
         self._parse_result_llx: float = 0.0
+        self._parse_result_no_cells_row = 0
         self._parse_result_no_fonts = 0
         self._parse_result_no_lines_line = 0
         self._parse_result_no_lines_page = 0
         self._parse_result_no_lines_para = 0
         self._parse_result_no_lines_word = 0
         self._parse_result_no_paras = 0
+        self._parse_result_no_rows_table = 0
         self._parse_result_no_paras_page = 0
+        self._parse_result_no_tables = 0
         self._parse_result_no_titles = 0
         self._parse_result_no_words = 0
         self._parse_result_no_words_line = 0
@@ -101,13 +102,12 @@ class TextParser:
         self._parse_result_para_word_no_last = 0
         self._parse_result_size = 0.00
         self._parse_result_table = False
-        self._parse_result_table_cell = 0
         self._parse_result_table_cell_is_empty = False
-        self._parse_result_table_col_span = 0
-        self._parse_result_table_col_span_prev = 0
-        self._parse_result_table_row = 0
+        self._parse_result_table_cell_span = 0
+        self._parse_result_table_cell_span_prev = 0
         self._parse_result_text = ""
         self._parse_result_urx = 0.0
+
         self.no_errors = 0
 
         self.parse_result_no_pages = 0
@@ -144,7 +144,6 @@ class TextParser:
         params[nlp_core.NLPCore.JSON_NAME_LINE_TYPE_HEADING_REQUIRED] = self._is_lt_heading_required
         params[nlp_core.NLPCore.JSON_NAME_LINE_TYPE_LIST_BULLET_REQUIRED] = self._is_lt_list_bullet_required
         params[nlp_core.NLPCore.JSON_NAME_LINE_TYPE_LIST_NUMBER_REQUIRED] = self._is_lt_list_number_required
-        params[nlp_core.NLPCore.JSON_NAME_LINE_TYPE_TABLE_REQUIRED] = self._is_lt_table_required
         params[nlp_core.NLPCore.JSON_NAME_LINE_TYPE_TOC_REQUIRED] = self._is_lt_toc_required
 
         return params
@@ -224,21 +223,6 @@ class TextParser:
             core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LINES_TOC] = core_glob.inst_lt_toc.no_lines_toc
 
         # ------------------------------------------------------------------
-        # Line type table.
-        # ------------------------------------------------------------------
-        if self._is_lt_table_required:
-            core_glob.inst_lt_tab = lt_tab.LineTypeTable(
-                file_name_curr=self._file_name_curr,
-            )
-            core_glob.inst_lt_tab.process_document(
-                file_name_curr=self._file_name_curr,
-                directory_name=self._directory_name,
-                document_id=self._document_id,
-                file_name_orig=self._file_name_orig,
-            )
-            core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_TABLES] = core_glob.inst_lt_tab.no_tables
-
-        # ------------------------------------------------------------------
         # Line type bulleted list.
         # ------------------------------------------------------------------
         if self._is_lt_list_bullet_required:
@@ -299,7 +283,7 @@ class TextParser:
         for child in parent:
             child_tag = child.tag[nlp_core.NLPCore.PARSE_ELEM_FROM :]
             match child_tag:
-                case nlp_core.NLPCore.PARSE_ELEM_ACTION:
+                case (nlp_core.NLPCore.PARSE_ELEM_ACTION | nlp_core.NLPCore.PARSE_ELEM_TITLE):
                     pass
                 case nlp_core.NLPCore.PARSE_ELEM_BOOKMARK:
                     self._parse_tag_bookmark(child_tag, child)
@@ -351,18 +335,17 @@ class TextParser:
         for child in parent:
             child_tag = child.tag[nlp_core.NLPCore.PARSE_ELEM_FROM :]
             match child_tag:
-                case (
-                    nlp_core.NLPCore.PARSE_ELEM_GLYPH
-                    | nlp_core.NLPCore.PARSE_ELEM_PLACED_IMAGE
-                    | nlp_core.NLPCore.PARSE_ELEM_TABLE
-                    | nlp_core.NLPCore.PARSE_ELEM_TEXT
-                    | nlp_core.NLPCore.PARSE_ELEM_WORD
-                ):
+                case (nlp_core.NLPCore.PARSE_ELEM_A | nlp_core.NLPCore.PARSE_ELEM_GLYPH | nlp_core.NLPCore.PARSE_ELEM_PLACED_IMAGE):
                     self._parse_tag_glyph(child_tag, child)
                 case nlp_core.NLPCore.PARSE_ELEM_LINE:
                     self._parse_tag_line_line(child_tag, child)
                 case nlp_core.NLPCore.PARSE_ELEM_PARA:
                     self._parse_tag_para_line(child_tag, child)
+                case nlp_core.NLPCore.PARSE_ELEM_TABLE:
+                    if self._is_word_processing:
+                        self._parse_tag_table_word(child_tag, child)
+                    else:
+                        self._parse_tag_table_line(child_tag, child)
                 case other:
                     core_utils.progress_msg_core(
                         core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_BOX).replace("{child_tag", other)
@@ -386,16 +369,19 @@ class TextParser:
         for child in parent:
             child_tag = child.tag[nlp_core.NLPCore.PARSE_ELEM_FROM :]
             match child_tag:
+                case (nlp_core.NLPCore.PARSE_ELEM_A | nlp_core.NLPCore.PARSE_ELEM_PLACED_IMAGE):
+                    pass
                 case nlp_core.NLPCore.PARSE_ELEM_GLYPH:
                     self._parse_tag_glyph(child_tag, child)
                 case nlp_core.NLPCore.PARSE_ELEM_LINE:
                     self._parse_tag_line_word(child_tag, child)
                 case nlp_core.NLPCore.PARSE_ELEM_PARA:
                     self._parse_tag_para_word(child_tag, child)
-                case nlp_core.NLPCore.PARSE_ELEM_PLACED_IMAGE:
-                    pass
                 case nlp_core.NLPCore.PARSE_ELEM_TABLE:
-                    self._parse_tag_table(child_tag, child)
+                    if self._is_word_processing:
+                        self._parse_tag_table_word(child_tag, child)
+                    else:
+                        self._parse_tag_table_line(child_tag, child)
                 case nlp_core.NLPCore.PARSE_ELEM_TEXT:
                     self._parse_tag_text(child_tag, child)
                 case nlp_core.NLPCore.PARSE_ELEM_WORD:
@@ -411,7 +397,7 @@ class TextParser:
     # ------------------------------------------------------------------
     # Processing tag Cell.
     # ------------------------------------------------------------------
-    def _parse_tag_cell(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
+    def _parse_tag_cell_line(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
         """Process tag 'Cell'.
 
         Args:
@@ -420,46 +406,53 @@ class TextParser:
         """
         self._debug_xml_element_all("Start", parent_tag, parent.attrib, parent.text)
 
-        self._parse_result_table_cell_is_empty = True
-
-        self._parse_result_table_cell += self._parse_result_table_col_span_prev
-
-        self._parse_result_table_col_span = parent.attrib.get(nlp_core.NLPCore.PARSE_ATTR_COL_SPAN)
-
-        if self._parse_result_table_col_span:
-            self._parse_result_table_col_span_prev = int(self._parse_result_table_col_span)
-        else:
-            self._parse_result_table_col_span_prev = 1
-
         for child in parent:
             child_tag = child.tag[nlp_core.NLPCore.PARSE_ELEM_FROM :]
             match child_tag:
+                case nlp_core.NLPCore.PARSE_ELEM_PARA:
+                    self._parse_tag_para_line(child_tag, child)
                 case other:
                     core_utils.progress_msg_core(
                         core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_CELL).replace("{child_tag", other)
                     )
                     self.no_errors += 1
 
-        if self._parse_result_table_cell_is_empty:
-            self._parse_result_llx = float(parent.attrib.get(nlp_core.NLPCore.PARSE_ATTR_LLX))
-            self._parse_result_urx = float(parent.attrib.get(nlp_core.NLPCore.PARSE_ATTR_URX))
-            new_entry = {
-                nlp_core.NLPCore.JSON_NAME_COLUMN_NO: self._parse_result_table_cell,
-                nlp_core.NLPCore.JSON_NAME_COORD_LLX: self._parse_result_llx,
-                nlp_core.NLPCore.JSON_NAME_COORD_URX: self._parse_result_urx,
-                nlp_core.NLPCore.JSON_NAME_LINE_NO: self._parse_result_no_lines_para,
-                nlp_core.NLPCore.JSON_NAME_LINE_NO_PAGE: self._parse_result_index_page + 1,
-                nlp_core.NLPCore.JSON_NAME_PARA_NO: self._parse_result_no_paras_page,
-                nlp_core.NLPCore.JSON_NAME_ROW_NO: self._parse_result_table_row,
-                nlp_core.NLPCore.JSON_NAME_TEXT: "",
-                nlp_core.NLPCore.JSON_NAME_TYPE: nlp_core.NLPCore.LINE_TYPE_BODY,
-            }
+        self._debug_xml_element_all("End  ", parent_tag, parent.attrib, parent.text)
 
-            if self._parse_result_table_col_span:
-                # not testable
-                new_entry[nlp_core.NLPCore.JSON_NAME_COLUMN_SPAN] = int(self._parse_result_table_col_span)
+    # ------------------------------------------------------------------
+    # Processing tag Cell.
+    # ------------------------------------------------------------------
+    def _parse_tag_cell_word(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
+        """Process tag 'Cell'.
 
-            self._parse_result_container_lines.append(new_entry)
+        Args:
+            parent_tag (str): Parent tag.
+            parent (collections.abc.Iterable[str]): Parent data structure.
+        """
+        self._debug_xml_element_all("Start", parent_tag, parent.attrib, parent.text)
+
+        self._parse_result_no_cells_row += self._parse_result_table_cell_span_prev
+
+        self._parse_result_table_cell_span = parent.attrib.get(nlp_core.NLPCore.PARSE_ATTR_COL_SPAN)
+
+        if self._parse_result_table_cell_span:
+            self._parse_result_table_cell_span_prev = int(self._parse_result_table_cell_span)
+        else:
+            self._parse_result_table_cell_span = 1
+            self._parse_result_no_cells_row += 1
+
+        self._parse_result_table_cell_is_empty = True
+
+        for child in parent:
+            child_tag = child.tag[nlp_core.NLPCore.PARSE_ELEM_FROM :]
+            match child_tag:
+                case nlp_core.NLPCore.PARSE_ELEM_PARA:
+                    self._parse_tag_para_word(child_tag, child)
+                case other:
+                    core_utils.progress_msg_core(
+                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_CELL).replace("{child_tag", other)
+                    )
+                    self.no_errors += 1
 
         self._debug_xml_element_all("End  ", parent_tag, parent.attrib, parent.text)
 
@@ -483,6 +476,11 @@ class TextParser:
                         self._parse_tag_para_word(child_tag, child)
                     else:
                         self._parse_tag_para_line(child_tag, child)
+                case nlp_core.NLPCore.PARSE_ELEM_TABLE:
+                    if self._is_word_processing:
+                        self._parse_tag_table_word(child_tag, child)
+                    else:
+                        self._parse_tag_table_line(child_tag, child)
                 case other:
                     core_utils.progress_msg_core(
                         core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_CONTENT).replace("{child_tag", other)
@@ -640,6 +638,8 @@ class TextParser:
         for child in parent:
             child_tag = child.tag[nlp_core.NLPCore.PARSE_ELEM_FROM :]
             match child_tag:
+                case nlp_core.NLPCore.PARSE_ELEM_A:
+                    pass
                 case nlp_core.NLPCore.PARSE_ELEM_TEXT:
                     self._parse_tag_text(child_tag, child)
                 case other:
@@ -693,6 +693,8 @@ class TextParser:
         for child in parent:
             child_tag = child.tag[nlp_core.NLPCore.PARSE_ELEM_FROM :]
             match child_tag:
+                case nlp_core.NLPCore.PARSE_ELEM_A:
+                    pass
                 case nlp_core.NLPCore.PARSE_ELEM_WORD:
                     self._parse_tag_word(child_tag, child)
                 case other:
@@ -701,18 +703,33 @@ class TextParser:
                     )
                     self.no_errors += 1
 
+        if self._parse_result_table:
+            no_tables = self._parse_result_no_tables
+            no_rows_table = self._parse_result_no_rows_table
+            no_cells_row = self._parse_result_no_cells_row
+            line_type = nlp_core.NLPCore.LINE_TYPE_TABLE
+        else:
+            no_tables = 0
+            no_rows_table = 0
+            no_cells_row = 0
+            line_type = nlp_core.NLPCore.LINE_TYPE_BODY
+
         self._parse_result_container_lines.append(
             {
+                nlp_core.NLPCore.JSON_NAME_CONTAINER_WORDS: self._parse_result_container_words,
                 nlp_core.NLPCore.JSON_NAME_LINE_NO: self._parse_result_no_lines_word,
                 nlp_core.NLPCore.JSON_NAME_LINE_NO_PAGE: self._parse_result_page_line_no_first,
                 nlp_core.NLPCore.JSON_NAME_LINE_NO_PARA: self._parse_result_para_line_no_first,
                 nlp_core.NLPCore.JSON_NAME_LLX: float(parent.attrib.get(nlp_core.NLPCore.PARSE_ATTR_LLX)),
                 nlp_core.NLPCore.JSON_NAME_PAGE_NO: self.parse_result_no_pages,
-                nlp_core.NLPCore.JSON_NAME_TYPE: nlp_core.NLPCore.LINE_TYPE_BODY,
+                nlp_core.NLPCore.JSON_NAME_TABLE_CELL_SPAN: self._parse_result_table_cell_span,
+                nlp_core.NLPCore.JSON_NAME_TABLE_NO: no_tables,
+                nlp_core.NLPCore.JSON_NAME_TABLE_NO_CELL: no_cells_row,
+                nlp_core.NLPCore.JSON_NAME_TABLE_NO_ROW: no_rows_table,
+                nlp_core.NLPCore.JSON_NAME_TYPE: line_type,
                 nlp_core.NLPCore.JSON_NAME_URX: float(parent.attrib.get(nlp_core.NLPCore.PARSE_ATTR_URX)),
                 nlp_core.NLPCore.JSON_NAME_WORD_NO_FIRST: self._parse_result_line_word_no_first,
                 nlp_core.NLPCore.JSON_NAME_WORD_NO_LAST: self._parse_result_line_word_no_last,
-                nlp_core.NLPCore.JSON_NAME_CONTAINER_WORDS: self._parse_result_container_words,
             }
         )
 
@@ -894,6 +911,7 @@ class TextParser:
         self._parse_result_no_lines_word = 0
         self.parse_result_no_pages = 0
         self._parse_result_no_paras = 0
+        self.parse_result_no_tables = 0
         self._parse_result_no_words = 0
 
         # Process the tags of all document pages.
@@ -918,6 +936,7 @@ class TextParser:
             nlp_core.NLPCore.JSON_NAME_NO_LINES: self._parse_result_no_lines_word,
             nlp_core.NLPCore.JSON_NAME_NO_PAGES: self.parse_result_no_pages,
             nlp_core.NLPCore.JSON_NAME_NO_PARAS: self._parse_result_no_paras,
+            nlp_core.NLPCore.JSON_NAME_NO_TABLES: self._parse_result_no_tables,
             nlp_core.NLPCore.JSON_NAME_NO_WORDS: self._parse_result_no_words,
             nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES: self._parse_result_container_pages,
         }
@@ -1017,6 +1036,15 @@ class TextParser:
                     )
                     self.no_errors += 1
 
+        if self._parse_result_table:
+            no_tables = self._parse_result_no_tables
+            no_rows_table = self._parse_result_no_rows_table
+            no_cells_row = self._parse_result_no_cells_row
+        else:
+            no_tables = 0
+            no_rows_table = 0
+            no_cells_row = 0
+
         self._parse_result_container_paras.append(
             {
                 nlp_core.NLPCore.JSON_NAME_LINE_NO_FIRST: self._parse_result_para_line_no_first,
@@ -1024,6 +1052,10 @@ class TextParser:
                 nlp_core.NLPCore.JSON_NAME_PAGE_NO: self.parse_result_no_pages,
                 nlp_core.NLPCore.JSON_NAME_PARA_NO: self._parse_result_no_paras,
                 nlp_core.NLPCore.JSON_NAME_PARA_NO_PAGE: self._parse_result_page_para_no_first,
+                nlp_core.NLPCore.JSON_NAME_TABLE_CELL_SPAN: self._parse_result_table_cell_span,
+                nlp_core.NLPCore.JSON_NAME_TABLE_NO: no_tables,
+                nlp_core.NLPCore.JSON_NAME_TABLE_NO_CELL: no_cells_row,
+                nlp_core.NLPCore.JSON_NAME_TABLE_NO_ROW: no_rows_table,
                 nlp_core.NLPCore.JSON_NAME_WORD_NO_FIRST: self._parse_result_para_word_no_first,
                 nlp_core.NLPCore.JSON_NAME_WORD_NO_LAST: self._parse_result_para_word_no_last,
                 nlp_core.NLPCore.JSON_NAME_CONTAINER_WORDS: self._parse_result_container_words,
@@ -1062,7 +1094,7 @@ class TextParser:
     # ------------------------------------------------------------------
     # Processing tag Row.
     # ------------------------------------------------------------------
-    def _parse_tag_row(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
+    def _parse_tag_row_line(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
         """Process tag 'Row'.
 
         Args:
@@ -1071,15 +1103,40 @@ class TextParser:
         """
         self._debug_xml_element_all("Start", parent_tag, parent.attrib, parent.text)
 
-        self._parse_result_table_row += 1
-        self._parse_result_table_cell = 0
-        self._parse_result_table_col_span_prev = 1
+        for child in parent:
+            child_tag = child.tag[nlp_core.NLPCore.PARSE_ELEM_FROM :]
+            match child_tag:
+                case nlp_core.NLPCore.PARSE_ELEM_CELL:
+                    self._parse_tag_cell_line(child_tag, child)
+                case other:
+                    core_utils.progress_msg_core(
+                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_ROW).replace("{child_tag", other)
+                    )
+                    self.no_errors += 1
+
+        self._debug_xml_element_all("End  ", parent_tag, parent.attrib, parent.text)
+
+    # ------------------------------------------------------------------
+    # Processing tag Row.
+    # ------------------------------------------------------------------
+    def _parse_tag_row_word(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
+        """Process tag 'Row'.
+
+        Args:
+            parent_tag (str): Parent tag.
+            parent (collections.abc.Iterable[str]): Parent data structure.
+        """
+        self._debug_xml_element_all("Start", parent_tag, parent.attrib, parent.text)
+
+        self._parse_result_no_cells_row = 0
+
+        self._parse_result_no_rows_table += 1
 
         for child in parent:
             child_tag = child.tag[nlp_core.NLPCore.PARSE_ELEM_FROM :]
             match child_tag:
                 case nlp_core.NLPCore.PARSE_ELEM_CELL:
-                    self._parse_tag_cell(child_tag, child)
+                    self._parse_tag_cell_word(child_tag, child)
                 case other:
                     core_utils.progress_msg_core(
                         core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_ROW).replace("{child_tag", other)
@@ -1091,7 +1148,7 @@ class TextParser:
     # ------------------------------------------------------------------
     # Processing tag Table.
     # ------------------------------------------------------------------
-    def _parse_tag_table(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
+    def _parse_tag_table_line(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
         """Process tag 'Table'.
 
         Args:
@@ -1101,13 +1158,44 @@ class TextParser:
         self._debug_xml_element_all("Start", parent_tag, parent.attrib, parent.text)
 
         self._parse_result_table = True
-        self._parse_result_table_row = 0
 
         for child in parent:
             child_tag = child.tag[nlp_core.NLPCore.PARSE_ELEM_FROM :]
             match child_tag:
                 case nlp_core.NLPCore.PARSE_ELEM_ROW:
-                    self._parse_tag_row(child_tag, child)
+                    self._parse_tag_row_line(child_tag, child)
+                case other:
+                    core_utils.progress_msg_core(
+                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_TABLE).replace("{child_tag", other)
+                    )
+                    self.no_errors += 1
+
+        self._parse_result_table = False
+
+        self._debug_xml_element_all("End  ", parent_tag, parent.attrib, parent.text)
+
+    # ------------------------------------------------------------------
+    # Processing tag Table.
+    # ------------------------------------------------------------------
+    def _parse_tag_table_word(self, parent_tag: str, parent: collections.abc.Iterable[str]) -> None:
+        """Process tag 'Table'.
+
+        Args:
+            parent_tag (str): Parent tag.
+            parent (collections.abc.Iterable[str]): Parent data structure.
+        """
+        self._debug_xml_element_all("Start", parent_tag, parent.attrib, parent.text)
+
+        self._parse_result_table = True
+        self._parse_result_no_rows_table = 0
+
+        self._parse_result_no_tables += 1
+
+        for child in parent:
+            child_tag = child.tag[nlp_core.NLPCore.PARSE_ELEM_FROM :]
+            match child_tag:
+                case nlp_core.NLPCore.PARSE_ELEM_ROW:
+                    self._parse_tag_row_word(child_tag, child)
                 case other:
                     core_utils.progress_msg_core(
                         core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_TABLE).replace("{child_tag", other)
@@ -1190,12 +1278,27 @@ class TextParser:
                     )
                     self.no_errors += 1
 
+        if self._parse_result_table:
+            no_tables = self._parse_result_no_tables
+            no_rows_table = self._parse_result_no_rows_table
+            no_cells_row = self._parse_result_no_cells_row
+            line_type = nlp_core.NLPCore.LINE_TYPE_TABLE
+        else:
+            no_tables = 0
+            no_rows_table = 0
+            no_cells_row = 0
+            line_type = nlp_core.NLPCore.LINE_TYPE_BODY
+
         container_word = {
             nlp_core.NLPCore.JSON_NAME_LINE_NO: self._parse_result_no_lines_word,
             nlp_core.NLPCore.JSON_NAME_PAGE_NO: self.parse_result_no_pages,
             nlp_core.NLPCore.JSON_NAME_PARA_NO: self._parse_result_no_paras,
+            nlp_core.NLPCore.JSON_NAME_TABLE_CELL_SPAN: self._parse_result_table_cell_span,
+            nlp_core.NLPCore.JSON_NAME_TABLE_NO: no_tables,
+            nlp_core.NLPCore.JSON_NAME_TABLE_NO_CELL: no_cells_row,
+            nlp_core.NLPCore.JSON_NAME_TABLE_NO_ROW: no_rows_table,
             nlp_core.NLPCore.JSON_NAME_TEXT: self._parse_result_text,
-            nlp_core.NLPCore.JSON_NAME_TYPE: nlp_core.NLPCore.LINE_TYPE_BODY,
+            nlp_core.NLPCore.JSON_NAME_TYPE: line_type,
             nlp_core.NLPCore.JSON_NAME_WORD_NO: self._parse_result_no_words,
             nlp_core.NLPCore.JSON_NAME_WORD_NO_LINE: self._parse_result_line_word_no_first,
             nlp_core.NLPCore.JSON_NAME_WORD_NO_PAGE: self._parse_result_page_word_no_first,
@@ -1326,7 +1429,6 @@ class TextParser:
         is_lt_heading_required: bool,
         is_lt_list_bullet_required: bool,
         is_lt_list_number_required: bool,
-        is_lt_table_required: bool,
         is_lt_toc_required: bool,
         no_pdf_pages: int,
         parent: collections.abc.Iterable[str],
@@ -1357,8 +1459,6 @@ class TextParser:
                 If it is set to **`true`**, the determination of the bulleted lists is performed.
             is_lt_list_number_required (bool):
                 If it is set to **`true`**, the determination of the numbered lists is performed.
-            is_lt_table_required (bool):
-                If it is set to **`true`**, the determination of the table lines is performed.
             is_lt_toc_required (bool):
                 If it is set to **`true`**, the determination of the TOC lines is performed.
             no_pdf_pages (int):
@@ -1380,7 +1480,6 @@ class TextParser:
         core_glob.logger.debug("param is_lt_heading_required    =%s", is_lt_heading_required)
         core_glob.logger.debug("param is_lt_list_bullet_required=%s", is_lt_list_bullet_required)
         core_glob.logger.debug("param is_lt_list_number_required=%s", is_lt_list_number_required)
-        core_glob.logger.debug("param is_lt_table_required      =%s", is_lt_table_required)
         core_glob.logger.debug("param is_lt_toc_required        =%s", is_lt_toc_required)
         core_glob.logger.debug("param no_pdf_pages              =%i", no_pdf_pages)
         core_glob.logger.debug("param parent                    =%s", parent)
@@ -1401,7 +1500,6 @@ class TextParser:
         self._is_lt_heading_required = is_lt_heading_required
         self._is_lt_list_bullet_required = is_lt_list_bullet_required
         self._is_lt_list_number_required = is_lt_list_number_required
-        self._is_lt_table_required = is_lt_table_required
         self._is_lt_toc_required = is_lt_toc_required
         self._no_pdf_pages = no_pdf_pages
 

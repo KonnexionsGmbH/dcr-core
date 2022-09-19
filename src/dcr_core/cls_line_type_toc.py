@@ -185,7 +185,7 @@ class LineTypeToc:
 
         for line_json in self._lines_json:
             if line_json[nlp_core.NLPCore.JSON_NAME_LINE_TYPE] == nlp_core.NLPCore.LINE_TYPE_BODY:
-                if nlp_core.NLPCore.JSON_NAME_ROW_NO in line_json:
+                if nlp_core.NLPCore.JSON_NAME_TABLE_NO_ROW in line_json:
                     self._process_toc_candidate_table_line(line_json)
                 else:
                     self._check_toc_candidate()
@@ -222,7 +222,7 @@ class LineTypeToc:
         Args:
             line_json (nlp_core.NLPCore.LineJSON): Document line.
         """
-        row_no = line_json[nlp_core.NLPCore.JSON_NAME_ROW_NO]
+        row_no = line_json[nlp_core.NLPCore.JSON_NAME_TABLE_NO_ROW]
 
         para_no = line_json[nlp_core.NLPCore.JSON_NAME_PARA_NO]
 
@@ -285,7 +285,7 @@ class LineTypeToc:
                         ):
                             line_json[nlp_core.NLPCore.JSON_NAME_LINE_TYPE] = nlp_core.NLPCore.LINE_TYPE_TOC
                 elif self._strategy == nlp_core.NLPCore.SEARCH_STRATEGY_TABLE:
-                    if nlp_core.NLPCore.JSON_NAME_ROW_NO in line_json:
+                    if nlp_core.NLPCore.JSON_NAME_TABLE_NO_ROW in line_json:
                         if line_json[nlp_core.NLPCore.JSON_NAME_LINE_TYPE] == nlp_core.NLPCore.LINE_TYPE_BODY:
                             line_json[nlp_core.NLPCore.JSON_NAME_LINE_TYPE] = nlp_core.NLPCore.LINE_TYPE_TOC
 

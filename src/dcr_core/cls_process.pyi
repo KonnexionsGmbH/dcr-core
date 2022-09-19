@@ -34,7 +34,6 @@ class Process:
         self._is_lt_heading_required = False
         self._is_lt_list_bullet_required = False
         self._is_lt_list_number_required = False
-        self._is_lt_table_required = False
         self._is_lt_toc_required = False
         self._is_pandoc = False
         self._is_pdf2image = False
@@ -77,7 +76,6 @@ class Process:
         is_lt_heading_required: bool = ...,
         is_lt_list_bullet_required: bool = ...,
         is_lt_list_number_required: bool = ...,
-        is_lt_table_required: bool = ...,
         is_lt_toc_required: bool = ...,
         is_verbose: bool = ...,
         language_pandoc: str = ...,
@@ -100,7 +98,6 @@ class Process:
         is_lt_heading_required: bool = ...,
         is_lt_list_bullet_required: bool = ...,
         is_lt_list_number_required: bool = ...,
-        is_lt_table_required: bool = ...,
         is_lt_toc_required: bool = ...,
     ) -> tuple[str, str]: ...
     @classmethod

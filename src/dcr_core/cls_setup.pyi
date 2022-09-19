@@ -42,8 +42,6 @@ class Setup:
     _DCR_CFG_LT_LIST_NUMBER_REQUIRED: ClassVar[str]
     _DCR_CFG_LT_LIST_NUMBER_RULE_FILE: ClassVar[str]
     _DCR_CFG_LT_LIST_NUMBER_TOLERANCE_LLX: ClassVar[str]
-    _DCR_CFG_LT_TABLE_FILE_INCL_EMPTY_COLUMNS: ClassVar[str]
-    _DCR_CFG_LT_TABLE_REQUIRED: ClassVar[str]
     _DCR_CFG_LT_TOC_LAST_PAGE: ClassVar[str]
     _DCR_CFG_LT_TOC_MIN_ENTRIES: ClassVar[str]
     _DCR_CFG_LT_TOC_REQUIRED: ClassVar[str]
@@ -126,7 +124,6 @@ class Setup:
     _DCR_CFG_VERBOSE_LT_HEADING: ClassVar[str]
     _DCR_CFG_VERBOSE_LT_LIST_BULLET: ClassVar[str]
     _DCR_CFG_VERBOSE_LT_LIST_NUMBER: ClassVar[str]
-    _DCR_CFG_VERBOSE_LT_TABLE: ClassVar[str]
     _DCR_CFG_VERBOSE_LT_TOC: ClassVar[str]
     _DCR_CFG_VERBOSE_PARSER: ClassVar[str]
     _DCR_CORE_ENVIRONMENT_TYPE: ClassVar[str]
@@ -161,8 +158,6 @@ class Setup:
         self.is_lt_list_bullet_required = False
         self.is_lt_list_number_file_incl_regexp = False
         self.is_lt_list_number_required = False
-        self.is_lt_table_file_incl_empty_columns = False
-        self.is_lt_table_required = False
         self.is_lt_toc_required = False
         self.is_spacy_ignore_bracket = False
         self.is_spacy_ignore_left_punct = False
@@ -238,7 +233,6 @@ class Setup:
         self.is_verbose_lt_heading = False
         self.is_verbose_lt_list_bullet = False
         self.is_verbose_lt_list_number = False
-        self.is_verbose_lt_table = False
         self.is_verbose_lt_toc = False
         self.json_indent = 0
         self.lt_footer_max_distance = 0

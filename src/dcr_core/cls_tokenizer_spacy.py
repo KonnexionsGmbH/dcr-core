@@ -219,7 +219,7 @@ class TokenizerSpacy:
                         nlp_core.NLPCore.JSON_NAME_COORD_URX: self._coord_urx,
                         nlp_core.NLPCore.JSON_NAME_LINE_TYPE: line_type,
                         nlp_core.NLPCore.JSON_NAME_NO_TOKENS_IN_SENT: self._no_tokens_in_sent,
-                        nlp_core.NLPCore.JSON_NAME_ROW_NO: self._row_no,
+                        nlp_core.NLPCore.JSON_NAME_TABLE_NO_ROW: self._row_no,
                         nlp_core.NLPCore.JSON_NAME_TEXT: self._sentence,
                         nlp_core.NLPCore.JSON_NAME_TOKENS: self._token_tokens,
                     }
@@ -233,7 +233,7 @@ class TokenizerSpacy:
                         nlp_core.NLPCore.JSON_NAME_COORD_URX: self._coord_urx,
                         nlp_core.NLPCore.JSON_NAME_LINE_TYPE: line_type,
                         nlp_core.NLPCore.JSON_NAME_NO_TOKENS_IN_SENT: self._no_tokens_in_sent,
-                        nlp_core.NLPCore.JSON_NAME_ROW_NO: self._row_no,
+                        nlp_core.NLPCore.JSON_NAME_TABLE_NO_ROW: self._row_no,
                         nlp_core.NLPCore.JSON_NAME_TEXT: self._sentence,
                         nlp_core.NLPCore.JSON_NAME_TOKENS: self._token_tokens,
                     }
@@ -539,7 +539,7 @@ class TokenizerSpacy:
 
         if nlp_core.NLPCore.JSON_NAME_COLUMN_NO in self._text_parser_line:
             self._column_no = self._text_parser_line[nlp_core.NLPCore.JSON_NAME_COLUMN_NO]
-            self._row_no = self._text_parser_line[nlp_core.NLPCore.JSON_NAME_ROW_NO]
+            self._row_no = self._text_parser_line[nlp_core.NLPCore.JSON_NAME_TABLE_NO_ROW]
             if nlp_core.NLPCore.JSON_NAME_COLUMN_SPAN in self._text_parser_line:
                 self._column_span = self._text_parser_line[nlp_core.NLPCore.JSON_NAME_COLUMN_SPAN]
             else:

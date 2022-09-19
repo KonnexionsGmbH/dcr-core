@@ -159,37 +159,12 @@ A block of lines with the following properties is searched here:
    - the number found there must be ascending, and
    - the number must not be greater than the last page number of the document.
 
-## 3 Tables
-
-[PDFlib TET](https://www.pdflib.com/products/tet/){:target="_blank"} determines the tables contained in the **`pdf`** document and marks them accordingly in its **`xml`** output file. 
-**`DCR-CORE`** now uses these marks to determine the line type **`tab`** and optionally to output the tables in a separate **`JSON`** file.
-
-### 3.1 Parameters
-
-The following parameters control the classification of the tables:
-
-- **`lt_table_file_incl_empty_columns`**
-
-Default value: **`true`** - if true, the empty columns are included in the **`JSON`** file `<document_name>_table.json`.
-
-- **`lt_table_required`**
-
-If it is set to **`true`**, the determination of the tables is performed, else the classification of tables is prevented.
-
-- **`spacy_ignore_line_type_table`**
-
-Default value: **`false`** -  determines whether the lines of this type are ignored (**true**) or not (**false**) during tokenization.
-
-- **`verbose_lt_table`**
-
-Default value: **`false`** - the verbose mode is an option that provides additional details as to what the processing algorithm is doing.
-
-## 4 Bulleted Lists
+## 3 Bulleted Lists
 
 An element of a bulleted list extends either over a whole line or over a complete paragraph.
 All elements of a bulleted list must begin with one or more of the same characters and must not be interrupted by other lines or paragraphs.
 
-### 4.1 Parameters
+### 3.1 Parameters
 
 The following parameters control the classification of a bulleted list:
 
@@ -218,7 +193,7 @@ Default value: **`false`** -  determines whether the lines of this type are igno
 
 Default value: **`false`** - the verbose mode is an option that provides additional details as to what the processing algorithm is doing.
 
-### 4.2 Classification Identifiers
+### 3.2 Classification Identifiers
 
 The following table shows the standard identifiers in the default processing order:
 
@@ -247,13 +222,13 @@ An example file can be found in the file directory **`data`** with the file name
       ]
     }
 
-## 5 Numbered Lists
+## 4 Numbered Lists
 
 TODO
 
-## 6 Headings
+## 5 Headings
 
-### 6.1 Parameters
+### 5.1 Parameters
 
 The following parameters control the classification of the headings:
 
@@ -294,7 +269,7 @@ Default value: **`false`** -  determines whether the lines of this type are igno
 
 Default value: **`false`** - the verbose mode is an option that provides additional details as to what the processing algorithm is doing.
 
-### 6.2 Classification Rules
+### 5.2 Classification Rules
 
 A heading classification rule contains the following 5 elements:
 
@@ -377,7 +352,7 @@ An example file can be found in the file directory **`data`** with the file name
           ]
         },
 
-### 6.3 Algorithm
+### 5.3 Algorithm
 
 - the document is worked through page by page and within a page line by line
 - for each current heading level there is an entry in a hierarchy table

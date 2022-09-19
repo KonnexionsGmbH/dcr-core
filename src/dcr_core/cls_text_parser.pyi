@@ -23,7 +23,6 @@ class TextParser:
         self._is_lt_heading_required = False
         self._is_lt_list_bullet_required = False
         self._is_lt_list_number_required = False
-        self._is_lt_table_required = False
         self._is_lt_toc_required = False
         self._is_word_processing = False
         self._no_pdf_pages = 0
@@ -39,13 +38,16 @@ class TextParser:
         self._parse_result_line_word_no_first = 0
         self._parse_result_line_word_no_last = 0
         self._parse_result_llx: float = 0.0
+        self._parse_result_no_cells_row = 0
         self._parse_result_no_fonts = 0
         self._parse_result_no_lines_line = 0
         self._parse_result_no_lines_page = 0
         self._parse_result_no_lines_para = 0
         self._parse_result_no_lines_word = 0
         self._parse_result_no_paras = 0
+        self._parse_result_no_rows_table = 0
         self._parse_result_no_paras_page = 0
+        self._parse_result_no_tables = 0
         self._parse_result_no_titles = 0
         self._parse_result_no_words = 0
         self._parse_result_no_words_line = 0
@@ -64,16 +66,13 @@ class TextParser:
         self._parse_result_para_word_no_last = 0
         self._parse_result_size = 0.00
         self._parse_result_table = False
-        self._parse_result_table_cell = 0
         self._parse_result_table_cell_is_empty = False
-        self._parse_result_table_col_span = 0
-        self._parse_result_table_col_span_prev = 0
-        self._parse_result_table_row = 0
+        self._parse_result_table_cell_span = 0
+        self._parse_result_table_cell_span_prev = 0
         self._parse_result_text = ""
         self._parse_result_urx = 0.0
         self.no_errors = 0
         self.parse_result_no_pages = 0
-        self.parse_result_titles: list[str] = []
         self._exist = False
     def _create_params(self) -> nlp_core.NLPCore.ParamsJSON: ...
     @staticmethod
@@ -129,7 +128,6 @@ class TextParser:
         is_lt_heading_required: bool,
         is_lt_list_bullet_required: bool,
         is_lt_list_number_required: bool,
-        is_lt_table_required: bool,
         is_lt_toc_required: bool,
         no_pdf_pages: int,
         parent: collections.abc.Iterable[str],
