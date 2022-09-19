@@ -27,9 +27,6 @@ import dcr_core.core_utils as utils
 # -----------------------------------------------------------------------------
 CONFIG_PARSER: configparser.ConfigParser = configparser.ConfigParser()
 
-FILE_NAME_SETUP_CFG = "setup.cfg"
-FILE_NAME_SETUP_CFG_BACKUP = "setup.cfg_backup"
-
 
 # -----------------------------------------------------------------------------
 # Compare the test files with the reference files.
@@ -220,6 +217,7 @@ def fxtr_before_any_test():
     # Configuration: dcr_core.
     # -----------------------------------------------------------------------------
     for (config_param, config_value) in (
+        (setup.Setup._DCR_CFG_DELETE_AUXILIARY_FILES, "true"),
         (setup.Setup._DCR_CFG_DIRECTORY_INBOX, "data/inbox_test"),
         (setup.Setup._DCR_CFG_JSON_INCL_CONFIG, "true"),
         (setup.Setup._DCR_CFG_JSON_INCL_FONTS, "true"),
@@ -231,23 +229,29 @@ def fxtr_before_any_test():
         (setup.Setup._DCR_CFG_JSON_SORT_KEYS, "true"),
         (setup.Setup._DCR_CFG_LT_FOOTER_MAX_DISTANCE, "3"),
         (setup.Setup._DCR_CFG_LT_FOOTER_MAX_LINES, "3"),
+        (setup.Setup._DCR_CFG_LT_FOOTER_REQUIRED, "true"),
         (setup.Setup._DCR_CFG_LT_HEADER_MAX_DISTANCE, "3"),
         (setup.Setup._DCR_CFG_LT_HEADER_MAX_LINES, "3"),
+        (setup.Setup._DCR_CFG_LT_HEADER_REQUIRED, "true"),
         (setup.Setup._DCR_CFG_LT_HEADING_FILE_INCL_NO_CTX, "3"),
         (setup.Setup._DCR_CFG_LT_HEADING_FILE_INCL_REGEXP, "true"),
         (setup.Setup._DCR_CFG_LT_HEADING_MAX_LEVEL, "3"),
         (setup.Setup._DCR_CFG_LT_HEADING_MIN_PAGES, "2"),
+        (setup.Setup._DCR_CFG_LT_HEADING_REQUIRED, "true"),
         (setup.Setup._DCR_CFG_LT_HEADING_RULE_FILE, "data/lt_export_rule_heading_test.json"),
         (setup.Setup._DCR_CFG_LT_HEADING_TOLERANCE_LLX, "5"),
         (setup.Setup._DCR_CFG_LT_LIST_BULLET_MIN_ENTRIES, "2"),
+        (setup.Setup._DCR_CFG_LT_LIST_BULLET_REQUIRED, "true"),
         (setup.Setup._DCR_CFG_LT_LIST_BULLET_RULE_FILE, "data/lt_export_rule_list_bullet_test.json"),
         (setup.Setup._DCR_CFG_LT_LIST_BULLET_TOLERANCE_LLX, "5"),
         (setup.Setup._DCR_CFG_LT_LIST_NUMBER_FILE_INCL_REGEXP, "true"),
         (setup.Setup._DCR_CFG_LT_LIST_NUMBER_MIN_ENTRIES, "2"),
+        (setup.Setup._DCR_CFG_LT_LIST_NUMBER_REQUIRED, "true"),
         (setup.Setup._DCR_CFG_LT_LIST_NUMBER_RULE_FILE, "data/lt_export_rule_list_number_test.json"),
         (setup.Setup._DCR_CFG_LT_LIST_NUMBER_TOLERANCE_LLX, "5"),
         (setup.Setup._DCR_CFG_LT_TOC_LAST_PAGE, "5"),
         (setup.Setup._DCR_CFG_LT_TOC_MIN_ENTRIES, "5"),
+        (setup.Setup._DCR_CFG_LT_TOC_REQUIRED, "true"),
         (setup.Setup._DCR_CFG_PDF2IMAGE_TYPE, setup.Setup.PDF2IMAGE_TYPE_JPEG),
         (setup.Setup._DCR_CFG_TESSERACT_TIMEOUT, "30"),
         (setup.Setup._DCR_CFG_TOKENIZE_2_JSONFILE, "true"),
@@ -330,16 +334,12 @@ def fxtr_setup_empty_inbox(
     fxtr_rmdir_opt,
 ):
     """Fixture: Set up an empty directory."""
-    setup_cfg_backup()
-
     glob.setup = setup.Setup()
 
     fxtr_rmdir_opt(glob.setup.directory_inbox)
     fxtr_mkdir(glob.setup.directory_inbox)
 
     yield
-
-    setup_cfg_restore()
 
 
 # -----------------------------------------------------------------------------
@@ -370,18 +370,6 @@ def get_test_files_source_directory_name():
 
 
 # -----------------------------------------------------------------------------
-# Backup the 'setup.cfg' file.
-# -----------------------------------------------------------------------------
-@pytest.helpers.register
-def setup_cfg_backup() -> None:
-    """Backup the 'setup.cfg' file."""
-    if os.path.isfile(FILE_NAME_SETUP_CFG_BACKUP):
-        shutil.copy2(FILE_NAME_SETUP_CFG_BACKUP, FILE_NAME_SETUP_CFG)
-    else:
-        shutil.copy2(FILE_NAME_SETUP_CFG, FILE_NAME_SETUP_CFG_BACKUP)
-
-
-# -----------------------------------------------------------------------------
 # Search for a substring optionally starting from a certain position.
 # -----------------------------------------------------------------------------
 def is_line_type(search: str, line_1: str, line_2: str, search_pos: int = 0) -> bool:
@@ -404,19 +392,6 @@ def is_line_type(search: str, line_1: str, line_2: str, search_pos: int = 0) -> 
         return True
 
     return False
-
-
-# -----------------------------------------------------------------------------
-# Restore the 'setup.cfg' file.
-# -----------------------------------------------------------------------------
-@pytest.helpers.register
-def setup_cfg_restore():
-    """Restore the 'setup.cfg' file."""
-    if os.path.isfile(FILE_NAME_SETUP_CFG_BACKUP):
-        shutil.copy2(FILE_NAME_SETUP_CFG_BACKUP, FILE_NAME_SETUP_CFG)
-        os.remove(FILE_NAME_SETUP_CFG_BACKUP)
-    else:
-        assert False, f"The backup copy {FILE_NAME_SETUP_CFG_BACKUP} is missing"
 
 
 # -----------------------------------------------------------------------------

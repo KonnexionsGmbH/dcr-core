@@ -328,101 +328,183 @@ class Setup:
     # ------------------------------------------------------------------
     # Check the configuration parameters.
     # ------------------------------------------------------------------
-    def _check_config(self) -> None:
+    # pylint: disable=too-many-branches
+    def _check_config(self) -> None:  # noqa: C901
         """Check the configuration parameters."""
         core_glob.logger.debug(core_glob.LOGGER_START)
 
-        self.is_delete_auxiliary_files = self._determine_config_param_boolean(
-            Setup._DCR_CFG_DELETE_AUXILIARY_FILES, self.is_delete_auxiliary_files
-        )
+        if Setup._DCR_CFG_DELETE_AUXILIARY_FILES in self._config:
+            self.is_delete_auxiliary_files = self._determine_config_param_boolean(
+                Setup._DCR_CFG_DELETE_AUXILIARY_FILES, self.is_delete_auxiliary_files
+            )
 
-        self._check_config_directory_inbox()
+        if Setup._DCR_CFG_DIRECTORY_INBOX in self._config:
+            self._check_config_directory_inbox()
 
-        self.is_json_incl_config = self._determine_config_param_boolean(Setup._DCR_CFG_JSON_INCL_CONFIG, self.is_json_incl_config)
-        self.is_json_incl_fonts = self._determine_config_param_boolean(Setup._DCR_CFG_JSON_INCL_FONTS, self.is_json_incl_fonts)
-        self.is_json_incl_heading = self._determine_config_param_boolean(Setup._DCR_CFG_JSON_INCL_HEADING, self.is_json_incl_heading)
-        self.is_json_incl_list_bullet = self._determine_config_param_boolean(
-            Setup._DCR_CFG_JSON_INCL_LIST_BULLET, self.is_json_incl_list_bullet
-        )
-        self.is_json_incl_list_number = self._determine_config_param_boolean(
-            Setup._DCR_CFG_JSON_INCL_LIST_NUMBER, self.is_json_incl_list_number
-        )
-        self.is_json_incl_params = self._determine_config_param_boolean(Setup._DCR_CFG_JSON_INCL_PARAMS, self.is_json_incl_params)
+        if Setup._DCR_CFG_JSON_INCL_CONFIG in self._config:
+            self.is_json_incl_config = self._determine_config_param_boolean(Setup._DCR_CFG_JSON_INCL_CONFIG, self.is_json_incl_config)
 
-        self.json_indent = self._determine_config_param_integer(Setup._DCR_CFG_JSON_INDENT, self.json_indent)
+        if Setup._DCR_CFG_JSON_INCL_FONTS in self._config:
+            self.is_json_incl_fonts = self._determine_config_param_boolean(Setup._DCR_CFG_JSON_INCL_FONTS, self.is_json_incl_fonts)
 
-        self.is_json_sort_keys = self._determine_config_param_boolean(Setup._DCR_CFG_JSON_SORT_KEYS, self.is_json_sort_keys)
+        if Setup._DCR_CFG_JSON_INCL_HEADING in self._config:
+            self.is_json_incl_heading = self._determine_config_param_boolean(Setup._DCR_CFG_JSON_INCL_HEADING, self.is_json_incl_heading)
 
-        self.lt_footer_max_distance = self._determine_config_param_integer(
-            Setup._DCR_CFG_LT_FOOTER_MAX_DISTANCE, self.lt_footer_max_distance
-        )
-        self.lt_footer_max_lines = self._determine_config_param_integer(Setup._DCR_CFG_LT_FOOTER_MAX_LINES, self.lt_footer_max_lines)
-        self.is_lt_footer_required = self._determine_config_param_boolean(Setup._DCR_CFG_LT_FOOTER_REQUIRED, self.is_lt_footer_required)
-        self.lt_header_max_distance = self._determine_config_param_integer(
-            Setup._DCR_CFG_LT_HEADER_MAX_DISTANCE, self.lt_header_max_distance
-        )
-        self.lt_header_max_lines = self._determine_config_param_integer(Setup._DCR_CFG_LT_HEADER_MAX_LINES, self.lt_header_max_lines)
-        self.is_lt_header_required = self._determine_config_param_boolean(Setup._DCR_CFG_LT_HEADER_REQUIRED, self.is_lt_header_required)
-        self.lt_heading_file_incl_no_ctx = self._determine_config_param_integer(
-            Setup._DCR_CFG_LT_HEADING_FILE_INCL_NO_CTX, self.lt_heading_file_incl_no_ctx
-        )
-        self.is_lt_heading_file_incl_regexp = self._determine_config_param_boolean(
-            Setup._DCR_CFG_LT_HEADING_FILE_INCL_REGEXP, self.is_lt_heading_file_incl_regexp
-        )
-        self.lt_heading_max_level = self._determine_config_param_integer(Setup._DCR_CFG_LT_HEADING_MAX_LEVEL, self.lt_heading_max_level)
-        self.lt_heading_min_pages = self._determine_config_param_integer(Setup._DCR_CFG_LT_HEADING_MIN_PAGES, self.lt_heading_min_pages)
-        self.is_lt_heading_required = self._determine_config_param_boolean(Setup._DCR_CFG_LT_HEADING_REQUIRED, self.is_lt_heading_required)
-        self.lt_heading_tolerance_llx = self._determine_config_param_integer(
-            Setup._DCR_CFG_LT_HEADING_TOLERANCE_LLX, self.lt_heading_tolerance_llx
-        )
-        self.lt_list_bullet_min_entries = self._determine_config_param_integer(
-            Setup._DCR_CFG_LT_LIST_BULLET_MIN_ENTRIES, self.lt_list_bullet_min_entries
-        )
-        self.is_lt_list_bullet_required = self._determine_config_param_boolean(
-            Setup._DCR_CFG_LT_LIST_BULLET_REQUIRED, self.is_lt_list_bullet_required
-        )
-        self.lt_list_bullet_tolerance_llx = self._determine_config_param_integer(
-            Setup._DCR_CFG_LT_LIST_BULLET_TOLERANCE_LLX, self.lt_list_bullet_tolerance_llx
-        )
-        self.is_lt_list_number_file_incl_regexp = self._determine_config_param_boolean(
-            Setup._DCR_CFG_LT_LIST_NUMBER_FILE_INCL_REGEXP, self.is_lt_list_number_file_incl_regexp
-        )
-        self.lt_list_number_min_entries = self._determine_config_param_integer(
-            Setup._DCR_CFG_LT_LIST_NUMBER_MIN_ENTRIES, self.lt_list_number_min_entries
-        )
-        self.is_lt_list_number_required = self._determine_config_param_boolean(
-            Setup._DCR_CFG_LT_LIST_NUMBER_REQUIRED, self.is_lt_list_number_required
-        )
-        self.lt_list_number_tolerance_llx = self._determine_config_param_integer(
-            Setup._DCR_CFG_LT_LIST_NUMBER_TOLERANCE_LLX, self.lt_list_number_tolerance_llx
-        )
-        self.lt_toc_last_page = self._determine_config_param_integer(Setup._DCR_CFG_LT_TOC_LAST_PAGE, self.lt_toc_last_page)
-        self.lt_toc_min_entries = self._determine_config_param_integer(Setup._DCR_CFG_LT_TOC_MIN_ENTRIES, self.lt_toc_min_entries)
-        self.is_lt_toc_required = self._determine_config_param_boolean(Setup._DCR_CFG_LT_TOC_REQUIRED, self.is_lt_toc_required)
+        if Setup._DCR_CFG_JSON_INCL_LIST_BULLET in self._config:
+            self.is_json_incl_list_bullet = self._determine_config_param_boolean(
+                Setup._DCR_CFG_JSON_INCL_LIST_BULLET, self.is_json_incl_list_bullet
+            )
 
-        self._check_config_pdf2image_type()
+        if Setup._DCR_CFG_JSON_INCL_LIST_NUMBER in self._config:
+            self.is_json_incl_list_number = self._determine_config_param_boolean(
+                Setup._DCR_CFG_JSON_INCL_LIST_NUMBER, self.is_json_incl_list_number
+            )
+
+        if Setup._DCR_CFG_JSON_INCL_PARAMS in self._config:
+            self.is_json_incl_params = self._determine_config_param_boolean(Setup._DCR_CFG_JSON_INCL_PARAMS, self.is_json_incl_params)
+
+        if Setup._DCR_CFG_JSON_INDENT in self._config:
+            self.json_indent = self._determine_config_param_integer(Setup._DCR_CFG_JSON_INDENT, self.json_indent)
+
+        if Setup._DCR_CFG_JSON_SORT_KEYS in self._config:
+            self.is_json_sort_keys = self._determine_config_param_boolean(Setup._DCR_CFG_JSON_SORT_KEYS, self.is_json_sort_keys)
+
+        if Setup._DCR_CFG_LT_FOOTER_MAX_DISTANCE in self._config:
+            self.lt_footer_max_distance = self._determine_config_param_integer(
+                Setup._DCR_CFG_LT_FOOTER_MAX_DISTANCE, self.lt_footer_max_distance
+            )
+
+        if Setup._DCR_CFG_LT_FOOTER_MAX_LINES in self._config:
+            self.lt_footer_max_lines = self._determine_config_param_integer(Setup._DCR_CFG_LT_FOOTER_MAX_LINES, self.lt_footer_max_lines)
+
+        if Setup._DCR_CFG_LT_FOOTER_REQUIRED in self._config:
+            self.is_lt_footer_required = self._determine_config_param_boolean(Setup._DCR_CFG_LT_FOOTER_REQUIRED, self.is_lt_footer_required)
+
+        if Setup._DCR_CFG_LT_HEADER_MAX_DISTANCE in self._config:
+            self.lt_header_max_distance = self._determine_config_param_integer(
+                Setup._DCR_CFG_LT_HEADER_MAX_DISTANCE, self.lt_header_max_distance
+            )
+
+        if Setup._DCR_CFG_LT_HEADER_MAX_LINES in self._config:
+            self.lt_header_max_lines = self._determine_config_param_integer(Setup._DCR_CFG_LT_HEADER_MAX_LINES, self.lt_header_max_lines)
+
+        if Setup._DCR_CFG_LT_HEADER_REQUIRED in self._config:
+            self.is_lt_header_required = self._determine_config_param_boolean(Setup._DCR_CFG_LT_HEADER_REQUIRED, self.is_lt_header_required)
+
+        if Setup._DCR_CFG_LT_HEADING_FILE_INCL_NO_CTX in self._config:
+            self.lt_heading_file_incl_no_ctx = self._determine_config_param_integer(
+                Setup._DCR_CFG_LT_HEADING_FILE_INCL_NO_CTX, self.lt_heading_file_incl_no_ctx
+            )
+
+        if Setup._DCR_CFG_LT_HEADING_FILE_INCL_REGEXP in self._config:
+            self.is_lt_heading_file_incl_regexp = self._determine_config_param_boolean(
+                Setup._DCR_CFG_LT_HEADING_FILE_INCL_REGEXP, self.is_lt_heading_file_incl_regexp
+            )
+
+        if Setup._DCR_CFG_LT_HEADING_MAX_LEVEL in self._config:
+            self.lt_heading_max_level = self._determine_config_param_integer(Setup._DCR_CFG_LT_HEADING_MAX_LEVEL, self.lt_heading_max_level)
+
+        if Setup._DCR_CFG_LT_HEADING_MIN_PAGES in self._config:
+            self.lt_heading_min_pages = self._determine_config_param_integer(Setup._DCR_CFG_LT_HEADING_MIN_PAGES, self.lt_heading_min_pages)
+
+        if Setup._DCR_CFG_LT_HEADING_REQUIRED in self._config:
+            self.is_lt_heading_required = self._determine_config_param_boolean(
+                Setup._DCR_CFG_LT_HEADING_REQUIRED, self.is_lt_heading_required
+            )
+
+        if Setup._DCR_CFG_LT_HEADING_TOLERANCE_LLX in self._config:
+            self.lt_heading_tolerance_llx = self._determine_config_param_integer(
+                Setup._DCR_CFG_LT_HEADING_TOLERANCE_LLX, self.lt_heading_tolerance_llx
+            )
+
+        if Setup._DCR_CFG_LT_LIST_BULLET_MIN_ENTRIES in self._config:
+            self.lt_list_bullet_min_entries = self._determine_config_param_integer(
+                Setup._DCR_CFG_LT_LIST_BULLET_MIN_ENTRIES, self.lt_list_bullet_min_entries
+            )
+
+        if Setup._DCR_CFG_LT_LIST_BULLET_REQUIRED in self._config:
+            self.is_lt_list_bullet_required = self._determine_config_param_boolean(
+                Setup._DCR_CFG_LT_LIST_BULLET_REQUIRED, self.is_lt_list_bullet_required
+            )
+
+        if Setup._DCR_CFG_LT_LIST_BULLET_TOLERANCE_LLX in self._config:
+            self.lt_list_bullet_tolerance_llx = self._determine_config_param_integer(
+                Setup._DCR_CFG_LT_LIST_BULLET_TOLERANCE_LLX, self.lt_list_bullet_tolerance_llx
+            )
+
+        if Setup._DCR_CFG_LT_LIST_NUMBER_FILE_INCL_REGEXP in self._config:
+            self.is_lt_list_number_file_incl_regexp = self._determine_config_param_boolean(
+                Setup._DCR_CFG_LT_LIST_NUMBER_FILE_INCL_REGEXP, self.is_lt_list_number_file_incl_regexp
+            )
+
+        if Setup._DCR_CFG_LT_LIST_NUMBER_MIN_ENTRIES in self._config:
+            self.lt_list_number_min_entries = self._determine_config_param_integer(
+                Setup._DCR_CFG_LT_LIST_NUMBER_MIN_ENTRIES, self.lt_list_number_min_entries
+            )
+
+        if Setup._DCR_CFG_LT_LIST_NUMBER_REQUIRED in self._config:
+            self.is_lt_list_number_required = self._determine_config_param_boolean(
+                Setup._DCR_CFG_LT_LIST_NUMBER_REQUIRED, self.is_lt_list_number_required
+            )
+
+        if Setup._DCR_CFG_LT_LIST_NUMBER_TOLERANCE_LLX in self._config:
+            self.lt_list_number_tolerance_llx = self._determine_config_param_integer(
+                Setup._DCR_CFG_LT_LIST_NUMBER_TOLERANCE_LLX, self.lt_list_number_tolerance_llx
+            )
+
+        if Setup._DCR_CFG_LT_TOC_LAST_PAGE in self._config:
+            self.lt_toc_last_page = self._determine_config_param_integer(Setup._DCR_CFG_LT_TOC_LAST_PAGE, self.lt_toc_last_page)
+
+        if Setup._DCR_CFG_LT_TOC_MIN_ENTRIES in self._config:
+            self.lt_toc_min_entries = self._determine_config_param_integer(Setup._DCR_CFG_LT_TOC_MIN_ENTRIES, self.lt_toc_min_entries)
+
+        if Setup._DCR_CFG_LT_TOC_REQUIRED in self._config:
+            self.is_lt_toc_required = self._determine_config_param_boolean(Setup._DCR_CFG_LT_TOC_REQUIRED, self.is_lt_toc_required)
+
+        if Setup._DCR_CFG_PDF2IMAGE_TYPE in self._config:
+            self._check_config_pdf2image_type()
 
         self._determine_config_spacy_tkn()
+
         self._determine_config_spacy_tkn_ignore()
 
-        self.tesseract_timeout = self._determine_config_param_integer(Setup._DCR_CFG_TESSERACT_TIMEOUT, self.tesseract_timeout)
+        if Setup._DCR_CFG_TESSERACT_TIMEOUT in self._config:
+            self.tesseract_timeout = self._determine_config_param_integer(Setup._DCR_CFG_TESSERACT_TIMEOUT, self.tesseract_timeout)
 
-        self.is_tokenize_2_jsonfile = self._determine_config_param_boolean(Setup._DCR_CFG_TOKENIZE_2_JSONFILE, self.is_tokenize_2_jsonfile)
-        self.is_tokenize_2_xmlfile = self._determine_config_param_boolean(Setup._DCR_CFG_TOKENIZE_2_XMLFILE, self.is_tokenize_2_xmlfile)
+        if Setup._DCR_CFG_TOKENIZE_2_JSONFILE in self._config:
+            self.is_tokenize_2_jsonfile = self._determine_config_param_boolean(
+                Setup._DCR_CFG_TOKENIZE_2_JSONFILE, self.is_tokenize_2_jsonfile
+            )
 
-        self.is_verbose = self._determine_config_param_boolean(Setup._DCR_CFG_VERBOSE, self.is_verbose)
-        self.is_verbose_lt_header_footer = self._determine_config_param_boolean(
-            Setup._DCR_CFG_VERBOSE_LT_HEADER_FOOTER, self.is_verbose_lt_header_footer
-        )
-        self.is_verbose_lt_heading = self._determine_config_param_boolean(Setup._DCR_CFG_VERBOSE_LT_HEADING, self.is_verbose_lt_heading)
-        self.is_verbose_lt_list_bullet = self._determine_config_param_boolean(
-            Setup._DCR_CFG_VERBOSE_LT_LIST_BULLET, self.is_verbose_lt_list_bullet
-        )
-        self.is_verbose_lt_list_number = self._determine_config_param_boolean(
-            Setup._DCR_CFG_VERBOSE_LT_LIST_NUMBER, self.is_verbose_lt_list_number
-        )
-        self.is_verbose_lt_toc = self._determine_config_param_boolean(Setup._DCR_CFG_VERBOSE_LT_TOC, self.is_verbose_lt_toc)
-        self._check_config_verbose_parser()
+        if Setup._DCR_CFG_TOKENIZE_2_XMLFILE in self._config:
+            self.is_tokenize_2_xmlfile = self._determine_config_param_boolean(Setup._DCR_CFG_TOKENIZE_2_XMLFILE, self.is_tokenize_2_xmlfile)
+
+        if Setup._DCR_CFG_VERBOSE in self._config:
+            self.is_verbose = self._determine_config_param_boolean(Setup._DCR_CFG_VERBOSE, self.is_verbose)
+
+        if Setup._DCR_CFG_VERBOSE_LT_HEADER_FOOTER in self._config:
+            self.is_verbose_lt_header_footer = self._determine_config_param_boolean(
+                Setup._DCR_CFG_VERBOSE_LT_HEADER_FOOTER, self.is_verbose_lt_header_footer
+            )
+
+        if Setup._DCR_CFG_VERBOSE_LT_HEADING in self._config:
+            self.is_verbose_lt_heading = self._determine_config_param_boolean(Setup._DCR_CFG_VERBOSE_LT_HEADING, self.is_verbose_lt_heading)
+
+        if Setup._DCR_CFG_VERBOSE_LT_LIST_BULLET in self._config:
+            self.is_verbose_lt_list_bullet = self._determine_config_param_boolean(
+                Setup._DCR_CFG_VERBOSE_LT_LIST_BULLET, self.is_verbose_lt_list_bullet
+            )
+
+        if Setup._DCR_CFG_VERBOSE_LT_LIST_NUMBER in self._config:
+            self.is_verbose_lt_list_number = self._determine_config_param_boolean(
+                Setup._DCR_CFG_VERBOSE_LT_LIST_NUMBER, self.is_verbose_lt_list_number
+            )
+
+        if Setup._DCR_CFG_VERBOSE_LT_TOC in self._config:
+            self.is_verbose_lt_toc = self._determine_config_param_boolean(Setup._DCR_CFG_VERBOSE_LT_TOC, self.is_verbose_lt_toc)
+
+        if Setup._DCR_CFG_VERBOSE_PARSER in self._config:
+            self._check_config_verbose_parser()
 
         core_glob.logger.debug(core_glob.LOGGER_END)
 
@@ -513,183 +595,332 @@ class Setup:
     # ------------------------------------------------------------------
     # Determine a spaCy token configuration parameter.
     # ------------------------------------------------------------------
-    def _determine_config_spacy_tkn(self) -> None:
+    # pylint: disable=too-many-branches
+    def _determine_config_spacy_tkn(self) -> None:  # noqa: C901
         """Determine a spaCy token configuration parameter."""
-        self.is_spacy_tkn_attr_cluster = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_TKN_ATTR_CLUSTER, self.is_spacy_tkn_attr_cluster
-        )
-        self.is_spacy_tkn_attr_dep_ = self._determine_config_param_boolean(Setup._DCR_CFG_SPACY_TKN_ATTR_DEP_, self.is_spacy_tkn_attr_dep_)
-        self.is_spacy_tkn_attr_doc = self._determine_config_param_boolean(Setup._DCR_CFG_SPACY_TKN_ATTR_DOC, self.is_spacy_tkn_attr_doc)
-        self.is_spacy_tkn_attr_ent_iob_ = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_TKN_ATTR_ENT_IOB_, self.is_spacy_tkn_attr_ent_iob_
-        )
-        self.is_spacy_tkn_attr_ent_kb_id_ = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_TKN_ATTR_ENT_KB_ID_, self.is_spacy_tkn_attr_ent_kb_id_
-        )
-        self.is_spacy_tkn_attr_ent_type_ = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_TKN_ATTR_ENT_TYPE_, self.is_spacy_tkn_attr_ent_type_
-        )
-        self.is_spacy_tkn_attr_head = self._determine_config_param_boolean(Setup._DCR_CFG_SPACY_TKN_ATTR_HEAD, self.is_spacy_tkn_attr_head)
-        self.is_spacy_tkn_attr_i = self._determine_config_param_boolean(Setup._DCR_CFG_SPACY_TKN_ATTR_I, self.is_spacy_tkn_attr_i)
-        self.is_spacy_tkn_attr_idx = self._determine_config_param_boolean(Setup._DCR_CFG_SPACY_TKN_ATTR_IDX, self.is_spacy_tkn_attr_idx)
-        self.is_spacy_tkn_attr_is_alpha = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_TKN_ATTR_IS_ALPHA, self.is_spacy_tkn_attr_is_alpha
-        )
-        self.is_spacy_tkn_attr_is_ascii = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_TKN_ATTR_IS_ASCII, self.is_spacy_tkn_attr_is_ascii
-        )
-        self.is_spacy_tkn_attr_is_bracket = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_TKN_ATTR_IS_BRACKET, self.is_spacy_tkn_attr_is_bracket
-        )
-        self.is_spacy_tkn_attr_is_currency = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_TKN_ATTR_IS_CURRENCY, self.is_spacy_tkn_attr_is_currency
-        )
-        self.is_spacy_tkn_attr_is_digit = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_TKN_ATTR_IS_DIGIT, self.is_spacy_tkn_attr_is_digit
-        )
-        self.is_spacy_tkn_attr_is_left_punct = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_TKN_ATTR_IS_LEFT_PUNCT, self.is_spacy_tkn_attr_is_left_punct
-        )
-        self.is_spacy_tkn_attr_is_lower = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_TKN_ATTR_IS_LOWER, self.is_spacy_tkn_attr_is_lower
-        )
-        self.is_spacy_tkn_attr_is_oov = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_TKN_ATTR_IS_OOV, self.is_spacy_tkn_attr_is_oov
-        )
-        self.is_spacy_tkn_attr_is_punct = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_TKN_ATTR_IS_PUNCT, self.is_spacy_tkn_attr_is_punct
-        )
-        self.is_spacy_tkn_attr_is_quote = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_TKN_ATTR_IS_QUOTE, self.is_spacy_tkn_attr_is_quote
-        )
-        self.is_spacy_tkn_attr_is_right_punct = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_TKN_ATTR_IS_RIGHT_PUNCT, self.is_spacy_tkn_attr_is_right_punct
-        )
-        self.is_spacy_tkn_attr_is_sent_end = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_TKN_ATTR_IS_SENT_END, self.is_spacy_tkn_attr_is_sent_end
-        )
-        self.is_spacy_tkn_attr_is_sent_start = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_TKN_ATTR_IS_SENT_START, self.is_spacy_tkn_attr_is_sent_start
-        )
-        self.is_spacy_tkn_attr_is_space = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_TKN_ATTR_IS_SPACE, self.is_spacy_tkn_attr_is_space
-        )
-        self.is_spacy_tkn_attr_is_stop = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_TKN_ATTR_IS_STOP, self.is_spacy_tkn_attr_is_stop
-        )
-        self.is_spacy_tkn_attr_is_title = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_TKN_ATTR_IS_TITLE, self.is_spacy_tkn_attr_is_title
-        )
-        self.is_spacy_tkn_attr_is_upper = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_TKN_ATTR_IS_UPPER, self.is_spacy_tkn_attr_is_upper
-        )
-        self.is_spacy_tkn_attr_lang_ = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_TKN_ATTR_LANG_, self.is_spacy_tkn_attr_lang_
-        )
-        self.is_spacy_tkn_attr_left_edge = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_TKN_ATTR_LEFT_EDGE, self.is_spacy_tkn_attr_left_edge
-        )
-        self.is_spacy_tkn_attr_lemma_ = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_TKN_ATTR_LEMMA_, self.is_spacy_tkn_attr_lemma_
-        )
-        self.is_spacy_tkn_attr_lex = self._determine_config_param_boolean(Setup._DCR_CFG_SPACY_TKN_ATTR_LEX, self.is_spacy_tkn_attr_lex)
-        self.is_spacy_tkn_attr_lex_id = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_TKN_ATTR_LEX_ID, self.is_spacy_tkn_attr_lex_id
-        )
-        self.is_spacy_tkn_attr_like_email = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_TKN_ATTR_LIKE_EMAIL, self.is_spacy_tkn_attr_like_email
-        )
-        self.is_spacy_tkn_attr_like_num = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_TKN_ATTR_LIKE_NUM, self.is_spacy_tkn_attr_like_num
-        )
-        self.is_spacy_tkn_attr_like_url = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_TKN_ATTR_LIKE_URL, self.is_spacy_tkn_attr_like_url
-        )
-        self.is_spacy_tkn_attr_lower_ = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_TKN_ATTR_LOWER_, self.is_spacy_tkn_attr_lower_
-        )
-        self.is_spacy_tkn_attr_morph = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_TKN_ATTR_MORPH, self.is_spacy_tkn_attr_morph
-        )
-        self.is_spacy_tkn_attr_norm_ = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_TKN_ATTR_NORM_, self.is_spacy_tkn_attr_norm_
-        )
-        self.is_spacy_tkn_attr_orth_ = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_TKN_ATTR_ORTH_, self.is_spacy_tkn_attr_orth_
-        )
-        self.is_spacy_tkn_attr_pos_ = self._determine_config_param_boolean(Setup._DCR_CFG_SPACY_TKN_ATTR_POS_, self.is_spacy_tkn_attr_pos_)
-        self.is_spacy_tkn_attr_prefix_ = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_TKN_ATTR_PREFIX_, self.is_spacy_tkn_attr_prefix_
-        )
-        self.is_spacy_tkn_attr_prob = self._determine_config_param_boolean(Setup._DCR_CFG_SPACY_TKN_ATTR_PROB, self.is_spacy_tkn_attr_prob)
-        self.is_spacy_tkn_attr_rank = self._determine_config_param_boolean(Setup._DCR_CFG_SPACY_TKN_ATTR_RANK, self.is_spacy_tkn_attr_rank)
-        self.is_spacy_tkn_attr_right_edge = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_TKN_ATTR_RIGHT_EDGE, self.is_spacy_tkn_attr_right_edge
-        )
-        self.is_spacy_tkn_attr_sent = self._determine_config_param_boolean(Setup._DCR_CFG_SPACY_TKN_ATTR_SENT, self.is_spacy_tkn_attr_sent)
-        self.is_spacy_tkn_attr_sentiment = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_TKN_ATTR_SENTIMENT, self.is_spacy_tkn_attr_sentiment
-        )
-        self.is_spacy_tkn_attr_shape_ = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_TKN_ATTR_SHAPE_, self.is_spacy_tkn_attr_shape_
-        )
-        self.is_spacy_tkn_attr_suffix_ = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_TKN_ATTR_SUFFIX_, self.is_spacy_tkn_attr_suffix_
-        )
-        self.is_spacy_tkn_attr_tag_ = self._determine_config_param_boolean(Setup._DCR_CFG_SPACY_TKN_ATTR_TAG_, self.is_spacy_tkn_attr_tag_)
-        self.is_spacy_tkn_attr_tensor = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_TKN_ATTR_TENSOR, self.is_spacy_tkn_attr_tensor
-        )
-        self.is_spacy_tkn_attr_text = self._determine_config_param_boolean(Setup._DCR_CFG_SPACY_TKN_ATTR_TEXT, self.is_spacy_tkn_attr_text)
-        self.is_spacy_tkn_attr_text_with_ws = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_TKN_ATTR_TEXT_WITH_WS, self.is_spacy_tkn_attr_text_with_ws
-        )
-        self.is_spacy_tkn_attr_vocab = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_TKN_ATTR_VOCAB, self.is_spacy_tkn_attr_vocab
-        )
-        self.is_spacy_tkn_attr_whitespace_ = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_TKN_ATTR_WHITESPACE_, self.is_spacy_tkn_attr_whitespace_
-        )
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_CLUSTER in self._config:
+            self.is_spacy_tkn_attr_cluster = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_CLUSTER, self.is_spacy_tkn_attr_cluster
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_DEP_ in self._config:
+            self.is_spacy_tkn_attr_dep_ = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_DEP_, self.is_spacy_tkn_attr_dep_
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_DOC in self._config:
+            self.is_spacy_tkn_attr_doc = self._determine_config_param_boolean(Setup._DCR_CFG_SPACY_TKN_ATTR_DOC, self.is_spacy_tkn_attr_doc)
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_ENT_IOB_ in self._config:
+            self.is_spacy_tkn_attr_ent_iob_ = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_ENT_IOB_, self.is_spacy_tkn_attr_ent_iob_
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_ENT_KB_ID_ in self._config:
+            self.is_spacy_tkn_attr_ent_kb_id_ = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_ENT_KB_ID_, self.is_spacy_tkn_attr_ent_kb_id_
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_ENT_TYPE_ in self._config:
+            self.is_spacy_tkn_attr_ent_type_ = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_ENT_TYPE_, self.is_spacy_tkn_attr_ent_type_
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_HEAD in self._config:
+            self.is_spacy_tkn_attr_head = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_HEAD, self.is_spacy_tkn_attr_head
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_I in self._config:
+            self.is_spacy_tkn_attr_i = self._determine_config_param_boolean(Setup._DCR_CFG_SPACY_TKN_ATTR_I, self.is_spacy_tkn_attr_i)
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_IDX in self._config:
+            self.is_spacy_tkn_attr_idx = self._determine_config_param_boolean(Setup._DCR_CFG_SPACY_TKN_ATTR_IDX, self.is_spacy_tkn_attr_idx)
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_IS_ALPHA in self._config:
+            self.is_spacy_tkn_attr_is_alpha = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_IS_ALPHA, self.is_spacy_tkn_attr_is_alpha
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_IS_ASCII in self._config:
+            self.is_spacy_tkn_attr_is_ascii = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_IS_ASCII, self.is_spacy_tkn_attr_is_ascii
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_IS_BRACKET in self._config:
+            self.is_spacy_tkn_attr_is_bracket = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_IS_BRACKET, self.is_spacy_tkn_attr_is_bracket
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_IS_CURRENCY in self._config:
+            self.is_spacy_tkn_attr_is_currency = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_IS_CURRENCY, self.is_spacy_tkn_attr_is_currency
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_IS_DIGIT in self._config:
+            self.is_spacy_tkn_attr_is_digit = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_IS_DIGIT, self.is_spacy_tkn_attr_is_digit
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_IS_LEFT_PUNCT in self._config:
+            self.is_spacy_tkn_attr_is_left_punct = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_IS_LEFT_PUNCT, self.is_spacy_tkn_attr_is_left_punct
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_IS_LOWER in self._config:
+            self.is_spacy_tkn_attr_is_lower = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_IS_LOWER, self.is_spacy_tkn_attr_is_lower
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_IS_OOV in self._config:
+            self.is_spacy_tkn_attr_is_oov = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_IS_OOV, self.is_spacy_tkn_attr_is_oov
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_IS_PUNCT in self._config:
+            self.is_spacy_tkn_attr_is_punct = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_IS_PUNCT, self.is_spacy_tkn_attr_is_punct
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_IS_QUOTE in self._config:
+            self.is_spacy_tkn_attr_is_quote = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_IS_QUOTE, self.is_spacy_tkn_attr_is_quote
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_IS_RIGHT_PUNCT in self._config:
+            self.is_spacy_tkn_attr_is_right_punct = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_IS_RIGHT_PUNCT, self.is_spacy_tkn_attr_is_right_punct
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_IS_SENT_END in self._config:
+            self.is_spacy_tkn_attr_is_sent_end = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_IS_SENT_END, self.is_spacy_tkn_attr_is_sent_end
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_IS_SENT_START in self._config:
+            self.is_spacy_tkn_attr_is_sent_start = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_IS_SENT_START, self.is_spacy_tkn_attr_is_sent_start
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_IS_SPACE in self._config:
+            self.is_spacy_tkn_attr_is_space = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_IS_SPACE, self.is_spacy_tkn_attr_is_space
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_IS_STOP in self._config:
+            self.is_spacy_tkn_attr_is_stop = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_IS_STOP, self.is_spacy_tkn_attr_is_stop
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_IS_TITLE in self._config:
+            self.is_spacy_tkn_attr_is_title = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_IS_TITLE, self.is_spacy_tkn_attr_is_title
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_IS_UPPER in self._config:
+            self.is_spacy_tkn_attr_is_upper = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_IS_UPPER, self.is_spacy_tkn_attr_is_upper
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_LANG_ in self._config:
+            self.is_spacy_tkn_attr_lang_ = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_LANG_, self.is_spacy_tkn_attr_lang_
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_LEFT_EDGE in self._config:
+            self.is_spacy_tkn_attr_left_edge = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_LEFT_EDGE, self.is_spacy_tkn_attr_left_edge
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_LEMMA_ in self._config:
+            self.is_spacy_tkn_attr_lemma_ = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_LEMMA_, self.is_spacy_tkn_attr_lemma_
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_LEX in self._config:
+            self.is_spacy_tkn_attr_lex = self._determine_config_param_boolean(Setup._DCR_CFG_SPACY_TKN_ATTR_LEX, self.is_spacy_tkn_attr_lex)
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_LEX_ID in self._config:
+            self.is_spacy_tkn_attr_lex_id = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_LEX_ID, self.is_spacy_tkn_attr_lex_id
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_LIKE_EMAIL in self._config:
+            self.is_spacy_tkn_attr_like_email = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_LIKE_EMAIL, self.is_spacy_tkn_attr_like_email
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_LIKE_NUM in self._config:
+            self.is_spacy_tkn_attr_like_num = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_LIKE_NUM, self.is_spacy_tkn_attr_like_num
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_LIKE_URL in self._config:
+            self.is_spacy_tkn_attr_like_url = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_LIKE_URL, self.is_spacy_tkn_attr_like_url
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_LOWER_ in self._config:
+            self.is_spacy_tkn_attr_lower_ = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_LOWER_, self.is_spacy_tkn_attr_lower_
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_MORPH in self._config:
+            self.is_spacy_tkn_attr_morph = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_MORPH, self.is_spacy_tkn_attr_morph
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_NORM_ in self._config:
+            self.is_spacy_tkn_attr_norm_ = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_NORM_, self.is_spacy_tkn_attr_norm_
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_ORTH_ in self._config:
+            self.is_spacy_tkn_attr_orth_ = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_ORTH_, self.is_spacy_tkn_attr_orth_
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_POS_ in self._config:
+            self.is_spacy_tkn_attr_pos_ = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_POS_, self.is_spacy_tkn_attr_pos_
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_PREFIX_ in self._config:
+            self.is_spacy_tkn_attr_prefix_ = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_PREFIX_, self.is_spacy_tkn_attr_prefix_
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_PROB in self._config:
+            self.is_spacy_tkn_attr_prob = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_PROB, self.is_spacy_tkn_attr_prob
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_RANK in self._config:
+            self.is_spacy_tkn_attr_rank = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_RANK, self.is_spacy_tkn_attr_rank
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_RIGHT_EDGE in self._config:
+            self.is_spacy_tkn_attr_right_edge = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_RIGHT_EDGE, self.is_spacy_tkn_attr_right_edge
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_SENT in self._config:
+            self.is_spacy_tkn_attr_sent = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_SENT, self.is_spacy_tkn_attr_sent
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_SENTIMENT in self._config:
+            self.is_spacy_tkn_attr_sentiment = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_SENTIMENT, self.is_spacy_tkn_attr_sentiment
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_SHAPE_ in self._config:
+            self.is_spacy_tkn_attr_shape_ = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_SHAPE_, self.is_spacy_tkn_attr_shape_
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_SUFFIX_ in self._config:
+            self.is_spacy_tkn_attr_suffix_ = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_SUFFIX_, self.is_spacy_tkn_attr_suffix_
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_TAG_ in self._config:
+            self.is_spacy_tkn_attr_tag_ = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_TAG_, self.is_spacy_tkn_attr_tag_
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_TENSOR in self._config:
+            self.is_spacy_tkn_attr_tensor = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_TENSOR, self.is_spacy_tkn_attr_tensor
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_TEXT in self._config:
+            self.is_spacy_tkn_attr_text = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_TEXT, self.is_spacy_tkn_attr_text
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_TEXT_WITH_WS in self._config:
+            self.is_spacy_tkn_attr_text_with_ws = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_TEXT_WITH_WS, self.is_spacy_tkn_attr_text_with_ws
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_VOCAB in self._config:
+            self.is_spacy_tkn_attr_vocab = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_VOCAB, self.is_spacy_tkn_attr_vocab
+            )
+
+        if Setup._DCR_CFG_SPACY_TKN_ATTR_WHITESPACE_ in self._config:
+            self.is_spacy_tkn_attr_whitespace_ = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_TKN_ATTR_WHITESPACE_, self.is_spacy_tkn_attr_whitespace_
+            )
 
     # ------------------------------------------------------------------
     # Determine a spaCy token configuration parameter to ignore the token creation.
     # ------------------------------------------------------------------
-    def _determine_config_spacy_tkn_ignore(self) -> None:
+    def _determine_config_spacy_tkn_ignore(self) -> None:  # noqa: C901
         """Determine if the token creation is not required."""
-        self.is_spacy_ignore_bracket = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_IGNORE_BRACKET, self.is_spacy_ignore_bracket
-        )
-        self.is_spacy_ignore_left_punct = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_IGNORE_LEFT_PUNCT, self.is_spacy_ignore_left_punct
-        )
-        self.is_spacy_ignore_line_type_footer = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_IGNORE_LINE_TYPE_FOOTER, self.is_spacy_ignore_line_type_footer
-        )
-        self.is_spacy_ignore_line_type_header = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_IGNORE_LINE_TYPE_HEADER, self.is_spacy_ignore_line_type_header
-        )
-        self.is_spacy_ignore_line_type_heading = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_IGNORE_LINE_TYPE_HEADING, self.is_spacy_ignore_line_type_heading
-        )
-        self.is_spacy_ignore_line_type_list_bullet = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_IGNORE_LINE_TYPE_LIST_BULLET, self.is_spacy_ignore_line_type_list_bullet
-        )
-        self.is_spacy_ignore_line_type_list_number = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_IGNORE_LINE_TYPE_LIST_NUMBER, self.is_spacy_ignore_line_type_list_number
-        )
-        self.is_spacy_ignore_line_type_table = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_IGNORE_LINE_TYPE_TABLE, self.is_spacy_ignore_line_type_table
-        )
-        self.is_spacy_ignore_line_type_toc = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_IGNORE_LINE_TYPE_TOC, self.is_spacy_ignore_line_type_toc
-        )
-        self.is_spacy_ignore_punct = self._determine_config_param_boolean(Setup._DCR_CFG_SPACY_IGNORE_PUNCT, self.is_spacy_ignore_punct)
-        self.is_spacy_ignore_quote = self._determine_config_param_boolean(Setup._DCR_CFG_SPACY_IGNORE_QUOTE, self.is_spacy_ignore_quote)
-        self.is_spacy_ignore_right_punct = self._determine_config_param_boolean(
-            Setup._DCR_CFG_SPACY_IGNORE_RIGHT_PUNCT, self.is_spacy_ignore_right_punct
-        )
-        self.is_spacy_ignore_space = self._determine_config_param_boolean(Setup._DCR_CFG_SPACY_IGNORE_SPACE, self.is_spacy_ignore_space)
-        self.is_spacy_ignore_stop = self._determine_config_param_boolean(Setup._DCR_CFG_SPACY_IGNORE_STOP, self.is_spacy_ignore_stop)
+        if Setup._DCR_CFG_SPACY_IGNORE_BRACKET in self._config:
+            self.is_spacy_ignore_bracket = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_IGNORE_BRACKET, self.is_spacy_ignore_bracket
+            )
+
+        if Setup._DCR_CFG_SPACY_IGNORE_LEFT_PUNCT in self._config:
+            self.is_spacy_ignore_left_punct = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_IGNORE_LEFT_PUNCT, self.is_spacy_ignore_left_punct
+            )
+
+        if Setup._DCR_CFG_SPACY_IGNORE_LINE_TYPE_FOOTER in self._config:
+            self.is_spacy_ignore_line_type_footer = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_IGNORE_LINE_TYPE_FOOTER, self.is_spacy_ignore_line_type_footer
+            )
+
+        if Setup._DCR_CFG_SPACY_IGNORE_LINE_TYPE_HEADER in self._config:
+            self.is_spacy_ignore_line_type_header = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_IGNORE_LINE_TYPE_HEADER, self.is_spacy_ignore_line_type_header
+            )
+
+        if Setup._DCR_CFG_SPACY_IGNORE_LINE_TYPE_HEADING in self._config:
+            self.is_spacy_ignore_line_type_heading = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_IGNORE_LINE_TYPE_HEADING, self.is_spacy_ignore_line_type_heading
+            )
+
+        if Setup._DCR_CFG_SPACY_IGNORE_LINE_TYPE_LIST_BULLET in self._config:
+            self.is_spacy_ignore_line_type_list_bullet = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_IGNORE_LINE_TYPE_LIST_BULLET, self.is_spacy_ignore_line_type_list_bullet
+            )
+
+        if Setup._DCR_CFG_SPACY_IGNORE_LINE_TYPE_LIST_NUMBER in self._config:
+            self.is_spacy_ignore_line_type_list_number = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_IGNORE_LINE_TYPE_LIST_NUMBER, self.is_spacy_ignore_line_type_list_number
+            )
+
+        if Setup._DCR_CFG_SPACY_IGNORE_LINE_TYPE_TABLE in self._config:
+            self.is_spacy_ignore_line_type_table = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_IGNORE_LINE_TYPE_TABLE, self.is_spacy_ignore_line_type_table
+            )
+
+        if Setup._DCR_CFG_SPACY_IGNORE_LINE_TYPE_TOC in self._config:
+            self.is_spacy_ignore_line_type_toc = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_IGNORE_LINE_TYPE_TOC, self.is_spacy_ignore_line_type_toc
+            )
+
+        if Setup._DCR_CFG_SPACY_IGNORE_PUNCT in self._config:
+            self.is_spacy_ignore_punct = self._determine_config_param_boolean(Setup._DCR_CFG_SPACY_IGNORE_PUNCT, self.is_spacy_ignore_punct)
+
+        if Setup._DCR_CFG_SPACY_IGNORE_QUOTE in self._config:
+            self.is_spacy_ignore_quote = self._determine_config_param_boolean(Setup._DCR_CFG_SPACY_IGNORE_QUOTE, self.is_spacy_ignore_quote)
+
+        if Setup._DCR_CFG_SPACY_IGNORE_RIGHT_PUNCT in self._config:
+            self.is_spacy_ignore_right_punct = self._determine_config_param_boolean(
+                Setup._DCR_CFG_SPACY_IGNORE_RIGHT_PUNCT, self.is_spacy_ignore_right_punct
+            )
+
+        if Setup._DCR_CFG_SPACY_IGNORE_SPACE in self._config:
+            self.is_spacy_ignore_space = self._determine_config_param_boolean(Setup._DCR_CFG_SPACY_IGNORE_SPACE, self.is_spacy_ignore_space)
+
+        if Setup._DCR_CFG_SPACY_IGNORE_STOP in self._config:
+            self.is_spacy_ignore_stop = self._determine_config_param_boolean(Setup._DCR_CFG_SPACY_IGNORE_STOP, self.is_spacy_ignore_stop)
 
     # ------------------------------------------------------------------
     # Determine and check the environment variant.
@@ -701,7 +932,7 @@ class Setup:
         try:
             self.environment_variant = os.environ[Setup._DCR_CORE_ENVIRONMENT_TYPE]
         except KeyError:
-            core_utils.terminate_fatal(f"The environment variable '{Setup._DCR_CORE_ENVIRONMENT_TYPE}' is missing")
+            self.environment_variant = Setup.ENVIRONMENT_TYPE_PROD
 
         if self.environment_variant not in [
             Setup.ENVIRONMENT_TYPE_DEV,

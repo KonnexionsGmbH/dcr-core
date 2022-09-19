@@ -51,7 +51,7 @@ tests: pytest
 help:
 	@sed -ne '/@sed/!s/## //p' $(MAKEFILE_LIST)
 
-export DCR_ENVIRONMENT_TYPE=test
+export DCR_CORE_ENVIRONMENT_TYPE=test
 
 # Bandit is a tool designed to find common security issues in Python code.
 # https://github.com/PyCQA/bandit
@@ -259,21 +259,21 @@ pytest-ci:          ## Run all tests with pytest after test tool installation.
 	@echo Info **********  End:   pytest **************************************
 pytest-first-issue: ## Run all tests with pytest until the first issue occurs.
 	@echo Info **********  Start: pytest **************************************
-	@echo DCR_ENVIRONMENT_TYPE=${DCR_ENVIRONMENT_TYPE}
+	@echo DCR_CORE_ENVIRONMENT_TYPE=${DCR_CORE_ENVIRONMENT_TYPE}
 	${PIPENV} run pytest --version
 	@echo ---------------------------------------------------------------------
 	${PIPENV} run pytest --cache-clear --cov=${PYTHONPATH} --cov-report term-missing:skip-covered --random-order -v -x tests
 	@echo Info **********  End:   pytest **************************************
 pytest-issue:       ## Run only the tests with pytest which are marked with 'issue'.
 	@echo Info **********  Start: pytest **************************************
-	@echo DCR_ENVIRONMENT_TYPE=${DCR_ENVIRONMENT_TYPE}
+	@echo DCR_CORE_ENVIRONMENT_TYPE=${DCR_CORE_ENVIRONMENT_TYPE}
 	${PIPENV} run pytest --version
 	@echo ---------------------------------------------------------------------
 	${PIPENV} run pytest --cache-clear --cov=${PYTHONPATH} --cov-report term-missing:skip-covered -m issue -s --setup-show -v -x tests
 	@echo Info **********  End:   pytest **************************************
 pytest-module:      ## Run tests of specific module(s) with pytest - test_all & test_cfg_cls_setup & test_db_cls.
 	@echo Info **********  Start: pytest **************************************
-	@echo DCR_ENVIRONMENT_TYPE=${DCR_ENVIRONMENT_TYPE}
+	@echo DCR_CORE_ENVIRONMENT_TYPE=${DCR_CORE_ENVIRONMENT_TYPE}
 	${PIPENV} run pytest --version
 	@echo ---------------------------------------------------------------------
 	${PIPENV} run pytest --cache-clear --cov=${PYTHONPATH} --cov-report term-missing:skip-covered -v tests/test_db_cls_action.py
