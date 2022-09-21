@@ -21,10 +21,8 @@ class Setup:
     _DCR_CFG_JSON_SORT_KEYS: ClassVar[str]
     _DCR_CFG_LT_FOOTER_MAX_DISTANCE: ClassVar[str]
     _DCR_CFG_LT_FOOTER_MAX_LINES: ClassVar[str]
-    _DCR_CFG_LT_FOOTER_REQUIRED: ClassVar[str]
     _DCR_CFG_LT_HEADER_MAX_DISTANCE: ClassVar[str]
     _DCR_CFG_LT_HEADER_MAX_LINES: ClassVar[str]
-    _DCR_CFG_LT_HEADER_REQUIRED: ClassVar[str]
     _DCR_CFG_LT_HEADING_FILE_INCL_NO_CTX: ClassVar[str]
     _DCR_CFG_LT_HEADING_FILE_INCL_REGEXP: ClassVar[str]
     _DCR_CFG_LT_HEADING_MAX_LEVEL: ClassVar[str]
@@ -146,8 +144,6 @@ class Setup:
         self.is_json_incl_list_number = False
         self.is_json_incl_params = False
         self.is_json_sort_keys = False
-        self.is_lt_footer_required = False
-        self.is_lt_header_required = False
         self.is_lt_heading_file_incl_regexp = False
         self.is_lt_heading_required = False
         self.is_lt_list_bullet_required = False

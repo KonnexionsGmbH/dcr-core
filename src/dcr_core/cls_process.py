@@ -70,8 +70,6 @@ class Process:
         self._full_name_orig = ""
 
         self._is_delete_auxiliary_files = False
-        self._is_lt_footer_required = True
-        self._is_lt_header_required = False
         self._is_lt_heading_required = False
         self._is_lt_list_bullet_required = False
         self._is_lt_list_number_required = False
@@ -244,8 +242,6 @@ class Process:
             full_name_in=self._full_name_in_parser_word,
             full_name_orig=self._full_name_orig,
             full_name_out=self._full_name_in_tokenizer,
-            is_lt_footer_required=self._is_lt_footer_required,
-            is_lt_header_required=self._is_lt_header_required,
             is_lt_heading_required=self._is_lt_heading_required,
             is_lt_list_bullet_required=self._is_lt_list_bullet_required,
             is_lt_list_number_required=self._is_lt_list_number_required,
@@ -258,9 +254,8 @@ class Process:
         self._document_delete_auxiliary_file(self._full_name_in_parser_line)
         self._document_delete_auxiliary_file(self._full_name_in_parser_word)
 
-        if self._is_lt_footer_required or self._is_lt_header_required:
-            self._no_lines_footer = core_glob.inst_lt_hf.no_lines_footer
-            self._no_lines_header = core_glob.inst_lt_hf.no_lines_header
+        self._no_lines_footer = core_glob.inst_lt_hf.no_lines_footer
+        self._no_lines_header = core_glob.inst_lt_hf.no_lines_header
 
         if self._is_lt_toc_required:
             self._no_lines_toc = core_glob.inst_lt_toc.no_lines_toc
@@ -470,8 +465,6 @@ class Process:
         document_id: int = None,
         full_name_orig: str = None,
         is_delete_auxiliary_files: bool = None,
-        is_lt_footer_required: bool = None,
-        is_lt_header_required: bool = None,
         is_lt_heading_required: bool = None,
         is_lt_list_bullet_required: bool = None,
         is_lt_list_number_required: bool = None,
@@ -507,12 +500,6 @@ class Process:
             is_delete_auxiliary_files (bool, optional):
                 Delete the auxiliary files after a successful processing step.
                 Defaults to parameter `delete_auxiliary_files` in `setup.cfg`.
-            is_lt_footer_required (bool, optional):
-                If it is set to **`true`**, the determination of the footer lines is performed.
-                Defaults to parameter `lt_footer_required` in `setup.cfg`.
-            is_lt_header_required (bool, optional):
-                If it is set to **`true`**, the determination of the header lines is performed.
-                Defaults to parameter `lt_header_required` in `setup.cfg`.
             is_lt_heading_required (bool, optional):
                 If it is set to **`true`**, the determination of the heading lines is performed.
                 Defaults to parameter `lt_heading_required` in `setup.cfg`.
@@ -565,12 +552,6 @@ class Process:
         self._is_delete_auxiliary_files = (
             is_delete_auxiliary_files if is_delete_auxiliary_files is not None else core_glob.inst_setup.is_delete_auxiliary_files
         )
-        self._is_lt_footer_required = (
-            is_lt_footer_required if is_lt_footer_required is not None else core_glob.inst_setup.is_lt_footer_required
-        )
-        self._is_lt_header_required = (
-            is_lt_header_required if is_lt_header_required is not None else core_glob.inst_setup.is_lt_header_required
-        )
         self._is_lt_heading_required = (
             is_lt_heading_required if is_lt_heading_required is not None else core_glob.inst_setup.is_lt_heading_required
         )
@@ -586,8 +567,6 @@ class Process:
         self._language_spacy = language_spacy if language_spacy else nlp_core.NLPCore.LANGUAGE_SPACY_DEFAULT
         self._language_tesseract = language_tesseract if language_tesseract else nlp_core.NLPCore.LANGUAGE_TESSERACT_DEFAULT
 
-        core_glob.logger.debug("param is_lt_footer_required     =%s", self._is_lt_footer_required)
-        core_glob.logger.debug("param is_lt_header_required     =%s", self._is_lt_header_required)
         core_glob.logger.debug("param is_lt_heading_required    =%s", self._is_lt_heading_required)
         core_glob.logger.debug("param is_lt_list_bullet_required=%s", self._is_lt_list_bullet_required)
         core_glob.logger.debug("param is_lt_list_number_required=%s", self._is_lt_list_number_required)
@@ -723,15 +702,13 @@ class Process:
     # Extracting the text from the PDF document.
     # ------------------------------------------------------------------
     @classmethod
-    def parser(  # noqa: C901 pylint: disable=too-many-arguments
+    def parser(  # noqa: C901
         cls,
         full_name_in: str,
         full_name_out: str,
         no_pdf_pages: int,
         document_id: int = -1,
         full_name_orig: str = None,
-        is_lt_footer_required: bool = False,
-        is_lt_header_required: bool = False,
         is_lt_heading_required: bool = False,
         is_lt_list_bullet_required: bool = False,
         is_lt_list_number_required: bool = False,
@@ -756,12 +733,6 @@ class Process:
             full_name_orig (str, optional):
                 The file name of the originating document.
                 Defaults to None.
-            is_lt_footer_required (bool, optional):
-                If it is set to **`true`**, the determination of the footer lines is performed.
-                Defaults to False.
-            is_lt_header_required (bool, optional):
-                If it is set to **`true`**, the determination of the header lines is performed.
-                Defaults to False.
             is_lt_heading_required (bool, optional):
                 If it is set to **`true`**, the determination of the heading lines is performed.
                 Defaults to False.
@@ -792,8 +763,6 @@ class Process:
         if full_name_orig:
             core_glob.logger.debug("param full_name_orig            =%s", full_name_orig)
         core_glob.logger.debug("param full_name_out             =%s", full_name_out)
-        core_glob.logger.debug("param is_lt_footer_required     =%s", is_lt_footer_required)
-        core_glob.logger.debug("param is_lt_header_required     =%s", is_lt_header_required)
         core_glob.logger.debug("param is_lt_heading_required    =%s", is_lt_heading_required)
         core_glob.logger.debug("param is_lt_list_bullet_required=%s", is_lt_list_bullet_required)
         core_glob.logger.debug("param is_lt_list_number_required=%s", is_lt_list_number_required)
@@ -825,8 +794,6 @@ class Process:
                             file_name_curr=os.path.basename(full_name_in),
                             file_name_next=full_name_out,
                             file_name_orig=full_name_orig,
-                            is_lt_footer_required=is_lt_footer_required,
-                            is_lt_header_required=is_lt_header_required,
                             is_lt_heading_required=is_lt_heading_required,
                             is_lt_list_bullet_required=is_lt_list_bullet_required,
                             is_lt_list_number_required=is_lt_list_number_required,

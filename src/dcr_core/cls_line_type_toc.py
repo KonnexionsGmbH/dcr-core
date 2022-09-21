@@ -94,7 +94,7 @@ class LineTypeToc:
         )
 
         row_no = 0
-        page_no_max = core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_PAGES]
+        page_no_max = core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_PAGES]
         page_no_toc_last = -1
 
         for [page_no_toc, _, _, _] in self._toc_candidates:
@@ -151,7 +151,10 @@ class LineTypeToc:
         )
 
         for line_json in self._lines_json:
-            if line_json[nlp_core.NLPCore.JSON_NAME_LINE_TYPE] == nlp_core.NLPCore.LINE_TYPE_BODY:
+            if (
+                line_json[nlp_core.NLPCore.JSON_NAME_TYPE] == nlp_core.NLPCore.LINE_TYPE_BODY
+                or line_json[nlp_core.NLPCore.JSON_NAME_TYPE] == nlp_core.NLPCore.LINE_TYPE_TABLE
+            ):
                 if (text := line_json[nlp_core.NLPCore.JSON_NAME_TEXT]) != "":
                     line_tokens = text.split()
                     try:
@@ -183,8 +186,11 @@ class LineTypeToc:
         )
 
         for line_json in self._lines_json:
-            if line_json[nlp_core.NLPCore.JSON_NAME_LINE_TYPE] == nlp_core.NLPCore.LINE_TYPE_BODY:
-                if nlp_core.NLPCore.JSON_NAME_TABLE_NO_ROW in line_json:
+            if (
+                line_json[nlp_core.NLPCore.JSON_NAME_TYPE] == nlp_core.NLPCore.LINE_TYPE_BODY
+                or line_json[nlp_core.NLPCore.JSON_NAME_TYPE] == nlp_core.NLPCore.LINE_TYPE_TABLE
+            ):
+                if line_json[nlp_core.NLPCore.JSON_NAME_TABLE_ROW_NO] > 0:
                     self._process_toc_candidate_table_line(line_json)
                 else:
                     self._check_toc_candidate()
@@ -221,7 +227,7 @@ class LineTypeToc:
         Args:
             line_json (nlp_core.NLPCore.LineJSON): Document line.
         """
-        row_no = line_json[nlp_core.NLPCore.JSON_NAME_TABLE_NO_ROW]
+        row_no = line_json[nlp_core.NLPCore.JSON_NAME_TABLE_ROW_NO]
 
         para_no = line_json[nlp_core.NLPCore.JSON_NAME_PARA_NO]
 
@@ -252,14 +258,17 @@ class LineTypeToc:
                 f"LineTypeToc: End   store result (min. entries)    ={self.no_lines_toc}",
             )
             self.no_lines_toc = 0
+            core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LINES_TOC] = self.no_lines_toc
             return
+
+        core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LINES_TOC] = self.no_lines_toc
 
         page_no_from = self._toc_candidates[0][1]
         page_no_till = self._toc_candidates[-1][1]
         para_no_from = self._toc_candidates[0][2]
         para_no_till = self._toc_candidates[-1][2]
 
-        for page_idx, page_json in core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_PAGES]:
+        for page_idx, page_json in core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_PAGES]:
             page_no = page_json[nlp_core.NLPCore.JSON_NAME_PAGE_NO]
 
             if page_no < page_no_from:
@@ -267,7 +276,7 @@ class LineTypeToc:
             if page_no > page_no_till:
                 break
 
-            for line_json in page_json[nlp_core.NLPCore.JSON_NAME_LINES]:
+            for line_json in page_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_LINES]:
                 para_no = line_json[nlp_core.NLPCore.JSON_NAME_PARA_NO]
 
                 if page_no == page_no_from and para_no < para_no_from:
@@ -282,14 +291,17 @@ class LineTypeToc:
                             and para_no == cand_para_no
                             and line_json[nlp_core.NLPCore.JSON_NAME_LINE_NO] == cand_line_no
                         ):
-                            line_json[nlp_core.NLPCore.JSON_NAME_LINE_TYPE] = nlp_core.NLPCore.LINE_TYPE_TOC
+                            line_json[nlp_core.NLPCore.JSON_NAME_TYPE] = nlp_core.NLPCore.LINE_TYPE_TOC
                 elif self._strategy == nlp_core.NLPCore.SEARCH_STRATEGY_TABLE:
-                    if nlp_core.NLPCore.JSON_NAME_TABLE_NO_ROW in line_json:
-                        if line_json[nlp_core.NLPCore.JSON_NAME_LINE_TYPE] == nlp_core.NLPCore.LINE_TYPE_BODY:
-                            line_json[nlp_core.NLPCore.JSON_NAME_LINE_TYPE] = nlp_core.NLPCore.LINE_TYPE_TOC
+                    if nlp_core.NLPCore.JSON_NAME_TABLE_ROW_NO in line_json:
+                        if (
+                            line_json[nlp_core.NLPCore.JSON_NAME_TYPE] == nlp_core.NLPCore.LINE_TYPE_BODY
+                            or line_json[nlp_core.NLPCore.JSON_NAME_TYPE] == nlp_core.NLPCore.LINE_TYPE_TABLE
+                        ):
+                            line_json[nlp_core.NLPCore.JSON_NAME_TYPE] = nlp_core.NLPCore.LINE_TYPE_TOC
 
-                core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_PAGES][page_idx][
-                    nlp_core.NLPCore.JSON_NAME_LINES
+                core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES][page_idx][
+                    nlp_core.NLPCore.JSON_NAME_CONTAINER_LINES
                 ] = self._lines_json
 
         core_utils.progress_msg(
@@ -349,8 +361,8 @@ class LineTypeToc:
         # -------------------------------------------------------------------------
         self._strategy = nlp_core.NLPCore.SEARCH_STRATEGY_TABLE
 
-        for page_json in core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_PAGES]:
-            self._lines_json = page_json[nlp_core.NLPCore.JSON_NAME_LINES]
+        for page_json in core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES]:
+            self._lines_json = page_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_LINES]
             self._process_page_table()
 
         if not self._is_toc_existing:
@@ -363,8 +375,8 @@ class LineTypeToc:
             self._strategy = nlp_core.NLPCore.SEARCH_STRATEGY_LINES
             self._page_no = 0
             self._init_toc_candidate()
-            for page_json in core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_PAGES]:
-                self._lines_json = page_json[nlp_core.NLPCore.JSON_NAME_LINES]
+            for page_json in core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES]:
+                self._lines_json = page_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_LINES]
                 self._process_page_lines()
 
             if not self._is_toc_existing:

@@ -35,8 +35,10 @@ LOGGER_CFG_FILE: str
 LOGGER_END: str
 LOGGER_FATAL_HEAD: str
 LOGGER_FATAL_TAIL: str
+LOGGER_NAME: str
 LOGGER_PROGRESS_UPDATE: str
 LOGGER_START: str
+
 RETURN_OK: tuple[str, str]
 
 inst_lt_h: lt_h.LineTypeHeading

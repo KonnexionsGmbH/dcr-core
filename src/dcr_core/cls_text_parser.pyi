@@ -18,8 +18,6 @@ class TextParser:
         self._file_name_orig = ""
         self._full_name = ""
         self._is_line_processing = False
-        self._is_lt_footer_required = False
-        self._is_lt_header_required = False
         self._is_lt_heading_required = False
         self._is_lt_list_bullet_required = False
         self._is_lt_list_number_required = False
@@ -123,8 +121,6 @@ class TextParser:
         file_name_curr: str,
         file_name_next: str,
         file_name_orig: str,
-        is_lt_footer_required: bool,
-        is_lt_header_required: bool,
         is_lt_heading_required: bool,
         is_lt_list_bullet_required: bool,
         is_lt_list_number_required: bool,

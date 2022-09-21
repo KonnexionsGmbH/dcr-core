@@ -53,8 +53,6 @@ class TextParser:
         self._file_name_orig = ""
         self._full_name = ""
         self._is_line_processing = False
-        self._is_lt_footer_required = False
-        self._is_lt_header_required = False
         self._is_lt_heading_required = False
         self._is_lt_list_bullet_required = False
         self._is_lt_list_number_required = False
@@ -139,8 +137,6 @@ class TextParser:
         params[nlp_core.NLPCore.JSON_NAME_FILE_NAME_CURR] = self._file_name_curr
         params[nlp_core.NLPCore.JSON_NAME_FILE_NAME_NEXT] = self._full_name
         params[nlp_core.NLPCore.JSON_NAME_FILE_NAME_ORIG] = self._file_name_orig
-        params[nlp_core.NLPCore.JSON_NAME_LINE_TYPE_FOOTER_REQUIRED] = self._is_lt_footer_required
-        params[nlp_core.NLPCore.JSON_NAME_LINE_TYPE_HEADER_REQUIRED] = self._is_lt_header_required
         params[nlp_core.NLPCore.JSON_NAME_LINE_TYPE_HEADING_REQUIRED] = self._is_lt_heading_required
         params[nlp_core.NLPCore.JSON_NAME_LINE_TYPE_LIST_BULLET_REQUIRED] = self._is_lt_list_bullet_required
         params[nlp_core.NLPCore.JSON_NAME_LINE_TYPE_LIST_NUMBER_REQUIRED] = self._is_lt_list_number_required
@@ -198,17 +194,14 @@ class TextParser:
         # ------------------------------------------------------------------
         # Line types footer and header.
         # ------------------------------------------------------------------
-        if self._is_lt_footer_required or self._is_lt_header_required:
-            core_glob.inst_lt_hf = lt_hf.LineTypeHeaderFooter(
-                file_name_curr=self._file_name_curr,
-            )
-            core_glob.inst_lt_hf.process_document(
-                file_name_curr=self._file_name_curr,
-            )
-            if self._is_lt_footer_required:
-                core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LINES_FOOTER] = core_glob.inst_lt_hf.no_lines_footer
-            if self._is_lt_header_required:
-                core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LINES_HEADER] = core_glob.inst_lt_hf.no_lines_header
+        core_glob.inst_lt_hf = lt_hf.LineTypeHeaderFooter(
+            file_name_curr=self._file_name_curr,
+        )
+        core_glob.inst_lt_hf.process_document(
+            file_name_curr=self._file_name_curr,
+        )
+        core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LINES_FOOTER] = core_glob.inst_lt_hf.no_lines_footer
+        core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LINES_HEADER] = core_glob.inst_lt_hf.no_lines_header
 
         # ------------------------------------------------------------------
         # Line type toc.
@@ -220,7 +213,6 @@ class TextParser:
             core_glob.inst_lt_toc.process_document(
                 file_name_curr=self._file_name_curr,
             )
-            core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LINES_TOC] = core_glob.inst_lt_toc.no_lines_toc
 
         # ------------------------------------------------------------------
         # Line type bulleted list.
@@ -236,7 +228,7 @@ class TextParser:
                 file_name_curr=self._file_name_curr,
                 file_name_orig=self._file_name_orig,
             )
-            core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LISTS_BULLET] = core_glob.inst_lt_lb.no_lists
+            core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LISTS_BULLET] = core_glob.inst_lt_lb.no_lists
 
         # ------------------------------------------------------------------
         # Line type numbered list.
@@ -252,7 +244,7 @@ class TextParser:
                 file_name_curr=self._file_name_curr,
                 file_name_orig=self._file_name_orig,
             )
-            core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LISTS_NUMBER] = core_glob.inst_lt_ln.no_lists
+            core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LISTS_NUMBER] = core_glob.inst_lt_ln.no_lists
 
         # ------------------------------------------------------------------
         # Line type heading.
@@ -652,9 +644,9 @@ class TextParser:
             core_utils.progress_msg_core(core_utils.ERROR_61_905.replace("{word", str(self._parse_result_no_lines_word)))
             self.no_errors += 1
 
-        core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_PAGES][self._parse_result_page_idx][nlp_core.NLPCore.JSON_NAME_LINES][
-            self._parse_result_line_idx
-        ][nlp_core.NLPCore.JSON_NAME_TEXT] = self._parse_result_text
+        core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES][self._parse_result_page_idx][
+            nlp_core.NLPCore.JSON_NAME_CONTAINER_LINES
+        ][self._parse_result_line_idx][nlp_core.NLPCore.JSON_NAME_TEXT] = self._parse_result_text
 
         self._parse_result_no_lines_line += 1
         self._parse_result_line_idx += 1
@@ -716,16 +708,17 @@ class TextParser:
 
         self._parse_result_container_lines.append(
             {
-                nlp_core.NLPCore.JSON_NAME_CONTAINER_WORDS: self._parse_result_container_words,
                 nlp_core.NLPCore.JSON_NAME_LINE_NO: self._parse_result_no_lines_word,
-                nlp_core.NLPCore.JSON_NAME_LINE_NO_PAGE: self._parse_result_page_line_no_first,
-                nlp_core.NLPCore.JSON_NAME_LINE_NO_PARA: self._parse_result_para_line_no_first,
+                nlp_core.NLPCore.JSON_NAME_LINE_NO_PAGE: self._parse_result_no_lines_page,
+                nlp_core.NLPCore.JSON_NAME_LINE_NO_PARA: self._parse_result_no_lines_para,
                 nlp_core.NLPCore.JSON_NAME_LLX: float(parent.attrib.get(nlp_core.NLPCore.PARSE_ATTR_LLX)),
                 nlp_core.NLPCore.JSON_NAME_PAGE_NO: self.parse_result_no_pages,
+                nlp_core.NLPCore.JSON_NAME_PARA_NO: self._parse_result_no_paras,
+                nlp_core.NLPCore.JSON_NAME_PARA_NO_PAGE: self._parse_result_no_paras_page,
                 nlp_core.NLPCore.JSON_NAME_TABLE_CELL_SPAN: self._parse_result_table_cell_span,
                 nlp_core.NLPCore.JSON_NAME_TABLE_NO: no_tables,
-                nlp_core.NLPCore.JSON_NAME_TABLE_NO_CELL: no_cells_row,
-                nlp_core.NLPCore.JSON_NAME_TABLE_NO_ROW: no_rows_table,
+                nlp_core.NLPCore.JSON_NAME_TABLE_CELL_NO: no_cells_row,
+                nlp_core.NLPCore.JSON_NAME_TABLE_ROW_NO: no_rows_table,
                 nlp_core.NLPCore.JSON_NAME_TYPE: line_type,
                 nlp_core.NLPCore.JSON_NAME_URX: float(parent.attrib.get(nlp_core.NLPCore.PARSE_ATTR_URX)),
                 nlp_core.NLPCore.JSON_NAME_WORD_NO_FIRST: self._parse_result_line_word_no_first,
@@ -883,7 +876,7 @@ class TextParser:
 
         with open(self._full_name, "w", encoding=core_glob.FILE_ENCODING_DEFAULT) as file_handle:
             json.dump(
-                core_glob.nlp_core.document_json,
+                core_glob.inst_nlp_core.document_json,
                 file_handle,
                 indent=core_glob.inst_setup.json_indent,
                 sort_keys=core_glob.inst_setup.is_json_sort_keys,
@@ -930,7 +923,7 @@ class TextParser:
                     )
                     self.no_errors += 1
 
-        core_glob.nlp_core.document_json = {
+        core_glob.inst_nlp_core.document_json = {
             nlp_core.NLPCore.JSON_NAME_CREATED_AT: datetime.now().strftime("%d.%m.%Y %H:%M:%S"),
             nlp_core.NLPCore.JSON_NAME_CREATED_BY: __name__,
             nlp_core.NLPCore.JSON_NAME_NO_LINES: self._parse_result_no_lines_word,
@@ -942,20 +935,22 @@ class TextParser:
         }
 
         if core_glob.inst_setup.is_json_incl_config:
-            core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONFIG] = {
+            core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONFIG] = {
                 nlp_core.NLPCore.JSON_NAME_PARSER: core_utils.create_config()
             }
 
         if core_glob.inst_setup.is_json_incl_fonts:
-            core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_FONTS] = self._parse_result_container_fonts
-            core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_FONTS] = self._parse_result_no_fonts
+            core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_FONTS] = self._parse_result_container_fonts
+            core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_FONTS] = self._parse_result_no_fonts
 
         if core_glob.inst_setup.is_json_incl_params:
-            core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_PARAMS] = {nlp_core.NLPCore.JSON_NAME_PARSER: self._create_params()}
+            core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_PARAMS] = {
+                nlp_core.NLPCore.JSON_NAME_PARSER: self._create_params()
+            }
 
         with open(self._full_name, "w", encoding=core_glob.FILE_ENCODING_DEFAULT) as file_handle:
             json.dump(
-                core_glob.nlp_core.document_json,
+                core_glob.inst_nlp_core.document_json,
                 file_handle,
                 indent=core_glob.inst_setup.json_indent,
                 sort_keys=core_glob.inst_setup.is_json_sort_keys,
@@ -1054,8 +1049,8 @@ class TextParser:
                 nlp_core.NLPCore.JSON_NAME_PARA_NO_PAGE: self._parse_result_page_para_no_first,
                 nlp_core.NLPCore.JSON_NAME_TABLE_CELL_SPAN: self._parse_result_table_cell_span,
                 nlp_core.NLPCore.JSON_NAME_TABLE_NO: no_tables,
-                nlp_core.NLPCore.JSON_NAME_TABLE_NO_CELL: no_cells_row,
-                nlp_core.NLPCore.JSON_NAME_TABLE_NO_ROW: no_rows_table,
+                nlp_core.NLPCore.JSON_NAME_TABLE_CELL_NO: no_cells_row,
+                nlp_core.NLPCore.JSON_NAME_TABLE_ROW_NO: no_rows_table,
                 nlp_core.NLPCore.JSON_NAME_WORD_NO_FIRST: self._parse_result_para_word_no_first,
                 nlp_core.NLPCore.JSON_NAME_WORD_NO_LAST: self._parse_result_para_word_no_last,
                 nlp_core.NLPCore.JSON_NAME_CONTAINER_WORDS: self._parse_result_container_words,
@@ -1295,8 +1290,8 @@ class TextParser:
             nlp_core.NLPCore.JSON_NAME_PARA_NO: self._parse_result_no_paras,
             nlp_core.NLPCore.JSON_NAME_TABLE_CELL_SPAN: self._parse_result_table_cell_span,
             nlp_core.NLPCore.JSON_NAME_TABLE_NO: no_tables,
-            nlp_core.NLPCore.JSON_NAME_TABLE_NO_CELL: no_cells_row,
-            nlp_core.NLPCore.JSON_NAME_TABLE_NO_ROW: no_rows_table,
+            nlp_core.NLPCore.JSON_NAME_TABLE_CELL_NO: no_cells_row,
+            nlp_core.NLPCore.JSON_NAME_TABLE_ROW_NO: no_rows_table,
             nlp_core.NLPCore.JSON_NAME_TEXT: self._parse_result_text,
             nlp_core.NLPCore.JSON_NAME_TYPE: line_type,
             nlp_core.NLPCore.JSON_NAME_WORD_NO: self._parse_result_no_words,
@@ -1348,12 +1343,12 @@ class TextParser:
         core_glob.logger.debug("param full_name    =%s", full_name)
 
         try:
-            core_glob.nlp_core.exists()
+            core_glob.inst_nlp_core.exists()
         except AttributeError:
             core_glob.nlp_core = nlp_core.NLPCore()
 
         with open(full_name, "r", encoding=file_encoding) as file_handle:
-            core_glob.nlp_core.document_json = json.load(file_handle)
+            core_glob.inst_nlp_core.document_json = json.load(file_handle)
 
         core_glob.logger.debug(core_glob.LOGGER_END)
 
@@ -1424,8 +1419,6 @@ class TextParser:
         file_name_curr: str,
         file_name_next: str,
         file_name_orig: str,
-        is_lt_footer_required: bool,
-        is_lt_header_required: bool,
         is_lt_heading_required: bool,
         is_lt_list_bullet_required: bool,
         is_lt_list_number_required: bool,
@@ -1449,10 +1442,6 @@ class TextParser:
                 File name of the output file.
             file_name_orig (in):
                 File name of the document file.
-            is_lt_footer_required (bool):
-                If it is set to **`true`**, the determination of the footer lines is performed.
-            is_lt_header_required (bool):
-                If it is set to **`true`**, the determination of the header lines is performed.
             is_lt_heading_required (bool):
                 If it is set to **`true`**, the determination of the heading lines is performed.
             is_lt_list_bullet_required (bool):
@@ -1475,8 +1464,6 @@ class TextParser:
         core_glob.logger.debug("param file_name_curr            =%s", file_name_curr)
         core_glob.logger.debug("param file_name_next            =%s", file_name_next)
         core_glob.logger.debug("param file_name_orig            =%s", file_name_orig)
-        core_glob.logger.debug("param is_lt_footer_required     =%s", is_lt_footer_required)
-        core_glob.logger.debug("param is_lt_header_required     =%s", is_lt_header_required)
         core_glob.logger.debug("param is_lt_heading_required    =%s", is_lt_heading_required)
         core_glob.logger.debug("param is_lt_list_bullet_required=%s", is_lt_list_bullet_required)
         core_glob.logger.debug("param is_lt_list_number_required=%s", is_lt_list_number_required)
@@ -1495,8 +1482,6 @@ class TextParser:
         self._file_name_curr = file_name_curr
         self._file_name_orig = file_name_orig
         self._full_name = file_name_next
-        self._is_lt_footer_required = is_lt_footer_required
-        self._is_lt_header_required = is_lt_header_required
         self._is_lt_heading_required = is_lt_heading_required
         self._is_lt_list_bullet_required = is_lt_list_bullet_required
         self._is_lt_list_number_required = is_lt_list_number_required
@@ -1505,7 +1490,7 @@ class TextParser:
 
         self._debug_xml_element_all("Start", parent_tag, parent.attrib, parent.text)
 
-        core_glob.nlp_core.document_json = {}
+        core_glob.inst_nlp_core.document_json = {}
 
         self.no_errors = 0
 

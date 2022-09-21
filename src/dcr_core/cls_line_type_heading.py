@@ -266,9 +266,9 @@ class LineTypeHeading:
 
         if core_glob.inst_setup.lt_heading_file_incl_no_ctx > 0:
             page_idx = self._page_idx
-            line_lines: list[nlp_core.NLPCore.LineJSON] = core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_PAGES][page_idx][
-                nlp_core.NLPCore.JSON_NAME_LINES
-            ]
+            line_lines: list[nlp_core.NLPCore.LineJSON] = core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES][
+                page_idx
+            ][nlp_core.NLPCore.JSON_NAME_CONTAINER_LINES]
             line_idx = self._line_idx + 1
 
             for idx in range(core_glob.inst_setup.lt_heading_file_incl_no_ctx):
@@ -306,19 +306,19 @@ class LineTypeHeading:
         for idx in range(line_idx + 1, len(lines_json)):
             line_json: nlp_core.NLPCore.LineJSON = lines_json[idx]
 
-            if line_json[nlp_core.NLPCore.JSON_NAME_LINE_TYPE] != nlp_core.NLPCore.LINE_TYPE_BODY:
+            if line_json[nlp_core.NLPCore.JSON_NAME_TYPE] != nlp_core.NLPCore.LINE_TYPE_BODY:
                 continue
 
             return line_json[nlp_core.NLPCore.JSON_NAME_TEXT], page_idx, lines_json, idx
 
         if (page_idx + 1) < self._page_no_max:
             page_idx_local = page_idx + 1
-            lines_json_local: list[nlp_core.NLPCore.LineJSON] = core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_PAGES][
-                page_idx_local
-            ][nlp_core.NLPCore.JSON_NAME_LINES]
+            lines_json_local: list[nlp_core.NLPCore.LineJSON] = core_glob.inst_nlp_core.document_json[
+                nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES
+            ][page_idx_local][nlp_core.NLPCore.JSON_NAME_CONTAINER_LINES]
 
             for idx, line_json in enumerate(lines_json_local):
-                if line_json[nlp_core.NLPCore.JSON_NAME_LINE_TYPE] != nlp_core.NLPCore.LINE_TYPE_BODY:
+                if line_json[nlp_core.NLPCore.JSON_NAME_TYPE] != nlp_core.NLPCore.LINE_TYPE_BODY:
                     continue
 
                 return (
@@ -606,7 +606,7 @@ class LineTypeHeading:
         for line_idx, line_json in enumerate(self._lines_json):
             self._line_idx = line_idx
 
-            if line_json[nlp_core.NLPCore.JSON_NAME_LINE_TYPE] != nlp_core.NLPCore.LINE_TYPE_BODY:
+            if line_json[nlp_core.NLPCore.JSON_NAME_TYPE] != nlp_core.NLPCore.LINE_TYPE_BODY:
                 continue
 
             if (text := line_json[nlp_core.NLPCore.JSON_NAME_TEXT]) == "":
@@ -617,11 +617,11 @@ class LineTypeHeading:
                 continue
 
             if (level := self._process_line(line_json, text, first_token)) > 0:
-                line_json[nlp_core.NLPCore.JSON_NAME_LINE_TYPE] = nlp_core.NLPCore.LINE_TYPE_HEADER + "_" + str(level)
+                line_json[nlp_core.NLPCore.JSON_NAME_TYPE] = nlp_core.NLPCore.LINE_TYPE_HEADER + "_" + str(level)
                 self._lines_json[self._line_idx] = line_json
 
-        core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_PAGES][self._page_idx][
-            nlp_core.NLPCore.JSON_NAME_LINES
+        core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES][self._page_idx][
+            nlp_core.NLPCore.JSON_NAME_CONTAINER_LINES
         ] = self._lines_json
 
         core_utils.progress_msg(
@@ -677,7 +677,7 @@ class LineTypeHeading:
 
         if (
             core_glob.inst_setup.lt_heading_max_level == 0
-            or core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_PAGES] < core_glob.inst_setup.lt_heading_min_pages
+            or core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_PAGES] < core_glob.inst_setup.lt_heading_min_pages
         ):
             return
 
@@ -691,9 +691,9 @@ class LineTypeHeading:
 
         self._page_no_max = core_glob.inst_parser.parse_result_no_pages_in_doc
 
-        for page_idx, page_json in enumerate(core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_PAGES]):
+        for page_idx, page_json in enumerate(core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES]):
             self._page_idx = page_idx
-            self._lines_json = page_json[nlp_core.NLPCore.JSON_NAME_LINES]
+            self._lines_json = page_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_LINES]
             self._process_page()
 
         if core_glob.inst_setup.is_create_extra_file_heading and self._toc:

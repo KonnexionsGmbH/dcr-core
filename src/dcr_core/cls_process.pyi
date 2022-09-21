@@ -29,8 +29,6 @@ class Process:
         self._full_name_in_tokenizer_word = None
         self._full_name_orig = ""
         self._is_delete_auxiliary_files = False
-        self._is_lt_footer_required = False
-        self._is_lt_header_required = False
         self._is_lt_heading_required = False
         self._is_lt_list_bullet_required = False
         self._is_lt_list_number_required = False
@@ -71,8 +69,6 @@ class Process:
         document_id: int = ...,
         full_name_orig: str = ...,
         is_delete_auxiliary_files: bool = ...,
-        is_lt_footer_required: bool = ...,
-        is_lt_header_required: bool = ...,
         is_lt_heading_required: bool = ...,
         is_lt_list_bullet_required: bool = ...,
         is_lt_list_number_required: bool = ...,
@@ -93,8 +89,6 @@ class Process:
         no_pdf_pages: int,
         document_id: int = ...,
         full_name_orig: str = ...,
-        is_lt_footer_required: bool = ...,
-        is_lt_header_required: bool = ...,
         is_lt_heading_required: bool = ...,
         is_lt_list_bullet_required: bool = ...,
         is_lt_list_number_required: bool = ...,

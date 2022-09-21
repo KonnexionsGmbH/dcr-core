@@ -40,10 +40,8 @@ class Setup:
     _DCR_CFG_JSON_SORT_KEYS: ClassVar[str] = "json_sort_keys"
     _DCR_CFG_LT_FOOTER_MAX_DISTANCE: ClassVar[str] = "lt_footer_max_distance"
     _DCR_CFG_LT_FOOTER_MAX_LINES: ClassVar[str] = "lt_footer_max_lines"
-    _DCR_CFG_LT_FOOTER_REQUIRED: ClassVar[str] = "lt_footer_required"
     _DCR_CFG_LT_HEADER_MAX_DISTANCE: ClassVar[str] = "lt_header_max_distance"
     _DCR_CFG_LT_HEADER_MAX_LINES: ClassVar[str] = "lt_header_max_lines"
-    _DCR_CFG_LT_HEADER_REQUIRED: ClassVar[str] = "lt_header_required"
     _DCR_CFG_LT_HEADING_FILE_INCL_NO_CTX: ClassVar[str] = "lt_heading_file_incl_no_ctx"
     _DCR_CFG_LT_HEADING_FILE_INCL_REGEXP: ClassVar[str] = "lt_heading_file_incl_regexp"
     _DCR_CFG_LT_HEADING_MAX_LEVEL: ClassVar[str] = "lt_heading_max_level"
@@ -198,8 +196,6 @@ class Setup:
 
         self.is_json_sort_keys = True
 
-        self.is_lt_footer_required = True
-        self.is_lt_header_required = True
         self.is_lt_heading_file_incl_regexp = True
         self.is_lt_heading_required = True
         self.is_lt_list_bullet_required = True
@@ -377,9 +373,6 @@ class Setup:
         if Setup._DCR_CFG_LT_FOOTER_MAX_LINES in self._config:
             self.lt_footer_max_lines = self._determine_config_param_integer(Setup._DCR_CFG_LT_FOOTER_MAX_LINES, self.lt_footer_max_lines)
 
-        if Setup._DCR_CFG_LT_FOOTER_REQUIRED in self._config:
-            self.is_lt_footer_required = self._determine_config_param_boolean(Setup._DCR_CFG_LT_FOOTER_REQUIRED, self.is_lt_footer_required)
-
         if Setup._DCR_CFG_LT_HEADER_MAX_DISTANCE in self._config:
             self.lt_header_max_distance = self._determine_config_param_integer(
                 Setup._DCR_CFG_LT_HEADER_MAX_DISTANCE, self.lt_header_max_distance
@@ -387,9 +380,6 @@ class Setup:
 
         if Setup._DCR_CFG_LT_HEADER_MAX_LINES in self._config:
             self.lt_header_max_lines = self._determine_config_param_integer(Setup._DCR_CFG_LT_HEADER_MAX_LINES, self.lt_header_max_lines)
-
-        if Setup._DCR_CFG_LT_HEADER_REQUIRED in self._config:
-            self.is_lt_header_required = self._determine_config_param_boolean(Setup._DCR_CFG_LT_HEADER_REQUIRED, self.is_lt_header_required)
 
         if Setup._DCR_CFG_LT_HEADING_FILE_INCL_NO_CTX in self._config:
             self.lt_heading_file_incl_no_ctx = self._determine_config_param_integer(
@@ -974,10 +964,8 @@ class Setup:
                             | Setup._DCR_CFG_JSON_SORT_KEYS
                             | Setup._DCR_CFG_LT_FOOTER_MAX_DISTANCE
                             | Setup._DCR_CFG_LT_FOOTER_MAX_LINES
-                            | Setup._DCR_CFG_LT_FOOTER_REQUIRED
                             | Setup._DCR_CFG_LT_HEADER_MAX_DISTANCE
                             | Setup._DCR_CFG_LT_HEADER_MAX_LINES
-                            | Setup._DCR_CFG_LT_HEADER_REQUIRED
                             | Setup._DCR_CFG_LT_HEADING_FILE_INCL_NO_CTX
                             | Setup._DCR_CFG_LT_HEADING_FILE_INCL_REGEXP
                             | Setup._DCR_CFG_LT_HEADING_MAX_LEVEL

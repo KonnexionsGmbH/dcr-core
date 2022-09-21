@@ -59,10 +59,8 @@ The customisable entries are:
 | lt_export_rule_file_list_number  | data/lt_export_rule_list_number.json | File name for the export of the numbered list rules.                                                                 |
 | lt_footer_max_distance           | 3                                    | Maximum Levenshtein distance for a footer line.                                                                      |
 | lt_footer_max_lines              | 3                                    | Maximum number of footers.                                                                                           |
-| lt_footer_required               | true                                 | If it is set to **`true`**, the determination of the footer lines is performed.                                      |
 | lt_header_max_distance           | 3                                    | Maximum Levenshtein distance for a header line.                                                                      |
 | lt_header_max_lines              | 3                                    | Maximum number of headers.                                                                                           |
-| lt_header_required               | true                                 | If it is set to **`true`**, the determination of the header lines is performed.                                      |
 | lt_heading_file_incl_no_ctx      | 1                                    | The number of lines following the heading to be included as context into the **`JSON`** file.                        |
 | lt_heading_file_incl_regexp      | true                                 | If it is set to **`true`**, the regular expression for the heading is included in the **`JSON`** file.               |
 | lt_heading_max_level             | 3                                    | Maximum level of the heading structure.                                                                              |

@@ -178,14 +178,14 @@ class LineTypeListNumber:
         entries: LineTypeListNumber.Entries = []
 
         for [page_idx, para_no, line_idx_from, line_idx_till, _] in self._entries:
-            lines_json: list[nlp_core.NLPCore.LineJSON] = core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_PAGES][page_idx][
-                nlp_core.NLPCore.JSON_NAME_LINES
-            ]
+            lines_json: list[nlp_core.NLPCore.LineJSON] = core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES][
+                page_idx
+            ][nlp_core.NLPCore.JSON_NAME_CONTAINER_LINES]
 
             text = []
 
             for idx in range(int(line_idx_from), int(line_idx_till) + 1):
-                lines_json[idx][nlp_core.NLPCore.JSON_NAME_LINE_TYPE] = nlp_core.NLPCore.LINE_TYPE_LIST_NUMBER
+                lines_json[idx][nlp_core.NLPCore.JSON_NAME_TYPE] = nlp_core.NLPCore.LINE_TYPE_LIST_NUMBER
 
                 if core_glob.inst_setup.is_create_extra_file_list_number:
                     text.append(lines_json[idx][nlp_core.NLPCore.JSON_NAME_TEXT])
@@ -202,7 +202,9 @@ class LineTypeListNumber:
                     }
                 )
 
-            core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_PAGES][page_idx][nlp_core.NLPCore.JSON_NAME_LINES] = lines_json
+            core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES][page_idx][
+                nlp_core.NLPCore.JSON_NAME_CONTAINER_LINES
+            ] = lines_json
 
         if core_glob.inst_setup.is_create_extra_file_list_number:
             entry = {
@@ -456,7 +458,7 @@ class LineTypeListNumber:
         for line_idx, line_json in enumerate(self._lines_json):
             self._line_idx = line_idx
 
-            if line_json[nlp_core.NLPCore.JSON_NAME_LINE_TYPE] == nlp_core.NLPCore.LINE_TYPE_BODY:
+            if line_json[nlp_core.NLPCore.JSON_NAME_TYPE] == nlp_core.NLPCore.LINE_TYPE_BODY:
                 self._process_line(line_json)
                 self._page_idx_prev = self._page_idx
 
@@ -566,10 +568,10 @@ class LineTypeListNumber:
 
         self._reset_document()
 
-        for page_idx, page_json in enumerate(core_glob.nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_PAGES]):
+        for page_idx, page_json in enumerate(core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES]):
             self._page_idx = page_idx
             self._line_no_max = page_json[nlp_core.NLPCore.JSON_NAME_LINE_NO]
-            self._lines_json = page_json[nlp_core.NLPCore.JSON_NAME_LINES]
+            self._lines_json = page_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_LINES]
             self._process_page()
 
         self._finish_list()

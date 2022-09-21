@@ -8,54 +8,74 @@ from __future__ import annotations
 import dcr_core.cls_nlp_core as nlp_core
 
 class LineTypeHeaderFooter:
-    Candidate = tuple[int, int]
-    Candidates = list[Candidate]
-    LineDataCell = tuple[int, str]
-    LineDataRow = tuple[LineDataCell, LineDataCell]
-    LineData = list[LineDataRow]
-    LSDDataCell = tuple[int, int, int]
-    LSDDataRow = list[LSDDataCell]
-    LSDData = list[LSDDataRow]
-    ResultKey = tuple[int, int]
-    ResultData = dict[ResultKey, str]
+    CandLinesPage = list[tuple[int, str]]
+    CandLinesPages = list[CandLinesPage]
+    ResultDoc = list[tuple[bool, str, int]]
+    ResultPages = list[list[bool]]
+    VARIANT_FOOTER: str
+    VARIANT_HEADER: str
 
     def __init__(
         self,
         file_name_curr: str = "",
     ) -> None:
-        self._file_name_curr = ""
-        self._irregular_footer_cand: LineTypeHeaderFooter.Candidate = (0, 0)
-        self._irregular_footer_cand_fp: LineTypeHeaderFooter.Candidates = []
-        self._irregular_footer_cands: LineTypeHeaderFooter.Candidates = []
-        self._irregular_header_cand: LineTypeHeaderFooter.Candidate = (0, 0)
-        self._irregular_header_cand_fp: LineTypeHeaderFooter.Candidates = []
-        self._irregular_header_cands: LineTypeHeaderFooter.Candidates = []
-        self._is_irregular_footer = False
-        self._is_irregular_header = False
-        self._line_data: LineTypeHeaderFooter.LineData = []
-        self._line_no_max = 0
+        self._cand_lines_footer_pages: LineTypeHeaderFooter.CandLinesPages = []
+        self._cand_lines_footer_template: LineTypeHeaderFooter.CandLinesPage = []
+        self._cand_lines_header_pages: LineTypeHeaderFooter.CandLinesPages = []
+        self._cand_lines_header_template: LineTypeHeaderFooter.CandLinesPage = []
+        self._file_name_curr = file_name_curr
+        self._is_complete_footer = False
+        self._is_complete_header = False
+        self._is_required_footer = False
+        self._is_required_header = False
+        self._is_result_footer = False
+        self._is_result_header = False
         self._lines_json: list[nlp_core.NLPCore.LineJSON] = []
-        self._lsd_data: LineTypeHeaderFooter.LSDData = []
-        self._no_irregular_footer = 0
-        self._no_irregular_header = 0
-        self._page_idx = 0
-        self._page_no_max = 0
-        self._result_data: LineTypeHeaderFooter.ResultData = {}
+        self._line_no_page = 0
+        self._no_pages = 0
+        self._result_doc_footer: LineTypeHeaderFooter.ResultDoc = []
+        self._result_doc_header: LineTypeHeaderFooter.ResultDoc = []
+        self._result_pages_footer: LineTypeHeaderFooter.ResultPages = []
+        self._result_pages_header: LineTypeHeaderFooter.ResultPages = []
         self.no_lines_footer = 0
         self.no_lines_header = 0
-        self._exist = False
-    def _calc_levenshtein(self) -> None: ...
-    def _check_irregular_footer(self, line_ind: int, text: str) -> None: ...
-    def _check_irregular_header(self, line_ind: int, text: str) -> None: ...
-    def _determine_candidate(self, distance_max: int, line_ind: int) -> bool: ...
-    def _process_page(self) -> None: ...
-    def _store_irregulars(self) -> None: ...
-    def _store_line_data_footer(self) -> None: ...
-    def _store_line_data_header(self) -> None: ...
+        self._exist = True
+    def _apply_patterns(self) -> None: ...
+    def _create_cand_from_page(self) -> None: ...
+    def _create_cand_from_page_footer(self) -> None: ...
+    def _create_cand_from_page_header(self) -> None: ...
+    @staticmethod
+    def _create_cand_template_page(lt_max_lines: int) -> LineTypeHeaderFooter.CandLinesPage: ...
+    @staticmethod
+    def _create_result_template(lt_max_lines: int) -> LineTypeHeaderFooter.ResultDoc: ...
+    @staticmethod
+    def _debug_lt(msg: str) -> None: ...
+    def _init_cand(self) -> None: ...
+    def _init_result_doc(self) -> None: ...
+    def _pattern_levenshtein(
+        self,
+    ) -> None: ...
+    def _pattern_levenshtein_distance(
+        self,
+        variant: str,
+        lt_max_distance: int,
+        cand_lines_pages: LineTypeHeaderFooter.CandLinesPages,
+        result_doc: LineTypeHeaderFooter.ResultDoc,
+        result_pages: LineTypeHeaderFooter.ResultPages,
+    ) -> tuple[LineTypeHeaderFooter.ResultDoc, LineTypeHeaderFooter.ResultPages]: ...
+    @staticmethod
+    def _reset_result_pages(
+        result_doc: LineTypeHeaderFooter.ResultDoc,
+        result_pages: LineTypeHeaderFooter.ResultPages,
+    ) -> LineTypeHeaderFooter.ResultPages: ...
     def _store_results(self) -> None: ...
-    def _swap_current_previous(self) -> None: ...
+    def _update_result_doc(
+        self,
+        result_doc: LineTypeHeaderFooter.ResultDoc,
+        result_pages: LineTypeHeaderFooter.ResultPages,
+    ) -> LineTypeHeaderFooter.ResultDoc: ...
     def exists(self) -> bool: ...
     def process_document(
         self,
-        file_name_curr: str = "",
+        file_name_curr: str = ...,
     ) -> None: ...

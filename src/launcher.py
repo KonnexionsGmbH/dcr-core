@@ -31,8 +31,6 @@ ARG_LANGUAGE_SPACY = "language_spacy"
 ARG_LANGUAGE_TESSERACT = "language_tesseract"
 ARG_OUTPUT_DIRECTORY = "output_directory"
 
-DEFAULT_LT_FOOTER_REQUIRED = False
-DEFAULT_LT_HEADER_REQUIRED = False
 DEFAULT_LT_HEADING_REQUIRED = False
 DEFAULT_LT_LIST_BULLET_REQUIRED = False
 DEFAULT_LT_LIST_NUMBER_REQUIRED = False
@@ -169,8 +167,6 @@ def main(argv: list[str]) -> None:
             process.Process().document(
                 full_name_in=document,
                 is_delete_auxiliary_files=bool(args[ARG_IS_DELETE_AUXILIARY_FILES]),
-                is_lt_footer_required=DEFAULT_LT_FOOTER_REQUIRED,
-                is_lt_header_required=DEFAULT_LT_HEADER_REQUIRED,
                 is_lt_heading_required=DEFAULT_LT_HEADING_REQUIRED,
                 is_lt_list_bullet_required=DEFAULT_LT_LIST_BULLET_REQUIRED,
                 is_lt_list_number_required=DEFAULT_LT_LIST_NUMBER_REQUIRED,

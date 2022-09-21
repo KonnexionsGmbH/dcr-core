@@ -82,8 +82,6 @@ class NLPCore:
     JSON_NAME_LINE_NO_LAST: ClassVar[str] = "lineNoLast"
     JSON_NAME_LINE_NO_PAGE: ClassVar[str] = "lineNoPage"
     JSON_NAME_LINE_NO_PARA: ClassVar[str] = "lineNoPara"
-    JSON_NAME_LINE_TYPE_FOOTER_REQUIRED: ClassVar[str] = "ltFooterRequired"
-    JSON_NAME_LINE_TYPE_HEADER_REQUIRED: ClassVar[str] = "ltHeaderRequired"
     JSON_NAME_LINE_TYPE_HEADING_REQUIRED: ClassVar[str] = "ltHeadingRequired"
     JSON_NAME_LINE_TYPE_LIST_BULLET_REQUIRED: ClassVar[str] = "ltListBulletRequired"
     JSON_NAME_LINE_TYPE_LIST_NUMBER_REQUIRED: ClassVar[str] = "ltListNumberRequired"
@@ -202,10 +200,10 @@ class NLPCore:
     JSON_NAME_SPACY_TKN_VOCAB: ClassVar[str] = "spacyTknVocab"
     JSON_NAME_SPACY_TKN_WHITESPACE_: ClassVar[str] = "spacyTknWhitespace_"
 
+    JSON_NAME_TABLE_CELL_NO: ClassVar[str] = "tableCellNo"
     JSON_NAME_TABLE_CELL_SPAN: ClassVar[str] = "tableCellSpan"
     JSON_NAME_TABLE_NO: ClassVar[str] = "tableNo"
-    JSON_NAME_TABLE_NO_CELL: ClassVar[str] = "tableCellNo"
-    JSON_NAME_TABLE_NO_ROW: ClassVar[str] = "tableRowNo"
+    JSON_NAME_TABLE_ROW_NO: ClassVar[str] = "tableRowNo"
     JSON_NAME_TEXT: ClassVar[str] = "text"
     JSON_NAME_TOKENIZER: ClassVar[str] = "tokenizer"
     JSON_NAME_TYPE: ClassVar[str] = "type"
@@ -328,7 +326,6 @@ class NLPCore:
     JSON_NAME_IS_FIRST_TOKEN: ClassVar[str] = "isFirstToken"
 
     JSON_NAME_LAST_COLUMN_URX: ClassVar[str] = "lastColumnURX"
-    JSON_NAME_LINES: ClassVar[str] = "lines"
     JSON_NAME_LINE_NO_PAGE_FROM: ClassVar[str] = "lineNoPageFrom"
     JSON_NAME_LINE_NO_PAGE_TILL: ClassVar[str] = "lineNoPageTill"
     JSON_NAME_LINE_TYPE: ClassVar[str] = "lineType"
@@ -358,10 +355,8 @@ class NLPCore:
     JSON_NAME_NO_WORDS_IN_PARA: ClassVar[str] = "noWordsInParagraph"
     JSON_NAME_NUMBER: ClassVar[str] = "number"
 
-    JSON_NAME_PAGES: ClassVar[str] = "pages"
     JSON_NAME_PAGE_NO_FROM: ClassVar[str] = "pageNoFrom"
     JSON_NAME_PAGE_NO_TILL: ClassVar[str] = "pageNoTill"
-    JSON_NAME_PARAS: ClassVar[str] = "paragraphs"
 
     JSON_NAME_ROWS: ClassVar[str] = "rows"
 
@@ -396,8 +391,6 @@ class NLPCore:
     JSON_NAME_TOKEN_TEXT_WITH_WS: ClassVar[str] = "tknTextWithWs"
 
     JSON_NAME_UPPER_RIGHT_X: ClassVar[str] = "upperRightX"
-
-    JSON_NAME_WORDS: ClassVar[str] = "words"
 
     LANGUAGE_PANDOC_DEFAULT: ClassVar[str] = "en"
     LANGUAGE_SPACY_DEFAULT: ClassVar[str] = "en_core_web_trf"
