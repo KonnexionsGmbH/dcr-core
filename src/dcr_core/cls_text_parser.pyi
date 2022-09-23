@@ -35,6 +35,7 @@ class TextParser:
         self._parse_result_line_idx = 0
         self._parse_result_line_word_no_first = 0
         self._parse_result_line_word_no_last = 0
+        self._parse_result_line_word_no_para_first = 0
         self._parse_result_llx: float = 0.0
         self._parse_result_no_cells_row = 0
         self._parse_result_no_fonts = 0

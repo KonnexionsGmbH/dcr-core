@@ -139,6 +139,9 @@ class Process:
         Args:
             full_name (str): File name.
         """
+        core_glob.logger.debug(core_glob.LOGGER_START)
+        core_glob.logger.debug("param full_name=%s", full_name)
+
         if not self._is_delete_auxiliary_files:
             return
 
@@ -149,6 +152,8 @@ class Process:
         if os.path.isfile(full_name):
             os.remove(full_name)
             core_utils.progress_msg(self._is_verbose, f"Auxiliary file '{full_name}' deleted")
+
+        core_glob.logger.debug(core_glob.LOGGER_END)
 
     # ------------------------------------------------------------------
     # Initialize the document recognition process.
@@ -293,6 +298,7 @@ class Process:
 
             return_code, error_msg, _ = Process.pdf2image(
                 self._full_name_in_pdf2image,
+                self._full_name_in_directory,
             )
             if return_code != "ok":
                 raise RuntimeError(error_msg)
@@ -535,10 +541,19 @@ class Process:
         core_glob.initialise_logger()
 
         core_glob.logger.debug(core_glob.LOGGER_START)
-
+        core_glob.logger.debug("param document_id               =%i", document_id)
         core_glob.logger.debug("param full_name_in              =%s", full_name_in)
-        if document_id:
-            core_glob.logger.debug("param document_id               =%i", document_id)
+        core_glob.logger.debug("param full_name_orig            =%s", full_name_orig)
+        core_glob.logger.debug("param is_delete_auxiliary_files =%s", is_delete_auxiliary_files)
+        core_glob.logger.debug("param is_lt_heading_required    =%s", is_lt_heading_required)
+        core_glob.logger.debug("param is_lt_list_bullet_required=%s", is_lt_list_bullet_required)
+        core_glob.logger.debug("param is_lt_list_number_required=%s", is_lt_list_number_required)
+        core_glob.logger.debug("param is_lt_toc_required        =%s", is_lt_toc_required)
+        core_glob.logger.debug("param is_verbose                =%s", is_verbose)
+        core_glob.logger.debug("param language_pandoc           =%s", language_pandoc)
+        core_glob.logger.debug("param language_spacy            =%s", language_spacy)
+        core_glob.logger.debug("param language_tesseract        =%s", language_tesseract)
+        core_glob.logger.debug("param output_directory          =%s", output_directory)
 
         self._document_init()
 
@@ -750,6 +765,9 @@ class Process:
             tuple[str, str]:
                     ("ok", "") if the processing has been completed successfully,
                                otherwise a corresponding error code and error message.
+
+        Raises:
+            RuntimeError: If the parser has detected any errors.
         """
         try:
             core_glob.logger.debug(core_glob.LOGGER_START)
@@ -757,11 +775,9 @@ class Process:
             core_glob.initialise_logger()
             core_glob.logger.debug(core_glob.LOGGER_START)
 
-        if document_id:
-            core_glob.logger.debug("param document_id               =%i", document_id)
+        core_glob.logger.debug("param document_id               =%i", document_id)
         core_glob.logger.debug("param full_name_in              =%s", full_name_in)
-        if full_name_orig:
-            core_glob.logger.debug("param full_name_orig            =%s", full_name_orig)
+        core_glob.logger.debug("param full_name_orig            =%s", full_name_orig)
         core_glob.logger.debug("param full_name_out             =%s", full_name_out)
         core_glob.logger.debug("param is_lt_heading_required    =%s", is_lt_heading_required)
         core_glob.logger.debug("param is_lt_list_bullet_required=%s", is_lt_list_bullet_required)
@@ -780,8 +796,6 @@ class Process:
             root = tree.getroot()
 
             core_glob.inst_parser = parser.TextParser()
-
-            core_glob.inst_parser.no_errors = 0
 
             for child in root:
                 child_tag = child.tag[nlp_core.NLPCore.PARSE_ELEM_FROM :]
@@ -809,6 +823,9 @@ class Process:
                             core_utils.ERROR_61_902.replace("{parent_tag}", "XML root").replace("{child_tag", other)
                         )
                         core_glob.inst_parser.no_errors += 1
+
+            if core_glob.inst_parser.no_errors != 0:
+                raise RuntimeError(core_utils.ERROR_61_903.replace("{no_errors}", str(core_glob.inst_parser.no_errors)))
 
             core_utils.progress_msg(core_glob.inst_setup.is_verbose, f"TETML word granularity parsed  {full_name_in}")
 
@@ -838,10 +855,7 @@ class Process:
                         core_glob.inst_parser.no_errors += 1
 
             if core_glob.inst_parser.no_errors != 0:
-                error_msg = core_utils.ERROR_61_903.replace("{no_errors}", str(core_glob.inst_parser.no_errors))
-                core_glob.logger.debug("return              =%s", (error_msg[:6], error_msg))
-                core_glob.logger.debug(core_glob.LOGGER_END)
-                return error_msg[:6], error_msg
+                raise RuntimeError(core_utils.ERROR_61_903.replace("{no_errors}", str(core_glob.inst_parser.no_errors)))
 
             core_utils.progress_msg(core_glob.inst_setup.is_verbose, f"TETML line granularity parsed  {full_name_in}")
 
@@ -863,6 +877,7 @@ class Process:
     def pdf2image(
         cls,
         full_name_in: str,
+        output_directory: str,
     ) -> tuple[str, str, list[tuple[str, str]]]:
         """Convert a scanned PDF file to a set of image files.
 
@@ -876,6 +891,8 @@ class Process:
         Args:
             full_name_in (str):
                     The directory name and file name of the input file.
+            output_directory (str):
+                Directory for the flat files to be created.
 
         Returns:
             tuple[str, str, list[tuple[str,str]]]:
@@ -921,7 +938,7 @@ class Process:
 
                 file_name_next = (
                     stem_name
-                    + "_"
+                    + ".pdf2image_"
                     + str(no_children)
                     + "."
                     + (
@@ -932,7 +949,7 @@ class Process:
                 )
 
                 full_name_next = core_utils.get_full_name_from_components(
-                    directory_name,
+                    output_directory,
                     file_name_next,
                 )
 

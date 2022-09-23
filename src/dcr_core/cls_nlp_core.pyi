@@ -194,6 +194,7 @@ class NLPCore:
     JSON_NAME_WORD_NO_LINE: ClassVar[str]
     JSON_NAME_WORD_NO_PAGE: ClassVar[str]
     JSON_NAME_WORD_NO_PARA: ClassVar[str]
+    JSON_NAME_WORD_NO_PARA_FIRST: ClassVar[str]
 
     # wwe =================================== wwe #
 

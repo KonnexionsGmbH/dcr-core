@@ -37,7 +37,9 @@ jobs:
       - name: Run the formatting tools
         run: make format
       - name: Run the Lint software tools
-        run: make lint
+# wwe
+#       run: make lint
+        run: make bandit flake8 mypy
       - name: Create the documentation and upload it
         run: make docs
       - name: Install Step 1 - Necessary system software (incl. Poppler & TeX Live)

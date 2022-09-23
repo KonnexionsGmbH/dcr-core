@@ -217,6 +217,7 @@ class NLPCore:
     JSON_NAME_WORD_NO_LINE: ClassVar[str] = "wordNoLine"
     JSON_NAME_WORD_NO_PAGE: ClassVar[str] = "wordNoPage"
     JSON_NAME_WORD_NO_PARA: ClassVar[str] = "wordNoPara"
+    JSON_NAME_WORD_NO_PARA_FIRST: ClassVar[str] = "wordNoParaFirst"
 
     # wwe ======================= wwe #
 
@@ -328,7 +329,6 @@ class NLPCore:
     JSON_NAME_LAST_COLUMN_URX: ClassVar[str] = "lastColumnURX"
     JSON_NAME_LINE_NO_PAGE_FROM: ClassVar[str] = "lineNoPageFrom"
     JSON_NAME_LINE_NO_PAGE_TILL: ClassVar[str] = "lineNoPageTill"
-    JSON_NAME_LINE_TYPE: ClassVar[str] = "lineType"
     JSON_NAME_LINE_TYPE_ANTI_PATTERNS: ClassVar[str] = "lineTypeAntiPatterns"
     JSON_NAME_LINE_TYPE_RULES: ClassVar[str] = "lineTypeRules"
 
@@ -397,7 +397,7 @@ class NLPCore:
     LANGUAGE_TESSERACT_DEFAULT: ClassVar[str] = "eng"
 
     LINE_TET_DOCUMENT_OPT_LIST: ClassVar[str] = "engines={noannotation noimage text notextcolor novector}"
-    LINE_TET_PAGE_OPT_LIST: ClassVar[str] = "granularity=line"
+    LINE_TET_PAGE_OPT_LIST: ClassVar[str] = "contentanalysis={dehyphenate=false} docstyle=generic granularity=line"
     LINE_XML_VARIATION: ClassVar[str] = "line."
 
     LINE_TYPE_BODY: ClassVar[str] = "b"
@@ -489,7 +489,9 @@ class NLPCore:
     TETML_TYPE_WORD: ClassVar[str] = "word"
 
     WORD_TET_DOCUMENT_OPT_LIST: ClassVar[str] = "engines={noannotation noimage text notextcolor novector}"
-    WORD_TET_PAGE_OPT_LIST: ClassVar[str] = "granularity=word tetml={glyphdetails={all} elements={line}}"
+    WORD_TET_PAGE_OPT_LIST: ClassVar[
+        str
+    ] = "contentanalysis={dehyphenate=false} docstyle=generic granularity=word tetml={glyphdetails={all} elements={line}}"
     WORD_XML_VARIATION: ClassVar[str] = "word."
 
     # ------------------------------------------------------------------

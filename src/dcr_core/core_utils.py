@@ -40,7 +40,8 @@ ERROR_61_901 = "61.901 Issue (s_p_j): Parsing the file '{full_name}' failed - Fi
 ERROR_61_902 = "61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'"
 ERROR_61_903 = "61.903 Issue (s_p_j): The number of parsing issues is {no_errors} - details can be found above"
 ERROR_61_904 = "61.904 Issue (s_p_j): Too few lines at granularity 'line' - {line} instead of {word}"
-ERROR_61_905 = "61.905 Issue (s_p_j): Too many lines at granularity 'line' - expected {word}"
+ERROR_61_905 = "61.905 Issue (s_p_j): Too many lines at granularity 'line' - expected {no_lines_word} (text='{text}')"
+ERROR_61_906 = "61.906 Issue (s_p_j): Line number {line_no}: the line text '{line_text}' should start with '{word_text}'"
 ERROR_71_901 = "71.901 Issue (tkn): Tokenizing the file '{full_name}' failed - FileNotFoundError"
 
 

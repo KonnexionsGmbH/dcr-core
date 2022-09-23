@@ -60,7 +60,7 @@ bandit:             ## Find common security issues with Bandit.
 	@echo Info **********  Start: Bandit **************************************
 	@echo MYPYPATH      =${MYPYPATH}
 	@echo PYTHON        =${PYTHON}
-	@echo PYTHONPATH     =${PYTHONPATH}
+	@echo PYTHONPATH    =${PYTHONPATH}
 	@echo PYTHONPATH_DEV=${PYTHONPATH_DEV}
 	${PIPENV} run bandit --version
 	@echo ---------------------------------------------------------------------
@@ -74,7 +74,7 @@ black:              ## Format the code with Black.
 	@echo Info **********  Start: black ***************************************
 	@echo MYPYPATH      =${MYPYPATH}
 	@echo PYTHON        =${PYTHON}
-	@echo PYTHONPATH     =${PYTHONPATH}
+	@echo PYTHONPATH    =${PYTHONPATH}
 	@echo PYTHONPATH_DEV=${PYTHONPATH_DEV}
 	${PIPENV} run black --version
 	@echo ---------------------------------------------------------------------
@@ -98,7 +98,7 @@ docformatter:       ## Format the docstrings with docformatter.
 	@echo Info **********  Start: docformatter ********************************
 	@echo MYPYPATH      =${MYPYPATH}
 	@echo PYTHON        =${PYTHON}
-	@echo PYTHONPATH     =${PYTHONPATH}
+	@echo PYTHONPATH    =${PYTHONPATH}
 	@echo PYTHONPATH_DEV=${PYTHONPATH_DEV}
 	${PIPENV} run docformatter --version
 	@echo ---------------------------------------------------------------------
@@ -112,7 +112,7 @@ flake8:             ## Enforce the Python Style Guides with Flake8.
 	@echo Info **********  Start: Flake8 **************************************
 	@echo MYPYPATH      =${MYPYPATH}
 	@echo PYTHON        =${PYTHON}
-	@echo PYTHONPATH     =${PYTHONPATH}
+	@echo PYTHONPATH    =${PYTHONPATH}
 	@echo PYTHONPATH_DEV=${PYTHONPATH_DEV}
 	${PIPENV} run flake8 --version
 	@echo ---------------------------------------------------------------------
@@ -126,7 +126,7 @@ isort:              ## Edit and sort the imports with isort.
 	@echo Info **********  Start: isort ***************************************
 	@echo MYPYPATH      =${MYPYPATH}
 	@echo PYTHON        =${PYTHON}
-	@echo PYTHONPATH     =${PYTHONPATH}
+	@echo PYTHONPATH    =${PYTHONPATH}
 	@echo PYTHONPATH_DEV=${PYTHONPATH_DEV}
 	${PIPENV} run isort --version
 	@echo ---------------------------------------------------------------------
@@ -153,7 +153,7 @@ mypy:               ## Find typing issues with Mypy.
 	@echo Info **********  Start: Mypy ****************************************
 	@echo MYPYPATH      =${MYPYPATH}
 	@echo PYTHON        =${PYTHON}
-	@echo PYTHONPATH     =${PYTHONPATH}
+	@echo PYTHONPATH    =${PYTHONPATH}
 	@echo PYTHONPATH_DEV=${PYTHONPATH_DEV}
 	${PIPENV} run mypy --version
 	@echo ---------------------------------------------------------------------
@@ -212,7 +212,7 @@ pydocstyle:         ## Check the API documentation with pydocstyle.
 	@echo Info **********  Start: pydocstyle **********************************
 	@echo MYPYPATH      =${MYPYPATH}
 	@echo PYTHON        =${PYTHON}
-	@echo PYTHONPATH     =${PYTHONPATH}
+	@echo PYTHONPATH    =${PYTHONPATH}
 	@echo PYTHONPATH_DEV=${PYTHONPATH_DEV}
 	${PIPENV} run pydocstyle --version
 	@echo ---------------------------------------------------------------------
@@ -226,7 +226,7 @@ pylint:             ## Lint the code with Pylint.
 	@echo Info **********  Start: Pylint **************************************
 	@echo MYPYPATH      =${MYPYPATH}
 	@echo PYTHON        =${PYTHON}
-	@echo PYTHONPATH     =${PYTHONPATH}
+	@echo PYTHONPATH    =${PYTHONPATH}
 	@echo PYTHONPATH_DEV=${PYTHONPATH_DEV}
 	${PIPENV} run pylint --version
 	@echo ---------------------------------------------------------------------
@@ -320,13 +320,10 @@ version:            ## Show the installed software versions.
 	@echo Info **********  Start: pip *****************************************
 	@echo MYPYPATH      =${MYPYPATH}
 	@echo PYTHON        =${PYTHON}
-	@echo PYTHONPATH     =${PYTHONPATH}
+	@echo PYTHONPATH    =${PYTHONPATH}
 	@echo PYTHONPATH_DEV=${PYTHONPATH_DEV}
-	${PYTHON} -m build --version
 	${PYTHON} -m pip --version
 	${PYTHON} -m pipenv --version
-	${PYTHON} -m twine --version
-	${PYTHON} -m wheel version
 	@echo Info **********  End:   pip *****************************************
 
 ## ============================================================================

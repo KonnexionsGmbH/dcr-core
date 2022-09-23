@@ -259,7 +259,6 @@ class LineTypeHeaderFooter:
     # ------------------------------------------------------------------
     def _init_cand(self) -> None:
         """Initialize the candidate data structures."""
-        self._debug_lt("=" * 80)
         self._debug_lt("Create line candidates - Start")
         self._debug_lt("-" * 80)
 
@@ -480,7 +479,9 @@ class LineTypeHeaderFooter:
         core_glob.logger.debug("param result_doc                =%s", str(result_doc))
         core_glob.logger.debug("param result_pages              =%s", str(result_pages)[:100])
 
-        for idx_line, (value_doc, _, _) in enumerate(result_doc):
+        self._debug_lt(variant + f" results - line_type={line_type}")
+
+        for idx_line, (value_doc, pattern_name, no_pages) in enumerate(result_doc):
             if not value_doc:
                 continue
 
@@ -490,11 +491,12 @@ class LineTypeHeaderFooter:
 
                 core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES][idx_page][
                     nlp_core.NLPCore.JSON_NAME_CONTAINER_LINES
-                ][cand_lines_pages[idx_page][idx_line][0]][nlp_core.NLPCore.JSON_NAME_LINE_TYPE] = line_type
+                ][cand_lines_pages[idx_page][idx_line][0]][nlp_core.NLPCore.JSON_NAME_TYPE]: str = line_type
 
                 line_no: int = core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES][idx_page][
                     nlp_core.NLPCore.JSON_NAME_CONTAINER_LINES
                 ][cand_lines_pages[idx_page][idx_line][0]][nlp_core.NLPCore.JSON_NAME_LINE_NO]
+
                 para_no_page: int = core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES][idx_page][
                     nlp_core.NLPCore.JSON_NAME_CONTAINER_LINES
                 ][cand_lines_pages[idx_page][idx_line][0]][nlp_core.NLPCore.JSON_NAME_PARA_NO_PAGE]
@@ -503,13 +505,9 @@ class LineTypeHeaderFooter:
                     nlp_core.NLPCore.JSON_NAME_CONTAINER_PARAS
                 ][para_no_page - 1][nlp_core.NLPCore.JSON_NAME_CONTAINER_WORDS]:
                     if word[nlp_core.NLPCore.JSON_NAME_LINE_NO] == line_no - 1:
-                        word[nlp_core.NLPCore.JSON_NAME_LINE_TYPE] = line_type
+                        word[nlp_core.NLPCore.JSON_NAME_TYPE] = line_type
 
-        if core_glob.inst_setup.is_verbose_lt_header_footer:
-            self._debug_lt(variant + " results")
-            for idx_line, (value_doc, pattern_name, no_pages) in enumerate(result_doc):
-                if value_doc:
-                    self._debug_lt(f"Relative line number={idx_line+1:2d} Affected pages={no_pages:3d} Pattern={pattern_name}")
+            self._debug_lt(f"Relative line number={idx_line+1:2d} Affected pages={no_pages:3d} Pattern={pattern_name}")
 
         core_glob.logger.debug(core_glob.LOGGER_END)
 
@@ -588,6 +586,15 @@ class LineTypeHeaderFooter:
         core_glob.logger.debug(core_glob.LOGGER_START)
         core_glob.logger.debug("param file_name_curr =%s", file_name_curr)
 
+        self._debug_lt("=" * 80)
+        self._debug_lt(f"Start document                       ={self._file_name_curr}")
+        self._debug_lt("-" * 37)
+        self._debug_lt(f"lt_footer_max_distance={core_glob.inst_setup.lt_footer_max_distance}")
+        self._debug_lt(f"lt_footer_max_lines   ={core_glob.inst_setup.lt_footer_max_lines}")
+        self._debug_lt(f"lt_header_max_distance={core_glob.inst_setup.lt_header_max_distance}")
+        self._debug_lt(f"lt_header_max_lines   ={core_glob.inst_setup.lt_header_max_lines}")
+        self._debug_lt("-" * 80)
+
         core_utils.check_exists_object(
             is_nlp_core=True,
             is_setup=True,
@@ -599,6 +606,8 @@ class LineTypeHeaderFooter:
 
         # Neither the identification of headers nor footers is desired.
         if core_glob.inst_setup.lt_footer_max_lines == 0 and core_glob.inst_setup.lt_header_max_lines == 0:
+            self._debug_lt("End (not required)")
+            self._debug_lt("=" * 80)
             return
 
         self._file_name_curr = file_name_curr
@@ -615,6 +624,8 @@ class LineTypeHeaderFooter:
             core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LINES_FOOTER] = self.no_lines_footer
             if self._is_required_header:
                 core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LINES_HEADER] = self.no_lines_header
+            self._debug_lt("End (document size only one page)")
+            self._debug_lt("=" * 80)
             return
 
         # ------------------------------------------------------------------
@@ -627,5 +638,8 @@ class LineTypeHeaderFooter:
         self._apply_patterns()
 
         self._store_results()
+
+        self._debug_lt(f"End   document                       ={self._file_name_curr}")
+        self._debug_lt("=" * 80)
 
         core_glob.logger.debug(core_glob.LOGGER_END)

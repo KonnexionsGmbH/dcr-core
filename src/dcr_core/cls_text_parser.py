@@ -71,6 +71,7 @@ class TextParser:
         self._parse_result_line_idx = 0
         self._parse_result_line_word_no_first = 0
         self._parse_result_line_word_no_last = 0
+        self._parse_result_line_word_no_para_first = 0
         self._parse_result_llx: float = 0.0
         self._parse_result_no_cells_row = 0
         self._parse_result_no_fonts = 0
@@ -280,6 +281,7 @@ class TextParser:
                 case nlp_core.NLPCore.PARSE_ELEM_BOOKMARK:
                     self._parse_tag_bookmark(child_tag, child)
                 case other:
+                    # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
                         core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_BOOKMARK).replace("{child_tag", other)
                     )
@@ -305,6 +307,7 @@ class TextParser:
                 case nlp_core.NLPCore.PARSE_ELEM_BOOKMARK:
                     self._parse_tag_bookmark(child_tag, child)
                 case other:
+                    # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
                         core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_BOOKMARKS).replace("{child_tag", other)
                     )
@@ -339,6 +342,7 @@ class TextParser:
                     else:
                         self._parse_tag_table_line(child_tag, child)
                 case other:
+                    # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
                         core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_BOX).replace("{child_tag", other)
                     )
@@ -379,6 +383,7 @@ class TextParser:
                 case nlp_core.NLPCore.PARSE_ELEM_WORD:
                     self._parse_tag_word(child_tag, child)
                 case other:
+                    # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
                         core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_BOX).replace("{child_tag", other)
                     )
@@ -404,6 +409,7 @@ class TextParser:
                 case nlp_core.NLPCore.PARSE_ELEM_PARA:
                     self._parse_tag_para_line(child_tag, child)
                 case other:
+                    # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
                         core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_CELL).replace("{child_tag", other)
                     )
@@ -441,6 +447,7 @@ class TextParser:
                 case nlp_core.NLPCore.PARSE_ELEM_PARA:
                     self._parse_tag_para_word(child_tag, child)
                 case other:
+                    # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
                         core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_CELL).replace("{child_tag", other)
                     )
@@ -474,6 +481,7 @@ class TextParser:
                     else:
                         self._parse_tag_table_line(child_tag, child)
                 case other:
+                    # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
                         core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_CONTENT).replace("{child_tag", other)
                     )
@@ -516,6 +524,7 @@ class TextParser:
                 ):
                     pass
                 case other:
+                    # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
                         core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_DOC_INFO).replace("{child_tag", other)
                     )
@@ -541,6 +550,7 @@ class TextParser:
             child_tag = child.tag[nlp_core.NLPCore.PARSE_ELEM_FROM :]
             match child_tag:
                 case other:
+                    # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
                         core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_FONT).replace("{child_tag", other)
                     )
@@ -580,6 +590,7 @@ class TextParser:
                 case nlp_core.NLPCore.PARSE_ELEM_FONT:
                     self._parse_tag_font(child_tag, child)
                 case other:
+                    # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
                         core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_FONTS).replace("{child_tag", other)
                     )
@@ -603,6 +614,7 @@ class TextParser:
             child_tag = child.tag[nlp_core.NLPCore.PARSE_ELEM_FROM :]
             match child_tag:
                 case other:
+                    # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
                         core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_GLYPH).replace("{child_tag", other)
                     )
@@ -635,15 +647,52 @@ class TextParser:
                 case nlp_core.NLPCore.PARSE_ELEM_TEXT:
                     self._parse_tag_text(child_tag, child)
                 case other:
+                    # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
                         core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_LINE).replace("{child_tag", other)
                     )
                     self.no_errors += 1
+                    return
 
-        if self._parse_result_line_idx == self._parse_result_no_lines_word:
-            core_utils.progress_msg_core(core_utils.ERROR_61_905.replace("{word", str(self._parse_result_no_lines_word)))
+        # 61.905 Issue (s_p_j): Too many lines at granularity 'line' - expected {no_lines_word} (text='{text}')
+        if self._parse_result_line_idx >= self._parse_result_no_lines_word:
+            core_utils.progress_msg_core(
+                core_utils.ERROR_61_905.replace("{no_lines_word}", str(self._parse_result_no_lines_word)).replace(
+                    "{text}", self._parse_result_text
+                )
+            )
+            self.no_errors += 1
+            return
+
+        # Try to check whether the line determined at the granularity 'Word' corresponds to the current line
+        para_idx_page = (
+            core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES][self._parse_result_page_idx][
+                nlp_core.NLPCore.JSON_NAME_CONTAINER_LINES
+            ][self._parse_result_line_idx][nlp_core.NLPCore.JSON_NAME_PARA_NO_PAGE]
+            - 1
+        )
+
+        word_idx_para_first = (
+            core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES][self._parse_result_page_idx][
+                nlp_core.NLPCore.JSON_NAME_CONTAINER_LINES
+            ][self._parse_result_line_idx][nlp_core.NLPCore.JSON_NAME_WORD_NO_PARA_FIRST]
+            - 1
+        )
+
+        first_word_text = core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES][self._parse_result_page_idx][
+            nlp_core.NLPCore.JSON_NAME_CONTAINER_PARAS
+        ][para_idx_page][nlp_core.NLPCore.JSON_NAME_CONTAINER_WORDS][word_idx_para_first][nlp_core.NLPCore.JSON_NAME_TEXT]
+
+        if not self._parse_result_text.startswith(first_word_text):
+            # 61.906 Issue (s_p_j): Line number {line_no}: the line text '{line_text}' should start with '{word_text}'
+            core_utils.progress_msg_core(
+                core_utils.ERROR_61_906.replace("{line_no}", str(self._parse_result_line_idx + 1))
+                .replace("{line_text}", str(self._parse_result_text))
+                .replace("{word_text}", first_word_text)
+            )
             self.no_errors += 1
 
+        # Store the line text in the JSON document
         core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES][self._parse_result_page_idx][
             nlp_core.NLPCore.JSON_NAME_CONTAINER_LINES
         ][self._parse_result_line_idx][nlp_core.NLPCore.JSON_NAME_TEXT] = self._parse_result_text
@@ -669,6 +718,7 @@ class TextParser:
 
         self._parse_result_line_word_no_first = 0
         self._parse_result_line_word_no_last = 0
+        self._parse_result_line_word_no_para_first = 0
 
         self._parse_result_no_lines_word += 1
         self._parse_result_no_lines_page += 1
@@ -690,6 +740,7 @@ class TextParser:
                 case nlp_core.NLPCore.PARSE_ELEM_WORD:
                     self._parse_tag_word(child_tag, child)
                 case other:
+                    # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
                         core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_LINE).replace("{child_tag", other)
                     )
@@ -719,10 +770,12 @@ class TextParser:
                 nlp_core.NLPCore.JSON_NAME_TABLE_NO: no_tables,
                 nlp_core.NLPCore.JSON_NAME_TABLE_CELL_NO: no_cells_row,
                 nlp_core.NLPCore.JSON_NAME_TABLE_ROW_NO: no_rows_table,
+                nlp_core.NLPCore.JSON_NAME_TEXT: "",
                 nlp_core.NLPCore.JSON_NAME_TYPE: line_type,
                 nlp_core.NLPCore.JSON_NAME_URX: float(parent.attrib.get(nlp_core.NLPCore.PARSE_ATTR_URX)),
                 nlp_core.NLPCore.JSON_NAME_WORD_NO_FIRST: self._parse_result_line_word_no_first,
                 nlp_core.NLPCore.JSON_NAME_WORD_NO_LAST: self._parse_result_line_word_no_last,
+                nlp_core.NLPCore.JSON_NAME_WORD_NO_PARA_FIRST: self._parse_result_line_word_no_para_first,
             }
         )
 
@@ -759,6 +812,7 @@ class TextParser:
                 case nlp_core.NLPCore.PARSE_ELEM_CONTENT:
                     self._parse_tag_content(child_tag, child)
                 case other:
+                    # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
                         core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_PAGE).replace("{child_tag", other)
                     )
@@ -813,6 +867,7 @@ class TextParser:
                 case nlp_core.NLPCore.PARSE_ELEM_CONTENT:
                     self._parse_tag_content(child_tag, child)
                 case other:
+                    # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
                         core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_PAGE).replace("{child_tag", other)
                     )
@@ -859,20 +914,23 @@ class TextParser:
                 case nlp_core.NLPCore.PARSE_ELEM_PAGE:
                     self._parse_tag_page_line(child_tag, child)
                 case other:
+                    # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
                         core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_PAGES).replace("{child_tag", other)
                     )
                     self.no_errors += 1
 
         if self._parse_result_no_lines_line != self._parse_result_no_lines_word:
+            # 61.904 Issue (s_p_j): Too few lines at granularity 'line' - {line} instead of {word}
             core_utils.progress_msg_core(
                 core_utils.ERROR_61_904.replace("{line}", str(self._parse_result_no_lines_line)).replace(
-                    "{word", str(self._parse_result_no_lines_word)
+                    "{word}", str(self._parse_result_no_lines_word)
                 )
             )
             self.no_errors += 1
 
-        self._determine_line_types()
+        if self.no_errors == 0:
+            self._determine_line_types()
 
         with open(self._full_name, "w", encoding=core_glob.FILE_ENCODING_DEFAULT) as file_handle:
             json.dump(
@@ -918,6 +976,7 @@ class TextParser:
                 case nlp_core.NLPCore.PARSE_ELEM_RESOURCES:
                     self._parse_tag_resources(child_tag, child)
                 case other:
+                    # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
                         core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_PAGES).replace("{child_tag", other)
                     )
@@ -926,13 +985,28 @@ class TextParser:
         core_glob.inst_nlp_core.document_json = {
             nlp_core.NLPCore.JSON_NAME_CREATED_AT: datetime.now().strftime("%d.%m.%Y %H:%M:%S"),
             nlp_core.NLPCore.JSON_NAME_CREATED_BY: __name__,
-            nlp_core.NLPCore.JSON_NAME_NO_LINES: self._parse_result_no_lines_word,
-            nlp_core.NLPCore.JSON_NAME_NO_PAGES: self.parse_result_no_pages,
-            nlp_core.NLPCore.JSON_NAME_NO_PARAS: self._parse_result_no_paras,
-            nlp_core.NLPCore.JSON_NAME_NO_TABLES: self._parse_result_no_tables,
-            nlp_core.NLPCore.JSON_NAME_NO_WORDS: self._parse_result_no_words,
-            nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES: self._parse_result_container_pages,
         }
+
+        if core_glob.inst_setup.is_json_incl_fonts:
+            core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_FONTS] = self._parse_result_no_fonts
+
+        core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LINES] = self._parse_result_no_lines_word
+        core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LINES_FOOTER] = -1
+        core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LINES_HEADER] = -1
+
+        if self._is_lt_toc_required:
+            core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LINES_TOC] = -1
+
+        if self._is_lt_list_bullet_required:
+            core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LISTS_BULLET] = -1
+
+        if self._is_lt_list_number_required:
+            core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LISTS_NUMBER] = -1
+
+        core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_PAGES] = self.parse_result_no_pages
+        core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_PARAS] = self._parse_result_no_paras
+        core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_TABLES] = self._parse_result_no_tables
+        core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_WORDS] = self._parse_result_no_words
 
         if core_glob.inst_setup.is_json_incl_config:
             core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONFIG] = {
@@ -941,12 +1015,13 @@ class TextParser:
 
         if core_glob.inst_setup.is_json_incl_fonts:
             core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_FONTS] = self._parse_result_container_fonts
-            core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_FONTS] = self._parse_result_no_fonts
 
         if core_glob.inst_setup.is_json_incl_params:
             core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_PARAMS] = {
                 nlp_core.NLPCore.JSON_NAME_PARSER: self._create_params()
             }
+
+        core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES] = self._parse_result_container_pages
 
         with open(self._full_name, "w", encoding=core_glob.FILE_ENCODING_DEFAULT) as file_handle:
             json.dump(
@@ -980,6 +1055,7 @@ class TextParser:
                 case nlp_core.NLPCore.PARSE_ELEM_PARA:
                     self._parse_tag_para_line(child_tag, child)
                 case other:
+                    # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
                         core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_PARA).replace("{child_tag", other)
                     )
@@ -1026,6 +1102,7 @@ class TextParser:
                 case nlp_core.NLPCore.PARSE_ELEM_PARA:
                     self._parse_tag_para_word(child_tag, child)
                 case other:
+                    # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
                         core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_PARA).replace("{child_tag", other)
                     )
@@ -1047,10 +1124,11 @@ class TextParser:
                 nlp_core.NLPCore.JSON_NAME_PAGE_NO: self.parse_result_no_pages,
                 nlp_core.NLPCore.JSON_NAME_PARA_NO: self._parse_result_no_paras,
                 nlp_core.NLPCore.JSON_NAME_PARA_NO_PAGE: self._parse_result_page_para_no_first,
+                nlp_core.NLPCore.JSON_NAME_TABLE_CELL_NO: no_cells_row,
                 nlp_core.NLPCore.JSON_NAME_TABLE_CELL_SPAN: self._parse_result_table_cell_span,
                 nlp_core.NLPCore.JSON_NAME_TABLE_NO: no_tables,
-                nlp_core.NLPCore.JSON_NAME_TABLE_CELL_NO: no_cells_row,
                 nlp_core.NLPCore.JSON_NAME_TABLE_ROW_NO: no_rows_table,
+                nlp_core.NLPCore.JSON_NAME_TEXT: "",
                 nlp_core.NLPCore.JSON_NAME_WORD_NO_FIRST: self._parse_result_para_word_no_first,
                 nlp_core.NLPCore.JSON_NAME_WORD_NO_LAST: self._parse_result_para_word_no_last,
                 nlp_core.NLPCore.JSON_NAME_CONTAINER_WORDS: self._parse_result_container_words,
@@ -1079,6 +1157,7 @@ class TextParser:
                 case nlp_core.NLPCore.PARSE_ELEM_COLOR_SPACES:
                     pass
                 case other:
+                    # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
                         core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_RESOURCES).replace("{child_tag", other)
                     )
@@ -1104,6 +1183,7 @@ class TextParser:
                 case nlp_core.NLPCore.PARSE_ELEM_CELL:
                     self._parse_tag_cell_line(child_tag, child)
                 case other:
+                    # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
                         core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_ROW).replace("{child_tag", other)
                     )
@@ -1133,6 +1213,7 @@ class TextParser:
                 case nlp_core.NLPCore.PARSE_ELEM_CELL:
                     self._parse_tag_cell_word(child_tag, child)
                 case other:
+                    # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
                         core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_ROW).replace("{child_tag", other)
                     )
@@ -1160,6 +1241,7 @@ class TextParser:
                 case nlp_core.NLPCore.PARSE_ELEM_ROW:
                     self._parse_tag_row_line(child_tag, child)
                 case other:
+                    # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
                         core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_TABLE).replace("{child_tag", other)
                     )
@@ -1192,6 +1274,7 @@ class TextParser:
                 case nlp_core.NLPCore.PARSE_ELEM_ROW:
                     self._parse_tag_row_word(child_tag, child)
                 case other:
+                    # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
                         core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_TABLE).replace("{child_tag", other)
                     )
@@ -1217,6 +1300,7 @@ class TextParser:
             child_tag = child.tag[nlp_core.NLPCore.PARSE_ELEM_FROM :]
             match child_tag:
                 case other:
+                    # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
                         core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_WORD).replace("{child_tag", other)
                     )
@@ -1243,6 +1327,9 @@ class TextParser:
         self._parse_result_no_words_page += 1
         self._parse_result_no_words_para += 1
 
+        if self._parse_result_line_word_no_para_first == 0:
+            self._parse_result_line_word_no_para_first = self._parse_result_no_words_para
+
         if self._parse_result_line_word_no_first == 0:
             self._parse_result_line_word_no_first = self._parse_result_no_words
         self._parse_result_line_word_no_last = self._parse_result_no_words
@@ -1268,6 +1355,7 @@ class TextParser:
                 case nlp_core.NLPCore.PARSE_ELEM_TEXT:
                     self._parse_tag_text(child_tag, child)
                 case other:
+                    # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
                         core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_WORD).replace("{child_tag", other)
                     )
@@ -1284,25 +1372,29 @@ class TextParser:
             no_cells_row = 0
             line_type = nlp_core.NLPCore.LINE_TYPE_BODY
 
-        container_word = {
-            nlp_core.NLPCore.JSON_NAME_LINE_NO: self._parse_result_no_lines_word,
-            nlp_core.NLPCore.JSON_NAME_PAGE_NO: self.parse_result_no_pages,
-            nlp_core.NLPCore.JSON_NAME_PARA_NO: self._parse_result_no_paras,
-            nlp_core.NLPCore.JSON_NAME_TABLE_CELL_SPAN: self._parse_result_table_cell_span,
-            nlp_core.NLPCore.JSON_NAME_TABLE_NO: no_tables,
-            nlp_core.NLPCore.JSON_NAME_TABLE_CELL_NO: no_cells_row,
-            nlp_core.NLPCore.JSON_NAME_TABLE_ROW_NO: no_rows_table,
-            nlp_core.NLPCore.JSON_NAME_TEXT: self._parse_result_text,
-            nlp_core.NLPCore.JSON_NAME_TYPE: line_type,
-            nlp_core.NLPCore.JSON_NAME_WORD_NO: self._parse_result_no_words,
-            nlp_core.NLPCore.JSON_NAME_WORD_NO_LINE: self._parse_result_line_word_no_first,
-            nlp_core.NLPCore.JSON_NAME_WORD_NO_PAGE: self._parse_result_page_word_no_first,
-            nlp_core.NLPCore.JSON_NAME_WORD_NO_PARA: self._parse_result_para_word_no_first,
-        }
+        container_word = {}
 
         if core_glob.inst_setup.is_json_incl_fonts:
             container_word[nlp_core.NLPCore.JSON_NAME_FONT] = self._parse_result_font
+
+        container_word[nlp_core.NLPCore.JSON_NAME_LINE_NO] = self._parse_result_no_lines_word
+        container_word[nlp_core.NLPCore.JSON_NAME_LINE_NO_PAGE] = self._parse_result_no_lines_page
+        container_word[nlp_core.NLPCore.JSON_NAME_PAGE_NO] = self.parse_result_no_pages
+        container_word[nlp_core.NLPCore.JSON_NAME_PARA_NO] = self._parse_result_no_paras
+
+        if core_glob.inst_setup.is_json_incl_fonts:
             container_word[nlp_core.NLPCore.JSON_NAME_SIZE] = self._parse_result_size
+
+        container_word[nlp_core.NLPCore.JSON_NAME_TABLE_CELL_NO] = no_cells_row
+        container_word[nlp_core.NLPCore.JSON_NAME_TABLE_CELL_SPAN] = self._parse_result_table_cell_span
+        container_word[nlp_core.NLPCore.JSON_NAME_TABLE_NO] = no_tables
+        container_word[nlp_core.NLPCore.JSON_NAME_TABLE_ROW_NO] = no_rows_table
+        container_word[nlp_core.NLPCore.JSON_NAME_TEXT] = self._parse_result_text
+        container_word[nlp_core.NLPCore.JSON_NAME_TYPE] = line_type
+        container_word[nlp_core.NLPCore.JSON_NAME_WORD_NO] = self._parse_result_no_words
+        container_word[nlp_core.NLPCore.JSON_NAME_WORD_NO_LINE] = self._parse_result_line_word_no_first
+        container_word[nlp_core.NLPCore.JSON_NAME_WORD_NO_PAGE] = self._parse_result_page_word_no_first
+        container_word[nlp_core.NLPCore.JSON_NAME_WORD_NO_PARA] = self._parse_result_para_word_no_first
 
         self._parse_result_container_words.append(container_word)
 
@@ -1374,6 +1466,8 @@ class TextParser:
 
         self._debug_xml_element_all("Start", parent_tag, parent.attrib, parent.text)
 
+        self.no_errors = 0
+
         self._is_line_processing = True
         self._is_word_processing = False
 
@@ -1399,6 +1493,7 @@ class TextParser:
                 case nlp_core.NLPCore.PARSE_ELEM_PAGES:
                     self._parse_tag_pages_line(child_tag, child)
                 case other:
+                    # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
                         core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_DOCUMENT).replace("{child_tag", other)
                     )
@@ -1490,9 +1585,9 @@ class TextParser:
 
         self._debug_xml_element_all("Start", parent_tag, parent.attrib, parent.text)
 
-        core_glob.inst_nlp_core.document_json = {}
-
         self.no_errors = 0
+
+        core_glob.inst_nlp_core.document_json = {}
 
         self._is_line_processing = False
         self._is_word_processing = True
@@ -1521,6 +1616,7 @@ class TextParser:
                 case nlp_core.NLPCore.PARSE_ELEM_PAGES:
                     self._parse_tag_pages_word(child_tag, child)
                 case other:
+                    # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
                         core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_DOCUMENT).replace("{child_tag", other)
                     )
