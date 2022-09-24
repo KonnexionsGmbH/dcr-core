@@ -92,32 +92,27 @@ class LineTypeToc:
             if page_no_toc == -1:
                 continue
 
+            text_original = core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES][page_no - 1][
+                nlp_core.NLPCore.JSON_NAME_CONTAINER_LINES
+            ][line_no_page - 1][nlp_core.NLPCore.JSON_NAME_TEXT]
+
             if page_no_toc == -2:
                 if row_no != 1:
                     self._init_toc_candidate()
-                    self._debug_lt(
-                        "End   check TOC candidate (!=)       "
-                        + f"={core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES][page_no-1][nlp_core.NLPCore.JSON_NAME_CONTAINER_LINES][line_no_page-1][nlp_core.NLPCore.JSON_NAME_TEXT]}"  # noqa: E501
-                    )
+                    self._debug_lt("End   check TOC candidate (!=)       " + f"={text_original}")
                     return
                 continue
 
             # Page numbers not ascending
             if page_no_toc < page_no_toc_last:
                 self._toc_candidates[idx][0] = -1
-                self._debug_lt(
-                    "Break page numbers not ascending     "
-                    + f"={core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES][page_no-1][nlp_core.NLPCore.JSON_NAME_CONTAINER_LINES][line_no_page-1][nlp_core.NLPCore.JSON_NAME_TEXT]}"  # noqa: E501
-                )
+                self._debug_lt("Break: page numbers not ascending    " + f"={text_original}")
                 break
 
             # Not a page number
             if page_no_toc > page_no_max:
                 self._toc_candidates[idx][0] = -1
-                self._debug_lt(
-                    "Break not a page number              "
-                    + f"={core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES][page_no-1][nlp_core.NLPCore.JSON_NAME_CONTAINER_LINES][line_no_page-1][nlp_core.NLPCore.JSON_NAME_TEXT]}"  # noqa: E501
-                )
+                self._debug_lt("Break: not a page number             " + f"={text_original}")
                 break
 
             page_no_toc_last = page_no_toc
@@ -130,20 +125,19 @@ class LineTypeToc:
             else:
                 break
 
-        # Correction of page numbers: page_no_toc
-        page_no_toc_last = 0
+        if len(self._toc_candidates) <= 1:
+            self._toc_candidates = []
+        else:
+            # Correction of page numbers: page_no_toc
+            page_no_toc_last = 0
 
-        for idx, [page_no_toc, page_no, _, line_no_page] in enumerate(self._toc_candidates):
-            self._debug_lt(
-                "TOC text                             "
-                + f"={core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES][page_no-1][nlp_core.NLPCore.JSON_NAME_CONTAINER_LINES][line_no_page-1][nlp_core.NLPCore.JSON_NAME_TEXT]}"  # noqa: E501
-            )
-            if page_no_toc == -1:
-                self._toc_candidates[idx][0] = page_no_toc_last
-            else:
-                page_no_toc_last = page_no_toc
+            for idx, [page_no_toc, page_no, _, line_no_page] in enumerate(self._toc_candidates):
+                self._debug_lt("TOC text                             " + f"={text_original}")
+                if page_no_toc == -1:
+                    self._toc_candidates[idx][0] = page_no_toc_last
+                else:
+                    page_no_toc_last = page_no_toc
 
-        if len(self._toc_candidates) > 0:
             self._is_toc_existing = True
 
         self._debug_lt("-" * 80)
@@ -193,7 +187,7 @@ class LineTypeToc:
                 or line_json[nlp_core.NLPCore.JSON_NAME_TYPE] == nlp_core.NLPCore.LINE_TYPE_TABLE
             ):
                 if (text := line_json[nlp_core.NLPCore.JSON_NAME_TEXT]) != "":
-                    line_tokens = text.split()
+                    line_tokens = text[:-1].split() if text[-1] == "." else text.split()
                     try:
                         self._process_toc_candidate_line_line(line_json, int(line_tokens[-1]))
                         gap = 0
@@ -230,10 +224,8 @@ class LineTypeToc:
         self._debug_lt("-" * 80)
 
         for line_json in self._lines_json:
-            if (
-                line_json[nlp_core.NLPCore.JSON_NAME_TYPE] == nlp_core.NLPCore.LINE_TYPE_BODY
-                or line_json[nlp_core.NLPCore.JSON_NAME_TYPE] == nlp_core.NLPCore.LINE_TYPE_TABLE
-            ):
+            if line_json[nlp_core.NLPCore.JSON_NAME_TYPE] == nlp_core.NLPCore.LINE_TYPE_TABLE:
+                self._debug_lt(f"Candidate                            ={line_json[nlp_core.NLPCore.JSON_NAME_TEXT]}")
                 if line_json[nlp_core.NLPCore.JSON_NAME_TABLE_ROW_NO] > 0:
                     self._process_toc_candidate_table_line(line_json)
                 else:

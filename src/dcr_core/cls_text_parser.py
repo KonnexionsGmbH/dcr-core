@@ -283,7 +283,7 @@ class TextParser:
                 case other:
                     # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
-                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_BOOKMARK).replace("{child_tag", other)
+                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_BOOKMARK).replace("{child_tag}", other)
                     )
                     self.no_errors += 1
 
@@ -309,7 +309,7 @@ class TextParser:
                 case other:
                     # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
-                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_BOOKMARKS).replace("{child_tag", other)
+                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_BOOKMARKS).replace("{child_tag}", other)
                     )
                     self.no_errors += 1
 
@@ -344,7 +344,7 @@ class TextParser:
                 case other:
                     # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
-                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_BOX).replace("{child_tag", other)
+                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_BOX).replace("{child_tag}", other)
                     )
                     self.no_errors += 1
 
@@ -385,7 +385,7 @@ class TextParser:
                 case other:
                     # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
-                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_BOX).replace("{child_tag", other)
+                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_BOX).replace("{child_tag}", other)
                     )
                     self.no_errors += 1
 
@@ -411,7 +411,7 @@ class TextParser:
                 case other:
                     # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
-                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_CELL).replace("{child_tag", other)
+                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_CELL).replace("{child_tag}", other)
                     )
                     self.no_errors += 1
 
@@ -449,7 +449,7 @@ class TextParser:
                 case other:
                     # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
-                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_CELL).replace("{child_tag", other)
+                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_CELL).replace("{child_tag}", other)
                     )
                     self.no_errors += 1
 
@@ -483,7 +483,7 @@ class TextParser:
                 case other:
                     # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
-                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_CONTENT).replace("{child_tag", other)
+                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_CONTENT).replace("{child_tag}", other)
                     )
                     self.no_errors += 1
 
@@ -526,7 +526,7 @@ class TextParser:
                 case other:
                     # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
-                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_DOC_INFO).replace("{child_tag", other)
+                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_DOC_INFO).replace("{child_tag}", other)
                     )
                     self.no_errors += 1
 
@@ -552,7 +552,7 @@ class TextParser:
                 case other:
                     # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
-                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_FONT).replace("{child_tag", other)
+                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_FONT).replace("{child_tag}", other)
                     )
                     self.no_errors += 1
 
@@ -592,7 +592,7 @@ class TextParser:
                 case other:
                     # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
-                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_FONTS).replace("{child_tag", other)
+                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_FONTS).replace("{child_tag}", other)
                     )
                     self.no_errors += 1
 
@@ -616,7 +616,7 @@ class TextParser:
                 case other:
                     # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
-                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_GLYPH).replace("{child_tag", other)
+                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_GLYPH).replace("{child_tag}", other)
                     )
                     self.no_errors += 1
 
@@ -649,7 +649,7 @@ class TextParser:
                 case other:
                     # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
-                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_LINE).replace("{child_tag", other)
+                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_LINE).replace("{child_tag}", other)
                     )
                     self.no_errors += 1
                     return
@@ -742,7 +742,7 @@ class TextParser:
                 case other:
                     # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
-                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_LINE).replace("{child_tag", other)
+                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_LINE).replace("{child_tag}", other)
                     )
                     self.no_errors += 1
 
@@ -814,7 +814,7 @@ class TextParser:
                 case other:
                     # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
-                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_PAGE).replace("{child_tag", other)
+                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_PAGE).replace("{child_tag}", other)
                     )
                     self.no_errors += 1
 
@@ -869,7 +869,7 @@ class TextParser:
                 case other:
                     # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
-                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_PAGE).replace("{child_tag", other)
+                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_PAGE).replace("{child_tag}", other)
                     )
                     self.no_errors += 1
 
@@ -916,7 +916,7 @@ class TextParser:
                 case other:
                     # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
-                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_PAGES).replace("{child_tag", other)
+                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_PAGES).replace("{child_tag}", other)
                     )
                     self.no_errors += 1
 
@@ -978,7 +978,7 @@ class TextParser:
                 case other:
                     # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
-                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_PAGES).replace("{child_tag", other)
+                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_PAGES).replace("{child_tag}", other)
                     )
                     self.no_errors += 1
 
@@ -1052,12 +1052,14 @@ class TextParser:
                     pass
                 case nlp_core.NLPCore.PARSE_ELEM_BOX:
                     self._parse_tag_box_line(child_tag, child)
-                case nlp_core.NLPCore.PARSE_ELEM_PARA:
+                case nlp_core.NLPCore.PARSE_ELEM_LINE:
                     self._parse_tag_para_line(child_tag, child)
+                case nlp_core.NLPCore.PARSE_ELEM_TEXT:
+                    self._parse_tag_text(child_tag, child)
                 case other:
                     # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
-                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_PARA).replace("{child_tag", other)
+                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_PARA).replace("{child_tag}", other)
                     )
                     self.no_errors += 1
 
@@ -1099,12 +1101,12 @@ class TextParser:
                     pass
                 case nlp_core.NLPCore.PARSE_ELEM_BOX:
                     self._parse_tag_box_word(child_tag, child)
-                case nlp_core.NLPCore.PARSE_ELEM_PARA:
+                case nlp_core.NLPCore.PARSE_ELEM_WORD:
                     self._parse_tag_para_word(child_tag, child)
                 case other:
                     # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
-                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_PARA).replace("{child_tag", other)
+                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_PARA).replace("{child_tag}", other)
                     )
                     self.no_errors += 1
 
@@ -1159,7 +1161,7 @@ class TextParser:
                 case other:
                     # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
-                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_RESOURCES).replace("{child_tag", other)
+                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_RESOURCES).replace("{child_tag}", other)
                     )
                     self.no_errors += 1
 
@@ -1185,7 +1187,7 @@ class TextParser:
                 case other:
                     # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
-                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_ROW).replace("{child_tag", other)
+                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_ROW).replace("{child_tag}", other)
                     )
                     self.no_errors += 1
 
@@ -1215,7 +1217,7 @@ class TextParser:
                 case other:
                     # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
-                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_ROW).replace("{child_tag", other)
+                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_ROW).replace("{child_tag}", other)
                     )
                     self.no_errors += 1
 
@@ -1243,7 +1245,7 @@ class TextParser:
                 case other:
                     # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
-                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_TABLE).replace("{child_tag", other)
+                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_TABLE).replace("{child_tag}", other)
                     )
                     self.no_errors += 1
 
@@ -1276,7 +1278,7 @@ class TextParser:
                 case other:
                     # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
-                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_TABLE).replace("{child_tag", other)
+                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_TABLE).replace("{child_tag}", other)
                     )
                     self.no_errors += 1
 
@@ -1302,7 +1304,7 @@ class TextParser:
                 case other:
                     # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
-                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_WORD).replace("{child_tag", other)
+                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_WORD).replace("{child_tag}", other)
                     )
                     self.no_errors += 1
 
@@ -1357,7 +1359,7 @@ class TextParser:
                 case other:
                     # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
-                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_WORD).replace("{child_tag", other)
+                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_WORD).replace("{child_tag}", other)
                     )
                     self.no_errors += 1
 
@@ -1495,7 +1497,7 @@ class TextParser:
                 case other:
                     # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
-                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_DOCUMENT).replace("{child_tag", other)
+                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_DOCUMENT).replace("{child_tag}", other)
                     )
                     self.no_errors += 1
 
@@ -1618,7 +1620,7 @@ class TextParser:
                 case other:
                     # 61.902 Issue (s_p_j): Parent node '{parent_tag}' has unknown child node '{child_tag}'
                     core_utils.progress_msg_core(
-                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_DOCUMENT).replace("{child_tag", other)
+                        core_utils.ERROR_61_902.replace("{parent_tag}", nlp_core.NLPCore.PARSE_ELEM_DOCUMENT).replace("{child_tag}", other)
                     )
                     self.no_errors += 1
 
