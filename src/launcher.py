@@ -22,27 +22,27 @@ import dcr_core.core_utils as utils
 # -----------------------------------------------------------------------------
 # Global variables.
 # -----------------------------------------------------------------------------
-ARG_DOCUMENT_ID = "document_id"
-ARG_INPUT_SOURCE = "input_source"
-ARG_IS_DELETE_AUXILIARY_FILES = "is_delete_auxiliary_files"
-ARG_IS_VERBOSE = "is_verbose"
-ARG_LANGUAGE_PANDOC = "language_pandoc"
-ARG_LANGUAGE_SPACY = "language_spacy"
-ARG_LANGUAGE_TESSERACT = "language_tesseract"
-ARG_OUTPUT_DIRECTORY = "output_directory"
+_ARG_DOCUMENT_ID = "document_id"
+_ARG_INPUT_SOURCE = "input_source"
+_ARG_IS_DELETE_AUXILIARY_FILES = "is_delete_auxiliary_files"
+_ARG_IS_VERBOSE = "is_verbose"
+_ARG_LANGUAGE_PANDOC = "language_pandoc"
+_ARG_LANGUAGE_SPACY = "language_spacy"
+_ARG_LANGUAGE_TESSERACT = "language_tesseract"
+_ARG_OUTPUT_DIRECTORY = "output_directory"
 
-DEFAULT_LT_HEADING_REQUIRED = False
-DEFAULT_LT_LIST_BULLET_REQUIRED = True
-DEFAULT_LT_LIST_NUMBER_REQUIRED = False
-DEFAULT_LT_TOC_REQUIRED = True
+_DEFAULT_LT_HEADING_REQUIRED = False
+_DEFAULT_LT_LIST_BULLET_REQUIRED = True
+_DEFAULT_LT_LIST_NUMBER_REQUIRED = False
+_DEFAULT_LT_TOC_REQUIRED = True
 
-LOCALE = "en_US.UTF-8"
+_LOCALE = "en_US.UTF-8"
 
 
 # -----------------------------------------------------------------------------
 # Load the command line arguments into memory.
 # -----------------------------------------------------------------------------
-def get_args() -> dict[str, str | list[str]]:
+def _get_args() -> dict[str, str | list[str]]:
     """Load the command line arguments.
 
     Returns:
@@ -94,25 +94,25 @@ def get_args() -> dict[str, str | list[str]]:
 
     parsed_args = parser.parse_args()
 
-    args[ARG_INPUT_SOURCE] = parsed_args.InputSource
+    args[_ARG_INPUT_SOURCE] = parsed_args.InputSource
 
-    if not (os.path.isdir(args[ARG_INPUT_SOURCE]) or os.path.isfile(args[ARG_INPUT_SOURCE])):
+    if not (os.path.isdir(args[_ARG_INPUT_SOURCE]) or os.path.isfile(args[_ARG_INPUT_SOURCE])):
         utils.terminate_fatal(
-            f"The specified input source is neither a file nor a file directory: {args[ARG_INPUT_SOURCE]}",
+            f"The specified input source is neither a file nor a file directory: {args[_ARG_INPUT_SOURCE]}",
         )
 
-    args[ARG_IS_DELETE_AUXILIARY_FILES] = parsed_args.auxiliary
+    args[_ARG_IS_DELETE_AUXILIARY_FILES] = parsed_args.auxiliary
 
-    args[ARG_IS_VERBOSE] = parsed_args.verbose
+    args[_ARG_IS_VERBOSE] = parsed_args.verbose
 
-    args[ARG_OUTPUT_DIRECTORY] = parsed_args.output
+    args[_ARG_OUTPUT_DIRECTORY] = parsed_args.output
 
-    if not args[ARG_OUTPUT_DIRECTORY]:
-        args[ARG_OUTPUT_DIRECTORY] = args[ARG_INPUT_SOURCE] + "_accepted"
+    if not args[_ARG_OUTPUT_DIRECTORY]:
+        args[_ARG_OUTPUT_DIRECTORY] = args[_ARG_INPUT_SOURCE] + "_accepted"
 
-    if not os.path.isdir(args[ARG_OUTPUT_DIRECTORY]):
+    if not os.path.isdir(args[_ARG_OUTPUT_DIRECTORY]):
         utils.terminate_fatal(
-            f"The output directory specified does not exist: {args[ARG_OUTPUT_DIRECTORY]}",
+            f"The output directory specified does not exist: {args[_ARG_OUTPUT_DIRECTORY]}",
         )
 
     glob.logger.debug(glob.LOGGER_END)
@@ -141,46 +141,46 @@ def main(argv: list[str]) -> None:
 
     print("Start launcher.py")
 
-    locale.setlocale(locale.LC_ALL, LOCALE)
+    locale.setlocale(locale.LC_ALL, _LOCALE)
 
     # Load the command line arguments.
-    args = get_args()
+    args = _get_args()
 
     document_files = []
 
-    if os.path.isfile(args[ARG_INPUT_SOURCE]):
-        document_files.append(args[ARG_INPUT_SOURCE])
+    if os.path.isfile(args[_ARG_INPUT_SOURCE]):
+        document_files.append(args[_ARG_INPUT_SOURCE])
     else:
-        for file in os.listdir(args[ARG_INPUT_SOURCE]):
-            path = os.path.join(args[ARG_INPUT_SOURCE], file)
+        for file in os.listdir(args[_ARG_INPUT_SOURCE]):
+            path = os.path.join(args[_ARG_INPUT_SOURCE], file)
             if os.path.isfile(path):
                 document_files.append(path)
         if not document_files:
             utils.terminate_fatal(
-                f"The document file directory specified doesn't contain any files: {args[ARG_INPUT_SOURCE]}",
+                f"The document file directory specified doesn't contain any files: {args[_ARG_INPUT_SOURCE]}",
             )
 
     for document in document_files:
         try:
-            for file in Path(args[ARG_OUTPUT_DIRECTORY]).glob(Path(document).stem + "*"):
+            for file in Path(args[_ARG_OUTPUT_DIRECTORY]).glob(Path(document).stem + "*"):
                 os.remove(file)
             process.Process().document(
                 full_name_in=document,
-                is_delete_auxiliary_files=bool(args[ARG_IS_DELETE_AUXILIARY_FILES]),
-                is_lt_heading_required=DEFAULT_LT_HEADING_REQUIRED,
-                is_lt_list_bullet_required=DEFAULT_LT_LIST_BULLET_REQUIRED,
-                is_lt_list_number_required=DEFAULT_LT_LIST_NUMBER_REQUIRED,
-                is_lt_toc_required=DEFAULT_LT_TOC_REQUIRED,
-                is_verbose=bool(args[ARG_IS_VERBOSE]),
-                output_directory=args[ARG_OUTPUT_DIRECTORY],
+                is_delete_auxiliary_files=bool(args[_ARG_IS_DELETE_AUXILIARY_FILES]),
+                is_lt_heading_required=_DEFAULT_LT_HEADING_REQUIRED,
+                is_lt_list_bullet_required=_DEFAULT_LT_LIST_BULLET_REQUIRED,
+                is_lt_list_number_required=_DEFAULT_LT_LIST_NUMBER_REQUIRED,
+                is_lt_toc_required=_DEFAULT_LT_TOC_REQUIRED,
+                is_verbose=bool(args[_ARG_IS_VERBOSE]),
+                output_directory=args[_ARG_OUTPUT_DIRECTORY],
             )
         except RuntimeError as exc:
-            utils.progress_msg(bool(args[ARG_IS_VERBOSE]), "-" * 80)
-            utils.progress_msg(bool(args[ARG_IS_VERBOSE]), f"Abort processing document file {document}")
-            utils.progress_msg(bool(args[ARG_IS_VERBOSE]), f"RuntimeError: {str(exc)}")
-            utils.progress_msg(bool(args[ARG_IS_VERBOSE]), "-" * 80)
+            utils.progress_msg(bool(args[_ARG_IS_VERBOSE]), "-" * 80)
+            utils.progress_msg(bool(args[_ARG_IS_VERBOSE]), f"Abort processing document file {document}")
+            utils.progress_msg(bool(args[_ARG_IS_VERBOSE]), f"RuntimeError: {str(exc)}")
+            utils.progress_msg(bool(args[_ARG_IS_VERBOSE]), "-" * 80)
             traceback.print_stack()
-            utils.progress_msg(bool(args[ARG_IS_VERBOSE]), "=" * 80)
+            utils.progress_msg(bool(args[_ARG_IS_VERBOSE]), "=" * 80)
 
     print("End   launcher.py")
 

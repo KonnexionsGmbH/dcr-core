@@ -79,9 +79,10 @@ class TextParser:
         self._parse_result_no_lines_page = 0
         self._parse_result_no_lines_para = 0
         self._parse_result_no_lines_word = 0
+        self._parse_result_no_pages = 0
         self._parse_result_no_paras = 0
-        self._parse_result_no_rows_table = 0
         self._parse_result_no_paras_page = 0
+        self._parse_result_no_rows_table = 0
         self._parse_result_no_tables = 0
         self._parse_result_no_titles = 0
         self._parse_result_no_words = 0
@@ -108,8 +109,6 @@ class TextParser:
         self._parse_result_urx = 0.0
 
         self.no_errors = 0
-
-        self.parse_result_no_pages = 0
 
         core_glob.inst_nlp_core = nlp_core.NLPCore()
 
@@ -174,7 +173,7 @@ class TextParser:
         """Debug an XML element only 'text - variant word."""
         if core_glob.inst_setup.verbose_parser == "text":
             print(
-                f"document: pages={self.parse_result_no_pages:2d} "
+                f"document: pages={self._parse_result_no_pages:2d} "
                 f"paras={self._parse_result_no_paras:2d} "
                 f"lines={self._parse_result_no_lines_word:2d} "
                 f"words={self._parse_result_no_words:2d} "
@@ -783,7 +782,7 @@ class TextParser:
                 nlp_core.NLPCore.JSON_NAME_LINE_NO_PAGE: self._parse_result_no_lines_page,
                 nlp_core.NLPCore.JSON_NAME_LINE_NO_PARA: self._parse_result_no_lines_para,
                 nlp_core.NLPCore.JSON_NAME_LLX: float(parent.attrib.get(nlp_core.NLPCore.PARSE_ATTR_LLX)),
-                nlp_core.NLPCore.JSON_NAME_PAGE_NO: self.parse_result_no_pages,
+                nlp_core.NLPCore.JSON_NAME_PAGE_NO: self._parse_result_no_pages,
                 nlp_core.NLPCore.JSON_NAME_PARA_NO: self._parse_result_no_paras,
                 nlp_core.NLPCore.JSON_NAME_PARA_NO_PAGE: self._parse_result_no_paras_page,
                 nlp_core.NLPCore.JSON_NAME_TABLE_CELL_SPAN: self._parse_result_table_cell_span,
@@ -869,7 +868,7 @@ class TextParser:
         self._parse_result_page_word_no_first = 0
         self._parse_result_page_word_no_last = 0
 
-        self.parse_result_no_pages += 1
+        self._parse_result_no_pages += 1
 
         # Process the page related tags.
         for child in parent:
@@ -897,7 +896,7 @@ class TextParser:
             {
                 nlp_core.NLPCore.JSON_NAME_LINE_NO_FIRST: self._parse_result_page_line_no_first,
                 nlp_core.NLPCore.JSON_NAME_LINE_NO_LAST: self._parse_result_page_line_no_last,
-                nlp_core.NLPCore.JSON_NAME_PAGE_NO: self.parse_result_no_pages,
+                nlp_core.NLPCore.JSON_NAME_PAGE_NO: self._parse_result_no_pages,
                 nlp_core.NLPCore.JSON_NAME_PARA_NO_FIRST: self._parse_result_page_para_no_first,
                 nlp_core.NLPCore.JSON_NAME_PARA_NO_LAST: self._parse_result_page_para_no_last,
                 nlp_core.NLPCore.JSON_NAME_WORD_NO_FIRST: self._parse_result_page_word_no_first,
@@ -980,7 +979,7 @@ class TextParser:
 
         self._parse_result_no_fonts = 0
         self._parse_result_no_lines_word = 0
-        self.parse_result_no_pages = 0
+        self._parse_result_no_pages = 0
         self._parse_result_no_paras = 0
         self.parse_result_no_tables = 0
         self._parse_result_no_words = 0
@@ -1023,7 +1022,7 @@ class TextParser:
         if self._is_lt_list_number_required:
             core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LISTS_NUMBER] = -1
 
-        core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_PAGES] = self.parse_result_no_pages
+        core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_PAGES] = self._parse_result_no_pages
         core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_PARAS] = self._parse_result_no_paras
         core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_TABLES] = self._parse_result_no_tables
         core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_WORDS] = self._parse_result_no_words
@@ -1143,7 +1142,7 @@ class TextParser:
             {
                 nlp_core.NLPCore.JSON_NAME_LINE_NO_FIRST: self._parse_result_para_line_no_first,
                 nlp_core.NLPCore.JSON_NAME_LINE_NO_LAST: self._parse_result_para_line_no_last,
-                nlp_core.NLPCore.JSON_NAME_PAGE_NO: self.parse_result_no_pages,
+                nlp_core.NLPCore.JSON_NAME_PAGE_NO: self._parse_result_no_pages,
                 nlp_core.NLPCore.JSON_NAME_PARA_NO: self._parse_result_no_paras,
                 nlp_core.NLPCore.JSON_NAME_PARA_NO_PAGE: self._parse_result_page_para_no_first,
                 nlp_core.NLPCore.JSON_NAME_TABLE_CELL_NO: no_cells_row,
@@ -1401,7 +1400,7 @@ class TextParser:
 
         container_word[nlp_core.NLPCore.JSON_NAME_LINE_NO] = self._parse_result_no_lines_word
         container_word[nlp_core.NLPCore.JSON_NAME_LINE_NO_PAGE] = self._parse_result_no_lines_page
-        container_word[nlp_core.NLPCore.JSON_NAME_PAGE_NO] = self.parse_result_no_pages
+        container_word[nlp_core.NLPCore.JSON_NAME_PAGE_NO] = self._parse_result_no_pages
         container_word[nlp_core.NLPCore.JSON_NAME_PARA_NO] = self._parse_result_no_paras
 
         if core_glob.inst_setup.is_json_incl_fonts:

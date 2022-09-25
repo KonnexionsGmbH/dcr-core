@@ -30,10 +30,10 @@ class LineTypeHeaderFooter:
     #       (line_no_page - 1,
     #        text)
     # --------------------------------------------------------------------------
-    CandLinesPage = list[tuple[int, str]]
-    CandLinesPages = list[CandLinesPage]
+    _CandLinesPage = list[tuple[int, str]]
+    _CandLinesPages = list[_CandLinesPage]
 
-    PATTERN_NAME_LEVENSHTEIN_DISTANCE = "Levenshtein distance"
+    _PATTERN_NAME_LEVENSHTEIN_DISTANCE = "Levenshtein distance"
 
     # --------------------------------------------------------------------------
     # Tuple content:
@@ -41,11 +41,11 @@ class LineTypeHeaderFooter:
     #        pattern name,
     #        number of affected pages)
     # --------------------------------------------------------------------------
-    ResultDoc = list[tuple[bool, str, int]]
-    ResultPages = list[list[bool]]
+    _ResultDoc = list[tuple[bool, str, int]]
+    _ResultPages = list[list[bool]]
 
-    VARIANT_FOOTER = "Footer"
-    VARIANT_HEADER = "Header"
+    _VARIANT_FOOTER = "Footer"
+    _VARIANT_HEADER = "Header"
 
     # ------------------------------------------------------------------
     # Initialise the instance.
@@ -74,10 +74,10 @@ class LineTypeHeaderFooter:
             is_text_parser=True,
         )
 
-        self._cand_lines_footer_pages: LineTypeHeaderFooter.CandLinesPages = []
-        self._cand_lines_footer_template: LineTypeHeaderFooter.CandLinesPage = []
-        self._cand_lines_header_pages: LineTypeHeaderFooter.CandLinesPages = []
-        self._cand_lines_header_template: LineTypeHeaderFooter.CandLinesPage = []
+        self._cand_lines_footer_pages: LineTypeHeaderFooter._CandLinesPages = []
+        self._cand_lines_footer_template: LineTypeHeaderFooter._CandLinesPage = []
+        self._cand_lines_header_pages: LineTypeHeaderFooter._CandLinesPages = []
+        self._cand_lines_header_template: LineTypeHeaderFooter._CandLinesPage = []
         self._current_pattern_name = ""
 
         self._file_name_curr = file_name_curr
@@ -93,10 +93,10 @@ class LineTypeHeaderFooter:
         self._no_lines_header = 0
         self._no_pages = 0
 
-        self._result_doc_footer: LineTypeHeaderFooter.ResultDoc = []
-        self._result_doc_header: LineTypeHeaderFooter.ResultDoc = []
-        self._result_pages_footer: LineTypeHeaderFooter.ResultPages = []
-        self._result_pages_header: LineTypeHeaderFooter.ResultPages = []
+        self._result_doc_footer: LineTypeHeaderFooter._ResultDoc = []
+        self._result_doc_header: LineTypeHeaderFooter._ResultDoc = []
+        self._result_pages_footer: LineTypeHeaderFooter._ResultPages = []
+        self._result_pages_header: LineTypeHeaderFooter._ResultPages = []
 
         self._exist = True
 
@@ -110,7 +110,7 @@ class LineTypeHeaderFooter:
         self._debug_lt("Apply the different test patterns - Start")
         self._debug_lt("-" * 80)
 
-        self._current_pattern_name = LineTypeHeaderFooter.PATTERN_NAME_LEVENSHTEIN_DISTANCE
+        self._current_pattern_name = LineTypeHeaderFooter._PATTERN_NAME_LEVENSHTEIN_DISTANCE
         self._pattern_levenshtein()
         if self._is_complete_header and self._is_complete_footer:
             self._debug_lt("-" * 80)
@@ -155,7 +155,7 @@ class LineTypeHeaderFooter:
         self._cand_lines_footer_pages.append(page)
 
         if core_glob.inst_setup.is_verbose_lt_header_footer:
-            self._debug_lt(LineTypeHeaderFooter.VARIANT_FOOTER + " candidates:")
+            self._debug_lt(LineTypeHeaderFooter._VARIANT_FOOTER + " candidates:")
 
             for idx, text in page:
                 self._debug_lt(f"Line no. page={idx} - text={text[:50] + ' ...'}")
@@ -180,7 +180,7 @@ class LineTypeHeaderFooter:
         self._cand_lines_header_pages.append(page)
 
         if core_glob.inst_setup.is_verbose_lt_header_footer:
-            self._debug_lt(LineTypeHeaderFooter.VARIANT_HEADER + " candidates:")
+            self._debug_lt(LineTypeHeaderFooter._VARIANT_HEADER + " candidates:")
 
             for idx, text in page:
                 self._debug_lt(f"Line no. page={idx} - text={text[:50] + ' ...'}")
@@ -189,7 +189,7 @@ class LineTypeHeaderFooter:
     # Create the candidate template page.
     # ------------------------------------------------------------------
     @staticmethod
-    def _create_cand_template_page(lt_max_lines: int) -> LineTypeHeaderFooter.CandLinesPage:
+    def _create_cand_template_page(lt_max_lines: int) -> LineTypeHeaderFooter._CandLinesPage:
         """Create the candidate template page.
 
         Args:
@@ -212,7 +212,7 @@ class LineTypeHeaderFooter:
     # Create the result array template.
     # ------------------------------------------------------------------
     @staticmethod
-    def _create_result_template(lt_max_lines: int) -> LineTypeHeaderFooter.ResultDoc:
+    def _create_result_template(lt_max_lines: int) -> LineTypeHeaderFooter._ResultDoc:
         """Create the result array template.
 
         Args:
@@ -291,7 +291,7 @@ class LineTypeHeaderFooter:
 
         if self._is_required_header:
             self._result_doc_header, self._result_pages_header = self._pattern_levenshtein_distance(
-                LineTypeHeaderFooter.VARIANT_HEADER,
+                LineTypeHeaderFooter._VARIANT_HEADER,
                 core_glob.inst_setup.lt_header_max_distance,
                 self._cand_lines_header_pages,
                 self._result_doc_header,
@@ -301,7 +301,7 @@ class LineTypeHeaderFooter:
 
         if self._is_required_footer:
             self._result_doc_footer, self._result_pages_footer = self._pattern_levenshtein_distance(
-                LineTypeHeaderFooter.VARIANT_FOOTER,
+                LineTypeHeaderFooter._VARIANT_FOOTER,
                 core_glob.inst_setup.lt_footer_max_distance,
                 self._cand_lines_footer_pages,
                 self._result_doc_footer,
@@ -320,10 +320,10 @@ class LineTypeHeaderFooter:
         self,
         variant: str,
         lt_max_distance: int,
-        cand_lines_pages: LineTypeHeaderFooter.CandLinesPages,
-        result_doc: LineTypeHeaderFooter.ResultDoc,
-        result_pages: LineTypeHeaderFooter.ResultPages,
-    ) -> tuple[LineTypeHeaderFooter.ResultDoc, LineTypeHeaderFooter.ResultPages]:
+        cand_lines_pages: LineTypeHeaderFooter._CandLinesPages,
+        result_doc: LineTypeHeaderFooter._ResultDoc,
+        result_pages: LineTypeHeaderFooter._ResultPages,
+    ) -> tuple[LineTypeHeaderFooter._ResultDoc, LineTypeHeaderFooter._ResultPages]:
         """Pattern: Levenshtein distance.
 
         Args:
@@ -386,9 +386,9 @@ class LineTypeHeaderFooter:
     # ------------------------------------------------------------------
     @staticmethod
     def _reset_result_pages(
-        result_doc: LineTypeHeaderFooter.ResultDoc,
-        result_pages: LineTypeHeaderFooter.ResultPages,
-    ) -> LineTypeHeaderFooter.ResultPages:
+        result_doc: LineTypeHeaderFooter._ResultDoc,
+        result_pages: LineTypeHeaderFooter._ResultPages,
+    ) -> LineTypeHeaderFooter._ResultPages:
         """Reset the result pages.
 
         Args:
@@ -412,9 +412,9 @@ class LineTypeHeaderFooter:
         self,
         variant: str,
         line_type: str,
-        cand_lines_pages: LineTypeHeaderFooter.CandLinesPages,
-        result_doc: LineTypeHeaderFooter.ResultDoc,
-        result_pages: LineTypeHeaderFooter.ResultPages,
+        cand_lines_pages: LineTypeHeaderFooter._CandLinesPages,
+        result_doc: LineTypeHeaderFooter._ResultDoc,
+        result_pages: LineTypeHeaderFooter._ResultPages,
     ) -> None:
         """Pattern: Levenshtein distance.
 
@@ -480,7 +480,7 @@ class LineTypeHeaderFooter:
 
         if self._is_required_header and any(value_doc for value_doc in self._result_doc_header):
             self._store_results_variant(
-                LineTypeHeaderFooter.VARIANT_HEADER,
+                LineTypeHeaderFooter._VARIANT_HEADER,
                 nlp_core.NLPCore.LINE_TYPE_HEADER,
                 self._cand_lines_header_pages,
                 self._result_doc_header,
@@ -489,7 +489,7 @@ class LineTypeHeaderFooter:
 
         if self._is_required_footer and any(value_doc for value_doc in self._result_doc_footer):
             self._store_results_variant(
-                LineTypeHeaderFooter.VARIANT_FOOTER,
+                LineTypeHeaderFooter._VARIANT_FOOTER,
                 nlp_core.NLPCore.LINE_TYPE_FOOTER,
                 self._cand_lines_footer_pages,
                 self._result_doc_footer,
@@ -505,9 +505,9 @@ class LineTypeHeaderFooter:
     # ------------------------------------------------------------------
     def _update_result_doc(  # noqa: C901
         self,
-        result_doc: LineTypeHeaderFooter.ResultDoc,
-        result_pages: LineTypeHeaderFooter.ResultPages,
-    ) -> LineTypeHeaderFooter.ResultDoc:
+        result_doc: LineTypeHeaderFooter._ResultDoc,
+        result_pages: LineTypeHeaderFooter._ResultPages,
+    ) -> LineTypeHeaderFooter._ResultDoc:
         """Update the document related results.
 
         Args:
