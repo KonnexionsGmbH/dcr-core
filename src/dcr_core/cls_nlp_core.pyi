@@ -7,9 +7,11 @@ import collections
 from typing import ClassVar
 
 class NLPCore:
+    EntryJSON = dict[str, int | str]
     FontJSON = dict[str, bool | float | int | str]
     WordJSON = dict[str, bool | float | int | str]
     LineJSON = dict[str, float | int | list[WordJSON] | str]
+    ListJSON = dict[str, list[EntryJSON]]
     ParaJSON = dict[str, int | list[LineJSON] | str]
     PageJSON = dict[str, int | list[ParaJSON]]
     ConfigJSON = dict[str, bool | str]
@@ -21,8 +23,11 @@ class NLPCore:
     ENVIRONMENT_TYPE_TEST: ClassVar[str]
 
     JSON_NAME_CONFIG: ClassVar[str]
+    JSON_NAME_CONTAINER_ENTRIES: ClassVar[str]
     JSON_NAME_CONTAINER_FONTS: ClassVar[str]
     JSON_NAME_CONTAINER_LINES: ClassVar[str]
+    JSON_NAME_CONTAINER_LISTS_BULLET: ClassVar[str]
+    JSON_NAME_CONTAINER_LISTS_NUMBER: ClassVar[str]
     JSON_NAME_CONTAINER_PAGES: ClassVar[str]
     JSON_NAME_CONTAINER_PARAS: ClassVar[str]
     JSON_NAME_CONTAINER_WORDS: ClassVar[str]
@@ -200,13 +205,6 @@ class NLPCore:
 
     JSON_NAME_COLUMN: ClassVar[str]
     JSON_NAME_COLUMN_NO: ClassVar[str]
-    JSON_NAME_CONTAINER_COLUMNS: ClassVar[str]
-    JSON_NAME_CONTAINER_ENTRIES: ClassVar[str]
-    JSON_NAME_CONTAINER_LISTS: ClassVar[str]
-    JSON_NAME_CONTAINER_ROWS: ClassVar[str]
-    JSON_NAME_CONTAINER_SENTENCES: ClassVar[str]
-    JSON_NAME_CONTAINER_TABLES: ClassVar[str]
-    JSON_NAME_CONTAINER_TITLES: ClassVar[str]
     JSON_NAME_CTX_LINE_1: ClassVar[str]
     JSON_NAME_CTX_LINE_2: ClassVar[str]
     JSON_NAME_CTX_LINE_3: ClassVar[str]

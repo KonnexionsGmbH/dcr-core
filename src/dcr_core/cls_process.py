@@ -259,8 +259,8 @@ class Process:
         self._document_delete_auxiliary_file(self._full_name_in_parser_line)
         self._document_delete_auxiliary_file(self._full_name_in_parser_word)
 
-        self._no_lines_footer = core_glob.inst_lt_hf.no_lines_footer
-        self._no_lines_header = core_glob.inst_lt_hf.no_lines_header
+        self._no_lines_footer = core_glob.inst_lt_hf._no_lines_footer
+        self._no_lines_header = core_glob.inst_lt_hf._no_lines_header
 
         if self._is_lt_toc_required:
             self._no_lines_toc = core_glob.inst_lt_toc.no_lines_toc

@@ -27,9 +27,11 @@ class NLPCore:
     # ------------------------------------------------------------------
     # Global type aliases.
     # ------------------------------------------------------------------
+    EntryJSON = dict[str, int | str]
     FontJSON = dict[str, bool | float | int | str]
     WordJSON = dict[str, bool | float | int | str]
     LineJSON = dict[str, float | int | list[WordJSON] | str]
+    ListJSON = dict[str, list[EntryJSON]]
     ParaJSON = dict[str, int | list[LineJSON] | str]
     PageJSON = dict[str, int | list[ParaJSON]]
     ConfigJSON = dict[str, bool | str]
@@ -44,8 +46,11 @@ class NLPCore:
     ENVIRONMENT_TYPE_TEST: ClassVar[str] = "test"
 
     JSON_NAME_CONFIG: ClassVar[str] = "config"
+    JSON_NAME_CONTAINER_ENTRIES: ClassVar[str] = "entries"
     JSON_NAME_CONTAINER_FONTS: ClassVar[str] = "fonts"
     JSON_NAME_CONTAINER_LINES: ClassVar[str] = "lines"
+    JSON_NAME_CONTAINER_LISTS_BULLET: ClassVar[str] = "listsBullet"
+    JSON_NAME_CONTAINER_LISTS_NUMBER: ClassVar[str] = "listsNumber"
     JSON_NAME_CONTAINER_PAGES: ClassVar[str] = "pages"
     JSON_NAME_CONTAINER_PARAS: ClassVar[str] = "paras"
     JSON_NAME_CONTAINER_WORDS: ClassVar[str] = "words"
@@ -223,13 +228,6 @@ class NLPCore:
 
     JSON_NAME_COLUMN: ClassVar[str] = "column"
     JSON_NAME_COLUMN_NO: ClassVar[str] = "columnNo"
-    JSON_NAME_CONTAINER_COLUMNS: ClassVar[str] = "columns"
-    JSON_NAME_CONTAINER_ENTRIES: ClassVar[str] = "entries"
-    JSON_NAME_CONTAINER_LISTS: ClassVar[str] = "lists"
-    JSON_NAME_CONTAINER_ROWS: ClassVar[str] = "rows"
-    JSON_NAME_CONTAINER_SENTENCES: ClassVar[str] = "sentences"
-    JSON_NAME_CONTAINER_TABLES: ClassVar[str] = "tables"
-    JSON_NAME_CONTAINER_TITLES: ClassVar[str] = "titles"
     JSON_NAME_CTX_LINE_1: ClassVar[str] = "ctxLine1"
     JSON_NAME_CTX_LINE_2: ClassVar[str] = "ctxLine2"
     JSON_NAME_CTX_LINE_3: ClassVar[str] = "ctxLine3"

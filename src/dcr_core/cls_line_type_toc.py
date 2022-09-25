@@ -404,7 +404,6 @@ class LineTypeToc:
         self._debug_lt("=" * 80)
         self._debug_lt(f"Start document                       ={self._file_name_curr}")
         self._debug_lt("-" * 37)
-        self._debug_lt(f"is_lt_toc_required={core_glob.inst_setup.is_lt_toc_required}")
         self._debug_lt(f"lt_toc_last_page  ={core_glob.inst_setup.lt_toc_last_page}")
         self._debug_lt(f"lt_toc_min_entries={core_glob.inst_setup.lt_toc_min_entries}")
 

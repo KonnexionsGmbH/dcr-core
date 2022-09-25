@@ -201,8 +201,8 @@ class TextParser:
         core_glob.inst_lt_hf.process_document(
             file_name_curr=self._file_name_curr,
         )
-        core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LINES_FOOTER] = core_glob.inst_lt_hf.no_lines_footer
-        core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LINES_HEADER] = core_glob.inst_lt_hf.no_lines_header
+        core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LINES_FOOTER] = core_glob.inst_lt_hf._no_lines_footer
+        core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LINES_HEADER] = core_glob.inst_lt_hf._no_lines_header
 
         # ------------------------------------------------------------------
         # Line type toc.
@@ -229,7 +229,6 @@ class TextParser:
                 file_name_curr=self._file_name_curr,
                 file_name_orig=self._file_name_orig,
             )
-            core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LISTS_BULLET] = core_glob.inst_lt_lb.no_lists
 
         # ------------------------------------------------------------------
         # Line type numbered list.
