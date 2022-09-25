@@ -42,6 +42,7 @@ ERROR_61_903 = "61.903 Issue (s_p_j): The number of parsing issues is {no_errors
 ERROR_61_904 = "61.904 Issue (s_p_j): Too few lines at granularity 'line' - {line} instead of {word}"
 ERROR_61_905 = "61.905 Issue (s_p_j): Too many lines at granularity 'line' - expected {no_lines_word} (text='{text}')"
 ERROR_61_906 = "61.906 Issue (s_p_j): Line number {line_no}: the line text '{line_text}' should start with '{word_text}'"
+ERROR_61_907 = "61.905 Issue (s_p_j): Not enough lines at granularity 'word' - found only {no_lines_word} (text='{text}')"
 ERROR_71_901 = "71.901 Issue (tkn): Tokenizing the file '{full_name}' failed - FileNotFoundError"
 
 

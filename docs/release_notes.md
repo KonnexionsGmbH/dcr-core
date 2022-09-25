@@ -36,3 +36,12 @@ Release Date: dd.mm.2022
 | [Grep for Windows](http://gnuwin32.sourceforge.net/packages/grep.htm){:target="_blank"} | 2.5.4   | base version             |        |
 | [Make for Windows](http://gnuwin32.sourceforge.net/packages/make.htm){:target="_blank"} | 3.81    | base version             |        |
 | [sed for Windows](http://gnuwin32.sourceforge.net/packages/sed.htm){:target="_blank"}   | 4.2.1   | base version             |        |
+
+### 1.4 Issues
+
+### 1.4.1 Module cls_line_type_toc.py
+
+- Missing test case for a table of contents contained in a table 
+
+
+

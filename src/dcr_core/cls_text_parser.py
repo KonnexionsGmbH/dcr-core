@@ -664,6 +664,27 @@ class TextParser:
             self.no_errors += 1
             return
 
+        # 61.907 Issue (s_p_j): Not enough lines at granularity 'word' - found only {no_lines_word} (text='{text}')
+        if self._parse_result_line_idx >= len(
+            core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES][self._parse_result_page_idx][
+                nlp_core.NLPCore.JSON_NAME_CONTAINER_LINES
+            ]
+        ):
+            core_utils.progress_msg_core(
+                core_utils.ERROR_61_907.replace(
+                    "{no_lines_word}",
+                    str(
+                        len(
+                            core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES][self._parse_result_page_idx][
+                                nlp_core.NLPCore.JSON_NAME_CONTAINER_LINES
+                            ]
+                        )
+                    ),
+                ).replace("{text}", self._parse_result_text)
+            )
+            self.no_errors += 1
+            return
+
         # Try to check whether the line determined at the granularity 'Word' corresponds to the current line
         para_idx_page = (
             core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES][self._parse_result_page_idx][
