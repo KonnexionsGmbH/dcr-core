@@ -263,7 +263,7 @@ class Process:
         self._no_lines_header = core_glob.inst_lt_hf._no_lines_header
 
         if self._is_lt_toc_required:
-            self._no_lines_toc = core_glob.inst_lt_toc.no_lines_toc
+            self._no_lines_toc = core_glob.inst_lt_toc._no_lines_toc
 
         core_utils.progress_msg(self._is_verbose, f"End   processing Parser        {self._full_name_in_tokenizer}")
 

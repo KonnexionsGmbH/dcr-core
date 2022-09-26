@@ -64,7 +64,7 @@ class LineTypeToc:
         # page_no_toc, page_no, para_no_page, line_no_page or row_no
         self._toc_candidates: list[list[int]] = []
 
-        self.no_lines_toc = 0
+        self._no_lines_toc = 0
 
         self._exist = True
 
