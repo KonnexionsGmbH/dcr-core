@@ -3,8 +3,6 @@
 # Version 2020.05, that can be found in the LICENSE file.
 
 """Module stub file."""
-from __future__ import annotations
-
 import logging
 
 import dcr_core.cls_line_type_header_footer as lt_hf

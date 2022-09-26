@@ -3,8 +3,6 @@
 # Version 2020.05, that can be found in the LICENSE file.
 
 """Module stub file."""
-import configparser
-from typing import ClassVar
 
 class Setup:
     def __init__(self) -> None:

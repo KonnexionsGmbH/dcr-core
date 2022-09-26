@@ -3,11 +3,7 @@
 # Version 2020.05, that can be found in the LICENSE file.
 
 """Module stub file."""
-from __future__ import annotations
-
 import collections.abc
-
-import dcr_core.cls_nlp_core as nlp_core
 
 class TextParser:
     def __init__(self) -> None:
