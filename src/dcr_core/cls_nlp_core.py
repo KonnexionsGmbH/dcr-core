@@ -17,6 +17,7 @@ import json
 import re
 from typing import ClassVar
 
+import dcr_core.cls_setup as setup
 from dcr_core import core_glob
 from dcr_core import core_utils
 
@@ -41,10 +42,6 @@ class NLPCore:
     # ------------------------------------------------------------------
     # Class variables.
     # ------------------------------------------------------------------
-    ENVIRONMENT_TYPE_DEV: ClassVar[str] = "dev"
-    ENVIRONMENT_TYPE_PROD: ClassVar[str] = "prod"
-    ENVIRONMENT_TYPE_TEST: ClassVar[str] = "test"
-
     JSON_NAME_CONFIG: ClassVar[str] = "config"
     JSON_NAME_CONTAINER_ENTRIES: ClassVar[str] = "entries"
     JSON_NAME_CONTAINER_FONTS: ClassVar[str] = "fonts"
@@ -86,6 +83,8 @@ class NLPCore:
     JSON_NAME_LINE_NO_FIRST: ClassVar[str] = "lineNoFirst"
     JSON_NAME_LINE_NO_LAST: ClassVar[str] = "lineNoLast"
     JSON_NAME_LINE_NO_PAGE: ClassVar[str] = "lineNoPage"
+    JSON_NAME_LINE_NO_PAGE_FIRST: ClassVar[str] = "lineNoPageFirst"
+    JSON_NAME_LINE_NO_PAGE_LAST: ClassVar[str] = "lineNoPageLast"
     JSON_NAME_LINE_NO_PARA: ClassVar[str] = "lineNoPara"
     JSON_NAME_LINE_TYPE_HEADING_REQUIRED: ClassVar[str] = "ltHeadingRequired"
     JSON_NAME_LINE_TYPE_LIST_BULLET_REQUIRED: ClassVar[str] = "ltListBulletRequired"
@@ -587,7 +586,7 @@ class NLPCore:
         Returns:
             list[tuple[str, str]]: The bulleted list line type anti-patterns.
         """
-        if environment_variant == NLPCore.ENVIRONMENT_TYPE_TEST:
+        if environment_variant == setup.Setup.ENVIRONMENT_TYPE_TEST:
             return [
                 ("n/a", r"^_n/a_$"),
             ]
@@ -611,7 +610,7 @@ class NLPCore:
         Returns:
             list[tuple[str, str]]: The numbered list line type anti-patterns.
         """
-        if environment_variant == NLPCore.ENVIRONMENT_TYPE_TEST:
+        if environment_variant == setup.Setup.ENVIRONMENT_TYPE_TEST:
             return [
                 ("n/a", r"^_n/a_$"),
             ]

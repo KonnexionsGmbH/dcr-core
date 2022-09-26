@@ -37,8 +37,8 @@ class Process:
     # ------------------------------------------------------------------
     # Class variables.
     # ------------------------------------------------------------------
-    PANDOC_PDF_ENGINE_LULATEX: ClassVar[str] = "lulatex"
-    PANDOC_PDF_ENGINE_XELATEX: ClassVar[str] = "xelatex"
+    _PANDOC_PDF_ENGINE_LULATEX: ClassVar[str] = "lulatex"
+    _PANDOC_PDF_ENGINE_XELATEX: ClassVar[str] = "xelatex"
 
     # ------------------------------------------------------------------
     # Initialise the instance.
@@ -678,7 +678,7 @@ class Process:
 
         # Convert the document
         extra_args = [
-            f"--pdf-engine={Process.PANDOC_PDF_ENGINE_XELATEX}",
+            f"--pdf-engine={Process._PANDOC_PDF_ENGINE_XELATEX}",
             "-V",
             f"lang:{language_pandoc}",
         ]

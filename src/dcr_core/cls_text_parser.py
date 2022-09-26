@@ -1035,12 +1035,18 @@ class TextParser:
         if core_glob.inst_setup.is_json_incl_fonts:
             core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_FONTS] = self._parse_result_container_fonts
 
+        if self._is_lt_list_bullet_required:
+            core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_LISTS_BULLET] = "TBD"
+
+        if self._is_lt_list_number_required:
+            core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_LISTS_NUMBER] = "TBD"
+
+        core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES] = self._parse_result_container_pages
+
         if core_glob.inst_setup.is_json_incl_params:
             core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_PARAMS] = {
                 nlp_core.NLPCore.JSON_NAME_PARSER: self._create_params()
             }
-
-        core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES] = self._parse_result_container_pages
 
         with open(self._full_name, "w", encoding=core_glob.FILE_ENCODING_DEFAULT) as file_handle:
             json.dump(

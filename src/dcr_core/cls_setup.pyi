@@ -3,8 +3,16 @@
 # Version 2020.05, that can be found in the LICENSE file.
 
 """Module stub file."""
+from typing import ClassVar
 
 class Setup:
+    ENVIRONMENT_TYPE_DEV: ClassVar[str] = ...
+    ENVIRONMENT_TYPE_PROD: ClassVar[str] = ...
+    ENVIRONMENT_TYPE_TEST: ClassVar[str] = ...
+
+    PDF2IMAGE_TYPE_JPEG: ClassVar[str] = ...
+    PDF2IMAGE_TYPE_PNG: ClassVar[str] = ...
+
     def __init__(self) -> None:
         self.directory_inbox = ""
         self.is_delete_auxiliary_files = False

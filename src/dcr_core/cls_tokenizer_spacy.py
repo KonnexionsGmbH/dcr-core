@@ -26,19 +26,19 @@ from dcr_core import core_utils
 class TokenizerSpacy:
     """Tokenize the document."""
 
-    TokenToken = dict[str, bool | float | int | str]
-    TokenTokens = list[TokenToken]
+    _TokenToken = dict[str, bool | float | int | str]
+    _TokenTokens = list[_TokenToken]
 
-    TokenSent = dict[str, float | int | None | str | TokenTokens]
-    TokenSents = list[TokenSent]
+    _TokenSent = dict[str, float | int | None | str | _TokenTokens]
+    _TokenSents = list[_TokenSent]
 
-    TokenPara = dict[str, int | TokenSents]
-    TokenParas = list[TokenPara]
+    _TokenPara = dict[str, int | _TokenSents]
+    _TokenParas = list[_TokenPara]
 
-    TokenPage = dict[str, int | TokenParas]
-    TokenPages = list[TokenPage]
+    _TokenPage = dict[str, int | _TokenParas]
+    _TokenPages = list[_TokenPage]
 
-    TokenDocument = dict[str, int | TokenPages | str]
+    _TokenDocument = dict[str, int | _TokenPages | str]
 
     # ------------------------------------------------------------------
     # Initialise the instance.
@@ -100,11 +100,11 @@ class TokenizerSpacy:
         self._text_parser_page: dict[str, int | list[dict[str, str]]] = {}
         self._text_parser_para: dict[str, str] = {}
 
-        self._token_paras: TokenizerSpacy.TokenParas = []
-        self._token_sents: TokenizerSpacy.TokenSents = []
-        self._token_tokens: TokenizerSpacy.TokenTokens = []
+        self._token_paras: TokenizerSpacy._TokenParas = []
+        self._token_sents: TokenizerSpacy._TokenSents = []
+        self._token_tokens: TokenizerSpacy._TokenTokens = []
 
-        self.token_pages: TokenizerSpacy.TokenPages = []
+        self.token_pages: TokenizerSpacy._TokenPages = []
 
         self._exist = True
 
@@ -255,7 +255,7 @@ class TokenizerSpacy:
     # Determine the requested token attributes.
     # ------------------------------------------------------------------
     @staticmethod
-    def _get_token_attributes(token: spacy.tokens.Token) -> TokenToken:  # type: ignore # noqa: C901
+    def _get_token_attributes(token: spacy.tokens.Token) -> _TokenToken:  # type: ignore # noqa: C901
         """Determine the requested token attributes.
 
         Args:

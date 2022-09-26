@@ -10,15 +10,15 @@ import spacy.tokens
 import dcr_core.cls_nlp_core as nlp_core
 
 class TokenizerSpacy:
-    TokenToken = dict[str, bool | float | int | str]
-    TokenTokens = list[TokenToken]
-    TokenSent = dict[str, float | int | None | str | TokenTokens]
-    TokenSents = list[TokenSent]
-    TokenPara = dict[str, int | TokenSents]
-    TokenParas = list[TokenPara]
-    TokenPage = dict[str, int | TokenParas]
-    TokenPages = list[TokenPage]
-    TokenDocument = dict[str, int | TokenPages | str]
+    _TokenToken = dict[str, bool | float | int | str]
+    _TokenTokens = list[_TokenToken]
+    _TokenSent = dict[str, float | int | None | str | _TokenTokens]
+    _TokenSents = list[_TokenSent]
+    _TokenPara = dict[str, int | _TokenSents]
+    _TokenParas = list[_TokenPara]
+    _TokenPage = dict[str, int | _TokenParas]
+    _TokenPages = list[_TokenPage]
+    _TokenDocument = dict[str, int | _TokenPages | str]
 
     def __init__(self) -> None:
         self._column_no = 0
@@ -59,17 +59,17 @@ class TokenizerSpacy:
         self._text_parser_line: dict[str, str] = {}
         self._text_parser_page: dict[str, str] = {}
         self._text_parser_para: dict[str, str] = {}
-        self._token_paras: TokenizerSpacy.TokenParas = []
-        self._token_sents: TokenizerSpacy.TokenSents = []
-        self._token_tokens: TokenizerSpacy.TokenTokens = []
-        self.token_pages: TokenizerSpacy.TokenPages = []
+        self._token_paras: TokenizerSpacy._TokenParas = []
+        self._token_sents: TokenizerSpacy._TokenSents = []
+        self._token_tokens: TokenizerSpacy._TokenTokens = []
+        self.token_pages: TokenizerSpacy._TokenPages = []
         self._exist = False
     def _finish_document(self) -> None: ...
     def _finish_page(self) -> None: ...
     def _finish_para(self) -> None: ...
     def _finish_sent(self) -> None: ...
     @staticmethod
-    def _get_token_attributes(token: spacy.tokens.Token) -> TokenToken: ...
+    def _get_token_attributes(token: spacy.tokens.Token) -> _TokenToken: ...
     def _init_document(self) -> None: ...
     def _init_page(self) -> None: ...
     def _init_para(self) -> None: ...

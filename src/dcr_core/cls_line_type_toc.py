@@ -55,8 +55,6 @@ class LineTypeToc:
 
         self._is_toc_existing = False
 
-        self._lines_json: list[nlp_core.NLPCore.LineJSON] = []
-
         self._page_no = 0
 
         self._strategy = ""
@@ -85,6 +83,7 @@ class LineTypeToc:
         page_no_max = core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_PAGES]
         page_no_toc_last = -1
         idx_last = 0
+        text_original = ""
 
         for idx, [page_no_toc, page_no, _, line_no_page] in enumerate(self._toc_candidates):
             row_no += 1
@@ -131,7 +130,7 @@ class LineTypeToc:
             # Correction of page numbers: page_no_toc
             page_no_toc_last = 0
 
-            for idx, [page_no_toc, page_no, _, line_no_page] in enumerate(self._toc_candidates):
+            for idx, [page_no_toc, _, _, _] in enumerate(self._toc_candidates):
                 self._debug_lt("TOC text                             " + f"={text_original}")
                 if page_no_toc == -1:
                     self._toc_candidates[idx][0] = page_no_toc_last
@@ -167,7 +166,7 @@ class LineTypeToc:
     # ------------------------------------------------------------------
     # Process the page-related data - line version.
     # ------------------------------------------------------------------
-    def _process_page_lines(self) -> None:
+    def _process_page_lines(self, lines_json: list[nlp_core.NLPCore.LineJSON]) -> None:
         """Process the page-related data - line version."""
         if self._is_toc_existing or self._page_no >= core_glob.inst_setup.lt_toc_last_page:
             return
@@ -181,7 +180,7 @@ class LineTypeToc:
         gap = -1
         is_started = False
 
-        for line_json in self._lines_json:
+        for line_json in lines_json:
             if (
                 line_json[nlp_core.NLPCore.JSON_NAME_TYPE] == nlp_core.NLPCore.LINE_TYPE_BODY
                 or line_json[nlp_core.NLPCore.JSON_NAME_TYPE] == nlp_core.NLPCore.LINE_TYPE_TABLE
@@ -212,7 +211,7 @@ class LineTypeToc:
     # ------------------------------------------------------------------
     # Process the page-related data - table version.
     # ------------------------------------------------------------------
-    def _process_page_table(self) -> None:
+    def _process_page_table(self, lines_json: list[nlp_core.NLPCore.LineJSON]) -> None:
         """Process the page-related data - table version."""
         if self._is_toc_existing or self._page_no >= core_glob.inst_setup.lt_toc_last_page:
             return
@@ -223,7 +222,7 @@ class LineTypeToc:
         self._debug_lt(f"Start page (table)                   ={self._page_no}")
         self._debug_lt("-" * 80)
 
-        for line_json in self._lines_json:
+        for line_json in lines_json:
             if line_json[nlp_core.NLPCore.JSON_NAME_TYPE] == nlp_core.NLPCore.LINE_TYPE_TABLE:
                 self._debug_lt(f"Candidate                            ={line_json[nlp_core.NLPCore.JSON_NAME_TEXT]}")
                 if line_json[nlp_core.NLPCore.JSON_NAME_TABLE_ROW_NO] > 0:
@@ -332,7 +331,7 @@ class LineTypeToc:
         para_no_page_till = self._toc_candidates[-1][2]
 
         for page_idx, page_json in enumerate(core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES]):
-            page_no = page_json[nlp_core.NLPCore.JSON_NAME_PAGE_NO]
+            page_no = page_idx + 1
 
             if page_no < page_no_from:
                 continue
@@ -362,10 +361,6 @@ class LineTypeToc:
                             or line_json[nlp_core.NLPCore.JSON_NAME_TYPE] == nlp_core.NLPCore.LINE_TYPE_TABLE
                         ):
                             line_json[nlp_core.NLPCore.JSON_NAME_TYPE] = nlp_core.NLPCore.LINE_TYPE_TOC
-
-                core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES][page_idx][
-                    nlp_core.NLPCore.JSON_NAME_CONTAINER_LINES
-                ] = self._lines_json
 
         self._debug_lt("-" * 80)
         self._debug_lt(f"End   store result - strategy table  ={self.no_lines_toc}")
@@ -421,8 +416,7 @@ class LineTypeToc:
         self._strategy = nlp_core.NLPCore.SEARCH_STRATEGY_TABLE
 
         for page_json in core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES]:
-            self._lines_json = page_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_LINES]
-            self._process_page_table()
+            self._process_page_table(page_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_LINES])
             if self._is_toc_existing:
                 break
 
@@ -437,8 +431,7 @@ class LineTypeToc:
             self._page_no = 0
             self._init_toc_candidate()
             for page_json in core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES]:
-                self._lines_json = page_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_LINES]
-                self._process_page_lines()
+                self._process_page_lines(page_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_LINES])
                 if self._is_toc_existing:
                     break
 

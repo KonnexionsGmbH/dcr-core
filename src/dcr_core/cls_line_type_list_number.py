@@ -35,14 +35,14 @@ from dcr_core import core_utils
 class LineTypeListNumber:
     """Determine list of numbered lines."""
 
-    Entry = dict[str, int | str]
-    Entries = list[Entry]
+    _Entry = dict[str, int | str]
+    _Entries = list[_Entry]
 
-    List = dict[str, Entries | float | int | object | str]
-    Lists = list[List]
+    _List = dict[str, _Entries | float | int | object | str]
+    _Lists = list[_List]
 
-    RuleExtern = tuple[str, str, collections.abc.Callable[[str, str], bool], list[str]]
-    RuleIntern = tuple[str, re.Pattern[str], collections.abc.Callable[[str, str], bool], list[str], str]
+    _RuleExtern = tuple[str, str, collections.abc.Callable[[str, str], bool], list[str]]
+    _RuleIntern = tuple[str, re.Pattern[str], collections.abc.Callable[[str, str], bool], list[str], str]
 
     # ------------------------------------------------------------------
     # Initialise the instance.
