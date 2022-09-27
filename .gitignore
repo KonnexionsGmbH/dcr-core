@@ -1,6 +1,6 @@
 /*.log
 /.coverage
-/.history/*/
+/.history
 /.idea/
 /.vscode/
 /data/inbox*/

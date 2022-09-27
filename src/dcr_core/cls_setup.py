@@ -169,7 +169,7 @@ class Setup:
             core_glob.initialise_logger()
             core_glob.logger.debug(core_glob.LOGGER_START)
 
-        self._get_environment_variant()
+        self.environment_variant =  self._get_environment_variant()
 
         self._config: dict[str, str] = {}
 
@@ -179,13 +179,9 @@ class Setup:
         # ------------------------------------------------------------------
         # DCR-CORE configuration.
         # ------------------------------------------------------------------
-        self.directory_inbox = "data/inbox_prod"
-
-        self.lt_export_rule_file_heading = "data/lt_export_rule_heading.json"
-        self.lt_export_rule_file_list_bullet = "data/lt_export_rule_list_bullet.json"
-        self.lt_export_rule_file_list_number = "data/lt_export_rule_list_number.json"
-
         self.is_delete_auxiliary_files = False
+
+        self.directory_inbox = "data/inbox_prod"
 
         self.is_json_incl_config = True
         self.is_json_incl_fonts = True
@@ -193,15 +189,66 @@ class Setup:
         self.is_json_incl_list_bullet = True
         self.is_json_incl_list_number = True
         self.is_json_incl_params = True
+        self.is_json_incl_table = True
+
+        self.json_indent = 4
 
         self.is_json_sort_keys = True
 
+        self.lt_export_rule_file_heading = "data/lt_export_rule_heading.json"
+        self.lt_export_rule_file_list_bullet = "data/lt_export_rule_list_bullet.json"
+        self.lt_export_rule_file_list_number = "data/lt_export_rule_list_number.json"
+
+        self.lt_footer_max_distance = 3
+        self.lt_footer_max_lines = 3
+        self.lt_header_max_distance = 3
+        self.lt_header_max_lines = 3
+        self.lt_heading_file_incl_no_ctx = 1
+
         self.is_lt_heading_file_incl_regexp = True
+
+        self.lt_heading_max_level = 3
+        self.lt_heading_min_pages = 2
+
         self.is_lt_heading_required = True
+
+        self.lt_heading_rule_file = "data/lt_export_rule_heading.json"
+        self.lt_heading_tolerance_llx = 10
+
+        self.lt_list_bullet_min_entries = 2
+
         self.is_lt_list_bullet_required = True
+
+        self.lt_list_bullet_rule_file = "data/lt_export_rule_list_bullet.json"
+        self.lt_list_bullet_tolerance_llx = 10
+
         self.is_lt_list_number_file_incl_regexp = True
+
+        self.lt_list_number_min_entries = 2
+
         self.is_lt_list_number_required = True
+
+        self.lt_list_number_rule_file = "data/lt_export_rule_list_number.json"
+        self.lt_list_number_tolerance_llx = 10
+        self.lt_toc_last_page = 5
+        self.lt_toc_min_entries = 5
+
         self.is_lt_toc_required = True
+
+        self.pdf2image_type = "jpeg"
+        self.tesseract_timeout = 30
+
+        self.is_tokenize_2_jsonfile = True
+        self.is_tokenize_2_xmlfile = True
+
+        self.is_verbose = True
+        self.is_verbose_lt_header_footer = False
+        self.is_verbose_lt_heading = False
+        self.is_verbose_lt_list_bullet = False
+        self.is_verbose_lt_list_number = False
+        self.is_verbose_lt_toc = False
+
+        self.verbose_parser = "none"
 
         # ------------------------------------------------------------------
         # Spacy ignore tokens.
@@ -277,41 +324,6 @@ class Setup:
         self.is_spacy_tkn_attr_text_with_ws = True
         self.is_spacy_tkn_attr_vocab = True
         self.is_spacy_tkn_attr_whitespace_ = True
-
-        self.is_tokenize_2_jsonfile = True
-        self.is_tokenize_2_xmlfile = True
-
-        self.is_verbose = True
-        self.is_verbose_lt_header_footer = False
-        self.is_verbose_lt_heading = False
-        self.is_verbose_lt_list_bullet = False
-        self.is_verbose_lt_list_number = False
-        self.is_verbose_lt_toc = False
-
-        self.json_indent = 4
-
-        self.lt_footer_max_distance = 3
-        self.lt_footer_max_lines = 3
-        self.lt_header_max_distance = 3
-        self.lt_header_max_lines = 3
-        self.lt_heading_file_incl_no_ctx = 1
-        self.lt_heading_max_level = 3
-        self.lt_heading_min_pages = 2
-        self.lt_heading_rule_file = "none"
-        self.lt_heading_tolerance_llx = 10
-        self.lt_list_bullet_min_entries = 2
-        self.lt_list_bullet_rule_file = "none"
-        self.lt_list_bullet_tolerance_llx = 10
-        self.lt_list_number_min_entries = 2
-        self.lt_list_number_rule_file = "none"
-        self.lt_list_number_tolerance_llx = 10
-        self.lt_toc_last_page = 5
-        self.lt_toc_min_entries = 5
-
-        self.pdf2image_type = "jpeg"
-
-        self.tesseract_timeout = 30
-        self.verbose_parser = "none"
 
         self._load_config()
 
@@ -915,23 +927,24 @@ class Setup:
     # ------------------------------------------------------------------
     # Determine and check the environment variant.
     # ------------------------------------------------------------------
-    def _get_environment_variant(self) -> None:
+    @staticmethod
+    def _get_environment_variant() -> str:
         """Determine and check the environment variant."""
-        self.environment_variant = Setup.ENVIRONMENT_TYPE_PROD
-
         try:
-            self.environment_variant = os.environ[Setup._DCR_CORE_ENVIRONMENT_TYPE]
+            environment_variant = os.environ[Setup._DCR_CORE_ENVIRONMENT_TYPE]
         except KeyError:
-            self.environment_variant = Setup.ENVIRONMENT_TYPE_PROD
+            environment_variant = Setup.ENVIRONMENT_TYPE_PROD
 
-        if self.environment_variant not in [
+        if environment_variant not in [
             Setup.ENVIRONMENT_TYPE_DEV,
             Setup.ENVIRONMENT_TYPE_PROD,
             Setup.ENVIRONMENT_TYPE_TEST,
         ]:
             core_utils.terminate_fatal(
-                f"The environment variable '{Setup._DCR_CORE_ENVIRONMENT_TYPE}' " f"has the invalid content '{self.environment_variant}'"
+                f"The environment variable '{Setup._DCR_CORE_ENVIRONMENT_TYPE}' " f"has the invalid content '{environment_variant}'"
             )
+
+        return environment_variant
 
     # ------------------------------------------------------------------
     # Load and check the configuration parameters.

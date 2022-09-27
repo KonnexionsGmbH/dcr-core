@@ -1,14 +1,14 @@
 {
     "lineTypeAntiPatterns": [
         {
-            "name": "n/a",
-            "regexp": "^_n/a_$"
+            "name": "o...",
+            "regexp": "^o[a-z]"
         }
     ],
     "lineTypeRules": [
-        "^-",
-        "^.",
-        "^o[^a-z]]",
+        "-",
+        ".",
+        "o",
         "\u00b0",
         "\u00b7",
         "\u00ba",

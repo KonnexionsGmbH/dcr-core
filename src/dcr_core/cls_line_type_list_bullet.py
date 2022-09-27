@@ -135,7 +135,6 @@ class LineTypeListBullet:
         entries: LineTypeListBullet.Entries = []
 
         for [page_idx_list, para_no, line_idx_first, line_idx_last] in self._entries:
-            print(f"wwe page_idx_list={page_idx_list} line_idx_first={line_idx_first} line_idx_last={line_idx_last}")
             lines_json: list[nlp_core.NLPCore.LineJSON] = core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES][
                 page_idx_list
             ][nlp_core.NLPCore.JSON_NAME_CONTAINER_LINES]
@@ -190,8 +189,11 @@ class LineTypeListBullet:
         Returns:
             list[tuple[str, re.Pattern[str]]]: The valid bulleted list anti-patterns.
         """
+        print(f"wwe core_glob.inst_setup.lt_list_bullet_rule_file={core_glob.inst_setup.lt_list_bullet_rule_file}")
+
         if core_glob.inst_setup.lt_list_bullet_rule_file and core_glob.inst_setup.lt_list_bullet_rule_file.lower() != "none":
             lt_list_bullet_rule_file_path = core_utils.get_os_independent_name(core_glob.inst_setup.lt_list_bullet_rule_file)
+            print(f"wwe lt_list_bullet_rule_file_path={lt_list_bullet_rule_file_path}")
             if os.path.isfile(lt_list_bullet_rule_file_path):
                 return self._load_anti_patterns_from_json(pathlib.Path(lt_list_bullet_rule_file_path))
 
@@ -258,6 +260,7 @@ class LineTypeListBullet:
             json_data = json.load(file_handle)
 
             for rule in json_data[nlp_core.NLPCore.JSON_NAME_LINE_TYPE_ANTI_PATTERNS]:
+                print(f"wwe rule={rule}")
                 anti_patterns.append(
                     (
                         rule[nlp_core.NLPCore.JSON_NAME_NAME],
@@ -317,6 +320,8 @@ class LineTypeListBullet:
                 The line to be processed.
         """
         text = str(line_json[nlp_core.NLPCore.JSON_NAME_TEXT])
+
+        print(f"wwe text={text[:50]}")
 
         for (rule_name, pattern) in self._anti_patterns:
             if pattern.match(text):
@@ -450,6 +455,16 @@ class LineTypeListBullet:
         self._debug_lt(f"lt_list_bullet_min_entries  ={core_glob.inst_setup.lt_list_bullet_min_entries}")
         self._debug_lt(f"lt_list_bullet_rule_file    ={core_glob.inst_setup.lt_list_bullet_rule_file}")
         self._debug_lt(f"lt_list_bullet_tolerance_llx={core_glob.inst_setup.lt_list_bullet_tolerance_llx}")
+
+        if self._anti_patterns:
+            self._debug_lt("-" * 37)
+            for (rule_name, pattern) in self._anti_patterns:
+                self._debug_lt(f"Anti pattern                         =rule={rule_name} - pattern={pattern}")
+
+        if self._rules:
+            self._debug_lt("-" * 37)
+            for key, value in self._rules.items():
+                self._debug_lt(f"Rule                                 =key={key} - value={value}")
 
         self._file_name_curr = file_name_curr
         self._environment_variant = environment_variant

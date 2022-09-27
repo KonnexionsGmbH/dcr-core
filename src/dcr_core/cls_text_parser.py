@@ -200,8 +200,6 @@ class TextParser:
         core_glob.inst_lt_hf.process_document(
             file_name_curr=self._file_name_curr,
         )
-        core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LINES_FOOTER] = core_glob.inst_lt_hf._no_lines_footer
-        core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LINES_HEADER] = core_glob.inst_lt_hf._no_lines_header
 
         # ------------------------------------------------------------------
         # Line type toc.

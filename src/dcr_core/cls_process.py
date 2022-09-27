@@ -592,6 +592,7 @@ class Process:
         core_glob.logger.debug("param language_tesseract        =%s", self._language_tesseract)
 
         core_utils.progress_msg(self._is_verbose, "-" * 80)
+        core_utils.progress_msg(self._is_verbose, f"Environment                    {core_glob.inst_setup.environment_variant}")
         core_utils.progress_msg(self._is_verbose, f"Start processing document file {self._full_name_orig}")
         core_utils.progress_msg(self._is_verbose, f"Language key Pandoc            {self._language_pandoc}")
         core_utils.progress_msg(self._is_verbose, f"Language key spaCy             {self._language_spacy}")
