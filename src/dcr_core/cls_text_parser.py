@@ -384,6 +384,9 @@ class TextParser:
                     )
                     self.no_errors += 1
 
+        self._parse_result_llx = float(parent.attrib.get(nlp_core.NLPCore.PARSE_ATTR_LLX))
+        self._parse_result_urx = float(parent.attrib.get(nlp_core.NLPCore.PARSE_ATTR_URX))
+
         self._debug_xml_element_all("End  ", parent_tag, parent.attrib, parent.text)
 
     # ------------------------------------------------------------------
@@ -1371,7 +1374,9 @@ class TextParser:
         self._parse_result_glyph_is_empty = True
 
         self._parse_result_font = ""
+        self._parse_result_llx = 0.0
         self._parse_result_size = 0.0
+        self._parse_result_urx = 0.0
 
         for child in parent:
             child_tag = child.tag[nlp_core.NLPCore.PARSE_ELEM_FROM :]
@@ -1405,6 +1410,7 @@ class TextParser:
 
         container_word[nlp_core.NLPCore.JSON_NAME_LINE_NO] = self._parse_result_no_lines_word
         container_word[nlp_core.NLPCore.JSON_NAME_LINE_NO_PAGE] = self._parse_result_no_lines_page
+        container_word[nlp_core.NLPCore.JSON_NAME_LLX] = self._parse_result_llx
         container_word[nlp_core.NLPCore.JSON_NAME_PAGE_NO] = self._parse_result_no_pages
         container_word[nlp_core.NLPCore.JSON_NAME_PARA_NO] = self._parse_result_no_paras
 
@@ -1417,6 +1423,7 @@ class TextParser:
         container_word[nlp_core.NLPCore.JSON_NAME_TABLE_ROW_NO] = no_rows_table
         container_word[nlp_core.NLPCore.JSON_NAME_TEXT] = self._parse_result_text
         container_word[nlp_core.NLPCore.JSON_NAME_TYPE] = line_type
+        container_word[nlp_core.NLPCore.JSON_NAME_URX] = self._parse_result_urx
         container_word[nlp_core.NLPCore.JSON_NAME_WORD_NO] = self._parse_result_no_words
         container_word[nlp_core.NLPCore.JSON_NAME_WORD_NO_LINE] = self._parse_result_line_word_no_first
         container_word[nlp_core.NLPCore.JSON_NAME_WORD_NO_PAGE] = self._parse_result_page_word_no_first
