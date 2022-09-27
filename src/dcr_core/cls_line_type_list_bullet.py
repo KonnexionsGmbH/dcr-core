@@ -78,10 +78,8 @@ class LineTypeListBullet:
         self._line_idx = -1
         self._lists: list[nlp_core.NLPCore.ListJSON] = []
         self._llx_lower_limit = 0.0
+        self._llx_subsequent: tuple[float, float] = (0.0, 0.0)
         self._llx_upper_limit = 0.0
-
-        self._page_idx_prev = -1
-        self._para_no_prev = 0
 
         self._rules = self._init_rules()
         for key in self._rules:
@@ -188,6 +186,34 @@ class LineTypeListBullet:
 
         self._debug_lt(f"End   list                           ={page_idx + 1}")
         self._debug_lt("-" * 80)
+
+    # ------------------------------------------------------------------
+    # Determine the lower left x-position of a possible following line
+    # of the current bulleted point.
+    # ------------------------------------------------------------------
+    def _get_llx_subsequent(self, page_idx: int, para_idx_page, line_no_page) -> tuple[float, float]:
+        llx_center = 0.0
+
+        for word in core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES][page_idx][
+            nlp_core.NLPCore.JSON_NAME_CONTAINER_PARAS
+        ][para_idx_page][nlp_core.NLPCore.JSON_NAME_CONTAINER_WORDS]:
+            line_no_page_word = word[nlp_core.NLPCore.JSON_NAME_LINE_NO_PAGE]
+            if line_no_page_word < line_no_page:
+                continue
+
+            if line_no_page_word == line_no_page:
+                if word[nlp_core.NLPCore.JSON_NAME_WORD_NO_LINE] == 1:
+                    continue
+
+                llx_center = word[nlp_core.NLPCore.JSON_NAME_LLX]
+                return (
+                    round(llx_center * (100 - core_glob.inst_setup.lt_list_bullet_tolerance_llx) / 100, 2),
+                    round(llx_center * (100 + core_glob.inst_setup.lt_list_bullet_tolerance_llx) / 100, 2),
+                )
+
+            break
+
+        return (0.0, 0.0)
 
     # ------------------------------------------------------------------
     # Initialise the bulleted list anti-patterns.
@@ -334,8 +360,6 @@ class LineTypeListBullet:
                 self._debug_lt(f"Anti pattern                         ={rule_name} - text={text}")
                 return
 
-        para_no = int(line_json[nlp_core.NLPCore.JSON_NAME_PARA_NO])
-
         bullet = ""
 
         for key, value in self._rules.items():
@@ -344,9 +368,13 @@ class LineTypeListBullet:
                 break
 
         if not bullet:
-            if page_idx == self._page_idx_prev and para_no == self._para_no_prev:
+            if (
+                line_json[nlp_core.NLPCore.JSON_NAME_LLX] >= self._llx_subsequent[0]
+                and line_json[nlp_core.NLPCore.JSON_NAME_LLX] <= self._llx_subsequent[1]
+            ):
                 # Paragraph already in progress.
                 self._entries[-1][-1] = line_idx
+                self._debug_lt(f"Candidate (subsequent)               =bullet='{self._bullet}' - text='{text[:51]}'")
                 return
 
             self._finish_list(page_idx)
@@ -356,6 +384,7 @@ class LineTypeListBullet:
             self._finish_list(page_idx)
 
         self._bullet = bullet
+        self._llx_subsequent = self._get_llx_subsequent(page_idx, line_json[nlp_core.NLPCore.JSON_NAME_PARA_NO_PAGE] - 1, line_idx + 1)
 
         if not self._entries:
             # New bulleted paragraph.
@@ -369,11 +398,9 @@ class LineTypeListBullet:
             )
             self._llx_upper_limit = round(coord_llx * (100 + core_glob.inst_setup.lt_list_bullet_tolerance_llx) / 100, 2)
 
-        self._entries.append([page_idx, para_no, self._line_idx, self._line_idx])
+        self._entries.append([page_idx, line_json[nlp_core.NLPCore.JSON_NAME_PARA_NO], self._line_idx, self._line_idx])
 
         self._debug_lt(f"Candidate                            =bullet='{self._bullet}' - text='{text[:51]}'")
-
-        self._para_no_prev = para_no
 
     # ------------------------------------------------------------------
     # Process the page-related data.
@@ -386,10 +413,8 @@ class LineTypeListBullet:
 
         for line_idx, line_json in enumerate(lines_json):
             self._line_idx = line_idx
-
             if line_json[nlp_core.NLPCore.JSON_NAME_TYPE] == nlp_core.NLPCore.LINE_TYPE_BODY:
                 self._process_line(page_idx, line_idx, line_json)
-                self._page_idx_prev = page_idx
 
         self._debug_lt("-" * 80)
         self._debug_lt(f"End   page                           ={page_idx + 1}")
@@ -404,10 +429,8 @@ class LineTypeListBullet:
         self._entries = []
 
         self._llx_lower_limit = 0.0
+        self._llx_subsequent = (0.0, 0.0)
         self._llx_upper_limit = 0.0
-
-        self._page_idx_prev = -1
-        self._para_no_prev = 0
 
         self._debug_lt("Reset the list memory")
 

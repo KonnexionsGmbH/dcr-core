@@ -85,10 +85,8 @@ class LineTypeListNumber:
         self._line_idx = -1
         self._lists: list[nlp_core.NLPCore.ListJSON] = []
         self._llx_lower_limit = 0.0
+        self._llx_subsequent: tuple[float, float] = (0.0, 0.0)
         self._llx_upper_limit = 0.0
-
-        self._page_idx_prev = -1
-        self._para_no_prev = 0
 
         self._rule: LineTypeListNumber._RuleIntern = ()  # type: ignore
         self._rules: list[LineTypeListNumber._RuleExtern] = self._init_rules()
@@ -220,6 +218,34 @@ class LineTypeListNumber:
 
         self._debug_lt(f"End   list                           ={page_idx + 1}")
         self._debug_lt("-" * 80)
+
+    # ------------------------------------------------------------------
+    # Determine the lower left x-position of a possible following line
+    # of the current numbered point.
+    # ------------------------------------------------------------------
+    def _get_llx_subsequent(self, page_idx: int, para_idx_page, line_no_page) -> tuple[float, float]:
+        llx_center = 0.0
+
+        for word in core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES][page_idx][
+            nlp_core.NLPCore.JSON_NAME_CONTAINER_PARAS
+        ][para_idx_page][nlp_core.NLPCore.JSON_NAME_CONTAINER_WORDS]:
+            line_no_page_word = word[nlp_core.NLPCore.JSON_NAME_LINE_NO_PAGE]
+            if line_no_page_word < line_no_page:
+                continue
+
+            if line_no_page_word == line_no_page:
+                if word[nlp_core.NLPCore.JSON_NAME_WORD_NO_LINE] == 1:
+                    continue
+
+                llx_center = word[nlp_core.NLPCore.JSON_NAME_LLX]
+                return (
+                    round(llx_center * (100 - core_glob.inst_setup.lt_list_number_tolerance_llx) / 100, 2),
+                    round(llx_center * (100 + core_glob.inst_setup.lt_list_number_tolerance_llx) / 100, 2),
+                )
+
+            break
+
+        return (0.0, 0.0)
 
     # ------------------------------------------------------------------
     # Initialise the numbered list anti-patterns.
@@ -388,13 +414,11 @@ class LineTypeListNumber:
 
         if self._rule:
             if self._rule[1].match(target_value):
-                if self._llx_lower_limit <= float(line_json[nlp_core.NLPCore.JSON_NAME_LLX]) <= self._llx_upper_limit and self._rule[
-                    2
-                ](str(self._entries[-1][4]), target_value):
+                if self._llx_lower_limit <= float(line_json[nlp_core.NLPCore.JSON_NAME_LLX]) <= self._llx_upper_limit and self._rule[2](
+                    str(self._entries[-1][4]), target_value
+                ):
                     self._entries.append([page_idx, para_no, self._line_idx, self._line_idx, target_value])
-                    self._debug_lt(
-                        f"Candidate                            =number='{self._rule[0]}' - text='{text[:51]}'")
-                    self._para_no_prev = para_no
+                    self._debug_lt(f"Candidate                            =number='{self._rule[0]}' - text='{text[:51]}'")
                     return
 
                 self._finish_list(page_idx)
@@ -418,16 +442,19 @@ class LineTypeListNumber:
                 self._finish_list(page_idx)
         else:
             if self._rule:
-                if page_idx == self._page_idx_prev and para_no == self._para_no_prev:
+                llx = line_json[nlp_core.NLPCore.JSON_NAME_LLX]
+                if self._llx_subsequent[0] <= llx <= self._llx_subsequent[1]:
                     # Paragraph already in progress.
                     self._entries[-1][-2] = line_idx
-                else:
-                    self._finish_list(page_idx)
+                    self._debug_lt(f"Candidate                            =number='{self._rule[0]}' - text='{text[:51]}'")
+                    return
 
-            self._para_no_prev = para_no
+                self._finish_list(page_idx)
+
             return
 
         self._rule = rule
+        self._llx_subsequent = self._get_llx_subsequent(page_idx, line_json[nlp_core.NLPCore.JSON_NAME_PARA_NO_PAGE] - 1, line_idx + 1)
 
         if not self._entries:
             # New numbered paragraph.
@@ -445,8 +472,6 @@ class LineTypeListNumber:
 
         self._debug_lt(f"Candidate                            =number='{self._rule[0]}' - text='{text[:51]}'")
 
-        self._para_no_prev = para_no
-
     # ------------------------------------------------------------------
     # Process the page-related data.
     # ------------------------------------------------------------------
@@ -461,7 +486,6 @@ class LineTypeListNumber:
 
             if line_json[nlp_core.NLPCore.JSON_NAME_TYPE] == nlp_core.NLPCore.LINE_TYPE_BODY:
                 self._process_line(page_idx, line_idx, line_json)
-                self._page_idx_prev = page_idx
 
         self._debug_lt("-" * 80)
         self._debug_lt(f"End   page                           ={page_idx + 1}")
@@ -476,10 +500,8 @@ class LineTypeListNumber:
         self._entries = []
 
         self._llx_lower_limit = 0.0
+        self._llx_subsequent = (0.0, 0.0)
         self._llx_upper_limit = 0.0
-
-        self._page_idx_prev = -1
-        self._para_no_prev = 0
 
         self._debug_lt("Reset the list memory")
 
@@ -548,7 +570,10 @@ class LineTypeListNumber:
         if self._rules:
             self._debug_lt("-" * 37)
             for [rule_name, regexp_str, _, _] in self._rules:
-                self._debug_lt(f"Rule                                 =rule={rule_name.ljust(LineTypeListNumber._RULE_NAME_SIZE)} - regexp={regexp_str}")
+                self._debug_lt(
+                    "Rule                                 ="
+                    + f"rule={rule_name.ljust(LineTypeListNumber._RULE_NAME_SIZE)} - regexp={regexp_str}"
+                )
 
         self._file_name_curr = file_name_curr
         self._environment_variant = environment_variant

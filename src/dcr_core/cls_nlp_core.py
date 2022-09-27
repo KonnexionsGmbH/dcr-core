@@ -487,9 +487,10 @@ class NLPCore:
     TETML_TYPE_WORD: ClassVar[str] = "word"
 
     WORD_TET_DOCUMENT_OPT_LIST: ClassVar[str] = "engines={noannotation noimage text notextcolor novector}"
-    WORD_TET_PAGE_OPT_LIST: ClassVar[
-        str
-    ] = "contentanalysis={dehyphenate=false} docstyle=generic granularity=word  layouteffort=medium tetml={glyphdetails={all} elements={line}}"
+    WORD_TET_PAGE_OPT_LIST: ClassVar[str] = (
+        "contentanalysis={dehyphenate=false} docstyle=generic granularity=word  "
+        + "layouteffort=medium tetml={glyphdetails={all} elements={line}}"
+    )
     WORD_XML_VARIATION: ClassVar[str] = "word."
 
     # ------------------------------------------------------------------

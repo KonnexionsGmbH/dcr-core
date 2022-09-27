@@ -1425,9 +1425,9 @@ class TextParser:
         container_word[nlp_core.NLPCore.JSON_NAME_TYPE] = line_type
         container_word[nlp_core.NLPCore.JSON_NAME_URX] = self._parse_result_urx
         container_word[nlp_core.NLPCore.JSON_NAME_WORD_NO] = self._parse_result_no_words
-        container_word[nlp_core.NLPCore.JSON_NAME_WORD_NO_LINE] = self._parse_result_line_word_no_first
-        container_word[nlp_core.NLPCore.JSON_NAME_WORD_NO_PAGE] = self._parse_result_page_word_no_first
-        container_word[nlp_core.NLPCore.JSON_NAME_WORD_NO_PARA] = self._parse_result_para_word_no_first
+        container_word[nlp_core.NLPCore.JSON_NAME_WORD_NO_LINE] = self._parse_result_no_words_line
+        container_word[nlp_core.NLPCore.JSON_NAME_WORD_NO_PAGE] = self._parse_result_no_words_page
+        container_word[nlp_core.NLPCore.JSON_NAME_WORD_NO_PARA] = self._parse_result_no_words_para
 
         self._parse_result_container_words.append(container_word)
 
