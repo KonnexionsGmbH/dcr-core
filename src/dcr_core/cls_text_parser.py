@@ -1002,6 +1002,8 @@ class TextParser:
         core_glob.inst_nlp_core.document_json = {
             nlp_core.NLPCore.JSON_NAME_CREATED_AT: datetime.now().strftime("%d.%m.%Y %H:%M:%S"),
             nlp_core.NLPCore.JSON_NAME_CREATED_BY: __name__,
+            nlp_core.NLPCore.JSON_NAME_MODIFIED_AT: "",
+            nlp_core.NLPCore.JSON_NAME_MODIFIED_BY: "",
         }
 
         if core_glob.inst_setup.is_json_incl_fonts:

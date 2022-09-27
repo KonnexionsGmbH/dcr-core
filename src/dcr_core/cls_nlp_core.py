@@ -65,12 +65,13 @@ class NLPCore:
     JSON_NAME_FILE_NAME_ORIG: ClassVar[str] = "fileNameOrig"
     JSON_NAME_FONT: ClassVar[str] = "font"
     JSON_NAME_FONT_NO: ClassVar[str] = "fontNo"
+    JSON_NAME_FORMAT: ClassVar[str] = "format"
     JSON_NAME_FULL_NAME: ClassVar[str] = "fullName"
 
     JSON_NAME_ID: ClassVar[str] = "id"
     JSON_NAME_ITALIC_ANGLE: ClassVar[str] = "italicAngle"
 
-    JSON_NAME_JSON_INCL_CONFIG: ClassVar[str] = "jsonIncl"
+    JSON_NAME_JSON_INCL_CONFIG: ClassVar[str] = "jsonInclConfig"
     JSON_NAME_JSON_INCL_FONTS: ClassVar[str] = "jsonInclFonts"
     JSON_NAME_JSON_INCL_HEADING: ClassVar[str] = "jsonInclHeading"
     JSON_NAME_JSON_INCL_LIST_BULLET: ClassVar[str] = "jsonInclListBullet"
@@ -112,6 +113,9 @@ class NLPCore:
     JSON_NAME_LT_LIST_NUMBER_TOLERANCE_LLX: ClassVar[str] = "ltListNumberToleranceLlx"
     JSON_NAME_LT_TOC_LAST_PAGE: ClassVar[str] = "ltTocLastPage"
     JSON_NAME_LT_TOC_MIN_ENTRIES: ClassVar[str] = "ltTocMinEntries"
+
+    JSON_NAME_MODIFIED_AT: ClassVar[str] = "modifiedAt"
+    JSON_NAME_MODIFIED_BY: ClassVar[str] = "modifiedBy"
 
     JSON_NAME_NAME: ClassVar[str] = "name"
     JSON_NAME_NO_FONTS: ClassVar[str] = "noFonts"
@@ -235,7 +239,6 @@ class NLPCore:
     JSON_NAME_DOCUMENT: ClassVar[str] = "document"
     JSON_NAME_ENTRY: ClassVar[str] = "entry"
     JSON_NAME_ENTRY_NO: ClassVar[str] = "entryNo"
-    JSON_NAME_FORMAT: ClassVar[str] = "format"
     JSON_NAME_LEVEL: ClassVar[str] = "level"
     JSON_NAME_LINE: ClassVar[str] = "line"
     JSON_NAME_LINE_NO_PAGEFIRST: ClassVar[str] = "lineNoPageFirst"
@@ -300,8 +303,6 @@ class NLPCore:
     JSON_NAME_URX_FIRST_COLUMN: ClassVar[str] = "urxFirstColumn"
     JSON_NAME_URX_FIRST_ROW: ClassVar[str] = "urxFirstRow"
     JSON_NAME_WORD: ClassVar[str] = "word"
-
-    JSON_NAME_BULLET: ClassVar[str] = "bullet"
 
     JSON_NAME_COLUMNS: ClassVar[str] = "columns"
     JSON_NAME_COLUMN_SPAN: ClassVar[str] = "columnSpan"

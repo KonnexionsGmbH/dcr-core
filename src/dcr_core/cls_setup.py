@@ -169,7 +169,7 @@ class Setup:
             core_glob.initialise_logger()
             core_glob.logger.debug(core_glob.LOGGER_START)
 
-        self.environment_variant =  self._get_environment_variant()
+        self.environment_variant = self._get_environment_variant()
 
         self._config: dict[str, str] = {}
 
@@ -189,7 +189,6 @@ class Setup:
         self.is_json_incl_list_bullet = True
         self.is_json_incl_list_number = True
         self.is_json_incl_params = True
-        self.is_json_incl_table = True
 
         self.json_indent = 4
 

@@ -144,6 +144,16 @@ class LineTypeListBullet:
             for idx in range(line_idx_first, line_idx_last + 1):
                 lines_json[idx][nlp_core.NLPCore.JSON_NAME_TYPE] = nlp_core.NLPCore.LINE_TYPE_LIST_BULLET
 
+                para_no_page = lines_json[idx][nlp_core.NLPCore.JSON_NAME_PARA_NO_PAGE]
+
+                for word in core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES][page_idx_list][nlp_core.NLPCore.JSON_NAME_CONTAINER_PARAS][para_no_page - 1][nlp_core.NLPCore.JSON_NAME_CONTAINER_WORDS]:
+                    word_line_no_page = word[nlp_core.NLPCore.JSON_NAME_LINE_NO_PAGE]
+                    if word_line_no_page > line_idx_last + 1:
+                        break
+                    if word_line_no_page < line_idx_first + 1:
+                        continue
+                    word[nlp_core.NLPCore.JSON_NAME_TYPE] = nlp_core.NLPCore.LINE_TYPE_LIST_BULLET
+
                 text.append(lines_json[idx][nlp_core.NLPCore.JSON_NAME_TEXT])
 
             entries.append(
@@ -153,7 +163,7 @@ class LineTypeListBullet:
                     nlp_core.NLPCore.JSON_NAME_LINE_NO_PAGE_LAST: line_idx_last + 1,
                     nlp_core.NLPCore.JSON_NAME_PAGE_NO: page_idx_list + 1,
                     nlp_core.NLPCore.JSON_NAME_PARA_NO: para_no,
-                    nlp_core.NLPCore.JSON_NAME_TEXT: " ".join(text),
+                    nlp_core.NLPCore.JSON_NAME_TEXT: "\n".join(text),
                 }
             )
 
@@ -163,7 +173,7 @@ class LineTypeListBullet:
 
         self._lists.append(
             {
-                nlp_core.NLPCore.JSON_NAME_BULLET: self._bullet.rstrip(),
+                nlp_core.NLPCore.JSON_NAME_FORMAT: self._bullet.rstrip(),
                 nlp_core.NLPCore.JSON_NAME_LIST_NO: len(self._lists) + 1,
                 nlp_core.NLPCore.JSON_NAME_NO_ENTRIES: len(entries),
                 nlp_core.NLPCore.JSON_NAME_PAGE_NO_FIRST: self._entries[0][0] + 1,
@@ -189,11 +199,8 @@ class LineTypeListBullet:
         Returns:
             list[tuple[str, re.Pattern[str]]]: The valid bulleted list anti-patterns.
         """
-        print(f"wwe core_glob.inst_setup.lt_list_bullet_rule_file={core_glob.inst_setup.lt_list_bullet_rule_file}")
-
         if core_glob.inst_setup.lt_list_bullet_rule_file and core_glob.inst_setup.lt_list_bullet_rule_file.lower() != "none":
             lt_list_bullet_rule_file_path = core_utils.get_os_independent_name(core_glob.inst_setup.lt_list_bullet_rule_file)
-            print(f"wwe lt_list_bullet_rule_file_path={lt_list_bullet_rule_file_path}")
             if os.path.isfile(lt_list_bullet_rule_file_path):
                 return self._load_anti_patterns_from_json(pathlib.Path(lt_list_bullet_rule_file_path))
 
@@ -260,7 +267,6 @@ class LineTypeListBullet:
             json_data = json.load(file_handle)
 
             for rule in json_data[nlp_core.NLPCore.JSON_NAME_LINE_TYPE_ANTI_PATTERNS]:
-                print(f"wwe rule={rule}")
                 anti_patterns.append(
                     (
                         rule[nlp_core.NLPCore.JSON_NAME_NAME],
@@ -320,8 +326,6 @@ class LineTypeListBullet:
                 The line to be processed.
         """
         text = str(line_json[nlp_core.NLPCore.JSON_NAME_TEXT])
-
-        print(f"wwe text={text[:50]}")
 
         for (rule_name, pattern) in self._anti_patterns:
             if pattern.match(text):
