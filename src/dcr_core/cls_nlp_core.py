@@ -395,7 +395,7 @@ class NLPCore:
     LANGUAGE_TESSERACT_DEFAULT: ClassVar[str] = "eng"
 
     LINE_TET_DOCUMENT_OPT_LIST: ClassVar[str] = "engines={noannotation noimage text notextcolor novector}"
-    LINE_TET_PAGE_OPT_LIST: ClassVar[str] = "contentanalysis={dehyphenate=false} docstyle=generic granularity=line"
+    LINE_TET_PAGE_OPT_LIST: ClassVar[str] = "contentanalysis={dehyphenate=false} docstyle=generic granularity=line layouteffort=medium"
     LINE_XML_VARIATION: ClassVar[str] = "line."
 
     LINE_TYPE_BODY: ClassVar[str] = "b"
@@ -489,7 +489,7 @@ class NLPCore:
     WORD_TET_DOCUMENT_OPT_LIST: ClassVar[str] = "engines={noannotation noimage text notextcolor novector}"
     WORD_TET_PAGE_OPT_LIST: ClassVar[
         str
-    ] = "contentanalysis={dehyphenate=false} docstyle=generic granularity=word tetml={glyphdetails={all} elements={line}}"
+    ] = "contentanalysis={dehyphenate=false} docstyle=generic granularity=word  layouteffort=medium tetml={glyphdetails={all} elements={line}}"
     WORD_XML_VARIATION: ClassVar[str] = "word."
 
     # ------------------------------------------------------------------

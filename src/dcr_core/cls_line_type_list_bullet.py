@@ -30,6 +30,7 @@ from dcr_core import core_glob
 from dcr_core import core_utils
 
 
+# pylint: disable=duplicate-code
 # pylint: disable=too-many-instance-attributes
 class LineTypeListBullet:
     """Determine list of bulleted lines."""
@@ -80,7 +81,6 @@ class LineTypeListBullet:
         self._llx_upper_limit = 0.0
 
         self._page_idx_prev = -1
-        self._para_no = 0
         self._para_no_prev = 0
 
         self._rules = self._init_rules()
@@ -146,7 +146,9 @@ class LineTypeListBullet:
 
                 para_no_page = lines_json[idx][nlp_core.NLPCore.JSON_NAME_PARA_NO_PAGE]
 
-                for word in core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES][page_idx_list][nlp_core.NLPCore.JSON_NAME_CONTAINER_PARAS][para_no_page - 1][nlp_core.NLPCore.JSON_NAME_CONTAINER_WORDS]:
+                for word in core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES][page_idx_list][
+                    nlp_core.NLPCore.JSON_NAME_CONTAINER_PARAS
+                ][para_no_page - 1][nlp_core.NLPCore.JSON_NAME_CONTAINER_WORDS]:
                     word_line_no_page = word[nlp_core.NLPCore.JSON_NAME_LINE_NO_PAGE]
                     if word_line_no_page > line_idx_last + 1:
                         break
@@ -434,11 +436,16 @@ class LineTypeListBullet:
         """Process the document related data.
 
         Args:
-            directory_name (str): Directory name of the output file.
-            document_id (int): Identification of the document.
-            environment_variant (str): Environment variant: dev, prod or test.
-            file_name_curr (str): File name of the file to be processed.
-            file_name_orig (in): File name of the document file.
+            directory_name (str):
+                Directory name of the output file.
+            document_id (int):
+                Identification of the document.
+            environment_variant (str):
+                Environment variant: dev, prod or test.
+            file_name_curr (str):
+                File name of the file to be processed.
+            file_name_orig (in):
+                File name of the document file.
         """
         core_glob.logger.debug(core_glob.LOGGER_START)
         core_glob.logger.debug("param directory_name     =%s", directory_name)
@@ -448,8 +455,8 @@ class LineTypeListBullet:
         core_glob.logger.debug("param file_name_orig     =%s", file_name_orig)
 
         core_utils.check_exists_object(
-            is_setup=True,
             is_nlp_core=True,
+            is_setup=True,
             is_text_parser=True,
         )
 

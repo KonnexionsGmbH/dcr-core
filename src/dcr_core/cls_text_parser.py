@@ -241,7 +241,6 @@ class TextParser:
                 file_name_curr=self._file_name_curr,
                 file_name_orig=self._file_name_orig,
             )
-            core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LISTS_NUMBER] = core_glob.inst_lt_ln.no_lists
 
         # ------------------------------------------------------------------
         # Line type heading.

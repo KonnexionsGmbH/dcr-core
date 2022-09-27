@@ -6,8 +6,6 @@
 import collections
 
 class LineTypeListBullet:
-    RuleExtern = tuple[str, str, collections.abc.Callable[[str, str], bool], list[str]]
-
     def exists(self) -> bool: ...
     def process_document(
         self,
