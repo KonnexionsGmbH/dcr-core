@@ -42,7 +42,8 @@ ERROR_61_903 = "61.903 Issue (s_p_j): The number of parsing issues is {no_errors
 ERROR_61_904 = "61.904 Issue (s_p_j): Too few lines at granularity 'line' - {line} instead of {word}"
 ERROR_61_905 = "61.905 Issue (s_p_j): Too many lines at granularity 'line' - expected {no_lines_word} (text='{text}')"
 ERROR_61_906 = "61.906 Issue (s_p_j): Line number {line_no}: the line text '{line_text}' should start with '{word_text}'"
-ERROR_61_907 = "61.905 Issue (s_p_j): Not enough lines at granularity 'word' - found only {no_lines_word} (text='{text}')"
+ERROR_61_907 = "61.907 Issue (s_p_j): Not enough lines at granularity 'word' - found only {no_lines_word} (text='{text}')"
+ERROR_61_908 = "61.908 Issue (s_p_j): Line type TOC: expected no of lines {expected}, but found {found})"
 ERROR_71_901 = "71.901 Issue (tkn): Tokenizing the file '{full_name}' failed - FileNotFoundError"
 
 
@@ -181,6 +182,7 @@ def create_config() -> nlp_core.NLPCore.ConfigJSON:
         nlp_core.NLPCore.JSON_NAME_JSON_INCL_LIST_BULLET: core_glob.inst_setup.is_json_incl_list_bullet,
         nlp_core.NLPCore.JSON_NAME_JSON_INCL_LIST_NUMBER: core_glob.inst_setup.is_json_incl_list_number,
         nlp_core.NLPCore.JSON_NAME_JSON_INCL_PARAMS: core_glob.inst_setup.is_json_incl_params,
+        nlp_core.NLPCore.JSON_NAME_JSON_INCL_SENTENCES: core_glob.inst_setup.is_json_incl_sentences,
         nlp_core.NLPCore.JSON_NAME_JSON_INDENT: core_glob.inst_setup.json_indent,
         nlp_core.NLPCore.JSON_NAME_JSON_SORT_KEYS: core_glob.inst_setup.is_json_sort_keys,
         nlp_core.NLPCore.JSON_NAME_LT_FOOTER_MAX_DISTANCE: core_glob.inst_setup.lt_footer_max_distance,

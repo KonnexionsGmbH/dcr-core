@@ -225,6 +225,7 @@ def fxtr_before_any_test():
         (setup.Setup._DCR_CFG_JSON_INCL_LIST_BULLET, "true"),
         (setup.Setup._DCR_CFG_JSON_INCL_LIST_NUMBER, "true"),
         (setup.Setup._DCR_CFG_JSON_INCL_PARAMS, "true"),
+        (setup.Setup._DCR_CFG_JSON_INCL_SENTENCES, "true"),
         (setup.Setup._DCR_CFG_JSON_INDENT, "4"),
         (setup.Setup._DCR_CFG_JSON_SORT_KEYS, "true"),
         (setup.Setup._DCR_CFG_LT_FOOTER_MAX_DISTANCE, "3"),

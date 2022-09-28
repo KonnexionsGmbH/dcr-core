@@ -51,7 +51,7 @@ class Process:
             core_glob.initialise_logger()
             core_glob.logger.debug(core_glob.LOGGER_START)
 
-        self._document_id: int = 0
+        self._document_id = 0
 
         self._full_name_in = ""
         self._full_name_in_directory = ""
@@ -79,14 +79,11 @@ class Process:
         self._is_tesseract = False
         self._is_verbose = False
 
-        self._language_pandoc: str = ""
-        self._language_spacy: str = ""
-        self._language_tesseract: str = ""
+        self._language_pandoc = ""
+        self._language_spacy = ""
+        self._language_tesseract = ""
 
-        self._no_lines_footer: int = 0
-        self._no_lines_header: int = 0
-        self._no_lines_toc: int = 0
-        self._no_pdf_pages: int = 0
+        self._no_pdf_pages = 0
 
         self._exist = True
 
@@ -162,35 +159,32 @@ class Process:
         """Initialize the document recognition process."""
         core_glob.logger.debug(core_glob.LOGGER_START)
 
-        self._document_id: int = 0
+        self._document_id = 0
 
-        self._full_name_in: str = ""
-        self._full_name_in_directory: str = ""
-        self._full_name_in_extension: str = ""
-        self._full_name_in_extension_int: str = ""
-        self._full_name_in_next_step: str = ""
-        self._full_name_in_pandoc: str = ""
-        self._full_name_in_parser_line: str = ""
-        self._full_name_in_parser_word: str = ""
-        self._full_name_in_pdf2image: str = ""
-        self._full_name_in_pdflib: str = ""
-        self._full_name_in_stem_name: str = ""
-        self._full_name_in_tesseract: str = ""
-        self._full_name_in_tokenizer: str = ""
-        self._full_name_orig: str = ""
+        self._full_name_in = ""
+        self._full_name_in_directory = ""
+        self._full_name_in_extension = ""
+        self._full_name_in_extension_int = ""
+        self._full_name_in_next_step = ""
+        self._full_name_in_pandoc = ""
+        self._full_name_in_parser_line = ""
+        self._full_name_in_parser_word = ""
+        self._full_name_in_pdf2image = ""
+        self._full_name_in_pdflib = ""
+        self._full_name_in_stem_name = ""
+        self._full_name_in_tesseract = ""
+        self._full_name_in_tokenizer = ""
+        self._full_name_orig = ""
 
         self._is_pandoc: bool = False
         self._is_pdf2image: bool = False
         self._is_tesseract: bool = False
 
-        self._language_pandoc: str = ""
-        self._language_spacy: str = ""
-        self._language_tesseract: str = ""
+        self._language_pandoc = ""
+        self._language_spacy = ""
+        self._language_tesseract = ""
 
-        self._no_lines_footer: int = 0
-        self._no_lines_header: int = 0
-        self._no_lines_toc: int = 0
-        self._no_pdf_pages: int = 0
+        self._no_pdf_pages = 0
 
         core_glob.logger.debug(core_glob.LOGGER_END)
 
@@ -258,12 +252,6 @@ class Process:
 
         self._document_delete_auxiliary_file(self._full_name_in_parser_line)
         self._document_delete_auxiliary_file(self._full_name_in_parser_word)
-
-        self._no_lines_footer = core_glob.inst_lt_hf._no_lines_footer
-        self._no_lines_header = core_glob.inst_lt_hf._no_lines_header
-
-        if self._is_lt_toc_required:
-            self._no_lines_toc = core_glob.inst_lt_toc._no_lines_toc
 
         core_utils.progress_msg(self._is_verbose, f"End   processing Parser        {self._full_name_in_tokenizer}")
 
@@ -449,9 +437,6 @@ class Process:
             pipeline_name=self._language_spacy,
             document_id=self._document_id,
             full_name_orig=self._full_name_orig,
-            no_lines_footer=self._no_lines_footer,
-            no_lines_header=self._no_lines_header,
-            no_lines_toc=self._no_lines_toc,
         )
         if return_code != "ok":
             raise RuntimeError(error_msg)
@@ -1160,10 +1145,7 @@ class Process:
         full_name_out: str,
         pipeline_name: str,
         document_id: int = -1,
-        full_name_orig: str = "",
-        no_lines_footer: int = -1,
-        no_lines_header: int = -1,
-        no_lines_toc: int = -1,
+        full_name_orig="",
     ) -> tuple[str, str]:
         """Tokenizing the text from the PDF document.
 
@@ -1182,15 +1164,6 @@ class Process:
                     Defaults to -1.
             full_name_orig (str, optional):
                     The file name of the originating document. Defaults to "".
-            no_lines_footer (int, optional):
-                    Total number of footer lines.
-                    Defaults to -1.
-            no_lines_header (int, optional):
-                    Total number of header lines.
-                    Defaults to -1.
-            no_lines_toc (int, optional):
-                    Total number of TOC lines.
-                    Defaults to -1.
 
         Returns:
             tuple[str, str]:
@@ -1203,23 +1176,17 @@ class Process:
             core_glob.initialise_logger()
             core_glob.logger.debug(core_glob.LOGGER_START)
 
-        core_glob.logger.debug("param document_id    =%i", document_id)
-        core_glob.logger.debug("param full_name_in   =%s", full_name_in)
-        core_glob.logger.debug("param full_name_orig =%s", full_name_orig)
-        core_glob.logger.debug("param full_name_out  =%s", full_name_out)
-        core_glob.logger.debug("param no_lines_footer=%i", no_lines_footer)
-        core_glob.logger.debug("param no_lines_header=%i", no_lines_header)
-        core_glob.logger.debug("param no_lines_toc   =%i", no_lines_toc)
-        core_glob.logger.debug("param pipeline_name  =%s", pipeline_name)
+        core_glob.logger.debug("param document_id   =%i", document_id)
+        core_glob.logger.debug("param full_name_in  =%s", full_name_in)
+        core_glob.logger.debug("param full_name_orig=%s", full_name_orig)
+        core_glob.logger.debug("param full_name_out =%s", full_name_out)
+        core_glob.logger.debug("param pipeline_name =%s", pipeline_name)
 
         try:
             core_glob.inst_tokenizer.process_document(
                 document_id=document_id,
                 file_name_next=full_name_out,
                 file_name_orig=full_name_orig,
-                no_lines_footer=no_lines_footer,
-                no_lines_header=no_lines_header,
-                no_lines_toc=no_lines_toc,
                 pipeline_name=pipeline_name,
             )
 

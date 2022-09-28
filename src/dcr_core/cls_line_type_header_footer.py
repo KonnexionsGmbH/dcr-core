@@ -89,8 +89,10 @@ class LineTypeHeaderFooter:
         self._is_result_footer = False
         self._is_result_header = False
 
-        self._no_lines_footer = 0
-        self._no_lines_header = 0
+        self._no_footers = 0
+        self._no_headers = 0
+        self._no_lines_line_type_footer = 0
+        self._no_lines_line_type_header = 0
         self._no_pages = 0
 
         self._result_doc_footer: LineTypeHeaderFooter._ResultDoc = []
@@ -441,6 +443,11 @@ class LineTypeHeaderFooter:
             if not value_doc:
                 continue
 
+            if line_type == nlp_core.NLPCore.LINE_TYPE_HEADER:
+                self._no_headers += 1
+            else:
+                self._no_footers += 1
+
             for idx_page in range(self._no_pages):
                 if not result_pages[idx_page][idx_line]:
                     continue
@@ -448,6 +455,11 @@ class LineTypeHeaderFooter:
                 core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES][idx_page][
                     nlp_core.NLPCore.JSON_NAME_CONTAINER_LINES
                 ][cand_lines_pages[idx_page][idx_line][0]][nlp_core.NLPCore.JSON_NAME_TYPE]: str = line_type
+
+                if line_type == nlp_core.NLPCore.LINE_TYPE_HEADER:
+                    self._no_lines_line_type_header += 1
+                else:
+                    self._no_lines_line_type_footer += 1
 
                 line_no: int = core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES][idx_page][
                     nlp_core.NLPCore.JSON_NAME_CONTAINER_LINES
@@ -485,7 +497,8 @@ class LineTypeHeaderFooter:
                     self._result_doc_header,
                     self._result_pages_header,
                 )
-            core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LINES_HEADER] = self._no_lines_header
+            core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_HEADERS] = self._no_headers
+            core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LINES_HEADER] = self._no_lines_line_type_header
 
         if self._is_required_footer:
             if any(value_doc for value_doc in self._result_doc_footer):
@@ -496,7 +509,8 @@ class LineTypeHeaderFooter:
                     self._result_doc_footer,
                     self._result_pages_footer,
                 )
-            core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LINES_FOOTER] = self._no_lines_footer
+            core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_FOOTERS] = self._no_footers
+            core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LINES_FOOTER] = self._no_lines_line_type_footer
 
         self._debug_lt("-" * 80)
         self._debug_lt("Store the results obtained - End")
@@ -592,6 +606,8 @@ class LineTypeHeaderFooter:
             is_text_parser=True,
         )
 
+        self._no_footers = 0
+        self._no_headers = 0
         self._no_lines_footer = 0
         self._no_lines_header = 0
 
@@ -612,10 +628,6 @@ class LineTypeHeaderFooter:
         self._is_required_footer = core_glob.inst_setup.lt_footer_max_lines != 0
 
         if self._no_pages == 1:
-            if self._is_required_header:
-                core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LINES_HEADER] = self._no_lines_header
-            if self._is_required_footer:
-                core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LINES_FOOTER] = self._no_lines_footer
             self._debug_lt("End (document size only one page)")
             self._debug_lt("=" * 80)
             return

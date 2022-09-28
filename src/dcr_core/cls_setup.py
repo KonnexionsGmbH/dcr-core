@@ -36,6 +36,7 @@ class Setup:
     _DCR_CFG_JSON_INCL_LIST_BULLET: ClassVar[str] = "json_incl_list_bullet"
     _DCR_CFG_JSON_INCL_LIST_NUMBER: ClassVar[str] = "json_incl_list_number"
     _DCR_CFG_JSON_INCL_PARAMS: ClassVar[str] = "json_incl_params"
+    _DCR_CFG_JSON_INCL_SENTENCES: ClassVar[str] = "json_incl_sentences"
     _DCR_CFG_JSON_INDENT: ClassVar[str] = "json_indent"
     _DCR_CFG_JSON_SORT_KEYS: ClassVar[str] = "json_sort_keys"
     _DCR_CFG_LT_FOOTER_MAX_DISTANCE: ClassVar[str] = "lt_footer_max_distance"
@@ -189,6 +190,7 @@ class Setup:
         self.is_json_incl_list_bullet = True
         self.is_json_incl_list_number = True
         self.is_json_incl_params = True
+        self.is_json_incl_sentences = True
 
         self.json_indent = 4
 
@@ -369,6 +371,11 @@ class Setup:
 
         if Setup._DCR_CFG_JSON_INCL_PARAMS in self._config:
             self.is_json_incl_params = self._determine_config_param_boolean(Setup._DCR_CFG_JSON_INCL_PARAMS, self.is_json_incl_params)
+
+        if Setup._DCR_CFG_JSON_INCL_SENTENCES in self._config:
+            self.is_json_incl_sentences = self._determine_config_param_boolean(
+                Setup._DCR_CFG_JSON_INCL_SENTENCES, self.is_json_incl_sentences
+            )
 
         if Setup._DCR_CFG_JSON_INDENT in self._config:
             self.json_indent = self._determine_config_param_integer(Setup._DCR_CFG_JSON_INDENT, self.json_indent)
@@ -972,6 +979,7 @@ class Setup:
                             | Setup._DCR_CFG_JSON_INCL_LIST_BULLET
                             | Setup._DCR_CFG_JSON_INCL_LIST_NUMBER
                             | Setup._DCR_CFG_JSON_INCL_PARAMS
+                            | Setup._DCR_CFG_JSON_INCL_SENTENCES
                             | Setup._DCR_CFG_JSON_INDENT
                             | Setup._DCR_CFG_JSON_SORT_KEYS
                             | Setup._DCR_CFG_LT_FOOTER_MAX_DISTANCE

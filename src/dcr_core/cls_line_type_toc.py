@@ -55,14 +55,15 @@ class LineTypeToc:
 
         self._is_toc_existing = False
 
+        self._no_candidates = 0
+        self._no_lines_line_type = 0
+
         self._page_no = 0
 
         self._strategy = ""
 
         # page_no_toc, page_no, para_no_page, line_no_page or row_no
         self._toc_candidates: list[list[int]] = []
-
-        self._no_lines_toc = 0
 
         self._exist = True
 
@@ -278,10 +279,10 @@ class LineTypeToc:
     # ------------------------------------------------------------------
     def _store_results_lines(self) -> None:  # noqa: C901
         """Store the found TOC entries in parser result."""
-        self.no_lines_toc = len(self._toc_candidates)
+        self._no_candidates = len(self._toc_candidates)
 
         self._debug_lt("=" * 80)
-        self._debug_lt(f"Start store result - strategy lines  ={self.no_lines_toc}")
+        self._debug_lt(f"Start store result - strategy lines  ={self._no_candidates}")
         self._debug_lt("-" * 80)
 
         for [_, page_no, para_no_page, line_no_page] in self._toc_candidates:
@@ -291,6 +292,8 @@ class LineTypeToc:
             core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES][page_no - 1][
                 nlp_core.NLPCore.JSON_NAME_CONTAINER_LINES
             ][line_no_page - 1][nlp_core.NLPCore.JSON_NAME_TYPE] = nlp_core.NLPCore.LINE_TYPE_TOC
+            self._no_lines_line_type += 1
+
             for word in core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES][page_no - 1][
                 nlp_core.NLPCore.JSON_NAME_CONTAINER_PARAS
             ][para_no_page - 1][nlp_core.NLPCore.JSON_NAME_CONTAINER_WORDS]:
@@ -303,27 +306,23 @@ class LineTypeToc:
                 word[nlp_core.NLPCore.JSON_NAME_TYPE] = nlp_core.NLPCore.LINE_TYPE_TOC
 
         self._debug_lt("-" * 80)
-        self._debug_lt(f"End   store result - strategy lines  ={self.no_lines_toc}")
+        self._debug_lt(f"End   store result - strategy lines  ={self._no_candidates}")
 
     # ------------------------------------------------------------------
     # Store the found TOC entries in parser result - strategy table.
     # ------------------------------------------------------------------
     def _store_results_table(self) -> None:  # noqa: C901
         """Store the found TOC entries in parser result."""
-        self.no_lines_toc = len(self._toc_candidates)
+        self._no_candidates = len(self._toc_candidates)
 
         self._debug_lt("=" * 80)
-        self._debug_lt(f"Start store result - strategy table  ={self.no_lines_toc}")
+        self._debug_lt(f"Start store result - strategy table  ={self._no_candidates}")
         self._debug_lt("-" * 80)
 
         if len(self._toc_candidates) < core_glob.inst_setup.lt_toc_min_entries:
             self._debug_lt("-" * 80)
-            self._debug_lt(f"End   store result (min. entries)    ={self.no_lines_toc}")
-            self.no_lines_toc = 0
-            core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LINES_TOC] = self.no_lines_toc
+            self._debug_lt(f"End   store result (min. entries)    ={self._no_candidates}")
             return
-
-        core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LINES_TOC] = self.no_lines_toc
 
         page_no_from = self._toc_candidates[0][1]
         page_no_till = self._toc_candidates[-1][1]
@@ -354,6 +353,7 @@ class LineTypeToc:
                             and line_json[nlp_core.NLPCore.JSON_NAME_LINE_NO_PAGE] == cand_line_no_page
                         ):
                             line_json[nlp_core.NLPCore.JSON_NAME_TYPE] = nlp_core.NLPCore.LINE_TYPE_TOC
+                            self._no_lines_line_type += 1
                 elif self._strategy == nlp_core.NLPCore.SEARCH_STRATEGY_TABLE:
                     if nlp_core.NLPCore.JSON_NAME_TABLE_ROW_NO in line_json:
                         if (
@@ -361,9 +361,10 @@ class LineTypeToc:
                             or line_json[nlp_core.NLPCore.JSON_NAME_TYPE] == nlp_core.NLPCore.LINE_TYPE_TABLE
                         ):
                             line_json[nlp_core.NLPCore.JSON_NAME_TYPE] = nlp_core.NLPCore.LINE_TYPE_TOC
+                            self._no_lines_line_type += 1
 
         self._debug_lt("-" * 80)
-        self._debug_lt(f"End   store result - strategy table  ={self.no_lines_toc}")
+        self._debug_lt(f"End   store result - strategy table  ={self._no_candidates}")
 
     # ------------------------------------------------------------------
     # Check the object existence.
@@ -386,6 +387,9 @@ class LineTypeToc:
 
         Args:
             file_name_curr (str, optional): File name of the file to be processed.
+
+        Raises:
+            RuntimeError: ERROR_61_908.
         """
         core_glob.logger.debug(core_glob.LOGGER_START)
         core_glob.logger.debug("param file_name_curr =%s", file_name_curr)
@@ -409,6 +413,7 @@ class LineTypeToc:
             return
 
         self._file_name_curr = file_name_curr
+        self._no_lines_line_type = 0
 
         # -------------------------------------------------------------------------
         # Examine the table version.
@@ -446,6 +451,14 @@ class LineTypeToc:
                 self._store_results_lines()
             elif self._strategy == nlp_core.NLPCore.SEARCH_STRATEGY_TABLE:
                 self._store_results_table()
+
+        # ERROR_61_908 = "61.908 Issue (s_p_j): Line type TOC: expected no of lines {expected}, but found {found})"
+        if self._no_candidates != self._no_lines_line_type:
+            raise RuntimeError(
+                core_utils.ERROR_61_908.replace("{expected}", str(self._no_candidates).replace("{found}", str(self._no_lines_line_type)))
+            )
+
+        core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LINES_TOC] = self._no_lines_line_type
 
         self._debug_lt("-" * 80)
         self._debug_lt(f"End   document                       ={self._file_name_curr}")

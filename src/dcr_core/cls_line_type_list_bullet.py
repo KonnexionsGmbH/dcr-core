@@ -81,6 +81,8 @@ class LineTypeListBullet:
         self._llx_subsequent: tuple[float, float] = (0.0, 0.0)
         self._llx_upper_limit = 0.0
 
+        self._no_lines_line_type = 0
+
         self._rules = self._init_rules()
         for key in self._rules:
             self._rules[key] = len(key)
@@ -141,6 +143,7 @@ class LineTypeListBullet:
 
             for idx in range(line_idx_first, line_idx_last + 1):
                 lines_json[idx][nlp_core.NLPCore.JSON_NAME_TYPE] = nlp_core.NLPCore.LINE_TYPE_LIST_BULLET
+                self._no_lines_line_type += 1
 
                 para_no_page = lines_json[idx][nlp_core.NLPCore.JSON_NAME_PARA_NO_PAGE]
 
@@ -502,8 +505,8 @@ class LineTypeListBullet:
 
         self._file_name_curr = file_name_curr
         self._environment_variant = environment_variant
-
         self._lists = []
+        self._no_lines_line_type = 0
 
         page_idx_last = 0
 
@@ -513,6 +516,7 @@ class LineTypeListBullet:
 
         self._finish_list(page_idx_last)
 
+        core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LINES_LIST_BULLET] = self._no_lines_line_type
         core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_LISTS_BULLET] = len(self._lists)
         core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_CONTAINER_LISTS_BULLET] = self._lists
 
