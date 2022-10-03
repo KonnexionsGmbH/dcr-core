@@ -772,6 +772,8 @@ class Process:
         core_glob.logger.debug("param no_pdf_pages              =%i", no_pdf_pages)
 
         try:
+            full_name_in_line = full_name_in.replace("word.xml", "line.xml")
+
             # ------------------------------------------------------------------
             # Granularity 'word'.
             # ------------------------------------------------------------------
@@ -819,7 +821,7 @@ class Process:
             # Granularity 'line'.
             # ------------------------------------------------------------------
             # Create the Element tree object
-            tree = defusedxml.ElementTree.parse(full_name_in.replace("word.xml", "line.xml"))
+            tree = defusedxml.ElementTree.parse(full_name_in_line)
 
             # Get the root Element
             root = tree.getroot()
@@ -843,10 +845,10 @@ class Process:
             if core_glob.inst_parser.no_errors != 0:
                 raise RuntimeError(core_utils.ERROR_61_903.replace("{no_errors}", str(core_glob.inst_parser.no_errors)))
 
-            core_utils.progress_msg(core_glob.inst_setup.is_verbose, f"TETML line granularity parsed  {full_name_in}")
+            core_utils.progress_msg(core_glob.inst_setup.is_verbose, f"TETML line granularity parsed  {full_name_in_line}")
 
         except FileNotFoundError:
-            error_msg = core_utils.ERROR_61_901.replace("{full_name}", full_name_in)
+            error_msg = core_utils.ERROR_61_901.replace("{full_name}", full_name_in + " / " + full_name_in_line)
             core_glob.logger.debug("return              =%s", (error_msg[:6], error_msg))
             core_glob.logger.debug(core_glob.LOGGER_END)
             return error_msg[:6], error_msg

@@ -486,6 +486,8 @@ class LineTypeListBullet:
             is_text_parser=True,
         )
 
+        self._file_name_curr = file_name_curr
+
         self._debug_lt("=" * 80)
         self._debug_lt(f"Start document                       ={self._file_name_curr}")
         self._debug_lt("-" * 37)
@@ -503,7 +505,6 @@ class LineTypeListBullet:
             for key, value in self._rules.items():
                 self._debug_lt(f"Rule                                 =key={key} - value={value}")
 
-        self._file_name_curr = file_name_curr
         self._environment_variant = environment_variant
         self._lists = []
         self._no_lines_line_type = 0

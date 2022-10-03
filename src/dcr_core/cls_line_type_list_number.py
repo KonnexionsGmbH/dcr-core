@@ -557,6 +557,8 @@ class LineTypeListNumber:
             is_text_parser=True,
         )
 
+        self._file_name_curr = file_name_curr
+
         self._debug_lt("=" * 80)
         self._debug_lt(f"Start document                       ={self._file_name_curr}")
         self._debug_lt("-" * 37)
@@ -578,7 +580,6 @@ class LineTypeListNumber:
                     + f"rule={rule_name.ljust(LineTypeListNumber._RULE_NAME_SIZE)} - regexp={regexp_str}"
                 )
 
-        self._file_name_curr = file_name_curr
         self._environment_variant = environment_variant
         self._lists = []
         self._no_lines_line_type = 0

@@ -124,7 +124,7 @@ class TokenizerSpacy:
             nlp_core.NLPCore.JSON_NAME_FILE_NAME_ORIG: self._file_name_orig,
             nlp_core.NLPCore.JSON_NAME_NO_LINES_FOOTER: self._no_lines_footer,
             nlp_core.NLPCore.JSON_NAME_NO_LINES_HEADER: self._no_lines_header,
-            nlp_core.NLPCore.JSON_NAME_NO_LINES_IN_DOC: self._no_lines_in_doc,
+            # nlp_core.NLPCore.JSON_NAME_NO_LINES_IN_DOC: self._no_lines_in_doc,
             nlp_core.NLPCore.JSON_NAME_NO_LINES_TOC: self._no_lines_toc,
             # wwe
             # nlp_core.NLPCore.JSON_NAME_NO_LISTS_BULLET_IN_DOC: core_glob.inst_parser.parse_result_line_document[
@@ -133,14 +133,14 @@ class TokenizerSpacy:
             # nlp_core.NLPCore.JSON_NAME_NO_LISTS_NUMBER_IN_DOC: core_glob.inst_parser.parse_result_line_document[
             #     nlp_core.NLPCore.JSON_NAME_NO_LISTS_NUMBER_IN_DOC
             # ],
-            nlp_core.NLPCore.JSON_NAME_NO_PAGES_IN_DOC: self._no_pages_in_doc,
-            nlp_core.NLPCore.JSON_NAME_NO_PARAS_IN_DOC: self._no_paras_in_doc,
-            nlp_core.NLPCore.JSON_NAME_NO_SENTS_IN_DOC: self._no_sents_in_doc,
+            # nlp_core.NLPCore.JSON_NAME_NO_PAGES_IN_DOC: self._no_pages_in_doc,
+            # nlp_core.NLPCore.JSON_NAME_NO_PARAS_IN_DOC: self._no_paras_in_doc,
+            # nlp_core.NLPCore.JSON_NAME_NO_SENTS_IN_DOC: self._no_sents_in_doc,
             # wwe
             # nlp_core.NLPCore.JSON_NAME_NO_TABLES_IN_DOC: core_glob.inst_parser.parse_result_line_document[
             #     nlp_core.NLPCore.JSON_NAME_NO_TABLES_IN_DOC
             # ],
-            nlp_core.NLPCore.JSON_NAME_NO_TOKENS_IN_DOC: self._no_tokens_in_doc,
+            # nlp_core.NLPCore.JSON_NAME_NO_TOKENS_IN_DOC: self._no_tokens_in_doc,
             nlp_core.NLPCore.JSON_NAME_CONTAINER_PAGES: self.token_pages,
         }
 
@@ -163,10 +163,11 @@ class TokenizerSpacy:
         self.token_pages.append(
             {
                 nlp_core.NLPCore.JSON_NAME_PAGE_NO: self._page_no,
-                nlp_core.NLPCore.JSON_NAME_NO_LINES_IN_PAGE: self._no_lines_in_page,
-                nlp_core.NLPCore.JSON_NAME_NO_PARAS_IN_PAGE: self._no_paras_in_page,
-                nlp_core.NLPCore.JSON_NAME_NO_SENTS_IN_PAGE: self._no_sents_in_page,
-                nlp_core.NLPCore.JSON_NAME_NO_TOKENS_IN_PAGE: self._no_tokens_in_page,
+                # wwe
+                # nlp_core.NLPCore.JSON_NAME_NO_LINES_IN_PAGE: self._no_lines_in_page,
+                # nlp_core.NLPCore.JSON_NAME_NO_PARAS_IN_PAGE: self._no_paras_in_page,
+                # nlp_core.NLPCore.JSON_NAME_NO_SENTS_IN_PAGE: self._no_sents_in_page,
+                # nlp_core.NLPCore.JSON_NAME_NO_TOKENS_IN_PAGE: self._no_tokens_in_page,
                 nlp_core.NLPCore.JSON_NAME_CONTAINER_PARAS: self._token_paras,
             }
         )
@@ -186,10 +187,11 @@ class TokenizerSpacy:
         self._token_paras.append(
             {
                 nlp_core.NLPCore.JSON_NAME_PARA_NO: self._para_no_prev,
-                nlp_core.NLPCore.JSON_NAME_NO_LINES_IN_PARA: self._no_lines_in_para,
-                nlp_core.NLPCore.JSON_NAME_NO_SENTS_IN_PARA: self._sent_no,
-                nlp_core.NLPCore.JSON_NAME_NO_TOKENS_IN_PARA: self._no_tokens_in_para,
-                nlp_core.NLPCore.JSON_NAME_SENTS: self._token_sents,
+                # wwe
+                # nlp_core.NLPCore.JSON_NAME_NO_LINES_IN_PARA: self._no_lines_in_para,
+                # nlp_core.NLPCore.JSON_NAME_NO_SENTS_IN_PARA: self._sent_no,
+                # nlp_core.NLPCore.JSON_NAME_NO_TOKENS_IN_PARA: self._no_tokens_in_para,
+                # nlp_core.NLPCore.JSON_NAME_SENTS: self._token_sents,
             }
         )
 
@@ -212,42 +214,45 @@ class TokenizerSpacy:
             if self._column_span > 0:
                 self._token_sents.append(
                     {
-                        nlp_core.NLPCore.JSON_NAME_SENT_NO: self._sent_no,
-                        nlp_core.NLPCore.JSON_NAME_COLUMN_NO: self._column_no,
-                        nlp_core.NLPCore.JSON_NAME_COLUMN_SPAN: self._column_span,
-                        nlp_core.NLPCore.JSON_NAME_COORD_LLX: self._coord_llx,
-                        nlp_core.NLPCore.JSON_NAME_COORD_URX: self._coord_urx,
+                        # nlp_core.NLPCore.JSON_NAME_SENT_NO: self._sent_no,
+                        # nlp_core.NLPCore.JSON_NAME_COLUMN_NO: self._column_no,
+                        # nlp_core.NLPCore.JSON_NAME_COLUMN_SPAN: self._column_span,
+                        # nlp_core.NLPCore.JSON_NAME_COORD_LLX: self._coord_llx,
+                        # nlp_core.NLPCore.JSON_NAME_COORD_URX: self._coord_urx,
                         nlp_core.NLPCore.JSON_NAME_TYPE: line_type,
-                        nlp_core.NLPCore.JSON_NAME_NO_TOKENS_IN_SENT: self._no_tokens_in_sent,
+                        # wwe
+                        # nlp_core.NLPCore.JSON_NAME_NO_TOKENS_IN_SENT: self._no_tokens_in_sent,
                         nlp_core.NLPCore.JSON_NAME_TABLE_ROW_NO: self._row_no,
                         nlp_core.NLPCore.JSON_NAME_TEXT: self._sentence,
-                        nlp_core.NLPCore.JSON_NAME_TOKENS: self._token_tokens,
+                        # nlp_core.NLPCore.JSON_NAME_TOKENS: self._token_tokens,
                     }
                 )
             else:
                 self._token_sents.append(
                     {
-                        nlp_core.NLPCore.JSON_NAME_SENT_NO: self._sent_no,
-                        nlp_core.NLPCore.JSON_NAME_COLUMN_NO: self._column_no,
-                        nlp_core.NLPCore.JSON_NAME_COORD_LLX: self._coord_llx,
-                        nlp_core.NLPCore.JSON_NAME_COORD_URX: self._coord_urx,
+                        # nlp_core.NLPCore.JSON_NAME_SENT_NO: self._sent_no,
+                        # nlp_core.NLPCore.JSON_NAME_COLUMN_NO: self._column_no,
+                        # nlp_core.NLPCore.JSON_NAME_COORD_LLX: self._coord_llx,
+                        # nlp_core.NLPCore.JSON_NAME_COORD_URX: self._coord_urx,
                         nlp_core.NLPCore.JSON_NAME_TYPE: line_type,
-                        nlp_core.NLPCore.JSON_NAME_NO_TOKENS_IN_SENT: self._no_tokens_in_sent,
+                        # wwe
+                        # nlp_core.NLPCore.JSON_NAME_NO_TOKENS_IN_SENT: self._no_tokens_in_sent,
                         nlp_core.NLPCore.JSON_NAME_TABLE_ROW_NO: self._row_no,
                         nlp_core.NLPCore.JSON_NAME_TEXT: self._sentence,
-                        nlp_core.NLPCore.JSON_NAME_TOKENS: self._token_tokens,
+                        # nlp_core.NLPCore.JSON_NAME_TOKENS: self._token_tokens,
                     }
                 )
         else:
             self._token_sents.append(
                 {
-                    nlp_core.NLPCore.JSON_NAME_SENT_NO: self._sent_no,
-                    nlp_core.NLPCore.JSON_NAME_COORD_LLX: self._coord_llx,
-                    nlp_core.NLPCore.JSON_NAME_COORD_URX: self._coord_urx,
+                    # nlp_core.NLPCore.JSON_NAME_SENT_NO: self._sent_no,
+                    # nlp_core.NLPCore.JSON_NAME_COORD_LLX: self._coord_llx,
+                    # nlp_core.NLPCore.JSON_NAME_COORD_URX: self._coord_urx,
                     nlp_core.NLPCore.JSON_NAME_TYPE: line_type,
-                    nlp_core.NLPCore.JSON_NAME_NO_TOKENS_IN_SENT: self._no_tokens_in_sent,
+                    # wwe
+                    # nlp_core.NLPCore.JSON_NAME_NO_TOKENS_IN_SENT: self._no_tokens_in_sent,
                     nlp_core.NLPCore.JSON_NAME_TEXT: self._sentence,
-                    nlp_core.NLPCore.JSON_NAME_TOKENS: self._token_tokens,
+                    # nlp_core.NLPCore.JSON_NAME_TOKENS: self._token_tokens,
                 }
             )
 
@@ -537,17 +542,18 @@ class TokenizerSpacy:
             is_text_parser=True,
         )
 
-        if nlp_core.NLPCore.JSON_NAME_COLUMN_NO in self._text_parser_line:
-            self._column_no = self._text_parser_line[nlp_core.NLPCore.JSON_NAME_COLUMN_NO]
-            self._row_no = self._text_parser_line[nlp_core.NLPCore.JSON_NAME_TABLE_ROW_NO]
-            if nlp_core.NLPCore.JSON_NAME_COLUMN_SPAN in self._text_parser_line:
-                self._column_span = self._text_parser_line[nlp_core.NLPCore.JSON_NAME_COLUMN_SPAN]
-            else:
-                self._column_span = 0
-        else:
-            self._column_no = 0
-            self._column_span = 0
-            self._row_no = 0
+        # wwe
+        # if nlp_core.NLPCore.JSON_NAME_COLUMN_NO in self._text_parser_line:
+        #     self._column_no = self._text_parser_line[nlp_core.NLPCore.JSON_NAME_COLUMN_NO]
+        #     self._row_no = self._text_parser_line[nlp_core.NLPCore.JSON_NAME_TABLE_ROW_NO]
+        #     if nlp_core.NLPCore.JSON_NAME_COLUMN_SPAN in self._text_parser_line:
+        #         self._column_span = self._text_parser_line[nlp_core.NLPCore.JSON_NAME_COLUMN_SPAN]
+        #     else:
+        #         self._column_span = 0
+        # else:
+        #     self._column_no = 0
+        #     self._column_span = 0
+        #     self._row_no = 0
 
         self._coord_llx = self._text_parser_line[nlp_core.NLPCore.JSON_NAME_LLX]
         self._coord_urx = self._text_parser_line[nlp_core.NLPCore.JSON_NAME_URX]

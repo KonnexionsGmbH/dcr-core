@@ -761,28 +761,32 @@ class TextParser:
             no_cells_row = 0
             line_type = nlp_core.NLPCore.LINE_TYPE_BODY
 
-        self._parse_result_container_lines.append(
-            {
-                nlp_core.NLPCore.JSON_NAME_LINE_NO: self._parse_result_no_lines_word,
-                nlp_core.NLPCore.JSON_NAME_LINE_NO_PAGE: self._parse_result_no_lines_page,
-                nlp_core.NLPCore.JSON_NAME_LINE_NO_PARA: self._parse_result_no_lines_para,
-                nlp_core.NLPCore.JSON_NAME_LLX: float(parent.attrib.get(nlp_core.NLPCore.PARSE_ATTR_LLX)),
-                nlp_core.NLPCore.JSON_NAME_NO_WORDS_LINE: self._parse_result_no_words_line,
-                nlp_core.NLPCore.JSON_NAME_PAGE_NO: self._parse_result_no_pages,
-                nlp_core.NLPCore.JSON_NAME_PARA_NO: self._parse_result_no_paras,
-                nlp_core.NLPCore.JSON_NAME_PARA_NO_PAGE: self._parse_result_no_paras_page,
-                nlp_core.NLPCore.JSON_NAME_TABLE_CELL_NO: no_cells_row,
-                nlp_core.NLPCore.JSON_NAME_TABLE_CELL_SPAN: self._parse_result_table_cell_span,
-                nlp_core.NLPCore.JSON_NAME_TABLE_NO: no_tables,
-                nlp_core.NLPCore.JSON_NAME_TABLE_ROW_NO: no_rows_table,
-                nlp_core.NLPCore.JSON_NAME_TEXT: "",
-                nlp_core.NLPCore.JSON_NAME_TYPE: line_type,
-                nlp_core.NLPCore.JSON_NAME_URX: float(parent.attrib.get(nlp_core.NLPCore.PARSE_ATTR_URX)),
-                nlp_core.NLPCore.JSON_NAME_WORD_NO_FIRST: self._parse_result_line_word_no_first,
-                nlp_core.NLPCore.JSON_NAME_WORD_NO_LAST: self._parse_result_line_word_no_last,
-                nlp_core.NLPCore.JSON_NAME_WORD_NO_PARA_FIRST: self._parse_result_line_word_no_para_first,
-            }
-        )
+        container_line = {
+            nlp_core.NLPCore.JSON_NAME_LEVEL: 0,
+            nlp_core.NLPCore.JSON_NAME_LINE_NO: self._parse_result_no_lines_word,
+            nlp_core.NLPCore.JSON_NAME_LINE_NO_PAGE: self._parse_result_no_lines_page,
+            nlp_core.NLPCore.JSON_NAME_LINE_NO_PARA: self._parse_result_no_lines_para,
+            nlp_core.NLPCore.JSON_NAME_LLX: float(parent.attrib.get(nlp_core.NLPCore.PARSE_ATTR_LLX)),
+            nlp_core.NLPCore.JSON_NAME_NO_WORDS_LINE: self._parse_result_no_words_line,
+            nlp_core.NLPCore.JSON_NAME_PAGE_NO: self._parse_result_no_pages,
+            nlp_core.NLPCore.JSON_NAME_PARA_NO: self._parse_result_no_paras,
+            nlp_core.NLPCore.JSON_NAME_PARA_NO_PAGE: self._parse_result_no_paras_page,
+            nlp_core.NLPCore.JSON_NAME_TABLE_CELL_NO: no_cells_row,
+            nlp_core.NLPCore.JSON_NAME_TABLE_CELL_SPAN: self._parse_result_table_cell_span,
+            nlp_core.NLPCore.JSON_NAME_TABLE_NO: no_tables,
+            nlp_core.NLPCore.JSON_NAME_TABLE_ROW_NO: no_rows_table,
+            nlp_core.NLPCore.JSON_NAME_TEXT: "",
+            nlp_core.NLPCore.JSON_NAME_TYPE: line_type,
+            nlp_core.NLPCore.JSON_NAME_URX: float(parent.attrib.get(nlp_core.NLPCore.PARSE_ATTR_URX)),
+            nlp_core.NLPCore.JSON_NAME_WORD_NO_FIRST: self._parse_result_line_word_no_first,
+            nlp_core.NLPCore.JSON_NAME_WORD_NO_LAST: self._parse_result_line_word_no_last,
+            nlp_core.NLPCore.JSON_NAME_WORD_NO_PARA_FIRST: self._parse_result_line_word_no_para_first,
+        }
+
+        if not self._is_lt_heading_required:
+            container_line.pop(nlp_core.NLPCore.JSON_NAME_LEVEL, None)
+
+        self._parse_result_container_lines.append(container_line)
 
         self._debug_xml_element_all("End  ", parent_tag, parent.attrib, parent.text)
 
@@ -1420,31 +1424,30 @@ class TextParser:
             no_cells_row = 0
             line_type = nlp_core.NLPCore.LINE_TYPE_BODY
 
-        container_word = {}
+        container_word = {
+            nlp_core.NLPCore.JSON_NAME_FONT: self._parse_result_font,
+            nlp_core.NLPCore.JSON_NAME_LINE_NO: self._parse_result_no_lines_word,
+            nlp_core.NLPCore.JSON_NAME_LINE_NO_PAGE: self._parse_result_no_lines_page,
+            nlp_core.NLPCore.JSON_NAME_LLX: self._parse_result_llx,
+            nlp_core.NLPCore.JSON_NAME_PAGE_NO: self._parse_result_no_pages,
+            nlp_core.NLPCore.JSON_NAME_PARA_NO: self._parse_result_no_paras,
+            nlp_core.NLPCore.JSON_NAME_SIZE: self._parse_result_size,
+            nlp_core.NLPCore.JSON_NAME_TABLE_CELL_NO: no_cells_row,
+            nlp_core.NLPCore.JSON_NAME_TABLE_CELL_SPAN: self._parse_result_table_cell_span,
+            nlp_core.NLPCore.JSON_NAME_TABLE_NO: no_tables,
+            nlp_core.NLPCore.JSON_NAME_TABLE_ROW_NO: no_rows_table,
+            nlp_core.NLPCore.JSON_NAME_TEXT: self._parse_result_text,
+            nlp_core.NLPCore.JSON_NAME_TYPE: line_type,
+            nlp_core.NLPCore.JSON_NAME_URX: self._parse_result_urx,
+            nlp_core.NLPCore.JSON_NAME_WORD_NO: self._parse_result_no_words,
+            nlp_core.NLPCore.JSON_NAME_WORD_NO_LINE: self._parse_result_no_words_line,
+            nlp_core.NLPCore.JSON_NAME_WORD_NO_PAGE: self._parse_result_no_words_page,
+            nlp_core.NLPCore.JSON_NAME_WORD_NO_PARA: self._parse_result_no_words_para,
+        }
 
-        if core_glob.inst_setup.is_json_incl_fonts:
-            container_word[nlp_core.NLPCore.JSON_NAME_FONT] = self._parse_result_font
-
-        container_word[nlp_core.NLPCore.JSON_NAME_LINE_NO] = self._parse_result_no_lines_word
-        container_word[nlp_core.NLPCore.JSON_NAME_LINE_NO_PAGE] = self._parse_result_no_lines_page
-        container_word[nlp_core.NLPCore.JSON_NAME_LLX] = self._parse_result_llx
-        container_word[nlp_core.NLPCore.JSON_NAME_PAGE_NO] = self._parse_result_no_pages
-        container_word[nlp_core.NLPCore.JSON_NAME_PARA_NO] = self._parse_result_no_paras
-
-        if core_glob.inst_setup.is_json_incl_fonts:
-            container_word[nlp_core.NLPCore.JSON_NAME_SIZE] = self._parse_result_size
-
-        container_word[nlp_core.NLPCore.JSON_NAME_TABLE_CELL_NO] = no_cells_row
-        container_word[nlp_core.NLPCore.JSON_NAME_TABLE_CELL_SPAN] = self._parse_result_table_cell_span
-        container_word[nlp_core.NLPCore.JSON_NAME_TABLE_NO] = no_tables
-        container_word[nlp_core.NLPCore.JSON_NAME_TABLE_ROW_NO] = no_rows_table
-        container_word[nlp_core.NLPCore.JSON_NAME_TEXT] = self._parse_result_text
-        container_word[nlp_core.NLPCore.JSON_NAME_TYPE] = line_type
-        container_word[nlp_core.NLPCore.JSON_NAME_URX] = self._parse_result_urx
-        container_word[nlp_core.NLPCore.JSON_NAME_WORD_NO] = self._parse_result_no_words
-        container_word[nlp_core.NLPCore.JSON_NAME_WORD_NO_LINE] = self._parse_result_no_words_line
-        container_word[nlp_core.NLPCore.JSON_NAME_WORD_NO_PAGE] = self._parse_result_no_words_page
-        container_word[nlp_core.NLPCore.JSON_NAME_WORD_NO_PARA] = self._parse_result_no_words_para
+        if not core_glob.inst_setup.is_json_incl_fonts:
+            container_word.pop(nlp_core.NLPCore.JSON_NAME_FONT, None)
+            container_word.pop(nlp_core.NLPCore.JSON_NAME_SIZE, None)
 
         self._parse_result_container_words.append(container_word)
 

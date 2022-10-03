@@ -3,3 +3,5 @@
 # Version 2020.05, that can be found in the LICENSE file.
 
 """Package initializer file."""
+
+__version__ = '0.9.8'

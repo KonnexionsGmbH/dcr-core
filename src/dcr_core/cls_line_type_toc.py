@@ -400,6 +400,8 @@ class LineTypeToc:
             is_text_parser=True,
         )
 
+        self._file_name_curr = file_name_curr
+
         self._debug_lt("=" * 80)
         self._debug_lt(f"Start document                       ={self._file_name_curr}")
         self._debug_lt("-" * 37)
@@ -412,7 +414,6 @@ class LineTypeToc:
             self._debug_lt("=" * 80)
             return
 
-        self._file_name_curr = file_name_curr
         self._no_lines_line_type = 0
 
         # -------------------------------------------------------------------------

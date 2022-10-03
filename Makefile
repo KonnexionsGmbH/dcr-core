@@ -2,9 +2,7 @@
 
 ifeq ($(OS),Windows_NT)
 	export CREATE_DIST=if not exist dist mkdir dist
-	export CREATE_DOCS=if not exist docs\\api-docs mkdir docs\\api-docs
 	export DELETE_DIST=del /f /q dist\\*
-	export DELETE_DOCS=del /f /q docs\\api-docs\\*
 	export MYPYPATH=
 	export PIPENV=python -m pipenv
 	export PYTHON=python
@@ -12,9 +10,7 @@ ifeq ($(OS),Windows_NT)
 	export PYTHONPATH_DEV=src
 else
 	export CREATE_DIST=mkdir -p dist
-	export CREATE_DOCS=mkdir -p docs/api-docs
 	export DELETE_DIST=rm -f dist/*
-	export DELETE_DOCS=rm -f docs/api-docs/*
 	export MYPYPATH=
 	export PIPENV=python3 -m pipenv
 	export PYTHON=python3

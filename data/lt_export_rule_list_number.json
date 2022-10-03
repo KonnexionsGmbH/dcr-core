@@ -28,7 +28,8 @@
             "functionIsAsc": "romans",
             "startValues": [
                 "(I)"
-            ]
+            ],
+            "tolerance_llx": 20.0
         },
         {
             "name": "(a)",
@@ -44,7 +45,8 @@
             "functionIsAsc": "romans",
             "startValues": [
                 "(i)"
-            ]
+            ],
+            "tolerance_llx": 20.0
         },
         {
             "name": "[999]",
@@ -68,7 +70,8 @@
             "functionIsAsc": "romans",
             "startValues": [
                 "[I]"
-            ]
+            ],
+            "tolerance_llx": 20.0
         },
         {
             "name": "[a]",
@@ -84,7 +87,8 @@
             "functionIsAsc": "romans",
             "startValues": [
                 "[i]"
-            ]
+            ],
+            "tolerance_llx": 20.0
         },
         {
             "name": "999)",
@@ -135,7 +139,8 @@
             "functionIsAsc": "romans",
             "startValues": [
                 "I)"
-            ]
+            ],
+            "tolerance_llx": 20.0
         },
         {
             "name": "ROM.",
@@ -143,7 +148,8 @@
             "functionIsAsc": "romans",
             "startValues": [
                 "I."
-            ]
+            ],
+            "tolerance_llx": 20.0
         },
         {
             "name": "a)",
@@ -167,7 +173,8 @@
             "functionIsAsc": "romans",
             "startValues": [
                 "i)"
-            ]
+            ],
+            "tolerance_llx": 20.0
         },
         {
             "name": "rom.",
@@ -175,7 +182,8 @@
             "functionIsAsc": "romans",
             "startValues": [
                 "i."
-            ]
+            ],
+            "tolerance_llx": 20.0
         },
         {
             "name": "999",
@@ -199,7 +207,8 @@
             "functionIsAsc": "romans_token",
             "startValues": [
                 "I "
-            ]
+            ],
+            "tolerance_llx": 20.0
         },
         {
             "name": "a",
@@ -215,7 +224,8 @@
             "functionIsAsc": "romans_token",
             "startValues": [
                 "i "
-            ]
+            ],
+            "tolerance_llx": 20.0
         }
     ]
 }

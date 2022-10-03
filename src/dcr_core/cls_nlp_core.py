@@ -28,6 +28,10 @@ class NLPCore:
     # ------------------------------------------------------------------
     # Global type aliases.
     # ------------------------------------------------------------------
+
+    # name, regexp_compiled
+    AntiPatternTuple = tuple[str, re.Pattern[str]]
+
     EntryJSON = dict[str, int | str]
     FontJSON = dict[str, bool | float | int | str]
     WordJSON = dict[str, bool | float | int | str]
@@ -40,8 +44,27 @@ class NLPCore:
     ParamsJSON = dict[str, bool | int | str]
 
     # ------------------------------------------------------------------
+    # 0: rule_name
+    # 1: is_first_token:
+    #           True:  apply rule to first token (split)
+    #           False: apply rule to beginning of line
+    # 2: regexp_str:
+    #           regular expression
+    # 3: function_is_asc:
+    #           compares predecessor and successor
+    # 4: start_values:
+    #           list of strings
+    # 5: tolerance_llx:
+    #           tolerated deviation on the x-axis
+    # ------------------------------------------------------------------
+    RuleTuple = tuple[str, bool, str, collections.abc.Callable[[str, str], bool], list[str], float]
+
+    # ------------------------------------------------------------------
     # Class variables.
     # ------------------------------------------------------------------
+    DEFAULT_TOLERANCE_LLX_ROMAN_HEADING = 20.0
+    DEFAULT_TOLERANCE_LLX_ROMAN_LIST_NUMBER = 20.0
+
     JSON_NAME_CONFIG: ClassVar[str] = "config"
     JSON_NAME_CONTAINER_ENTRIES: ClassVar[str] = "entries"
     JSON_NAME_CONTAINER_FONTS: ClassVar[str] = "fonts"
@@ -55,6 +78,7 @@ class NLPCore:
     JSON_NAME_CONTAINER_WORDS: ClassVar[str] = "words"
     JSON_NAME_CREATED_AT: ClassVar[str] = "createdAt"
     JSON_NAME_CREATED_BY: ClassVar[str] = "createdBy"
+    JSON_NAME_CTX_LINE_: ClassVar[str] = "ctxLine"
 
     JSON_NAME_DIRECTORY_NAME: ClassVar[str] = "directoryName"
     JSON_NAME_DOCUMENT_ID: ClassVar[str] = "documentId"
@@ -73,10 +97,6 @@ class NLPCore:
     JSON_NAME_FULL_NAME: ClassVar[str] = "fullName"
     JSON_NAME_FUNCTION_IS_ASC: ClassVar[str] = "functionIsAsc"
 
-    JSON_NAME_HEADING_CTX_LINE: ClassVar[str] = "headingCtxLine"
-    JSON_NAME_HEADING_LEVEL: ClassVar[str] = "headingLevel"
-    JSON_NAME_HEADING_TEXT: ClassVar[str] = "headingText"
-
     JSON_NAME_ID: ClassVar[str] = "id"
     JSON_NAME_IS_FIRST_TOKEN: ClassVar[str] = "isFirstToken"
     JSON_NAME_ITALIC_ANGLE: ClassVar[str] = "italicAngle"
@@ -91,6 +111,7 @@ class NLPCore:
     JSON_NAME_JSON_INDENT: ClassVar[str] = "jsonIndent"
     JSON_NAME_JSON_SORT_KEYS: ClassVar[str] = "jsonSortKeys"
 
+    JSON_NAME_LEVEL: ClassVar[str] = "level"
     JSON_NAME_LINE_NO: ClassVar[str] = "lineNo"
     JSON_NAME_LINE_NO_FIRST: ClassVar[str] = "lineNoFirst"
     JSON_NAME_LINE_NO_LAST: ClassVar[str] = "lineNoLast"
@@ -249,6 +270,7 @@ class NLPCore:
     JSON_NAME_TABLE_ROW_NO: ClassVar[str] = "tableRowNo"
     JSON_NAME_TEXT: ClassVar[str] = "text"
     JSON_NAME_TOKENIZER: ClassVar[str] = "tokenizer"
+    JSON_NAME_TOLERANCE_LLX: ClassVar[str] = "toleranceLlx"
     JSON_NAME_TYPE: ClassVar[str] = "type"
 
     JSON_NAME_URX: ClassVar[str] = "urx"
@@ -270,9 +292,6 @@ class NLPCore:
     # JSON_NAME_COLUMN_SPAN: ClassVar[str] = "columnSpan"
     # JSON_NAME_COORD_LLX: ClassVar[str] = "coordLLX"
     # JSON_NAME_COORD_URX: ClassVar[str] = "coordURX"
-    # JSON_NAME_CTX_LINE_1: ClassVar[str] = "ctxLine1"
-    # JSON_NAME_CTX_LINE_2: ClassVar[str] = "ctxLine2"
-    # JSON_NAME_CTX_LINE_3: ClassVar[str] = "ctxLine3"
     # JSON_NAME_DOCUMENT: ClassVar[str] = "document"
     # JSON_NAME_ENTRY: ClassVar[str] = "entry"
     # JSON_NAME_FIRST_COLUMN_LLX: ClassVar[str] = "firstColumnLLX"
@@ -561,16 +580,12 @@ class NLPCore:
     # ------------------------------------------------------------------
     # Get the default heading line type anti-patterns.
     # ------------------------------------------------------------------
-    # 1: rule_name
-    # 2: regexp_str:
-    #           regular expression
-    # ------------------------------------------------------------------
     @staticmethod
-    def _get_lt_anti_patterns_default_heading() -> list[tuple[str, str]]:
+    def _get_lt_anti_patterns_default_heading() -> list[NLPCore.AntiPatternTuple]:
         """Get the default heading line type anti-patterns.
 
         Returns:
-            list[tuple[str, str]]: The heading line type anti-patterns.
+            list[NLPCore.AntiPatternTuple]: The heading line type anti-patterns.
         """
         return [
             ("9 AAA aaa", r"^\d+[ ][A-Z]+ [A-Z][a-z]+"),
@@ -582,16 +597,12 @@ class NLPCore:
     # ------------------------------------------------------------------
     # Get the default bulleted list line type anti-patterns.
     # ------------------------------------------------------------------
-    # 1: rule_name
-    # 2: regexp_str:
-    #           regular expression
-    # ------------------------------------------------------------------
     @staticmethod
-    def _get_lt_anti_patterns_default_list_bullet(environment_variant: str) -> list[tuple[str, str]]:
+    def _get_lt_anti_patterns_default_list_bullet(environment_variant: str) -> list[NLPCore.AntiPatternTuple]:
         """Get the default bulleted list line type anti-patterns.
 
         Returns:
-            list[tuple[str, str]]: The bulleted list line type anti-patterns.
+            list[NLPCore.AntiPatternTuple]: The bulleted list line type anti-patterns.
         """
         if environment_variant == setup.Setup.ENVIRONMENT_TYPE_TEST:
             return [
@@ -603,19 +614,15 @@ class NLPCore:
     # ------------------------------------------------------------------
     # Get the default numbered list line type anti-patterns.
     # ------------------------------------------------------------------
-    # 1: rule_name
-    # 2: regexp_str:
-    #           regular expression
-    # ------------------------------------------------------------------
     @staticmethod
-    def _get_lt_anti_patterns_default_list_number(environment_variant: str) -> list[tuple[str, str]]:
+    def _get_lt_anti_patterns_default_list_number(environment_variant: str) -> list[NLPCore.AntiPatternTuple]:
         """Get the default numbered list line type anti-patterns.
 
         Args:
             environment_variant (str): Environment variant: dev, prod or test.
 
         Returns:
-            list[tuple[str, str]]: The numbered list line type anti-patterns.
+            list[NLPCore.AntiPatternTuple]: The numbered list line type anti-patterns.
         """
         if environment_variant == setup.Setup.ENVIRONMENT_TYPE_TEST:
             return [
@@ -627,23 +634,18 @@ class NLPCore:
     # ------------------------------------------------------------------
     # Get the default heading & numbered list line type rules.
     # ------------------------------------------------------------------
-    # 1: rule_name
-    # 2: is_first_token:
-    #           True:  apply rule to first token (split)
-    #           False: apply rule to beginning of line
-    # 3: regexp_str:
-    #           regular expression
-    # 4: function_is_asc:
-    #           compares predecessor and successor
-    # 5: start_values:
-    #           list of strings
-    # ------------------------------------------------------------------
     @staticmethod
-    def _get_lt_rules_default_heading_list_number() -> list[tuple[str, bool, str, collections.abc.Callable[[str, str], bool], list[str]]]:
+    def _get_lt_rules_default_heading_list_number(tolerance_llx_default: float, tolerance_llx_roman: float) -> list[NLPCore.RuleTuple]:
         """Get the default heading & numbered list line type rules.
 
+        Args:
+            tolerance_llx_default (float):
+                Default tolerated deviation on the x-axis.
+            tolerance_llx_roman (float):
+                Tolerated deviation on the x-axis for Roman numerals.
+
         Returns:
-            list[tuple[str, bool, str, collections.abc.Callable[[str, str], bool], list[str]]]: The
+            list[NLPCore.RuleTuple]: The
                 heading & numbered list line type rules.
         """
         return [
@@ -653,6 +655,7 @@ class NLPCore:
                 r"\(\d+\)$",
                 NLPCore.is_asc_string_integers,
                 ["(1)"],
+                tolerance_llx_default,
             ),
             (
                 "(A)",
@@ -660,6 +663,7 @@ class NLPCore:
                 r"\([A-Z]\)$",
                 NLPCore.is_asc_uppercase_letters,
                 ["(A)"],
+                tolerance_llx_default,
             ),
             (
                 "(ROM)",
@@ -667,6 +671,7 @@ class NLPCore:
                 r"\(M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})\)$",
                 NLPCore.is_asc_romans,
                 ["(I)"],
+                tolerance_llx_roman,
             ),
             (
                 "(a)",
@@ -674,6 +679,7 @@ class NLPCore:
                 r"\([a-z]\)$",
                 NLPCore.is_asc_lowercase_letters,
                 ["(a)"],
+                tolerance_llx_default,
             ),
             (
                 "(rom)",
@@ -681,6 +687,7 @@ class NLPCore:
                 r"\(m{0,3}(cm|cd|d?c{0,3})(xc|xl|l?x{0,3})(ix|iv|v?i{0,3})\)$",
                 NLPCore.is_asc_romans,
                 ["(i)"],
+                tolerance_llx_roman,
             ),
             (
                 "[999]",
@@ -688,6 +695,7 @@ class NLPCore:
                 r"\[\d+\]$",
                 NLPCore.is_asc_string_integers,
                 ["[1]"],
+                tolerance_llx_default,
             ),
             (
                 "[A]",
@@ -695,6 +703,7 @@ class NLPCore:
                 r"\[[A-Z]\]$",
                 NLPCore.is_asc_uppercase_letters,
                 ["[A]"],
+                tolerance_llx_default,
             ),
             (
                 "[ROM]",
@@ -702,6 +711,7 @@ class NLPCore:
                 r"\[M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})\]$",
                 NLPCore.is_asc_romans,
                 ["[I]"],
+                tolerance_llx_roman,
             ),
             (
                 "[a]",
@@ -709,6 +719,7 @@ class NLPCore:
                 r"\[[a-z]\]$",
                 NLPCore.is_asc_lowercase_letters,
                 ["[a]"],
+                tolerance_llx_default,
             ),
             (
                 "[rom]",
@@ -716,6 +727,7 @@ class NLPCore:
                 r"\[m{0,3}(cm|cd|d?c{0,3})(xc|xl|l?x{0,3})(ix|iv|v?i{0,3})\]$",
                 NLPCore.is_asc_romans,
                 ["[i]"],
+                tolerance_llx_roman,
             ),
             (
                 "999)",
@@ -723,6 +735,7 @@ class NLPCore:
                 r"\d+\)$",
                 NLPCore.is_asc_string_integers,
                 ["1)"],
+                tolerance_llx_default,
             ),
             (
                 "999.",
@@ -730,6 +743,7 @@ class NLPCore:
                 r"\d+\.",
                 NLPCore.is_asc_string_integers,
                 ["1."],
+                tolerance_llx_default,
             ),
             (
                 "999.999",
@@ -737,6 +751,7 @@ class NLPCore:
                 r"\d+\.\d{1,3}$",
                 NLPCore.is_asc_string_floats,
                 ["0.0", "0.1", "0.01", "0.001"],
+                tolerance_llx_default,
             ),
             (
                 "A)",
@@ -744,6 +759,7 @@ class NLPCore:
                 r"[A-Z]\)$",
                 NLPCore.is_asc_uppercase_letters,
                 ["A)"],
+                tolerance_llx_default,
             ),
             (
                 "A.",
@@ -751,6 +767,7 @@ class NLPCore:
                 r"[A-Z]\.",
                 NLPCore.is_asc_uppercase_letters,
                 ["A."],
+                tolerance_llx_default,
             ),
             (
                 "ROM)",
@@ -758,6 +775,7 @@ class NLPCore:
                 r"M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})\)$",
                 NLPCore.is_asc_romans,
                 ["I)"],
+                tolerance_llx_roman,
             ),
             (
                 "ROM.",
@@ -765,6 +783,7 @@ class NLPCore:
                 r"M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})\.",
                 NLPCore.is_asc_romans,
                 ["I."],
+                tolerance_llx_roman,
             ),
             (
                 "a)",
@@ -772,6 +791,7 @@ class NLPCore:
                 r"[a-z]\)$",
                 NLPCore.is_asc_lowercase_letters,
                 ["a)"],
+                tolerance_llx_default,
             ),
             (
                 "a.",
@@ -779,6 +799,7 @@ class NLPCore:
                 r"[a-z]\.",
                 NLPCore.is_asc_lowercase_letters,
                 ["a."],
+                tolerance_llx_default,
             ),
             (
                 "rom)",
@@ -786,6 +807,7 @@ class NLPCore:
                 r"m{0,3}(cm|cd|d?c{0,3})(xc|xl|l?x{0,3})(ix|iv|v?i{0,3})\)$",
                 NLPCore.is_asc_romans,
                 ["i)"],
+                tolerance_llx_roman,
             ),
             (
                 "rom.",
@@ -793,6 +815,7 @@ class NLPCore:
                 r"m{0,3}(cm|cd|d?c{0,3})(xc|xl|l?x{0,3})(ix|iv|v?i{0,3})\.",
                 NLPCore.is_asc_romans,
                 ["i."],
+                tolerance_llx_roman,
             ),
             (
                 "999",
@@ -800,6 +823,7 @@ class NLPCore:
                 r"\d+[ ]+[A-Z][a-zA-Z]+",
                 NLPCore.is_asc_string_integers_token,
                 ["1 "],
+                tolerance_llx_default,
             ),
             (
                 "A",
@@ -807,6 +831,7 @@ class NLPCore:
                 r"[A-Z][ ]+[A-Z][a-zA-Z]+",
                 NLPCore.is_asc_uppercase_letters_token,
                 ["A "],
+                tolerance_llx_default,
             ),
             (
                 "ROM",
@@ -814,6 +839,7 @@ class NLPCore:
                 r"M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})[ ]+[A-Z][a-zA-Z]+",
                 NLPCore.is_asc_romans_token,
                 ["I "],
+                tolerance_llx_roman,
             ),
             (
                 "a",
@@ -821,6 +847,7 @@ class NLPCore:
                 r"[a-z][ ]+[A-Z][a-zA-Z]+",
                 NLPCore.is_asc_lowercase_letters_token,
                 ["a "],
+                tolerance_llx_default,
             ),
             (
                 "rom",
@@ -828,6 +855,7 @@ class NLPCore:
                 r"m{0,3}(cm|cd|d?c{0,3})(xc|xl|l?x{0,3})(ix|iv|v?i{0,3})[ ]+[A-Z][a-zA-Z]+",
                 NLPCore.is_asc_romans_token,
                 ["i "],
+                tolerance_llx_roman,
             ),
         ]
 
@@ -891,8 +919,9 @@ class NLPCore:
     # ------------------------------------------------------------------
     # Export the default heading line type rules.
     # ------------------------------------------------------------------
-    @staticmethod
-    def export_rule_file_heading(is_verbose: bool, file_name: str, file_encoding: str, json_indent: int, is_json_sort_keys: bool) -> None:
+    def export_rule_file_heading(
+        self, is_verbose: bool, file_name: str, file_encoding: str, json_indent: int, is_json_sort_keys: bool
+    ) -> None:
         """Export the default heading line type rules.
 
         Args:
@@ -915,16 +944,18 @@ class NLPCore:
 
         rules = []
 
-        for name, is_first_token, regexp, function_is_asc, start_values in NLPCore.get_lt_rules_default_heading():
-            rules.append(
-                {
-                    NLPCore.JSON_NAME_NAME: name,
-                    NLPCore.JSON_NAME_IS_FIRST_TOKEN: is_first_token,
-                    NLPCore.JSON_NAME_REGEXP: regexp,
-                    NLPCore.JSON_NAME_FUNCTION_IS_ASC: function_is_asc.__qualname__[15:],
-                    NLPCore.JSON_NAME_START_VALUES: start_values,
-                }
-            )
+        for name, is_first_token, regexp, function_is_asc, start_values, tolerance_llx in self.get_lt_rules_default_heading():
+            rule_dict = {
+                NLPCore.JSON_NAME_NAME: name,
+                NLPCore.JSON_NAME_IS_FIRST_TOKEN: is_first_token,
+                NLPCore.JSON_NAME_REGEXP: regexp,
+                NLPCore.JSON_NAME_FUNCTION_IS_ASC: function_is_asc.__qualname__[15:],
+                NLPCore.JSON_NAME_START_VALUES: start_values,
+                NLPCore.JSON_NAME_TOLERANCE_LLX: tolerance_llx,
+            }
+            if tolerance_llx == core_glob.inst_setup.lt_list_number_tolerance_llx:
+                rule_dict.pop(NLPCore.JSON_NAME_TOLERANCE_LLX, None)
+            rules.append(rule_dict)
 
         with open(file_name, "w", encoding=file_encoding) as file_handle:
             json.dump(
@@ -999,8 +1030,8 @@ class NLPCore:
     # ------------------------------------------------------------------
     # Export the default numbered list line type rules.
     # ------------------------------------------------------------------
-    @staticmethod
     def export_rule_file_list_number(
+        self,
         is_verbose: bool,
         file_name: str,
         file_encoding: str,
@@ -1031,15 +1062,17 @@ class NLPCore:
 
         rules = []
 
-        for name, regexp, function_is_asc, start_values in NLPCore.get_lt_rules_default_list_number():
-            rules.append(
-                {
-                    NLPCore.JSON_NAME_NAME: name,
-                    NLPCore.JSON_NAME_REGEXP: regexp,
-                    NLPCore.JSON_NAME_FUNCTION_IS_ASC: function_is_asc.__qualname__[15:],
-                    NLPCore.JSON_NAME_START_VALUES: start_values,
-                }
-            )
+        for name, regexp, function_is_asc, start_values, tolerance_llx in self.get_lt_rules_default_list_number():
+            rule_dict = {
+                NLPCore.JSON_NAME_NAME: name,
+                NLPCore.JSON_NAME_REGEXP: regexp,
+                NLPCore.JSON_NAME_FUNCTION_IS_ASC: function_is_asc.__qualname__[15:],
+                NLPCore.JSON_NAME_START_VALUES: start_values,
+                NLPCore.JSON_NAME_TOLERANCE_LLX: tolerance_llx,
+            }
+            if tolerance_llx == core_glob.inst_setup.lt_list_number_tolerance_llx:
+                rule_dict.pop(NLPCore.JSON_NAME_TOLERANCE_LLX, None)
+            rules.append(rule_dict)
 
         with open(file_name, "w", encoding=file_encoding) as file_handle:
             json.dump(
@@ -1080,14 +1113,14 @@ class NLPCore:
     @staticmethod
     def get_lt_anti_patterns_default_list_bullet(
         environment_variant: str,
-    ) -> list[tuple[str, str]]:
+    ) -> list[AntiPatternTuple]:
         """Get the default bulleted list line type anti-patterns.
 
         Args:
             environment_variant (str): Environment variant: dev, prod or test.
 
         Returns:
-            list[tuple[str, str]]: The bulleted list line type anti-patterns.
+            list[AntiPatternTuple]: The bulleted list line type anti-patterns.
         """
         return NLPCore._get_lt_anti_patterns_default_list_bullet(environment_variant)
 
@@ -1095,14 +1128,14 @@ class NLPCore:
     # Get the default numbered list line type anti-patterns.
     # ------------------------------------------------------------------
     @staticmethod
-    def get_lt_anti_patterns_default_list_number(environment_variant: str) -> list[tuple[str, str]]:
+    def get_lt_anti_patterns_default_list_number(environment_variant: str) -> list[AntiPatternTuple]:
         """Get the default numbered list line type anti-patterns.
 
         Args:
             environment_variant (str): Environment variant: dev, prod or test.
 
         Returns:
-            list[tuple[str, str]]: The numbered list line type anti-patterns.
+            list[AntiPatternTuple]: The numbered list line type anti-patterns.
         """
         return NLPCore._get_lt_anti_patterns_default_list_number(environment_variant)
 
@@ -1110,13 +1143,15 @@ class NLPCore:
     # Get the default heading line type rules.
     # ------------------------------------------------------------------
     @staticmethod
-    def get_lt_rules_default_heading() -> list[tuple[str, bool, str, collections.abc.Callable[[str, str], bool], list[str]]]:
+    def get_lt_rules_default_heading() -> list[RuleTuple]:
         """Get the default heading line type rules.
 
         Returns:
-            list[tuple[str, bool, str, collections.abc.Callable[[str, str], bool], list[str]]]: The heading line type rules.
+            list[RuleTuple]: The heading line type rules.
         """
-        return NLPCore._get_lt_rules_default_heading_list_number()
+        return NLPCore._get_lt_rules_default_heading_list_number(
+            core_glob.inst_setup.lt_heading_tolerance_llx, NLPCore.DEFAULT_TOLERANCE_LLX_ROMAN_HEADING
+        )
 
     # ------------------------------------------------------------------
     # Get the default bulleted list line type rules.
@@ -1134,24 +1169,15 @@ class NLPCore:
     # Get the default numbered list line type rules.
     # ------------------------------------------------------------------
     @staticmethod
-    def get_lt_rules_default_list_number() -> list[tuple[str, str, collections.abc.Callable[[str, str], bool], list[str]]]:
+    def get_lt_rules_default_list_number() -> list[NLPCore.RuleTuple]:
         """Get the default numbered list line type rules.
 
         Returns:
-            list[tuple[str, bool, str, collections.abc.Callable[[str, str], bool], list[str]]]: The numbered list line type rules.
+            list[NLPCore.RuleTuple]: The numbered list line type rules.
         """
-        rules: list[tuple[str, str, collections.abc.Callable[[str, str], bool], list[str]]] = []
-
-        for (
-            rule_name,
-            _,
-            regexp_str,
-            function_is_asc,
-            start_values,
-        ) in NLPCore._get_lt_rules_default_heading_list_number():
-            rules.append((rule_name, regexp_str, function_is_asc, start_values))
-
-        return rules
+        return NLPCore._get_lt_rules_default_heading_list_number(
+            core_glob.inst_setup.lt_list_number_tolerance_llx, NLPCore.DEFAULT_TOLERANCE_LLX_ROMAN_LIST_NUMBER
+        )
 
     # ------------------------------------------------------------------
     # Ignore the comparison.

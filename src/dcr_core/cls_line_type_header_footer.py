@@ -591,6 +591,8 @@ class LineTypeHeaderFooter:
         core_glob.logger.debug(core_glob.LOGGER_START)
         core_glob.logger.debug("param file_name_curr =%s", file_name_curr)
 
+        self._file_name_curr = file_name_curr
+
         self._debug_lt("=" * 80)
         self._debug_lt(f"Start document                       ={self._file_name_curr}")
         self._debug_lt("-" * 37)
@@ -616,8 +618,6 @@ class LineTypeHeaderFooter:
             self._debug_lt("End (not required)")
             self._debug_lt("=" * 80)
             return
-
-        self._file_name_curr = file_name_curr
 
         self._no_pages = core_glob.inst_nlp_core.document_json[nlp_core.NLPCore.JSON_NAME_NO_PAGES]
 
